@@ -45,12 +45,12 @@ export default function HomePage() {
             <div className="badge badge-green" style={{ marginBottom: 16 }}>
               <Zap size={11} /> {t.home.heroTag}
             </div>
-            <h1 style={{ fontSize: 52, lineHeight: 1.1, marginBottom: 14 }}>
+            <h1 style={{ fontSize: 62, lineHeight: 1.1, marginBottom: 14 }}>
               {t.home.heroTitle}<br />
               <span style={{ color: 'var(--green)' }}>{t.home.heroHighlight}</span>{' '}
               {t.home.heroTitleSuffix}
             </h1>
-            <p style={{ fontSize: 14, color: 'var(--text2)', marginBottom: 24, lineHeight: 1.7 }}>
+            <p style={{ fontSize: 19, color: 'var(--text2)', marginBottom: 24, lineHeight: 1.7 }}>
               {t.home.heroSub}
             </p>
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
@@ -68,7 +68,7 @@ export default function HomePage() {
             width: 260, height: 180, flexShrink: 0,
             background: 'var(--bg3)', border: '0.5px solid var(--border2)',
             borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: 'var(--text3)', fontSize: 13,
+            color: 'var(--text3)', fontSize: 16,
           }}>
             Hero image
           </div>
@@ -85,7 +85,7 @@ export default function HomePage() {
             <div key={i} style={{
               display: 'flex', alignItems: 'center', gap: 8,
               background: 'var(--bg3)', border: '0.5px solid var(--border)',
-              borderRadius: 8, padding: '8px 12px', fontSize: 12, color: 'var(--text2)',
+              borderRadius: 8, padding: '8px 12px', fontSize: 17, color: 'var(--text2)',
             }}>
               {b.icon} {b.label}
             </div>
@@ -94,16 +94,16 @@ export default function HomePage() {
       </section>
 
       {/* Filter bar */}
-      <section style={{ background: 'var(--bg)', borderBottom: '0.5px solid var(--border)', padding: '16px 0', position: 'sticky', top: 56, zIndex: 50 }}>
+      <section style={{ background: 'var(--bg)', borderBottom: '0.5px solid var(--border)', padding: '16px 0' }}>
         <div className="container">
-          <p style={{ fontSize: 11, color: 'var(--text3)', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '.06em' }}>
+          <p style={{ fontSize: 13, color: 'var(--text3)', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '.06em' }}>
             {t.home.filterBy}
           </p>
-          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+          <div className="filter-pills">
             <button
               onClick={() => setActiveBike('all')}
               style={{
-                padding: '5px 14px', borderRadius: 999, fontSize: 12, fontWeight: 500,
+                padding: '5px 14px', borderRadius: 999, fontSize: 13, fontWeight: 500,
                 border: '0.5px solid', cursor: 'pointer', transition: 'all .15s',
                 background: activeBike === 'all' ? 'var(--green)' : 'var(--bg3)',
                 color: activeBike === 'all' ? '#000' : 'var(--text2)',
@@ -117,7 +117,7 @@ export default function HomePage() {
                 key={bm.id}
                 onClick={() => setActiveBike(bm.id)}
                 style={{
-                  padding: '5px 14px', borderRadius: 999, fontSize: 12, fontWeight: 500,
+                  padding: '5px 14px', borderRadius: 999, fontSize: 13, fontWeight: 500,
                   border: '0.5px solid', cursor: 'pointer', transition: 'all .15s',
                   background: activeBike === bm.id ? 'var(--green)' : 'var(--bg3)',
                   color: activeBike === bm.id ? '#000' : 'var(--text2)',
@@ -139,7 +139,7 @@ export default function HomePage() {
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
               style={{
-                padding: '12px 16px', fontSize: 13, fontWeight: 500,
+                padding: '12px 16px', fontSize: 18, fontWeight: 500,
                 border: 'none', borderBottom: activeCategory === cat.id ? '2px solid var(--green)' : '2px solid transparent',
                 background: 'transparent', cursor: 'pointer',
                 color: activeCategory === cat.id ? 'var(--green)' : 'var(--text2)',
@@ -156,10 +156,10 @@ export default function HomePage() {
       <section className="section">
         <div className="container">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-            <h2 style={{ fontSize: 22 }}>{t.home.featured}</h2>
+            <h2 style={{ fontSize: 29 }}>{t.home.featured}</h2>
             <Link href="/products" style={{
               display: 'flex', alignItems: 'center', gap: 4,
-              fontSize: 13, color: 'var(--green)', textDecoration: 'none',
+              fontSize: 18, color: 'var(--green)', textDecoration: 'none',
             }}>
               {t.home.viewAll} <ChevronRight size={14} />
             </Link>

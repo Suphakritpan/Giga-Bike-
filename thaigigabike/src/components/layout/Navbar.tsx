@@ -31,7 +31,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
           <Zap size={20} color="var(--green)" strokeWidth={2.5} />
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 800, color: 'var(--text)', letterSpacing: '.02em' }}>
+          <span style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 800, color: 'var(--text)', letterSpacing: '.02em' }}>
             Thai<span style={{ color: 'var(--green)' }}>Giga</span>Bike
           </span>
         </Link>
@@ -46,7 +46,7 @@ export function Navbar() {
             { href: '/contact', label: t.nav.contact },
           ].map(({ href, label }) => (
             <Link key={href} href={href} style={{
-              padding: '7px 14px', borderRadius: 8, fontSize: 15, fontWeight: 600,
+              padding: '7px 14px', borderRadius: 8, fontSize: 18, fontWeight: 600,
               color: 'var(--text2)', textDecoration: 'none',
               transition: 'color .15s, background .15s',
             }}
@@ -83,7 +83,7 @@ export function Navbar() {
                   if (e.key === 'Escape') setSearchOpen(false)
                 }}
                 placeholder={t.nav.search}
-                style={{ background: 'transparent', border: 'none', outline: 'none', color: 'var(--text)', fontSize: 15, width: 160 }}
+                style={{ background: 'transparent', border: 'none', outline: 'none', color: 'var(--text)', fontSize: 18, width: 160 }}
               />
               <button onClick={() => setSearchOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text3)', display: 'flex' }}>
                 <X size={15} />
@@ -113,7 +113,7 @@ export function Navbar() {
           <div style={{ display: 'flex', background: 'var(--bg3)', border: '1px solid var(--border2)', borderRadius: 8, overflow: 'hidden' }}>
             {(['th', 'en'] as Locale[]).map(l => (
               <button key={l} onClick={() => setLocale(l)} style={{
-                padding: '7px 11px', fontSize: 13, fontWeight: 700,
+                padding: '7px 11px', fontSize: 16, fontWeight: 700,
                 border: 'none', cursor: 'pointer',
                 background: locale === l ? 'var(--green)' : 'transparent',
                 color: locale === l ? '#fff' : 'var(--text2)',
@@ -130,7 +130,7 @@ export function Navbar() {
               display: 'flex', alignItems: 'center', gap: 7,
               background: 'var(--green)', color: '#fff',
               border: 'none', borderRadius: 8,
-              padding: '8px 16px', fontSize: 15, fontWeight: 700,
+              padding: '8px 16px', fontSize: 18, fontWeight: 700,
               cursor: 'pointer', fontFamily: 'var(--font-display)',
               transition: 'background .15s',
             }}>
@@ -139,7 +139,7 @@ export function Navbar() {
               {totalItems > 0 && (
                 <span style={{
                   background: '#fff', color: 'var(--green)',
-                  borderRadius: 999, padding: '1px 8px', fontSize: 12, fontWeight: 800,
+                  borderRadius: 999, padding: '1px 8px', fontSize: 14, fontWeight: 800,
                 }}>
                   {totalItems}
                 </span>
@@ -167,7 +167,7 @@ export function Navbar() {
           ].map(({ href, label }) => (
             <Link key={href} href={href} onClick={() => setMobileOpen(false)} style={{
               display: 'block', padding: '12px 0', borderBottom: '1px solid var(--border)',
-              color: 'var(--text2)', textDecoration: 'none', fontSize: 16, fontWeight: 600,
+              color: 'var(--text2)', textDecoration: 'none', fontSize: 19, fontWeight: 600,
             }}>
               {label}
             </Link>

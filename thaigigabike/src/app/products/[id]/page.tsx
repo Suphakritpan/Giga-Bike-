@@ -42,7 +42,7 @@ export default function ProductDetailPage() {
     <div>
       {/* Breadcrumb */}
       <div style={{ background: 'var(--bg2)', borderBottom: '0.5px solid var(--border)', padding: '10px 0' }}>
-        <div className="container" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'var(--text3)' }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 14, color: 'var(--text3)' }}>
           <Link href="/" style={{ color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.home}</Link>
           <ChevronRight size={12} />
           <Link href="/products" style={{ color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.products}</Link>
@@ -53,7 +53,7 @@ export default function ProductDetailPage() {
 
       {/* Main detail */}
       <section className="section">
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, alignItems: 'start' }}>
+        <div className="container grid-detail">
 
           {/* Left — image */}
           <div>
@@ -77,11 +77,11 @@ export default function ProductDetailPage() {
 
           {/* Right — info */}
           <div>
-            <div style={{ fontSize: 11, color: 'var(--text3)', marginBottom: 4, fontFamily: 'var(--font-display)', letterSpacing: '.04em' }}>
+            <div style={{ fontSize: 13, color: 'var(--text3)', marginBottom: 4, fontFamily: 'var(--font-display)', letterSpacing: '.04em' }}>
               {t.product.code}: {product.code}
             </div>
-            <h1 style={{ fontSize: 24, lineHeight: 1.3, marginBottom: 12 }}>{name}</h1>
-            <div style={{ fontSize: 30, fontWeight: 700, color: 'var(--green)', fontFamily: 'var(--font-display)', marginBottom: 14 }}>
+            <h1 style={{ fontSize: 29, lineHeight: 1.3, marginBottom: 12 }}>{name}</h1>
+            <div style={{ fontSize: 36, fontWeight: 700, color: 'var(--green)', fontFamily: 'var(--font-display)', marginBottom: 14 }}>
               ฿{product.price.toLocaleString()}
             </div>
 
@@ -95,7 +95,7 @@ export default function ProductDetailPage() {
             </div>
 
             {/* Fits on */}
-            <div style={{ background: 'var(--bg3)', border: '0.5px solid var(--border)', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 13, color: 'var(--text2)', lineHeight: 1.7 }}>
+            <div style={{ background: 'var(--bg3)', border: '0.5px solid var(--border)', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 16, color: 'var(--text2)', lineHeight: 1.7 }}>
               <span style={{ color: 'var(--green)', fontWeight: 500 }}>{t.product.fitsOn}: </span>
               {compatibleBikes.map(b => `${b.brand} ${b.model}`).join(' · ')}
             </div>
@@ -103,7 +103,7 @@ export default function ProductDetailPage() {
             {/* Color picker */}
             {product.colors.length > 0 && (
               <div style={{ marginBottom: 16 }}>
-                <p style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 8 }}>
+                <p style={{ fontSize: 14, color: 'var(--text3)', marginBottom: 8 }}>
                   {t.product.chooseColor}: <span style={{ color: 'var(--text)' }}>
                     {locale === 'th' ? (t.colors as Record<string, string>)[selectedColor] || selectedColor : selectedColor}
                   </span>
@@ -126,16 +126,16 @@ export default function ProductDetailPage() {
 
             {/* Quantity */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-              <span style={{ fontSize: 12, color: 'var(--text3)' }}>{t.product.quantity}:</span>
+              <span style={{ fontSize: 14, color: 'var(--text3)' }}>{t.product.quantity}:</span>
               <button onClick={() => setQty(Math.max(1, qty - 1))} style={{ width: 30, height: 30, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                 <Minus size={14} />
               </button>
-              <span style={{ fontSize: 16, fontWeight: 500, width: 32, textAlign: 'center' }}>{qty}</span>
+              <span style={{ fontSize: 19, fontWeight: 500, width: 32, textAlign: 'center' }}>{qty}</span>
               <button onClick={() => setQty(qty + 1)} style={{ width: 30, height: 30, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                 <Plus size={14} />
               </button>
               {product.inStock && (
-                <span style={{ fontSize: 11, color: 'var(--text3)' }}>
+                <span style={{ fontSize: 13, color: 'var(--text3)' }}>
                   {locale === 'th' ? `มี ${product.stockCount} ชิ้น` : `${product.stockCount} in stock`}
                 </span>
               )}
@@ -154,14 +154,14 @@ export default function ProductDetailPage() {
               <a href="https://line.me/ti/p/~thaigigabike" target="_blank" rel="noopener noreferrer" style={{
                 flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
                 background: '#06C755', color: '#fff', borderRadius: 8, padding: '10px 0',
-                fontSize: 14, fontWeight: 600, textDecoration: 'none', fontFamily: 'var(--font-display)',
+                fontSize: 17, fontWeight: 600, textDecoration: 'none', fontFamily: 'var(--font-display)',
               }}>
                 {t.product.askLine}
               </a>
             </div>
 
             {/* Material */}
-            <div style={{ marginTop: 16, paddingTop: 16, borderTop: '0.5px solid var(--border)', fontSize: 12, color: 'var(--text3)' }}>
+            <div style={{ marginTop: 16, paddingTop: 16, borderTop: '0.5px solid var(--border)', fontSize: 14, color: 'var(--text3)' }}>
               <span style={{ color: 'var(--text2)' }}>{t.product.material}:</span> {product.material}
             </div>
           </div>
@@ -170,15 +170,15 @@ export default function ProductDetailPage() {
         {/* Description */}
         <div className="container" style={{ marginTop: 40 }}>
           <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, padding: '20px 24px' }}>
-            <h3 style={{ fontSize: 16, marginBottom: 10 }}>{t.product.description}</h3>
-            <p style={{ fontSize: 14, color: 'var(--text2)', lineHeight: 1.8 }}>{desc}</p>
+            <h3 style={{ fontSize: 19, marginBottom: 10 }}>{t.product.description}</h3>
+            <p style={{ fontSize: 17, color: 'var(--text2)', lineHeight: 1.8 }}>{desc}</p>
           </div>
         </div>
 
         {/* Related */}
         {related.length > 0 && (
           <div className="container" style={{ marginTop: 48 }}>
-            <h3 style={{ fontSize: 20, marginBottom: 16 }}>{t.product.related}</h3>
+            <h3 style={{ fontSize: 24, marginBottom: 16 }}>{t.product.related}</h3>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 12 }}>
               {related.map(p => <ProductCard key={p.id} product={p} />)}
             </div>

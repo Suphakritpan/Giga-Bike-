@@ -1,0 +1,5 @@
+{
+    "animations.Default-Duration": 700,
+    "animations.Focus-Dimming-Mode": "None",
+    "animations.UseCursorColorForCursorAnimation": true
+}

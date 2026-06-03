@@ -146,7 +146,7 @@ export function ProductModal({ product, onClose, onSave }: Props) {
       <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 16, width: '100%', maxWidth: 680, padding: 28, position: 'relative' }}>
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
-          <h2 style={{ fontSize: 20 }}>{isEdit ? 'แก้ไขสินค้า' : 'เพิ่มสินค้าใหม่'}</h2>
+          <h2 style={{ fontSize: 24 }}>{isEdit ? 'แก้ไขสินค้า' : 'เพิ่มสินค้าใหม่'}</h2>
           <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text3)', display: 'flex' }}>
             <X size={20} />
           </button>
@@ -198,11 +198,11 @@ export function ProductModal({ product, onClose, onSave }: Props) {
                 onChange={e => set('stockCount', e.target.value)} />
             </Field>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, paddingTop: 20 }}>
-              <label style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer', fontSize: 13 }}>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer', fontSize: 16 }}>
                 <input type="checkbox" checked={form.inStock} onChange={e => set('inStock', e.target.checked)} />
                 มีสินค้า
               </label>
-              <label style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer', fontSize: 13 }}>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer', fontSize: 16 }}>
                 <input type="checkbox" checked={form.featured} onChange={e => set('featured', e.target.checked)} />
                 สินค้าแนะนำ
               </label>
@@ -213,7 +213,7 @@ export function ProductModal({ product, onClose, onSave }: Props) {
           <Field label="สี * (เลือกได้หลายสี)" error={errors.colors}>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 4 }}>
               {ALL_COLORS.map(c => (
-                <label key={c} style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer', fontSize: 12, padding: '4px 10px', borderRadius: 6, border: `0.5px solid ${form.colors.includes(c) ? 'var(--green)' : 'var(--border2)'}`, background: form.colors.includes(c) ? 'rgba(34,197,94,.1)' : 'var(--bg3)', color: form.colors.includes(c) ? 'var(--green)' : 'var(--text2)' }}>
+                <label key={c} style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer', fontSize: 14, padding: '4px 10px', borderRadius: 6, border: `0.5px solid ${form.colors.includes(c) ? 'var(--green)' : 'var(--border2)'}`, background: form.colors.includes(c) ? 'rgba(34,197,94,.1)' : 'var(--bg3)', color: form.colors.includes(c) ? 'var(--green)' : 'var(--text2)' }}>
                   <input type="checkbox" checked={form.colors.includes(c)} onChange={() => toggleArray('colors', c)} style={{ display: 'none' }} />
                   {COLOR_LABELS[c]}
                 </label>
@@ -223,10 +223,10 @@ export function ProductModal({ product, onClose, onSave }: Props) {
 
           {/* Section: รุ่นรถ */}
           <div style={{ marginBottom: 16 }}>
-            <p style={{ fontSize: 12, color: 'var(--text2)', marginBottom: 8 }}>รุ่นรถที่รองรับ (เลือกได้หลายรุ่น)</p>
+            <p style={{ fontSize: 14, color: 'var(--text2)', marginBottom: 8 }}>รุ่นรถที่รองรับ (เลือกได้หลายรุ่น)</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 6 }}>
               {bikeModels.map(bm => (
-                <label key={bm.id} style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer', fontSize: 12, padding: '4px 8px', borderRadius: 6, border: `0.5px solid ${form.bikeModels.includes(bm.id) ? 'var(--green)' : 'var(--border)'}`, background: form.bikeModels.includes(bm.id) ? 'rgba(34,197,94,.08)' : 'transparent', color: form.bikeModels.includes(bm.id) ? 'var(--green)' : 'var(--text2)' }}>
+                <label key={bm.id} style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer', fontSize: 14, padding: '4px 8px', borderRadius: 6, border: `0.5px solid ${form.bikeModels.includes(bm.id) ? 'var(--green)' : 'var(--border)'}`, background: form.bikeModels.includes(bm.id) ? 'rgba(34,197,94,.08)' : 'transparent', color: form.bikeModels.includes(bm.id) ? 'var(--green)' : 'var(--text2)' }}>
                   <input type="checkbox" checked={form.bikeModels.includes(bm.id)} onChange={() => toggleArray('bikeModels', bm.id)} style={{ display: 'none' }} />
                   {bm.brand} {bm.model}
                 </label>
@@ -250,7 +250,7 @@ export function ProductModal({ product, onClose, onSave }: Props) {
 
           {/* Server error */}
           {serverError && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--red)', background: 'rgba(239,68,68,.08)', border: '0.5px solid rgba(239,68,68,.3)', borderRadius: 8, padding: '10px 14px', marginBottom: 16 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 16, color: 'var(--red)', background: 'rgba(239,68,68,.08)', border: '0.5px solid rgba(239,68,68,.3)', borderRadius: 8, padding: '10px 14px', marginBottom: 16 }}>
               <AlertCircle size={15} /> {serverError}
             </div>
           )}
@@ -271,9 +271,9 @@ export function ProductModal({ product, onClose, onSave }: Props) {
 function Field({ label, error, children }: { label: string; error?: string; children: React.ReactNode }) {
   return (
     <div style={{ marginBottom: 4 }}>
-      <label style={{ fontSize: 12, color: 'var(--text2)', display: 'block', marginBottom: 4 }}>{label}</label>
+      <label style={{ fontSize: 14, color: 'var(--text2)', display: 'block', marginBottom: 4 }}>{label}</label>
       {children}
-      {error && <p style={{ fontSize: 11, color: 'var(--red)', marginTop: 3 }}>{error}</p>}
+      {error && <p style={{ fontSize: 13, color: 'var(--red)', marginTop: 3 }}>{error}</p>}
     </div>
   )
 }

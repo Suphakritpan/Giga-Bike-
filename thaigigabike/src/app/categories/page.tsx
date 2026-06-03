@@ -20,8 +20,8 @@ export default function CategoriesPage() {
     <div>
       <section style={{ background: 'var(--bg2)', borderBottom: '1px solid var(--border)', padding: '32px 0' }}>
         <div className="container">
-          <h1 style={{ fontSize: 32, marginBottom: 4 }}>{t.nav.categories}</h1>
-          <p style={{ color: 'var(--text2)', fontSize: 14 }}>
+          <h1 style={{ fontSize: 38, marginBottom: 4 }}>{t.nav.categories}</h1>
+          <p style={{ color: 'var(--text2)', fontSize: 17 }}>
             {locale === 'th' ? `${categories.length} หมวดหมู่` : `${categories.length} categories`}
           </p>
         </div>
@@ -55,10 +55,10 @@ export default function CategoriesPage() {
                     <div style={{ width: 48, height: 48, background: 'var(--green-dim)', borderRadius: 10, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 14 }}>
                       {CATEGORY_ICONS[cat.icon] ?? <Package size={28} color="var(--green)" />}
                     </div>
-                    <h2 style={{ fontSize: 18, marginBottom: 4, color: 'var(--text)' }}>
+                    <h2 style={{ fontSize: 22, marginBottom: 4, color: 'var(--text)' }}>
                       {locale === 'th' ? cat.nameTh : cat.name}
                     </h2>
-                    <p style={{ fontSize: 13, color: 'var(--text3)' }}>
+                    <p style={{ fontSize: 16, color: 'var(--text3)' }}>
                       {locale === 'th' ? `${count} รายการ` : `${count} items`}
                     </p>
                   </div>

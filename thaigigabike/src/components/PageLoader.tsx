@@ -27,7 +27,7 @@ export function PageLoader() {
       {/* Logo */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
         <Zap size={36} color="var(--green)" strokeWidth={2.5} />
-        <span style={{ fontFamily: 'var(--font-display)', fontSize: 32, fontWeight: 700, color: 'var(--text)', letterSpacing: '.02em' }}>
+        <span style={{ fontFamily: 'var(--font-display)', fontSize: 38, fontWeight: 700, color: 'var(--text)', letterSpacing: '.02em' }}>
           Thai<span style={{ color: 'var(--green)' }}>Giga</span>Bike
         </span>
       </div>

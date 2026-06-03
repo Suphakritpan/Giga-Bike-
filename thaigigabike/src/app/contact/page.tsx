@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <div className="section">
       <div className="container" style={{ maxWidth: 680 }}>
-        <h1 style={{ fontSize: 32, marginBottom: 8 }}>{t.contact.title}</h1>
+        <h1 style={{ fontSize: 38, marginBottom: 8 }}>{t.contact.title}</h1>
         <p style={{ color: 'var(--text2)', marginBottom: 32 }}>GIGA BIKE FACTORY — Racing Special Parts</p>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 24 }}>
@@ -22,10 +22,10 @@ export default function ContactPage() {
                 {item.icon}
               </div>
               <div>
-                <div style={{ fontSize: 11, color: 'var(--text3)', marginBottom: 2 }}>{item.label}</div>
+                <div style={{ fontSize: 13, color: 'var(--text3)', marginBottom: 2 }}>{item.label}</div>
                 {item.href
-                  ? <a href={item.href} style={{ fontSize: 14, color: 'var(--green)', textDecoration: 'none', fontWeight: 500 }}>{item.value}</a>
-                  : <div style={{ fontSize: 14 }}>{item.value}</div>
+                  ? <a href={item.href} style={{ fontSize: 17, color: 'var(--green)', textDecoration: 'none', fontWeight: 500 }}>{item.value}</a>
+                  : <div style={{ fontSize: 17 }}>{item.value}</div>
                 }
               </div>
             </div>
@@ -39,7 +39,7 @@ export default function ContactPage() {
           <a href="https://www.facebook.com/Aonggigabike" target="_blank" rel="noopener" style={{
             flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center',
             background: '#1877F2', color: '#fff', borderRadius: 8, padding: '10px',
-            fontSize: 14, fontWeight: 600, textDecoration: 'none', fontFamily: 'var(--font-display)',
+            fontSize: 17, fontWeight: 600, textDecoration: 'none', fontFamily: 'var(--font-display)',
           }}>
             Facebook: Aonggigabike
           </a>

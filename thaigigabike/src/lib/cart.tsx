@@ -25,6 +25,7 @@ function cartReducer(state: CartState, action: CartAction): CartState {
       const key = `${action.product.id}-${action.color}`
       const existing = state.items.find(i => `${i.product.id}-${i.color}` === key)
       if (existing) {
+        if (existing.quantity >= action.product.stockCount) return state
         return {
           items: state.items.map(i =>
             `${i.product.id}-${i.color}` === key
@@ -33,6 +34,7 @@ function cartReducer(state: CartState, action: CartAction): CartState {
           )
         }
       }
+      if (action.product.stockCount < 1) return state
       return { items: [...state.items, { product: action.product, quantity: 1, color: action.color }] }
     }
     case 'REMOVE':
@@ -42,11 +44,12 @@ function cartReducer(state: CartState, action: CartAction): CartState {
         return { items: state.items.filter(i => !(i.product.id === action.productId && i.color === action.color)) }
       }
       return {
-        items: state.items.map(i =>
-          i.product.id === action.productId && i.color === action.color
-            ? { ...i, quantity: action.quantity }
-            : i
-        )
+        items: state.items.map(i => {
+          if (i.product.id === action.productId && i.color === action.color) {
+            return { ...i, quantity: Math.min(action.quantity, i.product.stockCount) }
+          }
+          return i
+        })
       }
     case 'CLEAR':
       return { items: [] }
@@ -76,7 +79,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
     try {
       const saved = localStorage.getItem('gigabike-cart')
       if (saved) dispatch({ type: 'HYDRATE', items: JSON.parse(saved) })
-    } catch {}
+    } catch (e) {
+      console.error('Cart hydration failed:', e)
+    }
   }, [])
 
   useEffect(() => {

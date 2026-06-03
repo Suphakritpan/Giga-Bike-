@@ -185,10 +185,10 @@ export default function AdminPage() {
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>
       {/* Header */}
       <div style={{ background: 'var(--bg2)', borderBottom: '0.5px solid var(--border)', padding: '12px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 700 }}>
-          Thai<span style={{ color: 'var(--green)' }}>Giga</span>Bike <span style={{ color: 'var(--text3)', fontSize: 14, fontWeight: 400 }}>Admin</span>
+        <div style={{ fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 700 }}>
+          Thai<span style={{ color: 'var(--green)' }}>Giga</span>Bike <span style={{ color: 'var(--text3)', fontSize: 17, fontWeight: 400 }}>Admin</span>
         </div>
-        <button onClick={handleLogout} className="btn-ghost" style={{ fontSize: 13, padding: '6px 12px' }}>
+        <button onClick={handleLogout} className="btn-ghost" style={{ fontSize: 16, padding: '6px 12px' }}>
           <LogOut size={14} /> ออกจากระบบ
         </button>
       </div>
@@ -200,8 +200,8 @@ export default function AdminPage() {
             <div key={i} style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, padding: '16px 20px', display: 'flex', alignItems: 'center', gap: 12 }}>
               <div style={{ width: 36, height: 36, background: 'var(--bg3)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{s.icon}</div>
               <div>
-                <div style={{ fontSize: 22, fontWeight: 700, fontFamily: 'var(--font-display)' }}>{s.value}</div>
-                <div style={{ fontSize: 12, color: 'var(--text2)' }}>{s.label}</div>
+                <div style={{ fontSize: 26, fontWeight: 700, fontFamily: 'var(--font-display)' }}>{s.value}</div>
+                <div style={{ fontSize: 14, color: 'var(--text2)' }}>{s.label}</div>
               </div>
             </div>
           ))}
@@ -211,7 +211,7 @@ export default function AdminPage() {
         <div style={{ display: 'flex', borderBottom: '0.5px solid var(--border)', marginBottom: 20 }}>
           {TABS.map(t => (
             <button key={t.id} onClick={() => setTab(t.id)} style={{
-              padding: '10px 20px', fontSize: 14, fontWeight: 500,
+              padding: '10px 20px', fontSize: 17, fontWeight: 500,
               border: 'none', borderBottom: tab === t.id ? '2px solid var(--green)' : '2px solid transparent',
               background: 'transparent', cursor: 'pointer',
               color: tab === t.id ? 'var(--green)' : 'var(--text2)', position: 'relative',
@@ -228,44 +228,44 @@ export default function AdminPage() {
         {tab === 'products' && (
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 16 }}>
-              <p style={{ fontSize: 13, color: 'var(--text2)' }}>{products.length} รายการ</p>
-              <button className="btn-primary" style={{ fontSize: 13, padding: '7px 14px' }} onClick={openAdd}>
+              <p style={{ fontSize: 16, color: 'var(--text2)' }}>{products.length} รายการ</p>
+              <button className="btn-primary" style={{ fontSize: 16, padding: '7px 14px' }} onClick={openAdd}>
                 <Plus size={14} /> เพิ่มสินค้า
               </button>
             </div>
             {loadingProducts ? (
-              <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--text3)', fontSize: 14 }}>กำลังโหลด...</div>
+              <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--text3)', fontSize: 17 }}>กำลังโหลด...</div>
             ) : (
               <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, overflow: 'hidden' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                   <thead>
                     <tr style={{ borderBottom: '0.5px solid var(--border)' }}>
                       {['รหัส', 'ชื่อสินค้า', 'หมวด', 'ราคา', 'สต็อก', 'สถานะ', ''].map(h => (
-                        <th key={h} style={{ padding: '10px 14px', textAlign: 'left', fontSize: 11, color: 'var(--text3)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '.04em' }}>{h}</th>
+                        <th key={h} style={{ padding: '10px 14px', textAlign: 'left', fontSize: 13, color: 'var(--text3)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '.04em' }}>{h}</th>
                       ))}
                     </tr>
                   </thead>
                   <tbody>
                     {products.map((p, i) => (
                       <tr key={p.id} style={{ borderBottom: i < products.length - 1 ? '0.5px solid var(--border)' : 'none' }}>
-                        <td style={{ padding: '10px 14px', fontSize: 12, color: 'var(--text3)', fontFamily: 'var(--font-display)' }}>{p.code}</td>
-                        <td style={{ padding: '10px 14px', fontSize: 13, maxWidth: 200 }}>
+                        <td style={{ padding: '10px 14px', fontSize: 14, color: 'var(--text3)', fontFamily: 'var(--font-display)' }}>{p.code}</td>
+                        <td style={{ padding: '10px 14px', fontSize: 16, maxWidth: 200 }}>
                           <div style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.nameTh}</div>
                         </td>
                         <td style={{ padding: '10px 14px' }}>
-                          <span className="badge badge-gray" style={{ fontSize: 11 }}>{p.category}</span>
+                          <span className="badge badge-gray" style={{ fontSize: 13 }}>{p.category}</span>
                         </td>
-                        <td style={{ padding: '10px 14px', fontSize: 13, fontWeight: 500, color: 'var(--green)', fontFamily: 'var(--font-display)' }}>฿{p.price.toLocaleString()}</td>
-                        <td style={{ padding: '10px 14px', fontSize: 13 }}>
+                        <td style={{ padding: '10px 14px', fontSize: 16, fontWeight: 500, color: 'var(--green)', fontFamily: 'var(--font-display)' }}>฿{p.price.toLocaleString()}</td>
+                        <td style={{ padding: '10px 14px', fontSize: 16 }}>
                           <span style={{ color: p.stockCount === 0 ? 'var(--red)' : p.stockCount <= LOW_STOCK_THRESHOLD ? 'var(--orange)' : 'var(--text)' }}>{p.stockCount}</span>
                         </td>
                         <td style={{ padding: '10px 14px' }}>
-                          <span className={`badge ${p.inStock ? 'badge-green' : 'badge-red'}`} style={{ fontSize: 11 }}>{p.inStock ? 'มีสินค้า' : 'หมด'}</span>
+                          <span className={`badge ${p.inStock ? 'badge-green' : 'badge-red'}`} style={{ fontSize: 13 }}>{p.inStock ? 'มีสินค้า' : 'หมด'}</span>
                         </td>
                         <td style={{ padding: '10px 14px' }}>
                           <div style={{ display: 'flex', gap: 6 }}>
-                            <button className="btn-ghost" style={{ padding: '4px 8px', fontSize: 12 }} onClick={() => openEdit(p)}><Edit size={13} /></button>
-                            <button className="btn-ghost" style={{ padding: '4px 8px', fontSize: 12, color: 'var(--red)' }} onClick={() => setDeleteConfirm(p)}><Trash2 size={13} /></button>
+                            <button className="btn-ghost" style={{ padding: '4px 8px', fontSize: 14 }} onClick={() => openEdit(p)}><Edit size={13} /></button>
+                            <button className="btn-ghost" style={{ padding: '4px 8px', fontSize: 14, color: 'var(--red)' }} onClick={() => setDeleteConfirm(p)}><Trash2 size={13} /></button>
                           </div>
                         </td>
                       </tr>
@@ -289,8 +289,8 @@ export default function AdminPage() {
                 <div key={i} style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, padding: '14px 18px', display: 'flex', alignItems: 'center', gap: 12 }}>
                   <div style={{ width: 34, height: 34, background: 'var(--bg3)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{s.icon}</div>
                   <div>
-                    <div style={{ fontSize: 20, fontWeight: 700, fontFamily: 'var(--font-display)', color: s.color }}>{s.value}</div>
-                    <div style={{ fontSize: 12, color: 'var(--text2)' }}>{s.label}</div>
+                    <div style={{ fontSize: 24, fontWeight: 700, fontFamily: 'var(--font-display)', color: s.color }}>{s.value}</div>
+                    <div style={{ fontSize: 14, color: 'var(--text2)' }}>{s.label}</div>
                   </div>
                 </div>
               ))}
@@ -298,17 +298,17 @@ export default function AdminPage() {
 
             {(outOfStock > 0 || lowStock > 0) && (
               <div style={{ marginBottom: 16, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                {outOfStock > 0 && <div style={{ background: 'rgba(239,68,68,.08)', border: '0.5px solid rgba(239,68,68,.3)', borderRadius: 8, padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#f87171' }}><XCircle size={15} /> สินค้าหมด {outOfStock} รายการ — ควรเติมสต็อก</div>}
-                {lowStock > 0 && <div style={{ background: 'rgba(249,115,22,.08)', border: '0.5px solid rgba(249,115,22,.3)', borderRadius: 8, padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: '#fb923c' }}><AlertTriangle size={15} /> สต็อกใกล้หมด {lowStock} รายการ</div>}
+                {outOfStock > 0 && <div style={{ background: 'rgba(239,68,68,.08)', border: '0.5px solid rgba(239,68,68,.3)', borderRadius: 8, padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 8, fontSize: 16, color: '#f87171' }}><XCircle size={15} /> สินค้าหมด {outOfStock} รายการ — ควรเติมสต็อก</div>}
+                {lowStock > 0 && <div style={{ background: 'rgba(249,115,22,.08)', border: '0.5px solid rgba(249,115,22,.3)', borderRadius: 8, padding: '10px 14px', display: 'flex', alignItems: 'center', gap: 8, fontSize: 16, color: '#fb923c' }}><AlertTriangle size={15} /> สต็อกใกล้หมด {lowStock} รายการ</div>}
               </div>
             )}
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'var(--text2)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 16, color: 'var(--text2)' }}>
                 <Boxes size={14} color="var(--green)" />
                 {products.length} รายการ · สต็อกรวม {products.reduce((s, p) => s + p.stockCount, 0)} ชิ้น
               </div>
-              <button className="btn-ghost" onClick={exportStock} style={{ fontSize: 13 }}><Download size={14} /> Export CSV</button>
+              <button className="btn-ghost" onClick={exportStock} style={{ fontSize: 16 }}><Download size={14} /> Export CSV</button>
             </div>
 
             <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, overflow: 'hidden' }}>
@@ -316,7 +316,7 @@ export default function AdminPage() {
                 <thead>
                   <tr style={{ borderBottom: '0.5px solid var(--border)' }}>
                     {['รหัส', 'ชื่อสินค้า', 'หมวด', 'จำนวนสต็อก', 'สถานะ'].map(h => (
-                      <th key={h} style={{ padding: '10px 14px', textAlign: 'left', fontSize: 11, color: 'var(--text3)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '.04em' }}>{h}</th>
+                      <th key={h} style={{ padding: '10px 14px', textAlign: 'left', fontSize: 13, color: 'var(--text3)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '.04em' }}>{h}</th>
                     ))}
                   </tr>
                 </thead>
@@ -326,11 +326,11 @@ export default function AdminPage() {
                     const isEmpty = p.stockCount === 0
                     return (
                       <tr key={p.id} style={{ borderBottom: i < arr.length - 1 ? '0.5px solid var(--border)' : 'none', background: isEmpty ? 'rgba(239,68,68,.03)' : isLow ? 'rgba(249,115,22,.03)' : 'transparent' }}>
-                        <td style={{ padding: '12px 14px', fontSize: 12, color: 'var(--text3)', fontFamily: 'var(--font-display)', whiteSpace: 'nowrap' }}>{p.code}</td>
-                        <td style={{ padding: '12px 14px', fontSize: 13, maxWidth: 220 }}>
+                        <td style={{ padding: '12px 14px', fontSize: 14, color: 'var(--text3)', fontFamily: 'var(--font-display)', whiteSpace: 'nowrap' }}>{p.code}</td>
+                        <td style={{ padding: '12px 14px', fontSize: 16, maxWidth: 220 }}>
                           <div style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.nameTh}</div>
                         </td>
-                        <td style={{ padding: '12px 14px' }}><span className="badge badge-gray" style={{ fontSize: 11 }}>{p.category}</span></td>
+                        <td style={{ padding: '12px 14px' }}><span className="badge badge-gray" style={{ fontSize: 13 }}>{p.category}</span></td>
                         <td style={{ padding: '12px 14px' }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                             <button onClick={() => adjustStock(p.id, -1)} style={{ width: 28, height: 28, borderRadius: 6, background: 'var(--bg3)', border: '0.5px solid var(--border2)', color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', flexShrink: 0 }}><Minus size={13} /></button>
@@ -342,20 +342,20 @@ export default function AdminPage() {
                                   if (e.key === 'Enter') { setStock(p.id, parseInt(stockInput)); setEditingStock(null) }
                                   if (e.key === 'Escape') setEditingStock(null)
                                 }}
-                                style={{ width: 64, textAlign: 'center', fontSize: 14, fontWeight: 600, background: 'var(--bg3)', border: '1px solid var(--green)', borderRadius: 6, padding: '4px 6px', color: 'var(--text)', outline: 'none' }}
+                                style={{ width: 64, textAlign: 'center', fontSize: 17, fontWeight: 600, background: 'var(--bg3)', border: '1px solid var(--green)', borderRadius: 6, padding: '4px 6px', color: 'var(--text)', outline: 'none' }}
                               />
                             ) : (
                               <button onClick={() => { setEditingStock(p.id); setStockInput(String(p.stockCount)) }} title="คลิกเพื่อแก้ไข"
-                                style={{ width: 64, textAlign: 'center', fontSize: 14, fontWeight: 600, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, padding: '4px 6px', cursor: 'text', color: isEmpty ? 'var(--red)' : isLow ? 'var(--orange)' : 'var(--text)', fontFamily: 'var(--font-display)' }}>
+                                style={{ width: 64, textAlign: 'center', fontSize: 17, fontWeight: 600, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, padding: '4px 6px', cursor: 'text', color: isEmpty ? 'var(--red)' : isLow ? 'var(--orange)' : 'var(--text)', fontFamily: 'var(--font-display)' }}>
                                 {p.stockCount}
                               </button>
                             )}
                             <button onClick={() => adjustStock(p.id, 1)} style={{ width: 28, height: 28, borderRadius: 6, background: 'var(--green)', border: 'none', color: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', flexShrink: 0 }}><Plus size={13} /></button>
-                            {(isEmpty || isLow) && <span style={{ fontSize: 11, color: isEmpty ? 'var(--red)' : 'var(--orange)' }}>{isEmpty ? 'หมด' : 'ใกล้หมด'}</span>}
+                            {(isEmpty || isLow) && <span style={{ fontSize: 13, color: isEmpty ? 'var(--red)' : 'var(--orange)' }}>{isEmpty ? 'หมด' : 'ใกล้หมด'}</span>}
                           </div>
                         </td>
                         <td style={{ padding: '12px 14px' }}>
-                          <button onClick={() => toggleInStock(p.id)} className={`badge ${p.inStock ? 'badge-green' : 'badge-red'}`} style={{ fontSize: 11, cursor: 'pointer', border: 'none', fontFamily: 'inherit' }} title="คลิกเพื่อเปลี่ยนสถานะ">
+                          <button onClick={() => toggleInStock(p.id)} className={`badge ${p.inStock ? 'badge-green' : 'badge-red'}`} style={{ fontSize: 13, cursor: 'pointer', border: 'none', fontFamily: 'inherit' }} title="คลิกเพื่อเปลี่ยนสถานะ">
                             {p.inStock ? 'มีสินค้า' : 'หมด'}
                           </button>
                         </td>
@@ -372,33 +372,33 @@ export default function AdminPage() {
         {tab === 'orders' && (
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 16 }}>
-              <p style={{ fontSize: 13, color: 'var(--text2)' }}>{orders.length} ออเดอร์</p>
-              <button className="btn-ghost" onClick={exportOrders} style={{ fontSize: 13 }}><Download size={14} /> Export CSV</button>
+              <p style={{ fontSize: 16, color: 'var(--text2)' }}>{orders.length} ออเดอร์</p>
+              <button className="btn-ghost" onClick={exportOrders} style={{ fontSize: 16 }}><Download size={14} /> Export CSV</button>
             </div>
             <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, overflow: 'hidden' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                 <thead>
                   <tr style={{ borderBottom: '0.5px solid var(--border)' }}>
                     {['เลขออเดอร์', 'ลูกค้า', 'รายการ', 'ยอด', 'สถานะ', 'วันที่', 'อัปเดต'].map(h => (
-                      <th key={h} style={{ padding: '10px 14px', textAlign: 'left', fontSize: 11, color: 'var(--text3)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '.04em' }}>{h}</th>
+                      <th key={h} style={{ padding: '10px 14px', textAlign: 'left', fontSize: 13, color: 'var(--text3)', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '.04em' }}>{h}</th>
                     ))}
                   </tr>
                 </thead>
                 <tbody>
                   {orders.map((o, i) => (
                     <tr key={o.id} style={{ borderBottom: i < orders.length - 1 ? '0.5px solid var(--border)' : 'none' }}>
-                      <td style={{ padding: '10px 14px', fontSize: 13, fontFamily: 'var(--font-display)', fontWeight: 600 }}>{o.id}</td>
+                      <td style={{ padding: '10px 14px', fontSize: 16, fontFamily: 'var(--font-display)', fontWeight: 600 }}>{o.id}</td>
                       <td style={{ padding: '10px 14px' }}>
-                        <div style={{ fontSize: 13 }}>{o.customer}</div>
-                        <div style={{ fontSize: 11, color: 'var(--text3)' }}>{o.phone}</div>
+                        <div style={{ fontSize: 16 }}>{o.customer}</div>
+                        <div style={{ fontSize: 13, color: 'var(--text3)' }}>{o.phone}</div>
                       </td>
-                      <td style={{ padding: '10px 14px', fontSize: 13, color: 'var(--text2)' }}>{o.items} รายการ</td>
-                      <td style={{ padding: '10px 14px', fontSize: 13, fontWeight: 600, color: 'var(--green)', fontFamily: 'var(--font-display)' }}>฿{o.total.toLocaleString()}</td>
-                      <td style={{ padding: '10px 14px' }}><span className={`badge ${STATUS_COLORS[o.status]}`} style={{ fontSize: 11 }}>{STATUS_LABELS[o.status]}</span></td>
-                      <td style={{ padding: '10px 14px', fontSize: 12, color: 'var(--text3)' }}>{o.date}</td>
+                      <td style={{ padding: '10px 14px', fontSize: 16, color: 'var(--text2)' }}>{o.items} รายการ</td>
+                      <td style={{ padding: '10px 14px', fontSize: 16, fontWeight: 600, color: 'var(--green)', fontFamily: 'var(--font-display)' }}>฿{o.total.toLocaleString()}</td>
+                      <td style={{ padding: '10px 14px' }}><span className={`badge ${STATUS_COLORS[o.status]}`} style={{ fontSize: 13 }}>{STATUS_LABELS[o.status]}</span></td>
+                      <td style={{ padding: '10px 14px', fontSize: 14, color: 'var(--text3)' }}>{o.date}</td>
                       <td style={{ padding: '10px 14px' }}>
                         <div style={{ position: 'relative', display: 'inline-block' }}>
-                          <select value={o.status} onChange={e => updateOrderStatus(o.id, e.target.value as OrderStatus)} className="input" style={{ fontSize: 12, padding: '4px 24px 4px 8px', appearance: 'none', width: 'auto', cursor: 'pointer' }}>
+                          <select value={o.status} onChange={e => updateOrderStatus(o.id, e.target.value as OrderStatus)} className="input" style={{ fontSize: 14, padding: '4px 24px 4px 8px', appearance: 'none', width: 'auto', cursor: 'pointer' }}>
                             {(['pending', 'paid', 'shipping', 'delivered', 'cancelled'] as OrderStatus[]).map(s => (
                               <option key={s} value={s}>{STATUS_LABELS[s]}</option>
                             ))}
@@ -428,17 +428,17 @@ export default function AdminPage() {
       {deleteConfirm && (
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.7)', zIndex: 200, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
           <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 16, padding: 28, maxWidth: 380, width: '100%' }}>
-            <h3 style={{ fontSize: 18, marginBottom: 10 }}>ยืนยันการลบสินค้า</h3>
-            <p style={{ fontSize: 14, color: 'var(--text2)', marginBottom: 6 }}>
+            <h3 style={{ fontSize: 22, marginBottom: 10 }}>ยืนยันการลบสินค้า</h3>
+            <p style={{ fontSize: 17, color: 'var(--text2)', marginBottom: 6 }}>
               คุณต้องการลบสินค้า <span style={{ color: 'var(--text)', fontWeight: 600 }}>{deleteConfirm.code} — {deleteConfirm.nameTh}</span> ออกจากระบบ?
             </p>
-            <p style={{ fontSize: 12, color: 'var(--red)', marginBottom: 24 }}>การกระทำนี้ไม่สามารถย้อนกลับได้</p>
+            <p style={{ fontSize: 14, color: 'var(--red)', marginBottom: 24 }}>การกระทำนี้ไม่สามารถย้อนกลับได้</p>
             <div style={{ display: 'flex', gap: 10, justifyContent: 'flex-end' }}>
               <button className="btn-ghost" onClick={() => setDeleteConfirm(null)} disabled={deleting}>ยกเลิก</button>
               <button
                 onClick={() => handleDelete(deleteConfirm)}
                 disabled={deleting}
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'var(--red)', color: '#fff', border: 'none', borderRadius: 8, padding: '10px 20px', fontSize: 14, fontWeight: 600, cursor: 'pointer', opacity: deleting ? 0.7 : 1 }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'var(--red)', color: '#fff', border: 'none', borderRadius: 8, padding: '10px 20px', fontSize: 17, fontWeight: 600, cursor: 'pointer', opacity: deleting ? 0.7 : 1 }}
               >
                 <Trash2 size={15} /> {deleting ? 'กำลังลบ...' : 'ลบสินค้า'}
               </button>
