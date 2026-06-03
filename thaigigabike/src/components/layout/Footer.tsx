@@ -1,0 +1,85 @@
+'use client'
+import Link from 'next/link'
+import { Zap, Phone, Mail, Clock } from 'lucide-react'
+import { useLang } from '@/lib/lang'
+
+export function Footer() {
+  const { t } = useLang()
+  return (
+    <footer style={{ background: 'var(--bg2)', borderTop: '0.5px solid var(--border)', marginTop: 64, padding: '48px 0 24px' }}>
+      <div className="container">
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 32, marginBottom: 40 }}>
+
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 12 }}>
+              <Zap size={18} color="var(--green)" />
+              <span style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 700 }}>
+                Thai<span style={{ color: 'var(--green)' }}>Giga</span>Bike
+              </span>
+            </div>
+            <p style={{ fontSize: 13, color: 'var(--text2)', lineHeight: 1.7 }}>
+              GIGA BIKE FACTORY<br />
+              Racing special Parts<br />
+              Custom Part &amp; Accessories<br />
+              Product Of Thailand
+            </p>
+            {/* Racing stripe accent */}
+            <div style={{ width: 48, height: 4, marginTop: 16, background: 'var(--green)', borderRadius: 2 }} />
+          </div>
+
+          <div>
+            <h4 style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '.06em' }}>
+              {t.nav.products}
+            </h4>
+            {['Yamaha SR400/500', 'Honda CB750', 'Kawasaki W650', 'Triumph Thruxton', 'BMW S1000RR'].map(m => (
+              <Link key={m} href={`/products?bike=${m}`} style={{ display: 'block', fontSize: 13, color: 'var(--text2)', textDecoration: 'none', marginBottom: 6 }}>
+                {m}
+              </Link>
+            ))}
+          </div>
+
+          <div>
+            <h4 style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '.06em' }}>
+              {t.nav.contact}
+            </h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <a href="tel:0814249407" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--text2)', textDecoration: 'none', fontSize: 13 }}>
+                <Phone size={14} color="var(--green)" /> 081-424-9407
+              </a>
+              <a href="mailto:aonggb@yahoo.com" style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--text2)', textDecoration: 'none', fontSize: 13 }}>
+                <Mail size={14} color="var(--green)" /> aonggb@yahoo.com
+              </a>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, color: 'var(--text2)', fontSize: 13 }}>
+                <Clock size={14} color="var(--green)" /> {t.contact.hours}
+              </div>
+            </div>
+            <div style={{ display: 'flex', gap: 8, marginTop: 16 }}>
+              <a href="https://line.me/ti/p/~thaigigabike" target="_blank" rel="noopener" style={{
+                background: '#06C755', color: '#fff', border: 'none', borderRadius: 8,
+                padding: '7px 16px', fontSize: 13, fontWeight: 600, cursor: 'pointer',
+                textDecoration: 'none', fontFamily: 'var(--font-display)',
+              }}>
+                LINE
+              </a>
+              <a href="https://www.facebook.com/Aonggigabike" target="_blank" rel="noopener" style={{
+                background: '#1877F2', color: '#fff', border: 'none', borderRadius: 8,
+                padding: '7px 16px', fontSize: 13, fontWeight: 600, cursor: 'pointer',
+                textDecoration: 'none', fontFamily: 'var(--font-display)',
+              }}>
+                Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ borderTop: '0.5px solid var(--border)', paddingTop: 20, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
+          <p style={{ fontSize: 12, color: 'var(--text3)' }}>© 2024 ThaiGigaBike — GIGA BIKE FACTORY. All rights reserved.</p>
+          <div style={{ display: 'flex', gap: 16 }}>
+            <Link href="/order" style={{ fontSize: 12, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.trackOrder}</Link>
+            <Link href="/contact" style={{ fontSize: 12, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.contact}</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
