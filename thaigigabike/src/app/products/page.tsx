@@ -1,15 +1,26 @@
 'use client'
-import { useState, useMemo } from 'react'
+import { Suspense, useState, useMemo, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { Search, SlidersHorizontal } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 import { products, bikeModels, categories } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
 
-export default function ProductsPage() {
+function ProductsContent() {
+  const searchParams = useSearchParams()
   const { t, locale } = useLang()
-  const [query, setQuery] = useState('')
-  const [selectedBike, setSelectedBike] = useState('all')
-  const [selectedCat, setSelectedCat] = useState('all')
+  const [query, setQuery] = useState(searchParams.get('q') || '')
+  const [selectedBike, setSelectedBike] = useState(searchParams.get('bike') || 'all')
+  const [selectedCat, setSelectedCat] = useState(searchParams.get('cat') || 'all')
+
+  useEffect(() => {
+    const q = searchParams.get('q')
+    const bike = searchParams.get('bike')
+    const cat = searchParams.get('cat')
+    if (q !== null) setQuery(q)
+    if (bike) setSelectedBike(bike)
+    if (cat) setSelectedCat(cat)
+  }, [searchParams])
   const [sortBy, setSortBy] = useState<'default' | 'price-asc' | 'price-desc'>('default')
 
   const filtered = useMemo(() => {
@@ -132,5 +143,13 @@ export default function ProductsPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<div className="section"><div className="container" style={{ color: 'var(--text3)' }}>Loading…</div></div>}>
+      <ProductsContent />
+    </Suspense>
   )
 }

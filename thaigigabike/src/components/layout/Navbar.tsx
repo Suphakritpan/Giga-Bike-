@@ -1,31 +1,37 @@
 'use client'
 import Link from 'next/link'
-import { useState } from 'react'
-import { ShoppingCart, Search, Zap, Menu, X } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
+import { ShoppingCart, Search, Zap, Menu, X, Sun, Moon } from 'lucide-react'
 import { useCart } from '@/lib/cart'
 import { useLang } from '@/lib/lang'
+import { useTheme } from '@/lib/theme'
 import type { Locale } from '@/lib/i18n'
 
 export function Navbar() {
   const { totalItems } = useCart()
   const { t, locale, setLocale } = useLang()
+  const { theme, toggle } = useTheme()
+  const router = useRouter()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => setMounted(true), [])
 
   return (
-    <header style={{
+    <header className="navbar-bg" style={{
       position: 'sticky', top: 0, zIndex: 100,
-      background: 'rgba(15,15,15,.95)',
       backdropFilter: 'blur(12px)',
-      borderBottom: '0.5px solid var(--border)',
+      borderBottom: '1px solid var(--border)',
     }}>
-      <div className="container" style={{ display: 'flex', alignItems: 'center', gap: 16, height: 56 }}>
+      <div className="container" style={{ display: 'flex', alignItems: 'center', gap: 16, height: 60 }}>
 
         {/* Logo */}
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 6, flexShrink: 0 }}>
-          <Zap size={18} color="var(--green)" />
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 700, color: 'var(--text)', letterSpacing: '.02em' }}>
+        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+          <Zap size={20} color="var(--green)" strokeWidth={2.5} />
+          <span style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 800, color: 'var(--text)', letterSpacing: '.02em' }}>
             Thai<span style={{ color: 'var(--green)' }}>Giga</span>Bike
           </span>
         </Link>
@@ -40,7 +46,7 @@ export function Navbar() {
             { href: '/contact', label: t.nav.contact },
           ].map(({ href, label }) => (
             <Link key={href} href={href} style={{
-              padding: '6px 12px', borderRadius: 8, fontSize: 13, fontWeight: 500,
+              padding: '7px 14px', borderRadius: 8, fontSize: 15, fontWeight: 600,
               color: 'var(--text2)', textDecoration: 'none',
               transition: 'color .15s, background .15s',
             }}
@@ -62,39 +68,55 @@ export function Navbar() {
 
           {/* Search */}
           {searchOpen ? (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 6, background: 'var(--bg3)', border: '0.5px solid var(--green)', borderRadius: 8, padding: '6px 12px' }}>
-              <Search size={14} color="var(--green)" />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, background: 'var(--bg3)', border: '1px solid var(--green)', borderRadius: 8, padding: '7px 14px' }}>
+              <Search size={15} color="var(--green)" />
               <input
                 autoFocus
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
                 onKeyDown={e => {
                   if (e.key === 'Enter' && searchQuery.trim()) {
-                    window.location.href = `/products?q=${encodeURIComponent(searchQuery)}`
+                    router.push(`/products?q=${encodeURIComponent(searchQuery)}`)
+                    setSearchOpen(false)
+                    setSearchQuery('')
                   }
                   if (e.key === 'Escape') setSearchOpen(false)
                 }}
                 placeholder={t.nav.search}
-                style={{ background: 'transparent', border: 'none', outline: 'none', color: 'var(--text)', fontSize: 13, width: 160 }}
+                style={{ background: 'transparent', border: 'none', outline: 'none', color: 'var(--text)', fontSize: 15, width: 160 }}
               />
               <button onClick={() => setSearchOpen(false)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text3)', display: 'flex' }}>
-                <X size={14} />
+                <X size={15} />
               </button>
             </div>
           ) : (
-            <button onClick={() => setSearchOpen(true)} className="btn-ghost" style={{ padding: '7px 10px' }}>
-              <Search size={16} />
+            <button onClick={() => setSearchOpen(true)} className="btn-ghost" style={{ padding: '7px 11px' }}>
+              <Search size={17} />
             </button>
           )}
 
+          {/* Theme toggle — render after mount only to avoid hydration mismatch */}
+          <button
+            onClick={toggle}
+            className="btn-ghost"
+            style={{ padding: '7px 11px' }}
+            title={theme === 'dark' ? 'ธีมสว่าง' : 'ธีมมืด'}
+            suppressHydrationWarning
+          >
+            {mounted
+              ? theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />
+              : <Moon size={17} />
+            }
+          </button>
+
           {/* Language toggle */}
-          <div style={{ display: 'flex', background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 8, overflow: 'hidden' }}>
+          <div style={{ display: 'flex', background: 'var(--bg3)', border: '1px solid var(--border2)', borderRadius: 8, overflow: 'hidden' }}>
             {(['th', 'en'] as Locale[]).map(l => (
               <button key={l} onClick={() => setLocale(l)} style={{
-                padding: '6px 10px', fontSize: 12, fontWeight: 500,
+                padding: '7px 11px', fontSize: 13, fontWeight: 700,
                 border: 'none', cursor: 'pointer',
                 background: locale === l ? 'var(--green)' : 'transparent',
-                color: locale === l ? '#000' : 'var(--text2)',
+                color: locale === l ? '#fff' : 'var(--text2)',
                 transition: 'all .15s',
               }}>
                 {l.toUpperCase()}
@@ -105,19 +127,19 @@ export function Navbar() {
           {/* Cart */}
           <Link href="/cart" style={{ textDecoration: 'none' }}>
             <button style={{
-              display: 'flex', alignItems: 'center', gap: 6,
-              background: 'var(--green)', color: '#000',
+              display: 'flex', alignItems: 'center', gap: 7,
+              background: 'var(--green)', color: '#fff',
               border: 'none', borderRadius: 8,
-              padding: '7px 14px', fontSize: 13, fontWeight: 600,
+              padding: '8px 16px', fontSize: 15, fontWeight: 700,
               cursor: 'pointer', fontFamily: 'var(--font-display)',
               transition: 'background .15s',
             }}>
-              <ShoppingCart size={15} />
+              <ShoppingCart size={17} />
               {t.nav.cart}
               {totalItems > 0 && (
                 <span style={{
-                  background: '#000', color: 'var(--green)',
-                  borderRadius: 999, padding: '1px 7px', fontSize: 11, fontWeight: 700,
+                  background: '#fff', color: 'var(--green)',
+                  borderRadius: 999, padding: '1px 8px', fontSize: 12, fontWeight: 800,
                 }}>
                   {totalItems}
                 </span>
@@ -126,15 +148,15 @@ export function Navbar() {
           </Link>
 
           {/* Mobile menu toggle */}
-          <button className="mobile-menu-btn btn-ghost" style={{ padding: '7px 10px', display: 'none' }} onClick={() => setMobileOpen(!mobileOpen)}>
-            {mobileOpen ? <X size={18} /> : <Menu size={18} />}
+          <button className="mobile-menu-btn btn-ghost" style={{ padding: '7px 11px', display: 'none' }} onClick={() => setMobileOpen(!mobileOpen)}>
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <div style={{ borderTop: '0.5px solid var(--border)', background: 'var(--bg2)', padding: '12px 20px' }}>
+        <div style={{ borderTop: '1px solid var(--border)', background: 'var(--bg2)', padding: '12px 20px' }}>
           {[
             { href: '/', label: t.nav.home },
             { href: '/products', label: t.nav.products },
@@ -144,8 +166,8 @@ export function Navbar() {
             { href: '/order', label: t.nav.trackOrder },
           ].map(({ href, label }) => (
             <Link key={href} href={href} onClick={() => setMobileOpen(false)} style={{
-              display: 'block', padding: '10px 0', borderBottom: '0.5px solid var(--border)',
-              color: 'var(--text2)', textDecoration: 'none', fontSize: 15,
+              display: 'block', padding: '12px 0', borderBottom: '1px solid var(--border)',
+              color: 'var(--text2)', textDecoration: 'none', fontSize: 16, fontWeight: 600,
             }}>
               {label}
             </Link>

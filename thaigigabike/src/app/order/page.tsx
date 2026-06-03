@@ -1,7 +1,7 @@
 'use client'
-import { useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
-import { Search, Package, CheckCircle, Truck, XCircle, Clock } from 'lucide-react'
+import { Suspense, useState, useEffect } from 'react'
+import { useSearchParams, useRouter } from 'next/navigation'
+import { Search, Package, CheckCircle, Truck, XCircle, Clock, Check } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 
 type OrderStatus = 'pending' | 'paid' | 'shipping' | 'delivered' | 'cancelled'
@@ -22,27 +22,32 @@ const mockOrder = {
   recipient: { name: 'สมชาย ใจดี', phone: '081-xxx-xxxx', address: '123 ถ.สุขุมวิท กรุงเทพฯ 10110' },
 }
 
-export default function OrderPage() {
+function OrderContent() {
   const searchParams = useSearchParams()
+  const router = useRouter()
   const { t, locale } = useLang()
-  const [orderId, setOrderId] = useState(searchParams.get('id') || '')
-  const [query, setQuery] = useState(orderId)
-  const [order, setOrder] = useState(orderId ? mockOrder : null)
+  const [query, setQuery] = useState(searchParams.get('id') || '')
+  const [order, setOrder] = useState(() => {
+    const id = searchParams.get('id')
+    if (!id) return null
+    return { ...mockOrder, id, status: (searchParams.get('status') as OrderStatus) || 'pending' }
+  })
 
   useEffect(() => {
-    if (searchParams.get('id')) {
-      setOrder({ ...mockOrder, id: searchParams.get('id')!, status: (searchParams.get('status') as OrderStatus) || 'pending' })
+    const id = searchParams.get('id')
+    if (id) {
+      setQuery(id)
+      setOrder({ ...mockOrder, id, status: (searchParams.get('status') as OrderStatus) || 'pending' })
     }
   }, [searchParams])
 
   const handleSearch = () => {
-    if (query.trim()) setOrder({ ...mockOrder, id: query.trim() })
+    const q = query.trim()
+    if (!q) return
+    router.push(`/order?id=${encodeURIComponent(q)}`)
   }
 
-  const statusLabel = (s: OrderStatus) => {
-    const labels = t.order.status
-    return labels[s] || s
-  }
+  const statusLabel = (s: OrderStatus) => t.order.status[s] || s
 
   const statusIcon = (s: OrderStatus) => {
     if (s === 'delivered') return <CheckCircle size={18} color="var(--green)" />
@@ -121,7 +126,10 @@ export default function OrderPage() {
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
                           transition: 'all .3s',
                         }}>
-                          {done ? <Check size={14} color="#000" /> : <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--border2)', display: 'block' }} />}
+                          {done
+                            ? <Check size={14} color="#000" />
+                            : <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--border2)', display: 'block' }} />
+                          }
                         </div>
                         <span style={{ fontSize: 11, color: active ? 'var(--green)' : done ? 'var(--text2)' : 'var(--text3)', marginTop: 6, textAlign: 'center', fontWeight: active ? 500 : 400 }}>
                           {statusLabel(step)}
@@ -168,10 +176,10 @@ export default function OrderPage() {
   )
 }
 
-function Check({ size, color }: { size: number; color: string }) {
+export default function OrderPage() {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="20 6 9 17 4 12" />
-    </svg>
+    <Suspense fallback={<div className="section"><div className="container" style={{ maxWidth: 680, color: 'var(--text3)' }}>Loading…</div></div>}>
+      <OrderContent />
+    </Suspense>
   )
 }

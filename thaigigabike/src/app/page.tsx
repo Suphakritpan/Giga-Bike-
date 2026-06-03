@@ -21,22 +21,22 @@ export default function HomePage() {
     <div>
       {/* Hero */}
       <section style={{
-        background: 'var(--bg2)',
-        borderBottom: '0.5px solid var(--border)',
-        padding: '56px 0',
+        background: 'var(--hero-bg)',
+        borderBottom: '1px solid var(--border)',
+        padding: '64px 0',
         position: 'relative', overflow: 'hidden',
       }}>
         {/* BG accent */}
         <div style={{
           position: 'absolute', top: -80, right: -80, width: 400, height: 400,
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(34,197,94,.07) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, var(--hero-accent) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
         {/* Racing stripes */}
         <div style={{
           position: 'absolute', top: 0, right: 0, width: 120, height: '100%',
-          background: 'repeating-linear-gradient(45deg, rgba(34,197,94,.04) 0px, rgba(34,197,94,.04) 2px, transparent 2px, transparent 12px)',
+          background: 'repeating-linear-gradient(45deg, var(--hero-stripe) 0px, var(--hero-stripe) 2px, transparent 2px, transparent 12px)',
           pointerEvents: 'none',
         }} />
 
@@ -45,7 +45,7 @@ export default function HomePage() {
             <div className="badge badge-green" style={{ marginBottom: 16 }}>
               <Zap size={11} /> {t.home.heroTag}
             </div>
-            <h1 style={{ fontSize: 42, lineHeight: 1.15, marginBottom: 12 }}>
+            <h1 style={{ fontSize: 52, lineHeight: 1.1, marginBottom: 14 }}>
               {t.home.heroTitle}<br />
               <span style={{ color: 'var(--green)' }}>{t.home.heroHighlight}</span>{' '}
               {t.home.heroTitleSuffix}

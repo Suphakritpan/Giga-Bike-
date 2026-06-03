@@ -10,14 +10,14 @@ import { ProductCard } from '@/components/product/ProductCard'
 
 export default function ProductDetailPage() {
   const params = useParams()
-  const product = getProductById(params.id as string)
-  if (!product) return notFound()
-
   const { t, locale } = useLang()
   const { add } = useCart()
-  const [selectedColor, setSelectedColor] = useState(product.colors[0])
+  const product = getProductById(params.id as string)
+  const [selectedColor, setSelectedColor] = useState(product?.colors[0] ?? '')
   const [qty, setQty] = useState(1)
   const [added, setAdded] = useState(false)
+
+  if (!product) return notFound()
 
   const name = locale === 'th' ? product.nameTh : product.name
   const desc = locale === 'th' ? product.descriptionTh : product.description
@@ -151,7 +151,7 @@ export default function ProductDetailPage() {
               >
                 {added ? <><Check size={15} /> {locale === 'th' ? 'เพิ่มแล้ว!' : 'Added!'}</> : <><ShoppingCart size={15} /> {t.product.addToCart}</>}
               </button>
-              <a href="https://line.me/ti/p/~thaigigabike" target="_blank" rel="noopener" style={{
+              <a href="https://line.me/ti/p/~thaigigabike" target="_blank" rel="noopener noreferrer" style={{
                 flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
                 background: '#06C755', color: '#fff', borderRadius: 8, padding: '10px 0',
                 fontSize: 14, fontWeight: 600, textDecoration: 'none', fontFamily: 'var(--font-display)',

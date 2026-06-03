@@ -31,9 +31,15 @@ export function Footer() {
             <h4 style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '.06em' }}>
               {t.nav.products}
             </h4>
-            {['Yamaha SR400/500', 'Honda CB750', 'Kawasaki W650', 'Triumph Thruxton', 'BMW S1000RR'].map(m => (
-              <Link key={m} href={`/products?bike=${m}`} style={{ display: 'block', fontSize: 13, color: 'var(--text2)', textDecoration: 'none', marginBottom: 6 }}>
-                {m}
+            {[
+              { id: 'sr400', label: 'Yamaha SR400/500' },
+              { id: 'cb750', label: 'Honda CB750' },
+              { id: 'w650', label: 'Kawasaki W650' },
+              { id: 'thruxton', label: 'Triumph Thruxton' },
+              { id: 's1000rr', label: 'BMW S1000RR' },
+            ].map(m => (
+              <Link key={m.id} href={`/products?bike=${m.id}`} style={{ display: 'block', fontSize: 13, color: 'var(--text2)', textDecoration: 'none', marginBottom: 6 }}>
+                {m.label}
               </Link>
             ))}
           </div>
