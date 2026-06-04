@@ -17,11 +17,12 @@ export function Footer() {
                 Thai<span style={{ color: 'var(--green)' }}>Giga</span>Bike
               </span>
             </div>
-            <p style={{ fontSize: 16, color: 'var(--text2)', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 14, color: 'var(--text2)', lineHeight: 1.8 }}>
               GIGA BIKE FACTORY<br />
-              Racing special Parts<br />
-              Custom Part &amp; Accessories<br />
-              Product Of Thailand
+              CNC Racing Parts · Custom Part &amp; Accessories<br />
+              99/21-22 ถ.พระราม 2 แสมดำ<br />
+              บางขุนเทียน กทม. 10150<br />
+              <span style={{ color: 'var(--text3)' }}>Product Of Thailand · ผลิตในไทย</span>
             </p>
             {/* Racing stripe accent */}
             <div style={{ width: 48, height: 4, marginTop: 16, background: 'var(--green)', borderRadius: 2 }} />
@@ -79,8 +80,11 @@ export function Footer() {
         </div>
 
         <div style={{ borderTop: '0.5px solid var(--border)', paddingTop: 20, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
-          <p style={{ fontSize: 14, color: 'var(--text3)' }}>© 2024 ThaiGigaBike — GIGA BIKE FACTORY. All rights reserved.</p>
-          <div style={{ display: 'flex', gap: 16 }}>
+          <p style={{ fontSize: 14, color: 'var(--text3)' }}>© 2006–{new Date().getFullYear()} GIGA BIKE FACTORY — ThaiGigaBike. All rights reserved.</p>
+          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+            <Link href="/racing" style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.racing}</Link>
+            <Link href="/dealer" style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.dealer}</Link>
+            <Link href="/payment" style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.payment}</Link>
             <Link href="/order" style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.trackOrder}</Link>
             <Link href="/contact" style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.contact}</Link>
           </div>

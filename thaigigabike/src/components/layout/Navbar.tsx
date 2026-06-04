@@ -43,6 +43,7 @@ export function Navbar() {
             { href: '/products', label: t.nav.products },
             { href: '/categories', label: t.nav.categories },
             { href: '/gallery', label: t.nav.gallery },
+            { href: '/racing', label: t.nav.racing },
             { href: '/contact', label: t.nav.contact },
           ].map(({ href, label }) => (
             <Link key={href} href={href} style={{
@@ -162,6 +163,9 @@ export function Navbar() {
             { href: '/products', label: t.nav.products },
             { href: '/categories', label: t.nav.categories },
             { href: '/gallery', label: t.nav.gallery },
+            { href: '/racing', label: t.nav.racing },
+            { href: '/dealer', label: t.nav.dealer },
+            { href: '/payment', label: t.nav.payment },
             { href: '/contact', label: t.nav.contact },
             { href: '/order', label: t.nav.trackOrder },
           ].map(({ href, label }) => (

@@ -1,10 +1,106 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
-import { ChevronRight, Zap, Shield, Truck, Award } from 'lucide-react'
+import { ChevronRight, ChevronLeft, Zap, Shield, Truck, Award } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 import { products, bikeModels, categories } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
+
+// Pick products that have images for the carousel
+const SHOWCASE = products
+  .filter(p => p.images && p.images.length > 0 && p.published)
+  .slice(0, 18)
+
+function HeroCarousel() {
+  const [idx, setIdx] = useState(0)
+  const [paused, setPaused] = useState(false)
+  const [imgError, setImgError] = useState<Record<number, boolean>>({})
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const { locale } = useLang()
+
+  const items = SHOWCASE.filter((_, i) => !imgError[i])
+  const current = items[idx % Math.max(1, items.length)]
+
+  const prev = useCallback(() => setIdx(i => (i - 1 + items.length) % items.length), [items.length])
+  const next = useCallback(() => setIdx(i => (i + 1) % items.length), [items.length])
+
+  useEffect(() => {
+    if (paused || items.length <= 1) return
+    timerRef.current = setInterval(next, 3500)
+    return () => { if (timerRef.current) clearInterval(timerRef.current) }
+  }, [paused, next, items.length])
+
+  if (!current) return null
+
+  return (
+    <div
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      style={{ position: 'relative', width: 380, flexShrink: 0, borderRadius: 16, overflow: 'hidden', border: '0.5px solid var(--border2)', boxShadow: '0 12px 60px rgba(0,0,0,.5)' }}
+    >
+      {/* Image */}
+      <Link href={`/products/${current.id}`} style={{ display: 'block', textDecoration: 'none' }}>
+        <div style={{ height: 260, background: 'var(--bg3)', position: 'relative', overflow: 'hidden' }}>
+          <img
+            key={current.id}
+            src={current.images[0]}
+            alt={current.nameTh}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform .4s', display: 'block' }}
+            onError={() => {
+              setImgError(prev => ({ ...prev, [SHOWCASE.indexOf(current)]: true }))
+              next()
+            }}
+          />
+          {/* Gradient overlay */}
+          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '60%', background: 'linear-gradient(transparent, rgba(0,0,0,.85))' }} />
+          {/* Product info overlay */}
+          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '10px 14px' }}>
+            <div style={{ fontSize: 12, color: 'rgba(255,255,255,.55)', fontFamily: 'var(--font-display)', letterSpacing: '.05em', marginBottom: 3 }}>
+              {current.code}
+            </div>
+            <div style={{ fontSize: 15, fontWeight: 600, color: '#fff', lineHeight: 1.3, marginBottom: 6, overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>
+              {locale === 'th' ? current.nameTh : current.name}
+            </div>
+            <div style={{ fontSize: 20, fontWeight: 700, color: 'var(--green)', fontFamily: 'var(--font-display)' }}>
+              ฿{current.price.toLocaleString()}
+            </div>
+          </div>
+        </div>
+      </Link>
+
+      {/* Prev / Next */}
+      <button
+        onClick={prev}
+        style={{ position: 'absolute', left: 8, top: '40%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,.55)', border: 'none', borderRadius: 8, color: '#fff', cursor: 'pointer', display: 'flex', padding: '5px 3px', zIndex: 2, backdropFilter: 'blur(4px)' }}
+      >
+        <ChevronLeft size={18} />
+      </button>
+      <button
+        onClick={next}
+        style={{ position: 'absolute', right: 8, top: '40%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,.55)', border: 'none', borderRadius: 8, color: '#fff', cursor: 'pointer', display: 'flex', padding: '5px 3px', zIndex: 2, backdropFilter: 'blur(4px)' }}
+      >
+        <ChevronRight size={18} />
+      </button>
+
+      {/* Dot indicators */}
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 5, padding: '8px 0', background: 'var(--bg3)' }}>
+        {items.slice(0, 12).map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setIdx(i)}
+            style={{
+              width: i === idx % items.length ? 18 : 6,
+              height: 6, borderRadius: 3, border: 'none', cursor: 'pointer', padding: 0,
+              background: i === idx % items.length ? 'var(--green)' : 'var(--border2)',
+              transition: 'all .3s',
+            }}
+          />
+        ))}
+        {items.length > 12 && <span style={{ fontSize: 11, color: 'var(--text3)' }}>+{items.length - 12}</span>}
+      </div>
+    </div>
+  )
+}
 
 export default function HomePage() {
   const { t, locale } = useLang()
@@ -63,14 +159,10 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          {/* Hero visual placeholder */}
-          <div style={{
-            width: 260, height: 180, flexShrink: 0,
-            background: 'var(--bg3)', border: '0.5px solid var(--border2)',
-            borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: 'var(--text3)', fontSize: 16,
-          }}>
-            Hero image
+
+          {/* Hero Carousel */}
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            <HeroCarousel />
           </div>
         </div>
 

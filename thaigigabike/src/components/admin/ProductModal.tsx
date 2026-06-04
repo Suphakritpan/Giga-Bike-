@@ -1,14 +1,25 @@
 'use client'
-import { useState, useEffect } from 'react'
-import { X, Save, AlertCircle } from 'lucide-react'
+import { useState, useEffect, useRef, useCallback } from 'react'
+import { X, Save, AlertCircle, Upload, Trash2, ImagePlus, ChevronLeft, ChevronRight, Star } from 'lucide-react'
 import { categories, bikeModels } from '@/data/products'
 import type { Product } from '@/data/products'
+import { createClient } from '@/lib/supabase/client'
 
 const ALL_COLORS = ['black', 'silver', 'gold', 'hard', 'polished', 'black-silver', 'raw', 'gray']
 const COLOR_LABELS: Record<string, string> = {
   black: 'ดำ', silver: 'เงิน', gold: 'ทอง', hard: 'ฮาร์ด',
   polished: 'ปัดเงา', 'black-silver': 'ดำ-เงิน', raw: 'กัดดิบ', gray: 'เทา',
 }
+const COLOR_DOT: Record<string, string> = {
+  black: '#1a1a1a', silver: '#c0c0c0', gold: '#d4af37', hard: '#555',
+  polished: '#ddd', 'black-silver': 'linear-gradient(135deg,#1a1a1a 50%,#c0c0c0 50%)',
+  raw: '#8a7560', gray: '#9ca3af',
+}
+
+// Group bike models by brand
+const BIKE_BRANDS = Array.from(new Set(bikeModels.map(b => b.brand)))
+
+type Section = 'info' | 'images' | 'spec'
 
 type FormData = {
   code: string
@@ -24,6 +35,8 @@ type FormData = {
   description: string
   descriptionTh: string
   featured: boolean
+  published: boolean
+  images: string[]
 }
 
 type Errors = Partial<Record<keyof FormData, string>>
@@ -31,7 +44,8 @@ type Errors = Partial<Record<keyof FormData, string>>
 const EMPTY_FORM: FormData = {
   code: '', name: '', nameTh: '', price: '', category: categories[0].id,
   bikeModels: [], colors: [], inStock: true, stockCount: '0',
-  material: '', description: '', descriptionTh: '', featured: false,
+  material: '', description: '', descriptionTh: '', featured: false, published: true,
+  images: [],
 }
 
 function sanitizeText(val: string): string {
@@ -66,10 +80,19 @@ type Props = {
 
 export function ProductModal({ product, onClose, onSave }: Props) {
   const isEdit = !!product
+  const supabase = createClient()
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  const [section, setSection] = useState<Section>('info')
   const [form, setForm] = useState<FormData>(EMPTY_FORM)
   const [errors, setErrors] = useState<Errors>({})
   const [saving, setSaving] = useState(false)
   const [serverError, setServerError] = useState('')
+  const [previewIdx, setPreviewIdx] = useState(0)
+  const [uploading, setUploading] = useState(false)
+  const [uploadError, setUploadError] = useState('')
+  const [urlInput, setUrlInput] = useState('')
+  const [dragOver, setDragOver] = useState(false)
 
   useEffect(() => {
     if (product) {
@@ -79,34 +102,108 @@ export function ProductModal({ product, onClose, onSave }: Props) {
         nameTh: product.nameTh,
         price: String(product.price),
         category: product.category,
-        bikeModels: product.bikeModels,
-        colors: product.colors,
+        bikeModels: product.bikeModels ?? [],
+        colors: product.colors ?? [],
         inStock: product.inStock,
         stockCount: String(product.stockCount),
         material: product.material,
         description: product.description,
         descriptionTh: product.descriptionTh,
         featured: product.featured,
+        published: product.published ?? true,
+        images: product.images ?? [],
       })
     } else {
       setForm(EMPTY_FORM)
     }
     setErrors({})
     setServerError('')
+    setSection('info')
+    setPreviewIdx(0)
+    setUploadError('')
+    setUrlInput('')
   }, [product])
 
   const set = (field: keyof FormData, value: unknown) =>
     setForm(prev => ({ ...prev, [field]: value }))
 
   const toggleArray = (field: 'bikeModels' | 'colors', val: string) =>
-    set(field, form[field].includes(val)
-      ? form[field].filter(v => v !== val)
-      : [...form[field], val])
+    set(field, (form[field] as string[]).includes(val)
+      ? (form[field] as string[]).filter(v => v !== val)
+      : [...(form[field] as string[]), val])
+
+  // ─── Image upload to Supabase Storage ───
+  const uploadFiles = useCallback(async (files: FileList | File[]) => {
+    const arr = Array.from(files)
+    const allowed = ['image/jpeg', 'image/png', 'image/webp']
+    const invalid = arr.filter(f => !allowed.includes(f.type))
+    if (invalid.length > 0) { setUploadError('รองรับเฉพาะ JPG, PNG, WebP'); return }
+    const oversize = arr.filter(f => f.size > 5 * 1024 * 1024)
+    if (oversize.length > 0) { setUploadError('แต่ละภาพต้องไม่เกิน 5 MB'); return }
+
+    setUploading(true)
+    setUploadError('')
+    const newUrls: string[] = []
+
+    for (const file of arr) {
+      const ext = file.name.split('.').pop() ?? 'jpg'
+      const path = `products/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`
+      const { error } = await supabase.storage
+        .from('product-images')
+        .upload(path, file, { contentType: file.type, upsert: false })
+      if (error) {
+        setUploadError(`อัปโหลดล้มเหลว: ${error.message}`)
+        setUploading(false)
+        return
+      }
+      const { data } = supabase.storage.from('product-images').getPublicUrl(path)
+      newUrls.push(data.publicUrl)
+    }
+
+    setForm(prev => ({ ...prev, images: [...prev.images, ...newUrls] }))
+    setUploading(false)
+  }, [supabase])
+
+  const addImageUrl = () => {
+    const url = urlInput.trim()
+    if (!url) return
+    try { new URL(url) } catch { setUploadError('URL ไม่ถูกต้อง'); return }
+    setForm(prev => ({ ...prev, images: [...prev.images, url] }))
+    setUrlInput('')
+    setUploadError('')
+  }
+
+  const removeImage = (idx: number) => {
+    setForm(prev => {
+      const next = prev.images.filter((_, i) => i !== idx)
+      return { ...prev, images: next }
+    })
+    setPreviewIdx(prev => Math.min(prev, Math.max(0, form.images.length - 2)))
+  }
+
+  const moveImage = (from: number, to: number) => {
+    setForm(prev => {
+      const imgs = [...prev.images]
+      const [moved] = imgs.splice(from, 1)
+      imgs.splice(to, 0, moved)
+      return { ...prev, images: imgs }
+    })
+    setPreviewIdx(to)
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     const errs = validate(form)
-    if (Object.keys(errs).length > 0) { setErrors(errs); return }
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs)
+      // Jump to first section with errors
+      if (errs.code || errs.name || errs.nameTh || errs.price || errs.category || errs.description || errs.descriptionTh) {
+        setSection('info')
+      } else if (errs.material || errs.colors || errs.stockCount) {
+        setSection('spec')
+      }
+      return
+    }
     setSaving(true)
     setServerError('')
     try {
@@ -124,8 +221,10 @@ export function ProductModal({ product, onClose, onSave }: Props) {
         material: sanitizeText(form.material.trim()),
         description: sanitizeText(form.description.trim()),
         descriptionTh: sanitizeText(form.descriptionTh.trim()),
-        images: product?.images ?? [],
+        images: form.images,
         featured: form.featured,
+        published: form.published,
+        reviewReasons: product?.reviewReasons ?? [],
       })
       onClose()
     } catch (err: unknown) {
@@ -138,129 +237,441 @@ export function ProductModal({ product, onClose, onSave }: Props) {
   const inputErr = (field: keyof FormData) =>
     errors[field] ? { borderColor: 'var(--red)' } : {}
 
+  const SECTIONS: { id: Section; label: string; hasError: boolean }[] = [
+    {
+      id: 'info', label: 'ข้อมูลสินค้า',
+      hasError: !!(errors.code || errors.name || errors.nameTh || errors.price || errors.category || errors.description || errors.descriptionTh),
+    },
+    { id: 'images', label: 'รูปภาพ', hasError: false },
+    {
+      id: 'spec', label: 'สเปค & สต็อก',
+      hasError: !!(errors.material || errors.colors || errors.stockCount),
+    },
+  ]
+
   return (
     <div
-      style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.7)', zIndex: 200, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '24px 16px', overflowY: 'auto' }}
+      style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.75)', zIndex: 200, display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '20px 16px', overflowY: 'auto' }}
       onMouseDown={e => { if (e.target === e.currentTarget) onClose() }}
     >
-      <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 16, width: '100%', maxWidth: 680, padding: 28, position: 'relative' }}>
-        {/* Header */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 24 }}>
-          <h2 style={{ fontSize: 24 }}>{isEdit ? 'แก้ไขสินค้า' : 'เพิ่มสินค้าใหม่'}</h2>
-          <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text3)', display: 'flex' }}>
-            <X size={20} />
+      <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 18, width: '100%', maxWidth: 780, position: 'relative', overflow: 'hidden' }}>
+
+        {/* ── Header ── */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '18px 24px', borderBottom: '0.5px solid var(--border)', background: 'var(--bg)' }}>
+          <div>
+            <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 2 }}>
+              {isEdit ? `แก้ไข: ${product!.code}` : 'เพิ่มสินค้าใหม่'}
+            </h2>
+            {isEdit && <p style={{ fontSize: 13, color: 'var(--text3)' }}>{product!.nameTh}</p>}
+          </div>
+          <button onClick={onClose} style={{ background: 'var(--bg3)', border: '0.5px solid var(--border)', borderRadius: 8, cursor: 'pointer', color: 'var(--text2)', display: 'flex', padding: 6 }}>
+            <X size={18} />
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} noValidate>
-          {/* Section: รหัส + ราคา */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
-            <Field label="รหัสสินค้า *" error={errors.code}>
-              <input className="input" style={inputErr('code')} value={form.code} maxLength={20}
-                onChange={e => set('code', e.target.value)} placeholder="G.232" />
-            </Field>
-            <Field label="ราคา (฿) *" error={errors.price}>
-              <input className="input" style={inputErr('price')} value={form.price} type="number" min={1} max={10000000}
-                onChange={e => set('price', e.target.value)} placeholder="6000" />
-            </Field>
-          </div>
-
-          {/* Section: ชื่อ */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
-            <Field label="ชื่อสินค้า (EN) *" error={errors.name}>
-              <input className="input" style={inputErr('name')} value={form.name} maxLength={200}
-                onChange={e => set('name', e.target.value)} placeholder="Custom Brake Disc SR 310mm." />
-            </Field>
-            <Field label="ชื่อสินค้า (TH) *" error={errors.nameTh}>
-              <input className="input" style={inputErr('nameTh')} value={form.nameTh} maxLength={200}
-                onChange={e => set('nameTh', e.target.value)} placeholder="จานเบรคแต่ง SR 310mm." />
-            </Field>
-          </div>
-
-          {/* Section: หมวดหมู่ + วัสดุ */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 12 }}>
-            <Field label="หมวดหมู่ *" error={errors.category}>
-              <select className="input" style={inputErr('category')} value={form.category}
-                onChange={e => set('category', e.target.value)}>
-                {categories.map(c => <option key={c.id} value={c.id}>{c.nameTh} ({c.name})</option>)}
-              </select>
-            </Field>
-            <Field label="วัสดุ *" error={errors.material}>
-              <input className="input" style={inputErr('material')} value={form.material} maxLength={200}
-                onChange={e => set('material', e.target.value)} placeholder="Alloy 6061 CNC Billet" />
-            </Field>
-          </div>
-
-          {/* Section: สต็อก */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 16 }}>
-            <Field label="จำนวนสต็อก *" error={errors.stockCount}>
-              <input className="input" style={inputErr('stockCount')} value={form.stockCount} type="number" min={0} max={99999}
-                onChange={e => set('stockCount', e.target.value)} />
-            </Field>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 16, paddingTop: 20 }}>
-              <label style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer', fontSize: 16 }}>
-                <input type="checkbox" checked={form.inStock} onChange={e => set('inStock', e.target.checked)} />
-                มีสินค้า
-              </label>
-              <label style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer', fontSize: 16 }}>
-                <input type="checkbox" checked={form.featured} onChange={e => set('featured', e.target.checked)} />
-                สินค้าแนะนำ
-              </label>
-            </div>
-          </div>
-
-          {/* Section: สี */}
-          <Field label="สี * (เลือกได้หลายสี)" error={errors.colors}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 4 }}>
-              {ALL_COLORS.map(c => (
-                <label key={c} style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer', fontSize: 14, padding: '4px 10px', borderRadius: 6, border: `0.5px solid ${form.colors.includes(c) ? 'var(--green)' : 'var(--border2)'}`, background: form.colors.includes(c) ? 'rgba(34,197,94,.1)' : 'var(--bg3)', color: form.colors.includes(c) ? 'var(--green)' : 'var(--text2)' }}>
-                  <input type="checkbox" checked={form.colors.includes(c)} onChange={() => toggleArray('colors', c)} style={{ display: 'none' }} />
-                  {COLOR_LABELS[c]}
-                </label>
-              ))}
-            </div>
-          </Field>
-
-          {/* Section: รุ่นรถ */}
-          <div style={{ marginBottom: 16 }}>
-            <p style={{ fontSize: 14, color: 'var(--text2)', marginBottom: 8 }}>รุ่นรถที่รองรับ (เลือกได้หลายรุ่น)</p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))', gap: 6 }}>
-              {bikeModels.map(bm => (
-                <label key={bm.id} style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer', fontSize: 14, padding: '4px 8px', borderRadius: 6, border: `0.5px solid ${form.bikeModels.includes(bm.id) ? 'var(--green)' : 'var(--border)'}`, background: form.bikeModels.includes(bm.id) ? 'rgba(34,197,94,.08)' : 'transparent', color: form.bikeModels.includes(bm.id) ? 'var(--green)' : 'var(--text2)' }}>
-                  <input type="checkbox" checked={form.bikeModels.includes(bm.id)} onChange={() => toggleArray('bikeModels', bm.id)} style={{ display: 'none' }} />
-                  {bm.brand} {bm.model}
-                </label>
-              ))}
-            </div>
-          </div>
-
-          {/* Section: รายละเอียด */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, marginBottom: 20 }}>
-            <Field label="รายละเอียด (EN) *" error={errors.description}>
-              <textarea className="input" style={{ ...inputErr('description'), height: 88, resize: 'none' }}
-                value={form.description} maxLength={500}
-                onChange={e => set('description', e.target.value)} placeholder="Description in English..." />
-            </Field>
-            <Field label="รายละเอียด (TH) *" error={errors.descriptionTh}>
-              <textarea className="input" style={{ ...inputErr('descriptionTh'), height: 88, resize: 'none' }}
-                value={form.descriptionTh} maxLength={500}
-                onChange={e => set('descriptionTh', e.target.value)} placeholder="รายละเอียดภาษาไทย..." />
-            </Field>
-          </div>
-
-          {/* Server error */}
-          {serverError && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 16, color: 'var(--red)', background: 'rgba(239,68,68,.08)', border: '0.5px solid rgba(239,68,68,.3)', borderRadius: 8, padding: '10px 14px', marginBottom: 16 }}>
-              <AlertCircle size={15} /> {serverError}
-            </div>
-          )}
-
-          {/* Actions */}
-          <div style={{ display: 'flex', gap: 10, justifyContent: 'flex-end' }}>
-            <button type="button" className="btn-ghost" onClick={onClose}>ยกเลิก</button>
-            <button type="submit" className="btn-primary" disabled={saving} style={{ opacity: saving ? 0.7 : 1 }}>
-              <Save size={15} /> {saving ? 'กำลังบันทึก...' : 'บันทึก'}
+        {/* ── Section Tabs ── */}
+        <div style={{ display: 'flex', borderBottom: '0.5px solid var(--border)', background: 'var(--bg)' }}>
+          {SECTIONS.map(s => (
+            <button key={s.id} onClick={() => setSection(s.id)} style={{
+              padding: '10px 22px', fontSize: 15, fontWeight: 500, border: 'none',
+              borderBottom: section === s.id ? '2px solid var(--green)' : '2px solid transparent',
+              background: 'transparent', cursor: 'pointer', position: 'relative',
+              color: s.hasError ? 'var(--red)' : section === s.id ? 'var(--green)' : 'var(--text2)',
+            }}>
+              {s.label}
+              {s.hasError && <span style={{ position: 'absolute', top: 8, right: 8, width: 6, height: 6, borderRadius: '50%', background: 'var(--red)' }} />}
             </button>
+          ))}
+        </div>
+
+        <form onSubmit={handleSubmit} noValidate>
+          <div style={{ padding: 24 }}>
+
+            {/* ══════════ SECTION: ข้อมูลสินค้า ══════════ */}
+            {section === 'info' && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                {/* รหัส + ราคา */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                  <Field label="รหัสสินค้า *" error={errors.code}>
+                    <input className="input" style={inputErr('code')} value={form.code} maxLength={20}
+                      onChange={e => set('code', e.target.value)} placeholder="G.232" autoFocus={!isEdit} />
+                  </Field>
+                  <Field label="ราคา (฿) *" error={errors.price}>
+                    <input className="input" style={inputErr('price')} value={form.price} type="number" min={1} max={10000000}
+                      onChange={e => set('price', e.target.value)} placeholder="6000" />
+                  </Field>
+                </div>
+
+                {/* ชื่อ */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                  <Field label="ชื่อสินค้า (EN) *" error={errors.name}>
+                    <input className="input" style={inputErr('name')} value={form.name} maxLength={200}
+                      onChange={e => set('name', e.target.value)} placeholder="Custom Brake Disc SR 310mm." />
+                  </Field>
+                  <Field label="ชื่อสินค้า (TH) *" error={errors.nameTh}>
+                    <input className="input" style={inputErr('nameTh')} value={form.nameTh} maxLength={200}
+                      onChange={e => set('nameTh', e.target.value)} placeholder="จานเบรคแต่ง SR 310mm." />
+                  </Field>
+                </div>
+
+                {/* หมวดหมู่ */}
+                <Field label="หมวดหมู่ *" error={errors.category}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 8 }}>
+                    {categories.map(c => (
+                      <label key={c.id} style={{
+                        display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer',
+                        fontSize: 14, padding: '8px 12px', borderRadius: 8,
+                        border: `0.5px solid ${form.category === c.id ? 'var(--green)' : 'var(--border2)'}`,
+                        background: form.category === c.id ? 'rgba(34,197,94,.12)' : 'var(--bg3)',
+                        color: form.category === c.id ? 'var(--green)' : 'var(--text2)',
+                        transition: 'all .15s',
+                      }}>
+                        <input type="radio" name="category" checked={form.category === c.id} onChange={() => set('category', c.id)} style={{ display: 'none' }} />
+                        <span style={{ fontWeight: form.category === c.id ? 600 : 400 }}>{c.nameTh}</span>
+                        <span style={{ fontSize: 12, color: form.category === c.id ? 'rgba(34,197,94,.7)' : 'var(--text3)', marginLeft: 'auto' }}>{c.name}</span>
+                      </label>
+                    ))}
+                  </div>
+                </Field>
+
+                {/* รายละเอียด */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                  <Field label="รายละเอียด (EN) *" error={errors.description}>
+                    <textarea className="input" style={{ ...inputErr('description'), height: 100, resize: 'vertical' }}
+                      value={form.description} maxLength={500}
+                      onChange={e => set('description', e.target.value)} placeholder="Description in English..." />
+                    <span style={{ fontSize: 12, color: 'var(--text3)', marginTop: 2, display: 'block' }}>{form.description.length}/500</span>
+                  </Field>
+                  <Field label="รายละเอียด (TH) *" error={errors.descriptionTh}>
+                    <textarea className="input" style={{ ...inputErr('descriptionTh'), height: 100, resize: 'vertical' }}
+                      value={form.descriptionTh} maxLength={500}
+                      onChange={e => set('descriptionTh', e.target.value)} placeholder="รายละเอียดภาษาไทย..." />
+                    <span style={{ fontSize: 12, color: 'var(--text3)', marginTop: 2, display: 'block' }}>{form.descriptionTh.length}/500</span>
+                  </Field>
+                </div>
+
+                {/* Flags */}
+                <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+                  {[
+                    { key: 'inStock', label: 'มีสินค้า', desc: 'แสดงว่ามีสินค้าในร้าน' },
+                    { key: 'featured', label: 'สินค้าแนะนำ', desc: 'แสดงในหน้าแรก' },
+                    { key: 'published', label: 'เผยแพร่', desc: 'ลูกค้ามองเห็น' },
+                  ].map(({ key, label, desc }) => (
+                    <label key={key} style={{
+                      display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer',
+                      padding: '10px 16px', borderRadius: 10,
+                      border: `0.5px solid ${(form[key as keyof FormData] as boolean) ? 'var(--green)' : 'var(--border2)'}`,
+                      background: (form[key as keyof FormData] as boolean) ? 'rgba(34,197,94,.08)' : 'var(--bg3)',
+                      flex: 1, minWidth: 140,
+                    }}>
+                      <div style={{
+                        width: 18, height: 18, borderRadius: 4, flexShrink: 0,
+                        border: `2px solid ${(form[key as keyof FormData] as boolean) ? 'var(--green)' : 'var(--border2)'}`,
+                        background: (form[key as keyof FormData] as boolean) ? 'var(--green)' : 'transparent',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      }}>
+                        {(form[key as keyof FormData] as boolean) && <span style={{ color: '#000', fontSize: 12, fontWeight: 700 }}>✓</span>}
+                      </div>
+                      <input type="checkbox" checked={form[key as keyof FormData] as boolean}
+                        onChange={e => set(key as keyof FormData, e.target.checked)} style={{ display: 'none' }} />
+                      <div>
+                        <div style={{ fontSize: 14, fontWeight: 500, color: (form[key as keyof FormData] as boolean) ? 'var(--green)' : 'var(--text)' }}>{label}</div>
+                        <div style={{ fontSize: 12, color: 'var(--text3)' }}>{desc}</div>
+                      </div>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* ══════════ SECTION: รูปภาพ ══════════ */}
+            {section === 'images' && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+                {/* Showcase preview */}
+                {form.images.length > 0 ? (
+                  <div style={{ position: 'relative', borderRadius: 12, overflow: 'hidden', background: 'var(--bg3)', border: '0.5px solid var(--border)', aspectRatio: '16/9', maxHeight: 320 }}>
+                    <img
+                      src={form.images[previewIdx]}
+                      alt={`preview-${previewIdx}`}
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                      onError={e => { (e.target as HTMLImageElement).src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23333" width="100" height="100"/><text x="50" y="55" text-anchor="middle" fill="%23666" font-size="12">No image</text></svg>' }}
+                    />
+                    {/* Nav arrows */}
+                    {form.images.length > 1 && (
+                      <>
+                        <button type="button"
+                          onClick={() => setPreviewIdx(i => (i - 1 + form.images.length) % form.images.length)}
+                          style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,.6)', border: 'none', borderRadius: 8, color: '#fff', cursor: 'pointer', display: 'flex', padding: '6px 4px' }}>
+                          <ChevronLeft size={20} />
+                        </button>
+                        <button type="button"
+                          onClick={() => setPreviewIdx(i => (i + 1) % form.images.length)}
+                          style={{ position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)', background: 'rgba(0,0,0,.6)', border: 'none', borderRadius: 8, color: '#fff', cursor: 'pointer', display: 'flex', padding: '6px 4px' }}>
+                          <ChevronRight size={20} />
+                        </button>
+                      </>
+                    )}
+                    {/* Index badge */}
+                    <div style={{ position: 'absolute', bottom: 10, right: 10, background: 'rgba(0,0,0,.6)', borderRadius: 6, padding: '3px 8px', fontSize: 13, color: '#fff' }}>
+                      {previewIdx + 1} / {form.images.length}
+                    </div>
+                    {/* Primary badge */}
+                    {previewIdx === 0 && (
+                      <div style={{ position: 'absolute', top: 10, left: 10, background: 'var(--green)', borderRadius: 6, padding: '3px 10px', fontSize: 12, fontWeight: 600, color: '#000', display: 'flex', alignItems: 'center', gap: 4 }}>
+                        <Star size={11} /> ภาพหลัก
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div style={{ borderRadius: 12, border: '2px dashed var(--border2)', padding: '40px 20px', textAlign: 'center', color: 'var(--text3)', background: 'var(--bg3)' }}>
+                    <ImagePlus size={40} style={{ margin: '0 auto 12px', opacity: 0.4 }} />
+                    <p style={{ fontSize: 16 }}>ยังไม่มีรูปภาพ</p>
+                    <p style={{ fontSize: 13, marginTop: 4 }}>อัปโหลดหรือวาง URL ด้านล่าง</p>
+                  </div>
+                )}
+
+                {/* Thumbnail strip */}
+                {form.images.length > 0 && (
+                  <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
+                    {form.images.map((url, i) => (
+                      <div key={i} style={{ position: 'relative', flexShrink: 0 }}>
+                        <button type="button" onClick={() => setPreviewIdx(i)} style={{
+                          width: 72, height: 72, borderRadius: 8, overflow: 'hidden', padding: 0,
+                          border: `2px solid ${previewIdx === i ? 'var(--green)' : 'var(--border2)'}`,
+                          cursor: 'pointer', background: 'var(--bg3)',
+                        }}>
+                          <img src={url} alt={`thumb-${i}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            onError={e => { (e.target as HTMLImageElement).style.opacity = '0.3' }} />
+                        </button>
+                        {/* Set as primary */}
+                        {i !== 0 && (
+                          <button type="button" title="ตั้งเป็นภาพหลัก"
+                            onClick={() => moveImage(i, 0)}
+                            style={{ position: 'absolute', top: -6, left: -6, width: 20, height: 20, borderRadius: '50%', background: 'var(--bg2)', border: '0.5px solid var(--border)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <Star size={10} color="var(--text3)" />
+                          </button>
+                        )}
+                        {/* Remove */}
+                        <button type="button"
+                          onClick={() => removeImage(i)}
+                          style={{ position: 'absolute', top: -6, right: -6, width: 20, height: 20, borderRadius: '50%', background: 'var(--red)', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          <X size={10} color="#fff" />
+                        </button>
+                        {i === 0 && (
+                          <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'var(--green)', fontSize: 9, fontWeight: 700, color: '#000', textAlign: 'center', padding: '1px 0', borderRadius: '0 0 6px 6px' }}>
+                            หลัก
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Upload area */}
+                <div
+                  onDragOver={e => { e.preventDefault(); setDragOver(true) }}
+                  onDragLeave={() => setDragOver(false)}
+                  onDrop={e => { e.preventDefault(); setDragOver(false); uploadFiles(e.dataTransfer.files) }}
+                  onClick={() => fileInputRef.current?.click()}
+                  style={{
+                    border: `2px dashed ${dragOver ? 'var(--green)' : 'var(--border2)'}`,
+                    borderRadius: 10, padding: '20px', textAlign: 'center',
+                    cursor: uploading ? 'wait' : 'pointer',
+                    background: dragOver ? 'rgba(34,197,94,.05)' : 'var(--bg3)',
+                    transition: 'all .15s',
+                  }}
+                >
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp"
+                    multiple
+                    style={{ display: 'none' }}
+                    onChange={e => { if (e.target.files) uploadFiles(e.target.files) }}
+                  />
+                  {uploading ? (
+                    <p style={{ color: 'var(--text2)', fontSize: 15 }}>กำลังอัปโหลด...</p>
+                  ) : (
+                    <>
+                      <Upload size={22} style={{ margin: '0 auto 8px', color: 'var(--text3)' }} />
+                      <p style={{ fontSize: 15, color: 'var(--text2)' }}>คลิกหรือลากไฟล์มาวางที่นี่</p>
+                      <p style={{ fontSize: 13, color: 'var(--text3)', marginTop: 4 }}>JPG, PNG, WebP · ไม่เกิน 5 MB ต่อภาพ</p>
+                    </>
+                  )}
+                </div>
+
+                {/* URL input */}
+                <div>
+                  <p style={{ fontSize: 13, color: 'var(--text3)', marginBottom: 6 }}>หรือวาง URL รูปภาพ</p>
+                  <div style={{ display: 'flex', gap: 8 }}>
+                    <input
+                      className="input"
+                      style={{ flex: 1, fontSize: 14 }}
+                      placeholder="https://example.com/image.jpg"
+                      value={urlInput}
+                      onChange={e => setUrlInput(e.target.value)}
+                      onKeyDown={e => e.key === 'Enter' && (e.preventDefault(), addImageUrl())}
+                    />
+                    <button type="button" className="btn-ghost" onClick={addImageUrl} style={{ whiteSpace: 'nowrap', fontSize: 14 }}>
+                      เพิ่ม URL
+                    </button>
+                  </div>
+                </div>
+
+                {uploadError && (
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--red)', background: 'rgba(239,68,68,.08)', borderRadius: 8, padding: '8px 12px' }}>
+                    <AlertCircle size={14} /> {uploadError}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* ══════════ SECTION: สเปค & สต็อก ══════════ */}
+            {section === 'spec' && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+                {/* วัสดุ + สต็อก */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                  <Field label="วัสดุ *" error={errors.material}>
+                    <input className="input" style={inputErr('material')} value={form.material} maxLength={200}
+                      onChange={e => set('material', e.target.value)} placeholder="Alloy 6061 CNC Billet" />
+                  </Field>
+                  <Field label="จำนวนสต็อก *" error={errors.stockCount}>
+                    <input className="input" style={inputErr('stockCount')} value={form.stockCount} type="number" min={0} max={99999}
+                      onChange={e => set('stockCount', e.target.value)} />
+                  </Field>
+                </div>
+
+                {/* สี */}
+                <Field label="สี * (เลือกได้หลายสี)" error={errors.colors}>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 4 }}>
+                    {ALL_COLORS.map(c => {
+                      const selected = form.colors.includes(c)
+                      return (
+                        <label key={c} style={{
+                          display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer',
+                          fontSize: 14, padding: '6px 12px', borderRadius: 8,
+                          border: `1.5px solid ${selected ? 'var(--green)' : 'var(--border2)'}`,
+                          background: selected ? 'rgba(34,197,94,.1)' : 'var(--bg3)',
+                          color: selected ? 'var(--green)' : 'var(--text2)',
+                          transition: 'all .12s',
+                        }}>
+                          <input type="checkbox" checked={selected} onChange={() => toggleArray('colors', c)} style={{ display: 'none' }} />
+                          <span style={{
+                            width: 14, height: 14, borderRadius: '50%', flexShrink: 0,
+                            background: COLOR_DOT[c], border: '0.5px solid rgba(255,255,255,.2)',
+                          }} />
+                          {COLOR_LABELS[c]}
+                        </label>
+                      )
+                    })}
+                  </div>
+                </Field>
+
+                {/* รุ่นรถ — grouped by brand */}
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
+                    <p style={{ fontSize: 14, color: 'var(--text2)', fontWeight: 500 }}>รุ่นรถที่รองรับ ({form.bikeModels.length} รุ่น)</p>
+                    <div style={{ display: 'flex', gap: 8 }}>
+                      <button type="button" className="btn-ghost" style={{ fontSize: 13, padding: '3px 10px' }}
+                        onClick={() => set('bikeModels', bikeModels.map(b => b.id))}>
+                        เลือกทั้งหมด
+                      </button>
+                      <button type="button" className="btn-ghost" style={{ fontSize: 13, padding: '3px 10px' }}
+                        onClick={() => set('bikeModels', [])}>
+                        ล้าง
+                      </button>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                    {BIKE_BRANDS.map(brand => {
+                      const brandModels = bikeModels.filter(b => b.brand === brand)
+                      const allSelected = brandModels.every(b => form.bikeModels.includes(b.id))
+                      const someSelected = brandModels.some(b => form.bikeModels.includes(b.id))
+                      return (
+                        <div key={brand}>
+                          {/* Brand header with select-all toggle */}
+                          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
+                            <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
+                              <div style={{
+                                width: 16, height: 16, borderRadius: 4, flexShrink: 0,
+                                border: `2px solid ${allSelected ? 'var(--green)' : someSelected ? 'var(--orange)' : 'var(--border2)'}`,
+                                background: allSelected ? 'var(--green)' : someSelected ? 'rgba(249,115,22,.2)' : 'transparent',
+                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                              }}>
+                                {(allSelected || someSelected) && <span style={{ color: allSelected ? '#000' : '#f97316', fontSize: 10, fontWeight: 700 }}>{allSelected ? '✓' : '—'}</span>}
+                              </div>
+                              <input type="checkbox" checked={allSelected} onChange={() => {
+                                if (allSelected) {
+                                  set('bikeModels', form.bikeModels.filter(id => !brandModels.find(b => b.id === id)))
+                                } else {
+                                  const ids = brandModels.map(b => b.id)
+                                  set('bikeModels', [...new Set([...form.bikeModels, ...ids])])
+                                }
+                              }} style={{ display: 'none' }} />
+                              <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text2)' }}>{brand}</span>
+                            </label>
+                          </div>
+                          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: 5, paddingLeft: 4 }}>
+                            {brandModels.map(bm => {
+                              const sel = form.bikeModels.includes(bm.id)
+                              return (
+                                <label key={bm.id} style={{
+                                  display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer',
+                                  fontSize: 13, padding: '5px 10px', borderRadius: 7,
+                                  border: `0.5px solid ${sel ? 'var(--green)' : 'var(--border)'}`,
+                                  background: sel ? 'rgba(34,197,94,.08)' : 'transparent',
+                                  color: sel ? 'var(--green)' : 'var(--text2)',
+                                  transition: 'all .12s',
+                                }}>
+                                  <input type="checkbox" checked={sel} onChange={() => toggleArray('bikeModels', bm.id)} style={{ display: 'none' }} />
+                                  <div style={{
+                                    width: 12, height: 12, borderRadius: 3, flexShrink: 0,
+                                    border: `1.5px solid ${sel ? 'var(--green)' : 'var(--border2)'}`,
+                                    background: sel ? 'var(--green)' : 'transparent',
+                                  }} />
+                                  {bm.model}
+                                </label>
+                              )
+                            })}
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* ── Footer ── */}
+          <div style={{ borderTop: '0.5px solid var(--border)', padding: '16px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'var(--bg)', gap: 12 }}>
+            {/* Section nav */}
+            <div style={{ display: 'flex', gap: 8 }}>
+              {section !== 'info' && (
+                <button type="button" className="btn-ghost" style={{ fontSize: 15 }}
+                  onClick={() => setSection(section === 'spec' ? 'images' : 'info')}>
+                  ← ก่อนหน้า
+                </button>
+              )}
+              {section !== 'spec' && (
+                <button type="button" className="btn-ghost" style={{ fontSize: 15 }}
+                  onClick={() => setSection(section === 'info' ? 'images' : 'spec')}>
+                  ถัดไป →
+                </button>
+              )}
+            </div>
+
+            <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+              {serverError && (
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'var(--red)' }}>
+                  <AlertCircle size={13} /> {serverError}
+                </div>
+              )}
+              <button type="button" className="btn-ghost" onClick={onClose} disabled={saving}>ยกเลิก</button>
+              <button type="submit" className="btn-primary" disabled={saving || uploading} style={{ opacity: saving ? 0.7 : 1 }}>
+                <Save size={15} /> {saving ? 'กำลังบันทึก...' : 'บันทึกสินค้า'}
+              </button>
+            </div>
           </div>
         </form>
       </div>
@@ -271,7 +682,7 @@ export function ProductModal({ product, onClose, onSave }: Props) {
 function Field({ label, error, children }: { label: string; error?: string; children: React.ReactNode }) {
   return (
     <div style={{ marginBottom: 4 }}>
-      <label style={{ fontSize: 14, color: 'var(--text2)', display: 'block', marginBottom: 4 }}>{label}</label>
+      <label style={{ fontSize: 14, color: 'var(--text2)', display: 'block', marginBottom: 5 }}>{label}</label>
       {children}
       {error && <p style={{ fontSize: 13, color: 'var(--red)', marginTop: 3 }}>{error}</p>}
     </div>

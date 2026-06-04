@@ -1,0 +1,3574 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: products.spec.ts >> หน้าสินค้า (/products) >> แสดงรายการสินค้า 822 รายการ
+- Location: tests\products.spec.ts:8:7
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByText(/822 รายการ/)
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 5000ms
+  - waiting for getByText(/822 รายการ/)
+
+```
+
+```yaml
+- banner:
+  - link "ThaiGigaBike":
+    - /url: /
+    - img
+    - text: ThaiGigaBike
+  - navigation:
+    - link "หน้าแรก":
+      - /url: /
+    - link "สินค้า":
+      - /url: /products
+    - link "หมวดหมู่":
+      - /url: /categories
+    - link "ผลงาน":
+      - /url: /gallery
+    - link "ติดต่อ":
+      - /url: /contact
+  - button:
+    - img
+  - button "ธีมมืด":
+    - img
+  - button "TH"
+  - button "EN"
+  - link "ตะกร้า":
+    - /url: /cart
+    - button "ตะกร้า":
+      - img
+      - text: ตะกร้า
+- main:
+  - heading "สินค้า" [level=1]
+  - paragraph: 371 รายการ
+  - complementary:
+    - img
+    - text: ตัวกรอง
+    - img
+    - textbox "ค้นหาสินค้า รหัส หรือรุ่นรถ..."
+    - paragraph: หมวดหมู่
+    - button "ทั้งหมด"
+    - button "เบรค"
+    - button "เครื่องยนต์"
+    - button "โช๊ค/แผงคอ"
+    - button "ตัวถัง"
+    - button "สเตอร์/โซ่"
+    - button "น็อต/สกรู"
+    - button "อุปกรณ์เสริม"
+    - button "ท่อไอเสีย"
+    - paragraph: กรองตามรุ่นรถ
+    - button "ทุกรุ่น"
+    - button "Yamaha SR400/500"
+    - button "Yamaha SRX400-600"
+    - button "Yamaha XS650/TX650"
+    - button "Yamaha XT/TT500"
+    - button "Yamaha TDR220"
+    - button "Yamaha R15/XSR155/XMAX300"
+    - button "Yamaha R3/MT-03/R25"
+    - button "Yamaha R1/R6/R7"
+    - button "Honda CB750 K0-K7"
+    - button "Honda GB250/400/CB400SS"
+    - button "Honda NC30/NC35/CB1300"
+    - button "Honda CBR150R/250RR/300"
+    - button "Honda CBR600RR/1000RR"
+    - button "Honda Monkey/MSX125/DAX125"
+    - button "Honda NSR150SP/Dash 2T"
+    - button "Kawasaki W650/W800"
+    - button "Kawasaki Estrella250/TR250"
+    - button "Kawasaki KSR110/KR150"
+    - button "Kawasaki Ninja250/300/400/ZX250R"
+    - button "Kawasaki Ninja ZX-10RR"
+    - button "Suzuki Tempter 400"
+    - button "Suzuki Volty 250"
+    - button "Triumph Thruxton900/T100/T120"
+    - button "Triumph Daytona 675"
+    - button "BMW S1000RR"
+    - button "Royal Enfield GT535/Interceptor 650"
+    - button "Ducati Monster 795/796/Hyper821"
+    - button "Ducati Panigale V4R"
+    - button "Harley-Davidson Sportster 883-1200"
+    - button "Stallions Centaur 150"
+    - button "KTM RC390"
+  - paragraph: 371 รายการ
+  - combobox:
+    - option "เรียงตามค่าเริ่มต้น" [selected]
+    - option "ราคาน้อยไปมาก"
+    - option "ราคามากไปน้อย"
+  - link "Top Yoke Bolt Billet น๊อตขันแผงคอบนแต่ง Honda Cb750,GB250-400":
+    - /url: /products/cb1
+    - img "Top Yoke Bolt Billet น๊อตขันแผงคอบนแต่ง Honda Cb750,GB250-400"
+  - text: CB.1
+  - link "Top Yoke Bolt Billet น๊อตขันแผงคอบนแต่ง Honda Cb750,GB250-400":
+    - /url: /products/cb1
+  - text: cb750 ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Fender Front Long 500 mm. บังโคลนหน้าแต่ง CB750 k0-k7 ความยาว 500 mm.ผ":
+    - /url: /products/cb2
+    - img "Fender Front Long 500 mm. บังโคลนหน้าแต่ง CB750 k0-k7 ความยาว 500 mm.ผ"
+  - text: CB.2
+  - link "Fender Front Long 500 mm. บังโคลนหน้าแต่ง CB750 k0-k7 ความยาว 500 mm.ผ":
+    - /url: /products/cb2
+  - text: cb750 ฿2,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง c":
+    - /url: /products/cb3
+    - img "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง c"
+  - text: CB.3
+  - link "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง c":
+    - /url: /products/cb3
+  - text: cb750 ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb7":
+    - /url: /products/cb4
+    - img "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb7"
+  - text: CB.4
+  - link "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb7":
+    - /url: /products/cb4
+  - text: cb750 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Points Cover Finned Alloy CNC Billet ฝาครอบจานไฟแต่งข้างขวา CB750 k0-k":
+    - /url: /products/cb5
+    - img "Points Cover Finned Alloy CNC Billet ฝาครอบจานไฟแต่งข้างขวา CB750 k0-k"
+  - text: CB.5
+  - link "Points Cover Finned Alloy CNC Billet ฝาครอบจานไฟแต่งข้างขวา CB750 k0-k":
+    - /url: /products/cb5
+  - text: cb750 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Alternator Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างซ้ายผลิตจา":
+    - /url: /products/cb6
+    - img "Alternator Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างซ้ายผลิตจา"
+  - text: CB.6
+  - link "Alternator Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างซ้ายผลิตจา":
+    - /url: /products/cb6
+  - text: cb750 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Clutch Cover Finned Billet CNC Alloy ฝาครอบคลัชแต่ง CB750 k0-k7ผลิตจาก":
+    - /url: /products/cb7
+    - img "Clutch Cover Finned Billet CNC Alloy ฝาครอบคลัชแต่ง CB750 k0-k7ผลิตจาก"
+  - text: CB.7
+  - link "Clutch Cover Finned Billet CNC Alloy ฝาครอบคลัชแต่ง CB750 k0-k7ผลิตจาก":
+    - /url: /products/cb7
+  - text: cb750 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Starter Cover Finned Billet CNC Alloy ฝาครอบไดร์สตาร์ทแต่ง Honda cb750":
+    - /url: /products/cb8
+    - img "Starter Cover Finned Billet CNC Alloy ฝาครอบไดร์สตาร์ทแต่ง Honda cb750"
+  - text: CB.8
+  - link "Starter Cover Finned Billet CNC Alloy ฝาครอบไดร์สตาร์ทแต่ง Honda cb750":
+    - /url: /products/cb8
+  - text: cb750 ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Breather Cover Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง HONDA CB75":
+    - /url: /products/cb9
+    - img "Breather Cover Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง HONDA CB75"
+  - text: CB.9
+  - link "Breather Cover Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง HONDA CB75":
+    - /url: /products/cb9
+  - text: cb750 ฿1,600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง c":
+    - /url: /products/cb13
+    - img "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง c"
+  - text: CB.13
+  - link "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง c":
+    - /url: /products/cb13
+  - text: cb750 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Fork Top Bolts Alloy น๊อตขันหัวโช๊ค CB750 K0-K7":
+    - /url: /products/cb14
+    - img "Fork Top Bolts Alloy น๊อตขันหัวโช๊ค CB750 K0-K7"
+  - text: CB.14
+  - link "Fork Top Bolts Alloy น๊อตขันหัวโช๊ค CB750 K0-K7":
+    - /url: /products/cb14
+  - text: cb750 ฿900
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ CB750 & GB250-400":
+    - /url: /products/cb15
+    - img "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ CB750 & GB250-400"
+  - text: CB.15
+  - link "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ CB750 & GB250-400":
+    - /url: /products/cb15
+  - text: cb750 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Rear Drum Brake Arm Lock Billet CNC ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนี":
+    - /url: /products/cb16
+    - img "Rear Drum Brake Arm Lock Billet CNC ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนี"
+  - text: CB.16
+  - link "Rear Drum Brake Arm Lock Billet CNC ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนี":
+    - /url: /products/cb16
+  - text: cb750 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Rear Disc Brake Arm Lock Billet CNC ขายึดล๊อคปั๊มดิสเบรคหลังแต่งอลูเนี":
+    - /url: /products/cb17
+    - img "Rear Disc Brake Arm Lock Billet CNC ขายึดล๊อคปั๊มดิสเบรคหลังแต่งอลูเนี"
+  - text: CB.17
+  - link "Rear Disc Brake Arm Lock Billet CNC ขายึดล๊อคปั๊มดิสเบรคหลังแต่งอลูเนี":
+    - /url: /products/cb17
+  - text: cb750 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Fender Front Cafe Sty 450mm. บังโคลนหน้าแต่ง CB750 k0-k7":
+    - /url: /products/cb18
+    - img "Fender Front Cafe Sty 450mm. บังโคลนหน้าแต่ง CB750 k0-k7"
+  - text: CB.18
+  - link "Fender Front Cafe Sty 450mm. บังโคลนหน้าแต่ง CB750 k0-k7":
+    - /url: /products/cb18
+  - text: cb750 ฿1,600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Fender Front Trackter Sty 400mm. บังโคลนหน้าแต่ง CB750 k0-k7":
+    - /url: /products/cb19
+    - img "Fender Front Trackter Sty 400mm. บังโคลนหน้าแต่ง CB750 k0-k7"
+  - text: CB.19
+  - link "Fender Front Trackter Sty 400mm. บังโคลนหน้าแต่ง CB750 k0-k7":
+    - /url: /products/cb19
+  - text: cb750 ฿1,400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb7":
+    - /url: /products/cb20
+    - img "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb7"
+  - text: CB.20
+  - link "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb7":
+    - /url: /products/cb20
+  - text: cb750 ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย HONDA":
+    - /url: /products/cb21
+    - img "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย HONDA"
+  - text: CB.21
+  - link "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย HONDA":
+    - /url: /products/cb21
+  - text: cb750 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย SOHC":
+    - /url: /products/cb22
+    - img "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย SOHC"
+  - text: CB.22
+  - link "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย SOHC":
+    - /url: /products/cb22
+  - text: cb750 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า":
+    - /url: /products/cb23
+    - img "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า"
+  - text: CB.23
+  - link "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า":
+    - /url: /products/cb23
+  - text: cb750 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม":
+    - /url: /products/cb24
+    - img "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม"
+  - text: CB.24
+  - link "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม":
+    - /url: /products/cb24
+  - text: cb750 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโคลนหน้า แต่ง Estrella250-70mm.":
+    - /url: /products/es1
+    - img "บังโคลนหน้า แต่ง Estrella250-70mm."
+  - text: ES.1
+  - link "บังโคลนหน้า แต่ง Estrella250-70mm.":
+    - /url: /products/es1
+  - text: estrella ฿2,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตขันแผงคอบนแต่ง Kawasaki Estrella250":
+    - /url: /products/es2
+    - img "น๊อตขันแผงคอบนแต่ง Kawasaki Estrella250"
+  - text: ES.2
+  - link "น๊อตขันแผงคอบนแต่ง Kawasaki Estrella250":
+    - /url: /products/es2
+  - text: estrella ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบวาล์ว Kawasaki Estrella250":
+    - /url: /products/es3
+    - img "ฝาครอบวาล์ว Kawasaki Estrella250"
+  - text: ES.3
+  - link "ฝาครอบวาล์ว Kawasaki Estrella250":
+    - /url: /products/es3
+  - text: estrella ฿1,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดแผงคอบน Kawasaki Estrella250 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิม":
+    - /url: /products/es5
+    - img "ชุดแผงคอบน Kawasaki Estrella250 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิม"
+  - text: ES.5
+  - link "ชุดแผงคอบน Kawasaki Estrella250 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิม":
+    - /url: /products/es5
+  - text: estrella ฿3,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดแผงคอบน Kawasaki Estrella250 แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้าก":
+    - /url: /products/es6
+    - img "ชุดแผงคอบน Kawasaki Estrella250 แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้าก"
+  - text: ES.6
+  - link "ชุดแผงคอบน Kawasaki Estrella250 แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้าก":
+    - /url: /products/es6
+  - text: estrella ฿4,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตขันแผงคอกลาง Estrella250 งาน CNC":
+    - /url: /products/es8
+    - img "น๊อตขันแผงคอกลาง Estrella250 งาน CNC"
+  - text: ES.8
+  - link "น๊อตขันแผงคอกลาง Estrella250 งาน CNC":
+    - /url: /products/es8
+  - text: estrella ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตขันหัวโช๊ค Estrella250":
+    - /url: /products/es9
+    - img "น๊อตขันหัวโช๊ค Estrella250"
+  - text: ES.9
+  - link "น๊อตขันหัวโช๊ค Estrella250":
+    - /url: /products/es9
+  - text: estrella ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดไฟเลี้ยวหน้าแต่ง แบบใส่เข้ากับแกนโช๊คหน้า":
+    - /url: /products/es10
+    - img "ขายึดไฟเลี้ยวหน้าแต่ง แบบใส่เข้ากับแกนโช๊คหน้า"
+  - text: ES.10
+  - link "ขายึดไฟเลี้ยวหน้าแต่ง แบบใส่เข้ากับแกนโช๊คหน้า":
+    - /url: /products/es10
+  - text: estrella ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "สวิงอาร์มอลูมิเนียมแต่ง Kawasaki Estrella250":
+    - /url: /products/es11
+    - img "สวิงอาร์มอลูมิเนียมแต่ง Kawasaki Estrella250"
+  - text: ES.11
+  - link "สวิงอาร์มอลูมิเนียมแต่ง Kawasaki Estrella250":
+    - /url: /products/es11
+  - text: estrella ฿6,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโคลนหน้าแต่ง ทรง CAFE รุ่นลวดคาด":
+    - /url: /products/g1
+    - img "บังโคลนหน้าแต่ง ทรง CAFE รุ่นลวดคาด"
+  - text: G.1
+  - link "บังโคลนหน้าแต่ง ทรง CAFE รุ่นลวดคาด":
+    - /url: /products/g1
+  - text: sr400 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm. กว้าง 115 mm.":
+    - /url: /products/g2
+    - img "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm. กว้าง 115 mm."
+  - text: G.2
+  - link "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm. กว้าง 115 mm.":
+    - /url: /products/g2
+  - text: sr400 ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโคลนหน้าแต่ง SR":
+    - /url: /products/g3
+    - img "บังโคลนหน้าแต่ง SR"
+  - text: G.3
+  - link "บังโคลนหน้าแต่ง SR":
+    - /url: /products/g3
+  - text: sr400 ฿1,600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโคลนหน้าแต่ง SR":
+    - /url: /products/g4
+    - img "บังโคลนหน้าแต่ง SR"
+  - text: G.4
+  - link "บังโคลนหน้าแต่ง SR":
+    - /url: /products/g4
+  - text: sr400 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโคลนหลังแต่ง SR":
+    - /url: /products/g5
+    - img "บังโคลนหลังแต่ง SR"
+  - text: G.5
+  - link "บังโคลนหลังแต่ง SR":
+    - /url: /products/g5
+  - text: sr400 ฿2,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "สวิงอาร์มอลูมิเนียมแต่งใส่ YAMAHA SR Type 1 เพิ่มความมีระดับให้รถคุณ":
+    - /url: /products/g6
+    - img "สวิงอาร์มอลูมิเนียมแต่งใส่ YAMAHA SR Type 1 เพิ่มความมีระดับให้รถคุณ"
+  - text: G.6
+  - link "สวิงอาร์มอลูมิเนียมแต่งใส่ YAMAHA SR Type 1 เพิ่มความมีระดับให้รถคุณ":
+    - /url: /products/g6
+  - text: sr400 ฿7,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "สวิงอาร์มอลูมิเนียมแต่ง YAMAHA SR Type 2":
+    - /url: /products/g7
+    - img "สวิงอาร์มอลูมิเนียมแต่ง YAMAHA SR Type 2"
+  - text: G.7
+  - link "สวิงอาร์มอลูมิเนียมแต่ง YAMAHA SR Type 2":
+    - /url: /products/g7
+  - text: sr400 ฿6,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น็อตครอบที่ตั้งโซ่ราวลิ้นแต่ง":
+    - /url: /products/g8
+    - img "น็อตครอบที่ตั้งโซ่ราวลิ้นแต่ง"
+  - text: G.8
+  - link "น็อตครอบที่ตั้งโซ่ราวลิ้นแต่ง":
+    - /url: /products/g8
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ตัวล๊อคฝาดุมดรั๊มเบรคหน้า yamaha SR":
+    - /url: /products/g9
+    - img "ตัวล๊อคฝาดุมดรั๊มเบรคหน้า yamaha SR"
+  - text: G.9
+  - link "ตัวล๊อคฝาดุมดรั๊มเบรคหน้า yamaha SR":
+    - /url: /products/g9
+  - text: sr400 ฿900
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "สายส่งน้ำมันเครื่องขึ้นบนเฟรม YAMAHA SR พร้อมชุดอแดปเตอร์ ใส่แทนสายยาง":
+    - /url: /products/g10
+    - img "สายส่งน้ำมันเครื่องขึ้นบนเฟรม YAMAHA SR พร้อมชุดอแดปเตอร์ ใส่แทนสายยาง"
+  - text: G.10
+  - link "สายส่งน้ำมันเครื่องขึ้นบนเฟรม YAMAHA SR พร้อมชุดอแดปเตอร์ ใส่แทนสายยาง":
+    - /url: /products/g10
+  - text: sr400 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโซ่สแตนเลสสำหรับใส่ YAMAHA SR":
+    - /url: /products/g11
+    - img "บังโซ่สแตนเลสสำหรับใส่ YAMAHA SR"
+  - text: G.11
+  - link "บังโซ่สแตนเลสสำหรับใส่ YAMAHA SR":
+    - /url: /products/g11
+  - text: sr400 ฿1,400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650":
+    - /url: /products/g12
+    - img "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650"
+  - text: G.12
+  - link "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650":
+    - /url: /products/g12
+  - text: sr400 ฿1,400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบโช๊คหน้าแต่งแบบว้าวโค้งในใส่ SR400/500 ,XT,TT Alloy CNC Billet ม":
+    - /url: /products/g13
+    - img "ฝาครอบโช๊คหน้าแต่งแบบว้าวโค้งในใส่ SR400/500 ,XT,TT Alloy CNC Billet ม"
+  - text: G.13
+  - link "ฝาครอบโช๊คหน้าแต่งแบบว้าวโค้งในใส่ SR400/500 ,XT,TT Alloy CNC Billet ม":
+    - /url: /products/g13
+  - text: sr400 ฿1,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดฝาดรั๊มเบรคและดิสเบรกหลังแต่ง SR ความยาว 300-320 mm. ball joint M":
+    - /url: /products/g14
+    - img "ขายึดฝาดรั๊มเบรคและดิสเบรกหลังแต่ง SR ความยาว 300-320 mm. ball joint M"
+  - text: G.14
+  - link "ขายึดฝาดรั๊มเบรคและดิสเบรกหลังแต่ง SR ความยาว 300-320 mm. ball joint M":
+    - /url: /products/g14
+  - text: sr400 ฿1,000
+  - button "เลือกสี":
+    - img
+  - link "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr รุ่นฉลองครบรอบ 25&30 ปี":
+    - /url: /products/g15
+    - img "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr รุ่นฉลองครบรอบ 25&30 ปี"
+  - text: G.15
+  - link "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr รุ่นฉลองครบรอบ 25&30 ปี":
+    - /url: /products/g15
+  - text: sr400 ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบเรียบ":
+    - /url: /products/g16
+    - img "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบเรียบ"
+  - text: G.16
+  - link "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบเรียบ":
+    - /url: /products/g16
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบโลโก้":
+    - /url: /products/g17
+    - img "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบโลโก้"
+  - text: G.17
+  - link "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบโลโก้":
+    - /url: /products/g17
+  - text: sr400 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "อแด๊ปเตอร์ต่อสายออยขึ้นบนเฟรมสำหรับ SR AN6":
+    - /url: /products/g18
+    - img "อแด๊ปเตอร์ต่อสายออยขึ้นบนเฟรมสำหรับ SR AN6"
+  - text: G.18
+  - link "อแด๊ปเตอร์ต่อสายออยขึ้นบนเฟรมสำหรับ SR AN6":
+    - /url: /products/g18
+  - text: sr400 ฿800
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่งอลูมิเนียม SR400/500 ใส่ได้ปี1978-2019,XT,T":
+    - /url: /products/g23
+    - img "ฝาครอบกรองน้ำมันเครื่องแต่งอลูมิเนียม SR400/500 ใส่ได้ปี1978-2019,XT,T"
+  - text: G.23
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่งอลูมิเนียม SR400/500 ใส่ได้ปี1978-2019,XT,T":
+    - /url: /products/g23
+  - text: sr400 ฿500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบมีครีบ":
+    - /url: /products/g25
+    - img "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบมีครีบ"
+  - text: G.25
+  - link "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบมีครีบ":
+    - /url: /products/g25
+  - text: sr400 ฿5,000
+  - button "เลือกสี":
+    - img
+  - link "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2019,XT,TT Die Cast ชิ้นละ":
+    - /url: /products/g26
+    - img "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2019,XT,TT Die Cast ชิ้นละ"
+  - text: G.26
+  - link "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2019,XT,TT Die Cast ชิ้นละ":
+    - /url: /products/g26
+  - text: sr400 ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แฮนจับโช๊คสแตนเลส SR รูแกน 35 มม.":
+    - /url: /products/g29
+    - img "แฮนจับโช๊คสแตนเลส SR รูแกน 35 มม."
+  - text: G.29
+  - link "แฮนจับโช๊คสแตนเลส SR รูแกน 35 มม.":
+    - /url: /products/g29
+  - text: sr400 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบกันฝุ่นโช๊คหน้าแต่ง SR":
+    - /url: /products/g30
+    - img "ฝาครอบกันฝุ่นโช๊คหน้าแต่ง SR"
+  - text: G.30
+  - link "ฝาครอบกันฝุ่นโช๊คหน้าแต่ง SR":
+    - /url: /products/g30
+  - text: sr400 ฿0
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หูจับไฟหน้าแต่งสแตนเลสแบบลวด สำหรับใส่ SR รูแกนโช๊ค 35 มม.คู่ละ สินค้าหมด":
+    - /url: /products/g31
+    - img "หูจับไฟหน้าแต่งสแตนเลสแบบลวด สำหรับใส่ SR รูแกนโช๊ค 35 มม.คู่ละ"
+    - text: สินค้าหมด
+  - text: G.31
+  - link "หูจับไฟหน้าแต่งสแตนเลสแบบลวด สำหรับใส่ SR รูแกนโช๊ค 35 มม.คู่ละ":
+    - /url: /products/g31
+  - text: sr400 ฿1,700
+  - button "หยิบใส่ตะกร้า" [disabled]:
+    - img
+  - link "หูจับไฟหน้าแต่ง SR แบบตัว V":
+    - /url: /products/g32
+    - img "หูจับไฟหน้าแต่ง SR แบบตัว V"
+  - text: G.32
+  - link "หูจับไฟหน้าแต่ง SR แบบตัว V":
+    - /url: /products/g32
+  - text: sr400 ฿1,600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หูจับไฟหน้าแต่ง SR,XS 650 แบบขายึดแผงไมล์ได้":
+    - /url: /products/g33
+    - img "หูจับไฟหน้าแต่ง SR,XS 650 แบบขายึดแผงไมล์ได้"
+  - text: G.33
+  - link "หูจับไฟหน้าแต่ง SR,XS 650 แบบขายึดแผงไมล์ได้":
+    - /url: /products/g33
+  - text: sr400 ฿1,700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายยึดไฟเลี้ยวแต่ง SR":
+    - /url: /products/g34
+    - img "ขายยึดไฟเลี้ยวแต่ง SR"
+  - text: G.34
+  - link "ขายยึดไฟเลี้ยวแต่ง SR":
+    - /url: /products/g34
+  - text: sr400 ฿300
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดฝาดรั๊มเบรคหลัง สำหรับใส่ YAMAHA SR":
+    - /url: /products/g38
+    - img "ขายึดฝาดรั๊มเบรคหลัง สำหรับใส่ YAMAHA SR"
+  - text: G.38
+  - link "ขายึดฝาดรั๊มเบรคหลัง สำหรับใส่ YAMAHA SR":
+    - /url: /products/g38
+  - text: sr400 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น็อตขันหัวโช๊ค SR ใส่แทนหัวโช๊ครุ่นจุ๊บอัดแก๊สได้เลยลดปัญหาหัวจุ๊บหัก":
+    - /url: /products/g41
+    - img "น็อตขันหัวโช๊ค SR ใส่แทนหัวโช๊ครุ่นจุ๊บอัดแก๊สได้เลยลดปัญหาหัวจุ๊บหัก"
+  - text: G.41
+  - link "น็อตขันหัวโช๊ค SR ใส่แทนหัวโช๊ครุ่นจุ๊บอัดแก๊สได้เลยลดปัญหาหัวจุ๊บหัก":
+    - /url: /products/g41
+  - text: sr400 ฿550
+  - button "เลือกสี":
+    - img
+  - link "หมุดอลูมิเนียมขันล๊อคหูบังโคลนหลัง SR":
+    - /url: /products/g42
+    - img "หมุดอลูมิเนียมขันล๊อคหูบังโคลนหลัง SR"
+  - text: G.42
+  - link "หมุดอลูมิเนียมขันล๊อคหูบังโคลนหลัง SR":
+    - /url: /products/g42
+  - text: sr400 ฿400
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX":
+    - /url: /products/g43
+    - img "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX"
+  - text: G.43
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX":
+    - /url: /products/g43
+  - text: sr400 ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX":
+    - /url: /products/g44
+    - img "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX"
+  - text: G.44
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX":
+    - /url: /products/g44
+  - text: sr400 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX":
+    - /url: /products/g45
+    - img "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX"
+  - text: G.45
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX":
+    - /url: /products/g45
+  - text: sr400 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แผงคออลูมิเนียมแต่ง่ YAMAHA SR,XS650 แบบ Die Casting ทรงคาเฟ่ ชิ้นล่ะ":
+    - /url: /products/g46
+    - img "แผงคออลูมิเนียมแต่ง่ YAMAHA SR,XS650 แบบ Die Casting ทรงคาเฟ่ ชิ้นล่ะ"
+  - text: G.46
+  - link "แผงคออลูมิเนียมแต่ง่ YAMAHA SR,XS650 แบบ Die Casting ทรงคาเฟ่ ชิ้นล่ะ":
+    - /url: /products/g46
+  - text: sr400 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แผงคอแต่ง SR,XS650":
+    - /url: /products/g47
+    - img "แผงคอแต่ง SR,XS650"
+  - text: G.47
+  - link "แผงคอแต่ง SR,XS650":
+    - /url: /products/g47
+  - text: sr400 ฿2,800
+  - button "เลือกสี":
+    - img
+  - link "แผงคอแต่ง SR,XS650":
+    - /url: /products/g48
+    - img "แผงคอแต่ง SR,XS650"
+  - text: G.48
+  - link "แผงคอแต่ง SR,XS650":
+    - /url: /products/g48
+  - text: sr400 ฿2,800
+  - button "เลือกสี":
+    - img
+  - link "พักเท้าหลังแต่งอลูมิเนียมแบบขันล๊อคหูโช๊คหลัง SR เกลียว M10x1.25":
+    - /url: /products/g50
+    - img "พักเท้าหลังแต่งอลูมิเนียมแบบขันล๊อคหูโช๊คหลัง SR เกลียว M10x1.25"
+  - text: G.50
+  - link "พักเท้าหลังแต่งอลูมิเนียมแบบขันล๊อคหูโช๊คหลัง SR เกลียว M10x1.25":
+    - /url: /products/g50
+  - text: sr400 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "สเตอร์หลังแต่ง SR":
+    - /url: /products/g51
+    - img "สเตอร์หลังแต่ง SR"
+  - text: G.51
+  - link "สเตอร์หลังแต่ง SR":
+    - /url: /products/g51
+  - text: sr400 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ถาดใส่แบ็ตเตอร์รี่ใต้เบาะ":
+    - /url: /products/g53
+    - img "ถาดใส่แบ็ตเตอร์รี่ใต้เบาะ"
+  - text: G.53
+  - link "ถาดใส่แบ็ตเตอร์รี่ใต้เบาะ":
+    - /url: /products/g53
+  - text: sr400 ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ถาดเก็บสายไฟใต้เบาะ":
+    - /url: /products/g54
+    - img "ถาดเก็บสายไฟใต้เบาะ"
+  - text: G.54
+  - link "ถาดเก็บสายไฟใต้เบาะ":
+    - /url: /products/g54
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ท่อฝาจีบ ผลิตจากStainless สำหรับใส่ SR ใส่เข้ากับคอท่อเดิมได้เลย ใบล่ะ สินค้าหมด":
+    - /url: /products/g55
+    - img "ท่อฝาจีบ ผลิตจากStainless สำหรับใส่ SR ใส่เข้ากับคอท่อเดิมได้เลย ใบล่ะ"
+    - text: สินค้าหมด
+  - text: G.55
+  - link "ท่อฝาจีบ ผลิตจากStainless สำหรับใส่ SR ใส่เข้ากับคอท่อเดิมได้เลย ใบล่ะ":
+    - /url: /products/g55
+  - text: sr400 ฿2,800
+  - button "หยิบใส่ตะกร้า" [disabled]:
+    - img
+  - link "มือยกวาล์วแต่ง SR":
+    - /url: /products/g57
+    - img "มือยกวาล์วแต่ง SR"
+  - text: G.57
+  - link "มือยกวาล์วแต่ง SR":
+    - /url: /products/g57
+  - text: sr400 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บู๊ทสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ":
+    - /url: /products/g581
+    - img "บู๊ทสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ"
+  - text: G.58.1
+  - link "บู๊ทสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ":
+    - /url: /products/g581
+  - text: sr400 ฿550
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "เพลาสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ":
+    - /url: /products/g582
+    - img "เพลาสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ"
+  - text: G.58.2
+  - link "เพลาสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ":
+    - /url: /products/g582
+  - text: sr400 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978-2000":
+    - /url: /products/g61
+    - img "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978-2000"
+  - text: G.61
+  - link "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978-2000":
+    - /url: /products/g61
+  - text: sr400 ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น็อตขันเสาเสื้อสูบแต่ง SR":
+    - /url: /products/g62
+    - img "น็อตขันเสาเสื้อสูบแต่ง SR"
+  - text: G.62
+  - link "น็อตขันเสาเสื้อสูบแต่ง SR":
+    - /url: /products/g62
+  - text: sr400 ฿1,200
+  - button "เลือกสี":
+    - img
+  - link "อ่างน้ำมันเครื่อง SR":
+    - /url: /products/g63
+    - img "อ่างน้ำมันเครื่อง SR"
+  - text: G.63
+  - link "อ่างน้ำมันเครื่อง SR":
+    - /url: /products/g63
+  - text: sr400 ฿2,000
+  - button "เลือกสี":
+    - img
+  - link "ขายึดกันสะบัดสำหรับใส่ SR แบบยึดหัวเครื่องกับใต้แผงคอ":
+    - /url: /products/g65
+    - img "ขายึดกันสะบัดสำหรับใส่ SR แบบยึดหัวเครื่องกับใต้แผงคอ"
+  - text: G.65
+  - link "ขายึดกันสะบัดสำหรับใส่ SR แบบยึดหัวเครื่องกับใต้แผงคอ":
+    - /url: /products/g65
+  - text: sr400 ฿1,000
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบปิดวาร์วไอดีไอเสียแต่ง SR งาน CNC Billet โค้งเรียบ":
+    - /url: /products/g66
+    - img "ฝาครอบปิดวาร์วไอดีไอเสียแต่ง SR งาน CNC Billet โค้งเรียบ"
+  - text: G.66
+  - link "ฝาครอบปิดวาร์วไอดีไอเสียแต่ง SR งาน CNC Billet โค้งเรียบ":
+    - /url: /products/g66
+  - text: sr400 ฿600
+  - button "เลือกสี":
+    - img
+  - link "ยางกันฝุ่นหุ้มโช๊คหน้าสำหรับใส่ SR คู่ละ":
+    - /url: /products/g67
+    - img "ยางกันฝุ่นหุ้มโช๊คหน้าสำหรับใส่ SR คู่ละ"
+  - text: G.67
+  - link "ยางกันฝุ่นหุ้มโช๊คหน้าสำหรับใส่ SR คู่ละ":
+    - /url: /products/g67
+  - text: sr400 ฿300
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยางหุ้มโช๊คแต่ง7ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว คู่ละ":
+    - /url: /products/g68
+    - img "ยางหุ้มโช๊คแต่ง7ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว คู่ละ"
+  - text: G.68
+  - link "ยางหุ้มโช๊คแต่ง7ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว คู่ละ":
+    - /url: /products/g68
+  - text: sr400 ฿550
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยางหุ้มโช๊คเดิมของ SR พร้อมตะขอเกี่ยว คู่ละ":
+    - /url: /products/g69
+    - img "ยางหุ้มโช๊คเดิมของ SR พร้อมตะขอเกี่ยว คู่ละ"
+  - text: G.69
+  - link "ยางหุ้มโช๊คเดิมของ SR พร้อมตะขอเกี่ยว คู่ละ":
+    - /url: /products/g69
+  - text: sr400 ฿500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยางปิดดุมดรั๊มเบรคหน้า SR ชุดล่ะ":
+    - /url: /products/g70
+    - img "ยางปิดดุมดรั๊มเบรคหน้า SR ชุดล่ะ"
+  - text: G.70
+  - link "ยางปิดดุมดรั๊มเบรคหน้า SR ชุดล่ะ":
+    - /url: /products/g70
+  - text: sr400 ฿250
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยางล๊อคฝากะเป๋าข้าง SR ชุดล่ะ":
+    - /url: /products/g71
+    - img "ยางล๊อคฝากะเป๋าข้าง SR ชุดล่ะ"
+  - text: G.71
+  - link "ยางล๊อคฝากะเป๋าข้าง SR ชุดล่ะ":
+    - /url: /products/g71
+  - text: sr400 ฿200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยางพักเท้า แต่งทรงกลม สำหรับใส่ SR & XS650 แต่งได้ทั้งทรงคาเฟ่แทร็กเตอ":
+    - /url: /products/g72
+    - img "ยางพักเท้า แต่งทรงกลม สำหรับใส่ SR & XS650 แต่งได้ทั้งทรงคาเฟ่แทร็กเตอ"
+  - text: G.72
+  - link "ยางพักเท้า แต่งทรงกลม สำหรับใส่ SR & XS650 แต่งได้ทั้งทรงคาเฟ่แทร็กเตอ":
+    - /url: /products/g72
+  - text: sr400 ฿650
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยางล๊อคเบาะ SR คู่ละ":
+    - /url: /products/g75
+    - img "ยางล๊อคเบาะ SR คู่ละ"
+  - text: G.75
+  - link "ยางล๊อคเบาะ SR คู่ละ":
+    - /url: /products/g75
+  - text: sr400 ฿250
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น็อตครอบตั้งโซ่ราวลิ้นแต่ง ทำจากทองเหลือง 100% สำหรับใส่ SR,XT ชิ้นล่ะ":
+    - /url: /products/g79
+    - img "น็อตครอบตั้งโซ่ราวลิ้นแต่ง ทำจากทองเหลือง 100% สำหรับใส่ SR,XT ชิ้นล่ะ"
+  - text: G.79
+  - link "น็อตครอบตั้งโซ่ราวลิ้นแต่ง ทำจากทองเหลือง 100% สำหรับใส่ SR,XT ชิ้นล่ะ":
+    - /url: /products/g79
+  - text: sr400 ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบม๊าคแคมซ์แต่ง SR,XT,TT แบบระบายความร้อนต่อเข้ากับหัวสายออยเบอร์":
+    - /url: /products/g80
+    - img "ฝาครอบม๊าคแคมซ์แต่ง SR,XT,TT แบบระบายความร้อนต่อเข้ากับหัวสายออยเบอร์"
+  - text: G.80
+  - link "ฝาครอบม๊าคแคมซ์แต่ง SR,XT,TT แบบระบายความร้อนต่อเข้ากับหัวสายออยเบอร์":
+    - /url: /products/g80
+  - text: sr400 ฿1,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ปากแตรแต่งใส่คาร์บู Keihin FCR 35-41mm. & 28-33mm. Long 60 mm. Shot 35":
+    - /url: /products/g81
+    - img "ปากแตรแต่งใส่คาร์บู Keihin FCR 35-41mm. & 28-33mm. Long 60 mm. Shot 35"
+  - text: G.81
+  - link "ปากแตรแต่งใส่คาร์บู Keihin FCR 35-41mm. & 28-33mm. Long 60 mm. Shot 35":
+    - /url: /products/g81
+  - text: monkey · sr400 ฿1,000
+  - button "เลือกสี":
+    - img
+  - link "น๊อตขันแกนคอบนแต่ง SR ปี 2001-2018":
+    - /url: /products/g82
+    - img "น๊อตขันแกนคอบนแต่ง SR ปี 2001-2018"
+  - text: G.82
+  - link "น๊อตขันแกนคอบนแต่ง SR ปี 2001-2018":
+    - /url: /products/g82
+  - text: sr400 ฿450
+  - button "เลือกสี":
+    - img
+  - link "น๊อตขันแผงคอบนแต่ง SR ปี 1978-2000":
+    - /url: /products/g83
+    - img "น๊อตขันแผงคอบนแต่ง SR ปี 1978-2000"
+  - text: G.83
+  - link "น๊อตขันแผงคอบนแต่ง SR ปี 1978-2000":
+    - /url: /products/g83
+  - text: sr400 ฿500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น็อตครอบตั้งโซ่ราวลิ้นแต่ง แบบเลนส์ใส":
+    - /url: /products/g84
+    - img "น็อตครอบตั้งโซ่ราวลิ้นแต่ง แบบเลนส์ใส"
+  - text: G.84
+  - link "น็อตครอบตั้งโซ่ราวลิ้นแต่ง แบบเลนส์ใส":
+    - /url: /products/g84
+  - text: sr400 ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบม้าคแคมแต่ง SR,XT แบบเลนท์ใส":
+    - /url: /products/g85
+    - img "ฝาครอบม้าคแคมแต่ง SR,XT แบบเลนท์ใส"
+  - text: G.85
+  - link "ฝาครอบม้าคแคมแต่ง SR,XT แบบเลนท์ใส":
+    - /url: /products/g85
+  - text: sr400 ฿900
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบตัวตั้งวาล์ว แบบเลนส์ใส":
+    - /url: /products/g86
+    - img "ฝาครอบตัวตั้งวาล์ว แบบเลนส์ใส"
+  - text: G.86
+  - link "ฝาครอบตัวตั้งวาล์ว แบบเลนส์ใส":
+    - /url: /products/g86
+  - text: sr400 ฿900
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "สวิงอาร์มอลูมิเนียมแต่ง Yamaha SR Type 3 แนะนำ":
+    - /url: /products/g88
+    - img "สวิงอาร์มอลูมิเนียมแต่ง Yamaha SR Type 3"
+    - text: แนะนำ
+  - text: G.88
+  - link "สวิงอาร์มอลูมิเนียมแต่ง Yamaha SR Type 3":
+    - /url: /products/g88
+  - text: sr400 ฿6,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาปิดหัวโช๊คแต่งสำหรับใส่ YAMAHA SR ปี 1995-2008":
+    - /url: /products/g89
+    - img "ฝาปิดหัวโช๊คแต่งสำหรับใส่ YAMAHA SR ปี 1995-2008"
+  - text: G.89
+  - link "ฝาปิดหัวโช๊คแต่งสำหรับใส่ YAMAHA SR ปี 1995-2008":
+    - /url: /products/g89
+  - text: sr400 ฿350
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หูยึดไฟหน้าแต่งอลูมิเนียม แกนโช๊ค 35mm./36mm./37mm./39mm.":
+    - /url: /products/g91
+    - img "หูยึดไฟหน้าแต่งอลูมิเนียม แกนโช๊ค 35mm./36mm./37mm./39mm."
+  - text: G.91
+  - link "หูยึดไฟหน้าแต่งอลูมิเนียม แกนโช๊ค 35mm./36mm./37mm./39mm.":
+    - /url: /products/g91
+  - text: sr400 ฿1,400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยางพักเท้าหน้าเดิม SR ของใหม่ คู่ละ":
+    - /url: /products/g92
+    - img "ยางพักเท้าหน้าเดิม SR ของใหม่ คู่ละ"
+  - text: G.92
+  - link "ยางพักเท้าหน้าเดิม SR ของใหม่ คู่ละ":
+    - /url: /products/g92
+  - text: sr400 ฿400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยางพักเท้าหลัง SR ของใหม่ คู่ละ":
+    - /url: /products/g93
+    - img "ยางพักเท้าหลัง SR ของใหม่ คู่ละ"
+  - text: G.93
+  - link "ยางพักเท้าหลัง SR ของใหม่ คู่ละ":
+    - /url: /products/g93
+  - text: sr400 ฿350
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "เบาะแต่งทรงคาเฟ่ ใบล่ะ":
+    - /url: /products/g94
+    - img "เบาะแต่งทรงคาเฟ่ ใบล่ะ"
+  - text: G.94
+  - link "เบาะแต่งทรงคาเฟ่ ใบล่ะ":
+    - /url: /products/g94
+  - text: sr400 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "เบาะแต่งทรงคาเฟ่ หนังน้ำตาล-ด้ายขาว ใบล่ะ":
+    - /url: /products/g95
+    - img "เบาะแต่งทรงคาเฟ่ หนังน้ำตาล-ด้ายขาว ใบล่ะ"
+  - text: G.95
+  - link "เบาะแต่งทรงคาเฟ่ หนังน้ำตาล-ด้ายขาว ใบล่ะ":
+    - /url: /products/g95
+  - text: sr400 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง ใบล่ะ":
+    - /url: /products/g96
+    - img "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง ใบล่ะ"
+  - text: G.96
+  - link "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง ใบล่ะ":
+    - /url: /products/g96
+  - text: sr400 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายดำ-ใส่หมุด ใบล่ะ":
+    - /url: /products/g97
+    - img "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายดำ-ใส่หมุด ใบล่ะ"
+  - text: G.97
+  - link "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายดำ-ใส่หมุด ใบล่ะ":
+    - /url: /products/g97
+  - text: sr400 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง-ใส่หมุด ใบล่ะ":
+    - /url: /products/g98
+    - img "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง-ใส่หมุด ใบล่ะ"
+  - text: G.98
+  - link "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง-ใส่หมุด ใบล่ะ":
+    - /url: /products/g98
+  - text: sr400 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "เบาะแต่ง หนังดำ-ด้ายขาว-ใส่หมุด ใบล่ะ":
+    - /url: /products/g99
+    - img "เบาะแต่ง หนังดำ-ด้ายขาว-ใส่หมุด ใบล่ะ"
+  - text: G.99
+  - link "เบาะแต่ง หนังดำ-ด้ายขาว-ใส่หมุด ใบล่ะ":
+    - /url: /products/g99
+  - text: sr400 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "เบาะแต่ง หนังน้ำตาล-ด้ายขาว-ใส่หมุด ใบล่ะ":
+    - /url: /products/g100
+    - img "เบาะแต่ง หนังน้ำตาล-ด้ายขาว-ใส่หมุด ใบล่ะ"
+  - text: G.100
+  - link "เบาะแต่ง หนังน้ำตาล-ด้ายขาว-ใส่หมุด ใบล่ะ":
+    - /url: /products/g100
+  - text: sr400 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "กระจกแต่ง yamaha sr ของใหม่แกะกล่องครับ ใส่รถ sr ได้เลยไม่ต้องดัดแปลงเ":
+    - /url: /products/g105
+    - img "กระจกแต่ง yamaha sr ของใหม่แกะกล่องครับ ใส่รถ sr ได้เลยไม่ต้องดัดแปลงเ"
+  - text: G.105
+  - link "กระจกแต่ง yamaha sr ของใหม่แกะกล่องครับ ใส่รถ sr ได้เลยไม่ต้องดัดแปลงเ":
+    - /url: /products/g105
+  - text: sr400 ฿1,700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แผงคอบนแต่งสำหรับใส่ SR,XS650":
+    - /url: /products/g106
+    - img "แผงคอบนแต่งสำหรับใส่ SR,XS650"
+  - text: G.106
+  - link "แผงคอบนแต่งสำหรับใส่ SR,XS650":
+    - /url: /products/g106
+  - text: sr400 ฿2,500
+  - button "เลือกสี":
+    - img
+  - link "ชุดแผงคอบนล่างแต่งแบบคาเฟ่ SR":
+    - /url: /products/g107
+    - img "ชุดแผงคอบนล่างแต่งแบบคาเฟ่ SR"
+  - text: G.107
+  - link "ชุดแผงคอบนล่างแต่งแบบคาเฟ่ SR":
+    - /url: /products/g107
+  - text: sr400 ฿7,000
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบจานไฟ แต่ง SR แบบเรียบ":
+    - /url: /products/g109
+    - img "ฝาครอบจานไฟ แต่ง SR แบบเรียบ"
+  - text: G.109
+  - link "ฝาครอบจานไฟ แต่ง SR แบบเรียบ":
+    - /url: /products/g109
+  - text: sr400 ฿7,000
+  - button "เลือกสี":
+    - img
+  - link "บู๊ทล้อหน้า yamaha sr รุ่นดิสเบรค 1978":
+    - /url: /products/g110
+    - img "บู๊ทล้อหน้า yamaha sr รุ่นดิสเบรค 1978"
+  - text: G.110
+  - link "บู๊ทล้อหน้า yamaha sr รุ่นดิสเบรค 1978":
+    - /url: /products/g110
+  - text: sr400 ฿400
+  - button "เลือกสี":
+    - img
+  - link "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม.":
+    - /url: /products/g112
+    - img "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม."
+  - text: G.112
+  - link "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม.":
+    - /url: /products/g112
+  - text: sr400 ฿1,000
+  - button "เลือกสี":
+    - img
+  - link "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2024 ใส่จาน 320 มม.":
+    - /url: /products/g1121
+    - img "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2024 ใส่จาน 320 มม."
+  - text: G.112.1
+  - link "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2024 ใส่จาน 320 มม.":
+    - /url: /products/g1121
+  - text: sr400 ฿1,000
+  - button "เลือกสี":
+    - img
+  - link "แผ่นรองจานเบรคใส่ SR 2001-2014":
+    - /url: /products/g113
+    - img "แผ่นรองจานเบรคใส่ SR 2001-2014"
+  - text: G.113
+  - link "แผ่นรองจานเบรคใส่ SR 2001-2014":
+    - /url: /products/g113
+  - text: sr400 ฿800
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบตั้งวาร์วแต่ง SR แบบครีบ":
+    - /url: /products/g114
+    - img "ฝาครอบตั้งวาร์วแต่ง SR แบบครีบ"
+  - text: G.114
+  - link "ฝาครอบตั้งวาร์วแต่ง SR แบบครีบ":
+    - /url: /products/g114
+  - text: sr400 ฿700
+  - button "เลือกสี":
+    - img
+  - link "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000-2022,XT,TT แบบเรียบ":
+    - /url: /products/g115
+    - img "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000-2022,XT,TT แบบเรียบ"
+  - text: G.115
+  - link "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000-2022,XT,TT แบบเรียบ":
+    - /url: /products/g115
+  - text: sr400 ฿4,500
+  - button "เลือกสี":
+    - img
+  - link "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบครับใหญ่":
+    - /url: /products/g116
+    - img "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบครับใหญ่"
+  - text: G.116
+  - link "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบครับใหญ่":
+    - /url: /products/g116
+  - text: sr400 ฿7,500
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ลาย Peace":
+    - /url: /products/g117
+    - img "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ลาย Peace"
+  - text: G.117
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ลาย Peace":
+    - /url: /products/g117
+  - text: sr400 ฿700
+  - button "เลือกสี":
+    - img
+  - link "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง SR":
+    - /url: /products/g118
+    - img "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง SR"
+  - text: G.118
+  - link "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง SR":
+    - /url: /products/g118
+  - text: sr400 ฿7,500
+  - button "เลือกสี":
+    - img
+  - link "บู๊ทล้อหน้า yamaha sr รุ่นดรั๊มเบรค":
+    - /url: /products/g119
+    - img "บู๊ทล้อหน้า yamaha sr รุ่นดรั๊มเบรค"
+  - text: G.119
+  - link "บู๊ทล้อหน้า yamaha sr รุ่นดรั๊มเบรค":
+    - /url: /products/g119
+  - text: sr400 ฿400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยางคอคาร์บูเดิม SR ใส่กับคาร์บูเดิมกรองอากาศเดิมได้เลยใหม่แกะกล่อง":
+    - /url: /products/g120
+    - img "ยางคอคาร์บูเดิม SR ใส่กับคาร์บูเดิมกรองอากาศเดิมได้เลยใหม่แกะกล่อง"
+  - text: G.120
+  - link "ยางคอคาร์บูเดิม SR ใส่กับคาร์บูเดิมกรองอากาศเดิมได้เลยใหม่แกะกล่อง":
+    - /url: /products/g120
+  - text: sr400 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ซิลยางสวิงอาร์ม SR คู่ล่ะ":
+    - /url: /products/g121
+    - img "ซิลยางสวิงอาร์ม SR คู่ล่ะ"
+  - text: G.121
+  - link "ซิลยางสวิงอาร์ม SR คู่ล่ะ":
+    - /url: /products/g121
+  - text: sr400 ฿250
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดบาร์ลานท์โช๊คหน้า SR":
+    - /url: /products/g124
+    - img "ชุดบาร์ลานท์โช๊คหน้า SR"
+  - text: G.124
+  - link "ชุดบาร์ลานท์โช๊คหน้า SR":
+    - /url: /products/g124
+  - text: sr400 ฿1,400
+  - button "เลือกสี":
+    - img
+  - link "ขายึดล๊อคฝาดรั๊มเบรคหลังแต่ง SR":
+    - /url: /products/g125
+    - img "ขายึดล๊อคฝาดรั๊มเบรคหลังแต่ง SR"
+  - text: G.125
+  - link "ขายึดล๊อคฝาดรั๊มเบรคหลังแต่ง SR":
+    - /url: /products/g125
+  - text: sr400 ฿1,100
+  - button "เลือกสี":
+    - img
+  - link "ชุดกันล้มสำหรับใส่ yamaha sr":
+    - /url: /products/g126
+    - img "ชุดกันล้มสำหรับใส่ yamaha sr"
+  - text: G.126
+  - link "ชุดกันล้มสำหรับใส่ yamaha sr":
+    - /url: /products/g126
+  - text: sr400 ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดยกวาล์วใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด":
+    - /url: /products/g127
+    - img "ชุดยกวาล์วใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด"
+  - text: G.127
+  - link "ชุดยกวาล์วใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด":
+    - /url: /products/g127
+  - text: sr400 ฿1,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดอุดตุ๊กตาใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด":
+    - /url: /products/g128
+    - img "ชุดอุดตุ๊กตาใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด"
+  - text: G.128
+  - link "ชุดอุดตุ๊กตาใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด":
+    - /url: /products/g128
+  - text: sr400 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบฉลุ":
+    - /url: /products/g130
+    - img "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบฉลุ"
+  - text: G.130
+  - link "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบฉลุ":
+    - /url: /products/g130
+  - text: sr400 ฿2,500
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 มีสองสีให้เลือก":
+    - /url: /products/g131
+    - img "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 มีสองสีให้เลือก"
+  - text: G.131
+  - link "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 มีสองสีให้เลือก":
+    - /url: /products/g131
+  - text: sr400 ฿500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แผ่นฝาปลายเปิดท่อแทร๊บ มีสองสีให้เลือก ชิ้นล่ะ":
+    - /url: /products/g133
+    - img "แผ่นฝาปลายเปิดท่อแทร๊บ มีสองสีให้เลือก ชิ้นล่ะ"
+  - text: G.133
+  - link "แผ่นฝาปลายเปิดท่อแทร๊บ มีสองสีให้เลือก ชิ้นล่ะ":
+    - /url: /products/g133
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แฮนจับโช๊คอลูมิเนียม":
+    - /url: /products/g134
+    - img "แฮนจับโช๊คอลูมิเนียม"
+  - text: G.134
+  - link "แฮนจับโช๊คอลูมิเนียม":
+    - /url: /products/g134
+  - text: sr400 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตครีบระบายความร้อนกลางเครื่องต่อเข้ากับหัวสายออยเบอร์ AN6":
+    - /url: /products/g135
+    - img "น๊อตครีบระบายความร้อนกลางเครื่องต่อเข้ากับหัวสายออยเบอร์ AN6"
+  - text: G.135
+  - link "น๊อตครีบระบายความร้อนกลางเครื่องต่อเข้ากับหัวสายออยเบอร์ AN6":
+    - /url: /products/g135
+  - text: sr400 ฿500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตขันท่อส่งน้ำมันเครื่องหัวเครื่อง SRผลิตจากอลูมิเนียมเกรดพิเศษ ด้วย":
+    - /url: /products/g136
+    - img "น๊อตขันท่อส่งน้ำมันเครื่องหัวเครื่อง SRผลิตจากอลูมิเนียมเกรดพิเศษ ด้วย"
+  - text: G.136
+  - link "น๊อตขันท่อส่งน้ำมันเครื่องหัวเครื่อง SRผลิตจากอลูมิเนียมเกรดพิเศษ ด้วย":
+    - /url: /products/g136
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "พักเท้าหลังแต่งอลูมิเนียมขันล๊อคหูโช๊คหลัง SR รุ่นใหม่ล่าสุดงาน CNC":
+    - /url: /products/g137
+    - img "พักเท้าหลังแต่งอลูมิเนียมขันล๊อคหูโช๊คหลัง SR รุ่นใหม่ล่าสุดงาน CNC"
+  - text: G.137
+  - link "พักเท้าหลังแต่งอลูมิเนียมขันล๊อคหูโช๊คหลัง SR รุ่นใหม่ล่าสุดงาน CNC":
+    - /url: /products/g137
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ปะเก็นฝาสูบ YAMAHA SR":
+    - /url: /products/g138
+    - img "ปะเก็นฝาสูบ YAMAHA SR"
+  - text: G.138
+  - link "ปะเก็นฝาสูบ YAMAHA SR":
+    - /url: /products/g138
+  - text: sr400 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT มีสองแบบให้เลือก ชุดล่ะ":
+    - /url: /products/g139
+    - img "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT มีสองแบบให้เลือก ชุดล่ะ"
+  - text: G.139
+  - link "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT มีสองแบบให้เลือก ชุดล่ะ":
+    - /url: /products/g139
+  - text: sr400 ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดล๊อคแผงออยล์หน้า คุณสมบัติช่วยไม่ให้โครงเป็นรอยและยึดแน่นกว่าของเดิ":
+    - /url: /products/g140
+    - img "ชุดล๊อคแผงออยล์หน้า คุณสมบัติช่วยไม่ให้โครงเป็นรอยและยึดแน่นกว่าของเดิ"
+  - text: G.140
+  - link "ชุดล๊อคแผงออยล์หน้า คุณสมบัติช่วยไม่ให้โครงเป็นรอยและยึดแน่นกว่าของเดิ":
+    - /url: /products/g140
+  - text: sr400 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "มือลิงดึงดรั๊มเบรคหลัง SR แบบสั้นขนาด 80mm. เหมาะสำหรับใส่เข้ากับชุดเก":
+    - /url: /products/g141
+    - img "มือลิงดึงดรั๊มเบรคหลัง SR แบบสั้นขนาด 80mm. เหมาะสำหรับใส่เข้ากับชุดเก"
+  - text: G.141
+  - link "มือลิงดึงดรั๊มเบรคหลัง SR แบบสั้นขนาด 80mm. เหมาะสำหรับใส่เข้ากับชุดเก":
+    - /url: /products/g141
+  - text: sr400 ฿900
+  - button "เลือกสี":
+    - img
+  - link "สเปย์เซอร์รองจานเบรคใส่ดุมปีเก่า SR 1978 หนา 10 mm.":
+    - /url: /products/g144
+    - img "สเปย์เซอร์รองจานเบรคใส่ดุมปีเก่า SR 1978 หนา 10 mm."
+  - text: G.144
+  - link "สเปย์เซอร์รองจานเบรคใส่ดุมปีเก่า SR 1978 หนา 10 mm.":
+    - /url: /products/g144
+  - text: sr400 ฿650
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR งาน CNC Billet":
+    - /url: /products/g145
+    - img "น๊อตทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR งาน CNC Billet"
+  - text: G.145
+  - link "น๊อตทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR งาน CNC Billet":
+    - /url: /products/g145
+  - text: sr400 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดไฟเลี้ยวแต่ง":
+    - /url: /products/g146
+    - img "ขายึดไฟเลี้ยวแต่ง"
+  - text: G.146
+  - link "ขายึดไฟเลี้ยวแต่ง":
+    - /url: /products/g146
+  - text: sr400 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บู๊ทรองพักเท้าหน้า":
+    - /url: /products/g147
+    - img "บู๊ทรองพักเท้าหน้า"
+  - text: G.147
+  - link "บู๊ทรองพักเท้าหน้า":
+    - /url: /products/g147
+  - text: sr400 ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบน็อตขัน":
+    - /url: /products/g148
+    - img "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบน็อตขัน"
+  - text: G.148
+  - link "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบน็อตขัน":
+    - /url: /products/g148
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น็อตขันหัวโช๊ค SR แบบหลุม งาน CNC ใช้ได้กับปี 1978 และ 2000-2017":
+    - /url: /products/g149
+    - img "น็อตขันหัวโช๊ค SR แบบหลุม งาน CNC ใช้ได้กับปี 1978 และ 2000-2017"
+  - text: G.149
+  - link "น็อตขันหัวโช๊ค SR แบบหลุม งาน CNC ใช้ได้กับปี 1978 และ 2000-2017":
+    - /url: /products/g149
+  - text: sr400 ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น็อตขันหัวโช๊ค SR แบบเรียบ งาน CNC ใช้ได้กับปี 1978 และ 2000-2017":
+    - /url: /products/g1491
+    - img "น็อตขันหัวโช๊ค SR แบบเรียบ งาน CNC ใช้ได้กับปี 1978 และ 2000-2017"
+  - text: G.149.1
+  - link "น็อตขันหัวโช๊ค SR แบบเรียบ งาน CNC ใช้ได้กับปี 1978 และ 2000-2017":
+    - /url: /products/g1491
+  - text: sr400 ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตขันโช๊คหลัง งาน CNC Billet":
+    - /url: /products/g150
+    - img "น๊อตขันโช๊คหลัง งาน CNC Billet"
+  - text: G.150
+  - link "น๊อตขันโช๊คหลัง งาน CNC Billet":
+    - /url: /products/g150
+  - text: sr400 ฿350
+  - button "เลือกสี":
+    - img
+  - link "ขายึดกันสะบัดแต่ง SR สำหรับติดเข้ากับแกนโช๊คขนาด 35 mm.":
+    - /url: /products/g151
+    - img "ขายึดกันสะบัดแต่ง SR สำหรับติดเข้ากับแกนโช๊คขนาด 35 mm."
+  - text: G.151
+  - link "ขายึดกันสะบัดแต่ง SR สำหรับติดเข้ากับแกนโช๊คขนาด 35 mm.":
+    - /url: /products/g151
+  - text: sr400 ฿600
+  - button "เลือกสี":
+    - img
+  - link "ขายึดท่อสแตนเลส":
+    - /url: /products/g152
+    - img "ขายึดท่อสแตนเลส"
+  - text: G.152
+  - link "ขายึดท่อสแตนเลส":
+    - /url: /products/g152
+  - text: sr400 ฿900
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดกันสะบัด SR สำหรับยึดติดกับโครงรถ":
+    - /url: /products/g153
+    - img "ขายึดกันสะบัด SR สำหรับยึดติดกับโครงรถ"
+  - text: G.153
+  - link "ขายึดกันสะบัด SR สำหรับยึดติดกับโครงรถ":
+    - /url: /products/g153
+  - text: sr400 ฿900
+  - button "เลือกสี":
+    - img
+  - link "อแดปเตอร์ฝาวาร์วไอเสียแบบครีบ SR":
+    - /url: /products/g154
+    - img "อแดปเตอร์ฝาวาร์วไอเสียแบบครีบ SR"
+  - text: G.154
+  - link "อแดปเตอร์ฝาวาร์วไอเสียแบบครีบ SR":
+    - /url: /products/g154
+  - text: sr400 ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตออยล์หนวดกู้งล่าง M8 ใช้แทนน๊อตเหล็กเดิมได้เลยช่วยระบายความร้อนได้":
+    - /url: /products/g155
+    - img "น๊อตออยล์หนวดกู้งล่าง M8 ใช้แทนน๊อตเหล็กเดิมได้เลยช่วยระบายความร้อนได้"
+  - text: G.155
+  - link "น๊อตออยล์หนวดกู้งล่าง M8 ใช้แทนน๊อตเหล็กเดิมได้เลยช่วยระบายความร้อนได้":
+    - /url: /products/g155
+  - text: sr400 ฿350
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตแกนล้อหลัง SR":
+    - /url: /products/g156
+    - img "น๊อตแกนล้อหลัง SR"
+  - text: G.156
+  - link "น๊อตแกนล้อหลัง SR":
+    - /url: /products/g156
+  - text: sr400 ฿350
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบดุมดิสเบรคปีเก่าใส่แทนพลาสติกเดิมได้เลย":
+    - /url: /products/g157
+    - img "ฝาครอบดุมดิสเบรคปีเก่าใส่แทนพลาสติกเดิมได้เลย"
+  - text: G.157
+  - link "ฝาครอบดุมดิสเบรคปีเก่าใส่แทนพลาสติกเดิมได้เลย":
+    - /url: /products/g157
+  - text: sr400 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว มีขนาด":
+    - /url: /products/g158
+    - img "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว มีขนาด"
+  - text: G.158
+  - link "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว มีขนาด":
+    - /url: /products/g158
+  - text: sr400 ฿1,400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดปั๊มเบรคหลัง BREMBO ใส่ SR,SRX,XJR ใส่จาน 245-250 มม.(มีสี ดำ/เงิ":
+    - /url: /products/g159
+    - img "ขายึดปั๊มเบรคหลัง BREMBO ใส่ SR,SRX,XJR ใส่จาน 245-250 มม.(มีสี ดำ/เงิ"
+  - text: G.159
+  - link "ขายึดปั๊มเบรคหลัง BREMBO ใส่ SR,SRX,XJR ใส่จาน 245-250 มม.(มีสี ดำ/เงิ":
+    - /url: /products/g159
+  - text: sr400 ฿1,400
+  - button "เลือกสี":
+    - img
+  - link "แหวนรองสปริงวาวล์ไอดีและไอเสีย SR":
+    - /url: /products/g160
+    - img "แหวนรองสปริงวาวล์ไอดีและไอเสีย SR"
+  - text: G.160
+  - link "แหวนรองสปริงวาวล์ไอดีและไอเสีย SR":
+    - /url: /products/g160
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยาวกว่า1นิ้ว=ขนาด 270 mm. ยาวเท่าเดิมและใช้สปริงแบบยาว=ขนาด 245 mm. ขา":
+    - /url: /products/g161
+    - img "ยาวกว่า1นิ้ว=ขนาด 270 mm. ยาวเท่าเดิมและใช้สปริงแบบยาว=ขนาด 245 mm. ขา"
+  - text: G.161
+  - link "ยาวกว่า1นิ้ว=ขนาด 270 mm. ยาวเท่าเดิมและใช้สปริงแบบยาว=ขนาด 245 mm. ขา":
+    - /url: /products/g161
+  - text: sr400 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แผ่นรองจานเบรค SR ใส่จาน SR 2001-2026 แปลงใส่ดุมล้อปีเก่า 1978 และใส่ล":
+    - /url: /products/g163
+    - img "แผ่นรองจานเบรค SR ใส่จาน SR 2001-2026 แปลงใส่ดุมล้อปีเก่า 1978 และใส่ล"
+  - text: G.163
+  - link "แผ่นรองจานเบรค SR ใส่จาน SR 2001-2026 แปลงใส่ดุมล้อปีเก่า 1978 และใส่ล":
+    - /url: /products/g163
+  - text: sr400 ฿1,500
+  - button "เลือกสี":
+    - img
+  - link "แผงคอบนแต่งพร้อมตุ๊กตา ใส่ SR,XS650":
+    - /url: /products/g166
+    - img "แผงคอบนแต่งพร้อมตุ๊กตา ใส่ SR,XS650"
+  - text: G.166
+  - link "แผงคอบนแต่งพร้อมตุ๊กตา ใส่ SR,XS650":
+    - /url: /products/g166
+  - text: sr400 ฿3,500
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 แบบร่อง มีสองสีให้เลือก":
+    - /url: /products/g169
+    - img "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 แบบร่อง มีสองสีให้เลือก"
+  - text: G.169
+  - link "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 แบบร่อง มีสองสีให้เลือก":
+    - /url: /products/g169
+  - text: sr400 ฿500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝานูน มีสองสีให้เลือก":
+    - /url: /products/g170
+    - img "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝานูน มีสองสีให้เลือก"
+  - text: G.170
+  - link "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝานูน มีสองสีให้เลือก":
+    - /url: /products/g170
+  - text: sr400 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบร่อง มีสองสีให้เลือก":
+    - /url: /products/g171
+    - img "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบร่อง มีสองสีให้เลือก"
+  - text: G.171
+  - link "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบร่อง มีสองสีให้เลือก":
+    - /url: /products/g171
+  - text: sr400 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝาเรียบ มีสองสีให้เลือก":
+    - /url: /products/g172
+    - img "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝาเรียบ มีสองสีให้เลือก"
+  - text: G.172
+  - link "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝาเรียบ มีสองสีให้เลือก":
+    - /url: /products/g172
+  - text: sr400 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดปั๊มเบรคหลัง ใส่ปั๊ม BREMBO ใส่จานขนาด 220 มม.รูแกนล้อ 17 มม.(มีส":
+    - /url: /products/g174
+    - img "ขายึดปั๊มเบรคหลัง ใส่ปั๊ม BREMBO ใส่จานขนาด 220 มม.รูแกนล้อ 17 มม.(มีส"
+  - text: G.174
+  - link "ขายึดปั๊มเบรคหลัง ใส่ปั๊ม BREMBO ใส่จานขนาด 220 มม.รูแกนล้อ 17 มม.(มีส":
+    - /url: /products/g174
+  - text: sr400 ฿1,400
+  - button "เลือกสี":
+    - img
+  - link "ขายึดปั๊มเบรคหลัง SR ใส่ปั๊ม BREMBO ใส่ล้อ TDR250 ใส่จานขนาด 210 มม.รู":
+    - /url: /products/g175
+    - img "ขายึดปั๊มเบรคหลัง SR ใส่ปั๊ม BREMBO ใส่ล้อ TDR250 ใส่จานขนาด 210 มม.รู"
+  - text: G.175
+  - link "ขายึดปั๊มเบรคหลัง SR ใส่ปั๊ม BREMBO ใส่ล้อ TDR250 ใส่จานขนาด 210 มม.รู":
+    - /url: /products/g175
+  - text: sr400 ฿1,400
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบปิดปั๊มเบรคบน SR 2001-2016 แบบโลโก้ SR มีสองสีให้เลือก":
+    - /url: /products/g176
+    - img "ฝาครอบปิดปั๊มเบรคบน SR 2001-2016 แบบโลโก้ SR มีสองสีให้เลือก"
+  - text: G.176
+  - link "ฝาครอบปิดปั๊มเบรคบน SR 2001-2016 แบบโลโก้ SR มีสองสีให้เลือก":
+    - /url: /products/g176
+  - text: sr400 ฿500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า":
+    - /url: /products/g177
+    - img "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า"
+  - text: G.177
+  - link "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า":
+    - /url: /products/g177
+  - text: sr400 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโคลนหน้าแต่ง รุ่นเหล็กคาดสั้น ลวดคาดผลิตจากเหล็กและแผ่นบังโคลนผลิตจ":
+    - /url: /products/g178
+    - img "บังโคลนหน้าแต่ง รุ่นเหล็กคาดสั้น ลวดคาดผลิตจากเหล็กและแผ่นบังโคลนผลิตจ"
+  - text: G.178
+  - link "บังโคลนหน้าแต่ง รุ่นเหล็กคาดสั้น ลวดคาดผลิตจากเหล็กและแผ่นบังโคลนผลิตจ":
+    - /url: /products/g178
+  - text: sr400 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "จุกอุดแทนสายวัดรอบเดิม yamaha sr":
+    - /url: /products/g179
+    - img "จุกอุดแทนสายวัดรอบเดิม yamaha sr"
+  - text: G.179
+  - link "จุกอุดแทนสายวัดรอบเดิม yamaha sr":
+    - /url: /products/g179
+  - text: sr400 ฿300
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตดิสเบรค มีเกลียว M10 Pit 1.0 สำหรับปั๊มเบรค Brembo และ เกลียว M10":
+    - /url: /products/g182
+    - img "น๊อตดิสเบรค มีเกลียว M10 Pit 1.0 สำหรับปั๊มเบรค Brembo และ เกลียว M10"
+  - text: G.182
+  - link "น๊อตดิสเบรค มีเกลียว M10 Pit 1.0 สำหรับปั๊มเบรค Brembo และ เกลียว M10":
+    - /url: /products/g182
+  - text: sr400 ฿200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สายเส้นเดียว SR พร้อมแหวนอลู":
+    - /url: /products/g183
+    - img "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สายเส้นเดียว SR พร้อมแหวนอลู"
+  - text: G.183
+  - link "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สายเส้นเดียว SR พร้อมแหวนอลู":
+    - /url: /products/g183
+  - text: sr400 ฿550
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ถาดเก็บสายสายไฟใต้เบาะ Stainless แบบรูพับ ใส่ Yamaha SR ชิ้นล่ะ":
+    - /url: /products/g184
+    - img "ถาดเก็บสายสายไฟใต้เบาะ Stainless แบบรูพับ ใส่ Yamaha SR ชิ้นล่ะ"
+  - text: G.184
+  - link "ถาดเก็บสายสายไฟใต้เบาะ Stainless แบบรูพับ ใส่ Yamaha SR ชิ้นล่ะ":
+    - /url: /products/g184
+  - text: sr400 ฿850
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดปั๊มเบรค Brembo หูชิดใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm.":
+    - /url: /products/g185
+    - img "ขายึดปั๊มเบรค Brembo หูชิดใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm."
+  - text: G.185
+  - link "ขายึดปั๊มเบรค Brembo หูชิดใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm.":
+    - /url: /products/g185
+  - text: sr400 ฿1,600
+  - button "เลือกสี":
+    - img
+  - link "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า SR ใส่เข้ากับดุมดิสเบรกและโช๊ค Oh":
+    - /url: /products/g186
+    - img "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า SR ใส่เข้ากับดุมดิสเบรกและโช๊ค Oh"
+  - text: G.186
+  - link "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า SR ใส่เข้ากับดุมดิสเบรกและโช๊ค Oh":
+    - /url: /products/g186
+  - text: sr400 ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320":
+    - /url: /products/g187
+    - img "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320"
+  - text: G.187
+  - link "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320":
+    - /url: /products/g187
+  - text: sr400 ฿1,600
+  - button "เลือกสี":
+    - img
+  - link "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า":
+    - /url: /products/g188
+    - img "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า"
+  - text: G.188
+  - link "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า":
+    - /url: /products/g188
+  - text: sr400 ฿1,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดบังโคลนหน้าพร้อม หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ใส่":
+    - /url: /products/g189
+    - img "ขายึดบังโคลนหน้าพร้อม หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ใส่"
+  - text: G.189
+  - link "ขายึดบังโคลนหน้าพร้อม หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ใส่":
+    - /url: /products/g189
+  - text: sr400 ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตตัวเมียล๊อคโช๊ตหลัง Ohlins เกลียว M14x1.0":
+    - /url: /products/g191
+    - img "น๊อตตัวเมียล๊อคโช๊ตหลัง Ohlins เกลียว M14x1.0"
+  - text: G.191
+  - link "น๊อตตัวเมียล๊อคโช๊ตหลัง Ohlins เกลียว M14x1.0":
+    - /url: /products/g191
+  - text: sr400 ฿150
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตตัวผู้สำหรับต่อเข้าปั๊ม Brembo มีเกลียว M10x1.0 และ M10x1.25 ,AN3":
+    - /url: /products/g192
+    - img "น๊อตตัวผู้สำหรับต่อเข้าปั๊ม Brembo มีเกลียว M10x1.0 และ M10x1.25 ,AN3"
+  - text: G.192
+  - link "น๊อตตัวผู้สำหรับต่อเข้าปั๊ม Brembo มีเกลียว M10x1.0 และ M10x1.25 ,AN3":
+    - /url: /products/g192
+  - text: sr400 ฿250
+  - button "เลือกสี":
+    - img
+  - link "ห่วงสายเบรคแบบสั้น รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45แ":
+    - /url: /products/g193
+    - img "ห่วงสายเบรคแบบสั้น รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45แ"
+  - text: G.193
+  - link "ห่วงสายเบรคแบบสั้น รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45แ":
+    - /url: /products/g193
+  - text: sr400 ฿250
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หัว ห่วงสาย Oil รู 14 mm.AN6 สำหรับต่อเข้ากับหัวสาย Oil เบอร์ 6 แบบตรง":
+    - /url: /products/g194
+    - img "หัว ห่วงสาย Oil รู 14 mm.AN6 สำหรับต่อเข้ากับหัวสาย Oil เบอร์ 6 แบบตรง"
+  - text: G.194
+  - link "หัว ห่วงสาย Oil รู 14 mm.AN6 สำหรับต่อเข้ากับหัวสาย Oil เบอร์ 6 แบบตรง":
+    - /url: /products/g194
+  - text: sr400 ฿350
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บู๊ทล้อหน้า SR รุ่นดิสเบรค ปี 2001-2018":
+    - /url: /products/g197
+    - img "บู๊ทล้อหน้า SR รุ่นดิสเบรค ปี 2001-2018"
+  - text: G.197
+  - link "บู๊ทล้อหน้า SR รุ่นดิสเบรค ปี 2001-2018":
+    - /url: /products/g197
+  - text: sr400 ฿300
+  - button "เลือกสี":
+    - img
+  - link "สเตอร์หน้า CNC Billet SR400":
+    - /url: /products/g199
+    - img "สเตอร์หน้า CNC Billet SR400"
+  - text: G.199
+  - link "สเตอร์หน้า CNC Billet SR400":
+    - /url: /products/g199
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "สเตอร์หน้า CNC Billet SR400":
+    - /url: /products/g200
+    - img "สเตอร์หน้า CNC Billet SR400"
+  - text: G.200
+  - link "สเตอร์หน้า CNC Billet SR400":
+    - /url: /products/g200
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บู๊ทรองเบาะ สำหรับใส่ SR400 FI ที่ต้องการเอาเบาะแต่ง SR รุ่น Carbureto":
+    - /url: /products/g201
+    - img "บู๊ทรองเบาะ สำหรับใส่ SR400 FI ที่ต้องการเอาเบาะแต่ง SR รุ่น Carbureto"
+  - text: G.201
+  - link "บู๊ทรองเบาะ สำหรับใส่ SR400 FI ที่ต้องการเอาเบาะแต่ง SR รุ่น Carbureto":
+    - /url: /products/g201
+  - text: sr400 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตแกนล้อหน้า SR":
+    - /url: /products/g202
+    - img "น๊อตแกนล้อหน้า SR"
+  - text: G.202
+  - link "น๊อตแกนล้อหน้า SR":
+    - /url: /products/g202
+  - text: sr400 ฿350
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตดิสเบรคทวินใส่สายเบรคได้2เส้น":
+    - /url: /products/g203
+    - img "น๊อตดิสเบรคทวินใส่สายเบรคได้2เส้น"
+  - text: G.203
+  - link "น๊อตดิสเบรคทวินใส่สายเบรคได้2เส้น":
+    - /url: /products/g203
+  - text: sr400 ฿250
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดแผงคอบนล่าง SR ใส่กับโช๊คแต่งแกนโช๊ค 40 mm.":
+    - /url: /products/g205
+    - img "ชุดแผงคอบนล่าง SR ใส่กับโช๊คแต่งแกนโช๊ค 40 mm."
+  - text: G.205
+  - link "ชุดแผงคอบนล่าง SR ใส่กับโช๊คแต่งแกนโช๊ค 40 mm.":
+    - /url: /products/g205
+  - text: sr400 ฿12,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40mm. & FCR35-41mm. แบบ2ชั้น":
+    - /url: /products/g206
+    - img "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40mm. & FCR35-41mm. แบบ2ชั้น"
+  - text: G.206
+  - link "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40mm. & FCR35-41mm. แบบ2ชั้น":
+    - /url: /products/g206
+  - text: sr400 ฿2,500
+  - button "เลือกสี":
+    - img
+  - link "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม.":
+    - /url: /products/g207
+    - img "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม."
+  - text: G.207
+  - link "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม.":
+    - /url: /products/g207
+  - text: sr400 ฿1,200
+  - button "เลือกสี":
+    - img
+  - link "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 320 มม.":
+    - /url: /products/g208
+    - img "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 320 มม."
+  - text: G.208
+  - link "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 320 มม.":
+    - /url: /products/g208
+  - text: sr400 ฿1,200
+  - button "เลือกสี":
+    - img
+  - link "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค":
+    - /url: /products/g210
+    - img "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค"
+  - text: G.210
+  - link "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค":
+    - /url: /products/g210
+  - text: sr400 ฿4,800
+  - button "เลือกสี":
+    - img
+  - link "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค":
+    - /url: /products/g2101
+    - img "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค"
+  - text: G.210.1
+  - link "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค":
+    - /url: /products/g2101
+  - text: sr400 ฿5,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดิสเบรคใส่ปั๊มกะทุ้งเบรค B":
+    - /url: /products/g211
+    - img "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดิสเบรคใส่ปั๊มกะทุ้งเบรค B"
+  - text: G.211
+  - link "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดิสเบรคใส่ปั๊มกะทุ้งเบรค B":
+    - /url: /products/g211
+  - text: sr400 ฿5,500
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX แบบใบกันชา":
+    - /url: /products/g212
+    - img "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX แบบใบกันชา"
+  - text: G.212
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX แบบใบกันชา":
+    - /url: /products/g212
+  - text: sr400 ฿700
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบหลุม":
+    - /url: /products/g213
+    - img "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบหลุม"
+  - text: G.213
+  - link "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบหลุม":
+    - /url: /products/g213
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบเรียบ":
+    - /url: /products/g214
+    - img "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบเรียบ"
+  - text: G.214
+  - link "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบเรียบ":
+    - /url: /products/g214
+  - text: sr400 ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบครีบ":
+    - /url: /products/g215
+    - img "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบครีบ"
+  - text: G.215
+  - link "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบครีบ":
+    - /url: /products/g215
+  - text: sr400 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "จานเบรคแต่ง SR 2001-2020 แบบไข่":
+    - /url: /products/g216
+    - img "จานเบรคแต่ง SR 2001-2020 แบบไข่"
+  - text: G.216
+  - link "จานเบรคแต่ง SR 2001-2020 แบบไข่":
+    - /url: /products/g216
+  - text: sr400 ฿5,500
+  - button "เลือกสี":
+    - img
+  - link "จานเบรคแต่ง SR 2001-2020 แบบดาว":
+    - /url: /products/g2161
+    - img "จานเบรคแต่ง SR 2001-2020 แบบดาว"
+  - text: G.216.1
+  - link "จานเบรคแต่ง SR 2001-2020 แบบดาว":
+    - /url: /products/g2161
+  - text: sr400 ฿5,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "มือลิงดึงดรั๊มเบรคหลัง SR แบบยาว105 mm.เหมาะสำหรับใส่เข้ากับชุดเกียร์แ":
+    - /url: /products/g217
+    - img "มือลิงดึงดรั๊มเบรคหลัง SR แบบยาว105 mm.เหมาะสำหรับใส่เข้ากับชุดเกียร์แ"
+  - text: G.217
+  - link "มือลิงดึงดรั๊มเบรคหลัง SR แบบยาว105 mm.เหมาะสำหรับใส่เข้ากับชุดเกียร์แ":
+    - /url: /products/g217
+  - text: sr400 ฿1,000
+  - button "เลือกสี":
+    - img
+  - link "ยางหุ้มโช๊คแต่ง3ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว คู่ละ":
+    - /url: /products/g218
+    - img "ยางหุ้มโช๊คแต่ง3ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว คู่ละ"
+  - text: G.218
+  - link "ยางหุ้มโช๊คแต่ง3ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว คู่ละ":
+    - /url: /products/g218
+  - text: sr400 ฿550
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500":
+    - /url: /products/g220
+    - img "น็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500"
+  - text: G.220
+  - link "น็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500":
+    - /url: /products/g220
+  - text: sr400 ฿500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดน็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500":
+    - /url: /products/g221
+    - img "ชุดน็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500"
+  - text: G.221
+  - link "ชุดน็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500":
+    - /url: /products/g221
+  - text: sr400 ฿900
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบทรงเดิมนูนทึบ":
+    - /url: /products/g222
+    - img "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบทรงเดิมนูนทึบ"
+  - text: G.222
+  - link "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบทรงเดิมนูนทึบ":
+    - /url: /products/g222
+  - text: sr400 ฿2,500
+  - button "เลือกสี":
+    - img
+  - link "ชุดย้ายพักเท้าหลังหลบท่อไอเสียแบบยก สำหรับใส่ SR FI":
+    - /url: /products/g223
+    - img "ชุดย้ายพักเท้าหลังหลบท่อไอเสียแบบยก สำหรับใส่ SR FI"
+  - text: G.223
+  - link "ชุดย้ายพักเท้าหลังหลบท่อไอเสียแบบยก สำหรับใส่ SR FI":
+    - /url: /products/g223
+  - text: sr400 ฿2,400
+  - button "เลือกสี":
+    - img
+  - link "น็อตยึดปั๊มหน้าและขาปั๊ม brembo Bolt. M10x1.5 ยาว 25 mm. & M10x1.25 ยา":
+    - /url: /products/g224
+    - img "น็อตยึดปั๊มหน้าและขาปั๊ม brembo Bolt. M10x1.5 ยาว 25 mm. & M10x1.25 ยา"
+  - text: G.224
+  - link "น็อตยึดปั๊มหน้าและขาปั๊ม brembo Bolt. M10x1.5 ยาว 25 mm. & M10x1.25 ยา":
+    - /url: /products/g224
+  - text: sr400 ฿100
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊ค Ohlins":
+    - /url: /products/g225
+    - img "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊ค Ohlins"
+  - text: G.225
+  - link "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊ค Ohlins":
+    - /url: /products/g225
+  - text: sr400 ฿5,000
+  - button "เลือกสี":
+    - img
+  - link "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊คเดิมขนา":
+    - /url: /products/g226
+    - img "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊คเดิมขนา"
+  - text: G.226
+  - link "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊คเดิมขนา":
+    - /url: /products/g226
+  - text: sr400 ฿4,500
+  - button "เลือกสี":
+    - img
+  - link "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT":
+    - /url: /products/g227
+    - img "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT"
+  - text: G.227
+  - link "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT":
+    - /url: /products/g227
+  - text: sr400 ฿1,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตสายออยล์แต่งขนาด M12 Pit 1.50":
+    - /url: /products/g228
+    - img "น๊อตสายออยล์แต่งขนาด M12 Pit 1.50"
+  - text: G.228
+  - link "น๊อตสายออยล์แต่งขนาด M12 Pit 1.50":
+    - /url: /products/g228
+  - text: sr400 ฿350
+  - button "เลือกสี":
+    - img
+  - link "ชุดกันล้มสำหรับใส่ yamaha sr":
+    - /url: /products/g229
+    - img "ชุดกันล้มสำหรับใส่ yamaha sr"
+  - text: G.229
+  - link "ชุดกันล้มสำหรับใส่ yamaha sr":
+    - /url: /products/g229
+  - text: sr400 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตสายออยล์แต่งขนาด M14 Pit 1.50":
+    - /url: /products/g230
+    - img "น๊อตสายออยล์แต่งขนาด M14 Pit 1.50"
+  - text: G.230
+  - link "น๊อตสายออยล์แต่งขนาด M14 Pit 1.50":
+    - /url: /products/g230
+  - text: sr400 ฿350
+  - button "เลือกสี":
+    - img
+  - link "ห่วงสายเบรคแบบยาว รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45แล":
+    - /url: /products/g231
+    - img "ห่วงสายเบรคแบบยาว รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45แล"
+  - text: G.231
+  - link "ห่วงสายเบรคแบบยาว รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45แล":
+    - /url: /products/g231
+  - text: sr400 ฿250
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "จานเบรคแต่ง SR 2001-2022 แนะนำ":
+    - /url: /products/g232
+    - img "จานเบรคแต่ง SR 2001-2022"
+    - text: แนะนำ
+  - text: G.232
+  - link "จานเบรคแต่ง SR 2001-2022":
+    - /url: /products/g232
+  - text: sr400 ฿6,000
+  - button "เลือกสี":
+    - img
+  - link "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2020 ใส่จาน 310 mm.":
+    - /url: /products/g233
+    - img "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2020 ใส่จาน 310 mm."
+  - text: G.233
+  - link "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2020 ใส่จาน 310 mm.":
+    - /url: /products/g233
+  - text: sr400 ฿1,200
+  - button "เลือกสี":
+    - img
+  - link "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สาย2เส้น SR พร้อมแหวนอลูมินั":
+    - /url: /products/g234
+    - img "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สาย2เส้น SR พร้อมแหวนอลูมินั"
+  - text: G.234
+  - link "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สาย2เส้น SR พร้อมแหวนอลูมินั":
+    - /url: /products/g234
+  - text: sr400 ฿650
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40 mm. Long 55 mm.":
+    - /url: /products/g235
+    - img "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40 mm. Long 55 mm."
+  - text: G.235
+  - link "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40 mm. Long 55 mm.":
+    - /url: /products/g235
+  - text: sr400 ฿1,000
+  - button "เลือกสี":
+    - img
+  - link "อุปกรณ์ตกแต่ง MONKEY50 ใหม่ๆอยากแนะนำ ปากแตรแต่งใส่คาร์บ FCR 28-33mm.":
+    - /url: /products/g236
+    - img "อุปกรณ์ตกแต่ง MONKEY50 ใหม่ๆอยากแนะนำ ปากแตรแต่งใส่คาร์บ FCR 28-33mm."
+  - text: G.236
+  - link "อุปกรณ์ตกแต่ง MONKEY50 ใหม่ๆอยากแนะนำ ปากแตรแต่งใส่คาร์บ FCR 28-33mm.":
+    - /url: /products/g236
+  - text: monkey · sr400 ฿2,000
+  - button "เลือกสี":
+    - img
+  - link "-1 จานเบรคหลังแต่งใส่ดุม TDR ลายฉลุ":
+    - /url: /products/g241
+    - img "-1 จานเบรคหลังแต่งใส่ดุม TDR ลายฉลุ"
+  - text: G.241
+  - link "-1 จานเบรคหลังแต่งใส่ดุม TDR ลายฉลุ":
+    - /url: /products/g241
+  - text: sr400 ฿3,500
+  - button "เลือกสี":
+    - img
+  - link "ชุดเสื้อสูบอลูมิเมียม SR400/500 CNC Billet แบบทรงเดิม แนะนำ":
+    - /url: /products/g248
+    - img "ชุดเสื้อสูบอลูมิเมียม SR400/500 CNC Billet แบบทรงเดิม"
+    - text: แนะนำ
+  - text: G.248
+  - link "ชุดเสื้อสูบอลูมิเมียม SR400/500 CNC Billet แบบทรงเดิม":
+    - /url: /products/g248
+  - text: sr400 ฿18,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "สวิงอาร์มอลูมิเนียมแต่ง Yamaha SR Type 4":
+    - /url: /products/g249
+    - img "สวิงอาร์มอลูมิเนียมแต่ง Yamaha SR Type 4"
+  - text: G.249
+  - link "สวิงอาร์มอลูมิเนียมแต่ง Yamaha SR Type 4":
+    - /url: /products/g249
+  - text: sr400 ฿6,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝากดคลัชแต่ง แบบลายเหลี่ยม ใส่SR400/500,XT,TT":
+    - /url: /products/g250
+    - img "ฝากดคลัชแต่ง แบบลายเหลี่ยม ใส่SR400/500,XT,TT"
+  - text: G.250
+  - link "ฝากดคลัชแต่ง แบบลายเหลี่ยม ใส่SR400/500,XT,TT":
+    - /url: /products/g250
+  - text: sr400 ฿3,800
+  - button "เลือกสี":
+    - img
+  - link "ฝากดคลัชแต่ง แบบลายโค้งมน ใส่SR400/500,XT,TT":
+    - /url: /products/g251
+    - img "ฝากดคลัชแต่ง แบบลายโค้งมน ใส่SR400/500,XT,TT"
+  - text: G.251
+  - link "ฝากดคลัชแต่ง แบบลายโค้งมน ใส่SR400/500,XT,TT":
+    - /url: /products/g251
+  - text: sr400 ฿3,500
+  - button "เลือกสี":
+    - img
+  - link "ฝาคลัชแต่ง แบบเลนส์ใส ใส่SR400/500 แนะนำ":
+    - /url: /products/g252
+    - img "ฝาคลัชแต่ง แบบเลนส์ใส ใส่SR400/500"
+    - text: แนะนำ
+  - text: G.252
+  - link "ฝาคลัชแต่ง แบบเลนส์ใส ใส่SR400/500":
+    - /url: /products/g252
+  - text: sr400 ฿19,500
+  - button "เลือกสี":
+    - img
+  - link "ฝาคลัชแต่ง แบบทึบ ใส่SR400/500 แนะนำ":
+    - /url: /products/g253
+    - img "ฝาคลัชแต่ง แบบทึบ ใส่SR400/500"
+    - text: แนะนำ
+  - text: G.253
+  - link "ฝาคลัชแต่ง แบบทึบ ใส่SR400/500":
+    - /url: /products/g253
+  - text: sr400 ฿19,500
+  - button "เลือกสี":
+    - img
+  - link "ฝากรองแต่ง แบบเลนส์ใส ใส่SR400/500,XT,TT":
+    - /url: /products/g254
+    - img "ฝากรองแต่ง แบบเลนส์ใส ใส่SR400/500,XT,TT"
+  - text: G.254
+  - link "ฝากรองแต่ง แบบเลนส์ใส ใส่SR400/500,XT,TT":
+    - /url: /products/g254
+  - text: sr400 ฿1,900
+  - button "เลือกสี":
+    - img
+  - link "อแดปเตอร์ทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR แบบฟินแท่ง งาน Alloy C":
+    - /url: /products/g255
+    - img "อแดปเตอร์ทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR แบบฟินแท่ง งาน Alloy C"
+  - text: G.255
+  - link "อแดปเตอร์ทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR แบบฟินแท่ง งาน Alloy C":
+    - /url: /products/g255
+  - text: sr400 ฿1,800
+  - button "เลือกสี":
+    - img
+  - link "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สายเส้นเดียว SR พร้อ":
+    - /url: /products/g258
+    - img "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สายเส้นเดียว SR พร้อ"
+  - text: G.258
+  - link "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สายเส้นเดียว SR พร้อ":
+    - /url: /products/g258
+  - text: sr400 ฿650
+  - button "เลือกสี":
+    - img
+  - link "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สาย2เส้น SR พร้อมแหว":
+    - /url: /products/g259
+    - img "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สาย2เส้น SR พร้อมแหว"
+  - text: G.259
+  - link "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สาย2เส้น SR พร้อมแหว":
+    - /url: /products/g259
+  - text: sr400 ฿750
+  - button "เลือกสี":
+    - img
+  - link "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR":
+    - /url: /products/g260
+    - img "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR"
+  - text: G.260
+  - link "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR":
+    - /url: /products/g260
+  - text: sr400 ฿650
+  - button "เลือกสี":
+    - img
+  - link "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR":
+    - /url: /products/g261
+    - img "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR"
+  - text: G.261
+  - link "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR":
+    - /url: /products/g261
+  - text: sr400 ฿950
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ห่วงออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR ใส่กับสายดิสเบรกได้เลย ใส่แทนท่":
+    - /url: /products/g262
+    - img "ห่วงออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR ใส่กับสายดิสเบรกได้เลย ใส่แทนท่"
+  - text: G.262
+  - link "ห่วงออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR ใส่กับสายดิสเบรกได้เลย ใส่แทนท่":
+    - /url: /products/g262
+  - text: sr400 ฿350
+  - button "เลือกสี":
+    - img
+  - link "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 ข้างขวา ใส่กับโช๊ค SR 1":
+    - /url: /products/g265
+    - img "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 ข้างขวา ใส่กับโช๊ค SR 1"
+  - text: G.265
+  - link "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 ข้างขวา ใส่กับโช๊ค SR 1":
+    - /url: /products/g265
+  - text: sr400 · xs650 ฿1,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม":
+    - /url: /products/g267
+    - img "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม"
+  - text: G.267
+  - link "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม":
+    - /url: /products/g267
+  - text: sr400 · xs650 ฿1,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม":
+    - /url: /products/g268
+    - img "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม"
+  - text: G.268
+  - link "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม":
+    - /url: /products/g268
+  - text: sr400 ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตขันแผงคอบนแต่ง ROYAL ENFIELD":
+    - /url: /products/re1
+    - img "น๊อตขันแผงคอบนแต่ง ROYAL ENFIELD"
+  - text: RE.1
+  - link "น๊อตขันแผงคอบนแต่ง ROYAL ENFIELD":
+    - /url: /products/re1
+  - text: interceptor ฿0
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น็อตขันหัวโช๊ค ROYAL ENFIELD":
+    - /url: /products/re3
+    - img "น็อตขันหัวโช๊ค ROYAL ENFIELD"
+  - text: RE.3
+  - link "น็อตขันหัวโช๊ค ROYAL ENFIELD":
+    - /url: /products/re3
+  - text: interceptor ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "สเตอร์หลัง Royal Enfield":
+    - /url: /products/re4
+    - img "สเตอร์หลัง Royal Enfield"
+  - text: RE.4
+  - link "สเตอร์หลัง Royal Enfield":
+    - /url: /products/re4
+  - text: interceptor ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield":
+    - /url: /products/re5
+    - img "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield"
+  - text: RE.5
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield":
+    - /url: /products/re5
+  - text: interceptor ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield":
+    - /url: /products/re6
+    - img "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield"
+  - text: RE.6
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield":
+    - /url: /products/re6
+  - text: interceptor ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield":
+    - /url: /products/re7
+    - img "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield"
+  - text: RE.7
+  - link "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield":
+    - /url: /products/re7
+  - text: interceptor ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield":
+    - /url: /products/re8
+    - img "ฝาครอบเครื่องแต่ง Royal Enfield"
+  - text: RE.8
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield":
+    - /url: /products/re8
+  - text: interceptor ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield":
+    - /url: /products/re9
+    - img "ฝาครอบเครื่องแต่ง Royal Enfield"
+  - text: RE.9
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield":
+    - /url: /products/re9
+  - text: interceptor ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แฮนจับโช๊คอลูมิเนียม":
+    - /url: /products/re10
+    - img "แฮนจับโช๊คอลูมิเนียม"
+  - text: RE.10
+  - link "แฮนจับโช๊คอลูมิเนียม":
+    - /url: /products/re10
+  - text: interceptor ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield":
+    - /url: /products/re11
+    - img "ฝาครอบเครื่องแต่ง Royal Enfield"
+  - text: RE.11
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield":
+    - /url: /products/re11
+  - text: interceptor ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield":
+    - /url: /products/re12
+    - img "ฝาครอบเครื่องแต่ง Royal Enfield"
+  - text: RE.12
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield":
+    - /url: /products/re12
+  - text: interceptor ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "สเตอร์หลัง Royal Enfield แบบรู":
+    - /url: /products/re13
+    - img "สเตอร์หลัง Royal Enfield แบบรู"
+  - text: RE.13
+  - link "สเตอร์หลัง Royal Enfield แบบรู":
+    - /url: /products/re13
+  - text: interceptor ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดอุดเฟรม Royal Enfield แบบโค้ง":
+    - /url: /products/re14
+    - img "ชุดอุดเฟรม Royal Enfield แบบโค้ง"
+  - text: RE.14
+  - link "ชุดอุดเฟรม Royal Enfield แบบโค้ง":
+    - /url: /products/re14
+  - text: interceptor ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดอุดเฟรม Royal Enfield แบบหลุม":
+    - /url: /products/re15
+    - img "ชุดอุดเฟรม Royal Enfield แบบหลุม"
+  - text: RE.15
+  - link "ชุดอุดเฟรม Royal Enfield แบบหลุม":
+    - /url: /products/re15
+  - text: interceptor ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดแผงคอบน Royal Enfield GT แบบคาเฟ่":
+    - /url: /products/re16
+    - img "ชุดแผงคอบน Royal Enfield GT แบบคาเฟ่"
+  - text: RE.16
+  - link "ชุดแผงคอบน Royal Enfield GT แบบคาเฟ่":
+    - /url: /products/re16
+  - text: interceptor ฿4,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดแผงคอบนล่าง Royal Enfield GT แบบคาเฟ่":
+    - /url: /products/re17
+    - img "ชุดแผงคอบนล่าง Royal Enfield GT แบบคาเฟ่"
+  - text: RE.17
+  - link "ชุดแผงคอบนล่าง Royal Enfield GT แบบคาเฟ่":
+    - /url: /products/re17
+  - text: interceptor ฿8,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V รูแกนโช๊ค 41 มม.ราคา คู่ล่ะ":
+    - /url: /products/re22
+    - img "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V รูแกนโช๊ค 41 มม.ราคา คู่ล่ะ"
+  - text: RE.22
+  - link "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V รูแกนโช๊ค 41 มม.ราคา คู่ล่ะ":
+    - /url: /products/re22
+  - text: interceptor ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดปั๊มเบรคหลัง BREMBO แบบห้อยล่าง ใส่ Royal Enfield GT ใส่จานเดิมบู":
+    - /url: /products/re24
+    - img "ขายึดปั๊มเบรคหลัง BREMBO แบบห้อยล่าง ใส่ Royal Enfield GT ใส่จานเดิมบู"
+  - text: RE.24
+  - link "ขายึดปั๊มเบรคหลัง BREMBO แบบห้อยล่าง ใส่ Royal Enfield GT ใส่จานเดิมบู":
+    - /url: /products/re24
+  - text: interceptor ฿1,600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดแผงคอบน Royal Enfield GT แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้ากับแผ":
+    - /url: /products/re26
+    - img "ชุดแผงคอบน Royal Enfield GT แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้ากับแผ"
+  - text: RE.26
+  - link "ชุดแผงคอบน Royal Enfield GT แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้ากับแผ":
+    - /url: /products/re26
+  - text: interceptor ฿4,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย GT":
+    - /url: /products/re29
+    - img "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย GT"
+  - text: RE.29
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย GT":
+    - /url: /products/re29
+  - text: interceptor ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย RE":
+    - /url: /products/re30
+    - img "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย RE"
+  - text: RE.30
+  - link "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย RE":
+    - /url: /products/re30
+  - text: interceptor ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยางหุ้มโช๊คหน้า Royal Enfield ใส่ โช๊คขนาด 41mm. ความยาว 190mm.":
+    - /url: /products/re31
+    - img "ยางหุ้มโช๊คหน้า Royal Enfield ใส่ โช๊คขนาด 41mm. ความยาว 190mm."
+  - text: RE.31
+  - link "ยางหุ้มโช๊คหน้า Royal Enfield ใส่ โช๊คขนาด 41mm. ความยาว 190mm.":
+    - /url: /products/re31
+  - text: interceptor ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Headlight Brackest Stainless Steel 41mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว":
+    - /url: /products/tri1
+    - img "Headlight Brackest Stainless Steel 41mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว"
+  - text: TRI.1
+  - link "Headlight Brackest Stainless Steel 41mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว":
+    - /url: /products/tri1
+  - text: thruxton ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Clip-On Handle Bars CNC Alloy 41mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม":
+    - /url: /products/tri5
+    - img "Clip-On Handle Bars CNC Alloy 41mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม"
+  - text: TRI.5
+  - link "Clip-On Handle Bars CNC Alloy 41mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม":
+    - /url: /products/tri5
+  - text: thruxton ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "CHOKE KNOB Alloy ตัวดึงโช๊ค Triumph งาน CNC":
+    - /url: /products/tri6
+    - img "CHOKE KNOB Alloy ตัวดึงโช๊ค Triumph งาน CNC"
+  - text: TRI.6
+  - link "CHOKE KNOB Alloy ตัวดึงโช๊ค Triumph งาน CNC":
+    - /url: /products/tri6
+  - text: thruxton ฿400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Mirror Hole Caps ตัวอุดกระจก":
+    - /url: /products/tri7
+    - img "Mirror Hole Caps ตัวอุดกระจก"
+  - text: TRI.7
+  - link "Mirror Hole Caps ตัวอุดกระจก":
+    - /url: /products/tri7
+  - text: thruxton ฿600
+  - button "เลือกสี":
+    - img
+  - link "SEAT SCREWS Alloy น็อตเบาะแต่งแบบยาว":
+    - /url: /products/tri8
+    - img "SEAT SCREWS Alloy น็อตเบาะแต่งแบบยาว"
+  - text: TRI.8
+  - link "SEAT SCREWS Alloy น็อตเบาะแต่งแบบยาว":
+    - /url: /products/tri8
+  - text: thruxton ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Top Yoke CNC Alloy แผงคอแต่ง สไตล์ CAFE RACER":
+    - /url: /products/tri9
+    - img "Top Yoke CNC Alloy แผงคอแต่ง สไตล์ CAFE RACER"
+  - text: TRI.9
+  - link "Top Yoke CNC Alloy แผงคอแต่ง สไตล์ CAFE RACER":
+    - /url: /products/tri9
+  - text: thruxton ฿4,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Sprocket Aluminum 7075 Alloy 520-42,43T สเตอร์หลัง Triumph Truxton":
+    - /url: /products/tri10
+    - img "Sprocket Aluminum 7075 Alloy 520-42,43T สเตอร์หลัง Triumph Truxton"
+  - text: TRI.10
+  - link "Sprocket Aluminum 7075 Alloy 520-42,43T สเตอร์หลัง Triumph Truxton":
+    - /url: /products/tri10
+  - text: thruxton ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Bolts Shock Rear น็อตหัวโช้คหลังแต่ง":
+    - /url: /products/tri11
+    - img "Bolts Shock Rear น็อตหัวโช้คหลังแต่ง"
+  - text: TRI.11
+  - link "Bolts Shock Rear น็อตหัวโช้คหลังแต่ง":
+    - /url: /products/tri11
+  - text: thruxton ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า ดีไซน์แนวเรโทร":
+    - /url: /products/tri12
+    - img "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า ดีไซน์แนวเรโทร"
+  - text: TRI.12
+  - link "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า ดีไซน์แนวเรโทร":
+    - /url: /products/tri12
+  - text: thruxton ฿3,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า รองรับ Triumph Modern C":
+    - /url: /products/tri13
+    - img "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า รองรับ Triumph Modern C"
+  - text: TRI.13
+  - link "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า รองรับ Triumph Modern C":
+    - /url: /products/tri13
+  - text: thruxton ฿3,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ":
+    - /url: /products/tri14
+    - img "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ"
+  - text: TRI.14
+  - link "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ":
+    - /url: /products/tri14
+  - text: thruxton ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ":
+    - /url: /products/tri141
+    - img "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ"
+  - text: TRI.14.1
+  - link "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ":
+    - /url: /products/tri141
+  - text: thruxton ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ":
+    - /url: /products/tri142
+    - img "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ"
+  - text: TRI.14.2
+  - link "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ":
+    - /url: /products/tri142
+  - text: thruxton ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ Triumph":
+    - /url: /products/tri15
+    - img "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ Triumph"
+  - text: TRI.15
+  - link "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ Triumph":
+    - /url: /products/tri15
+  - text: thruxton ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Nut Air Injection Removal Kit Alloy 7075 น๊อตอุดระบบ Air Injection Rem":
+    - /url: /products/tri16
+    - img "Nut Air Injection Removal Kit Alloy 7075 น๊อตอุดระบบ Air Injection Rem"
+  - text: TRI.16
+  - link "Nut Air Injection Removal Kit Alloy 7075 น๊อตอุดระบบ Air Injection Rem":
+    - /url: /products/tri16
+  - text: thruxton ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แผงไมล์เดี่ยวTriumph":
+    - /url: /products/tri17
+    - img "แผงไมล์เดี่ยวTriumph"
+  - text: TRI.17
+  - link "แผงไมล์เดี่ยวTriumph":
+    - /url: /products/tri17
+  - text: thruxton ฿900
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "TRIUMPH FLAT GAUGE CLUSTER แผ่นยึดไมล์คู่มีรูกุญแจ":
+    - /url: /products/tri18
+    - img "TRIUMPH FLAT GAUGE CLUSTER แผ่นยึดไมล์คู่มีรูกุญแจ"
+  - text: TRI.18
+  - link "TRIUMPH FLAT GAUGE CLUSTER แผ่นยึดไมล์คู่มีรูกุญแจ":
+    - /url: /products/tri18
+  - text: thruxton ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Turn Signal Bracket ขาย้ายไฟเลี้ยวหน้า สำหรับ Triumph โดยเฉพาะ ชิ้นล่ะ":
+    - /url: /products/tri19
+    - img "Turn Signal Bracket ขาย้ายไฟเลี้ยวหน้า สำหรับ Triumph โดยเฉพาะ ชิ้นล่ะ"
+  - text: TRI.19
+  - link "Turn Signal Bracket ขาย้ายไฟเลี้ยวหน้า สำหรับ Triumph โดยเฉพาะ ชิ้นล่ะ":
+    - /url: /products/tri19
+  - text: thruxton ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Chain Guard Stainless Steel -Triumph Modern Classics บังโซ่แต่ง สไตล์เ":
+    - /url: /products/tri20
+    - img "Chain Guard Stainless Steel -Triumph Modern Classics บังโซ่แต่ง สไตล์เ"
+  - text: TRI.20
+  - link "Chain Guard Stainless Steel -Triumph Modern Classics บังโซ่แต่ง สไตล์เ":
+    - /url: /products/tri20
+  - text: thruxton ฿2,300
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Seat Cowl Screw Set Alloy น็อตยึดตูดมดสำหรับ Thruxton":
+    - /url: /products/tri24
+    - img "Seat Cowl Screw Set Alloy น็อตยึดตูดมดสำหรับ Thruxton"
+  - text: TRI.24
+  - link "Seat Cowl Screw Set Alloy น็อตยึดตูดมดสำหรับ Thruxton":
+    - /url: /products/tri24
+  - text: thruxton ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Side Cover Screws Alloy น็อตยึดฝากระเป๋าแต่ง":
+    - /url: /products/tri25
+    - img "Side Cover Screws Alloy น็อตยึดฝากระเป๋าแต่ง"
+  - text: TRI.25
+  - link "Side Cover Screws Alloy น็อตยึดฝากระเป๋าแต่ง":
+    - /url: /products/tri25
+  - text: thruxton ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Boot Cylinder บู๊ทท่อ Triumph Truxton ใส่แทนพักเท้าหลังได้เลย คู่ล่ะ":
+    - /url: /products/tri26
+    - img "Boot Cylinder บู๊ทท่อ Triumph Truxton ใส่แทนพักเท้าหลังได้เลย คู่ล่ะ"
+  - text: TRI.26
+  - link "Boot Cylinder บู๊ทท่อ Triumph Truxton ใส่แทนพักเท้าหลังได้เลย คู่ล่ะ":
+    - /url: /products/tri26
+  - text: thruxton ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Headlight Bracket Alloy 41mm.-95 mm. หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงา":
+    - /url: /products/tri27
+    - img "Headlight Bracket Alloy 41mm.-95 mm. หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงา"
+  - text: TRI.27
+  - link "Headlight Bracket Alloy 41mm.-95 mm. หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงา":
+    - /url: /products/tri27
+  - text: thruxton ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์":
+    - /url: /products/tri28
+    - img "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์"
+  - text: TRI.28
+  - link "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์":
+    - /url: /products/tri28
+  - text: thruxton ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์":
+    - /url: /products/tri29
+    - img "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์"
+  - text: TRI.29
+  - link "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์":
+    - /url: /products/tri29
+  - text: thruxton ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Nut Oil Cap CNC Alloy 7075 -Triumph Modern Classics น๊อตขันเติมน้ำมันเ":
+    - /url: /products/tri30
+    - img "Nut Oil Cap CNC Alloy 7075 -Triumph Modern Classics น๊อตขันเติมน้ำมันเ"
+  - text: TRI.30
+  - link "Nut Oil Cap CNC Alloy 7075 -Triumph Modern Classics น๊อตขันเติมน้ำมันเ":
+    - /url: /products/tri30
+  - text: thruxton ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Turn Signal Bracket Alloy - Triumph Thruxton R ขายึดไฟเลี้ยวหน้าแต่ง":
+    - /url: /products/tri31
+    - img "Turn Signal Bracket Alloy - Triumph Thruxton R ขายึดไฟเลี้ยวหน้าแต่ง"
+  - text: TRI.31
+  - link "Turn Signal Bracket Alloy - Triumph Thruxton R ขายึดไฟเลี้ยวหน้าแต่ง":
+    - /url: /products/tri31
+  - text: thruxton ฿600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แผ่นรองจานเบรค Triumph Truxton900 ,T100 สำหรับรถที่เปลี่ยนใส่ปั๊มเบรค":
+    - /url: /products/tri32
+    - img "แผ่นรองจานเบรค Triumph Truxton900 ,T100 สำหรับรถที่เปลี่ยนใส่ปั๊มเบรค"
+  - text: TRI.32
+  - link "แผ่นรองจานเบรค Triumph Truxton900 ,T100 สำหรับรถที่เปลี่ยนใส่ปั๊มเบรค":
+    - /url: /products/tri32
+  - text: thruxton ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Sprocket Aluminum 7075 Alloy 525-42T - Triumph Truxton-R สเตอร์หลัง Tr":
+    - /url: /products/tri34
+    - img "Sprocket Aluminum 7075 Alloy 525-42T - Triumph Truxton-R สเตอร์หลัง Tr"
+  - text: TRI.34
+  - link "Sprocket Aluminum 7075 Alloy 525-42T - Triumph Truxton-R สเตอร์หลัง Tr":
+    - /url: /products/tri34
+  - text: thruxton ฿1,900
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Sprocket Aluminum 7075 Alloy 520-41T - Triumph Streetwin สเตอร์หลัง Tr":
+    - /url: /products/tri35
+    - img "Sprocket Aluminum 7075 Alloy 520-41T - Triumph Streetwin สเตอร์หลัง Tr"
+  - text: TRI.35
+  - link "Sprocket Aluminum 7075 Alloy 520-41T - Triumph Streetwin สเตอร์หลัง Tr":
+    - /url: /products/tri35
+  - text: thruxton ฿1,900
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Sprocket Aluminum 7075 Alloy 525-37T - Triumph T120 สเตอร์หลัง Triumph":
+    - /url: /products/tri36
+    - img "Sprocket Aluminum 7075 Alloy 525-37T - Triumph T120 สเตอร์หลัง Triumph"
+  - text: TRI.36
+  - link "Sprocket Aluminum 7075 Alloy 525-37T - Triumph T120 สเตอร์หลัง Triumph":
+    - /url: /products/tri36
+  - text: thruxton ฿1,900
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Headlight Bracket Alloy 41mm. หูยึดไฟหน้า CNC แบบตัว V ยาวและมีหูยึดไฟ":
+    - /url: /products/tri38
+    - img "Headlight Bracket Alloy 41mm. หูยึดไฟหน้า CNC แบบตัว V ยาวและมีหูยึดไฟ"
+  - text: TRI.38
+  - link "Headlight Bracket Alloy 41mm. หูยึดไฟหน้า CNC แบบตัว V ยาวและมีหูยึดไฟ":
+    - /url: /products/tri38
+  - text: thruxton ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี แนะนำ":
+    - /url: /products/tri391
+    - img "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี"
+    - text: แนะนำ
+  - text: TRI.39.1
+  - link "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี":
+    - /url: /products/tri391
+  - text: thruxton ฿16,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี แนะนำ":
+    - /url: /products/tri392
+    - img "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี"
+    - text: แนะนำ
+  - text: TRI.39.2
+  - link "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี":
+    - /url: /products/tri392
+  - text: thruxton ฿16,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี แนะนำ":
+    - /url: /products/tri401
+    - img "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี"
+    - text: แนะนำ
+  - text: TRI.40.1
+  - link "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี":
+    - /url: /products/tri401
+  - text: thruxton ฿16,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี":
+    - /url: /products/tri411
+    - img "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี"
+  - text: TRI.41.1
+  - link "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี":
+    - /url: /products/tri411
+  - text: thruxton ฿16,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี":
+    - /url: /products/tri412
+    - img "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี"
+  - text: TRI.41.2
+  - link "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนี":
+    - /url: /products/tri412
+  - text: thruxton ฿16,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxto":
+    - /url: /products/tri421
+    - img "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxto"
+  - text: TRI.42.1
+  - link "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxto":
+    - /url: /products/tri421
+  - text: thruxton ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxto":
+    - /url: /products/tri422
+    - img "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxto"
+  - text: TRI.42.2
+  - link "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxto":
+    - /url: /products/tri422
+  - text: thruxton ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxto":
+    - /url: /products/tri423
+    - img "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxto"
+  - text: TRI.42.3
+  - link "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxto":
+    - /url: /products/tri423
+  - text: thruxton ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T":
+    - /url: /products/tri431
+    - img "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T"
+  - text: TRI.43.1
+  - link "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T":
+    - /url: /products/tri431
+  - text: thruxton ฿2,700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T":
+    - /url: /products/tri432
+    - img "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T"
+  - text: TRI.43.2
+  - link "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T":
+    - /url: /products/tri432
+  - text: thruxton ฿2,700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T":
+    - /url: /products/tri441
+    - img "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T"
+  - text: TRI.44.1
+  - link "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T":
+    - /url: /products/tri441
+  - text: thruxton ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบ":
+    - /url: /products/tri471
+    - img "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบ"
+  - text: TRI.47.1
+  - link "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบ":
+    - /url: /products/tri471
+  - text: thruxton ฿13,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบ":
+    - /url: /products/tri472
+    - img "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบ"
+  - text: TRI.47.2
+  - link "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบ":
+    - /url: /products/tri472
+  - text: thruxton ฿13,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Nut M10 Pit 1.25 CNC Alloy 7075 น๊อตสเตอร์หลัง M10 Pit 1.25 อลูมินั่มอ":
+    - /url: /products/tri48
+    - img "Nut M10 Pit 1.25 CNC Alloy 7075 น๊อตสเตอร์หลัง M10 Pit 1.25 อลูมินั่มอ"
+  - text: TRI.48
+  - link "Nut M10 Pit 1.25 CNC Alloy 7075 น๊อตสเตอร์หลัง M10 Pit 1.25 อลูมินั่มอ":
+    - /url: /products/tri48
+  - text: thruxton ฿100
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Caliper Adapter CNC Alloy 6061 ขายึดปั๊มเบรคหน้าซ้ายใส่ BREMBO หูชิด ส":
+    - /url: /products/tri49
+    - img "Caliper Adapter CNC Alloy 6061 ขายึดปั๊มเบรคหน้าซ้ายใส่ BREMBO หูชิด ส"
+  - text: TRI.49
+  - link "Caliper Adapter CNC Alloy 6061 ขายึดปั๊มเบรคหน้าซ้ายใส่ BREMBO หูชิด ส":
+    - /url: /products/tri49
+  - text: thruxton ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบหัวเกี่ยวสายครัชล่างแต่ง":
+    - /url: /products/tri52
+    - img "ฝาครอบหัวเกี่ยวสายครัชล่างแต่ง"
+  - text: TRI.52
+  - link "ฝาครอบหัวเกี่ยวสายครัชล่างแต่ง":
+    - /url: /products/tri52
+  - text: thruxton ฿900
+  - button "เลือกสี":
+    - img
+  - link "ขายึดไฟเลี้ยวแปะหัวโช๊คหลังแต่ง":
+    - /url: /products/tri53
+    - img "ขายึดไฟเลี้ยวแปะหัวโช๊คหลังแต่ง"
+  - text: TRI.53
+  - link "ขายึดไฟเลี้ยวแปะหัวโช๊คหลังแต่ง":
+    - /url: /products/tri53
+  - text: thruxton ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins":
+    - /url: /products/tri54
+    - img "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins"
+  - text: TRI.54
+  - link "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins":
+    - /url: /products/tri54
+  - text: thruxton ฿1,600
+  - button "เลือกสี":
+    - img
+  - link "ขายึดปั๊มเบรค Brembo หูชิด ข้างขวา ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320":
+    - /url: /products/tri55
+    - img "ขายึดปั๊มเบรค Brembo หูชิด ข้างขวา ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320"
+  - text: TRI.55
+  - link "ขายึดปั๊มเบรค Brembo หูชิด ข้างขวา ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320":
+    - /url: /products/tri55
+  - text: thruxton ฿1,600
+  - button "เลือกสี":
+    - img
+  - link "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlin":
+    - /url: /products/tri56
+    - img "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlin"
+  - text: TRI.56
+  - link "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlin":
+    - /url: /products/tri56
+  - text: thruxton ฿2,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม":
+    - /url: /products/tri57
+    - img "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม"
+  - text: TRI.57
+  - link "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม":
+    - /url: /products/tri57
+  - text: thruxton ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า":
+    - /url: /products/tri58
+    - img "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า"
+  - text: TRI.58
+  - link "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า":
+    - /url: /products/tri58
+  - text: thruxton ฿1,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm":
+    - /url: /products/tri59
+    - img "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm"
+  - text: TRI.59
+  - link "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm":
+    - /url: /products/tri59
+  - text: thruxton ฿14,500
+  - button "เลือกสี":
+    - img
+  - link "ชุดพักเท้าหลังแต่ง Truxton900 ,T100 ใส่กับหูเดิมได้เลยไม่ต้องดัดแปลง":
+    - /url: /products/tri61
+    - img "ชุดพักเท้าหลังแต่ง Truxton900 ,T100 ใส่กับหูเดิมได้เลยไม่ต้องดัดแปลง"
+  - text: TRI.61
+  - link "ชุดพักเท้าหลังแต่ง Truxton900 ,T100 ใส่กับหูเดิมได้เลยไม่ต้องดัดแปลง":
+    - /url: /products/tri61
+  - text: thruxton ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ Truxton900":
+    - /url: /products/tri65
+    - img "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ Truxton900"
+  - text: TRI.65
+  - link "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ Truxton900":
+    - /url: /products/tri65
+  - text: thruxton ฿7,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบปิดถังน้ำมัน Triumph Truxton900 ใส่แทนฝาบนเดิมใส่เข้ากับเกลียวเด":
+    - /url: /products/tri66
+    - img "ฝาครอบปิดถังน้ำมัน Triumph Truxton900 ใส่แทนฝาบนเดิมใส่เข้ากับเกลียวเด"
+  - text: TRI.66
+  - link "ฝาครอบปิดถังน้ำมัน Triumph Truxton900 ใส่แทนฝาบนเดิมใส่เข้ากับเกลียวเด":
+    - /url: /products/tri66
+  - text: thruxton ฿1,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ยางหุ้มโช๊คหน้า Triumph ใส่ โช๊คขนาด 41 mm. ความยาว 190 mm.":
+    - /url: /products/tri67
+    - img "ยางหุ้มโช๊คหน้า Triumph ใส่ โช๊คขนาด 41 mm. ความยาว 190 mm."
+  - text: TRI.67
+  - link "ยางหุ้มโช๊คหน้า Triumph ใส่ โช๊คขนาด 41 mm. ความยาว 190 mm.":
+    - /url: /products/tri67
+  - text: thruxton ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Sprocket Aluminum 7075 Alloy Hard Anodize 525-37T - Triumph T120 สเตอร":
+    - /url: /products/tri68
+    - img "Sprocket Aluminum 7075 Alloy Hard Anodize 525-37T - Triumph T120 สเตอร"
+  - text: TRI.68
+  - link "Sprocket Aluminum 7075 Alloy Hard Anodize 525-37T - Triumph T120 สเตอร":
+    - /url: /products/tri68
+  - text: thruxton ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Sprocket Aluminum Alloy 7075 Hard Anodize 520-41T - Triumph Streetwin":
+    - /url: /products/tri69
+    - img "Sprocket Aluminum Alloy 7075 Hard Anodize 520-41T - Triumph Streetwin"
+  - text: TRI.69
+  - link "Sprocket Aluminum Alloy 7075 Hard Anodize 520-41T - Triumph Streetwin":
+    - /url: /products/tri69
+  - text: thruxton ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Sprocket Aluminum Alloy 7075 Hard Anodize 525-42T - Triumph Truxton-R":
+    - /url: /products/tri70
+    - img "Sprocket Aluminum Alloy 7075 Hard Anodize 525-42T - Triumph Truxton-R"
+  - text: TRI.70
+  - link "Sprocket Aluminum Alloy 7075 Hard Anodize 525-42T - Triumph Truxton-R":
+    - /url: /products/tri70
+  - text: thruxton ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แฮนจับโช๊คอลูมิเนียมแบบเอียง 9 องศา งาน Alloy CNC CNC Billet":
+    - /url: /products/tri71
+    - img "แฮนจับโช๊คอลูมิเนียมแบบเอียง 9 องศา งาน Alloy CNC CNC Billet"
+  - text: TRI.71
+  - link "แฮนจับโช๊คอลูมิเนียมแบบเอียง 9 องศา งาน Alloy CNC CNC Billet":
+    - /url: /products/tri71
+  - text: thruxton ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "สเตอร์หน้า CNC Billet Truxton900 ใส่ได้กับ Triumph Modern Classics ทุก":
+    - /url: /products/tri72
+    - img "สเตอร์หน้า CNC Billet Truxton900 ใส่ได้กับ Triumph Modern Classics ทุก"
+  - text: TRI.72
+  - link "สเตอร์หน้า CNC Billet Truxton900 ใส่ได้กับ Triumph Modern Classics ทุก":
+    - /url: /products/tri72
+  - text: thruxton ฿800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Sprocket Aluminum Alloy 7075 Hard Anodize 520-43T - Triumph Truxton 90":
+    - /url: /products/tri73
+    - img "Sprocket Aluminum Alloy 7075 Hard Anodize 520-43T - Triumph Truxton 90"
+  - text: TRI.73
+  - link "Sprocket Aluminum Alloy 7075 Hard Anodize 520-43T - Triumph Truxton 90":
+    - /url: /products/tri73
+  - text: thruxton ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Rear Fender Stainless บังโคลนหลังแต่ง W650":
+    - /url: /products/w2
+    - img "Rear Fender Stainless บังโคลนหลังแต่ง W650"
+  - text: W.2
+  - link "Rear Fender Stainless บังโคลนหลังแต่ง W650":
+    - /url: /products/w2
+  - text: w650 ฿2,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Front Fender Stainless บังโคลนหน้าแต่ง W650":
+    - /url: /products/w3
+    - img "Front Fender Stainless บังโคลนหน้าแต่ง W650"
+  - text: W.3
+  - link "Front Fender Stainless บังโคลนหน้าแต่ง W650":
+    - /url: /products/w3
+  - text: w650 ฿2,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Rear Drum Brake Arm Stainless ขาล๊อคยึดฝาดรั๊มเบรคหลัง W650":
+    - /url: /products/w4
+    - img "Rear Drum Brake Arm Stainless ขาล๊อคยึดฝาดรั๊มเบรคหลัง W650"
+  - text: W.4
+  - link "Rear Drum Brake Arm Stainless ขาล๊อคยึดฝาดรั๊มเบรคหลัง W650":
+    - /url: /products/w4
+  - text: w650 ฿500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง w650":
+    - /url: /products/w6
+    - img "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง w650"
+  - text: W.6
+  - link "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง w650":
+    - /url: /products/w6
+  - text: w650 ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Spark Plug Holder Billet CNC Alloy ฝาครอบปลั๊กหัวเทียน W650":
+    - /url: /products/w7
+    - img "Spark Plug Holder Billet CNC Alloy ฝาครอบปลั๊กหัวเทียน W650"
+  - text: W.7
+  - link "Spark Plug Holder Billet CNC Alloy ฝาครอบปลั๊กหัวเทียน W650":
+    - /url: /products/w7
+  - text: w650 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Headlight Brackets 39mm. หูยึดไฟหน้าแต่งอลูมิเนียม W650 แกนโช๊ค 39mm.ค":
+    - /url: /products/w8
+    - img "Headlight Brackets 39mm. หูยึดไฟหน้าแต่งอลูมิเนียม W650 แกนโช๊ค 39mm.ค"
+  - text: W.8
+  - link "Headlight Brackets 39mm. หูยึดไฟหน้าแต่งอลูมิเนียม W650 แกนโช๊ค 39mm.ค":
+    - /url: /products/w8
+  - text: w650 ฿1,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Headlight Brackets Stainless 39mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหร":
+    - /url: /products/w9
+    - img "Headlight Brackets Stainless 39mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหร"
+  - text: W.9
+  - link "Headlight Brackets Stainless 39mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหร":
+    - /url: /products/w9
+  - text: w650 ฿1,400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Sprocket Rear Aluminum Alloy 7075 525 &ndash; 37,38T สเตอร์หลัง W650":
+    - /url: /products/w11
+    - img "Sprocket Rear Aluminum Alloy 7075 525 &ndash; 37,38T สเตอร์หลัง W650"
+  - text: W.11
+  - link "Sprocket Rear Aluminum Alloy 7075 525 &ndash; 37,38T สเตอร์หลัง W650":
+    - /url: /products/w11
+  - text: w650 ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Clip-On Handle Bars CNC Alloy 39mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม":
+    - /url: /products/w12
+    - img "Clip-On Handle Bars CNC Alloy 39mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม"
+  - text: W.12
+  - link "Clip-On Handle Bars CNC Alloy 39mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม":
+    - /url: /products/w12
+  - text: w650 ฿2,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Caps Air Suction Valve Finned Billet CNC Alloy ฝาครอบอุดบำบัดไอเสียหน้":
+    - /url: /products/w13
+    - img "Caps Air Suction Valve Finned Billet CNC Alloy ฝาครอบอุดบำบัดไอเสียหน้"
+  - text: W.13
+  - link "Caps Air Suction Valve Finned Billet CNC Alloy ฝาครอบอุดบำบัดไอเสียหน้":
+    - /url: /products/w13
+  - text: w650 ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบ":
+    - /url: /products/w14
+    - img "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบ"
+  - text: W.14
+  - link "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบ":
+    - /url: /products/w14
+  - text: w650 ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Torque Rod Billet CNC Alloy ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนียม สำหรั":
+    - /url: /products/w15
+    - img "Torque Rod Billet CNC Alloy ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนียม สำหรั"
+  - text: W.15
+  - link "Torque Rod Billet CNC Alloy ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนียม สำหรั":
+    - /url: /products/w15
+  - text: w650 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกั":
+    - /url: /products/w161
+    - img "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกั"
+  - text: W.16.1
+  - link "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกั":
+    - /url: /products/w161
+  - text: w650 ฿15,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบก":
+    - /url: /products/w162
+    - img "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบก"
+  - text: W.16.2
+  - link "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบก":
+    - /url: /products/w162
+  - text: w650 ฿15,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเร":
+    - /url: /products/w171
+    - img "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเร"
+  - text: W.17.1
+  - link "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเร":
+    - /url: /products/w171
+  - text: w650 ฿14,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเ":
+    - /url: /products/w172
+    - img "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเ"
+  - text: W.17.2
+  - link "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเ":
+    - /url: /products/w172
+  - text: w650 ฿14,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบหัวเครื่องข้างขวา":
+    - /url: /products/w20
+    - img "ฝาครอบหัวเครื่องข้างขวา"
+  - text: W.20
+  - link "ฝาครอบหัวเครื่องข้างขวา":
+    - /url: /products/w20
+  - text: w650 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดแผงคอบนแต่ง W650 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิมและใส่กุญแจล":
+    - /url: /products/w21
+    - img "ชุดแผงคอบนแต่ง W650 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิมและใส่กุญแจล"
+  - text: W.21
+  - link "ชุดแผงคอบนแต่ง W650 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิมและใส่กุญแจล":
+    - /url: /products/w21
+  - text: w650 ฿4,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ชุดแผงคอบน W650 แบบมีตุ๊กตาสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย":
+    - /url: /products/w22
+    - img "ชุดแผงคอบน W650 แบบมีตุ๊กตาสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย"
+  - text: W.22
+  - link "ชุดแผงคอบน W650 แบบมีตุ๊กตาสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย":
+    - /url: /products/w22
+  - text: w650 ฿5,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตขันแผงคอกลาง W650 งาน CNC":
+    - /url: /products/w23
+    - img "น๊อตขันแผงคอกลาง W650 งาน CNC"
+  - text: W.23
+  - link "น๊อตขันแผงคอกลาง W650 งาน CNC":
+    - /url: /products/w23
+  - text: w650 ฿450
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า":
+    - /url: /products/w25
+    - img "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า"
+  - text: W.25
+  - link "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า":
+    - /url: /products/w25
+  - text: w650 ฿850
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่สายเบอร์6 สำหรั":
+    - /url: /products/w26
+    - img "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่สายเบอร์6 สำหรั"
+  - text: W.26
+  - link "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่สายเบอร์6 สำหรั":
+    - /url: /products/w26
+  - text: w650 ฿2,500
+  - button "เลือกสี":
+    - img
+  - link "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง แบบเรียบมีห":
+    - /url: /products/w27
+    - img "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง แบบเรียบมีห"
+  - text: W.27
+  - link "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง แบบเรียบมีห":
+    - /url: /products/w27
+  - text: w650 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่ห่วง M14 สำหรับ":
+    - /url: /products/w28
+    - img "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่ห่วง M14 สำหรับ"
+  - text: W.28
+  - link "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่ห่วง M14 สำหรับ":
+    - /url: /products/w28
+  - text: w650 ฿2,200
+  - button "เลือกสี":
+    - img
+  - link "บังโคลนหน้าแต่งทรง CAFE รุ่นลวดคาดผลิตจากสแตนเลสทั้งอัน":
+    - /url: /products/xs1
+    - img "บังโคลนหน้าแต่งทรง CAFE รุ่นลวดคาดผลิตจากสแตนเลสทั้งอัน"
+  - text: XS.1
+  - link "บังโคลนหน้าแต่งทรง CAFE รุ่นลวดคาดผลิตจากสแตนเลสทั้งอัน":
+    - /url: /products/xs1
+  - text: xs650 ฿2,400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm.":
+    - /url: /products/xs2
+    - img "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm."
+  - text: XS.2
+  - link "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm.":
+    - /url: /products/xs2
+  - text: xs650 ฿2,200
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโคลนหน้า SR,XS650 แต่งผลิตจากสแตลเลสทั้งอันคงทนแข็งแรงเงางาม ทรงแทร":
+    - /url: /products/xs3
+    - img "บังโคลนหน้า SR,XS650 แต่งผลิตจากสแตลเลสทั้งอันคงทนแข็งแรงเงางาม ทรงแทร"
+  - text: XS.3
+  - link "บังโคลนหน้า SR,XS650 แต่งผลิตจากสแตลเลสทั้งอันคงทนแข็งแรงเงางาม ทรงแทร":
+    - /url: /products/xs3
+  - text: xs650 ฿1,400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโคลนหน้า SR,XS650 แต่งผลิตจากสแตลเลสทั้งอันคงทนแข็งแรงเงางาม ทรงคาเ":
+    - /url: /products/xs4
+    - img "บังโคลนหน้า SR,XS650 แต่งผลิตจากสแตลเลสทั้งอันคงทนแข็งแรงเงางาม ทรงคาเ"
+  - text: XS.4
+  - link "บังโคลนหน้า SR,XS650 แต่งผลิตจากสแตลเลสทั้งอันคงทนแข็งแรงเงางาม ทรงคาเ":
+    - /url: /products/xs4
+  - text: xs650 ฿1,600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบกันฝุ่นโช๊คหน้าอลูมิเนียมแต่ง SR ,XS 650 ราคาคู่ละ 1,00":
+    - /url: /products/xs5
+    - img "ฝาครอบกันฝุ่นโช๊คหน้าอลูมิเนียมแต่ง SR ,XS 650 ราคาคู่ละ 1,00"
+  - text: XS.5
+  - link "ฝาครอบกันฝุ่นโช๊คหน้าอลูมิเนียมแต่ง SR ,XS 650 ราคาคู่ละ 1,00":
+    - /url: /products/xs5
+  - text: xs650 ฿0
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ขายึดไฟเลี้ยวแต่งสแตนเลสสำหรับใส่ YAMAHA XS 650 คู่ละ":
+    - /url: /products/xs6
+    - img "ขายึดไฟเลี้ยวแต่งสแตนเลสสำหรับใส่ YAMAHA XS 650 คู่ละ"
+  - text: XS.6
+  - link "ขายึดไฟเลี้ยวแต่งสแตนเลสสำหรับใส่ YAMAHA XS 650 คู่ละ":
+    - /url: /products/xs6
+  - text: xs650 ฿250
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ SR,XS650 รูแกนโช๊ค 35 มม.คู่ล":
+    - /url: /products/xs9
+    - img "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ SR,XS650 รูแกนโช๊ค 35 มม.คู่ล"
+  - text: XS.9
+  - link "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ SR,XS650 รูแกนโช๊ค 35 มม.คู่ล":
+    - /url: /products/xs9
+  - text: xs650 ฿1,400
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "หูจับไฟหน้าแต่ง SR,xs 650 รูแกนโช๊ค 35มม.":
+    - /url: /products/xs10
+    - img "หูจับไฟหน้าแต่ง SR,xs 650 รูแกนโช๊ค 35มม."
+  - text: XS.10
+  - link "หูจับไฟหน้าแต่ง SR,xs 650 รูแกนโช๊ค 35มม.":
+    - /url: /products/xs10
+  - text: xs650 ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตขันปรับหนืดแผงคอบนแต่ง SR,XS650 ใส่ ไ ด้ตั้งแต่ปี 1978-2000 เราผลิ":
+    - /url: /products/xs11
+    - img "น๊อตขันปรับหนืดแผงคอบนแต่ง SR,XS650 ใส่ ไ ด้ตั้งแต่ปี 1978-2000 เราผลิ"
+  - text: XS.11
+  - link "น๊อตขันปรับหนืดแผงคอบนแต่ง SR,XS650 ใส่ ไ ด้ตั้งแต่ปี 1978-2000 เราผลิ":
+    - /url: /products/xs11
+  - text: xs650 ฿1,000
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650 ขัดเงาสวยงามทนทานปลอดสนิม ชิ้นละ":
+    - /url: /products/xs12
+    - img "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650 ขัดเงาสวยงามทนทานปลอดสนิม ชิ้นละ"
+  - text: XS.12
+  - link "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650 ขัดเงาสวยงามทนทานปลอดสนิม ชิ้นละ":
+    - /url: /products/xs12
+  - text: xs650 ฿1,500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แฮนจับโช๊คสแตนเลส XS รูแกน 35 มม. มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย":
+    - /url: /products/xs13
+    - img "แฮนจับโช๊คสแตนเลส XS รูแกน 35 มม. มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย"
+  - text: XS.13
+  - link "แฮนจับโช๊คสแตนเลส XS รูแกน 35 มม. มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย":
+    - /url: /products/xs13
+  - text: xs650 ฿1,600
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบเรียบ":
+    - /url: /products/xs14
+    - img "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบเรียบ"
+  - text: XS.14
+  - link "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบเรียบ":
+    - /url: /products/xs14
+  - text: xs650 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบจานไฟด้านซ้าย XS650,TX650":
+    - /url: /products/xs15
+    - img "ฝาครอบจานไฟด้านซ้าย XS650,TX650"
+  - text: XS.15
+  - link "ฝาครอบจานไฟด้านซ้าย XS650,TX650":
+    - /url: /products/xs15
+  - text: xs650 ฿1,500
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบกรองน้ำมันเครื่อง xs650":
+    - /url: /products/xs16
+    - img "ฝาครอบกรองน้ำมันเครื่อง xs650"
+  - text: XS.16
+  - link "ฝาครอบกรองน้ำมันเครื่อง xs650":
+    - /url: /products/xs16
+  - text: xs650 ฿1,000
+  - button "เลือกสี":
+    - img
+  - link "สเปเซอร์ขายึดปั๊มเบรมโบ้หูชิดสำหรับใส่ XS650,TX650,SR400":
+    - /url: /products/xs17
+    - img "สเปเซอร์ขายึดปั๊มเบรมโบ้หูชิดสำหรับใส่ XS650,TX650,SR400"
+  - text: XS.17
+  - link "สเปเซอร์ขายึดปั๊มเบรมโบ้หูชิดสำหรับใส่ XS650,TX650,SR400":
+    - /url: /products/xs17
+  - text: xs650 ฿1,000
+  - button "เลือกสี":
+    - img
+  - link "สเปย์เซอร์รองจานเบรคใส่ XS650,TX650,SR 1978 หนา 10 mm.":
+    - /url: /products/xs18
+    - img "สเปย์เซอร์รองจานเบรคใส่ XS650,TX650,SR 1978 หนา 10 mm."
+  - text: XS.18
+  - link "สเปย์เซอร์รองจานเบรคใส่ XS650,TX650,SR 1978 หนา 10 mm.":
+    - /url: /products/xs18
+  - text: xs650 ฿650
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "แฮนจับโช๊คอลูมิเนียม":
+    - /url: /products/xs22
+    - img "แฮนจับโช๊คอลูมิเนียม"
+  - text: XS.22
+  - link "แฮนจับโช๊คอลูมิเนียม":
+    - /url: /products/xs22
+  - text: xs650 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978":
+    - /url: /products/xs23
+    - img "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978"
+  - text: XS.23
+  - link "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978":
+    - /url: /products/xs23
+  - text: xs650 ฿500
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น็อตขันหัวโช๊ค XS650 แบบเรียบ งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000":
+    - /url: /products/xs24
+    - img "น็อตขันหัวโช๊ค XS650 แบบเรียบ งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000"
+  - text: XS.24
+  - link "น็อตขันหัวโช๊ค XS650 แบบเรียบ งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000":
+    - /url: /products/xs24
+  - text: xs650 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "น็อตขันหัวโช๊ค XS650 แบบหลุม งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000-":
+    - /url: /products/xs241
+    - img "น็อตขันหัวโช๊ค XS650 แบบหลุม งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000-"
+  - text: XS.24.1
+  - link "น็อตขันหัวโช๊ค XS650 แบบหลุม งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000-":
+    - /url: /products/xs241
+  - text: xs650 ฿700
+  - button "หยิบใส่ตะกร้า":
+    - img
+  - link "ฝาครอบตั้งวาร์วไอดี+ไอเสียแต่ง XS650,TX650 แบบครีบ":
+    - /url: /products/xs25
+    - img "ฝาครอบตั้งวาร์วไอดี+ไอเสียแต่ง XS650,TX650 แบบครีบ"
+  - text: XS.25
+  - link "ฝาครอบตั้งวาร์วไอดี+ไอเสียแต่ง XS650,TX650 แบบครีบ":
+    - /url: /products/xs25
+  - text: xs650 ฿900
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบตั้งวาร์วไอเสียแต่ง XS650,TX650 แบบครีบ":
+    - /url: /products/xs26
+    - img "ฝาครอบตั้งวาร์วไอเสียแต่ง XS650,TX650 แบบครีบ"
+  - text: XS.26
+  - link "ฝาครอบตั้งวาร์วไอเสียแต่ง XS650,TX650 แบบครีบ":
+    - /url: /products/xs26
+  - text: xs650 ฿1,000
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบจานไฟด้านซ้ายลาย OHC ใส่ XS650,TX650":
+    - /url: /products/xs27
+    - img "ฝาครอบจานไฟด้านซ้ายลาย OHC ใส่ XS650,TX650"
+  - text: XS.27
+  - link "ฝาครอบจานไฟด้านซ้ายลาย OHC ใส่ XS650,TX650":
+    - /url: /products/xs27
+  - text: xs650 ฿1,500
+  - button "เลือกสี":
+    - img
+  - link "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบโค้ง":
+    - /url: /products/xs28
+    - img "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบโค้ง"
+  - text: XS.28
+  - link "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบโค้ง":
+    - /url: /products/xs28
+  - text: xs650 ฿1,800
+  - button "หยิบใส่ตะกร้า":
+    - img
+- contentinfo:
+  - img
+  - text: ThaiGigaBike
+  - paragraph: GIGA BIKE FACTORY Racing special Parts Custom Part & Accessories Product Of Thailand
+  - heading "สินค้า" [level=4]
+  - link "Yamaha SR400/500":
+    - /url: /products?bike=sr400
+  - link "Honda CB750":
+    - /url: /products?bike=cb750
+  - link "Kawasaki W650":
+    - /url: /products?bike=w650
+  - link "Triumph Thruxton":
+    - /url: /products?bike=thruxton
+  - link "BMW S1000RR":
+    - /url: /products?bike=s1000rr
+  - heading "ติดต่อ" [level=4]
+  - link "081-424-9407":
+    - /url: tel:0814249407
+    - img
+    - text: 081-424-9407
+  - link "aonggb@yahoo.com":
+    - /url: mailto:aonggb@yahoo.com
+    - img
+    - text: aonggb@yahoo.com
+  - img
+  - text: เปิดทุกวัน 9:00–20:00
+  - link "LINE":
+    - /url: https://line.me/ti/p/~thaigigabike
+  - link "Facebook":
+    - /url: https://www.facebook.com/Aonggigabike
+  - paragraph: © 2024 ThaiGigaBike — GIGA BIKE FACTORY. All rights reserved.
+  - link "ติดตามออเดอร์":
+    - /url: /order
+  - link "ติดต่อ":
+    - /url: /contact
+- alert
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test'
+  2  | 
+  3  | test.describe('หน้าสินค้า (/products)', () => {
+  4  |   test.beforeEach(async ({ page }) => {
+  5  |     await page.goto('/products')
+  6  |   })
+  7  | 
+  8  |   test('แสดงรายการสินค้า 822 รายการ', async ({ page }) => {
+> 9  |     await expect(page.getByText(/822 รายการ/)).toBeVisible()
+     |                                                ^ Error: expect(locator).toBeVisible() failed
+  10 |   })
+  11 | 
+  12 |   test('ค้นหาด้วยรหัสสินค้า CB.1 ได้', async ({ page }) => {
+  13 |     await page.getByPlaceholder(/ค้นหาสินค้า/).fill('CB.1')
+  14 |     await page.waitForTimeout(300)
+  15 | 
+  16 |     const cards = page.locator('.product-card')
+  17 |     const count = await cards.count()
+  18 |     expect(count).toBeGreaterThan(0)
+  19 |     expect(count).toBeLessThan(50)
+  20 |   })
+  21 | 
+  22 |   test('กรอง category เบรค แล้วสินค้าลดลง', async ({ page }) => {
+  23 |     const totalText = await page.locator('p').filter({ hasText: /รายการ/ }).first().textContent()
+  24 |     const total = parseInt(totalText?.match(/\d+/)?.[0] ?? '0')
+  25 | 
+  26 |     await page.getByRole('button', { name: 'เบรค' }).click()
+  27 |     await page.waitForTimeout(300)
+  28 | 
+  29 |     const filteredText = await page.locator('p').filter({ hasText: /รายการ/ }).first().textContent()
+  30 |     const filtered = parseInt(filteredText?.match(/\d+/)?.[0] ?? '0')
+  31 | 
+  32 |     expect(filtered).toBeLessThan(total)
+  33 |     expect(filtered).toBeGreaterThan(0)
+  34 |   })
+  35 | 
+  36 |   test('กดการ์ดสินค้าไปหน้า detail ได้', async ({ page }) => {
+  37 |     const firstCard = page.locator('.product-card a').first()
+  38 |     await firstCard.click()
+  39 |     await expect(page).toHaveURL(/\/products\/\w+/)
+  40 |   })
+  41 | })
+  42 | 
+  43 | test.describe('หน้า product detail', () => {
+  44 |   test('แสดง carousel รูป + ราคา + ปุ่มหยิบใส่ตะกร้า', async ({ page }) => {
+  45 |     await page.goto('/products/cb1')
+  46 | 
+  47 |     // ชื่อสินค้า
+  48 |     await expect(page.locator('h1')).toBeVisible()
+  49 | 
+  50 |     // ราคา
+  51 |     await expect(page.getByText(/฿\d+/)).toBeVisible()
+  52 | 
+  53 |     // ปุ่มหยิบ
+  54 |     await expect(page.getByRole('button', { name: /หยิบใส่ตะกร้า/ })).toBeVisible()
+  55 | 
+  56 |     // Breadcrumb
+  57 |     await expect(page.getByText('สินค้า')).toBeVisible()
+  58 |   })
+  59 | 
+  60 |   test('เพิ่มสินค้าลงตะกร้าได้', async ({ page }) => {
+  61 |     await page.goto('/products/cb1')
+  62 |     const addBtn = page.getByRole('button', { name: /หยิบใส่ตะกร้า/ })
+  63 | 
+  64 |     if (await addBtn.isEnabled()) {
+  65 |       await addBtn.click()
+  66 |       // ปุ่มเปลี่ยนเป็น "เพิ่มแล้ว!"
+  67 |       await expect(page.getByText(/เพิ่มแล้ว!/)).toBeVisible({ timeout: 3000 })
+  68 |     }
+  69 |   })
+  70 | })
+  71 | 
+```

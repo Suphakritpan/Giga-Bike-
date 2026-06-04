@@ -1,0 +1,1166 @@
+{
+  "nodes": [
+    {
+      "id": "cb750k8836_yamaha",
+      "label": "YAMAHA",
+      "file_type": "concept",
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "cb750k8836_sr400_500",
+      "label": "SR 400, 500 (New)",
+      "file_type": "concept",
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "cb750k8836_srx400_600",
+      "label": "SRX 400-600",
+      "file_type": "concept",
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "cb750k8836_xs650_tx650",
+      "label": "XS650, TX650",
+      "file_type": "concept",
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "cb750k8836_xt_tt500",
+      "label": "XT, TT500",
+      "file_type": "concept",
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "cb750k8836_r15_xsr155_xmax300",
+      "label": "R15, XSR155, XMAX300",
+      "file_type": "concept",
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "cbr150r_cbr250rr_r3_mt03_r25",
+      "label": "R3, MT03, R25",
+      "file_type": "concept",
+      "source_file": "CBR150r_CBR250rr.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "contact_r1_r6_r7",
+      "label": "R1, R6, R7 (New)",
+      "file_type": "concept",
+      "source_file": "contact.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "thaigigabike_home",
+      "label": "Home",
+      "file_type": "code",
+      "source_file": "index-2.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "index_jp_html",
+      "label": "Giga Bike Shop (Japanese)",
+      "file_type": "code",
+      "source_file": "index jp.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "index_html",
+      "label": "Giga Bike Shop (Thai)",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "index_2_html",
+      "label": "Giga Bike Shop (Thailand)",
+      "file_type": "code",
+      "source_file": "index-2.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "kawasaki_html",
+      "label": "Kawasaki Products",
+      "file_type": "code",
+      "source_file": "kawasaki.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "index_triumph_html",
+      "label": "404 Error - Triumph",
+      "file_type": "code",
+      "source_file": "index triumph.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "kawasaki_w650_html",
+      "label": "404 Error - Kawasaki W650",
+      "file_type": "code",
+      "source_file": "kawasaki w650.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "kawazaki_ksr_html",
+      "label": "404 Error - Kawazaki KSR",
+      "file_type": "code",
+      "source_file": "kawazaki ksr.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "yamaha_sr400_500",
+      "label": "YAMAHA SR400, 500",
+      "file_type": "concept",
+      "source_file": "index jp.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "honda_cb400ss",
+      "label": "Honda CB400ss",
+      "file_type": "concept",
+      "source_file": "index jp.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "suzuki_vorty250",
+      "label": "Suzuki Vorty250",
+      "file_type": "concept",
+      "source_file": "index jp.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "index_html",
+      "label": "List of available projects",
+      "file_type": "code",
+      "source_file": "index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Xavier Roche",
+      "contributor": "Leto Kauler"
+    },
+    {
+      "id": "giga_bike_index",
+      "label": "Giga-Bike Index",
+      "file_type": "code",
+      "source_file": "Giga-Bike-/index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "Xavier Roche",
+      "contributor": "Leto Kauler"
+    },
+    {
+      "id": "giga_bike_hts_log",
+      "label": "HTTrack Mirror Log",
+      "file_type": "document",
+      "source_file": "Giga-Bike-/hts-log.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": "2026-06-04T00:42:12",
+      "author": "HTTrack Website Copier",
+      "contributor": null
+    },
+    {
+      "id": "giga_bike_cookies",
+      "label": "HTTrack Cookie File",
+      "file_type": "document",
+      "source_file": "Giga-Bike-/cookies.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "thaigigabike_com",
+      "label": "www.thaigigabike.com",
+      "file_type": "concept",
+      "source_file": "Giga-Bike-/hts-log.txt",
+      "source_location": null,
+      "source_url": "http://www.thaigigabike.com/",
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "giga_bike_2t_html",
+      "label": "2T.html",
+      "file_type": "code",
+      "source_file": "Giga-Bike-/www.thaigigabike.com/2T.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "giga_bike_bmw_html",
+      "label": "BMW.html",
+      "file_type": "code",
+      "source_file": "Giga-Bike-/www.thaigigabike.com/BMW.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "giga_bike_bolts_nut_html",
+      "label": "Bolts-nut.html",
+      "file_type": "code",
+      "source_file": "Giga-Bike-/www.thaigigabike.com/Bolts-nut.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "giga_bike_cb150r_html",
+      "label": "CB150r.html",
+      "file_type": "code",
+      "source_file": "Giga-Bike-/www.thaigigabike.com/CB150r.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "giga_bike_cb750k_html",
+      "label": "CB750k.html",
+      "file_type": "code",
+      "source_file": "Giga-Bike-/www.thaigigabike.com/CB750k.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "giga_bike_carburetor_html",
+      "label": "404 Not Found - Carburetor",
+      "file_type": "code",
+      "source_file": "Giga-Bike-/www.thaigigabike.com/carburetor.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "honda_cb400ss_page",
+      "label": "Honda CB400SS Product Page",
+      "file_type": "document",
+      "source_file": "honda cb400ss.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "honda_gb250_400_page",
+      "label": "Honda Clubman GB250 / GB400 Product Page",
+      "file_type": "document",
+      "source_file": "honda gb250-400.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "honda_page",
+      "label": "Honda Category Page",
+      "file_type": "document",
+      "source_file": "honda.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "index_1_page",
+      "label": "Giga Bike Shop Home (English/Japanese)",
+      "file_type": "document",
+      "source_file": "index 1.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "TARAD.com",
+      "contributor": null
+    },
+    {
+      "id": "yamaha_sr_category",
+      "label": "Yamaha SR 400/500",
+      "file_type": "concept",
+      "source_file": "index 1.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "kawasaki_w650_category",
+      "label": "Kawasaki W650",
+      "file_type": "concept",
+      "source_file": "index 1.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "suzuki_vorty_category",
+      "label": "Suzuki Vorty 250",
+      "file_type": "concept",
+      "source_file": "index 1.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "ninja250_300_ninja4008836_html",
+      "label": "Ninja 250/300/400 Page",
+      "file_type": "document",
+      "source_file": "Ninja250_300_Ninja4008836.html"
+    },
+    {
+      "id": "ninja300_html",
+      "label": "Ninja 300 Page",
+      "file_type": "document",
+      "source_file": "Ninja300.html"
+    },
+    {
+      "id": "ninja3008836_html",
+      "label": "Ninja 300 Header Page",
+      "file_type": "document",
+      "source_file": "Ninja3008836.html"
+    },
+    {
+      "id": "ninjazx10rr_html",
+      "label": "Ninja ZX10RR Page",
+      "file_type": "document",
+      "source_file": "Ninjazx10rr.html"
+    },
+    {
+      "id": "ninjazx10rr8836_html",
+      "label": "Ninja ZX10RR Header Page",
+      "file_type": "document",
+      "source_file": "Ninjazx10rr8836.html"
+    },
+    {
+      "id": "ohlins_html",
+      "label": "Ohlins Products Page",
+      "file_type": "document",
+      "source_file": "Ohlins.html"
+    },
+    {
+      "id": "ohlins8836_html",
+      "label": "Ohlins Header Page",
+      "file_type": "document",
+      "source_file": "Ohlins8836.html"
+    },
+    {
+      "id": "payment_html",
+      "label": "Payment Information Page",
+      "file_type": "document",
+      "source_file": "payment.html"
+    },
+    {
+      "id": "payment8836_html",
+      "label": "Payment Header Page",
+      "file_type": "document",
+      "source_file": "payment8836.html"
+    },
+    {
+      "id": "pictures_html",
+      "label": "Gallery Page",
+      "file_type": "document",
+      "source_file": "Pictures.html"
+    },
+    {
+      "id": "pictures8836_html",
+      "label": "Gallery Header Page",
+      "file_type": "document",
+      "source_file": "Pictures8836.html"
+    },
+    {
+      "id": "yamaha_html",
+      "label": "Yamaha Category",
+      "file_type": "concept",
+      "source_file": "Ninja300.html"
+    },
+    {
+      "id": "honda_html",
+      "label": "Honda Category",
+      "file_type": "concept",
+      "source_file": "Pictures.html"
+    },
+    {
+      "id": "kawasaki_html",
+      "label": "Kawasaki Category",
+      "file_type": "concept",
+      "source_file": "Pictures.html"
+    },
+    {
+      "id": "suzuki_html",
+      "label": "Suzuki Category",
+      "file_type": "concept",
+      "source_file": "Pictures.html"
+    },
+    {
+      "id": "triumph_html",
+      "label": "Triumph Category",
+      "file_type": "concept",
+      "source_file": "Pictures.html"
+    },
+    {
+      "id": "royal_enfield_html",
+      "label": "Royal Enfield Category",
+      "file_type": "concept",
+      "source_file": "Pictures.html"
+    },
+    {
+      "id": "ksr110_page",
+      "label": "KSR110",
+      "file_type": "code",
+      "source_file": "KSR110.html"
+    },
+    {
+      "id": "ksr1108836_page",
+      "label": "KSR110 (Header)",
+      "file_type": "code",
+      "source_file": "KSR1108836.html"
+    },
+    {
+      "id": "ktm_rc390_page",
+      "label": "KTM RC390",
+      "file_type": "code",
+      "source_file": "KTM-RC390.html"
+    },
+    {
+      "id": "ktm_rc3908836_page",
+      "label": "KTM RC390 (Header)",
+      "file_type": "code",
+      "source_file": "KTM-RC3908836.html"
+    },
+    {
+      "id": "monkey_msx125_page",
+      "label": "Monkey MSX125",
+      "file_type": "code",
+      "source_file": "Monkey_msx125.html"
+    },
+    {
+      "id": "monkey_msx1258836_page",
+      "label": "Monkey MSX125 (Header)",
+      "file_type": "code",
+      "source_file": "Monkey_msx1258836.html"
+    },
+    {
+      "id": "msx125_page",
+      "label": "MSX125",
+      "file_type": "code",
+      "source_file": "msx125.html"
+    },
+    {
+      "id": "msx1258836_page",
+      "label": "MSX125 (Header)",
+      "file_type": "code",
+      "source_file": "msx1258836.html"
+    },
+    {
+      "id": "nc35_page",
+      "label": "NC35",
+      "file_type": "code",
+      "source_file": "NC35.html"
+    },
+    {
+      "id": "nc358836_page",
+      "label": "NC35 (Header)",
+      "file_type": "code",
+      "source_file": "NC358836.html"
+    },
+    {
+      "id": "ninja250_300_ninja400_page",
+      "label": "Ninja 250/300/400",
+      "file_type": "code",
+      "source_file": "Ninja250_300_Ninja400.html"
+    },
+    {
+      "id": "yamaha_category",
+      "label": "YAMAHA",
+      "file_type": "concept",
+      "source_file": "KSR110.html"
+    },
+    {
+      "id": "honda_category",
+      "label": "HONDA",
+      "file_type": "concept",
+      "source_file": "KSR110.html"
+    },
+    {
+      "id": "sr_page",
+      "label": "SR 400, 500",
+      "file_type": "code",
+      "source_file": "KSR110.html"
+    },
+    {
+      "id": "srx_page",
+      "label": "SRX 400-600",
+      "file_type": "code",
+      "source_file": "KSR110.html"
+    },
+    {
+      "id": "xs650_page",
+      "label": "XS650, TX650",
+      "file_type": "code",
+      "source_file": "KSR110.html"
+    },
+    {
+      "id": "xt500_page",
+      "label": "XT, TT500",
+      "file_type": "code",
+      "source_file": "KSR110.html"
+    },
+    {
+      "id": "r15_xsr_page",
+      "label": "R15, XSR155, XMAX300",
+      "file_type": "code",
+      "source_file": "KSR110.html"
+    },
+    {
+      "id": "r3_page",
+      "label": "R3, MT03, R25",
+      "file_type": "code",
+      "source_file": "KSR110.html"
+    },
+    {
+      "id": "r1_r6_page",
+      "label": "R1, R6, R7",
+      "file_type": "code",
+      "source_file": "KSR110.html"
+    }
+  ],
+  "edges": [
+    {
+      "source": "cb750k8836_yamaha",
+      "target": "cb750k8836_sr400_500",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "cb750k8836_yamaha",
+      "target": "cb750k8836_srx400_600",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "cb750k8836_yamaha",
+      "target": "cb750k8836_xs650_tx650",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "cb750k8836_yamaha",
+      "target": "cb750k8836_xt_tt500",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "cb750k8836_yamaha",
+      "target": "cb750k8836_r15_xsr155_xmax300",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "cb750k8836_yamaha",
+      "target": "cbr150r_cbr250rr_r3_mt03_r25",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CBR150r_CBR250rr.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "cb750k8836_yamaha",
+      "target": "contact_r1_r6_r7",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "contact.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "cb750k8836_yamaha",
+      "target": "thaigigabike_home",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CB750k8836.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_jp_html",
+      "target": "index_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index jp.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_jp_html",
+      "target": "index_2_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index jp.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_jp_html",
+      "target": "kawasaki_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index jp.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_jp_html",
+      "target": "yamaha_sr400_500",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index jp.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_jp_html",
+      "target": "honda_cb400ss",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index jp.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_jp_html",
+      "target": "suzuki_vorty250",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index jp.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_html",
+      "target": "index_2_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "kawasaki_html",
+      "target": "kawasaki_w650_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "kawasaki.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_jp_html",
+      "target": "index_triumph_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index jp.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_jp_html",
+      "target": "index_jp_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index jp.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_html",
+      "target": "giga_bike_index",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "giga_bike_index",
+      "target": "giga_bike_2t_html",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "Giga-Bike-/index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "giga_bike_hts_log",
+      "target": "thaigigabike_com",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Giga-Bike-/hts-log.txt",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "giga_bike_2t_html",
+      "target": "giga_bike_bmw_html",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Giga-Bike-/www.thaigigabike.com/2T.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "giga_bike_2t_html",
+      "target": "giga_bike_cb150r_html",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "Giga-Bike-/www.thaigigabike.com/2T.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "giga_bike_bolts_nut_html",
+      "target": "giga_bike_cb750k_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Giga-Bike-/www.thaigigabike.com/Bolts-nut.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "giga_bike_hts_log",
+      "target": "giga_bike_carburetor_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Giga-Bike-/hts-log.txt",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_1_page",
+      "target": "honda_cb400ss_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index 1.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_1_page",
+      "target": "honda_gb250_400_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index 1.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_1_page",
+      "target": "honda_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index 1.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "honda_cb400ss_page",
+      "target": "index_1_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "honda cb400ss.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_1_page",
+      "target": "yamaha_sr_category",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "index 1.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_1_page",
+      "target": "kawasaki_w650_category",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index 1.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "index_1_page",
+      "target": "suzuki_vorty_category",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "index 1.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "ninja250_300_ninja4008836_html",
+      "target": "yamaha_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Ninja250_300_Ninja4008836.html"
+    },
+    {
+      "source": "ninja300_html",
+      "target": "ninja3008836_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Ninja300.html"
+    },
+    {
+      "source": "ninjazx10rr_html",
+      "target": "ninjazx10rr8836_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Ninjazx10rr.html"
+    },
+    {
+      "source": "ohlins_html",
+      "target": "ohlins8836_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Ohlins.html"
+    },
+    {
+      "source": "payment_html",
+      "target": "payment8836_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "payment.html"
+    },
+    {
+      "source": "pictures_html",
+      "target": "pictures8836_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Pictures.html"
+    },
+    {
+      "source": "ninja300_html",
+      "target": "yamaha_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Ninja300.html"
+    },
+    {
+      "source": "pictures_html",
+      "target": "honda_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Pictures.html"
+    },
+    {
+      "source": "pictures_html",
+      "target": "kawasaki_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Pictures.html"
+    },
+    {
+      "source": "pictures_html",
+      "target": "suzuki_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Pictures.html"
+    },
+    {
+      "source": "pictures_html",
+      "target": "triumph_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Pictures.html"
+    },
+    {
+      "source": "pictures_html",
+      "target": "royal_enfield_html",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Pictures.html"
+    },
+    {
+      "source": "ksr110_page",
+      "target": "ksr1108836_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "KSR110.html"
+    },
+    {
+      "source": "ktm_rc390_page",
+      "target": "ktm_rc3908836_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "KTM-RC390.html"
+    },
+    {
+      "source": "monkey_msx125_page",
+      "target": "monkey_msx1258836_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Monkey_msx125.html"
+    },
+    {
+      "source": "msx125_page",
+      "target": "msx1258836_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "msx125.html"
+    },
+    {
+      "source": "nc35_page",
+      "target": "nc358836_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "NC35.html"
+    },
+    {
+      "source": "ksr110_page",
+      "target": "yamaha_category",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "KSR110.html"
+    },
+    {
+      "source": "ksr110_page",
+      "target": "sr_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "KSR110.html"
+    },
+    {
+      "source": "ksr110_page",
+      "target": "srx_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "KSR110.html"
+    },
+    {
+      "source": "ksr110_page",
+      "target": "xs650_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "KSR110.html"
+    },
+    {
+      "source": "ksr110_page",
+      "target": "xt500_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "KSR110.html"
+    },
+    {
+      "source": "ksr110_page",
+      "target": "r15_xsr_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "KSR110.html"
+    },
+    {
+      "source": "ksr110_page",
+      "target": "r3_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "KSR110.html"
+    },
+    {
+      "source": "ksr110_page",
+      "target": "r1_r6_page",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "KSR110.html"
+    },
+    {
+      "source": "ksr110_page",
+      "target": "honda_category",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "KSR110.html"
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 622725,
+  "output_tokens": 11100
+}
