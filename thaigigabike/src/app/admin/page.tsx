@@ -10,6 +10,7 @@ import { products as initialProducts } from '@/data/products'
 import type { Product } from '@/data/products'
 import { ProductModal } from '@/components/admin/ProductModal'
 import { createClient } from '@/lib/supabase/client'
+import { toCsvRow } from '@/lib/csv'
 
 type OrderStatus = 'pending' | 'paid' | 'shipping' | 'delivered' | 'cancelled'
 type Tab = 'products' | 'orders' | 'stock'
@@ -237,7 +238,7 @@ export default function AdminPage() {
     const csv = [
       ['Order ID', 'Customer', 'Phone', 'Items', 'Total', 'Status', 'Tracking', 'Date'],
       ...orders.map(o => [o.id, o.recipient_name, o.recipient_phone, o.items?.length ?? 0, o.total, o.status, o.tracking_no ?? '', new Date(o.created_at).toLocaleDateString('th-TH')]),
-    ].map(row => row.join(',')).join('\n')
+    ].map(row => toCsvRow(row)).join('\n')
     const blob = new Blob([csv], { type: 'text/csv' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a'); a.href = url; a.download = 'orders.csv'; a.click()
@@ -248,7 +249,7 @@ export default function AdminPage() {
     const csv = [
       ['รหัส', 'ชื่อสินค้า', 'สต็อก', 'สถานะ'],
       ...products.map(p => [p.code, p.nameTh, p.stockCount, p.inStock ? 'มีสินค้า' : 'หมด']),
-    ].map(row => row.join(',')).join('\n')
+    ].map(row => toCsvRow(row)).join('\n')
     const blob = new Blob(['﻿' + csv], { type: 'text/csv;charset=utf-8' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a'); a.href = url; a.download = 'stock.csv'; a.click()

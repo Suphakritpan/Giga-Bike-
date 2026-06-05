@@ -52,6 +52,25 @@ CREATE INDEX IF NOT EXISTS order_lookup_otps_order_id_idx
 CREATE INDEX IF NOT EXISTS order_lookup_otps_expires_at_idx
   ON order_lookup_otps (expires_at);
 
+-- ── Admin login attempt log (rate limiting) ─────────────────────────────────
+-- Written by POST /api/admin/auth/login (service role only).
+-- Stores hashed IP — never raw IP or credentials.
+-- After MAX_ATTEMPTS (5) failed attempts in 15 minutes from the same
+-- email + IP hash, the login API returns a generic 429 error.
+CREATE TABLE IF NOT EXISTS admin_login_attempts (
+  id         UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+  email      TEXT        NOT NULL,
+  ip_hash    TEXT        NOT NULL,
+  success    BOOLEAN     NOT NULL DEFAULT false,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+ALTER TABLE admin_login_attempts ENABLE ROW LEVEL SECURITY;
+-- No public policies — only service_role can access (bypasses RLS).
+
+CREATE INDEX IF NOT EXISTS admin_login_attempts_lookup_idx
+  ON admin_login_attempts (email, ip_hash, created_at);
+
 -- Unique index so the DB enforces idempotency even under concurrent requests.
 -- Partial (WHERE NOT NULL) so NULL rows are not constrained against each other.
 CREATE UNIQUE INDEX IF NOT EXISTS orders_idempotency_key_unique

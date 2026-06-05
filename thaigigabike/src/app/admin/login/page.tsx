@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Zap, LogIn, Eye, EyeOff } from 'lucide-react'
 import { createClient } from '@/lib/supabase/client'
@@ -12,6 +12,17 @@ export default function AdminLoginPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
+  // Handle redirect from middleware when authenticated user is not allowlisted.
+  // Sign them out so they are not stuck in a loop.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    if (params.get('error') === 'unauthorized') {
+      setError('คุณไม่มีสิทธิ์เข้าถึงระบบแอดมิน')
+      const supabase = createClient()
+      supabase.auth.signOut()
+    }
+  }, [])
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
@@ -20,15 +31,24 @@ export default function AdminLoginPage() {
       return
     }
     setLoading(true)
-    const supabase = createClient()
-    // Generic error message prevents username enumeration (OWASP A07)
-    const { error } = await supabase.auth.signInWithPassword({ email, password })
-    if (error) {
-      setError('อีเมลหรือรหัสผ่านไม่ถูกต้อง')
+    try {
+      // Server-side login: rate-limited + allowlist-checked (OWASP A07, A04)
+      const res = await fetch('/api/admin/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.trim().toLowerCase(), password }),
+      })
+      if (res.ok) {
+        router.push('/admin')
+        router.refresh()
+      } else {
+        const data = await res.json()
+        setError(data.error || 'อีเมลหรือรหัสผ่านไม่ถูกต้อง')
+        setLoading(false)
+      }
+    } catch {
+      setError('เกิดข้อผิดพลาด กรุณาลองใหม่')
       setLoading(false)
-    } else {
-      router.push('/admin')
-      router.refresh()
     }
   }
 

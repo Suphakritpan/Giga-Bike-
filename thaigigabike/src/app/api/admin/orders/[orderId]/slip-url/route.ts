@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createServiceClient } from '@/lib/supabase/service'
+import { isAdminEmail } from '@/lib/auth/admin'
 
 const SIGNED_URL_TTL_SECONDS = 600 // 10 minutes
 
@@ -11,9 +12,8 @@ const SIGNED_URL_TTL_SECONDS = 600 // 10 minutes
  * (stored in the PRIVATE order-slips bucket). Callers must hold
  * a valid Supabase session.
  *
- * Auth note (P0-B2): session check only — the page that calls this
- * is already behind the /admin middleware guard. Full role-based
- * authorization (email allowlist) is enforced in P0-B6.
+ * Auth (P0-B6): requires valid session + allowlisted admin email.
+ * The page that calls this is also behind the /admin middleware guard.
  *
  * Security:
  *  - No client-supplied storage path is accepted; the path comes
@@ -25,11 +25,15 @@ export async function POST(
   _req: NextRequest,
   { params }: { params: { orderId: string } }
 ) {
-  // Minimal server-side auth: require an active session.
+  // Require an active session from an allowlisted admin email.
   const serverClient = createClient()
   const { data: { user } } = await serverClient.auth.getUser()
   if (!user) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+  if (!isAdminEmail(user.email)) {
+    console.warn(`[admin/slip-url] non-allowlisted access attempt (userId: ${user.id})`)
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
   }
 
   // Use the service client so RLS does not block the lookup.
