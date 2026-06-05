@@ -114,7 +114,12 @@ export default function CheckoutPage() {
   const router    = useRouter()
   const fileRef   = useRef<HTMLInputElement>(null)
 
-  const [form, setForm]       = useState({ name: '', phone: '', address: '' })
+  // Per-checkout-session idempotency key — prevents duplicate orders if the
+  // user taps submit twice or the network drops after the server commits.
+  // Generated lazily on first submit; persists for the life of this page mount.
+  const idempotencyKeyRef = useRef<string | null>(null)
+
+  const [form, setForm]       = useState({ name: '', phone: '', email: '', address: '' })
   const [shipping, setShipping] = useState('kerry')
   const [payment, setPayment]   = useState('transfer')
   const [slipFile, setSlipFile] = useState<File | null>(null)
@@ -162,6 +167,11 @@ export default function CheckoutPage() {
     } else if (!isValidThaiPhone(form.phone)) {
       e.phone = locale === 'th' ? 'เบอร์โทรไม่ถูกต้อง (เช่น 081-234-5678)' : 'Invalid phone number'
     }
+    if (!form.email.trim()) {
+      e.email = locale === 'th' ? 'กรุณากรอกอีเมล (สำหรับรับรหัสยืนยันออเดอร์)' : 'Email required (for order verification)'
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      e.email = locale === 'th' ? 'รูปแบบอีเมลไม่ถูกต้อง' : 'Invalid email format'
+    }
     if (!form.address.trim()) e.address  = locale === 'th' ? 'กรุณากรอกที่อยู่'    : 'Address is required'
     if (payment === 'transfer' && !slipFile) e.slip = locale === 'th' ? 'กรุณาแนบสลิป' : 'Payment slip required'
     setErrors(e)
@@ -174,21 +184,27 @@ export default function CheckoutPage() {
     setSubmitting(true)
     setApiError(null)
 
+    // Generate idempotency key once per checkout session.
+    if (!idempotencyKeyRef.current) {
+      idempotencyKeyRef.current = crypto.randomUUID()
+    }
+
     const fd = new FormData()
     fd.append('name', form.name)
     fd.append('phone', form.phone)
+    fd.append('email', form.email)
     fd.append('address', form.address)
     fd.append('shippingMethod', shipping)
-    fd.append('shippingFee', String(selectedShipping.price))
     fd.append('paymentMethod', payment)
+    fd.append('idempotencyKey', idempotencyKeyRef.current)
+    // Send only the minimal identifiers — the server recomputes all prices,
+    // shipping fees, COD fees, and the final total from trusted database data.
+    // Never send price, subtotal, shippingFee, codFee, or total from the client.
     fd.append('items', JSON.stringify(items.map(i => ({
-      productId: i.product.id, code: i.product.code,
-      name: i.product.name,   nameTh: i.product.nameTh,
-      price: i.product.price, quantity: i.quantity, color: i.color,
+      productId: i.product.id,
+      quantity:  i.quantity,
+      color:     i.color,
     }))))
-    fd.append('subtotal', String(totalPrice))
-    fd.append('codFee', String(codFee))
-    fd.append('total', String(grandTotal))
     if (slipFile) fd.append('slip', slipFile)
 
     try {
@@ -254,6 +270,16 @@ export default function CheckoutPage() {
                   onChange={e => setForm({ ...form, phone: e.target.value })} />
               </Field>
             </div>
+
+            <Field
+              label={locale === 'th' ? 'อีเมล * (สำหรับรับรหัสยืนยันออเดอร์)' : 'Email * (for order verification code)'}
+              error={errors.email}
+            >
+              <input className="input" style={borderErr('email')} value={form.email}
+                type="email" inputMode="email" autoComplete="email"
+                placeholder="example@email.com"
+                onChange={e => setForm({ ...form, email: e.target.value })} />
+            </Field>
 
             <Field label={`${t.checkout.address} *`} error={errors.address}>
               <textarea className="input" style={{ ...borderErr('address'), height: 80, resize: 'none' }}

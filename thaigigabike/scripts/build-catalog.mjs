@@ -181,9 +181,9 @@ BEGIN
 END $$;
 
 ALTER TABLE products ENABLE ROW LEVEL SECURITY;
+-- Security policies are managed in supabase-setup.sql (run it after this seed).
+-- Remove any stale broad policy that may remain from earlier runs.
 DROP POLICY IF EXISTS "Public read products" ON products;
-CREATE POLICY "Public read products" ON products FOR SELECT USING (true);
--- inserts/updates/deletes go through the service-role key (admin panel)
 
 `
 const cols = '(id, code, name, name_th, price, category, bike_models, colors, in_stock, stock_count, material, description, description_th, images, featured, published, review_reasons)'

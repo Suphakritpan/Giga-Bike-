@@ -12,14 +12,15 @@ export const legacyProducts: Product[] = [
     "price": 1000,
     "category": "hardware",
     "bikeModels": [
-      "cb750"
+      "cb750",
+      "gb400"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "STAINLESS + ปิเนียมอย่างดี",
-    "description": "Top Yoke Bolt Billet น๊อตขันแผงคอบนแต่ง Honda Cb750,GB250-400. Fits: Honda CB750 k0-k7 · Material: STAINLESS + ปิเนียมอย่างดี · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Top Yoke Bolt Billet น๊อตขันแผงคอบนแต่ง Honda Cb750,GB250-400 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ STAINLESS + ปิเนียมอย่างดี · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Top Yoke Bolt Billet น๊อตขันแผงคอบนแต่ง Honda Cb750,GB250-400 ผลิตจาก STAINLESS + ปิเนียมอย่างดี อันละ",
+    "descriptionTh": "Top Yoke Bolt Billet น๊อตขันแผงคอบนแต่ง Honda Cb750,GB250-400 ผลิตจาก STAINLESS + ปิเนียมอย่างดี อันละ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/nut-cb.jpg"
     ],
@@ -41,8 +42,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตนเลส304ทั้ง",
-    "description": "Fender Front Long 500 mm. บังโคลนหน้าแต่ง CB750 k0-k7 ความยาว 500 mm. Fits: Honda CB750 k0-k7 · Material: สแตนเลส304 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Fender Front Long 500 mm. บังโคลนหน้าแต่ง CB750 k0-k7 ความยาว 500 mm · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ สแตนเลส304 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Fender Front Long 500 mm. บังโคลนหน้าแต่ง CB750 k0-k7 ความยาว 500 mm.ผลิตจากสแตนเลส304ทั้งชิ้น อันละ",
+    "descriptionTh": "Fender Front Long 500 mm. บังโคลนหน้าแต่ง CB750 k0-k7 ความยาว 500 mm.ผลิตจากสแตนเลส304ทั้งชิ้น อันละ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/front-fender-cb750-1.jpg"
     ],
@@ -64,8 +65,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมพิเศษเกรด 7075 ด้วยเครื่อง CNC ทั้ง",
-    "description": "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง cb750 k0-k7. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมพิเศษเกรด 7075 ด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง cb750 k0-k7 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมพิเศษเกรด 7075 ด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง cb750 k0-k7 ผลิตจากอลูมิเนียมพิเศษเกรด 7075 ด้วยเครื่อง CNC ทั้งชุด 8 ชิ้น",
+    "descriptionTh": "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง cb750 k0-k7 ผลิตจากอลูมิเนียมพิเศษเกรด 7075 ด้วยเครื่อง CNC ทั้งชุด 8 ชิ้น",
     "images": [
       "/legacy/webgigabike.com/honda cb750/nutvale-cb750.jpg"
     ],
@@ -87,8 +88,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมด้วยเครื่อง CNC ทั้ง",
-    "description": "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb750. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb750 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb750 ผลิตจากอลูมิเนียมด้วยเครื่อง CNC ทั้งชุด 8 ชิ้น",
+    "descriptionTh": "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb750 ผลิตจากอลูมิเนียมด้วยเครื่อง CNC ทั้งชุด 8 ชิ้น",
     "images": [
       "/legacy/webgigabike.com/honda cb750/covervale-cb750.jpg"
     ],
@@ -110,8 +111,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Points Cover Finned Alloy CNC Billet ฝาครอบจานไฟแต่งข้างขวา CB750 k0-k7 แบบครีบเอียงตามครีบเสื้อสูบ ขัดเงา. Fits: Honda CB750 k0-k7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Points Cover Finned Alloy CNC Billet ฝาครอบจานไฟแต่งข้างขวา CB750 k0-k7 แบบครีบเอียงตามครีบเสื้อสูบ ขัดเงา · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Points Cover Finned Alloy CNC Billet ฝาครอบจานไฟแต่งข้างขวา CB750 k0-k7 แบบครีบเอียงตามครีบเสื้อสูบ ขัดเงา อันละ",
+    "descriptionTh": "Points Cover Finned Alloy CNC Billet ฝาครอบจานไฟแต่งข้างขวา CB750 k0-k7 แบบครีบเอียงตามครีบเสื้อสูบ ขัดเงา อันละ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/coverr-cb750.jpg"
     ],
@@ -133,8 +134,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k 7",
-    "description": "Alternator Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างซ้าย. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k 7 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Alternator Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างซ้าย · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k 7 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Alternator Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างซ้ายผลิตจากอลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k 7",
+    "descriptionTh": "Alternator Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างซ้ายผลิตจากอลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k 7",
     "images": [
       "/legacy/webgigabike.com/honda cb750/coverl-cb750.jpg"
     ],
@@ -156,8 +157,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย",
-    "description": "Clutch Cover Finned Billet CNC Alloy ฝาครอบคลัชแต่ง CB750 k0-k7. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Clutch Cover Finned Billet CNC Alloy ฝาครอบคลัชแต่ง CB750 k0-k7 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Clutch Cover Finned Billet CNC Alloy ฝาครอบคลัชแต่ง CB750 k0-k7ผลิตจากอลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย อันละ",
+    "descriptionTh": "Clutch Cover Finned Billet CNC Alloy ฝาครอบคลัชแต่ง CB750 k0-k7ผลิตจากอลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย อันละ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/covercluch-cb750.jpg"
     ],
@@ -179,8 +180,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมด้วยเครื่อง CNC สินค้าลิขสิทธิ์ร้าน GIGA BIKE เราออกแบบและผลิตเอง",
-    "description": "Starter Cover Finned Billet CNC Alloy ฝาครอบไดร์สตาร์ทแต่ง Honda cb750. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมด้วยเครื่อง CNC สินค้าลิขสิทธิ์ร้าน GIGA BIKE เราออกแบบและผลิตเอง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Starter Cover Finned Billet CNC Alloy ฝาครอบไดร์สตาร์ทแต่ง Honda cb750 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมด้วยเครื่อง CNC สินค้าลิขสิทธิ์ร้าน GIGA BIKE เราออกแบบและผลิตเอง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Starter Cover Finned Billet CNC Alloy ฝาครอบไดร์สตาร์ทแต่ง Honda cb750 ผลิตจากอลูมิเนียมด้วยเครื่อง CNC สินค้าลิขสิทธิ์ร้าน GIGA BIKE เราออกแบบและผลิตเอง อันละ",
+    "descriptionTh": "Starter Cover Finned Billet CNC Alloy ฝาครอบไดร์สตาร์ทแต่ง Honda cb750 ผลิตจากอลูมิเนียมด้วยเครื่อง CNC สินค้าลิขสิทธิ์ร้าน GIGA BIKE เราออกแบบและผลิตเอง อันละ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/coverdi-cb750.jpg"
     ],
@@ -202,8 +203,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูปิเนียมเกรดพิเศษ",
-    "description": "Breather Cover Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง HONDA CB750. Fits: Honda CB750 k0-k7 · Material: อลูปิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Breather Cover Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง HONDA CB750 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูปิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Breather Cover Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง HONDA CB750 ผลิตจากอลูปิเนียมเกรดพิเศษ อันละ",
+    "descriptionTh": "Breather Cover Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง HONDA CB750 ผลิตจากอลูปิเนียมเกรดพิเศษ อันละ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/covervale1.jpg"
     ],
@@ -225,8 +226,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets Stainless Steel 35mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V ใส่ CB750 ขนาด 35mm.คู่ล่ะ. Fits: Honda CB750 k0-k7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets Stainless Steel 35mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V ใส่ CB750 ขนาด 35mm.คู่ล่ะ · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets Stainless Steel 35mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V ใส่ CB750 ขนาด 35mm.คู่ล่ะ",
+    "descriptionTh": "Headlight Brackets Stainless Steel 35mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V ใส่ CB750 ขนาด 35mm.คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharngsr-v.jpg"
     ],
@@ -250,8 +251,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackest 35mm. หูยึดไฟหน้าแต่งอลูมิเนียม CB750 ขนาด 35mm.คู่ล่ะ. Fits: Honda CB750 k0-k7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackest 35mm. หูยึดไฟหน้าแต่งอลูมิเนียม CB750 ขนาด 35mm.คู่ล่ะ · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackest 35mm. หูยึดไฟหน้าแต่งอลูมิเนียม CB750 ขนาด 35mm.คู่ล่ะ",
+    "descriptionTh": "Headlight Brackest 35mm. หูยึดไฟหน้าแต่งอลูมิเนียม CB750 ขนาด 35mm.คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/hoochang sr/hoochang-p1.jpg"
     ],
@@ -275,8 +276,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets 35mm. Billet CNC Alloy หูยึดไฟหน้า CB750 งานCNC ขนาด 35mm.(สีเงินสีทองและสีดำ). Fits: Honda CB750 k0-k7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets 35mm. Billet CNC Alloy หูยึดไฟหน้า CB750 งานCNC ขนาด 35mm.(สีเงินสีทองและสีดำ) · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets 35mm. Billet CNC Alloy หูยึดไฟหน้า CB750 งานCNC ขนาด 35mm.(สีเงินสีทองและสีดำ) คู่ละ",
+    "descriptionTh": "Headlight Brackets 35mm. Billet CNC Alloy หูยึดไฟหน้า CB750 งานCNC ขนาด 35mm.(สีเงินสีทองและสีดำ) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/cocer-col.jpg"
     ],
@@ -300,8 +301,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมพิเศษเกรด 7075 ด้วยเครื่อง CNC ทั้ง",
-    "description": "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง cb750 k0-k7 ลายใหม่ล่าสุด. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมพิเศษเกรด 7075 ด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง cb750 k0-k7 ลายใหม่ล่าสุด · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมพิเศษเกรด 7075 ด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง cb750 k0-k7 ลายใหม่ล่าสุด ผลิตจากอลูมิเนียมพิเศษเกรด 7075 ด้วยเครื่อง CNC ทั้งชุด 8 ชิ้น",
+    "descriptionTh": "Nut Valve Cover CNC Machined Billet Alloy น็อตขันฝาครอบตั้งวาล์วแต่ง cb750 k0-k7 ลายใหม่ล่าสุด ผลิตจากอลูมิเนียมพิเศษเกรด 7075 ด้วยเครื่อง CNC ทั้งชุด 8 ชิ้น",
     "images": [
       "/legacy/webgigabike.com/honda cb750/nutvale.jpg"
     ],
@@ -323,8 +324,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก",
-    "description": "Fork Top Bolts Alloy น๊อตขันหัวโช๊ค CB750 K0-K7. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Fork Top Bolts Alloy น๊อตขันหัวโช๊ค CB750 K0-K7 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Fork Top Bolts Alloy น๊อตขันหัวโช๊ค CB750 K0-K7 ผลิตจากอลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก คู่ล่ะ",
+    "descriptionTh": "Fork Top Bolts Alloy น๊อตขันหัวโช๊ค CB750 K0-K7 ผลิตจากอลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/nut-cb-shock1.jpg"
     ],
@@ -340,14 +341,15 @@ export const legacyProducts: Product[] = [
     "price": 450,
     "category": "hardware",
     "bikeModels": [
-      "cb750"
+      "cb750",
+      "gb400"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก",
-    "description": "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ CB750 & GB250-400. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ CB750 & GB250-400 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ CB750 & GB250-400 ผลิตจากอลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก ชิ้นล่ะ",
+    "descriptionTh": "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ CB750 & GB250-400 ผลิตจากอลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/nut-cb-cnc.jpg"
     ],
@@ -369,8 +371,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC",
-    "description": "Rear Drum Brake Arm Lock Billet CNC ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนียม สำหรับใส่ CB750. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Rear Drum Brake Arm Lock Billet CNC ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนียม สำหรับใส่ CB750 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Rear Drum Brake Arm Lock Billet CNC ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนียม สำหรับใส่ CB750 ผลิตจากอลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC ชิ้นล่ะ",
+    "descriptionTh": "Rear Drum Brake Arm Lock Billet CNC ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนียม สำหรับใส่ CB750 ผลิตจากอลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/lock-drum.jpg"
     ],
@@ -392,8 +394,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC",
-    "description": "Rear Disc Brake Arm Lock Billet CNC ขายึดล๊อคปั๊มดิสเบรคหลังแต่งอลูเนียม สำหรับใส่ CB750. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Rear Disc Brake Arm Lock Billet CNC ขายึดล๊อคปั๊มดิสเบรคหลังแต่งอลูเนียม สำหรับใส่ CB750 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Rear Disc Brake Arm Lock Billet CNC ขายึดล๊อคปั๊มดิสเบรคหลังแต่งอลูเนียม สำหรับใส่ CB750 ผลิตจากอลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC ชิ้นล่ะ",
+    "descriptionTh": "Rear Disc Brake Arm Lock Billet CNC ขายึดล๊อคปั๊มดิสเบรคหลังแต่งอลูเนียม สำหรับใส่ CB750 ผลิตจากอลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/lock-disc.jpg"
     ],
@@ -415,8 +417,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตลเลสปั๊มขึ้นรูปทั้ง",
-    "description": "Fender Front Cafe Sty 450mm. บังโคลนหน้าแต่ง CB750 k0-k7. Fits: Honda CB750 k0-k7 · Material: สแตลเลสปั๊มขึ้นรูป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Fender Front Cafe Sty 450mm. บังโคลนหน้าแต่ง CB750 k0-k7 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ สแตลเลสปั๊มขึ้นรูป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Fender Front Cafe Sty 450mm. บังโคลนหน้าแต่ง CB750 k0-k7 ผลิตจากสแตลเลสปั๊มขึ้นรูปทั้งชิ้น ทรงคาเฟ่ ขนาด 450 มม. (แบบยาว)",
+    "descriptionTh": "Fender Front Cafe Sty 450mm. บังโคลนหน้าแต่ง CB750 k0-k7 ผลิตจากสแตลเลสปั๊มขึ้นรูปทั้งชิ้น ทรงคาเฟ่ ขนาด 450 มม. (แบบยาว)",
     "images": [
       "/legacy/webgigabike.com/honda cb750/front-fender-cb750-cafe.jpg"
     ],
@@ -438,8 +440,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตลเลสปั๊มขึ้นรูปทั้ง",
-    "description": "Fender Front Trackter Sty 400mm. บังโคลนหน้าแต่ง CB750 k0-k7. Fits: Honda CB750 k0-k7 · Material: สแตลเลสปั๊มขึ้นรูป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Fender Front Trackter Sty 400mm. บังโคลนหน้าแต่ง CB750 k0-k7 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ สแตลเลสปั๊มขึ้นรูป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Fender Front Trackter Sty 400mm. บังโคลนหน้าแต่ง CB750 k0-k7 ผลิตจากสแตลเลสปั๊มขึ้นรูปทั้งชิ้น ทรงแทร็กเกอร์ ขนาด 390 มม. (แบบสั้น",
+    "descriptionTh": "Fender Front Trackter Sty 400mm. บังโคลนหน้าแต่ง CB750 k0-k7 ผลิตจากสแตลเลสปั๊มขึ้นรูปทั้งชิ้น ทรงแทร็กเกอร์ ขนาด 390 มม. (แบบสั้น",
     "images": [
       "/legacy/webgigabike.com/honda cb750/front-fender-cb750-tracker.jpg"
     ],
@@ -461,8 +463,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมด้วยเครื่อง CNC ทั้ง",
-    "description": "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb750. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb750 · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb750 ผลิตจากอลูมิเนียมด้วยเครื่อง CNC ทั้งชุด 8 ชิ้น",
+    "descriptionTh": "Nut Valve Cover CNC Polished Billet Aluminum น็อตฝาวาล์วแต่ง Honda cb750 ผลิตจากอลูมิเนียมด้วยเครื่อง CNC ทั้งชุด 8 ชิ้น",
     "images": [
       "/legacy/webgigabike.com/honda cb750/covervale-cb750-1.jpg"
     ],
@@ -484,8 +486,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k7",
-    "description": "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย HONDA. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k7 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย HONDA · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k7 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย HONDA ผลิตจากอลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k7 อันละ",
+    "descriptionTh": "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย HONDA ผลิตจากอลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k7 อันละ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/cover-FR-cb750-2.jpg",
       "/legacy/webgigabike.com/honda cb750/cover-FR-cb750-1.jpg"
@@ -508,8 +510,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k7",
-    "description": "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย SOHC. Fits: Honda CB750 k0-k7 · Material: อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k7 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย SOHC · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ อลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k7 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย SOHC ผลิตจากอลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k7 อันละ",
+    "descriptionTh": "Points Cover Finned Billet CNC Alloy ฝาครอบจานไฟแต่งข้างขวา ลาย SOHC ผลิตจากอลูมิเนียมพิเศษด้วยเครื่อง CNC ขัดเงาให้เรียบร้อย CB750 k0-k7 อันละ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/cover-FR-cb750-3.jpg"
     ],
@@ -531,72 +533,13 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 35 mm. คู่ล่ะ. Fits: Honda CB750 k0-k7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 35 mm. คู่ล่ะ · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 35 mm. คู่ล่ะ",
+    "descriptionTh": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 35 mm. คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Honda Gb250-400/Lock-33-mm.jpg"
     ],
     "featured": false,
     "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cb24",
-    "code": "CB.24",
-    "name": "Points Cover Finned Alloy CNC Billet CB750 k0-k7 (Polished)",
-    "nameTh": "ฝาครอบจานไฟแต่งข้างขวา CB750 k0-k7 แบบครีบเอียงตามครีบฝาคลัช ขัดเงา",
-    "price": 2500,
-    "category": "engine",
-    "bikeModels": [
-      "cb750"
-    ],
-    "colors": ["polished"],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "CNC Billet Alloy 6061 T6 (Polished)",
-    "description": "Points Cover Finned Alloy CNC Billet (Polished) for Honda CB750 k0-k7. Right-side ignition/points cover with finned design matching the clutch cover. Precision machined from 6061-T6 alloy, polished finish. Fits: Honda CB750 k0-k7 · Material: CNC Billet Alloy 6061 T6 (Polished) · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Points Cover Finned Alloy CNC Billet (Polished) for Honda CB750 k0-k7. Right-side ignition/points cover with finned design matching the clutch cover. Precision machined from 6061-T6 alloy, polished finish · ใส่ได้กับ Honda CB750 k0-k7 · วัสดุ CNC Billet Alloy 6061 T6 (Polished) · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [
-      "/legacy/webgigabike.com/sr-gb1.jpg",
-      "/legacy/webgigabike.com/honda cb750/CB750-.jpg",
-      "/legacy/webgigabike.com/Triumph/triumph100.jpg",
-      "/legacy/Part All_clip_image004.jpg",
-      "/legacy/Part All_clip_image006.jpg",
-      "/legacy/Part All_clip_image016.jpg",
-      "/legacy/Part All_clip_image012.jpg",
-      "/legacy/Part All_clip_image020.jpg",
-      "/legacy/Part All_clip_image010.jpg",
-      "/legacy/Part All_clip_image028.jpg",
-      "/legacy/Part All_clip_image026.jpg",
-      "/legacy/Part All_clip_image018.jpg",
-      "/legacy/Part All_clip_image036.jpg",
-      "/legacy/Part All_clip_image034.jpg",
-      "/legacy/Part All_clip_image032.jpg",
-      "/legacy/Part All_clip_image030.jpg",
-      "/legacy/Part All_clip_image038.jpg",
-      "/legacy/Part All_clip_image042.jpg",
-      "/legacy/Part All_clip_image040.jpg",
-      "/legacy/Part All_clip_image044.jpg",
-      "/legacy/Part All_clip_image046.jpg",
-      "/legacy/Part All_clip_image048.jpg",
-      "/legacy/Part All_clip_image060.jpg",
-      "/legacy/Part All_clip_image062.jpg",
-      "/legacy/Part All_clip_image064.jpg",
-      "/legacy/Part All_clip_image052.jpg",
-      "/legacy/Part All_clip_image070.jpg",
-      "/legacy/Part All_clip_image068.jpg",
-      "/legacy/Part All_clip_image066.jpg",
-      "/legacy/Part All_clip_image082.jpg",
-      "/legacy/Part All_clip_image084.jpg",
-      "/legacy/Part All_clip_image086.jpg",
-      "/legacy/Part All_clip_image088.jpg",
-      "/legacy/Part All_clip_image090.jpg",
-      "/legacy/webgigabike.com/honda cb750/covercluch-cb750-180.jpg",
-      "/legacy/webgigabike.com/honda cb750/CB750_69.jpg",
-      "/legacy/webgigabike.com/honda cb750/coverr-cb750-t2.jpg"
-    ],
-    "featured": false,
-    "published": false,
     "reviewReasons": []
   },
   {
@@ -613,8 +556,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตลเลสทั้ง",
-    "description": "บังโคลนหน้า แต่ง Estrella250-70mm. Fits: Kawasaki Estrella250/TR250 · Material: สแตลเลส · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้า แต่ง Estrella250-70mm · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ สแตลเลส · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้า แต่ง Estrella250-70mm. ผลิตจากสแตลเลสทั้งชิ้น ทรง Cafe,Custom ชิ้นละ",
+    "descriptionTh": "บังโคลนหน้า แต่ง Estrella250-70mm. ผลิตจากสแตลเลสทั้งชิ้น ทรง Cafe,Custom ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/kawasaki-Estrella/bangklon-tr.jpg",
       "/legacy/webgigabike.com/kawasaki/bangklon-tr.html"
@@ -637,8 +580,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "STAINLESS + ปิเนียม อย่างดี",
-    "description": "น๊อตขันแผงคอบนแต่ง Kawasaki Estrella250. Fits: Kawasaki Estrella250/TR250 · Material: STAINLESS + ปิเนียม อย่างดี · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแผงคอบนแต่ง Kawasaki Estrella250 · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ STAINLESS + ปิเนียม อย่างดี · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแผงคอบนแต่ง Kawasaki Estrella250 ผลิตจาก STAINLESS + ปิเนียม อย่างดี ชิ้นละ",
+    "descriptionTh": "น๊อตขันแผงคอบนแต่ง Kawasaki Estrella250 ผลิตจาก STAINLESS + ปิเนียม อย่างดี ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/kawasaki-Estrella/nut-estrela.jpg",
       "/legacy/webgigabike.com/kawasaki/nut-estrela.html"
@@ -661,8 +604,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมินั่มอัลลอยเกรดพิเศษ",
-    "description": "ฝาครอบวาล์ว Kawasaki Estrella250. Fits: Kawasaki Estrella250/TR250 · Material: อลูมินั่มอัลลอยเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบวาล์ว Kawasaki Estrella250 · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ อลูมินั่มอัลลอยเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบวาล์ว Kawasaki Estrella250 ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ คู่ละ",
+    "descriptionTh": "ฝาครอบวาล์ว Kawasaki Estrella250 ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ คู่ละ",
     "images": [
       "/legacy/webgigabike.com/kawa 250tr/cover-tr.jpg",
       "/legacy/webgigabike.com/kawasaki-Estrella/Coverva-sl.jpg",
@@ -686,8 +629,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ปิเนียมเกรดพิเศษ 7075 T6",
-    "description": "หูยึดเครื่องด้านบน Kawasaki Estrella250 สามารถใส่แทนหูเดิมได้เลย. Fits: Kawasaki Estrella250/TR250 · Material: ปิเนียมเกรดพิเศษ 7075 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดเครื่องด้านบน Kawasaki Estrella250 สามารถใส่แทนหูเดิมได้เลย · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ ปิเนียมเกรดพิเศษ 7075 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดเครื่องด้านบน Kawasaki Estrella250 สามารถใส่แทนหูเดิมได้เลย ผลิตจากปิเนียมเกรดพิเศษ 7075 T6 คู่ละ",
+    "descriptionTh": "หูยึดเครื่องด้านบน Kawasaki Estrella250 สามารถใส่แทนหูเดิมได้เลย ผลิตจากปิเนียมเกรดพิเศษ 7075 T6 คู่ละ",
     "images": [
       "/legacy/webgigabike.com/kawasaki-Estrella/hoo-estrela.jpg",
       "/legacy/webgigabike.com/kawasaki/hoo-estrela.html"
@@ -712,8 +655,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ปิเนียมเกรดพิเศษ 6061 T6",
-    "description": "ชุดแผงคอบน Kawasaki Estrella250 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย. Fits: Kawasaki Estrella250/TR250 · Material: ปิเนียมเกรดพิเศษ 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบน Kawasaki Estrella250 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ ปิเนียมเกรดพิเศษ 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบน Kawasaki Estrella250 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย ผลิตจากปิเนียมเกรดพิเศษ 6061 T6 ชุดละ",
+    "descriptionTh": "ชุดแผงคอบน Kawasaki Estrella250 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย ผลิตจากปิเนียมเกรดพิเศษ 6061 T6 ชุดละ",
     "images": [
       "/legacy/webgigabike.com/kawasaki-Estrella/Top-Yoke-CNC.jpg",
       "/legacy/webgigabike.com/kawasaki/Top-Yoke-CNC.html"
@@ -736,8 +679,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Allloy CNC Billet",
-    "description": "ชุดแผงคอบน Kawasaki Estrella250 แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย. Fits: Kawasaki Estrella250/TR250 · Material: Allloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบน Kawasaki Estrella250 แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ Allloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบน Kawasaki Estrella250 แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย ผลิตจาก Allloy CNC Billet ชุดละ",
+    "descriptionTh": "ชุดแผงคอบน Kawasaki Estrella250 แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย ผลิตจาก Allloy CNC Billet ชุดละ",
     "images": [
       "/legacy/webgigabike.com/kawasaki-Estrella/Top-Yoke-CNC-custom.jpg",
       "/legacy/webgigabike.com/kawasaki/Top-Yoke-CNC-custom.html"
@@ -760,8 +703,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตขันแผงคอกลาง Estrella250 งาน CNC. Fits: Kawasaki Estrella250/TR250 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแผงคอกลาง Estrella250 งาน CNC · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแผงคอกลาง Estrella250 งาน CNC ผลิตจาก Alloy 7075 CNC Billet มี 2 สี (ดำ-เงิน) ชิ้นละ",
+    "descriptionTh": "น๊อตขันแผงคอกลาง Estrella250 งาน CNC ผลิตจาก Alloy 7075 CNC Billet มี 2 สี (ดำ-เงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/kawasaki-Estrella/nut-estrela-cnc.jpg",
       "/legacy/webgigabike.com/kawasaki/nut-estrela-cnc.html"
@@ -784,8 +727,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตขันหัวโช๊ค Estrella250 ขนาดโช๊ค 39 mm. Fits: Kawasaki Estrella250/TR250 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันหัวโช๊ค Estrella250 ขนาดโช๊ค 39 mm · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันหัวโช๊ค Estrella250 ขนาดโช๊ค 39 mm. ผลิตจาก Alloy 6061 CNC Billet มี 2 สี (ดำ-เงิน) คู่ละ",
+    "descriptionTh": "น๊อตขันหัวโช๊ค Estrella250 ขนาดโช๊ค 39 mm. ผลิตจาก Alloy 6061 CNC Billet มี 2 สี (ดำ-เงิน) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/kawasaki-Estrella/nut-Chock-front.jpg",
       "/legacy/webgigabike.com/kawasaki/nut-Chock-front.html"
@@ -808,8 +751,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet",
-    "description": "ขายึดไฟเลี้ยวหน้าแต่ง แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 39 mm. Fits: Kawasaki Estrella250/TR250 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดไฟเลี้ยวหน้าแต่ง แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 39 mm · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดไฟเลี้ยวหน้าแต่ง แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 39 mm. ผลิตจาก Alloy 6061 CNC Billet มีสี (ดำ และ เงิน) คู่ล่ะ",
+    "descriptionTh": "ขายึดไฟเลี้ยวหน้าแต่ง แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 39 mm. ผลิตจาก Alloy 6061 CNC Billet มีสี (ดำ และ เงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/Lock-41-mm.jpg"
     ],
@@ -831,8 +774,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบ",
-    "description": "สวิงอาร์มอลูมิเนียมแต่ง Kawasaki Estrella250. Fits: Kawasaki Estrella250/TR250 · Material: Alloy 6061 ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สวิงอาร์มอลูมิเนียมแต่ง Kawasaki Estrella250 · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ Alloy 6061 ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สวิงอาร์มอลูมิเนียมแต่ง Kawasaki Estrella250 ผลิตจาก Alloy 6061 ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบชุด พร้อมลูกปืนสวิงอาร์ มครบ ชุดล่ะ",
+    "descriptionTh": "สวิงอาร์มอลูมิเนียมแต่ง Kawasaki Estrella250 ผลิตจาก Alloy 6061 ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบชุด พร้อมลูกปืนสวิงอาร์ มครบ ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/kawasaki-Estrella/Swingarm-estrella-bk.jpg",
       "/legacy/webgigabike.com/kawasaki-Estrella/Swingarm-estrella-sil-1.jpg",
@@ -856,8 +799,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ปั๊มขึ้นรูปทั้ง",
-    "description": "บังโคลนหน้าแต่ง ทรง CAFE รุ่นลวดคาด. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ปั๊มขึ้นรูป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้าแต่ง ทรง CAFE รุ่นลวดคาด · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ปั๊มขึ้นรูป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้าแต่ง ทรง CAFE รุ่นลวดคาด ผลิตจาก Stainless Steel 304 ปั๊มขึ้นรูปทั้งชิ้น",
+    "descriptionTh": "บังโคลนหน้าแต่ง ทรง CAFE รุ่นลวดคาด ผลิตจาก Stainless Steel 304 ปั๊มขึ้นรูปทั้งชิ้น",
     "images": [
       "/legacy/webgigabike.com/bangclon sr/bangclonsr-5.jpg"
     ],
@@ -879,8 +822,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ปั๊มขึ้นรูปทั้ง",
-    "description": "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm. กว้าง 115 mm. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ปั๊มขึ้นรูป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm. กว้าง 115 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ปั๊มขึ้นรูป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm. กว้าง 115 mm. ผลิตจาก Stainless Steel 304 ปั๊มขึ้นรูปทั้งชิ้น",
+    "descriptionTh": "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm. กว้าง 115 mm. ผลิตจาก Stainless Steel 304 ปั๊มขึ้นรูปทั้งชิ้น",
     "images": [
       "/legacy/webgigabike.com/part/bangclonsr-custom.jpg"
     ],
@@ -902,8 +845,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ปั๊มขึ้นรูปทั้ง",
-    "description": "บังโคลนหน้าแต่ง SR. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ปั๊มขึ้นรูป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้าแต่ง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ปั๊มขึ้นรูป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้าแต่ง SR ผลิตจาก Stainless Steel 304 ปั๊มขึ้นรูปทั้งชิ้น ทรงแทร็กเกอร์ ขนาด 390 mm. (แบบสั้น)",
+    "descriptionTh": "บังโคลนหน้าแต่ง SR ผลิตจาก Stainless Steel 304 ปั๊มขึ้นรูปทั้งชิ้น ทรงแทร็กเกอร์ ขนาด 390 mm. (แบบสั้น)",
     "images": [
       "/legacy/webgigabike.com/part/bangclonsr-3.jpg"
     ],
@@ -925,8 +868,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ปั๊มขึ้นรูปทั้ง",
-    "description": "บังโคลนหน้าแต่ง SR. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ปั๊มขึ้นรูป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้าแต่ง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ปั๊มขึ้นรูป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้าแต่ง SR ผลิตจาก Stainless Steel 304 ปั๊มขึ้นรูปทั้งชิ้น ทรงคาเฟ่ ขนาด 450 mm. (แบบยาว)",
+    "descriptionTh": "บังโคลนหน้าแต่ง SR ผลิตจาก Stainless Steel 304 ปั๊มขึ้นรูปทั้งชิ้น ทรงคาเฟ่ ขนาด 450 mm. (แบบยาว)",
     "images": [
       "/legacy/webgigabike.com/part/Fender Front sr-450.jpg"
     ],
@@ -948,8 +891,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ทั้งอัน",
-    "description": "บังโคลนหลังแต่ง SR. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ทั้ง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหลังแต่ง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ทั้ง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหลังแต่ง SR ผลิตจาก Stainless Steel 304 ทั้งอัน",
+    "descriptionTh": "บังโคลนหลังแต่ง SR ผลิตจาก Stainless Steel 304 ทั้งอัน",
     "images": [
       "/legacy/webgigabike.com/bangclon sr/bangconlang.jpg"
     ],
@@ -971,8 +914,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลย ไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบ",
-    "description": "สวิงอาร์มอลูมิเนียมแต่งใส่ YAMAHA SR Type 1 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลย ไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบชุด ทั้งชุดมีแกนล้อหลังบุ๊ทล้อหลังบุ๊ทโช๊คหลัง พร้อมน๊อตยึดโช๊คหลังและลูกปืนสวิงอาร์มครบ(สินค้าลิขสิทธิ์ของร้าน GIGA BIKE เราออกแบบและผลิตเอง สินค้าส่งออกขายทั้งญี่ปุ่นเยอรมันและอเมริกา) สวยงามแข็งแรงทดสอบใช้ในสนามแข่งมาแล้วหลายสนามครับ รับประกันคุณภาพ ชุดล่ะ. Fits: Yamaha SR400/500 · Material: อลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลย ไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สวิงอาร์มอลูมิเนียมแต่งใส่ YAMAHA SR Type 1 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลย ไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบชุด ทั้งชุดมีแกนล้อหลังบุ๊ทล้อหลังบุ๊ทโช๊คหลัง พร้อมน๊อตยึดโช๊คหลังและลูกปืนสวิงอาร์มครบ(สินค้าลิขสิทธิ์ของร้าน GIGA BIKE เราออกแบบและผลิตเอง สินค้าส่งออกขายทั้งญี่ปุ่นเยอรมันและอเมริกา) สวยงามแข็งแรงทดสอบใช้ในสนามแข่งมาแล้วหลายสนามครับ รับประกันคุณภาพ ชุดล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลย ไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สวิงอาร์มอลูมิเนียมแต่งใส่ YAMAHA SR Type 1 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลย ไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบชุด ทั้งชุดมีแกนล้อหลังบุ๊ทล้อหลังบุ๊ทโช๊คหลัง พร้อมน๊อตยึดโช๊คหลังและลูกปืนสวิงอาร์มครบ(สินค้าลิขสิทธิ์ของร้าน GIGA BIKE เราออกแบบและผลิตเอง สินค้าส่งออกขายทั้งญี่ปุ่นเยอรมันและอเมริกา) สวยงามแข็งแรงทดสอบใช้ในสนามแข่งมาแล้วหลายสนามครับ รับประกันคุณภาพ ชุดล่ะ",
+    "descriptionTh": "สวิงอาร์มอลูมิเนียมแต่งใส่ YAMAHA SR Type 1 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลย ไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบชุด ทั้งชุดมีแกนล้อหลังบุ๊ทล้อหลังบุ๊ทโช๊คหลัง พร้อมน๊อตยึดโช๊คหลังและลูกปืนสวิงอาร์มครบ(สินค้าลิขสิทธิ์ของร้าน GIGA BIKE เราออกแบบและผลิตเอง สินค้าส่งออกขายทั้งญี่ปุ่นเยอรมันและอเมริกา) สวยงามแข็งแรงทดสอบใช้ในสนามแข่งมาแล้วหลายสนามครับ รับประกันคุณภาพ ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Swingamr-t1-tita.jpg",
       "/legacy/webgigabike.com/svingarm sr/swingarmgigabike-sr9.jpg"
@@ -995,8 +938,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบ",
-    "description": "สวิงอาร์มอลูมิเนียมแต่ง YAMAHA SR Type 2. Fits: Yamaha SR400/500 · Material: อลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สวิงอาร์มอลูมิเนียมแต่ง YAMAHA SR Type 2 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สวิงอาร์มอลูมิเนียมแต่ง YAMAHA SR Type 2 ผลิตจากอลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบชุด ทั้งชุดมีแกนล้อหลังบุ๊ทล้อหลังบุ๊ทโช๊คหลังพร้อมน๊อตยึดโช๊คหลังและลูกปืนสวิงอาร์มครบ ทั้งชุด",
+    "descriptionTh": "สวิงอาร์มอลูมิเนียมแต่ง YAMAHA SR Type 2 ผลิตจากอลูเนียมเกรดพิเศษ 6061 ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์ให้ครบชุด ทั้งชุดมีแกนล้อหลังบุ๊ทล้อหลังบุ๊ทโช๊คหลังพร้อมน๊อตยึดโช๊คหลังและลูกปืนสวิงอาร์มครบ ทั้งชุด",
     "images": [
       "/legacy/webgigabike.com/svingarm sr/swingarmgigabike-sr11.jpg"
     ],
@@ -1018,8 +961,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น็อตครอบที่ตั้งโซ่ราวลิ้นแต่ง. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตครอบที่ตั้งโซ่ราวลิ้นแต่ง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตครอบที่ตั้งโซ่ราวลิ้นแต่ง ผลิตจาก Alloy 7075 CNC Billet สำหรับใส่ SR,XT (Color&ndash;Black,Silver,Hard) ชิ้นล่ะ",
+    "descriptionTh": "น็อตครอบที่ตั้งโซ่ราวลิ้นแต่ง ผลิตจาก Alloy 7075 CNC Billet สำหรับใส่ SR,XT (Color&ndash;Black,Silver,Hard) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nutval7075-All.jpg"
     ],
@@ -1041,8 +984,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet สวยงามแข็งแรง",
-    "description": "ตัวล๊อคฝาดุมดรั๊มเบรคหน้า yamaha SR. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet สวยงามแข็งแรง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตัวล๊อคฝาดุมดรั๊มเบรคหน้า yamaha SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet สวยงามแข็งแรง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตัวล๊อคฝาดุมดรั๊มเบรคหน้า yamaha SR ผลิตจาก Alloy CNC Billet สวยงามแข็งแรง ชิ้นละ",
+    "descriptionTh": "ตัวล๊อคฝาดุมดรั๊มเบรคหน้า yamaha SR ผลิตจาก Alloy CNC Billet สวยงามแข็งแรง ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/lokcdrum.jpg"
     ],
@@ -1064,8 +1007,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สายส่งน้ำมันเครื่องขึ้นบนเฟรม YAMAHA SR พร้อมชุดอแดปเตอร์ ใส่แทนสายยางเดิมได้เลย ไม่ต้องดัดแปลง ชุดล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สายส่งน้ำมันเครื่องขึ้นบนเฟรม YAMAHA SR พร้อมชุดอแดปเตอร์ ใส่แทนสายยางเดิมได้เลย ไม่ต้องดัดแปลง ชุดล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สายส่งน้ำมันเครื่องขึ้นบนเฟรม YAMAHA SR พร้อมชุดอแดปเตอร์ ใส่แทนสายยางเดิมได้เลย ไม่ต้องดัดแปลง ชุดล่ะ",
+    "descriptionTh": "สายส่งน้ำมันเครื่องขึ้นบนเฟรม YAMAHA SR พร้อมชุดอแดปเตอร์ ใส่แทนสายยางเดิมได้เลย ไม่ต้องดัดแปลง ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Oil_Lind.jpg"
     ],
@@ -1087,8 +1030,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม",
-    "description": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA SR. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA SR ผลิตจาก Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม ชิ้นล่ะ",
+    "descriptionTh": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA SR ผลิตจาก Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/bangsosr.jpg"
     ],
@@ -1110,8 +1053,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม",
-    "description": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650 ผลิตจาก Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม ชิ้นละ",
+    "descriptionTh": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650 ผลิตจาก Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/bangso-700.jpg"
     ],
@@ -1133,8 +1076,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบโช๊คหน้าแต่งแบบว้าวโค้งในใส่ SR400/500 ,XT,TT Alloy CNC Billet มีแบบขัดเงา. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบโช๊คหน้าแต่งแบบว้าวโค้งในใส่ SR400/500 ,XT,TT Alloy CNC Billet มีแบบขัดเงา · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบโช๊คหน้าแต่งแบบว้าวโค้งในใส่ SR400/500 ,XT,TT Alloy CNC Billet มีแบบขัดเงา คู่ละ",
+    "descriptionTh": "ฝาครอบโช๊คหน้าแต่งแบบว้าวโค้งในใส่ SR400/500 ,XT,TT Alloy CNC Billet มีแบบขัดเงา คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/cover-chok1.jpg"
     ],
@@ -1159,8 +1102,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ขายึดฝาดรั๊มเบรคและดิสเบรกหลังแต่ง SR ความยาว 300-320 mm. ball joint M8 เกลียวซ้ายและขวา. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดฝาดรั๊มเบรคและดิสเบรกหลังแต่ง SR ความยาว 300-320 mm. ball joint M8 เกลียวซ้ายและขวา · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดฝาดรั๊มเบรคและดิสเบรกหลังแต่ง SR ความยาว 300-320 mm. ball joint M8 เกลียวซ้ายและขวา ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน ชิ้นล่ะ",
+    "descriptionTh": "ขายึดฝาดรั๊มเบรคและดิสเบรกหลังแต่ง SR ความยาว 300-320 mm. ball joint M8 เกลียวซ้ายและขวา ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/lokcdrum-diss-sr.jpg"
     ],
@@ -1182,8 +1125,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr รุ่นฉลองครบรอบ 25&30 ปี. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr รุ่นฉลองครบรอบ 25&30 ปี · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr รุ่นฉลองครบรอบ 25&30 ปี ผลิตจาก Alloy +Stainless CNC Billet (มีสี เงิน/ดำ/ส้ม/ไทเท/ขัดเงา) อันละ",
+    "descriptionTh": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr รุ่นฉลองครบรอบ 25&30 ปี ผลิตจาก Alloy +Stainless CNC Billet (มีสี เงิน/ดำ/ส้ม/ไทเท/ขัดเงา) อันละ",
     "images": [
       "/legacy/webgigabike.com/part/cap-oil-frem.jpg"
     ],
@@ -1205,8 +1148,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบเรียบ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบเรียบ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบเรียบ ผลิตจาก Alloy +Stainless CNC Billet ( มีสี เงิน/ดำ/ไทเท/ขัดเงา )อันละ",
+    "descriptionTh": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบเรียบ ผลิตจาก Alloy +Stainless CNC Billet ( มีสี เงิน/ดำ/ไทเท/ขัดเงา )อันละ",
     "images": [
       "/legacy/webgigabike.com/part/cap-oilfrem.jpg"
     ],
@@ -1228,8 +1171,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy +Stainless CNC Billet",
-    "description": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบโลโก้. Fits: Yamaha SR400/500 · Material: Alloy +Stainless CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบโลโก้ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy +Stainless CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบโลโก้ ผลิตจาก Alloy +Stainless CNC Billet มีสี (ดำ,เงิน,ส้ม,ไทเทเนี่ยม-ขัดเงา) อันละ",
+    "descriptionTh": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบโลโก้ ผลิตจาก Alloy +Stainless CNC Billet มีสี (ดำ,เงิน,ส้ม,ไทเทเนี่ยม-ขัดเงา) อันละ",
     "images": [
       "/legacy/webgigabike.com/part/capoifremlogo.jpg"
     ],
@@ -1255,8 +1198,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "อแด๊ปเตอร์ต่อสายออยขึ้นบนเฟรมสำหรับ SR AN6. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อแด๊ปเตอร์ต่อสายออยขึ้นบนเฟรมสำหรับ SR AN6 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อแด๊ปเตอร์ต่อสายออยขึ้นบนเฟรมสำหรับ SR AN6 ผลิตจาก Alloy CNC Billet มีสี (น้ำเงิน-ดำ-ฮาร์ด) ชุดล่ะ",
+    "descriptionTh": "อแด๊ปเตอร์ต่อสายออยขึ้นบนเฟรมสำหรับ SR AN6 ผลิตจาก Alloy CNC Billet มีสี (น้ำเงิน-ดำ-ฮาร์ด) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/adabter-oil.jpg"
     ],
@@ -1278,8 +1221,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ปั๊มขึ้นรูป สวยงามทนทานปลอดสนิม",
-    "description": "แผ่นปลายเปิดท่อซุปเปอร์แทร๊ป. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ปั๊มขึ้นรูป สวยงามทนทานปลอดสนิม · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นปลายเปิดท่อซุปเปอร์แทร๊ป · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ปั๊มขึ้นรูป สวยงามทนทานปลอดสนิม · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นปลายเปิดท่อซุปเปอร์แทร๊ป ผลิตจาก Stainless Steel 304 ปั๊มขึ้นรูป สวยงามทนทานปลอดสนิม",
+    "descriptionTh": "แผ่นปลายเปิดท่อซุปเปอร์แทร๊ป ผลิตจาก Stainless Steel 304 ปั๊มขึ้นรูป สวยงามทนทานปลอดสนิม",
     "images": [
       "/legacy/webgigabike.com/part/trapp-700.jpg"
     ],
@@ -1303,8 +1246,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ด้วยเครื่อง CNC",
-    "description": "ตัวล๊อคดุมเสตอร์หลัง yamaha SR. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตัวล๊อคดุมเสตอร์หลัง yamaha SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตัวล๊อคดุมเสตอร์หลัง yamaha SR ผลิตจาก Stainless Steel 304 ด้วยเครื่อง CNC อันล่ะ",
+    "descriptionTh": "ตัวล๊อคดุมเสตอร์หลัง yamaha SR ผลิตจาก Stainless Steel 304 ด้วยเครื่อง CNC อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cortorhub.jpg"
     ],
@@ -1328,8 +1271,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม แบบเลื้อย",
-    "description": "คอท่อแต่งสแตนเลส Yamaha SR ใส่เข้ากับท่อแทร๊ปท่อบวบท่อแม็กโฟนและท่อเดิมได้เลย ไม่ต้องดัดแปลง. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม แบบเลื้อย · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "คอท่อแต่งสแตนเลส Yamaha SR ใส่เข้ากับท่อแทร๊ปท่อบวบท่อแม็กโฟนและท่อเดิมได้เลย ไม่ต้องดัดแปลง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม แบบเลื้อย · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "คอท่อแต่งสแตนเลส Yamaha SR ใส่เข้ากับท่อแทร๊ปท่อบวบท่อแม็กโฟนและท่อเดิมได้เลย ไม่ต้องดัดแปลง ผลิตจาก Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม แบบเลื้อย",
+    "descriptionTh": "คอท่อแต่งสแตนเลส Yamaha SR ใส่เข้ากับท่อแทร๊ปท่อบวบท่อแม็กโฟนและท่อเดิมได้เลย ไม่ต้องดัดแปลง ผลิตจาก Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม แบบเลื้อย",
     "images": [
       "/legacy/webgigabike.com/part/cortorsr-7001.jpg"
     ],
@@ -1353,8 +1296,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม แบบ เดิม",
-    "description": "คอท่อแต่งสแตนเลส Yamaha SR ใส่เข้ากับท่อแทร๊ปท่อบวบท่อแม็กโฟนและท่อเดิมได้เลย ไม่ต้องดัดแปลง. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม แบบ เดิม · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "คอท่อแต่งสแตนเลส Yamaha SR ใส่เข้ากับท่อแทร๊ปท่อบวบท่อแม็กโฟนและท่อเดิมได้เลย ไม่ต้องดัดแปลง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม แบบ เดิม · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "คอท่อแต่งสแตนเลส Yamaha SR ใส่เข้ากับท่อแทร๊ปท่อบวบท่อแม็กโฟนและท่อเดิมได้เลย ไม่ต้องดัดแปลง ผลิตจาก Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม แบบ เดิม",
+    "descriptionTh": "คอท่อแต่งสแตนเลส Yamaha SR ใส่เข้ากับท่อแทร๊ปท่อบวบท่อแม็กโฟนและท่อเดิมได้เลย ไม่ต้องดัดแปลง ผลิตจาก Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม แบบ เดิม",
     "images": [
       "/legacy/webgigabike.com/part/cortorsr-7002.jpg"
     ],
@@ -1372,14 +1315,15 @@ export const legacyProducts: Product[] = [
     "price": 500,
     "category": "engine",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "srx"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบกรองน้ำมันเครื่องแต่งอลูมิเนียม SR400/500 ใส่ได้ปี1978-2019,XT,TT,SRX400/600 Die Cast ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่งอลูมิเนียม SR400/500 ใส่ได้ปี1978-2019,XT,TT,SRX400/600 Die Cast ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกรองน้ำมันเครื่องแต่งอลูมิเนียม SR400/500 ใส่ได้ปี1978-2019,XT,TT,SRX400/600 Die Cast ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่งอลูมิเนียม SR400/500 ใส่ได้ปี1978-2019,XT,TT,SRX400/600 Die Cast ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cover-oilgb.jpg"
     ],
@@ -1401,8 +1345,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "7 แผ่นอุดแพร์ใต้หัวฉีด PAIR Cover. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "7 แผ่นอุดแพร์ใต้หัวฉีด PAIR Cover · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "7 แผ่นอุดแพร์ใต้หัวฉีด PAIR Cover ผลิตจาก Alloy CNC Billet สำหรับใส่ yamaha sr ปี 2001-2022 (มีสี เงิน/ดำ/ทอง) แผ่นละ",
+    "descriptionTh": "7 แผ่นอุดแพร์ใต้หัวฉีด PAIR Cover ผลิตจาก Alloy CNC Billet สำหรับใส่ yamaha sr ปี 2001-2022 (มีสี เงิน/ดำ/ทอง) แผ่นละ",
     "images": [
       "/legacy/webgigabike.com/part/egr-sr-cover.jpg",
       "/legacy/webgigabike.com/part/kunsabus-adapter-sus.jpg",
@@ -1433,8 +1377,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบมีครีบ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบมีครีบ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบมีครีบ ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นละ",
+    "descriptionTh": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบมีครีบ ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/fii-cover.jpg"
     ],
@@ -1456,8 +1400,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2019,XT,TT Die Cast. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2019,XT,TT Die Cast · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2019,XT,TT Die Cast ชิ้นละ",
+    "descriptionTh": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2019,XT,TT Die Cast ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/cover-sprokf.jpg"
     ],
@@ -1479,8 +1423,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม",
-    "description": "แผ่นรองกันเครื่องสแตนเลสแบบเรียบ YAMAHA SR. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นรองกันเครื่องสแตนเลสแบบเรียบ YAMAHA SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นรองกันเครื่องสแตนเลสแบบเรียบ YAMAHA SR ผลิตจาก Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม",
+    "descriptionTh": "แผ่นรองกันเครื่องสแตนเลสแบบเรียบ YAMAHA SR ผลิตจาก Stainless Steel 304 ขัดเงาสวยงามทนทานปลอดสนิม",
     "images": [
       "/legacy/webgigabike.com/part/gunkrangsr2.jpg"
     ],
@@ -1504,8 +1448,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ปลอดสนิม",
-    "description": "แผ่นรองกันเครื่องสแตนเลส YAMAHA SR แบบครีบระบายความร้อน. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ปลอดสนิม · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นรองกันเครื่องสแตนเลส YAMAHA SR แบบครีบระบายความร้อน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ปลอดสนิม · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นรองกันเครื่องสแตนเลส YAMAHA SR แบบครีบระบายความร้อน ผลิตจาก Stainless Steel 304 ปลอดสนิม ชิ้นล่ะ",
+    "descriptionTh": "แผ่นรองกันเครื่องสแตนเลส YAMAHA SR แบบครีบระบายความร้อน ผลิตจาก Stainless Steel 304 ปลอดสนิม ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/gunkrangsr3.jpg"
     ],
@@ -1529,8 +1473,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย",
-    "description": "แฮนจับโช๊คสแตนเลส SR รูแกน 35 มม. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คสแตนเลส SR รูแกน 35 มม · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คสแตนเลส SR รูแกน 35 มม. ผลิตจาก Stainless Steel 304 มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คสแตนเลส SR รูแกน 35 มม. ผลิตจาก Stainless Steel 304 มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hand.jpg"
     ],
@@ -1552,8 +1496,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet มีแบบขัดเงา",
-    "description": "ฝาครอบกันฝุ่นโช๊คหน้าแต่ง SR (แบบโค้งนอก). Fits: Yamaha SR400/500 · Material: Alloy CNC Billet มีแบบขัดเงา · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกันฝุ่นโช๊คหน้าแต่ง SR (แบบโค้งนอก) · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet มีแบบขัดเงา · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกันฝุ่นโช๊คหน้าแต่ง SR (แบบโค้งนอก) ผลิตจาก Alloy CNC Billet มีแบบขัดเงา คู่ละ 1,20",
+    "descriptionTh": "ฝาครอบกันฝุ่นโช๊คหน้าแต่ง SR (แบบโค้งนอก) ผลิตจาก Alloy CNC Billet มีแบบขัดเงา คู่ละ 1,20",
     "images": [
       "/legacy/webgigabike.com/part/cover-chok.jpg"
     ],
@@ -1575,8 +1519,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "หูจับไฟหน้าแต่งสแตนเลสแบบลวด สำหรับใส่ SR รูแกนโช๊ค 35 มม. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูจับไฟหน้าแต่งสแตนเลสแบบลวด สำหรับใส่ SR รูแกนโช๊ค 35 มม · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูจับไฟหน้าแต่งสแตนเลสแบบลวด สำหรับใส่ SR รูแกนโช๊ค 35 มม.คู่ละ",
+    "descriptionTh": "หูจับไฟหน้าแต่งสแตนเลสแบบลวด สำหรับใส่ SR รูแกนโช๊ค 35 มม.คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharngsr-d.jpg"
     ],
@@ -1598,8 +1542,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูจับไฟหน้าแต่ง SR แบบตัว V. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูจับไฟหน้าแต่ง SR แบบตัว V · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูจับไฟหน้าแต่ง SR แบบตัว V ผลิตจาก Stainless Steel 304 รูแกนโช๊ค 35 mm. คู่ล่ะ",
+    "descriptionTh": "หูจับไฟหน้าแต่ง SR แบบตัว V ผลิตจาก Stainless Steel 304 รูแกนโช๊ค 35 mm. คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharngsr-v.jpg"
     ],
@@ -1621,8 +1565,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูจับไฟหน้าแต่ง SR,XS 650 แบบขายึดแผงไมล์ได้. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูจับไฟหน้าแต่ง SR,XS 650 แบบขายึดแผงไมล์ได้ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูจับไฟหน้าแต่ง SR,XS 650 แบบขายึดแผงไมล์ได้ ผลิตจาก Stainless Steel 304 รูแกนโช๊ค 35 mm. ชุดล่ะ",
+    "descriptionTh": "หูจับไฟหน้าแต่ง SR,XS 650 แบบขายึดแผงไมล์ได้ ผลิตจาก Stainless Steel 304 รูแกนโช๊ค 35 mm. ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoostingkee.jpg"
     ],
@@ -1644,8 +1588,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ใส่่เข้ากับแผงคอล่างเดิมได้เลย",
-    "description": "ขายยึดไฟเลี้ยวแต่ง SR. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 ใส่่เข้ากับแผงคอล่างเดิมได้เลย · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายยึดไฟเลี้ยวแต่ง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 ใส่่เข้ากับแผงคอล่างเดิมได้เลย · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายยึดไฟเลี้ยวแต่ง SR ผลิตจาก Stainless Steel 304 ใส่่เข้ากับแผงคอล่างเดิมได้เลย คู่ละ",
+    "descriptionTh": "ขายยึดไฟเลี้ยวแต่ง SR ผลิตจาก Stainless Steel 304 ใส่่เข้ากับแผงคอล่างเดิมได้เลย คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/kajubfiliay1.jpg"
     ],
@@ -1667,8 +1611,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304",
-    "description": "มือจับหลังแต่ง SR. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "มือจับหลังแต่ง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "มือจับหลังแต่ง SR ผลิตจาก Stainless Steel 304 พร้อมขัดเงา คู่ละ",
+    "descriptionTh": "มือจับหลังแต่ง SR ผลิตจาก Stainless Steel 304 พร้อมขัดเงา คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/jublang3.jpg"
     ],
@@ -1692,8 +1636,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel",
-    "description": "กันเลี้ยวกันแฮนโดนถังน้ำมัน สำหรับ SR แต่งแนวคาเฟ่ ทำให้การขับขี่ขับคล่องตัวขึ้น. Fits: Yamaha SR400/500 · Material: Stainless Steel · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "กันเลี้ยวกันแฮนโดนถังน้ำมัน สำหรับ SR แต่งแนวคาเฟ่ ทำให้การขับขี่ขับคล่องตัวขึ้น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "กันเลี้ยวกันแฮนโดนถังน้ำมัน สำหรับ SR แต่งแนวคาเฟ่ ทำให้การขับขี่ขับคล่องตัวขึ้น ผลิตจาก Stainless Steel อันล่ะ",
+    "descriptionTh": "กันเลี้ยวกันแฮนโดนถังน้ำมัน สำหรับ SR แต่งแนวคาเฟ่ ทำให้การขับขี่ขับคล่องตัวขึ้น ผลิตจาก Stainless Steel อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/kunliay.jpg"
     ],
@@ -1717,8 +1661,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 อย่างดี คงทนแข็งแรงปลอดสนิม ขัดเงาให้เรียบร้อย",
-    "description": "หูยึดเครื่องแต่ง YAMAHA SR. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 อย่างดี คงทนแข็งแรงปลอดสนิม ขัดเงาให้เรียบร้อย · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดเครื่องแต่ง YAMAHA SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 อย่างดี คงทนแข็งแรงปลอดสนิม ขัดเงาให้เรียบร้อย · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดเครื่องแต่ง YAMAHA SR ผลิตจาก Stainless Steel 304 อย่างดี คงทนแข็งแรงปลอดสนิม ขัดเงาให้เรียบร้อย คู่ละ",
+    "descriptionTh": "หูยึดเครื่องแต่ง YAMAHA SR ผลิตจาก Stainless Steel 304 อย่างดี คงทนแข็งแรงปลอดสนิม ขัดเงาให้เรียบร้อย คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/lokccruengsr.jpg"
     ],
@@ -1742,8 +1686,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 สวยงามปลอดสนิม",
-    "description": "ขายึดฝาดรั๊มเบรคหลัง สำหรับใส่ YAMAHA SR. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 สวยงามปลอดสนิม · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดฝาดรั๊มเบรคหลัง สำหรับใส่ YAMAHA SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 สวยงามปลอดสนิม · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดฝาดรั๊มเบรคหลัง สำหรับใส่ YAMAHA SR ผลิตจาก Stainless Steel 304 สวยงามปลอดสนิม อันล่ะ",
+    "descriptionTh": "ขายึดฝาดรั๊มเบรคหลัง สำหรับใส่ YAMAHA SR ผลิตจาก Stainless Steel 304 สวยงามปลอดสนิม อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/lokcdrumbrek.jpg"
     ],
@@ -1765,8 +1709,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless Steel 304 ทั้ง",
-    "description": "ตัวย้ายกุญแจแต่ง SR สำหรับท่านที่ต้องการย้ายกุญแจมาอยู่ใต้ถังน้ำมัน. Fits: Yamaha SR400/500 · Material: Stainless Steel 304 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตัวย้ายกุญแจแต่ง SR สำหรับท่านที่ต้องการย้ายกุญแจมาอยู่ใต้ถังน้ำมัน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless Steel 304 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตัวย้ายกุญแจแต่ง SR สำหรับท่านที่ต้องการย้ายกุญแจมาอยู่ใต้ถังน้ำมัน ผลิตจาก Stainless Steel 304 ทั้งชิ้น ชุดล่ะ",
+    "descriptionTh": "ตัวย้ายกุญแจแต่ง SR สำหรับท่านที่ต้องการย้ายกุญแจมาอยู่ใต้ถังน้ำมัน ผลิตจาก Stainless Steel 304 ทั้งชิ้น ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/lokunjasr.jpg"
     ],
@@ -1790,8 +1734,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "อลูมิเนียมเกรดพิเศษ",
-    "description": "มือลิงดึงเบคหลัง SR แบบ Die Casting. Fits: Yamaha SR400/500 · Material: อลูมิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "มือลิงดึงเบคหลัง SR แบบ Die Casting · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูมิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "มือลิงดึงเบคหลัง SR แบบ Die Casting ผลิตจากอลูมิเนียมเกรดพิเศษ ชุดล่ะ",
+    "descriptionTh": "มือลิงดึงเบคหลัง SR แบบ Die Casting ผลิตจากอลูมิเนียมเกรดพิเศษ ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/lokcdrumbrekr.jpg"
     ],
@@ -1818,8 +1762,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "น็อตขันหัวโช๊ค SR ใส่แทนหัวโช๊ครุ่นจุ๊บอัดแก๊สได้เลยลดปัญหาหัวจุ๊บหัก. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตขันหัวโช๊ค SR ใส่แทนหัวโช๊ครุ่นจุ๊บอัดแก๊สได้เลยลดปัญหาหัวจุ๊บหัก · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตขันหัวโช๊ค SR ใส่แทนหัวโช๊ครุ่นจุ๊บอัดแก๊สได้เลยลดปัญหาหัวจุ๊บหัก ผลิตจาก Alloy CNC Billet มีสี เงิน/ปัดเงา คู่ละ",
+    "descriptionTh": "น็อตขันหัวโช๊ค SR ใส่แทนหัวโช๊ครุ่นจุ๊บอัดแก๊สได้เลยลดปัญหาหัวจุ๊บหัก ผลิตจาก Alloy CNC Billet มีสี เงิน/ปัดเงา คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/nutchok1.jpg",
       "/legacy/webgigabike.com/part/nutchok2.jpg"
@@ -1847,8 +1791,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "หมุดอลูมิเนียมขันล๊อคหูบังโคลนหลัง SR. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หมุดอลูมิเนียมขันล๊อคหูบังโคลนหลัง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หมุดอลูมิเนียมขันล๊อคหูบังโคลนหลัง SR ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ปัดเงา/ทอง คู่ล่ะ",
+    "descriptionTh": "หมุดอลูมิเนียมขันล๊อคหูบังโคลนหลัง SR ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ปัดเงา/ทอง คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nutty.jpg"
     ],
@@ -1864,14 +1808,15 @@ export const legacyProducts: Product[] = [
     "price": 1000,
     "category": "engine",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "srx"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี สินค้าลิขสิทธิ์ร้าน GIGA BIKE เราออกแบบและผลิตเอง มี5แบบให้เลือก มีแบบปัดเงา สีดำ/สีดำปาดเงิน/สีเงิน/สีทอง/ขัดเงา",
-    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX. Fits: Yamaha SR400/500 · Material: Alloy 6061 CNC Billet ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี สินค้าลิขสิทธิ์ร้าน GIGA BIKE เราออกแบบและผลิตเอง มี5แบบให้เลือก มีแบบปัดเงา สีดำ/สีดำปาดเงิน/สีเงิน/สีทอง/ขัดเงา · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 CNC Billet ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี สินค้าลิขสิทธิ์ร้าน GIGA BIKE เราออกแบบและผลิตเอง มี5แบบให้เลือก มีแบบปัดเงา สีดำ/สีดำปาดเงิน/สีเงิน/สีทอง/ขัดเงา · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ผลิตจาก Alloy 6061 CNC Billet ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี สินค้าลิขสิทธิ์ร้าน GIGA BIKE เราออกแบบและผลิตเอง มี5แบบให้เลือก มีแบบปัดเงา สีดำ/สีดำปาดเงิน/สีเงิน/สีทอง/ขัดเงา ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ผลิตจาก Alloy 6061 CNC Billet ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี สินค้าลิขสิทธิ์ร้าน GIGA BIKE เราออกแบบและผลิตเอง มี5แบบให้เลือก มีแบบปัดเงา สีดำ/สีดำปาดเงิน/สีเงิน/สีทอง/ขัดเงา ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Cover_Oil_SR.jpg"
     ],
@@ -1887,14 +1832,15 @@ export const legacyProducts: Product[] = [
     "price": 700,
     "category": "engine",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "srx"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet มี3สีให้เลือก",
-    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX. Fits: Yamaha SR400/500 · Material: Alloy 6061 CNC Billet มี3สีให้เลือก · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 CNC Billet มี3สีให้เลือก · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ผลิตจาก Alloy 6061 CNC Billet มี3สีให้เลือก อันล่ะ",
+    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ผลิตจาก Alloy 6061 CNC Billet มี3สีให้เลือก อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/oilfiltersr-1.jpg"
     ],
@@ -1910,14 +1856,15 @@ export const legacyProducts: Product[] = [
     "price": 700,
     "category": "engine",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "srx"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet มี3สีให้เลือก",
-    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX. Fits: Yamaha SR400/500 · Material: Alloy 6061 CNC Billet มี3สีให้เลือก · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 CNC Billet มี3สีให้เลือก · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ผลิตจาก Alloy 6061 CNC Billet มี3สีให้เลือก อันล่ะ",
+    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ผลิตจาก Alloy 6061 CNC Billet มี3สีให้เลือก อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/oilfiltersrstar.jpg"
     ],
@@ -1939,8 +1886,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงคออลูมิเนียมแต่ง่ YAMAHA SR,XS650 แบบ Die Casting ทรงคาเฟ่ ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงคออลูมิเนียมแต่ง่ YAMAHA SR,XS650 แบบ Die Casting ทรงคาเฟ่ ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงคออลูมิเนียมแต่ง่ YAMAHA SR,XS650 แบบ Die Casting ทรงคาเฟ่ ชิ้นล่ะ",
+    "descriptionTh": "แผงคออลูมิเนียมแต่ง่ YAMAHA SR,XS650 แบบ Die Casting ทรงคาเฟ่ ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/pangkor-sr0.jpg"
     ],
@@ -1967,8 +1914,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงคอแต่ง SR,XS650 (รุ่นน็อตขันข้าง). Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงคอแต่ง SR,XS650 (รุ่นน็อตขันข้าง) · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงคอแต่ง SR,XS650 (รุ่นน็อตขันข้าง) ผลิตจาก Alloy 6061 CNC Billet สวยงามแข็งแรง (มีสี เงิน/ดำ/ทอง/ปัดเงา)",
+    "descriptionTh": "แผงคอแต่ง SR,XS650 (รุ่นน็อตขันข้าง) ผลิตจาก Alloy 6061 CNC Billet สวยงามแข็งแรง (มีสี เงิน/ดำ/ทอง/ปัดเงา)",
     "images": [
       "/legacy/webgigabike.com/part/pangkor-sr8.jpg"
     ],
@@ -1995,8 +1942,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงคอแต่ง SR,XS650 (รุ่นน็อตขันหลัง). Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงคอแต่ง SR,XS650 (รุ่นน็อตขันหลัง) · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงคอแต่ง SR,XS650 (รุ่นน็อตขันหลัง) ผลิตจาก Alloy 6061 CNC Billet สวยงามแข็งแรง (มีสี เงิน/ดำ/ทอง/ปัดเงา)",
+    "descriptionTh": "แผงคอแต่ง SR,XS650 (รุ่นน็อตขันหลัง) ผลิตจาก Alloy 6061 CNC Billet สวยงามแข็งแรง (มีสี เงิน/ดำ/ทอง/ปัดเงา)",
     "images": [
       "/legacy/webgigabike.com/part/pangkor-sr7.jpg"
     ],
@@ -2018,8 +1965,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงไมล์แต่ง Stainless สำหรับใส่ YAMAHA SR ใส่เข้ากับไมล์แต่ง ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงไมล์แต่ง Stainless สำหรับใส่ YAMAHA SR ใส่เข้ากับไมล์แต่ง ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงไมล์แต่ง Stainless สำหรับใส่ YAMAHA SR ใส่เข้ากับไมล์แต่ง ชิ้นล่ะ",
+    "descriptionTh": "แผงไมล์แต่ง Stainless สำหรับใส่ YAMAHA SR ใส่เข้ากับไมล์แต่ง ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/pangmai-d.jpg"
     ],
@@ -2045,8 +1992,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061",
-    "description": "พักเท้าหลังแต่งอลูมิเนียมแบบขันล๊อคหูโช๊คหลัง SR เกลียว M10x1.25. Fits: Yamaha SR400/500 · Material: Alloy 6061 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "พักเท้าหลังแต่งอลูมิเนียมแบบขันล๊อคหูโช๊คหลัง SR เกลียว M10x1.25 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "พักเท้าหลังแต่งอลูมิเนียมแบบขันล๊อคหูโช๊คหลัง SR เกลียว M10x1.25 ผลิตจาก Alloy 6061 มีสี อลูมิเนียม/ดำ คู่ละ",
+    "descriptionTh": "พักเท้าหลังแต่งอลูมิเนียมแบบขันล๊อคหูโช๊คหลัง SR เกลียว M10x1.25 ผลิตจาก Alloy 6061 มีสี อลูมิเนียม/ดำ คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/Foot_r.jpg"
     ],
@@ -2068,8 +2015,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet มีหลายขนาดให้เลือก ใส่โซ่ 428 มี 52-55ฟัน และ ใส่โซ่ 520-40-44ฟัน",
-    "description": "สเตอร์หลังแต่ง SR. Fits: Yamaha SR400/500 · Material: Alloy 7075 CNC Billet มีหลายขนาดให้เลือก ใส่โซ่ 428 มี 52-55ฟัน และ ใส่โซ่ 520-40-44ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 CNC Billet มีหลายขนาดให้เลือก ใส่โซ่ 428 มี 52-55ฟัน และ ใส่โซ่ 520-40-44ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง SR ผลิตจาก Alloy 7075 CNC Billet มีหลายขนาดให้เลือก ใส่โซ่ 428 มี 52-55ฟัน และ ใส่โซ่ 520-40-44ฟัน อันล่ะ",
+    "descriptionTh": "สเตอร์หลังแต่ง SR ผลิตจาก Alloy 7075 CNC Billet มีหลายขนาดให้เลือก ใส่โซ่ 428 มี 52-55ฟัน และ ใส่โซ่ 520-40-44ฟัน อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/sprokket-Hart-428.jpg",
       "/legacy/webgigabike.com/part/sprokket-sr520-cut.jpg"
@@ -2092,8 +2039,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผ่นรองกันเครื่อง Stainless สำหรับใส่ YAMAHA SR ลาย MONSTER ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นรองกันเครื่อง Stainless สำหรับใส่ YAMAHA SR ลาย MONSTER ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นรองกันเครื่อง Stainless สำหรับใส่ YAMAHA SR ลาย MONSTER ชิ้นล่ะ",
+    "descriptionTh": "แผ่นรองกันเครื่อง Stainless สำหรับใส่ YAMAHA SR ลาย MONSTER ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/gunkrangsr4.jpg"
     ],
@@ -2117,8 +2064,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless ใส่ YAMAHA SR",
-    "description": "ถาดใส่แบ็ตเตอร์รี่ใต้เบาะ. Fits: Yamaha SR400/500 · Material: Stainless ใส่ YAMAHA SR · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ถาดใส่แบ็ตเตอร์รี่ใต้เบาะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless ใส่ YAMAHA SR · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ถาดใส่แบ็ตเตอร์รี่ใต้เบาะ ผลิตจาก Stainless ใส่ YAMAHA SR ชิ้นล่ะ",
+    "descriptionTh": "ถาดใส่แบ็ตเตอร์รี่ใต้เบาะ ผลิตจาก Stainless ใส่ YAMAHA SR ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/tartbat-sr.jpg"
     ],
@@ -2140,8 +2087,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless ใส่ YAMAHA SR",
-    "description": "ถาดเก็บสายไฟใต้เบาะ. Fits: Yamaha SR400/500 · Material: Stainless ใส่ YAMAHA SR · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ถาดเก็บสายไฟใต้เบาะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless ใส่ YAMAHA SR · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ถาดเก็บสายไฟใต้เบาะ ผลิตจาก Stainless ใส่ YAMAHA SR ชิ้นล่ะ",
+    "descriptionTh": "ถาดเก็บสายไฟใต้เบาะ ผลิตจาก Stainless ใส่ YAMAHA SR ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/tart-sr1.jpg"
     ],
@@ -2163,8 +2110,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "Stainless สำหรับใส่ SR ใส่เข้ากับคอท่อเดิมได้เลย ใบล่ะ",
-    "description": "ท่อฝาจีบ. Fits: Yamaha SR400/500 · Material: Stainless สำหรับใส่ SR ใส่เข้ากับคอท่อเดิมได้เลย ใบล่ะ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ท่อฝาจีบ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless สำหรับใส่ SR ใส่เข้ากับคอท่อเดิมได้เลย ใบล่ะ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ท่อฝาจีบ ผลิตจากStainless สำหรับใส่ SR ใส่เข้ากับคอท่อเดิมได้เลย ใบล่ะ",
+    "descriptionTh": "ท่อฝาจีบ ผลิตจากStainless สำหรับใส่ SR ใส่เข้ากับคอท่อเดิมได้เลย ใบล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/tor2.jpg"
     ],
@@ -2186,8 +2133,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless + Alloy สำหรับใส่ YAMAHA SR เสียงหนักแน่น ใบล่ะ",
-    "description": "ท่อแม็กกาโฟน. Fits: Yamaha SR400/500 · Material: Stainless + Alloy สำหรับใส่ YAMAHA SR เสียงหนักแน่น ใบล่ะ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ท่อแม็กกาโฟน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless + Alloy สำหรับใส่ YAMAHA SR เสียงหนักแน่น ใบล่ะ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ท่อแม็กกาโฟน ผลิตจาก Stainless + Alloy สำหรับใส่ YAMAHA SR เสียงหนักแน่น ใบล่ะ",
+    "descriptionTh": "ท่อแม็กกาโฟน ผลิตจาก Stainless + Alloy สำหรับใส่ YAMAHA SR เสียงหนักแน่น ใบล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/tormaxafon1.jpg"
     ],
@@ -2211,8 +2158,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ใส่เข้ากับเสื้อคลัชเดิมได้เลย",
-    "description": "มือยกวาล์วแต่ง SR. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet ใส่เข้ากับเสื้อคลัชเดิมได้เลย · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "มือยกวาล์วแต่ง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet ใส่เข้ากับเสื้อคลัชเดิมได้เลย · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "มือยกวาล์วแต่ง SR ผลิตจาก Alloy CNC Billet ใส่เข้ากับเสื้อคลัชเดิมได้เลย มีสี (ดำ-เงิน-ทอง-ฮาร์ด-ปัดเงา) อันละ",
+    "descriptionTh": "มือยกวาล์วแต่ง SR ผลิตจาก Alloy CNC Billet ใส่เข้ากับเสื้อคลัชเดิมได้เลย มีสี (ดำ-เงิน-ทอง-ฮาร์ด-ปัดเงา) อันละ",
     "images": [
       "/legacy/webgigabike.com/part/yokvalsr-1.jpg"
     ],
@@ -2234,8 +2181,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "บู๊ทสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บู๊ทสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ",
+    "descriptionTh": "บู๊ทสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/boot-swingarm.jpg"
     ],
@@ -2257,8 +2204,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เพลาสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เพลาสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เพลาสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ",
+    "descriptionTh": "เพลาสวิงอาร์มหน้าสำหรับใส่ SR ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-swingarm.jpg"
     ],
@@ -2280,8 +2227,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless + Alloy สำหรับใส่ SR",
-    "description": "ตัวดึงวาล์วก่อนสตาร์ทแต่ง. Fits: Yamaha SR400/500 · Material: Stainless + Alloy สำหรับใส่ SR · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตัวดึงวาล์วก่อนสตาร์ทแต่ง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless + Alloy สำหรับใส่ SR · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตัวดึงวาล์วก่อนสตาร์ทแต่งผลิตจากStainless + Alloy สำหรับใส่ SR ชุดล่ะ",
+    "descriptionTh": "ตัวดึงวาล์วก่อนสตาร์ทแต่งผลิตจากStainless + Alloy สำหรับใส่ SR ชุดล่ะ",
     "images": [],
     "featured": false,
     "published": false,
@@ -2303,8 +2250,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "คันสตาร์ท SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "คันสตาร์ท SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "คันสตาร์ท SR",
+    "descriptionTh": "คันสตาร์ท SR",
     "images": [
       "/legacy/webgigabike.com/part/kunstartsr.jpg",
       "/legacy/webgigabike.com/part/chokvv.jpg"
@@ -2330,8 +2277,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Stainless + Alloy อย่างดี มีแบบเรียบ และ แบบรู",
-    "description": "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978-2000. Fits: Yamaha SR400/500 · Material: Stainless + Alloy อย่างดี มีแบบเรียบ และ แบบรู · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978-2000 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Stainless + Alloy อย่างดี มีแบบเรียบ และ แบบรู · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978-2000 ผลิตจาก Stainless + Alloy อย่างดี มีแบบเรียบ และ แบบรู ชุดล่ะ",
+    "descriptionTh": "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978-2000 ผลิตจาก Stainless + Alloy อย่างดี มีแบบเรียบ และ แบบรู ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/nut-cb.jpg",
       "/legacy/webgigabike.com/nut/nut4.jpg"
@@ -2359,8 +2306,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "น็อตขันเสาเสื้อสูบแต่ง SR. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตขันเสาเสื้อสูบแต่ง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตขันเสาเสื้อสูบแต่ง SR ผลิตจาก Alloy CNC Billet มีสี (ดำ-เงิน-ทอง-เทา)ชุดล่ะ",
+    "descriptionTh": "น็อตขันเสาเสื้อสูบแต่ง SR ผลิตจาก Alloy CNC Billet มีสี (ดำ-เงิน-ทอง-เทา)ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nut-eng.jpg"
     ],
@@ -2386,8 +2333,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี",
-    "description": "อ่างน้ำมันเครื่อง SR. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อ่างน้ำมันเครื่อง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อ่างน้ำมันเครื่อง SR ผลิตจาก Alloy CNC Billet ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี มีสี (ดำ-เงิน-ทอง) ชิ้นล่ะ",
+    "descriptionTh": "อ่างน้ำมันเครื่อง SR ผลิตจาก Alloy CNC Billet ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี มีสี (ดำ-เงิน-ทอง) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cover-oiltank1-gold.jpg",
       "/legacy/webgigabike.com/part/cover-oiltank-gold.jpg"
@@ -2410,8 +2357,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ 7075 ด้วยเครื่อง CNC",
-    "description": "บู๊ทรองยึดไฟหน้า SR. Fits: Yamaha SR400/500 · Material: อลูมิเนียมเกรดพิเศษ 7075 ด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทรองยึดไฟหน้า SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูมิเนียมเกรดพิเศษ 7075 ด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บู๊ทรองยึดไฟหน้า SR ผลิตจากอลูมิเนียมเกรดพิเศษ 7075 ด้วยเครื่อง CNC คู่ล่ะ",
+    "descriptionTh": "บู๊ทรองยึดไฟหน้า SR ผลิตจากอลูมิเนียมเกรดพิเศษ 7075 ด้วยเครื่อง CNC คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/mood1.jpg"
     ],
@@ -2440,8 +2387,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061",
-    "description": "ขายึดกันสะบัดสำหรับใส่ SR แบบยึดหัวเครื่องกับใต้แผงคอ. Fits: Yamaha SR400/500 · Material: Alloy 6061 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดกันสะบัดสำหรับใส่ SR แบบยึดหัวเครื่องกับใต้แผงคอ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดกันสะบัดสำหรับใส่ SR แบบยึดหัวเครื่องกับใต้แผงคอ ผลิตจาก Alloy 6061 มีสี ดำ/เงิน/ทอง/ฮาร์ท ชุดล่ะ",
+    "descriptionTh": "ขายึดกันสะบัดสำหรับใส่ SR แบบยึดหัวเครื่องกับใต้แผงคอ ผลิตจาก Alloy 6061 มีสี ดำ/เงิน/ทอง/ฮาร์ท ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/kunsabus-gl-ha.jpg",
       "/legacy/webgigabike.com/part/kunsabus.jpg"
@@ -2468,8 +2415,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบปิดวาร์วไอดีไอเสียแต่ง SR งาน CNC Billet โค้งเรียบ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบปิดวาร์วไอดีไอเสียแต่ง SR งาน CNC Billet โค้งเรียบ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบปิดวาร์วไอดีไอเสียแต่ง SR งาน CNC Billet โค้งเรียบ ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC (มีสี เงิน/ดำ/ทอง) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบปิดวาร์วไอดีไอเสียแต่ง SR งาน CNC Billet โค้งเรียบ ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC (มีสี เงิน/ดำ/ทอง) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Cover_Val.jpg",
       "/legacy/webgigabike.com/part/Cover_Val-sr.jpg"
@@ -2492,8 +2439,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางกันฝุ่นหุ้มโช๊คหน้าสำหรับใส่ SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางกันฝุ่นหุ้มโช๊คหน้าสำหรับใส่ SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางกันฝุ่นหุ้มโช๊คหน้าสำหรับใส่ SR คู่ละ",
+    "descriptionTh": "ยางกันฝุ่นหุ้มโช๊คหน้าสำหรับใส่ SR คู่ละ",
     "images": [
       "/legacy/webgigabike.com/yanghumchok/y3.jpg"
     ],
@@ -2515,8 +2462,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางหุ้มโช๊คแต่ง7ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางหุ้มโช๊คแต่ง7ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางหุ้มโช๊คแต่ง7ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว คู่ละ",
+    "descriptionTh": "ยางหุ้มโช๊คแต่ง7ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว คู่ละ",
     "images": [
       "/legacy/webgigabike.com/yanghumchok/y5.jpg"
     ],
@@ -2538,8 +2485,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางหุ้มโช๊คเดิมของ SR พร้อมตะขอเกี่ยว. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางหุ้มโช๊คเดิมของ SR พร้อมตะขอเกี่ยว · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางหุ้มโช๊คเดิมของ SR พร้อมตะขอเกี่ยว คู่ละ",
+    "descriptionTh": "ยางหุ้มโช๊คเดิมของ SR พร้อมตะขอเกี่ยว คู่ละ",
     "images": [
       "/legacy/webgigabike.com/yanghumchok/y11.jpg"
     ],
@@ -2561,8 +2508,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางปิดดุมดรั๊มเบรคหน้า SR ชุดล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางปิดดุมดรั๊มเบรคหน้า SR ชุดล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางปิดดุมดรั๊มเบรคหน้า SR ชุดล่ะ",
+    "descriptionTh": "ยางปิดดุมดรั๊มเบรคหน้า SR ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/yangpaktouy/ydrum.jpg"
     ],
@@ -2584,8 +2531,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางล๊อคฝากะเป๋าข้าง SR ชุดล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางล๊อคฝากะเป๋าข้าง SR ชุดล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางล๊อคฝากะเป๋าข้าง SR ชุดล่ะ",
+    "descriptionTh": "ยางล๊อคฝากะเป๋าข้าง SR ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/yangpaktouy/yf.jpg"
     ],
@@ -2607,8 +2554,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางพักเท้า แต่งทรงกลม สำหรับใส่ SR & XS650 แต่งได้ทั้งทรงคาเฟ่แทร็กเตอร์และโอสคูลครับ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางพักเท้า แต่งทรงกลม สำหรับใส่ SR & XS650 แต่งได้ทั้งทรงคาเฟ่แทร็กเตอร์และโอสคูลครับ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางพักเท้า แต่งทรงกลม สำหรับใส่ SR & XS650 แต่งได้ทั้งทรงคาเฟ่แทร็กเตอร์และโอสคูลครับ คู่ละ",
+    "descriptionTh": "ยางพักเท้า แต่งทรงกลม สำหรับใส่ SR & XS650 แต่งได้ทั้งทรงคาเฟ่แทร็กเตอร์และโอสคูลครับ คู่ละ",
     "images": [
       "/legacy/webgigabike.com/yangpaktouy/yang22.jpg"
     ],
@@ -2630,8 +2577,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ปลอกมือแต่งใส่ได้ทุกรุ่น. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปลอกมือแต่งใส่ได้ทุกรุ่น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ปลอกมือแต่งใส่ได้ทุกรุ่น คู่ละ",
+    "descriptionTh": "ปลอกมือแต่งใส่ได้ทุกรุ่น คู่ละ",
     "images": [
       "/legacy/webgigabike.com/yangpaktouy/plokreng.jpg"
     ],
@@ -2655,8 +2602,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ปลอกมือแต่งใส่ได้ทุกรุ่น. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปลอกมือแต่งใส่ได้ทุกรุ่น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ปลอกมือแต่งใส่ได้ทุกรุ่น คู่ละ",
+    "descriptionTh": "ปลอกมือแต่งใส่ได้ทุกรุ่น คู่ละ",
     "images": [
       "/legacy/webgigabike.com/yangpaktouy/plok.jpg"
     ],
@@ -2680,8 +2627,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางล๊อคเบาะ SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางล๊อคเบาะ SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางล๊อคเบาะ SR คู่ละ",
+    "descriptionTh": "ยางล๊อคเบาะ SR คู่ละ",
     "images": [
       "/legacy/webgigabike.com/yangpaktouy/yanglokb.jpg"
     ],
@@ -2703,8 +2650,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางล๊อคหูถังน้ำมันด้านหน้า SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางล๊อคหูถังน้ำมันด้านหน้า SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางล๊อคหูถังน้ำมันด้านหน้า SR คู่ละ",
+    "descriptionTh": "ยางล๊อคหูถังน้ำมันด้านหน้า SR คู่ละ",
     "images": [
       "/legacy/webgigabike.com/yangpaktouy/yangtang.jpg"
     ],
@@ -2728,8 +2675,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางคันสตาร์ท SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางคันสตาร์ท SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางคันสตาร์ท SR",
+    "descriptionTh": "ยางคันสตาร์ท SR",
     "images": [
       "/legacy/webgigabike.com/yangpaktouy/yangkt.jpg"
     ],
@@ -2753,8 +2700,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางคันเกียร์ SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางคันเกียร์ SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางคันเกียร์ SR",
+    "descriptionTh": "ยางคันเกียร์ SR",
     "images": [
       "/legacy/webgigabike.com/yangpaktouy/yangg.jpg"
     ],
@@ -2778,8 +2725,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง ทำจากทองเหลือง 100% สำหรับใส่ SR,XT ชิ้นล่ะ",
+    "descriptionTh": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง ทำจากทองเหลือง 100% สำหรับใส่ SR,XT ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nutvalbrus.jpg"
     ],
@@ -2801,8 +2748,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบม๊าคแคมซ์แต่ง SR,XT,TT แบบระบายความร้อนต่อเข้ากับหัวสายออยเบอร์ AN6. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบม๊าคแคมซ์แต่ง SR,XT,TT แบบระบายความร้อนต่อเข้ากับหัวสายออยเบอร์ AN6 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบม๊าคแคมซ์แต่ง SR,XT,TT แบบระบายความร้อนต่อเข้ากับหัวสายออยเบอร์ AN6 ผลิตจาก Allloy CNC Billet (สีดำ/เงิน) ชุดล่ะ",
+    "descriptionTh": "ฝาครอบม๊าคแคมซ์แต่ง SR,XT,TT แบบระบายความร้อนต่อเข้ากับหัวสายออยเบอร์ AN6 ผลิตจาก Allloy CNC Billet (สีดำ/เงิน) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/capcam.jpg"
     ],
@@ -2832,8 +2779,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "ปากแตรแต่งใส่คาร์บู Keihin FCR 35-41mm. & 28-33mm. Long 60 mm. Shot 35mm. Fits: Honda Monkey/MSX125/DAX125 · Yamaha SR400/500 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปากแตรแต่งใส่คาร์บู Keihin FCR 35-41mm. & 28-33mm. Long 60 mm. Shot 35mm · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · Yamaha SR400/500 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ปากแตรแต่งใส่คาร์บู Keihin FCR 35-41mm. & 28-33mm. Long 60 mm. Shot 35mm. ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ,เทา,แดง,เขียว,ม่วง) ชิ้นล่ะ",
+    "descriptionTh": "ปากแตรแต่งใส่คาร์บู Keihin FCR 35-41mm. & 28-33mm. Long 60 mm. Shot 35mm. ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ,เทา,แดง,เขียว,ม่วง) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/trub-fcr-color1.jpg",
       "/legacy/webgigabike.com/part/trub-fcr-color2.jpg",
@@ -2864,8 +2811,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "น๊อตขันแกนคอบนแต่ง SR ปี 2001-2018. Fits: Yamaha SR400/500 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแกนคอบนแต่ง SR ปี 2001-2018 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแกนคอบนแต่ง SR ปี 2001-2018 ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ,เทา)ชิ้นล่ะ",
+    "descriptionTh": "น๊อตขันแกนคอบนแต่ง SR ปี 2001-2018 ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ,เทา)ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nutco2001.jpg"
     ],
@@ -2887,8 +2834,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "น๊อตขันแผงคอบนแต่ง SR ปี 1978-2000. Fits: Yamaha SR400/500 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแผงคอบนแต่ง SR ปี 1978-2000 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแผงคอบนแต่ง SR ปี 1978-2000 ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "น๊อตขันแผงคอบนแต่ง SR ปี 1978-2000 ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nutco1978.jpg"
     ],
@@ -2910,8 +2857,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง แบบเลนส์ใส. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง แบบเลนส์ใส · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง แบบเลนส์ใส ผลิตจาก Alloy 7075 CNC Billet สำหรับใส่ SR,XT (Color&ndash;Black,Silver,Gold,Hard) ชิ้นล่ะ",
+    "descriptionTh": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง แบบเลนส์ใส ผลิตจาก Alloy 7075 CNC Billet สำหรับใส่ SR,XT (Color&ndash;Black,Silver,Gold,Hard) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nutvallend7075-All.jpg"
     ],
@@ -2933,8 +2880,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบม้าคแคมแต่ง SR,XT แบบเลนท์ใส. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบม้าคแคมแต่ง SR,XT แบบเลนท์ใส · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบม้าคแคมแต่ง SR,XT แบบเลนท์ใส ผลิตจาก Allloy 7075 CNC Billet (สีดำ/เงิน/ทอง) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบม้าคแคมแต่ง SR,XT แบบเลนท์ใส ผลิตจาก Allloy 7075 CNC Billet (สีดำ/เงิน/ทอง) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/capcamlend-all.jpg"
     ],
@@ -2956,8 +2903,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมินั่มอัลลอยเกรดพิเศษ7075 สำหรับใส่ SR,XT",
-    "description": "ฝาครอบตัวตั้งวาล์ว แบบเลนส์ใส. Fits: Yamaha SR400/500 · Material: อลูมินั่มอัลลอยเกรดพิเศษ7075 สำหรับใส่ SR,XT · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบตัวตั้งวาล์ว แบบเลนส์ใส · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูมินั่มอัลลอยเกรดพิเศษ7075 สำหรับใส่ SR,XT · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบตัวตั้งวาล์ว แบบเลนส์ใส ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075 สำหรับใส่ SR,XT ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบตัวตั้งวาล์ว แบบเลนส์ใส ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075 สำหรับใส่ SR,XT ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cover-valulend.jpg"
     ],
@@ -2979,8 +2926,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "ไฟท้ายแต่ง SR แบบ Led ขาสแตนเลส ชุดล่ะ1,5. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ไฟท้ายแต่ง SR แบบ Led ขาสแตนเลส ชุดล่ะ1,5 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ไฟท้ายแต่ง SR แบบ Led ขาสแตนเลส ชุดล่ะ1,5",
+    "descriptionTh": "ไฟท้ายแต่ง SR แบบ Led ขาสแตนเลส ชุดล่ะ1,5",
     "images": [
       "/legacy/webgigabike.com/fity/ft3.jpg"
     ],
@@ -3004,8 +2951,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบ",
-    "description": "Direct-fit aluminium swingarm for Yamaha SR. Complete kit with rear axle, bushings, shock bushings, bolts and bearings. Track-tested. Fits: Yamaha SR400/500 · Material: Alloy ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Direct-fit aluminium swingarm for Yamaha SR. Complete kit with rear axle, bushings, shock bushings, bolts and bearings. Track-tested · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Direct-fit aluminium swingarm for Yamaha SR. Complete kit with rear axle, bushings, shock bushings, bolts and bearings. Track-tested.",
+    "descriptionTh": "สวิงอาร์มอลูมิเนียมแต่ง Yamaha SR Type 3 ผลิตจาก Alloy ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบชุด พร้อมลูกปืนสวิงอาร์มครบและจุดยึดบังโซ่เดิมได้ด้วย ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Swingamr-t3-bk.jpg",
       "/legacy/webgigabike.com/svingarm sr/svo-sr1.jpg"
@@ -3028,8 +2975,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ปิเนียมอย่างดีปัดเงาให้เรียบร้อย",
-    "description": "ฝาปิดหัวโช๊คแต่งสำหรับใส่ YAMAHA SR ปี 1995-2008. Fits: Yamaha SR400/500 · Material: ปิเนียมอย่างดีปัดเงาให้เรียบร้อย · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาปิดหัวโช๊คแต่งสำหรับใส่ YAMAHA SR ปี 1995-2008 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ ปิเนียมอย่างดีปัดเงาให้เรียบร้อย · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาปิดหัวโช๊คแต่งสำหรับใส่ YAMAHA SR ปี 1995-2008 ผลิตจากปิเนียมอย่างดีปัดเงาให้เรียบร้อย คู่ละ",
+    "descriptionTh": "ฝาปิดหัวโช๊คแต่งสำหรับใส่ YAMAHA SR ปี 1995-2008 ผลิตจากปิเนียมอย่างดีปัดเงาให้เรียบร้อย คู่ละ",
     "images": [
       "/legacy/webgigabike.com/nut/Jukchok1.jpg"
     ],
@@ -3051,8 +2998,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ก๊อกน้ำมัน yamaha sr ของใหม่แกะกล่องครับใส่รถ sr ได้เลยไม่ต้องดัดแปลงครับ ชุดล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก๊อกน้ำมัน yamaha sr ของใหม่แกะกล่องครับใส่รถ sr ได้เลยไม่ต้องดัดแปลงครับ ชุดล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ก๊อกน้ำมัน yamaha sr ของใหม่แกะกล่องครับใส่รถ sr ได้เลยไม่ต้องดัดแปลงครับ ชุดล่ะ",
+    "descriptionTh": "ก๊อกน้ำมัน yamaha sr ของใหม่แกะกล่องครับใส่รถ sr ได้เลยไม่ต้องดัดแปลงครับ ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/gok.jpg"
     ],
@@ -3076,8 +3023,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้าแต่งอลูมิเนียม แกนโช๊ค 35mm./36mm./37mm./39mm. (ประกันไม่มีตามด) คู่ล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้าแต่งอลูมิเนียม แกนโช๊ค 35mm./36mm./37mm./39mm. (ประกันไม่มีตามด) คู่ล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้าแต่งอลูมิเนียม แกนโช๊ค 35mm./36mm./37mm./39mm. (ประกันไม่มีตามด) คู่ล่ะ",
+    "descriptionTh": "หูยึดไฟหน้าแต่งอลูมิเนียม แกนโช๊ค 35mm./36mm./37mm./39mm. (ประกันไม่มีตามด) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/hoochang sr/hoochang-p1.jpg"
     ],
@@ -3099,8 +3046,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางพักเท้าหน้าเดิม SR ของใหม่. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางพักเท้าหน้าเดิม SR ของใหม่ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางพักเท้าหน้าเดิม SR ของใหม่ คู่ละ",
+    "descriptionTh": "ยางพักเท้าหน้าเดิม SR ของใหม่ คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/yang1.jpg"
     ],
@@ -3122,8 +3069,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางพักเท้าหลัง SR ของใหม่. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางพักเท้าหลัง SR ของใหม่ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางพักเท้าหลัง SR ของใหม่ คู่ละ",
+    "descriptionTh": "ยางพักเท้าหลัง SR ของใหม่ คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/yang2.jpg"
     ],
@@ -3145,8 +3092,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่งทรงคาเฟ่ ใบล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่งทรงคาเฟ่ ใบล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่งทรงคาเฟ่ ใบล่ะ",
+    "descriptionTh": "เบาะแต่งทรงคาเฟ่ ใบล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/se.jpg"
     ],
@@ -3168,8 +3115,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่งทรงคาเฟ่ หนังน้ำตาล-ด้ายขาว ใบล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังน้ำตาล-ด้ายขาว ใบล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่งทรงคาเฟ่ หนังน้ำตาล-ด้ายขาว ใบล่ะ",
+    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังน้ำตาล-ด้ายขาว ใบล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/se1.jpg"
     ],
@@ -3191,8 +3138,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง ใบล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง ใบล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง ใบล่ะ",
+    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง ใบล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/se2.jpg"
     ],
@@ -3214,8 +3161,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายดำ-ใส่หมุด ใบล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายดำ-ใส่หมุด ใบล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายดำ-ใส่หมุด ใบล่ะ",
+    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายดำ-ใส่หมุด ใบล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/se3.jpg"
     ],
@@ -3237,8 +3184,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง-ใส่หมุด ใบล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง-ใส่หมุด ใบล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง-ใส่หมุด ใบล่ะ",
+    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง-ใส่หมุด ใบล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/se4.jpg"
     ],
@@ -3260,8 +3207,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่ง หนังดำ-ด้ายขาว-ใส่หมุด ใบล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่ง หนังดำ-ด้ายขาว-ใส่หมุด ใบล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่ง หนังดำ-ด้ายขาว-ใส่หมุด ใบล่ะ",
+    "descriptionTh": "เบาะแต่ง หนังดำ-ด้ายขาว-ใส่หมุด ใบล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/seat1.jpg"
     ],
@@ -3283,8 +3230,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่ง หนังน้ำตาล-ด้ายขาว-ใส่หมุด ใบล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่ง หนังน้ำตาล-ด้ายขาว-ใส่หมุด ใบล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่ง หนังน้ำตาล-ด้ายขาว-ใส่หมุด ใบล่ะ",
+    "descriptionTh": "เบาะแต่ง หนังน้ำตาล-ด้ายขาว-ใส่หมุด ใบล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/seat11.jpg"
     ],
@@ -3306,8 +3253,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่ง หนังดำ-ด้ายขาว ใบล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่ง หนังดำ-ด้ายขาว ใบล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่ง หนังดำ-ด้ายขาว ใบล่ะ",
+    "descriptionTh": "เบาะแต่ง หนังดำ-ด้ายขาว ใบล่ะ",
     "images": [],
     "featured": false,
     "published": false,
@@ -3329,8 +3276,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "G.102. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "G.102 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "",
+    "descriptionTh": "",
     "images": [
       "/legacy/webgigabike.com/part/seat12.jpg"
     ],
@@ -3356,8 +3303,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "G.103. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "G.103 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "",
+    "descriptionTh": "",
     "images": [
       "/legacy/webgigabike.com/part/seat cafe1.jpg"
     ],
@@ -3383,8 +3330,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "G.104. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "G.104 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "",
+    "descriptionTh": "",
     "images": [
       "/legacy/webgigabike.com/part/seat cafe3.jpg",
       "/legacy/webgigabike.com/part/seat cafe2.jpg"
@@ -3411,8 +3358,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "กระจกแต่ง yamaha sr ของใหม่แกะกล่องครับ ใส่รถ sr ได้เลยไม่ต้องดัดแปลงเกลียว. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "กระจกแต่ง yamaha sr ของใหม่แกะกล่องครับ ใส่รถ sr ได้เลยไม่ต้องดัดแปลงเกลียว · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "กระจกแต่ง yamaha sr ของใหม่แกะกล่องครับ ใส่รถ sr ได้เลยไม่ต้องดัดแปลงเกลียว ผลิตจาก Alloy +Stainless CNC Billet (มีสี เงิน/ดำ/ปัดเงา) คู่ละ",
+    "descriptionTh": "กระจกแต่ง yamaha sr ของใหม่แกะกล่องครับ ใส่รถ sr ได้เลยไม่ต้องดัดแปลงเกลียว ผลิตจาก Alloy +Stainless CNC Billet (มีสี เงิน/ดำ/ปัดเงา) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/glas.jpg"
     ],
@@ -3438,8 +3385,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงคอบนแต่งสำหรับใส่ SR,XS650. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงคอบนแต่งสำหรับใส่ SR,XS650 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงคอบนแต่งสำหรับใส่ SR,XS650 ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
+    "descriptionTh": "แผงคอบนแต่งสำหรับใส่ SR,XS650 ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/pangkor-sr01.jpg"
     ],
@@ -3465,8 +3412,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนล่างแต่งแบบคาเฟ่ SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่างแต่งแบบคาเฟ่ SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่างแต่งแบบคาเฟ่ SR ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนล่างแต่งแบบคาเฟ่ SR ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/pangkor-sr.jpg",
       "/legacy/webgigabike.com/part/pangkorl-sr4.jpg"
@@ -3493,8 +3440,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 มีข้างซ้าย+ขวา ใส่ SR 1978-2000 ใส่จาน 320 มม.Alloy 6061 CNC Billet (มีสี ดำ/เงิน/ฮาร์ด) ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 มีข้างซ้าย+ขวา ใส่ SR 1978-2000 ใส่จาน 320 มม.Alloy 6061 CNC Billet (มีสี ดำ/เงิน/ฮาร์ด) ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 มีข้างซ้าย+ขวา ใส่ SR 1978-2000 ใส่จาน 320 มม.Alloy 6061 CNC Billet (มีสี ดำ/เงิน/ฮาร์ด) ชิ้นล่ะ",
+    "descriptionTh": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 มีข้างซ้าย+ขวา ใส่ SR 1978-2000 ใส่จาน 320 มม.Alloy 6061 CNC Billet (มีสี ดำ/เงิน/ฮาร์ด) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-1978-1.jpg",
       "/legacy/webgigabike.com/part/brembo-1978.jpg"
@@ -3523,8 +3470,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบจานไฟ แต่ง SR แบบเรียบ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบจานไฟ แต่ง SR แบบเรียบ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบจานไฟ แต่ง SR แบบเรียบ ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชุดละ",
+    "descriptionTh": "ฝาครอบจานไฟ แต่ง SR แบบเรียบ ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/fi1.jpg"
     ],
@@ -3551,8 +3498,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "บู๊ทล้อหน้า yamaha sr รุ่นดิสเบรค 1978. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทล้อหน้า yamaha sr รุ่นดิสเบรค 1978 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บู๊ทล้อหน้า yamaha sr รุ่นดิสเบรค 1978 ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ทอง/ฮาร์ด) ชิ้นล่ะ",
+    "descriptionTh": "บู๊ทล้อหน้า yamaha sr รุ่นดิสเบรค 1978 ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ทอง/ฮาร์ด) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/bootdis.jpg",
       "/legacy/webgigabike.com/part/bootdis-1978.jpg"
@@ -3579,8 +3526,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า SR แบบรูตรง 35mm. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า SR แบบรูตรง 35mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า SR แบบรูตรง 35mm. ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ทอง)",
+    "descriptionTh": "หูยึดไฟหน้า SR แบบรูตรง 35mm. ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ทอง)",
     "images": [
       "/legacy/webgigabike.com/part/cocer-col.jpg"
     ],
@@ -3608,8 +3555,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม. ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ฮาร์ด) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม. ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ฮาร์ด) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-01-298.jpg"
     ],
@@ -3634,8 +3581,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2024 ใส่จาน 320 มม. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2024 ใส่จาน 320 มม · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2024 ใส่จาน 320 มม. ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ SR 2001-2024 ใส่จาน 320 มม. ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-01-320-1.jpg"
     ],
@@ -3660,8 +3607,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผ่นรองจานเบรคใส่ SR 2001-2014. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นรองจานเบรคใส่ SR 2001-2014 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นรองจานเบรคใส่ SR 2001-2014 ผลิตจาก Alloy 6061 CNC Billet (มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "แผ่นรองจานเบรคใส่ SR 2001-2014 ผลิตจาก Alloy 6061 CNC Billet (มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo2001adapter.jpg"
     ],
@@ -3688,8 +3635,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบตั้งวาร์วแต่ง SR แบบครีบ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบตั้งวาร์วแต่ง SR แบบครีบ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบตั้งวาร์วแต่ง SR แบบครีบ ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ทอง/ฮาร์ท) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบตั้งวาร์วแต่ง SR แบบครีบ ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ทอง/ฮาร์ท) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cover-valuCnc-new.jpg"
     ],
@@ -3715,8 +3662,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000-2022,XT,TT แบบเรียบ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000-2022,XT,TT แบบเรียบ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000-2022,XT,TT แบบเรียบ ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นล่ะ",
+    "descriptionTh": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000-2022,XT,TT แบบเรียบ ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Cover-En-l-1.jpg",
       "/legacy/webgigabike.com/part/Cover-En-l-2.jpg",
@@ -3744,8 +3691,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบครับใหญ่. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบครับใหญ่ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบครับใหญ่ ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ปัดเงา ชุดล่ะ",
+    "descriptionTh": "ฝาปิดจานไฟแต่ง SR400/500 ปี1978 & 2000,XT,TT แบบครับใหญ่ ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ปัดเงา ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/fi3.jpg",
       "/legacy/webgigabike.com/part/fi4.jpg"
@@ -3762,7 +3709,8 @@ export const legacyProducts: Product[] = [
     "price": 700,
     "category": "engine",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "srx"
     ],
     "colors": [
       "black",
@@ -3772,8 +3720,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet",
-    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ลาย Peace. Fits: Yamaha SR400/500 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ลาย Peace · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ลาย Peace ผลิตจาก Alloy 6061 CNC Billet มีสี ดำ/เงิน/ทอง ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ลาย Peace ผลิตจาก Alloy 6061 CNC Billet มีสี ดำ/เงิน/ทอง ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/oilfilter-pe.jpg"
     ],
@@ -3799,8 +3747,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง SR ผลิตจากอลูเนียมเกรดพิเศษด้วยเครื่อง CNC สวยงามแข็งแรง (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง SR ผลิตจากอลูเนียมเกรดพิเศษด้วยเครื่อง CNC สวยงามแข็งแรง (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/pangkor-sr6.jpg"
     ],
@@ -3822,8 +3770,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ปิเนียมเกรดพิเศษ",
-    "description": "บู๊ทล้อหน้า yamaha sr รุ่นดรั๊มเบรค. Fits: Yamaha SR400/500 · Material: ปิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทล้อหน้า yamaha sr รุ่นดรั๊มเบรค · ใส่ได้กับ Yamaha SR400/500 · วัสดุ ปิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บู๊ทล้อหน้า yamaha sr รุ่นดรั๊มเบรค ผลิตจากปิเนียมเกรดพิเศษ ชิ้นล่ะ",
+    "descriptionTh": "บู๊ทล้อหน้า yamaha sr รุ่นดรั๊มเบรค ผลิตจากปิเนียมเกรดพิเศษ ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/bootdrum.jpg"
     ],
@@ -3845,8 +3793,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางคอคาร์บูเดิม SR ใส่กับคาร์บูเดิมกรองอากาศเดิมได้เลยใหม่แกะกล่อง. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางคอคาร์บูเดิม SR ใส่กับคาร์บูเดิมกรองอากาศเดิมได้เลยใหม่แกะกล่อง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางคอคาร์บูเดิม SR ใส่กับคาร์บูเดิมกรองอากาศเดิมได้เลยใหม่แกะกล่อง",
+    "descriptionTh": "ยางคอคาร์บูเดิม SR ใส่กับคาร์บูเดิมกรองอากาศเดิมได้เลยใหม่แกะกล่อง",
     "images": [
       "/legacy/webgigabike.com/part/korleed-sr.jpg"
     ],
@@ -3868,8 +3816,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ซิลยางสวิงอาร์ม SR คู่ล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ซิลยางสวิงอาร์ม SR คู่ล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ซิลยางสวิงอาร์ม SR คู่ล่ะ",
+    "descriptionTh": "ซิลยางสวิงอาร์ม SR คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/SEELswing.jpg"
     ],
@@ -3891,8 +3839,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ไทเทเนี่ยม100% By GIGA BIKE 2ช่อง",
-    "description": "ชุดกล่องดักไอระบายความร้อน. Fits: Yamaha SR400/500 · Material: ไทเทเนี่ยม100% By GIGA BIKE 2ช่อง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดกล่องดักไอระบายความร้อน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ ไทเทเนี่ยม100% By GIGA BIKE 2ช่อง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดกล่องดักไอระบายความร้อน ผลิตจากไทเทเนี่ยม100% By GIGA BIKE 2ช่อง ชุดล่ะ",
+    "descriptionTh": "ชุดกล่องดักไอระบายความร้อน ผลิตจากไทเทเนี่ยม100% By GIGA BIKE 2ช่อง ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/box-tita2way.jpg"
     ],
@@ -3916,8 +3864,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ไทเทเนี่ยม100% By GIGA BIKE 3ช่อง",
-    "description": "ชุดดักไอระบายความร้อน. Fits: Yamaha SR400/500 · Material: ไทเทเนี่ยม100% By GIGA BIKE 3ช่อง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดดักไอระบายความร้อน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ ไทเทเนี่ยม100% By GIGA BIKE 3ช่อง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดดักไอระบายความร้อนผลิตจากไทเทเนี่ยม100% By GIGA BIKE 3ช่อง ชุดล่ะ",
+    "descriptionTh": "ชุดดักไอระบายความร้อนผลิตจากไทเทเนี่ยม100% By GIGA BIKE 3ช่อง ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/box-tita3way.jpg"
     ],
@@ -3944,8 +3892,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ชุดบาร์ลานท์โช๊คหน้า SR. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดบาร์ลานท์โช๊คหน้า SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดบาร์ลานท์โช๊คหน้า SR ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน ชุดล่ะ",
+    "descriptionTh": "ชุดบาร์ลานท์โช๊คหน้า SR ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/lockchock.jpg"
     ],
@@ -3972,8 +3920,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ขายึดล๊อคฝาดรั๊มเบรคหลังแต่ง SR. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดล๊อคฝาดรั๊มเบรคหลังแต่ง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดล๊อคฝาดรั๊มเบรคหลังแต่ง SR ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ปัดเงา/ฮาร์ท ชิ้นล่ะ",
+    "descriptionTh": "ขายึดล๊อคฝาดรั๊มเบรคหลังแต่ง SR ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ปัดเงา/ฮาร์ท ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/lokcdrumbrek-sr.jpg"
     ],
@@ -3995,8 +3943,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ซุปเปอร์ลีน+เพลา Stainles 304 ทั้ง",
-    "description": "ชุดกันล้มสำหรับใส่ yamaha sr. Fits: Yamaha SR400/500 · Material: ซุปเปอร์ลีน+เพลา Stainles 304 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดกันล้มสำหรับใส่ yamaha sr · ใส่ได้กับ Yamaha SR400/500 · วัสดุ ซุปเปอร์ลีน+เพลา Stainles 304 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดกันล้มสำหรับใส่ yamaha sr ผลิตจากซุปเปอร์ลีน+เพลา Stainles 304 ทั้งชุด",
+    "descriptionTh": "ชุดกันล้มสำหรับใส่ yamaha sr ผลิตจากซุปเปอร์ลีน+เพลา Stainles 304 ทั้งชุด",
     "images": [
       "/legacy/webgigabike.com/part/slider.jpg",
       "/legacy/webgigabike.com/part/slider-All.jpg"
@@ -4019,8 +3967,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดยกวาล์วใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดยกวาล์วใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดยกวาล์วใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด",
+    "descriptionTh": "ชุดยกวาล์วใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด",
     "images": [
       "/legacy/webgigabike.com/part/yokval-sr.jpg"
     ],
@@ -4042,8 +3990,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดอุดตุ๊กตาใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดอุดตุ๊กตาใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดอุดตุ๊กตาใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด",
+    "descriptionTh": "ชุดอุดตุ๊กตาใส่เข้ากับแผงคอเดิม SR ทั้งชุดซ้าย+ขวา ทั้งชุด",
     "images": [
       "/legacy/webgigabike.com/part/tookata.jpg"
     ],
@@ -4065,8 +4013,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูปิเนียมเกรดพิเศษ ด้วยเครื่อง cnc มีสามสีให้เลือก",
-    "description": "หูยึดเครื่องด้านหน้าแต่ง ใส่ได้กับรถ SR ทุกปี. Fits: Yamaha SR400/500 · Material: อลูปิเนียมเกรดพิเศษ ด้วยเครื่อง cnc มีสามสีให้เลือก · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดเครื่องด้านหน้าแต่ง ใส่ได้กับรถ SR ทุกปี · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูปิเนียมเกรดพิเศษ ด้วยเครื่อง cnc มีสามสีให้เลือก · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดเครื่องด้านหน้าแต่ง ใส่ได้กับรถ SR ทุกปี ผลิตจากอลูปิเนียมเกรดพิเศษ ด้วยเครื่อง cnc มีสามสีให้เลือก คู่ล่ะ",
+    "descriptionTh": "หูยึดเครื่องด้านหน้าแต่ง ใส่ได้กับรถ SR ทุกปี ผลิตจากอลูปิเนียมเกรดพิเศษ ด้วยเครื่อง cnc มีสามสีให้เลือก คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/lokccruengsr-cnc.jpg"
     ],
@@ -4094,8 +4042,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบฉลุ. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบฉลุ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบฉลุ ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ปัดเงา ชิ้นล่ะ",
+    "descriptionTh": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบฉลุ ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ปัดเงา ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cover-sprok-cnc.jpg"
     ],
@@ -4117,8 +4065,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูปิเนียมเกรดพิเศษ",
-    "description": "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 มีสองสีให้เลือก. Fits: Yamaha SR400/500 · Material: อลูปิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 มีสองสีให้เลือก · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูปิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
+    "descriptionTh": "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cocer-dis78.jpg"
     ],
@@ -4140,8 +4088,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC",
-    "description": "อแดปเตอร์ทวินออยซ์ สำหรับใส่ YAMAHA SR. Fits: Yamaha SR400/500 · Material: อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อแดปเตอร์ทวินออยซ์ สำหรับใส่ YAMAHA SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อแดปเตอร์ทวินออยซ์ สำหรับใส่ YAMAHA SR ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC ชิ้นล่ะ",
+    "descriptionTh": "อแดปเตอร์ทวินออยซ์ สำหรับใส่ YAMAHA SR ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/adabter.jpg"
     ],
@@ -4165,8 +4113,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผ่นฝาปลายเปิดท่อแทร๊บ มีสองสีให้เลือก ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นฝาปลายเปิดท่อแทร๊บ มีสองสีให้เลือก ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นฝาปลายเปิดท่อแทร๊บ มีสองสีให้เลือก ชิ้นล่ะ",
+    "descriptionTh": "แผ่นฝาปลายเปิดท่อแทร๊บ มีสองสีให้เลือก ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cortorsr-alumi.jpg"
     ],
@@ -4188,8 +4136,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คอลูมิเนียม. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คอลูมิเนียม · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คอลูมิเนียม ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC (มีสีดำและสีเงิน) มีขนาด 34,35,37mm.คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คอลูมิเนียม ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC (มีสีดำและสีเงิน) มีขนาด 34,35,37mm.คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hand-aluminum34-35-37.jpg"
     ],
@@ -4211,8 +4159,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตครีบระบายความร้อนกลางเครื่องต่อเข้ากับหัวสายออยเบอร์ AN6. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตครีบระบายความร้อนกลางเครื่องต่อเข้ากับหัวสายออยเบอร์ AN6 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตครีบระบายความร้อนกลางเครื่องต่อเข้ากับหัวสายออยเบอร์ AN6 ผลิตจาก Alloy CNC Billet มีสามสีให้เลือก (ดำ เงิน ทอง) ชิ้นล่ะ",
+    "descriptionTh": "น๊อตครีบระบายความร้อนกลางเครื่องต่อเข้ากับหัวสายออยเบอร์ AN6 ผลิตจาก Alloy CNC Billet มีสามสีให้เลือก (ดำ เงิน ทอง) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nut-oil-fin.jpg"
     ],
@@ -4234,8 +4182,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตขันท่อส่งน้ำมันเครื่องหัวเครื่อง SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันท่อส่งน้ำมันเครื่องหัวเครื่อง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันท่อส่งน้ำมันเครื่องหัวเครื่อง SRผลิตจากอลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC มีสามสีให้เลือก (ดำ เงิน ทอง) คู่ล่ะ",
+    "descriptionTh": "น๊อตขันท่อส่งน้ำมันเครื่องหัวเครื่อง SRผลิตจากอลูมิเนียมเกรดพิเศษ ด้วยเครื่อง CNC มีสามสีให้เลือก (ดำ เงิน ทอง) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nut-oil-h.jpg"
     ],
@@ -4257,8 +4205,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ",
-    "description": "พักเท้าหลังแต่งอลูมิเนียมขันล๊อคหูโช๊คหลัง SR รุ่นใหม่ล่าสุดงาน CNC. Fits: Yamaha SR400/500 · Material: อลูมิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "พักเท้าหลังแต่งอลูมิเนียมขันล๊อคหูโช๊คหลัง SR รุ่นใหม่ล่าสุดงาน CNC · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูมิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "พักเท้าหลังแต่งอลูมิเนียมขันล๊อคหูโช๊คหลัง SR รุ่นใหม่ล่าสุดงาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ คู่ละ",
+    "descriptionTh": "พักเท้าหลังแต่งอลูมิเนียมขันล๊อคหูโช๊คหลัง SR รุ่นใหม่ล่าสุดงาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/puxtau-nut.jpg"
     ],
@@ -4280,8 +4228,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ปะเก็นฝาสูบ YAMAHA SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปะเก็นฝาสูบ YAMAHA SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ปะเก็นฝาสูบ YAMAHA SR ผลิตจากทองแดง 100% หนา 1 mm. มีขนาด 88,89,90,92 mm. & 95 mm.ผลิตด้วยเครื่องจักร CNC สามารถทนร้อนได้มากและรองรับกำลังอัดสูงๆได้สบายๆ สามารถถอดเข้าออกได้หลายๆครั้งคุ้มค่าสุดๆ แผ่นล่ะ",
+    "descriptionTh": "ปะเก็นฝาสูบ YAMAHA SR ผลิตจากทองแดง 100% หนา 1 mm. มีขนาด 88,89,90,92 mm. & 95 mm.ผลิตด้วยเครื่องจักร CNC สามารถทนร้อนได้มากและรองรับกำลังอัดสูงๆได้สบายๆ สามารถถอดเข้าออกได้หลายๆครั้งคุ้มค่าสุดๆ แผ่นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/coper.jpg"
     ],
@@ -4303,8 +4251,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT มีสองแบบให้เลือก ชุดล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT มีสองแบบให้เลือก ชุดล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT มีสองแบบให้เลือก ชุดล่ะ",
+    "descriptionTh": "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT มีสองแบบให้เลือก ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/yok-val-sr-sus.jpg"
     ],
@@ -4328,8 +4276,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ชุดล๊อคแผงออยล์หน้า คุณสมบัติช่วยไม่ให้โครงเป็นรอยและยึดแน่นกว่าของเดิม. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดล๊อคแผงออยล์หน้า คุณสมบัติช่วยไม่ให้โครงเป็นรอยและยึดแน่นกว่าของเดิม · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดล๊อคแผงออยล์หน้า คุณสมบัติช่วยไม่ให้โครงเป็นรอยและยึดแน่นกว่าของเดิม ผลิตจาก Alloy CNC Billet มีสี ดำ-สีเงิน ชุดล่ะ",
+    "descriptionTh": "ชุดล๊อคแผงออยล์หน้า คุณสมบัติช่วยไม่ให้โครงเป็นรอยและยึดแน่นกว่าของเดิม ผลิตจาก Alloy CNC Billet มีสี ดำ-สีเงิน ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/lokc-oil.jpg"
     ],
@@ -4356,8 +4304,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet",
-    "description": "มือลิงดึงดรั๊มเบรคหลัง SR แบบสั้นขนาด 80mm. เหมาะสำหรับใส่เข้ากับชุดเกียร์แบบเดิม. Fits: Yamaha SR400/500 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "มือลิงดึงดรั๊มเบรคหลัง SR แบบสั้นขนาด 80mm. เหมาะสำหรับใส่เข้ากับชุดเกียร์แบบเดิม · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "มือลิงดึงดรั๊มเบรคหลัง SR แบบสั้นขนาด 80mm. เหมาะสำหรับใส่เข้ากับชุดเกียร์แบบเดิม ผลิตจาก Alloy 6061 CNC Billet มีสี เงิน/ดำ/ทอง/ฮาร์ท ชุดละ",
+    "descriptionTh": "มือลิงดึงดรั๊มเบรคหลัง SR แบบสั้นขนาด 80mm. เหมาะสำหรับใส่เข้ากับชุดเกียร์แบบเดิม ผลิตจาก Alloy 6061 CNC Billet มีสี เงิน/ดำ/ทอง/ฮาร์ท ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/drumbrek-sr-cnc-shot.jpg"
     ],
@@ -4379,8 +4327,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า SR แบบยาว 95 mm. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า SR แบบยาว 95 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า SR แบบยาว 95 mm.ผลิตจาก Alloy 6061CNC Billet ขนาด 35mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า SR แบบยาว 95 mm.ผลิตจาก Alloy 6061CNC Billet ขนาด 35mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-po.jpg"
     ],
@@ -4404,8 +4352,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า SR (แบบสั้น). Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า SR (แบบสั้น) · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า SR (แบบสั้น)ผลิตจาก Alloy 6061CNC Billet ขนาด 35mm.ยาว 62 mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า SR (แบบสั้น)ผลิตจาก Alloy 6061CNC Billet ขนาด 35mm.ยาว 62 mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-long.jpg"
     ],
@@ -4429,8 +4377,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเปย์เซอร์รองจานเบรคใส่ดุมปีเก่า SR 1978 หนา 10 mm. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเปย์เซอร์รองจานเบรคใส่ดุมปีเก่า SR 1978 หนา 10 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเปย์เซอร์รองจานเบรคใส่ดุมปีเก่า SR 1978 หนา 10 mm. ผลิตจาก Alloy CNC Billet มีีสี (ดำ-เงิน) ชิ้นล่ะ",
+    "descriptionTh": "สเปย์เซอร์รองจานเบรคใส่ดุมปีเก่า SR 1978 หนา 10 mm. ผลิตจาก Alloy CNC Billet มีีสี (ดำ-เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/1978-adapter10mm.jpg"
     ],
@@ -4452,8 +4400,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR งาน CNC Billet. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR งาน CNC Billet · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR งาน CNC Billet ผลิตจาก Alloy มีเกลียว M10x1.0 และ M10x1.25 มีสี (ดำ/เงิน/ทอง/ฮาร์ท) อันล่ะ",
+    "descriptionTh": "น๊อตทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR งาน CNC Billet ผลิตจาก Alloy มีเกลียว M10x1.0 และ M10x1.25 มีสี (ดำ/เงิน/ทอง/ฮาร์ท) อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nut-oil-adab-1.jpg"
     ],
@@ -4475,8 +4423,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 งาน CNC Billet สำหรับใส่ YAMAHA SR",
-    "description": "ขายึดไฟเลี้ยวแต่ง. Fits: Yamaha SR400/500 · Material: Alloy 7075 งาน CNC Billet สำหรับใส่ YAMAHA SR · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดไฟเลี้ยวแต่ง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 งาน CNC Billet สำหรับใส่ YAMAHA SR · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดไฟเลี้ยวแต่ง ผลิตจาก Alloy 7075 งาน CNC Billet สำหรับใส่ YAMAHA SR คู่ละ",
+    "descriptionTh": "ขายึดไฟเลี้ยวแต่ง ผลิตจาก Alloy 7075 งาน CNC Billet สำหรับใส่ YAMAHA SR คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/kajubfiliay-aluminum.jpg"
     ],
@@ -4498,8 +4446,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy งาน CNC Billet ใส่แทนลูกยางเดิม ทำให้พักเท้าเยียบแล้วแน่นขื้นแข็งแรงขึ้น 8",
-    "description": "บู๊ทรองพักเท้าหน้า. Fits: Yamaha SR400/500 · Material: Alloy งาน CNC Billet ใส่แทนลูกยางเดิม ทำให้พักเท้าเยียบแล้วแน่นขื้นแข็งแรงขึ้น 8 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทรองพักเท้าหน้า · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy งาน CNC Billet ใส่แทนลูกยางเดิม ทำให้พักเท้าเยียบแล้วแน่นขื้นแข็งแรงขึ้น 8 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บู๊ทรองพักเท้าหน้า ผลิตจาก Alloy งาน CNC Billet ใส่แทนลูกยางเดิม ทำให้พักเท้าเยียบแล้วแน่นขื้นแข็งแรงขึ้น 8 ชิ้น",
+    "descriptionTh": "บู๊ทรองพักเท้าหน้า ผลิตจาก Alloy งาน CNC Billet ใส่แทนลูกยางเดิม ทำให้พักเท้าเยียบแล้วแน่นขื้นแข็งแรงขึ้น 8 ชิ้น",
     "images": [
       "/legacy/webgigabike.com/part/boot-fut.jpg"
     ],
@@ -4521,8 +4469,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet",
-    "description": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบน็อตขัน. Fits: Yamaha SR400/500 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบน็อตขัน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบน็อตขัน ผลิตจาก Alloy 6061 CNC Billet มีสี (ดำ-เงิน-ทอง) อันละ",
+    "descriptionTh": "ฝาปิดน้ำมันเครื่องบนเฟรม yamaha sr แบบน็อตขัน ผลิตจาก Alloy 6061 CNC Billet มีสี (ดำ-เงิน-ทอง) อันละ",
     "images": [
       "/legacy/webgigabike.com/part/capoifreml01.jpg"
     ],
@@ -4544,8 +4492,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061",
-    "description": "น็อตขันหัวโช๊ค SR แบบหลุม งาน CNC ใช้ได้กับปี 1978 และ 2000-2017. Fits: Yamaha SR400/500 · Material: Alloy 6061 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตขันหัวโช๊ค SR แบบหลุม งาน CNC ใช้ได้กับปี 1978 และ 2000-2017 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตขันหัวโช๊ค SR แบบหลุม งาน CNC ใช้ได้กับปี 1978 และ 2000-2017 ผลิตจาก Alloy 6061 มีสี (ดำ-เงิน-ทอง-ส้ม) คู่ละ",
+    "descriptionTh": "น็อตขันหัวโช๊ค SR แบบหลุม งาน CNC ใช้ได้กับปี 1978 และ 2000-2017 ผลิตจาก Alloy 6061 มีสี (ดำ-เงิน-ทอง-ส้ม) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/nutchok3.jpg"
     ],
@@ -4567,8 +4515,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061",
-    "description": "น็อตขันหัวโช๊ค SR แบบเรียบ งาน CNC ใช้ได้กับปี 1978 และ 2000-2017. Fits: Yamaha SR400/500 · Material: Alloy 6061 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตขันหัวโช๊ค SR แบบเรียบ งาน CNC ใช้ได้กับปี 1978 และ 2000-2017 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตขันหัวโช๊ค SR แบบเรียบ งาน CNC ใช้ได้กับปี 1978 และ 2000-2017 ผลิตจาก Alloy 6061 มีสี (ดำ-เงิน-ทอง) คู่ละ",
+    "descriptionTh": "น็อตขันหัวโช๊ค SR แบบเรียบ งาน CNC ใช้ได้กับปี 1978 และ 2000-2017 ผลิตจาก Alloy 6061 มีสี (ดำ-เงิน-ทอง) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/XS650/nut-chock-1978.jpg"
     ],
@@ -4594,8 +4542,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตขันโช๊คหลัง งาน CNC Billet. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันโช๊คหลัง งาน CNC Billet · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันโช๊คหลัง งาน CNC Billet ผลิตจาก Alloy 7075 Pit M10x1.25 มีสี (ดำ-เงิน-ทอง) ชุดละ",
+    "descriptionTh": "น๊อตขันโช๊คหลัง งาน CNC Billet ผลิตจาก Alloy 7075 Pit M10x1.25 มีสี (ดำ-เงิน-ทอง) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/nutchok-rea-bl-gol.jpg"
     ],
@@ -4620,8 +4568,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดกันสะบัดแต่ง SR สำหรับติดเข้ากับแกนโช๊คขนาด 35 mm. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดกันสะบัดแต่ง SR สำหรับติดเข้ากับแกนโช๊คขนาด 35 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดกันสะบัดแต่ง SR สำหรับติดเข้ากับแกนโช๊คขนาด 35 mm. ผลิตจาก Alloy 6061 CNC Billet (มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดกันสะบัดแต่ง SR สำหรับติดเข้ากับแกนโช๊คขนาด 35 mm. ผลิตจาก Alloy 6061 CNC Billet (มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/lock-kunsabus-35.jpg"
     ],
@@ -4643,8 +4591,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดท่อสแตนเลส. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดท่อสแตนเลส · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดท่อสแตนเลส",
+    "descriptionTh": "ขายึดท่อสแตนเลส",
     "images": [
       "/legacy/webgigabike.com/part/jubtor.jpg"
     ],
@@ -4669,8 +4617,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดกันสะบัด SR สำหรับยึดติดกับโครงรถ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดกันสะบัด SR สำหรับยึดติดกับโครงรถ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดกันสะบัด SR สำหรับยึดติดกับโครงรถ ผลิตจาก Alloy 6061 CNC Billet (มีสี ดำ/เงิน)ชิ้นล่ะ",
+    "descriptionTh": "ขายึดกันสะบัด SR สำหรับยึดติดกับโครงรถ ผลิตจาก Alloy 6061 CNC Billet (มีสี ดำ/เงิน)ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/kunsabus-lockfrem.jpg"
     ],
@@ -4692,8 +4640,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อแดปเตอร์ฝาวาร์วไอเสียแบบครีบ SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อแดปเตอร์ฝาวาร์วไอเสียแบบครีบ SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อแดปเตอร์ฝาวาร์วไอเสียแบบครีบ SR ผลิตจาก Alloy CNC Billet (มีสี ดำ/เงิน/สีทองเชมเปน) พร้อมน๊อต2ชิ้น",
+    "descriptionTh": "อแดปเตอร์ฝาวาร์วไอเสียแบบครีบ SR ผลิตจาก Alloy CNC Billet (มีสี ดำ/เงิน/สีทองเชมเปน) พร้อมน๊อต2ชิ้น",
     "images": [
       "/legacy/webgigabike.com/part/cover-valu-ad-Cnc-all.jpg"
     ],
@@ -4715,8 +4663,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตออยล์หนวดกู้งล่าง M8 ใช้แทนน๊อตเหล็กเดิมได้เลยช่วยระบายความร้อนได้เป็นอย่างดี. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตออยล์หนวดกู้งล่าง M8 ใช้แทนน๊อตเหล็กเดิมได้เลยช่วยระบายความร้อนได้เป็นอย่างดี · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตออยล์หนวดกู้งล่าง M8 ใช้แทนน๊อตเหล็กเดิมได้เลยช่วยระบายความร้อนได้เป็นอย่างดี ผลิตจาก Alloy CNC Billet (มีสีดำสีเงินและสีทอง) ชิ้นล่ะ",
+    "descriptionTh": "น๊อตออยล์หนวดกู้งล่าง M8 ใช้แทนน๊อตเหล็กเดิมได้เลยช่วยระบายความร้อนได้เป็นอย่างดี ผลิตจาก Alloy CNC Billet (มีสีดำสีเงินและสีทอง) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nut-oil-t.jpg"
     ],
@@ -4740,8 +4688,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตแกนล้อหลัง SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตแกนล้อหลัง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตแกนล้อหลัง SR ผลิตจาก Alloy 7075 CNC Billet M16x1.5 (มีสีดำ-สีเงิน-สีทอง-สีเทาฮาร์ท) ชิ้นล่ะ",
+    "descriptionTh": "น๊อตแกนล้อหลัง SR ผลิตจาก Alloy 7075 CNC Billet M16x1.5 (มีสีดำ-สีเงิน-สีทอง-สีเทาฮาร์ท) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Rear-axle-nut.jpg"
     ],
@@ -4763,8 +4711,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ",
-    "description": "ฝาครอบดุมดิสเบรคปีเก่าใส่แทนพลาสติกเดิมได้เลย. Fits: Yamaha SR400/500 · Material: อลูมิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบดุมดิสเบรคปีเก่าใส่แทนพลาสติกเดิมได้เลย · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูมิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบดุมดิสเบรคปีเก่าใส่แทนพลาสติกเดิมได้เลย ผลิตจากอลูมิเนียมเกรดพิเศษ ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบดุมดิสเบรคปีเก่าใส่แทนพลาสติกเดิมได้เลย ผลิตจากอลูมิเนียมเกรดพิเศษ ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cover-doomdis.jpg"
     ],
@@ -4786,8 +4734,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว มีขนาด 35mm. ยาว 95 mm. (มีสีเงินและสีดำ) ชุดล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว มีขนาด 35mm. ยาว 95 mm. (มีสีเงินและสีดำ) ชุดล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว มีขนาด 35mm. ยาว 95 mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว มีขนาด 35mm. ยาว 95 mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-trong.jpg"
     ],
@@ -4803,7 +4751,8 @@ export const legacyProducts: Product[] = [
     "price": 1400,
     "category": "brake",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "srx"
     ],
     "colors": [
       "black",
@@ -4812,8 +4761,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรคหลัง BREMBO ใส่ SR,SRX,XJR ใส่จาน 245-250 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหลัง BREMBO ใส่ SR,SRX,XJR ใส่จาน 245-250 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหลัง BREMBO ใส่ SR,SRX,XJR ใส่จาน 245-250 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรคหลัง BREMBO ใส่ SR,SRX,XJR ใส่จาน 245-250 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-srx-xjr-d245-250.jpg"
     ],
@@ -4835,8 +4784,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แหวนรองสปริงวาวล์ไอดีและไอเสีย SR ผลิตจาก Alloy 7075 CNC Billet น้ำหนักเพียง 8.5 กรัม (ของเดิม 20 กรัม) พร้อมชุบอโนไดซ์สีเคลือบผิวเพื่อให้แข็งขึ้น ข้อดีของมันคือ เบาและช่วยระบายความร้อนของสปริงทำให้สปริงมีแรงถีบวาวล์กลับเร็วขึ้น ทดสอบในสนามแข่งเป็นที่เรียบร้อยแล้วครับมั่นใจได้. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แหวนรองสปริงวาวล์ไอดีและไอเสีย SR ผลิตจาก Alloy 7075 CNC Billet น้ำหนักเพียง 8.5 กรัม (ของเดิม 20 กรัม) พร้อมชุบอโนไดซ์สีเคลือบผิวเพื่อให้แข็งขึ้น ข้อดีของมันคือ เบาและช่วยระบายความร้อนของสปริงทำให้สปริงมีแรงถีบวาวล์กลับเร็วขึ้น ทดสอบในสนามแข่งเป็นที่เรียบร้อยแล้วครับมั่นใจได้ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แหวนรองสปริงวาวล์ไอดีและไอเสีย SR ผลิตจาก Alloy 7075 CNC Billet น้ำหนักเพียง 8.5 กรัม (ของเดิม 20 กรัม) พร้อมชุบอโนไดซ์สีเคลือบผิวเพื่อให้แข็งขึ้น ข้อดีของมันคือ เบาและช่วยระบายความร้อนของสปริงทำให้สปริงมีแรงถีบวาวล์กลับเร็วขึ้น ทดสอบในสนามแข่งเป็นที่เรียบร้อยแล้วครับมั่นใจได้ คู่ละ",
+    "descriptionTh": "แหวนรองสปริงวาวล์ไอดีและไอเสีย SR ผลิตจาก Alloy 7075 CNC Billet น้ำหนักเพียง 8.5 กรัม (ของเดิม 20 กรัม) พร้อมชุบอโนไดซ์สีเคลือบผิวเพื่อให้แข็งขึ้น ข้อดีของมันคือ เบาและช่วยระบายความร้อนของสปริงทำให้สปริงมีแรงถีบวาวล์กลับเร็วขึ้น ทดสอบในสนามแข่งเป็นที่เรียบร้อยแล้วครับมั่นใจได้ คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/rethenner-cnc.jpg",
       "/legacy/webgigabike.com/part/rethenner-cnc-gl.jpg"
@@ -4859,8 +4808,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยาวกว่า1นิ้ว=ขนาด 270 mm. ยาวเท่าเดิมและใช้สปริงแบบยาว=ขนาด 245 mm. ขาตั้งเดี่ยวแต่ง SR ผลิตจาก Stainless 304 ด้วยเครื่องจักร CNC มีสองแบบสองขนาดให้เลือก มีแบบสั้นกว่าเดิมกว่า1นิ้ว=220 mm.และยาวเท่าเดิมและใช้สปริงแบบยาว=ยาว 245 mm. และยาวกว่า1นิ้ว=270 mm.ครับ มีแบบรูปเท้าและแบบเรียบๆให้เลือกเลยครับ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยาวกว่า1นิ้ว=ขนาด 270 mm. ยาวเท่าเดิมและใช้สปริงแบบยาว=ขนาด 245 mm. ขาตั้งเดี่ยวแต่ง SR ผลิตจาก Stainless 304 ด้วยเครื่องจักร CNC มีสองแบบสองขนาดให้เลือก มีแบบสั้นกว่าเดิมกว่า1นิ้ว=220 mm.และยาวเท่าเดิมและใช้สปริงแบบยาว=ยาว 245 mm. และยาวกว่า1นิ้ว=270 mm.ครับ มีแบบรูปเท้าและแบบเรียบๆให้เลือกเลยครับ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยาวกว่า1นิ้ว=ขนาด 270 mm. ยาวเท่าเดิมและใช้สปริงแบบยาว=ขนาด 245 mm. ขาตั้งเดี่ยวแต่ง SR ผลิตจาก Stainless 304 ด้วยเครื่องจักร CNC มีสองแบบสองขนาดให้เลือก มีแบบสั้นกว่าเดิมกว่า1นิ้ว=220 mm.และยาวเท่าเดิมและใช้สปริงแบบยาว=ยาว 245 mm. และยาวกว่า1นิ้ว=270 mm.ครับ มีแบบรูปเท้าและแบบเรียบๆให้เลือกเลยครับ ชิ้นละ",
+    "descriptionTh": "ยาวกว่า1นิ้ว=ขนาด 270 mm. ยาวเท่าเดิมและใช้สปริงแบบยาว=ขนาด 245 mm. ขาตั้งเดี่ยวแต่ง SR ผลิตจาก Stainless 304 ด้วยเครื่องจักร CNC มีสองแบบสองขนาดให้เลือก มีแบบสั้นกว่าเดิมกว่า1นิ้ว=220 mm.และยาวเท่าเดิมและใช้สปริงแบบยาว=ยาว 245 mm. และยาวกว่า1นิ้ว=270 mm.ครับ มีแบบรูปเท้าและแบบเรียบๆให้เลือกเลยครับ ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/stand-3.jpg",
       "/legacy/webgigabike.com/part/stand-245mm.jpg",
@@ -4884,8 +4833,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผ่นอุดแพร์ PAIR Cover. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นอุดแพร์ PAIR Cover ผลิตจาก Alloy 7075 CNC Billet สำหรับใส่ yamaha sr ปี 2001-2022 (มีสี เงิน/ดำ/ทอง) แผ่นละ",
+    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover ผลิตจาก Alloy 7075 CNC Billet สำหรับใส่ yamaha sr ปี 2001-2022 (มีสี เงิน/ดำ/ทอง) แผ่นละ",
     "images": [
       "/legacy/webgigabike.com/part/egr-sr.jpg"
     ],
@@ -4912,8 +4861,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผ่นรองจานเบรค SR ใส่จาน SR 2001-2026 แปลงใส่ดุมล้อปีเก่า 1978 และใส่ล้อแม็ก Y'S GEAR มีสี ดำ/เงิน แผ่นละ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นรองจานเบรค SR ใส่จาน SR 2001-2026 แปลงใส่ดุมล้อปีเก่า 1978 และใส่ล้อแม็ก Y'S GEAR มีสี ดำ/เงิน แผ่นละ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นรองจานเบรค SR ใส่จาน SR 2001-2026 แปลงใส่ดุมล้อปีเก่า 1978 และใส่ล้อแม็ก Y'S GEAR มีสี ดำ/เงิน แผ่นละ",
+    "descriptionTh": "แผ่นรองจานเบรค SR ใส่จาน SR 2001-2026 แปลงใส่ดุมล้อปีเก่า 1978 และใส่ล้อแม็ก Y'S GEAR มีสี ดำ/เงิน แผ่นละ",
     "images": [
       "/legacy/webgigabike.com/part/brek-ys-2001-adapter-bk-sl.jpg"
     ],
@@ -4935,8 +4884,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "คอท่อแต่งสแตนเลส สำหรับใส่ SR FI (รุ่นหัวฉีด) แบบเลื้อย3โค้ง. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "คอท่อแต่งสแตนเลส สำหรับใส่ SR FI (รุ่นหัวฉีด) แบบเลื้อย3โค้ง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "คอท่อแต่งสแตนเลส สำหรับใส่ SR FI (รุ่นหัวฉีด) แบบเลื้อย3โค้ง",
+    "descriptionTh": "คอท่อแต่งสแตนเลส สำหรับใส่ SR FI (รุ่นหัวฉีด) แบบเลื้อย3โค้ง",
     "images": [
       "/legacy/webgigabike.com/part/Header-3-fi.jpg"
     ],
@@ -4960,8 +4909,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ไฟท้ายแต่งแบบทรงกลม สำหรับใส่ SR แบบ Led ขาสแตนเลสทั้งชิ้น. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ไฟท้ายแต่งแบบทรงกลม สำหรับใส่ SR แบบ Led ขาสแตนเลสทั้งชิ้น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ไฟท้ายแต่งแบบทรงกลม สำหรับใส่ SR แบบ Led ขาสแตนเลสทั้งชิ้น",
+    "descriptionTh": "ไฟท้ายแต่งแบบทรงกลม สำหรับใส่ SR แบบ Led ขาสแตนเลสทั้งชิ้น",
     "images": [
       "/legacy/webgigabike.com/part/backlight.jpg"
     ],
@@ -4989,8 +4938,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงคอบนแต่งพร้อมตุ๊กตา ใส่ SR,XS650. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงคอบนแต่งพร้อมตุ๊กตา ใส่ SR,XS650 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงคอบนแต่งพร้อมตุ๊กตา ใส่ SR,XS650 ผลิตจากอลูเนียมเกรดพิเศษด้วยเครื่อง CNC สวยงาม แข็งแรง (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
+    "descriptionTh": "แผงคอบนแต่งพร้อมตุ๊กตา ใส่ SR,XS650 ผลิตจากอลูเนียมเกรดพิเศษด้วยเครื่อง CNC สวยงาม แข็งแรง (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/pangkor-sr05.jpg"
     ],
@@ -5012,8 +4961,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ปลอกมือแต่งใส่ได้ทุกรุ่น. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปลอกมือแต่งใส่ได้ทุกรุ่น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ปลอกมือแต่งใส่ได้ทุกรุ่น คู่ละ",
+    "descriptionTh": "ปลอกมือแต่งใส่ได้ทุกรุ่น คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/plok-hand.jpg"
     ],
@@ -5037,8 +4986,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "คอท่อแต่ง Stainless สำหรับใส่ SR FI (รุ่นหัวฉีด) แบบทรงเดิม 2 โค้ง. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "คอท่อแต่ง Stainless สำหรับใส่ SR FI (รุ่นหัวฉีด) แบบทรงเดิม 2 โค้ง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "คอท่อแต่ง Stainless สำหรับใส่ SR FI (รุ่นหัวฉีด) แบบทรงเดิม 2 โค้ง",
+    "descriptionTh": "คอท่อแต่ง Stainless สำหรับใส่ SR FI (รุ่นหัวฉีด) แบบทรงเดิม 2 โค้ง",
     "images": [
       "/legacy/webgigabike.com/part/Header-2-fi.jpg"
     ],
@@ -5062,8 +5011,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูปิเนียมเกรดพิเศษ",
-    "description": "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 แบบร่อง มีสองสีให้เลือก. Fits: Yamaha SR400/500 · Material: อลูปิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 แบบร่อง มีสองสีให้เลือก · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูปิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 แบบร่อง มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
+    "descriptionTh": "ฝาครอบปิดฝาปั๊มเบรคบน SR 1978 แบบร่อง มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cocer-dis78-t1.jpg"
     ],
@@ -5085,8 +5034,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูปิเนียมเกรดพิเศษ",
-    "description": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝานูน มีสองสีให้เลือก. Fits: Yamaha SR400/500 · Material: อลูปิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝานูน มีสองสีให้เลือก · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูปิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝานูน มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
+    "descriptionTh": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝานูน มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cocer-dis01-t1.jpg"
     ],
@@ -5108,8 +5057,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูปิเนียมเกรดพิเศษ",
-    "description": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบร่อง มีสองสีให้เลือก. Fits: Yamaha SR400/500 · Material: อลูปิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบร่อง มีสองสีให้เลือก · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูปิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบร่อง มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
+    "descriptionTh": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบร่อง มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cocer-dis01-t2.jpg"
     ],
@@ -5131,8 +5080,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูปิเนียมเกรดพิเศษ",
-    "description": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝาเรียบ มีสองสีให้เลือก. Fits: Yamaha SR400/500 · Material: อลูปิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝาเรียบ มีสองสีให้เลือก · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูปิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝาเรียบ มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
+    "descriptionTh": "ฝาครอบปิดฝาปั๊มเบรคบน SR 2001-2016 แบบโลโก้ฝาเรียบ มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cocer-dis01-t3.jpg"
     ],
@@ -5154,8 +5103,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงไมล์เดี่ยวแต่งสแตนเลสสำหรับใส่ YAMAHA SR ใส่เข้ากับไมล์เดิมหรือวัดรอบเดิมก็ได้. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงไมล์เดี่ยวแต่งสแตนเลสสำหรับใส่ YAMAHA SR ใส่เข้ากับไมล์เดิมหรือวัดรอบเดิมก็ได้ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงไมล์เดี่ยวแต่งสแตนเลสสำหรับใส่ YAMAHA SR ใส่เข้ากับไมล์เดิมหรือวัดรอบเดิมก็ได้ ชิ้นละ",
+    "descriptionTh": "แผงไมล์เดี่ยวแต่งสแตนเลสสำหรับใส่ YAMAHA SR ใส่เข้ากับไมล์เดิมหรือวัดรอบเดิมก็ได้ ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/sty-miter-single.jpg"
     ],
@@ -5182,8 +5131,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรคหลัง ใส่ปั๊ม BREMBO ใส่จานขนาด 220 มม.รูแกนล้อ 17 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหลัง ใส่ปั๊ม BREMBO ใส่จานขนาด 220 มม.รูแกนล้อ 17 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหลัง ใส่ปั๊ม BREMBO ใส่จานขนาด 220 มม.รูแกนล้อ 17 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรคหลัง ใส่ปั๊ม BREMBO ใส่จานขนาด 220 มม.รูแกนล้อ 17 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-220-mm.jpg"
     ],
@@ -5199,7 +5148,8 @@ export const legacyProducts: Product[] = [
     "price": 1400,
     "category": "brake",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "tdr"
     ],
     "colors": [
       "black",
@@ -5208,8 +5158,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรคหลัง SR ใส่ปั๊ม BREMBO ใส่ล้อ TDR250 ใส่จานขนาด 210 มม.รูแกนล้อ 17 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหลัง SR ใส่ปั๊ม BREMBO ใส่ล้อ TDR250 ใส่จานขนาด 210 มม.รูแกนล้อ 17 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหลัง SR ใส่ปั๊ม BREMBO ใส่ล้อ TDR250 ใส่จานขนาด 210 มม.รูแกนล้อ 17 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรคหลัง SR ใส่ปั๊ม BREMBO ใส่ล้อ TDR250 ใส่จานขนาด 210 มม.รูแกนล้อ 17 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-tdr-210-mm.jpg"
     ],
@@ -5231,8 +5181,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูปิเนียมเกรดพิเศษ",
-    "description": "ฝาครอบปิดปั๊มเบรคบน SR 2001-2016 แบบโลโก้ SR มีสองสีให้เลือก. Fits: Yamaha SR400/500 · Material: อลูปิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบปิดปั๊มเบรคบน SR 2001-2016 แบบโลโก้ SR มีสองสีให้เลือก · ใส่ได้กับ Yamaha SR400/500 · วัสดุ อลูปิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบปิดปั๊มเบรคบน SR 2001-2016 แบบโลโก้ SR มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
+    "descriptionTh": "ฝาครอบปิดปั๊มเบรคบน SR 2001-2016 แบบโลโก้ SR มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cocer-dis01-t4.jpg"
     ],
@@ -5254,8 +5204,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 35 mm. คู่ล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 35 mm. คู่ล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 35 mm. คู่ล่ะ",
+    "descriptionTh": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 35 mm. คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Honda Gb250-400/Lock-33-mm.jpg"
     ],
@@ -5277,8 +5227,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กและแผ่นบังโคลนผลิตจากอลูมิเนียมปั๊มขึ้นรูปทั้ง",
-    "description": "บังโคลนหน้าแต่ง รุ่นเหล็กคาดสั้น ลวดคาด. Fits: Yamaha SR400/500 · Material: เหล็กและแผ่นบังโคลนผลิตจากอลูมิเนียมปั๊มขึ้นรูป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้าแต่ง รุ่นเหล็กคาดสั้น ลวดคาด · ใส่ได้กับ Yamaha SR400/500 · วัสดุ เหล็กและแผ่นบังโคลนผลิตจากอลูมิเนียมปั๊มขึ้นรูป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้าแต่ง รุ่นเหล็กคาดสั้น ลวดคาดผลิตจากเหล็กและแผ่นบังโคลนผลิตจากอลูมิเนียมปั๊มขึ้นรูปทั้งชิ้น ขนาด 300 mm. ชื้นละ",
+    "descriptionTh": "บังโคลนหน้าแต่ง รุ่นเหล็กคาดสั้น ลวดคาดผลิตจากเหล็กและแผ่นบังโคลนผลิตจากอลูมิเนียมปั๊มขึ้นรูปทั้งชิ้น ขนาด 300 mm. ชื้นละ",
     "images": [
       "/legacy/webgigabike.com/part/Fender-Front-sr-300-bk-hl.jpg",
       "/legacy/webgigabike.com/part/Fender-Front-sr-300-bk.jpg"
@@ -5301,8 +5251,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "จุกอุดแทนสายวัดรอบเดิม yamaha sr. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จุกอุดแทนสายวัดรอบเดิม yamaha sr · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จุกอุดแทนสายวัดรอบเดิม yamaha sr ผลิตจาก Alloy 6061 มี 3 สีให้เลือก (ดำ-เงิน-ทอง-แดง) ชิ้นละ",
+    "descriptionTh": "จุกอุดแทนสายวัดรอบเดิม yamaha sr ผลิตจาก Alloy 6061 มี 3 สีให้เลือก (ดำ-เงิน-ทอง-แดง) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/cover-rpm.jpg"
     ],
@@ -5327,8 +5277,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า SR แบบใหม่ล่าสุด (แบบซี่ตรงสั้น) งาน CNC. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า SR แบบใหม่ล่าสุด (แบบซี่ตรงสั้น) งาน CNC · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า SR แบบใหม่ล่าสุด (แบบซี่ตรงสั้น) งาน CNC ผลิตจาก Alloy 6061 T6 ขนาด 35mm. ยาว 66 mm. มีสี เงิน-ดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า SR แบบใหม่ล่าสุด (แบบซี่ตรงสั้น) งาน CNC ผลิตจาก Alloy 6061 T6 ขนาด 35mm. ยาว 66 mm. มีสี เงิน-ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-shot-v-bk.jpg",
       "/legacy/webgigabike.com/part/hoocharng_cnc-shot-v-si.jpg"
@@ -5356,8 +5306,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า SR แบบใหม่ล่าสุด (แบบซี่ยาว) งาน CNC. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า SR แบบใหม่ล่าสุด (แบบซี่ยาว) งาน CNC · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า SR แบบใหม่ล่าสุด (แบบซี่ยาว) งาน CNC ผลิตจาก Alloy 6061 T6 ขนาด 35mm. ยาว 95 mm. (มีสี เงิน-ดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า SR แบบใหม่ล่าสุด (แบบซี่ยาว) งาน CNC ผลิตจาก Alloy 6061 T6 ขนาด 35mm. ยาว 95 mm. (มีสี เงิน-ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-bk-long-v.jpg",
       "/legacy/webgigabike.com/part/hoocharng_cnc-si-long-v.jpg"
@@ -5382,8 +5332,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตดิสเบรค มีเกลียว M10 Pit 1.0 สำหรับปั๊มเบรค Brembo และ เกลียว M10 Pit 1.25 สำหรับปั๊ม Nissin. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตดิสเบรค มีเกลียว M10 Pit 1.0 สำหรับปั๊มเบรค Brembo และ เกลียว M10 Pit 1.25 สำหรับปั๊ม Nissin · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตดิสเบรค มีเกลียว M10 Pit 1.0 สำหรับปั๊มเบรค Brembo และ เกลียว M10 Pit 1.25 สำหรับปั๊ม Nissin ผลิตจาก Alloy 7075 T6 มี3สี (ดำ-ขาว-ฟ้า) ชิ้นละ",
+    "descriptionTh": "น๊อตดิสเบรค มีเกลียว M10 Pit 1.0 สำหรับปั๊มเบรค Brembo และ เกลียว M10 Pit 1.25 สำหรับปั๊ม Nissin ผลิตจาก Alloy 7075 T6 มี3สี (ดำ-ขาว-ฟ้า) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Dis5.jpg",
       "/legacy/webgigabike.com/part/Nut-Dis-all.jpg"
@@ -5406,8 +5356,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สายเส้นเดียว SR พร้อมแหวนอลูมินั่ม2ชิ้น. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สายเส้นเดียว SR พร้อมแหวนอลูมินั่ม2ชิ้น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สายเส้นเดียว SR พร้อมแหวนอลูมินั่ม2ชิ้น ผลิตจาก Alloy 7075 มี2สี (ดำ-ขาว) ชุดละ",
+    "descriptionTh": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สายเส้นเดียว SR พร้อมแหวนอลูมินั่ม2ชิ้น ผลิตจาก Alloy 7075 มี2สี (ดำ-ขาว) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Dis4.jpg"
     ],
@@ -5429,8 +5379,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ถาดเก็บสายสายไฟใต้เบาะ Stainless แบบรูพับ ใส่ Yamaha SR ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ถาดเก็บสายสายไฟใต้เบาะ Stainless แบบรูพับ ใส่ Yamaha SR ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ถาดเก็บสายสายไฟใต้เบาะ Stainless แบบรูพับ ใส่ Yamaha SR ชิ้นล่ะ",
+    "descriptionTh": "ถาดเก็บสายสายไฟใต้เบาะ Stainless แบบรูพับ ใส่ Yamaha SR ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/tart-sr2.jpg"
     ],
@@ -5455,8 +5405,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรค Brembo หูชิดใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิดใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรค Brembo หูชิดใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิดใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Br43.jpg",
       "/legacy/webgigabike.com/part/brembo-320_43mm.jpg"
@@ -5479,8 +5429,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075",
-    "description": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า SR ใส่เข้ากับดุมดิสเบรกและโช๊ค Ohlins 43 mm. Fits: Yamaha SR400/500 · Material: Alloy 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า SR ใส่เข้ากับดุมดิสเบรกและโช๊ค Ohlins 43 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า SR ใส่เข้ากับดุมดิสเบรกและโช๊ค Ohlins 43 mm. ผลิตจาก Alloy 7075 ชุดล่ะ",
+    "descriptionTh": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า SR ใส่เข้ากับดุมดิสเบรกและโช๊ค Ohlins 43 mm. ผลิตจาก Alloy 7075 ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-320_43mm._boot.jpg"
     ],
@@ -5505,8 +5455,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-320_43mm-L.jpg"
     ],
@@ -5528,8 +5478,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า ผลิตจาก Alloy 6061(มีสี ทอง/ดำ/เงิน) คู่ล่ะ",
+    "descriptionTh": "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า ผลิตจาก Alloy 6061(มีสี ทอง/ดำ/เงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Cam-Fender-43mm.jpg"
     ],
@@ -5551,8 +5501,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดบังโคลนหน้าพร้อม หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ใส่กับรูบังโคลนหน้า SR เดิมได้เลยใส่ได้กับล้อ 17,18,19 นิ้ว. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดบังโคลนหน้าพร้อม หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ใส่กับรูบังโคลนหน้า SR เดิมได้เลยใส่ได้กับล้อ 17,18,19 นิ้ว · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดบังโคลนหน้าพร้อม หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ใส่กับรูบังโคลนหน้า SR เดิมได้เลยใส่ได้กับล้อ 17,18,19 นิ้ว ผลิตจาก Alloy CNC Billet (มีสี ทอง-ดำ / ดำล้วน) คู่ล่ะ",
+    "descriptionTh": "ขายึดบังโคลนหน้าพร้อม หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ใส่กับรูบังโคลนหน้า SR เดิมได้เลยใส่ได้กับล้อ 17,18,19 นิ้ว ผลิตจาก Alloy CNC Billet (มีสี ทอง-ดำ / ดำล้วน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/adab_fender-bk.jpg",
       "/legacy/webgigabike.com/part/adab_fender-g.jpg"
@@ -5578,8 +5528,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Triple-clamp set with bar clamps for SR + Ohlins FG433/621 43mm forks. Direct fit, black hard-anodize guaranteed not purple. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Triple-clamp set with bar clamps for SR + Ohlins FG433/621 43mm forks. Direct fit, black hard-anodize guaranteed not purple · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Triple-clamp set with bar clamps for SR + Ohlins FG433/621 43mm forks. Direct fit, black hard-anodize guaranteed not purple.",
+    "descriptionTh": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง SR ใส่กับโช๊ค Ohlins 43 mm. ได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 6061 + 7075 ด้วยเครื่อง CNC สวยงามแข็งแรง (มีสี เงิน/ดำ) ชุดล่ะ",
     "images": [],
     "featured": false,
     "published": false,
@@ -5601,8 +5551,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตตัวเมียล๊อคโช๊ตหลัง Ohlins เกลียว M14x1.0. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตตัวเมียล๊อคโช๊ตหลัง Ohlins เกลียว M14x1.0 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตตัวเมียล๊อคโช๊ตหลัง Ohlins เกลียว M14x1.0 ผลิตจาก Alloy 7075 มี2สี (น้ำเงิน-ฟ้า) ชิ้นละ",
+    "descriptionTh": "น๊อตตัวเมียล๊อคโช๊ตหลัง Ohlins เกลียว M14x1.0 ผลิตจาก Alloy 7075 มี2สี (น้ำเงิน-ฟ้า) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/2T/Nut_Ohlins_m14_show.jpg",
       "/legacy/webgigabike.com/2T/Nut_Ohlins_m14.jpg"
@@ -5629,8 +5579,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075",
-    "description": "น๊อตตัวผู้สำหรับต่อเข้าปั๊ม Brembo มีเกลียว M10x1.0 และ M10x1.25 ,AN3. Fits: Yamaha SR400/500 · Material: Alloy 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตตัวผู้สำหรับต่อเข้าปั๊ม Brembo มีเกลียว M10x1.0 และ M10x1.25 ,AN3 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตตัวผู้สำหรับต่อเข้าปั๊ม Brembo มีเกลียว M10x1.0 และ M10x1.25 ,AN3 ผลิตจาก Alloy 7075 มีสี (น้ำเงิน-ดำ-เงิน) ชิ้นละ",
+    "descriptionTh": "น๊อตตัวผู้สำหรับต่อเข้าปั๊ม Brembo มีเกลียว M10x1.0 และ M10x1.25 ,AN3 ผลิตจาก Alloy 7075 มีสี (น้ำเงิน-ดำ-เงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/2T/Nut_brake_m10x10_show1.jpg",
       "/legacy/webgigabike.com/2T/Nut_brake_m10x10.jpg"
@@ -5653,8 +5603,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ห่วงสายเบรคแบบสั้น รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ห่วงสายเบรคแบบสั้น รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ห่วงสายเบรคแบบสั้น รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ ผลิตจาก Alloy CNC Billet มี4สี (น้ำเงิน-ฟ้า-ดำ-แดง) ชิ้นละ",
+    "descriptionTh": "ห่วงสายเบรคแบบสั้น รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ ผลิตจาก Alloy CNC Billet มี4สี (น้ำเงิน-ฟ้า-ดำ-แดง) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/2T/Nut_brake_m10x10_show.jpg",
       "/legacy/webgigabike.com/2T/Nut_brake_m10x3-shot.jpg"
@@ -5677,8 +5627,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หัว ห่วงสาย Oil รู 14 mm.AN6 สำหรับต่อเข้ากับหัวสาย Oil เบอร์ 6 แบบตรงแบบ45และ90องศาได้. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หัว ห่วงสาย Oil รู 14 mm.AN6 สำหรับต่อเข้ากับหัวสาย Oil เบอร์ 6 แบบตรงแบบ45และ90องศาได้ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หัว ห่วงสาย Oil รู 14 mm.AN6 สำหรับต่อเข้ากับหัวสาย Oil เบอร์ 6 แบบตรงแบบ45และ90องศาได้ ผลิตจาก Alloy CNC Billet มี2สี (ฟ้า-ดำ) ชิ้นละ",
+    "descriptionTh": "หัว ห่วงสาย Oil รู 14 mm.AN6 สำหรับต่อเข้ากับหัวสาย Oil เบอร์ 6 แบบตรงแบบ45และ90องศาได้ ผลิตจาก Alloy CNC Billet มี2สี (ฟ้า-ดำ) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/2T/Nut_Oil_No6-14_Show.jpg",
       "/legacy/webgigabike.com/2T/Nut_Oil_No6-14.jpg"
@@ -5701,8 +5651,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า CNC แบบตัว V ขนาด 35 mm. ความยาว 95 mm. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า CNC แบบตัว V ขนาด 35 mm. ความยาว 95 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า CNC แบบตัว V ขนาด 35 mm. ความยาว 95 mm. ผลิตจาก Alloy 6061 (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า CNC แบบตัว V ขนาด 35 mm. ความยาว 95 mm. ผลิตจาก Alloy 6061 (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/steyheadlight-long95si.jpg",
       "/legacy/webgigabike.com/Triumph/steyheadlight-long95bk.jpg"
@@ -5727,8 +5677,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า CNC แบบตัว V สั้น ขนาด 35 mm. ความยาว 68 mm. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า CNC แบบตัว V สั้น ขนาด 35 mm. ความยาว 68 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า CNC แบบตัว V สั้น ขนาด 35 mm. ความยาว 68 mm. ผลิตจาก Alloy 6061 (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า CNC แบบตัว V สั้น ขนาด 35 mm. ความยาว 68 mm. ผลิตจาก Alloy 6061 (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-shot68si.jpg",
       "/legacy/webgigabike.com/part/hoocharng_cnc-shot68bk.jpg"
@@ -5756,8 +5706,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "บู๊ทล้อหน้า SR รุ่นดิสเบรค ปี 2001-2018. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทล้อหน้า SR รุ่นดิสเบรค ปี 2001-2018 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บู๊ทล้อหน้า SR รุ่นดิสเบรค ปี 2001-2018 ผลิตจาก Alloy 6061 CNC Billet (มีสี ดำ/ทอง และแบบชุบฮาร์ทไทเทเนี่ยม) ชิ้นล่ะ",
+    "descriptionTh": "บู๊ทล้อหน้า SR รุ่นดิสเบรค ปี 2001-2018 ผลิตจาก Alloy 6061 CNC Billet (มีสี ดำ/ทอง และแบบชุบฮาร์ทไทเทเนี่ยม) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/bootFront2001-sr.jpg"
     ],
@@ -5782,8 +5732,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "บู๊ทล้อหลัง SR ใส่ได้ทุกปีทุกรุ่น. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทล้อหลัง SR ใส่ได้ทุกปีทุกรุ่น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บู๊ทล้อหลัง SR ใส่ได้ทุกปีทุกรุ่น ผลิตจาก Alloy 6061 CNC Billet (มีสี ดำ/ทอง และแบบชุบฮาร์ทไทเทเนี่ยม) ชิ้นล่ะ",
+    "descriptionTh": "บู๊ทล้อหลัง SR ใส่ได้ทุกปีทุกรุ่น ผลิตจาก Alloy 6061 CNC Billet (มีสี ดำ/ทอง และแบบชุบฮาร์ทไทเทเนี่ยม) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/bootRear-sr.jpg"
     ],
@@ -5807,8 +5757,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี มีขนาดใส่โซ่ 428-19,20,21ฟัน",
-    "description": "สเตอร์หน้า CNC Billet SR400. Fits: Yamaha SR400/500 · Material: เหล็กกล้าและชุบแข็งอย่างดี มีขนาดใส่โซ่ 428-19,20,21ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า CNC Billet SR400 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี มีขนาดใส่โซ่ 428-19,20,21ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า CNC Billet SR400 ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี มีขนาดใส่โซ่ 428-19,20,21ฟัน อันละ",
+    "descriptionTh": "สเตอร์หน้า CNC Billet SR400 ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี มีขนาดใส่โซ่ 428-19,20,21ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/part/sprokket-front-sr-428.jpg"
     ],
@@ -5830,8 +5780,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี มีขนาดใส่โซ่ 520-15,16,17 ฟัน",
-    "description": "สเตอร์หน้า CNC Billet SR400. Fits: Yamaha SR400/500 · Material: เหล็กกล้าและชุบแข็งอย่างดี มีขนาดใส่โซ่ 520-15,16,17 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า CNC Billet SR400 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี มีขนาดใส่โซ่ 520-15,16,17 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า CNC Billet SR400 ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี มีขนาดใส่โซ่ 520-15,16,17 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หน้า CNC Billet SR400 ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี มีขนาดใส่โซ่ 520-15,16,17 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/part/sprokket-front-sr-520.jpg"
     ],
@@ -5853,8 +5803,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "บู๊ทรองเบาะ สำหรับใส่ SR400 FI ที่ต้องการเอาเบาะแต่ง SR รุ่น Carburetor มาใส่ได้เลยไม่ต้องดัดแปลง. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทรองเบาะ สำหรับใส่ SR400 FI ที่ต้องการเอาเบาะแต่ง SR รุ่น Carburetor มาใส่ได้เลยไม่ต้องดัดแปลง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บู๊ทรองเบาะ สำหรับใส่ SR400 FI ที่ต้องการเอาเบาะแต่ง SR รุ่น Carburetor มาใส่ได้เลยไม่ต้องดัดแปลง ชุดละ",
+    "descriptionTh": "บู๊ทรองเบาะ สำหรับใส่ SR400 FI ที่ต้องการเอาเบาะแต่ง SR รุ่น Carburetor มาใส่ได้เลยไม่ต้องดัดแปลง ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/Boot-seat-fi.jpg"
     ],
@@ -5876,8 +5826,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตแกนล้อหน้า SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตแกนล้อหน้า SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตแกนล้อหน้า SR ผลิตจาก Alloy 7075 CNC Billet M14x1.5 ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น (มีสีดำและสีฮาร์ท) ชิ้นล่ะ",
+    "descriptionTh": "น๊อตแกนล้อหน้า SR ผลิตจาก Alloy 7075 CNC Billet M14x1.5 ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น (มีสีดำและสีฮาร์ท) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nut-lor-m14x1.5.jpg"
     ],
@@ -5899,8 +5849,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตดิสเบรคทวินใส่สายเบรคได้2เส้น. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตดิสเบรคทวินใส่สายเบรคได้2เส้น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตดิสเบรคทวินใส่สายเบรคได้2เส้น ผลิตจาก Alloy 7075 CNC Billet M10x1.25 มี3สี (ดำ-ขาว-ทอง) ชิ้นละ",
+    "descriptionTh": "น๊อตดิสเบรคทวินใส่สายเบรคได้2เส้น ผลิตจาก Alloy 7075 CNC Billet M10x1.25 มี3สี (ดำ-ขาว-ทอง) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Dis-twin.jpg"
     ],
@@ -5922,8 +5872,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet",
-    "description": "หูยึดเครื่องแต่งแบบแยกใส่กันล้มได้ต่างหาก ใส่ได้กับรถ SR ทุกปี. Fits: Yamaha SR400/500 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดเครื่องแต่งแบบแยกใส่กันล้มได้ต่างหาก ใส่ได้กับรถ SR ทุกปี · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดเครื่องแต่งแบบแยกใส่กันล้มได้ต่างหาก ใส่ได้กับรถ SR ทุกปี ผลิตจาก Alloy 6061 CNC Billet มีสี ดำและสีเงิน คู่ล่ะ",
+    "descriptionTh": "หูยึดเครื่องแต่งแบบแยกใส่กันล้มได้ต่างหาก ใส่ได้กับรถ SR ทุกปี ผลิตจาก Alloy 6061 CNC Billet มีสี ดำและสีเงิน คู่ล่ะ",
     "images": [],
     "featured": false,
     "published": false,
@@ -5945,8 +5895,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 + 7075 CNC Billet สวยงามแข็งแรง",
-    "description": "ชุดแผงคอบนล่าง SR ใส่กับโช๊คแต่งแกนโช๊ค 40 mm. Fits: Yamaha SR400/500 · Material: Alloy 6061 + 7075 CNC Billet สวยงามแข็งแรง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่าง SR ใส่กับโช๊คแต่งแกนโช๊ค 40 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 + 7075 CNC Billet สวยงามแข็งแรง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่าง SR ใส่กับโช๊คแต่งแกนโช๊ค 40 mm. ผลิตจาก Alloy 6061 + 7075 CNC Billet สวยงามแข็งแรง ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนล่าง SR ใส่กับโช๊คแต่งแกนโช๊ค 40 mm. ผลิตจาก Alloy 6061 + 7075 CNC Billet สวยงามแข็งแรง ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/P-40mm.jpg"
     ],
@@ -5971,8 +5921,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40mm. & FCR35-41mm. แบบ2ชั้น. Fits: Yamaha SR400/500 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40mm. & FCR35-41mm. แบบ2ชั้น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40mm. & FCR35-41mm. แบบ2ชั้น ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ) ชิ้นล่ะ",
+    "descriptionTh": "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40mm. & FCR35-41mm. แบบ2ชั้น ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/trub-fcr-2.jpg",
       "/legacy/webgigabike.com/part/trub-tmr-2.jpg"
@@ -5998,8 +5948,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม. ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 300 มม. ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-sr01-300-new.jpg"
     ],
@@ -6024,8 +5974,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 320 มม. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 320 มม · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 320 มม. ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2018 ใส่จาน 320 มม. ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-sr01-320-new.jpg"
     ],
@@ -6047,8 +5997,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงไมล์แต่ง Alloy สำหรับใส่ YAMAHA SR ใส่เข้ากับเรือนไมล์เดิมไดเลย ชิ้นล่ะ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงไมล์แต่ง Alloy สำหรับใส่ YAMAHA SR ใส่เข้ากับเรือนไมล์เดิมไดเลย ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงไมล์แต่ง Alloy สำหรับใส่ YAMAHA SR ใส่เข้ากับเรือนไมล์เดิมไดเลย ชิ้นล่ะ",
+    "descriptionTh": "แผงไมล์แต่ง Alloy สำหรับใส่ YAMAHA SR ใส่เข้ากับเรือนไมล์เดิมไดเลย ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Brackets-miter-sil.jpg",
       "/legacy/webgigabike.com/part/Brackets-miter-bk.jpg"
@@ -6077,8 +6027,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061+7075 CNC Billet ทั้ง",
-    "description": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค. Fits: Yamaha SR400/500 · Material: Alloy 6061+7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061+7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค ผลิตจาก Alloy 6061+7075 CNC Billet ทั้งชุด คงทนแข็งแรง ใช้คันสตาร์ทเดิมได้เลย มีสี (ดำ/เงิน/ทอง) ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค ผลิตจาก Alloy 6061+7075 CNC Billet ทั้งชุด คงทนแข็งแรง ใช้คันสตาร์ทเดิมได้เลย มีสี (ดำ/เงิน/ทอง) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/Footpegs-sr-gl.jpg",
       "/legacy/webgigabike.com/part/Footpegs-sr-sl.jpg",
@@ -6104,8 +6054,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061+7075 CNC Billet ทั้ง",
-    "description": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค. Fits: Yamaha SR400/500 · Material: Alloy 6061+7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061+7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค ผลิตจาก Alloy 6061+7075 CNC Billet ทั้งชุด แบบชุบฮาร์ทพิเศษคงทนแข็งแรงกันรอยได้ดีมาก ใช้คันสตาร์ทเดิมได้เลย สีฮาร์ท ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดรั๊มเบรค ผลิตจาก Alloy 6061+7075 CNC Billet ทั้งชุด แบบชุบฮาร์ทพิเศษคงทนแข็งแรงกันรอยได้ดีมาก ใช้คันสตาร์ทเดิมได้เลย สีฮาร์ท ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/Footpegs-sr-ha.jpg"
     ],
@@ -6130,8 +6080,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061+7075 CNC Billet ทั้ง",
-    "description": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดิสเบรคใส่ปั๊มกะทุ้งเบรค Brembo หูคู่ได้เลยไม่ต้องดัดแปลง. Fits: Yamaha SR400/500 · Material: Alloy 6061+7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดิสเบรคใส่ปั๊มกะทุ้งเบรค Brembo หูคู่ได้เลยไม่ต้องดัดแปลง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061+7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดิสเบรคใส่ปั๊มกะทุ้งเบรค Brembo หูคู่ได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 6061+7075 CNC Billet ทั้งชุด คงทนแข็งแรง ใช้คันสตาร์ทเดิมได้เลย มีสี (ดำ / เงิน) ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ SR400/500 แบบดิสเบรคใส่ปั๊มกะทุ้งเบรค Brembo หูคู่ได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 6061+7075 CNC Billet ทั้งชุด คงทนแข็งแรง ใช้คันสตาร์ทเดิมได้เลย มีสี (ดำ / เงิน) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/Footpegs-sr-dis-sl.jpg",
       "/legacy/webgigabike.com/part/Footpegs-sr-dis-bk.jpg",
@@ -6149,7 +6099,8 @@ export const legacyProducts: Product[] = [
     "price": 700,
     "category": "engine",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "srx"
     ],
     "colors": [
       "black",
@@ -6159,8 +6110,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet",
-    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX แบบใบกันชา. Fits: Yamaha SR400/500 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX แบบใบกันชา · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX แบบใบกันชา ผลิตจาก Alloy 6061 CNC Billet มีสี ดำ-เงิน-ฮาร์ท อันละ",
+    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX แบบใบกันชา ผลิตจาก Alloy 6061 CNC Billet มีสี ดำ-เงิน-ฮาร์ท อันละ",
     "images": [
       "/legacy/webgigabike.com/part/Cover_Oil_SR-kuncha-bk.jpg",
       "/legacy/webgigabike.com/part/Cover_Oil_SR-kuncha-sl.jpg",
@@ -6184,8 +6135,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบหลุม. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบหลุม · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบหลุม ผลิตจาก Allloy 7075 CNC Billet (สีดำ/เงิน/ทอง) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบหลุม ผลิตจาก Allloy 7075 CNC Billet (สีดำ/เงิน/ทอง) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/capcam-Hole.jpg"
     ],
@@ -6207,8 +6158,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบเรียบ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบเรียบ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบเรียบ ผลิตจาก Allloy 7075 CNC Billet (สีดำ/เงิน/ทอง) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบเรียบ ผลิตจาก Allloy 7075 CNC Billet (สีดำ/เงิน/ทอง) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/capcam-in.jpg",
       "/legacy/webgigabike.com/part/capcam-show.jpg",
@@ -6232,8 +6183,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบครีบ. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบครีบ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบครีบ ผลิตจาก Allloy 7075 CNC Billet (สีดำ/เงิน/ทอง) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบม๊าคแคมแต่ง SR,XT,TT แบบครีบ ผลิตจาก Allloy 7075 CNC Billet (สีดำ/เงิน/ทอง) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/capcam-Fin.jpg"
     ],
@@ -6262,8 +6213,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "จานเบรคแต่ง SR 2001-2020 แบบไข่ ขนาดจาน 298mm. เท่าของเดิม ใส้จาน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง SR 2001-2020 แบบไข่ ขนาดจาน 298mm. เท่าของเดิม ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง SR 2001-2020 แบบไข่ ขนาดจาน 298mm. เท่าของเดิม ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) หมุดจานมีสี ดำ,ทอง,แดง,เขียว,น้ำเงิน,ฮาร์ด ชุดล่ะ",
+    "descriptionTh": "จานเบรคแต่ง SR 2001-2020 แบบไข่ ขนาดจาน 298mm. เท่าของเดิม ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) หมุดจานมีสี ดำ,ทอง,แดง,เขียว,น้ำเงิน,ฮาร์ด ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Brake-sr-298-bk-gl.jpg",
       "/legacy/webgigabike.com/part/Brake-sr-298-gl-bk.jpg",
@@ -6288,8 +6239,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "จานเบรคแต่ง SR 2001-2020 แบบดาว ขนาดจาน 298mm. เท่าของเดิม ใส้จาน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง SR 2001-2020 แบบดาว ขนาดจาน 298mm. เท่าของเดิม ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง SR 2001-2020 แบบดาว ขนาดจาน 298mm. เท่าของเดิม ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ชุดล่ะ",
+    "descriptionTh": "จานเบรคแต่ง SR 2001-2020 แบบดาว ขนาดจาน 298mm. เท่าของเดิม ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Brake-sr-298-gl-bk-new.jpg"
     ],
@@ -6316,8 +6267,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet",
-    "description": "มือลิงดึงดรั๊มเบรคหลัง SR แบบยาว105 mm.เหมาะสำหรับใส่เข้ากับชุดเกียร์แบบโยง. Fits: Yamaha SR400/500 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "มือลิงดึงดรั๊มเบรคหลัง SR แบบยาว105 mm.เหมาะสำหรับใส่เข้ากับชุดเกียร์แบบโยง · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "มือลิงดึงดรั๊มเบรคหลัง SR แบบยาว105 mm.เหมาะสำหรับใส่เข้ากับชุดเกียร์แบบโยง ผลิตจาก Alloy 6061 CNC Billet มีสี เงิน/ดำ/ทอง/ฮาร์ท ชุดละ",
+    "descriptionTh": "มือลิงดึงดรั๊มเบรคหลัง SR แบบยาว105 mm.เหมาะสำหรับใส่เข้ากับชุดเกียร์แบบโยง ผลิตจาก Alloy 6061 CNC Billet มีสี เงิน/ดำ/ทอง/ฮาร์ท ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/drumbrek-sr-cnc-long.jpg"
     ],
@@ -6339,8 +6290,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางหุ้มโช๊คแต่ง3ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางหุ้มโช๊คแต่ง3ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางหุ้มโช๊คแต่ง3ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว คู่ละ",
+    "descriptionTh": "ยางหุ้มโช๊คแต่ง3ปล้องทรงใหญ่สำหรับใส่ SR พร้อมตะขอเกี่ยว คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/yang-3pong.jpg"
     ],
@@ -6362,8 +6313,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยางรองล๊อคหูถังน้ำมันด้านหลัง SR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางรองล๊อคหูถังน้ำมันด้านหลัง SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางรองล๊อคหูถังน้ำมันด้านหลัง SR ชิ้นละ",
+    "descriptionTh": "ยางรองล๊อคหูถังน้ำมันด้านหลัง SR ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/yang-tang.jpg"
     ],
@@ -6387,8 +6338,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500 ผลิตจาก Alloy 7075 CNC Billet ใส่ SR,XT (Color&ndash;Silver,Gold,Hard,Red) ชิ้นล่ะ",
+    "descriptionTh": "น็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500 ผลิตจาก Alloy 7075 CNC Billet ใส่ SR,XT (Color&ndash;Silver,Gold,Hard,Red) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nutso-7075.jpg"
     ],
@@ -6410,8 +6361,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดน็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดน็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดน็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500 ผลิตจาก Alloy 7075 CNC Billet ใส่ SR,XT (Color&ndash;Silver,Gold,Hard,Red) ชุดล่ะ",
+    "descriptionTh": "ชุดน็อตล๊อคตัวตั้งโซ่ราวลิ้นแต่ง SR400/500 ผลิตจาก Alloy 7075 CNC Billet ใส่ SR,XT (Color&ndash;Silver,Gold,Hard,Red) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nutso-set7075.jpg"
     ],
@@ -6437,8 +6388,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบทรงเดิมนูนทึบ. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบทรงเดิมนูนทึบ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบทรงเดิมนูนทึบ ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ปัดเงา ชิ้นล่ะ",
+    "descriptionTh": "ฝาปิดสเตอร์หน้าแต่ง SR400/500 ใส่ได้ปี1978-2022,XT,TT แบบทรงเดิมนูนทึบ ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ปัดเงา ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cover-sprok-cnc-2.jpg",
       "/legacy/webgigabike.com/part/cover-sprok-cnc-1.jpg"
@@ -6465,8 +6416,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ชุดย้ายพักเท้าหลังหลบท่อไอเสียแบบยก สำหรับใส่ SR FI. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดย้ายพักเท้าหลังหลบท่อไอเสียแบบยก สำหรับใส่ SR FI · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดย้ายพักเท้าหลังหลบท่อไอเสียแบบยก สำหรับใส่ SR FI ผลิตจาก Alloy CNC Billet มีสี (ดำ/เงิน/ฮาร์ด) ชุดละ",
+    "descriptionTh": "ชุดย้ายพักเท้าหลังหลบท่อไอเสียแบบยก สำหรับใส่ SR FI ผลิตจาก Alloy CNC Billet มีสี (ดำ/เงิน/ฮาร์ด) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/adabter-Footpeg-r-si.jpg",
       "/legacy/webgigabike.com/part/adabter-Footpeg-r-ha.jpg",
@@ -6490,8 +6441,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตนเลส 304 กลึงด้วยเครื่อง cnc",
-    "description": "น็อตยึดปั๊มหน้าและขาปั๊ม brembo Bolt. M10x1.5 ยาว 25 mm. & M10x1.25 ยาว 20 & 25 mm. Fits: Yamaha SR400/500 · Material: สแตนเลส 304 กลึงด้วยเครื่อง cnc · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตยึดปั๊มหน้าและขาปั๊ม brembo Bolt. M10x1.5 ยาว 25 mm. & M10x1.25 ยาว 20 & 25 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ สแตนเลส 304 กลึงด้วยเครื่อง cnc · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตยึดปั๊มหน้าและขาปั๊ม brembo Bolt. M10x1.5 ยาว 25 mm. & M10x1.25 ยาว 20 & 25 mm.ผลิตจากสแตนเลส 304 กลึงด้วยเครื่อง cnc ชิ้นละ",
+    "descriptionTh": "น็อตยึดปั๊มหน้าและขาปั๊ม brembo Bolt. M10x1.5 ยาว 25 mm. & M10x1.25 ยาว 20 & 25 mm.ผลิตจากสแตนเลส 304 กลึงด้วยเครื่อง cnc ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/Bolt-Sus-M10x1.25-1.50.jpg"
     ],
@@ -6516,8 +6467,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊ค Ohlins FG433 & FG621 Sweden 43 mm. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊ค Ohlins FG433 & FG621 Sweden 43 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊ค Ohlins FG433 & FG621 Sweden 43 mm. ผลิตจาก Alloy CNC Billet สวยงามแข็งแรง (มีสี เงิน/ดำ) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊ค Ohlins FG433 & FG621 Sweden 43 mm. ผลิตจาก Alloy CNC Billet สวยงามแข็งแรง (มีสี เงิน/ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/pangkorl-sr43-st1.jpg",
       "/legacy/webgigabike.com/part/pangkorl-sr43-st2.jpg"
@@ -6543,8 +6494,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊คเดิมขนาด 35 mm.และแผงคอล่างเดิมได้เลย. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊คเดิมขนาด 35 mm.และแผงคอล่างเดิมได้เลย · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊คเดิมขนาด 35 mm.และแผงคอล่างเดิมได้เลย ผลิตจาก Alloy CNC Billet สวยงามแข็งแรง (มีสี เงิน/ดำ) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊คเดิมขนาด 35 mm.และแผงคอล่างเดิมได้เลย ผลิตจาก Alloy CNC Billet สวยงามแข็งแรง (มีสี เงิน/ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/pangkorl-SR35-std1-sl.jpg",
       "/legacy/webgigabike.com/part/pangkorl-SR35-std2-sl.jpg",
@@ -6569,8 +6520,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT ผลิตจาก Allloy CNC Billet (สีดำ/เงิน/ทอง/ฮาร์ด) ชุดล่ะ",
+    "descriptionTh": "ยกวาล์วหัวเครื่องสำหรับใส่ SR,XT,TT ผลิตจาก Allloy CNC Billet (สีดำ/เงิน/ทอง/ฮาร์ด) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/yokvalsr-cnc-std.jpg",
       "/legacy/webgigabike.com/part/yokvalsr-cnc3.jpg"
@@ -6596,8 +6547,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "น๊อตสายออยล์แต่งขนาด M12 Pit 1.50. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตสายออยล์แต่งขนาด M12 Pit 1.50 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตสายออยล์แต่งขนาด M12 Pit 1.50 ผลิตจาก Alloy CNC Billet มีสี (ดำ-น้ำเงิน) ชิ้นละ",
+    "descriptionTh": "น๊อตสายออยล์แต่งขนาด M12 Pit 1.50 ผลิตจาก Alloy CNC Billet มีสี (ดำ-น้ำเงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Oilcool1.jpg",
       "/legacy/webgigabike.com/part/Nut-Oilcool.jpg"
@@ -6620,8 +6571,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy+เพลา Stainles 304 ทั้ง",
-    "description": "ชุดกันล้มสำหรับใส่ yamaha sr. Fits: Yamaha SR400/500 · Material: Alloy+เพลา Stainles 304 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดกันล้มสำหรับใส่ yamaha sr · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy+เพลา Stainles 304 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดกันล้มสำหรับใส่ yamaha sr ผลิตจาก Alloy+เพลา Stainles 304 ทั้งชุด",
+    "descriptionTh": "ชุดกันล้มสำหรับใส่ yamaha sr ผลิตจาก Alloy+เพลา Stainles 304 ทั้งชุด",
     "images": [
       "/legacy/webgigabike.com/part/slider-st2-1.jpg"
     ],
@@ -6647,8 +6598,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "น๊อตสายออยล์แต่งขนาด M14 Pit 1.50. Fits: Yamaha SR400/500 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตสายออยล์แต่งขนาด M14 Pit 1.50 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตสายออยล์แต่งขนาด M14 Pit 1.50 ผลิตจาก Alloy CNC Billet มีสี (ดำ-น้ำเงิน-ฟ้า) ชิ้นละ",
+    "descriptionTh": "น๊อตสายออยล์แต่งขนาด M14 Pit 1.50 ผลิตจาก Alloy CNC Billet มีสี (ดำ-น้ำเงิน-ฟ้า) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Oilcool-m14.jpg"
     ],
@@ -6670,8 +6621,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ห่วงสายเบรคแบบยาว รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ห่วงสายเบรคแบบยาว รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ห่วงสายเบรคแบบยาว รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ ผลิตจาก Alloy CNC Billet มี4สี (น้ำเงิน-ฟ้า-ดำ-แดง) ชิ้นละ",
+    "descriptionTh": "ห่วงสายเบรคแบบยาว รู 10 mm.AN3 สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ ผลิตจาก Alloy CNC Billet มี4สี (น้ำเงิน-ฟ้า-ดำ-แดง) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/2T/Nut_brake_m10x3-long.jpg"
     ],
@@ -6700,8 +6651,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Custom brake disc for SR 2001–2022, 310mm diameter. Genuine Sunstar rotor with CNC billet alloy spider. Multiple pin colours. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Custom brake disc for SR 2001–2022, 310mm diameter. Genuine Sunstar rotor with CNC billet alloy spider. Multiple pin colours · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Custom brake disc for SR 2001–2022, 310mm diameter. Genuine Sunstar rotor with CNC billet alloy spider. Multiple pin colours.",
+    "descriptionTh": "จานเบรคแต่ง SR 2001-2022 ขนาดจาน 310 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด หมุดจานมีสี ดำ,ทอง,แดง,เขียว,น้ำเงิน,ฮาร์ด ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/XSR/Pins-Color.jpg",
       "/legacy/webgigabike.com/part/Brake-sr-310-bk-h.jpg"
@@ -6728,8 +6679,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2020 ใส่จาน 310 mm. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2020 ใส่จาน 310 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2020 ใส่จาน 310 mm. ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ฮาร์ด) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรคหน้า BREMBO หูชิดใส่ SR 2001-2020 ใส่จาน 310 mm. ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ฮาร์ด) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-01-310.jpg"
     ],
@@ -6751,8 +6702,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075",
-    "description": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สาย2เส้น SR พร้อมแหวนอลูมินั่ม2ชิ้น. Fits: Yamaha SR400/500 · Material: Alloy 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สาย2เส้น SR พร้อมแหวนอลูมินั่ม2ชิ้น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สาย2เส้น SR พร้อมแหวนอลูมินั่ม2ชิ้น ผลิตจาก Alloy 7075 ชุดละ",
+    "descriptionTh": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 สำหรับใส่สาย2เส้น SR พร้อมแหวนอลูมินั่ม2ชิ้น ผลิตจาก Alloy 7075 ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Twin-oil.jpg"
     ],
@@ -6778,8 +6729,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40 mm. Long 55 mm. Fits: Yamaha SR400/500 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40 mm. Long 55 mm · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40 mm. Long 55 mm. ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ,แดง) ชิ้นล่ะ",
+    "descriptionTh": "ปากแตรแต่งใส่คาร์บู Mikuni TMR 40 mm. Long 55 mm. ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ,แดง) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/TMR-40-2.jpg",
       "/legacy/webgigabike.com/part/TMR-40-1.jpg"
@@ -6806,8 +6757,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "อุปกรณ์ตกแต่ง MONKEY50 ใหม่ๆอยากแนะนำ ปากแตรแต่งใส่คาร์บ FCR 28-33mm. แบบ2ชั้น. Fits: Honda Monkey/MSX125/DAX125 · Yamaha SR400/500 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง MONKEY50 ใหม่ๆอยากแนะนำ ปากแตรแต่งใส่คาร์บ FCR 28-33mm. แบบ2ชั้น · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · Yamaha SR400/500 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง MONKEY50 ใหม่ๆอยากแนะนำ ปากแตรแต่งใส่คาร์บ FCR 28-33mm. แบบ2ชั้น ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ) ชิ้นล่ะ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง MONKEY50 ใหม่ๆอยากแนะนำ ปากแตรแต่งใส่คาร์บ FCR 28-33mm. แบบ2ชั้น ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/MSX/Honda-Monkey.jpg",
       "/legacy/webgigabike.com/part/Fcr-28mm.jpg"
@@ -6830,8 +6781,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สปริง Stainles ปอนด์อย่างดี น็อต Alloy CNC Billet & Anodize",
-    "description": "สปริงปั๊มกะทุ้งเบรกหลัง M8 แบบเล็ก. Fits: Yamaha SR400/500 · Material: สปริง Stainles ปอนด์อย่างดี น็อต Alloy CNC Billet & Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สปริงปั๊มกะทุ้งเบรกหลัง M8 แบบเล็ก · ใส่ได้กับ Yamaha SR400/500 · วัสดุ สปริง Stainles ปอนด์อย่างดี น็อต Alloy CNC Billet & Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สปริงปั๊มกะทุ้งเบรกหลัง M8 แบบเล็ก ผลิตจาก สปริง Stainles ปอนด์อย่างดี น็อต Alloy CNC Billet & Anodize ชุดละ",
+    "descriptionTh": "สปริงปั๊มกะทุ้งเบรกหลัง M8 แบบเล็ก ผลิตจาก สปริง Stainles ปอนด์อย่างดี น็อต Alloy CNC Billet & Anodize ชุดละ",
     "images": [],
     "featured": false,
     "published": false,
@@ -6857,8 +6808,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ *.",
+    "descriptionTh": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ *.",
     "images": [
       "/legacy/webgigabike.com/R3/Spring-gb-1.jpg",
       "/legacy/webgigabike.com/R3/Spring-gb-2.jpg"
@@ -6887,8 +6838,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 310 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 310 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 310 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ *.",
+    "descriptionTh": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 310 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ *.",
     "images": [
       "/legacy/webgigabike.com/part/Brake-sr-300-10-Go.jpg",
       "/legacy/webgigabike.com/part/Brake-sr-300-10-Bk.jpg",
@@ -6918,8 +6869,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ *.",
+    "descriptionTh": "จานเบรคแต่ง SR2001-2021 ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ *.",
     "images": [
       "/legacy/webgigabike.com/part/Brake-sr-320-10-Go.jpg",
       "/legacy/webgigabike.com/part/Brake-sr-320-10-Bk.jpg",
@@ -6940,7 +6891,8 @@ export const legacyProducts: Product[] = [
     "price": 3500,
     "category": "brake",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "tdr"
     ],
     "colors": [
       "black",
@@ -6951,8 +6903,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "-1 จานเบรคหลังแต่งใส่ดุม TDR ลายฉลุ ขนาดจาน 220 mm. หนา 5 mm.ใส้จาน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "-1 จานเบรคหลังแต่งใส่ดุม TDR ลายฉลุ ขนาดจาน 220 mm. หนา 5 mm.ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "-1 จานเบรคหลังแต่งใส่ดุม TDR ลายฉลุ ขนาดจาน 220 mm. หนา 5 mm.ใส้จาน ผลิตจาก Alloy7075+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด หมุดจานมีสี ดำ/ทอง/อาร์ด/แดง ชุดล่ะ",
+    "descriptionTh": "-1 จานเบรคหลังแต่งใส่ดุม TDR ลายฉลุ ขนาดจาน 220 mm. หนา 5 mm.ใส้จาน ผลิตจาก Alloy7075+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด หมุดจานมีสี ดำ/ทอง/อาร์ด/แดง ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/TDR-220-bk.jpg",
       "/legacy/webgigabike.com/part/TDR-220-ha.jpg"
@@ -6979,8 +6931,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "จานเบรคแต่งลายทานตะวัน SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่งลายทานตะวัน SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่งลายทานตะวัน SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ *.",
+    "descriptionTh": "จานเบรคแต่งลายทานตะวัน SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ *.",
     "images": [
       "/legacy/webgigabike.com/part/TDR-220-5mm-bk.jpg"
     ],
@@ -7008,8 +6960,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "จานเบรคแต่ง ลายซิ่ง SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง ลายซิ่ง SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง ลายซิ่ง SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ (ใส่กับล้อ TZ125 ได้) *.",
+    "descriptionTh": "จานเบรคแต่ง ลายซิ่ง SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ (ใส่กับล้อ TZ125 ได้) *.",
     "images": [
       "/legacy/webgigabike.com/part/Brake-sr-300-1978-Bk.jpg",
       "/legacy/webgigabike.com/part/Brake-sr-300-1978-gl.jpg"
@@ -7028,7 +6980,8 @@ export const legacyProducts: Product[] = [
     "price": 0,
     "category": "brake",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "srx"
     ],
     "colors": [
       "black",
@@ -7038,8 +6991,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "จานเบรคแต่ง ลายทานตะวัน SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง ลายทานตะวัน SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง ลายทานตะวัน SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ (ใส่กับล้อ TZ,SRX,XJR ได้) *.",
+    "descriptionTh": "จานเบรคแต่ง ลายทานตะวัน SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ (ใส่กับล้อ TZ,SRX,XJR ได้) *.",
     "images": [
       "/legacy/webgigabike.com/part/Brake-sr-300-1978-new-hg.jpg",
       "/legacy/webgigabike.com/part/Brake-sr-300-1978-new-bk.jpg",
@@ -7059,7 +7012,8 @@ export const legacyProducts: Product[] = [
     "price": 0,
     "category": "brake",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "srx"
     ],
     "colors": [
       "black",
@@ -7069,8 +7023,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "จานเบรคแต่ง ลายซิ่ง SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง ลายซิ่ง SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง ลายซิ่ง SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ (ใส่กับล้อ TZ,SRX,XJR ได้) *.",
+    "descriptionTh": "จานเบรคแต่ง ลายซิ่ง SR1978 และใส่กับล้อแม็ก Y'S GEAR ได้ ขนาดจาน 320 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ ฿ (ใส่กับล้อ TZ,SRX,XJR ได้) *.",
     "images": [
       "/legacy/webgigabike.com/part/Brake-sr-320-1978-new-gl.jpg",
       "/legacy/webgigabike.com/part/Brake-sr-320-1978-gl.jpg",
@@ -7096,8 +7050,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Aluminium cylinder block for SR400/500. Stock-bore compatible, borable to 100mm+, handles high compression without cracking. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Aluminium cylinder block for SR400/500. Stock-bore compatible, borable to 100mm+, handles high compression without cracking · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Aluminium cylinder block for SR400/500. Stock-bore compatible, borable to 100mm+, handles high compression without cracking.",
+    "descriptionTh": "ชุดเสื้อสูบอลูมิเมียม SR400/500 CNC Billet แบบทรงเดิม ผลิตจาก Alloy 6061 สามารถคว้านใส่ปลอกสูบเดิมได้เลย และสามารถคว้านขยายใส่ปลอกสูบและลูกสูบได้มากกว่า 100 mm. รองรับกำลังอัดสูงๆของลูกที่หัวนูนได้ดีมากๆ ป้องกันเสื้อสูบแตกและฉีกขาดออกจากกันได้ อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/cylinder-cnc-sr-4.jpg",
       "/legacy/webgigabike.com/part/cylinder-cnc-sr-3.jpg",
@@ -7121,8 +7075,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบ",
-    "description": "สวิงอาร์มอลูมิเนียมแต่ง Yamaha SR Type 4. Fits: Yamaha SR400/500 · Material: Alloy ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สวิงอาร์มอลูมิเนียมแต่ง Yamaha SR Type 4 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สวิงอาร์มอลูมิเนียมแต่ง Yamaha SR Type 4 ผลิตจาก Alloy ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบชุด พร้อมลูกปืนสวิงอาร์มครบ และจุดยึดบังโซ่เดิมได้ด้วย ชุดล่ะ",
+    "descriptionTh": "สวิงอาร์มอลูมิเนียมแต่ง Yamaha SR Type 4 ผลิตจาก Alloy ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีอุปกรณ์มาให้ครบชุด พร้อมลูกปืนสวิงอาร์มครบ และจุดยึดบังโซ่เดิมได้ด้วย ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Swingamr-t4-sl-2.jpg",
       "/legacy/webgigabike.com/part/Swingamr-t4-sl.jpg"
@@ -7154,8 +7108,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝากดคลัชแต่ง แบบลายเหลี่ยม ใส่SR400/500,XT,TT. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝากดคลัชแต่ง แบบลายเหลี่ยม ใส่SR400/500,XT,TT · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝากดคลัชแต่ง แบบลายเหลี่ยม ใส่SR400/500,XT,TT ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ทอง/น้ำเงิน/เขียว/แดง/ฮาร์ด/ส้ม) ชิ้นล่ะ",
+    "descriptionTh": "ฝากดคลัชแต่ง แบบลายเหลี่ยม ใส่SR400/500,XT,TT ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ทอง/น้ำเงิน/เขียว/แดง/ฮาร์ด/ส้ม) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Cluch-sr-in-3.jpg",
       "/legacy/webgigabike.com/part/Cluch-sr-in-1.jpg"
@@ -7186,8 +7140,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝากดคลัชแต่ง แบบลายโค้งมน ใส่SR400/500,XT,TT. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝากดคลัชแต่ง แบบลายโค้งมน ใส่SR400/500,XT,TT · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝากดคลัชแต่ง แบบลายโค้งมน ใส่SR400/500,XT,TT ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ทอง/น้ำเงิน/เขียว/แดง/ฮาร์ด) ชิ้นล่ะ",
+    "descriptionTh": "ฝากดคลัชแต่ง แบบลายโค้งมน ใส่SR400/500,XT,TT ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ทอง/น้ำเงิน/เขียว/แดง/ฮาร์ด) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Cluch-sr-in-t2-2.jpg",
       "/legacy/webgigabike.com/part/Cluch-sr-in-t2-1.jpg"
@@ -7215,8 +7169,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Clear-lens clutch cover for SR400/500. CNC billet alloy with a transparent window. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Clear-lens clutch cover for SR400/500. CNC billet alloy with a transparent window · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Clear-lens clutch cover for SR400/500. CNC billet alloy with a transparent window.",
+    "descriptionTh": "ฝาคลัชแต่ง แบบเลนส์ใส ใส่SR400/500 ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ดำ-ครอบเงิน+แหวนมีสี ดำ/เงิน/ทอง/เขียว) สลับสีได้ ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Ring-Cover-Cluch.jpg",
       "/legacy/webgigabike.com/part/Cover-Cluch-SR-bk-si-1.jpg",
@@ -7244,8 +7198,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาคลัชแต่ง แบบทึบ ใส่SR400/500. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาคลัชแต่ง แบบทึบ ใส่SR400/500 · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาคลัชแต่ง แบบทึบ ใส่SR400/500 ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ สามารถเลือกสลับสีได้) ชิ้นล่ะ",
+    "descriptionTh": "ฝาคลัชแต่ง แบบทึบ ใส่SR400/500 ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ สามารถเลือกสลับสีได้) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Cover-Cluch-SR-si-2.jpg",
       "/legacy/webgigabike.com/part/Cover-Cluch-SR-bk-1.jpg",
@@ -7276,8 +7230,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝากรองแต่ง แบบเลนส์ใส ใส่SR400/500,XT,TT. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝากรองแต่ง แบบเลนส์ใส ใส่SR400/500,XT,TT · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝากรองแต่ง แบบเลนส์ใส ใส่SR400/500,XT,TT ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ทอง/ดำ-เงิน/ดำ-ทอง/ดำ-เขียว/ดำ-แดง/ฮาร์ด) ชิ้นล่ะ",
+    "descriptionTh": "ฝากรองแต่ง แบบเลนส์ใส ใส่SR400/500,XT,TT ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ทอง/ดำ-เงิน/ดำ-ทอง/ดำ-เขียว/ดำ-แดง/ฮาร์ด) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/oilfilter-sr-win-2.jpg",
       "/legacy/webgigabike.com/part/oilfilter-sr-win-3.jpg"
@@ -7303,8 +7257,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อแดปเตอร์ทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR แบบฟินแท่ง งาน Alloy CNC Billet มีสี ดำ,เงิน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อแดปเตอร์ทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR แบบฟินแท่ง งาน Alloy CNC Billet มีสี ดำ,เงิน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อแดปเตอร์ทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR แบบฟินแท่ง งาน Alloy CNC Billet มีสี ดำ,เงิน ชุดละ",
+    "descriptionTh": "อแดปเตอร์ทวินออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR แบบฟินแท่ง งาน Alloy CNC Billet มีสี ดำ,เงิน ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/adabter-Twin-oil-Fin.jpg"
     ],
@@ -7326,8 +7280,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "แสตนเลส กัดหลี่ยม6เหลี่ยมลายเฟือง",
-    "description": "แกนล้อหลัง ขนาด17x250 mm.6เหลี่ยม ใส่แทนของเดิมได้เลย. Fits: Yamaha SR400/500 · Material: แสตนเลส กัดหลี่ยม6เหลี่ยมลายเฟือง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แกนล้อหลัง ขนาด17x250 mm.6เหลี่ยม ใส่แทนของเดิมได้เลย · ใส่ได้กับ Yamaha SR400/500 · วัสดุ แสตนเลส กัดหลี่ยม6เหลี่ยมลายเฟือง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แกนล้อหลัง ขนาด17x250 mm.6เหลี่ยม ใส่แทนของเดิมได้เลย ผลิตจาก แสตนเลส กัดหลี่ยม6เหลี่ยมลายเฟือง อันละ",
+    "descriptionTh": "แกนล้อหลัง ขนาด17x250 mm.6เหลี่ยม ใส่แทนของเดิมได้เลย ผลิตจาก แสตนเลส กัดหลี่ยม6เหลี่ยมลายเฟือง อันละ",
     "images": [
       "/legacy/webgigabike.com/part/Rear-axle-17mm-250mm-6-1.jpg",
       "/legacy/webgigabike.com/part/Rear-axle-17mm-250mm-6.jpg"
@@ -7352,8 +7306,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "แสตนเลส กัดหลี่ยม12เหลี่ยมลายเฟือง",
-    "description": "แกนล้อหลัง ขนาด17x250 mm.12เหลี่ยม ใส่แทนของเดิมได้เลย. Fits: Yamaha SR400/500 · Material: แสตนเลส กัดหลี่ยม12เหลี่ยมลายเฟือง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แกนล้อหลัง ขนาด17x250 mm.12เหลี่ยม ใส่แทนของเดิมได้เลย · ใส่ได้กับ Yamaha SR400/500 · วัสดุ แสตนเลส กัดหลี่ยม12เหลี่ยมลายเฟือง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แกนล้อหลัง ขนาด17x250 mm.12เหลี่ยม ใส่แทนของเดิมได้เลย ผลิตจาก แสตนเลส กัดหลี่ยม12เหลี่ยมลายเฟือง อันละ",
+    "descriptionTh": "แกนล้อหลัง ขนาด17x250 mm.12เหลี่ยม ใส่แทนของเดิมได้เลย ผลิตจาก แสตนเลส กัดหลี่ยม12เหลี่ยมลายเฟือง อันละ",
     "images": [
       "/legacy/webgigabike.com/part/Rear-axle-17mm-250mm-12-1.jpg",
       "/legacy/webgigabike.com/part/Rear-axle-17mm-250mm-12.jpg"
@@ -7381,8 +7335,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 +M8 Sus ช่วยระบายความร้อนได้ดีมากๆ",
-    "description": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สายเส้นเดียว SR พร้อมแหวนอลูมินั่ม2ชิ้น. Fits: Yamaha SR400/500 · Material: Alloy 7075 +M8 Sus ช่วยระบายความร้อนได้ดีมากๆ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สายเส้นเดียว SR พร้อมแหวนอลูมินั่ม2ชิ้น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 +M8 Sus ช่วยระบายความร้อนได้ดีมากๆ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สายเส้นเดียว SR พร้อมแหวนอลูมินั่ม2ชิ้น ผลิตจาก Alloy 7075 +M8 Sus ช่วยระบายความร้อนได้ดีมากๆ มีสี ดำ,เงิน ชุดละ",
+    "descriptionTh": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สายเส้นเดียว SR พร้อมแหวนอลูมินั่ม2ชิ้น ผลิตจาก Alloy 7075 +M8 Sus ช่วยระบายความร้อนได้ดีมากๆ มีสี ดำ,เงิน ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Oil-2.jpg"
     ],
@@ -7407,8 +7361,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 +M8 Sus ช่วยระบายความร้อนได้ดีมากๆ",
-    "description": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สาย2เส้น SR พร้อมแหวนอลูมินั่ม2ชิ้น. Fits: Yamaha SR400/500 · Material: Alloy 7075 +M8 Sus ช่วยระบายความร้อนได้ดีมากๆ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สาย2เส้น SR พร้อมแหวนอลูมินั่ม2ชิ้น · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 +M8 Sus ช่วยระบายความร้อนได้ดีมากๆ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สาย2เส้น SR พร้อมแหวนอลูมินั่ม2ชิ้น ผลิตจาก Alloy 7075 +M8 Sus ช่วยระบายความร้อนได้ดีมากๆ มีสี ดำ,เงิน ชุดละ",
+    "descriptionTh": "น๊อตอแดปเตอร์ออยล์หนวดกู้งล่างM8 แบบใหม่ สำหรับใส่สาย2เส้น SR พร้อมแหวนอลูมินั่ม2ชิ้น ผลิตจาก Alloy 7075 +M8 Sus ช่วยระบายความร้อนได้ดีมากๆ มีสี ดำ,เงิน ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Oil-1.jpg"
     ],
@@ -7433,8 +7387,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 ช่วยระบายความร้อนได้ดีมากๆ",
-    "description": "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR. Fits: Yamaha SR400/500 · Material: Alloy 7075 ช่วยระบายความร้อนได้ดีมากๆ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 ช่วยระบายความร้อนได้ดีมากๆ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR ผลิตจาก Alloy 7075 ช่วยระบายความร้อนได้ดีมากๆ มีสี ดำ,เงิน คู่ละ",
+    "descriptionTh": "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR ผลิตจาก Alloy 7075 ช่วยระบายความร้อนได้ดีมากๆ มีสี ดำ,เงิน คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/nut-M8-7075.jpg"
     ],
@@ -7456,8 +7410,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "titanium แข็งแรงทนทานช่วยระบายความร้อนได้ดีมากๆ",
-    "description": "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR. Fits: Yamaha SR400/500 · Material: titanium แข็งแรงทนทานช่วยระบายความร้อนได้ดีมากๆ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ titanium แข็งแรงทนทานช่วยระบายความร้อนได้ดีมากๆ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR ผลิตจาก titanium แข็งแรงทนทานช่วยระบายความร้อนได้ดีมากๆ คู่ละ",
+    "descriptionTh": "น็อตขันฝาครอบฝาสูบบนตรงที่ครอบมาร์คแคมป์ M8 SR ผลิตจาก titanium แข็งแรงทนทานช่วยระบายความร้อนได้ดีมากๆ คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/nut-M8-titanuim.jpg"
     ],
@@ -7482,8 +7436,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ห่วงออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR ใส่กับสายดิสเบรกได้เลย ใส่แทนท่อฉีดน้ำมันเครื่องเลี้ยงแคมป์ งาน Alloy CNC Billet มีสี ดำ,เงิน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ห่วงออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR ใส่กับสายดิสเบรกได้เลย ใส่แทนท่อฉีดน้ำมันเครื่องเลี้ยงแคมป์ งาน Alloy CNC Billet มีสี ดำ,เงิน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ห่วงออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR ใส่กับสายดิสเบรกได้เลย ใส่แทนท่อฉีดน้ำมันเครื่องเลี้ยงแคมป์ งาน Alloy CNC Billet มีสี ดำ,เงิน อันละ",
+    "descriptionTh": "ห่วงออยล์ส่งน้ำมันเครื่องหัวเครื่อง SR ใส่กับสายดิสเบรกได้เลย ใส่แทนท่อฉีดน้ำมันเครื่องเลี้ยงแคมป์ งาน Alloy CNC Billet มีสี ดำ,เงิน อันละ",
     "images": [
       "/legacy/webgigabike.com/part/adabter-oil-head.jpg"
     ],
@@ -7513,8 +7467,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "จานเบรคแต่งแบบก้านตรงรูฉลุ ใส่กับดุมปีเก่า SR 1978 ขนาดจาน 310 mm. แผ่นจานเบรคเป็นของแท้อย่างดี ใส้จาน. Fits: Yamaha SR400/500 · Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่งแบบก้านตรงรูฉลุ ใส่กับดุมปีเก่า SR 1978 ขนาดจาน 310 mm. แผ่นจานเบรคเป็นของแท้อย่างดี ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่งแบบก้านตรงรูฉลุ ใส่กับดุมปีเก่า SR 1978 ขนาดจาน 310 mm. แผ่นจานเบรคเป็นของแท้อย่างดี ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) *ใส้จานมีสี ดำ/ทอง/ฮาร์ด *หมุดจานมีสี ดำ,ทอง,แดง,เขียว,น้ำเงิน,ฮาร์ด ชุดล่ะ",
+    "descriptionTh": "จานเบรคแต่งแบบก้านตรงรูฉลุ ใส่กับดุมปีเก่า SR 1978 ขนาดจาน 310 mm. แผ่นจานเบรคเป็นของแท้อย่างดี ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) *ใส้จานมีสี ดำ/ทอง/ฮาร์ด *หมุดจานมีสี ดำ,ทอง,แดง,เขียว,น้ำเงิน,ฮาร์ด ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Brake-sr-310-1978-new-bk.jpg"
     ],
@@ -7546,8 +7500,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "จานเบรคแต่งแบบก้านใขว้รูฉลุ ใส่กับดุมปีเก่า SR 1978 ขนาดจาน 310 mm. แผ่นจานเบรคเป็นของแท้อย่างดี ใส้จาน. Fits: Yamaha SR400/500 · Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่งแบบก้านใขว้รูฉลุ ใส่กับดุมปีเก่า SR 1978 ขนาดจาน 310 mm. แผ่นจานเบรคเป็นของแท้อย่างดี ใส้จาน · ใส่ได้กับ Yamaha SR400/500 · Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่งแบบก้านใขว้รูฉลุ ใส่กับดุมปีเก่า SR 1978 ขนาดจาน 310 mm. แผ่นจานเบรคเป็นของแท้อย่างดี ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) *ใส้จานมีสี ดำ/ทอง/ฮาร์ด *หมุดจานมีสี ดำ,ทอง,แดง,เขียว,น้ำเงิน,ฮาร์ด ชุดล่ะ",
+    "descriptionTh": "จานเบรคแต่งแบบก้านใขว้รูฉลุ ใส่กับดุมปีเก่า SR 1978 ขนาดจาน 310 mm. แผ่นจานเบรคเป็นของแท้อย่างดี ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) *ใส้จานมีสี ดำ/ทอง/ฮาร์ด *หมุดจานมีสี ดำ,ทอง,แดง,เขียว,น้ำเงิน,ฮาร์ด ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Brake-sr-310-1978-new-gl.jpg"
     ],
@@ -7572,8 +7526,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 ข้างขวา ใส่กับโช๊ค SR 1978-2000 ใส่จาน 310 มม. Alloy CNC Billet (มีสี ดำ/เงิน) *ใส่คู่แผ่นรองจานหนา 10 มิล ชิ้นล่ะ. Fits: Yamaha SR400/500 · Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 ข้างขวา ใส่กับโช๊ค SR 1978-2000 ใส่จาน 310 มม. Alloy CNC Billet (มีสี ดำ/เงิน) *ใส่คู่แผ่นรองจานหนา 10 มิล ชิ้นล่ะ · ใส่ได้กับ Yamaha SR400/500 · Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 ข้างขวา ใส่กับโช๊ค SR 1978-2000 ใส่จาน 310 มม. Alloy CNC Billet (มีสี ดำ/เงิน) *ใส่คู่แผ่นรองจานหนา 10 มิล ชิ้นล่ะ",
+    "descriptionTh": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 ข้างขวา ใส่กับโช๊ค SR 1978-2000 ใส่จาน 310 มม. Alloy CNC Billet (มีสี ดำ/เงิน) *ใส่คู่แผ่นรองจานหนา 10 มิล ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-1978-310.jpg"
     ],
@@ -7596,8 +7550,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเปย์เซอร์รองจานเบรคใส่ดุมปีเก่า SR 1978 หนา 11.5 mm. Fits: Yamaha SR400/500 · Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเปย์เซอร์รองจานเบรคใส่ดุมปีเก่า SR 1978 หนา 11.5 mm · ใส่ได้กับ Yamaha SR400/500 · Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเปย์เซอร์รองจานเบรคใส่ดุมปีเก่า SR 1978 หนา 11.5 mm. ผลิตจาก Alloy CNC Billet มีีสี (ดำ-เงิน) ชิ้นล่ะ",
+    "descriptionTh": "สเปย์เซอร์รองจานเบรคใส่ดุมปีเก่า SR 1978 หนา 11.5 mm. ผลิตจาก Alloy CNC Billet มีีสี (ดำ-เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/adapter 1978-11.5m.jpg"
     ],
@@ -7610,46 +7564,10 @@ export const legacyProducts: Product[] = [
   {
     "id": "g267",
     "code": "G.267",
-    "name": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม",
-    "nameTh": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม",
+    "name": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 ข้างขวา ใส่กับโช๊ค SR 1",
+    "nameTh": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 ข้างขวา ใส่กับโช๊ค SR 1",
     "price": 1200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "sr400",
-      "xs650"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "",
-    "description": "BREMBO 40mm caliper spacer/bracket for Yamaha SR (1978-2000) and XS650, right side. Fits 298-300mm disc. CNC Billet Alloy, available in Black or Silver. Fits: Yamaha SR400/500 · Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "BREMBO 40mm caliper spacer/bracket for Yamaha SR (1978-2000) and XS650, right side. Fits 298-300mm disc. CNC Billet Alloy, available in Black or Silver · ใส่ได้กับ Yamaha SR400/500 · Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [
-      "/legacy/webgigabike.com/part/brembo-1978-298.jpg",
-      "/legacy/webgigabike.com/sr-gb1.jpg",
-      "/legacy/webgigabike.com/honda cb750/CB750-.jpg",
-      "/legacy/webgigabike.com/Triumph/triumph100.jpg",
-      "/legacy/Part All_clip_image004.jpg",
-      "/legacy/Part All_clip_image006.jpg",
-      "/legacy/Part All_clip_image016.jpg",
-      "/legacy/Part All_clip_image012.jpg",
-      "/legacy/Part All_clip_image020.jpg",
-      "/legacy/Part All_clip_image010.jpg",
-      "/legacy/Part All_clip_image028.jpg",
-      "/legacy/Part All_clip_image026.jpg",
-      "/legacy/webgigabike.com/XS650/xs650-1.jpg"
-    ],
-    "featured": false,
-    "published": false,
-    "reviewReasons": []
-  },
-  {
-    "id": "g268",
-    "code": "G.268",
-    "name": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม",
-    "nameTh": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม",
-    "price": 1500,
-    "category": "drivetrain",
+    "category": "suspension",
     "bikeModels": [
       "sr400"
     ],
@@ -7657,19 +7575,13 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Offset handlebar risers for 22mm handlebars with 12mm bolt-in stem, compatible with standard clamp. CNC Billet Aluminium Alloy. Available in Silver and Black. Sold as a pair. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Offset handlebar risers for 22mm handlebars with 12mm bolt-in stem, compatible with standard clamp. CNC Billet Aluminium Alloy. Available in Silver and Black. Sold as a pair · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 ข้างขวา ใส่กับโช๊ค SR 1978-2000 ใส่จาน 298-300 มม. Alloy CNC Billet (มีสี ดำ/เงิน) *ใส่คู่แผ่นรองจานหนา 11.5 มิล ชิ้นล่ะ",
+    "descriptionTh": "สเปเซอร์ยึดปั๊ม BREMBO 40mm. หูชิดใส่ SR,XS650 ข้างขวา ใส่กับโช๊ค SR 1978-2000 ใส่จาน 298-300 มม. Alloy CNC Billet (มีสี ดำ/เงิน) *ใส่คู่แผ่นรองจานหนา 11.5 มิล ชิ้นล่ะ",
     "images": [
-      "/legacy/webgigabike.com/sr-gb1.jpg",
-      "/legacy/webgigabike.com/honda cb750/CB750-.jpg",
-      "/legacy/webgigabike.com/Triumph/triumph100.jpg",
-      "/legacy/webgigabike.com/Nut-Sus/nut-m10.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr400_002_1024.jpg",
-      "/legacy/webgigabike.com/part/Handlebar-Clamp-Offset-MOUNT-silver.jpg",
-      "/legacy/webgigabike.com/part/Handlebar-Clamp-Offset-MOUNT-black.jpg"
+      "/legacy/webgigabike.com/part/brembo-1978-298.jpg"
     ],
     "featured": false,
-    "published": false,
+    "published": true,
     "reviewReasons": []
   },
   {
@@ -7686,8 +7598,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "STAINLESS + ปิเนียม อย่างดี",
-    "description": "น๊อตขันแผงคอบนแต่ง ROYAL ENFIELD. Fits: Royal Enfield GT535/Interceptor650 · Material: STAINLESS + ปิเนียม อย่างดี · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแผงคอบนแต่ง ROYAL ENFIELD · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ STAINLESS + ปิเนียม อย่างดี · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแผงคอบนแต่ง ROYAL ENFIELD ผลิตจาก STAINLESS + ปิเนียม อย่างดี ชุดล่ะ 1,0",
+    "descriptionTh": "น๊อตขันแผงคอบนแต่ง ROYAL ENFIELD ผลิตจาก STAINLESS + ปิเนียม อย่างดี ชุดล่ะ 1,0",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/nut-top-sus.jpg"
     ],
@@ -7709,8 +7621,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "5 ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "5 ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "5 ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม ผลิตจาก Allloy CNC Billet แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 41 mm. คู่ล่ะ",
+    "descriptionTh": "5 ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม ผลิตจาก Allloy CNC Billet แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 41 mm. คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/Lock-41-mm.jpg",
       "/legacy/webgigabike.com/Royal Enfield/nut-soch.jpg"
@@ -7735,8 +7647,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Allloy CNC Billet",
-    "description": "น็อตขันหัวโช๊ค ROYAL ENFIELD. Fits: Royal Enfield GT535/Interceptor650 · Material: Allloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตขันหัวโช๊ค ROYAL ENFIELD · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ Allloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตขันหัวโช๊ค ROYAL ENFIELD ผลิตจาก Allloy CNC Billet คู่ละ",
+    "descriptionTh": "น็อตขันหัวโช๊ค ROYAL ENFIELD ผลิตจาก Allloy CNC Billet คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/nut-soch-1.jpg"
     ],
@@ -7758,8 +7670,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Allloy 7075 CNC Billet มี 530-35,36 ฟัน",
-    "description": "สเตอร์หลัง Royal Enfield. Fits: Royal Enfield GT535/Interceptor650 · Material: Allloy 7075 CNC Billet มี 530-35,36 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Royal Enfield · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ Allloy 7075 CNC Billet มี 530-35,36 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Royal Enfield ผลิตจาก Allloy 7075 CNC Billet มี 530-35,36 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลัง Royal Enfield ผลิตจาก Allloy 7075 CNC Billet มี 530-35,36 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/sprocket-re.jpg"
     ],
@@ -7781,8 +7693,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบครีบ ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี (มี สีดำ-สีเงิน) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบครีบ ช่วยระบายความร้อนของน้ำมันเครื่องได้เป็นอย่างดี (มี สีดำ-สีเงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/cover-oil-ly.jpg"
     ],
@@ -7804,8 +7716,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบเรียบลาย RE (มี สีดำ-สีเงิน) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบเรียบลาย RE (มี สีดำ-สีเงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/cover-oil-re.jpg"
     ],
@@ -7827,8 +7739,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบเรียบลาย GT (มี สีดำ-สีเงิน) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบเรียบลาย GT (มี สีดำ-สีเงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/cover-oil-gt.jpg"
     ],
@@ -7850,8 +7762,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบเครื่องแต่ง Royal Enfield. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบเรียบลาย RE (มี สีดำ-สีเงิน) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบเรียบลาย RE (มี สีดำ-สีเงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/cover-en-re.jpg"
     ],
@@ -7873,8 +7785,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบเครื่องแต่ง Royal Enfield. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบเรียบลาย GT (มี สีดำ-สีเงิน) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบเรียบลาย GT (มี สีดำ-สีเงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/cover-en-gt.jpg"
     ],
@@ -7896,8 +7808,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คอลูมิเนียม. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คอลูมิเนียม · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คอลูมิเนียม ผลิตจาก Allloy CNC Billet (มีสีดำและสีเงิน) มีขนาด 41mm.คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คอลูมิเนียม ผลิตจาก Allloy CNC Billet (มีสีดำและสีเงิน) มีขนาด 41mm.คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/hand.jpg"
     ],
@@ -7919,8 +7831,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบเครื่องแต่ง Royal Enfield. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบครีบ (มี สีดำ-สีเงิน) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบครีบ (มี สีดำ-สีเงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/cover-en-cut.jpg"
     ],
@@ -7942,8 +7854,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบเครื่องแต่ง Royal Enfield. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบธงอังกฤษ (มี สีดำ-สีเงิน) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield ผลิตจาก Allloy CNC Billet แบบธงอังกฤษ (มี สีดำ-สีเงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/cover-en-enland.jpg"
     ],
@@ -7965,8 +7877,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Allloy 7075 CNC Billet มี 530-35,36 ฟัน",
-    "description": "สเตอร์หลัง Royal Enfield แบบรู. Fits: Royal Enfield GT535/Interceptor650 · Material: Allloy 7075 CNC Billet มี 530-35,36 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Royal Enfield แบบรู · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ Allloy 7075 CNC Billet มี 530-35,36 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Royal Enfield แบบรู ผลิตจาก Allloy 7075 CNC Billet มี 530-35,36 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลัง Royal Enfield แบบรู ผลิตจาก Allloy 7075 CNC Billet มี 530-35,36 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/sprocket-re-cut.jpg"
     ],
@@ -7988,8 +7900,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Allloy CNC Billet",
-    "description": "ชุดอุดเฟรม Royal Enfield แบบโค้ง. Fits: Royal Enfield GT535/Interceptor650 · Material: Allloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดอุดเฟรม Royal Enfield แบบโค้ง · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ Allloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดอุดเฟรม Royal Enfield แบบโค้ง ผลิตจาก Allloy CNC Billet ชุดละ",
+    "descriptionTh": "ชุดอุดเฟรม Royal Enfield แบบโค้ง ผลิตจาก Allloy CNC Billet ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/cover-frem.jpg"
     ],
@@ -8011,8 +7923,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Allloy CNC Billet",
-    "description": "ชุดอุดเฟรม Royal Enfield แบบหลุม. Fits: Royal Enfield GT535/Interceptor650 · Material: Allloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดอุดเฟรม Royal Enfield แบบหลุม · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ Allloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดอุดเฟรม Royal Enfield แบบหลุม ผลิตจาก Allloy CNC Billet ชุดละ",
+    "descriptionTh": "ชุดอุดเฟรม Royal Enfield แบบหลุม ผลิตจาก Allloy CNC Billet ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/cover-frem-lum.jpg"
     ],
@@ -8034,8 +7946,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Allloy CNC Billet",
-    "description": "ชุดแผงคอบน Royal Enfield GT แบบคาเฟ่. Fits: Royal Enfield GT535/Interceptor650 · Material: Allloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบน Royal Enfield GT แบบคาเฟ่ · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ Allloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบน Royal Enfield GT แบบคาเฟ่ ผลิตจาก Allloy CNC Billet ชุดละ",
+    "descriptionTh": "ชุดแผงคอบน Royal Enfield GT แบบคาเฟ่ ผลิตจาก Allloy CNC Billet ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/pangcor-top.jpg"
     ],
@@ -8057,8 +7969,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Allloy CNC Billet",
-    "description": "ชุดแผงคอบนล่าง Royal Enfield GT แบบคาเฟ่. Fits: Royal Enfield GT535/Interceptor650 · Material: Allloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่าง Royal Enfield GT แบบคาเฟ่ · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ Allloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่าง Royal Enfield GT แบบคาเฟ่ ผลิตจาก Allloy CNC Billet ชุดละ",
+    "descriptionTh": "ชุดแผงคอบนล่าง Royal Enfield GT แบบคาเฟ่ ผลิตจาก Allloy CNC Billet ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/pangcor-top-re1.jpg",
       "/legacy/webgigabike.com/Royal Enfield/pangcor-top-re.jpg",
@@ -8083,8 +7995,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบยาว. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบยาว · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบยาว ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบยาว ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/steyheadlight-long.jpg"
     ],
@@ -8108,8 +8020,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรง. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรง · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรง ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรง ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-trong.jpg"
     ],
@@ -8133,8 +8045,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้าแต่ง. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้าแต่ง · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้าแต่ง ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้าแต่ง ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-po.jpg"
     ],
@@ -8158,8 +8070,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้าแต่ง. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้าแต่ง · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้าแต่ง ผลิตจาก Allloy CNC Billet ขนาด 41mm.(สีเงินสีทองและสีดำ)",
+    "descriptionTh": "หูยึดไฟหน้าแต่ง ผลิตจาก Allloy CNC Billet ขนาด 41mm.(สีเงินสีทองและสีดำ)",
     "images": [
       "/legacy/webgigabike.com/part/cocer-col.jpg"
     ],
@@ -8183,8 +8095,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V รูแกนโช๊ค 41 มม.ราคา คู่ล่ะ. Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V รูแกนโช๊ค 41 มม.ราคา คู่ล่ะ · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V รูแกนโช๊ค 41 มม.ราคา คู่ล่ะ",
+    "descriptionTh": "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V รูแกนโช๊ค 41 มม.ราคา คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharngsr-v.jpg"
     ],
@@ -8206,8 +8118,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า (แบบสั้น). Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า (แบบสั้น) · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า (แบบสั้น) ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า (แบบสั้น) ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-long.jpg-1.jpg"
     ],
@@ -8231,8 +8143,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Allloy CNC Billet",
-    "description": "ขายึดปั๊มเบรคหลัง BREMBO แบบห้อยล่าง ใส่ Royal Enfield GT ใส่จานเดิมบู๊ทเดิมได้เลยไม่ต้องดัดแปลง (มีสี ดำ/เงิน). Fits: Royal Enfield GT535/Interceptor650 · Material: Allloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหลัง BREMBO แบบห้อยล่าง ใส่ Royal Enfield GT ใส่จานเดิมบู๊ทเดิมได้เลยไม่ต้องดัดแปลง (มีสี ดำ/เงิน) · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ Allloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหลัง BREMBO แบบห้อยล่าง ใส่ Royal Enfield GT ใส่จานเดิมบู๊ทเดิมได้เลยไม่ต้องดัดแปลง (มีสี ดำ/เงิน) ผลิตจาก Allloy CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรคหลัง BREMBO แบบห้อยล่าง ใส่ Royal Enfield GT ใส่จานเดิมบู๊ทเดิมได้เลยไม่ต้องดัดแปลง (มีสี ดำ/เงิน) ผลิตจาก Allloy CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/stey-brembo-re.jpg",
       "/legacy/webgigabike.com/Royal Enfield/stey-brembo.jpg"
@@ -8255,8 +8167,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Allloy CNC Billet",
-    "description": "ชุดแผงคอบน Royal Enfield GT แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย. Fits: Royal Enfield GT535/Interceptor650 · Material: Allloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบน Royal Enfield GT แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ Allloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบน Royal Enfield GT แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย ผลิตจาก Allloy CNC Billet ชุดละ",
+    "descriptionTh": "ชุดแผงคอบน Royal Enfield GT แบบใส่แฮนบาร์บนได้เลยและสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย ผลิตจาก Allloy CNC Billet ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/pangcor-top-tukkata-si.jpg"
     ],
@@ -8281,8 +8193,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า Royal Enfield แบบใหม่ล่าสุด (แบบซี่ตรงสั้น). Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า Royal Enfield แบบใหม่ล่าสุด (แบบซี่ตรงสั้น) · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า Royal Enfield แบบใหม่ล่าสุด (แบบซี่ตรงสั้น) ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสี เงิน-ดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า Royal Enfield แบบใหม่ล่าสุด (แบบซี่ตรงสั้น) ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสี เงิน-ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-shot-v-bk.jpg",
       "/legacy/webgigabike.com/part/hoocharng_cnc-shot-v-si.jpg"
@@ -8310,8 +8222,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า Royal Enfield แบบใหม่ล่าสุด (แบบซี่ยาว). Fits: Royal Enfield GT535/Interceptor650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า Royal Enfield แบบใหม่ล่าสุด (แบบซี่ยาว) · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า Royal Enfield แบบใหม่ล่าสุด (แบบซี่ยาว) ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสี เงิน-ดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า Royal Enfield แบบใหม่ล่าสุด (แบบซี่ยาว) ผลิตจาก Allloy CNC Billet ขนาด 41mm. (มีสี เงิน-ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-bk-long-v.jpg",
       "/legacy/webgigabike.com/part/hoocharng_cnc-si-long-v.jpg"
@@ -8336,8 +8248,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย GT. Fits: Royal Enfield GT535/Interceptor650 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย GT · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย GT ผลิตจาก Alloy CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย GT ผลิตจาก Alloy CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/cover-en-gt-bl-si.jpg"
     ],
@@ -8359,8 +8271,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย RE. Fits: Royal Enfield GT535/Interceptor650 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย RE · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย RE ผลิตจาก Alloy CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบเครื่องแต่ง Royal Enfield แบบดำกัดลาย RE ผลิตจาก Alloy CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/cover-en-re-bl-si.jpg"
     ],
@@ -8382,8 +8294,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ยางอย่างดีเหนียวและทนทาน",
-    "description": "ยางหุ้มโช๊คหน้า Royal Enfield ใส่ โช๊คขนาด 41mm. ความยาว 190mm. Fits: Royal Enfield GT535/Interceptor650 · Material: ยางอย่างดีเหนียวและทนทาน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางหุ้มโช๊คหน้า Royal Enfield ใส่ โช๊คขนาด 41mm. ความยาว 190mm · ใส่ได้กับ Royal Enfield GT535/Interceptor650 · วัสดุ ยางอย่างดีเหนียวและทนทาน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางหุ้มโช๊คหน้า Royal Enfield ใส่ โช๊คขนาด 41mm. ความยาว 190mm. ผลิตจากยางอย่างดีเหนียวและทนทาน มีสี ดำและน้ำตาล คู่ละ",
+    "descriptionTh": "ยางหุ้มโช๊คหน้า Royal Enfield ใส่ โช๊คขนาด 41mm. ความยาว 190mm. ผลิตจากยางอย่างดีเหนียวและทนทาน มีสี ดำและน้ำตาล คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Tire-cover-chock-brow.jpg",
       "/legacy/webgigabike.com/Triumph/Tire-cover-chock.jpg"
@@ -8406,8 +8318,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackest Stainless Steel 41mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ Triumph รูแกนโช๊ค 41 มม.ราคา คู่ล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackest Stainless Steel 41mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ Triumph รูแกนโช๊ค 41 มม.ราคา คู่ล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackest Stainless Steel 41mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ Triumph รูแกนโช๊ค 41 มม.ราคา คู่ล่ะ",
+    "descriptionTh": "Headlight Brackest Stainless Steel 41mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ Triumph รูแกนโช๊ค 41 มม.ราคา คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharngsr-v.jpg"
     ],
@@ -8429,8 +8341,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งาน CNC. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งาน CNC · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 41mm. (Color&ndash;Silver,Black) ชุดล่ะ",
+    "descriptionTh": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 41mm. (Color&ndash;Silver,Black) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-po.jpg"
     ],
@@ -8454,8 +8366,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งานCNC ขนาด 41mm.(สีเงิน/สีทอง/สีดำ). Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งานCNC ขนาด 41mm.(สีเงิน/สีทอง/สีดำ) · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งานCNC ขนาด 41mm.(สีเงิน/สีทอง/สีดำ)",
+    "descriptionTh": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งานCNC ขนาด 41mm.(สีเงิน/สีทอง/สีดำ)",
     "images": [
       "/legacy/webgigabike.com/part/cocer-col.jpg"
     ],
@@ -8479,8 +8391,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งานCNC ขนาด 41mm. ยาว 100 mm. (Color&ndash;Silver,Black). Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งานCNC ขนาด 41mm. ยาว 100 mm. (Color&ndash;Silver,Black) · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งานCNC ขนาด 41mm. ยาว 100 mm. (Color&ndash;Silver,Black) คู่ละ",
+    "descriptionTh": "Headlight Brackets 41mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งานCNC ขนาด 41mm. ยาว 100 mm. (Color&ndash;Silver,Black) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/steyheadlight-sil.jpg",
       "/legacy/webgigabike.com/Triumph/steyheadlight1.jpg"
@@ -8505,8 +8417,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Clip-On Handle Bars CNC Alloy 41mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม Triumph งาน CNC มีขนาด 41mm. มีขนาดแฮน1นิ้ว และ ขนาดแฮน7หุน (Color&ndash;Silver,Black) คู่ล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Clip-On Handle Bars CNC Alloy 41mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม Triumph งาน CNC มีขนาด 41mm. มีขนาดแฮน1นิ้ว และ ขนาดแฮน7หุน (Color&ndash;Silver,Black) คู่ล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Clip-On Handle Bars CNC Alloy 41mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม Triumph งาน CNC มีขนาด 41mm. มีขนาดแฮน1นิ้ว และ ขนาดแฮน7หุน (Color&ndash;Silver,Black) คู่ล่ะ",
+    "descriptionTh": "Clip-On Handle Bars CNC Alloy 41mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม Triumph งาน CNC มีขนาด 41mm. มีขนาดแฮน1นิ้ว และ ขนาดแฮน7หุน (Color&ndash;Silver,Black) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/hand.jpg"
     ],
@@ -8528,8 +8440,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ",
-    "description": "CHOKE KNOB Alloy ตัวดึงโช๊ค Triumph งาน CNC. Fits: Triumph Thruxton/T100/T120 · Material: อลูมิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "CHOKE KNOB Alloy ตัวดึงโช๊ค Triumph งาน CNC · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "CHOKE KNOB Alloy ตัวดึงโช๊ค Triumph งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษพร้อมชุบอโนไดซ์ รองรับ Triumph Modern Classic ทุกรุ่น อันล่ะ",
+    "descriptionTh": "CHOKE KNOB Alloy ตัวดึงโช๊ค Triumph งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษพร้อมชุบอโนไดซ์ รองรับ Triumph Modern Classic ทุกรุ่น อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/chuk-cabu.jpg"
     ],
@@ -8555,8 +8467,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Mirror Hole Caps ตัวอุดกระจก. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Mirror Hole Caps ตัวอุดกระจก · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Mirror Hole Caps ตัวอุดกระจก ผลิตจาก Allloy 6061 CNC Billet รองรับรุ่น Bonneville T100 , Thruxton (injection) มีสี ดำ/เงิน/ทอง คู่ละ",
+    "descriptionTh": "Mirror Hole Caps ตัวอุดกระจก ผลิตจาก Allloy 6061 CNC Billet รองรับรุ่น Bonneville T100 , Thruxton (injection) มีสี ดำ/เงิน/ทอง คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/chuk-cluch-al.jpg"
     ],
@@ -8578,8 +8490,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ",
-    "description": "SEAT SCREWS Alloy น็อตเบาะแต่งแบบยาว. Fits: Triumph Thruxton/T100/T120 · Material: อลูมิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "SEAT SCREWS Alloy น็อตเบาะแต่งแบบยาว · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "SEAT SCREWS Alloy น็อตเบาะแต่งแบบยาว ผลิตจากอลูมิเนียมเกรดพิเศษ คู่ละ",
+    "descriptionTh": "SEAT SCREWS Alloy น็อตเบาะแต่งแบบยาว ผลิตจากอลูมิเนียมเกรดพิเศษ คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/nut-sead.jpg"
     ],
@@ -8601,8 +8513,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Top Yoke CNC Alloy แผงคอแต่ง สไตล์ CAFE RACER. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Top Yoke CNC Alloy แผงคอแต่ง สไตล์ CAFE RACER · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Top Yoke CNC Alloy แผงคอแต่ง สไตล์ CAFE RACER ผลิตจากอลูมิเนียมเกรดพิเศษ รองรับรุ่น Thruxton (Color&ndash;Silver,Black) ชุดละ",
+    "descriptionTh": "Top Yoke CNC Alloy แผงคอแต่ง สไตล์ CAFE RACER ผลิตจากอลูมิเนียมเกรดพิเศษ รองรับรุ่น Thruxton (Color&ndash;Silver,Black) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/pangcortriumph.jpg"
     ],
@@ -8624,8 +8536,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Sprocket Aluminum 7075 Alloy 520-42,43T สเตอร์หลัง Triumph Truxton. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum 7075 Alloy 520-42,43T สเตอร์หลัง Triumph Truxton · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum 7075 Alloy 520-42,43T สเตอร์หลัง Triumph Truxton ผลิตจากปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน(มีสีดำและสีทอง) ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum 7075 Alloy 520-42,43T สเตอร์หลัง Triumph Truxton ผลิตจากปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน(มีสีดำและสีทอง) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sprocket-re.jpg"
     ],
@@ -8647,8 +8559,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Bolts Shock Rear น็อตหัวโช้คหลังแต่ง. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Bolts Shock Rear น็อตหัวโช้คหลังแต่ง · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Bolts Shock Rear น็อตหัวโช้คหลังแต่ง ผลิตจากอลูมิเนียมเกรดพิเศษ สามารถติดตั้งแทนน็อตเดิมได้เลย (Color&ndash;Silver,Black) คู่ละ",
+    "descriptionTh": "Bolts Shock Rear น็อตหัวโช้คหลังแต่ง ผลิตจากอลูมิเนียมเกรดพิเศษ สามารถติดตั้งแทนน็อตเดิมได้เลย (Color&ndash;Silver,Black) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/bootchock.jpg"
     ],
@@ -8670,8 +8582,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า ดีไซน์แนวเรโทร. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า ดีไซน์แนวเรโทร · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า ดีไซน์แนวเรโทร ผลิตจากอลูมิเนียมเกรดพิเศษ (Color&ndash;Silver,Black) ใส่ได้กับ Triumph Modern Classics ทุกรุ่น ชุดละ",
+    "descriptionTh": "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า ดีไซน์แนวเรโทร ผลิตจากอลูมิเนียมเกรดพิเศษ (Color&ndash;Silver,Black) ใส่ได้กับ Triumph Modern Classics ทุกรุ่น ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Cover-sprocket-fr-bl1.jpg"
     ],
@@ -8693,8 +8605,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า รองรับ Triumph Modern Classic ทุกรุ่น งาน CNC. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า รองรับ Triumph Modern Classic ทุกรุ่น งาน CNC · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า รองรับ Triumph Modern Classic ทุกรุ่น งาน CNC ผลิตจากวัสดุอลูมิเนียมเกรดพิเศษ (Color&ndash;Silver,Black) ชุดละ",
+    "descriptionTh": "Engine Sprocket Cover CNC Alloy ครอบสเตอร์หน้า รองรับ Triumph Modern Classic ทุกรุ่น งาน CNC ผลิตจากวัสดุอลูมิเนียมเกรดพิเศษ (Color&ndash;Silver,Black) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Cover-sprocket-fr.jpg",
       "/legacy/webgigabike.com/Triumph/Cover-sprocket-fr-si.jpg"
@@ -8717,8 +8629,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ",
+    "descriptionTh": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/covercarbureter2.jpg"
     ],
@@ -8740,8 +8652,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ",
+    "descriptionTh": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/covercarbureter1.jpg"
     ],
@@ -8763,8 +8675,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ",
+    "descriptionTh": "EFI CARB TOPS Alloy ฝาครอบหัวฉีดแต่ง คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/covercarbureter3.jpg"
     ],
@@ -8786,8 +8698,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ Triumph. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ Triumph · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ Triumph ผลิตจากอลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNC มาตรฐานส่งออก (Color&ndash;Silver,Black) ชิ้นล่ะ",
+    "descriptionTh": "Top Yoke Nut Aluminum 7075 Alloy น๊อตขันแผงคอ Triumph ผลิตจากอลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNC มาตรฐานส่งออก (Color&ndash;Silver,Black) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/nut-co1.jpg"
     ],
@@ -8809,8 +8721,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Nut Air Injection Removal Kit Alloy 7075 น๊อตอุดระบบ Air Injection Removal Kit. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Nut Air Injection Removal Kit Alloy 7075 น๊อตอุดระบบ Air Injection Removal Kit · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Nut Air Injection Removal Kit Alloy 7075 น๊อตอุดระบบ Air Injection Removal Kit ผลิตจากอลูมิเนียมเกรดพิเศษ 7075 T6 สำหรับ Triumph Truxton โดยเฉพาะ (Color&ndash;Silver,Black) คู่ละ",
+    "descriptionTh": "Nut Air Injection Removal Kit Alloy 7075 น๊อตอุดระบบ Air Injection Removal Kit ผลิตจากอลูมิเนียมเกรดพิเศษ 7075 T6 สำหรับ Triumph Truxton โดยเฉพาะ (Color&ndash;Silver,Black) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/nut-yok.jpg"
     ],
@@ -8832,8 +8744,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ",
-    "description": "แผงไมล์เดี่ยวTriumph. Fits: Triumph Thruxton/T100/T120 · Material: อลูมิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงไมล์เดี่ยวTriumph · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงไมล์เดี่ยวTriumph ผลิตจากอลูมิเนียมเกรดพิเศษพร้อมสีพาวเดอร์โค้ท และชุดน็อตสเตนเลส มี 2 ทรง สั้นและยาว รองรับ Triumph Modern Classics ทุกรุ่น ชิ้นล่ะ",
+    "descriptionTh": "แผงไมล์เดี่ยวTriumph ผลิตจากอลูมิเนียมเกรดพิเศษพร้อมสีพาวเดอร์โค้ท และชุดน็อตสเตนเลส มี 2 ทรง สั้นและยาว รองรับ Triumph Modern Classics ทุกรุ่น ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/miter1all.jpg"
     ],
@@ -8855,8 +8767,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรด 6061 ทำสี Powder Coat น้ำหนักเบา แข็งแรง",
-    "description": "TRIUMPH FLAT GAUGE CLUSTER แผ่นยึดไมล์คู่มีรูกุญแจ. Fits: Triumph Thruxton/T100/T120 · Material: อลูมิเนียมเกรด 6061 ทำสี Powder Coat น้ำหนักเบา แข็งแรง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "TRIUMPH FLAT GAUGE CLUSTER แผ่นยึดไมล์คู่มีรูกุญแจ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมิเนียมเกรด 6061 ทำสี Powder Coat น้ำหนักเบา แข็งแรง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "TRIUMPH FLAT GAUGE CLUSTER แผ่นยึดไมล์คู่มีรูกุญแจ ผลิตจากอลูมิเนียมเกรด 6061 ทำสี Powder Coat น้ำหนักเบา แข็งแรง พร้อมน็อตสเตนเลสและบูทยึดกุญแจ หากติดตั้งจำเป็นต้องเปลี่ยนหูช้างจับไฟหน้า ชุดละ :",
+    "descriptionTh": "TRIUMPH FLAT GAUGE CLUSTER แผ่นยึดไมล์คู่มีรูกุญแจ ผลิตจากอลูมิเนียมเกรด 6061 ทำสี Powder Coat น้ำหนักเบา แข็งแรง พร้อมน็อตสเตนเลสและบูทยึดกุญแจ หากติดตั้งจำเป็นต้องเปลี่ยนหูช้างจับไฟหน้า ชุดละ :",
     "images": [
       "/legacy/webgigabike.com/Triumph/miter2.jpg"
     ],
@@ -8878,8 +8790,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Turn Signal Bracket ขาย้ายไฟเลี้ยวหน้า สำหรับ Triumph โดยเฉพาะ ชิ้นล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Turn Signal Bracket ขาย้ายไฟเลี้ยวหน้า สำหรับ Triumph โดยเฉพาะ ชิ้นล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Turn Signal Bracket ขาย้ายไฟเลี้ยวหน้า สำหรับ Triumph โดยเฉพาะ ชิ้นล่ะ",
+    "descriptionTh": "Turn Signal Bracket ขาย้ายไฟเลี้ยวหน้า สำหรับ Triumph โดยเฉพาะ ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/bracket-turn.jpg"
     ],
@@ -8901,8 +8813,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Chain Guard Stainless Steel -Triumph Modern Classics บังโซ่แต่ง สไตล์เรโทร ชิ้นงาน. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Chain Guard Stainless Steel -Triumph Modern Classics บังโซ่แต่ง สไตล์เรโทร ชิ้นงาน · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Chain Guard Stainless Steel -Triumph Modern Classics บังโซ่แต่ง สไตล์เรโทร ชิ้นงานผลิตจาก สเตนเลสคุณภาพดี ไม่เป็นสนิม แข็งแรง คงทน รองรับ Triumph Modern Classics ทุกรุ่น มี 3 สีให้เลือก ดำ (พาวเดอร์โค้ท) , เงิน (ปัดเงา ) , เงิน ( ปัดด้าน) ชิ้นละ",
+    "descriptionTh": "Chain Guard Stainless Steel -Triumph Modern Classics บังโซ่แต่ง สไตล์เรโทร ชิ้นงานผลิตจาก สเตนเลสคุณภาพดี ไม่เป็นสนิม แข็งแรง คงทน รองรับ Triumph Modern Classics ทุกรุ่น มี 3 สีให้เลือก ดำ (พาวเดอร์โค้ท) , เงิน (ปัดเงา ) , เงิน ( ปัดด้าน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Cover-chan.jpg"
     ],
@@ -8924,8 +8836,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Clutch Cable Bracket ขาจับสายครัชแต่ง สไตล์ RETRO. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Clutch Cable Bracket ขาจับสายครัชแต่ง สไตล์ RETRO · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Clutch Cable Bracket ขาจับสายครัชแต่ง สไตล์ RETRO ผลิตจาก Alloy 6061 ใส่ได้กับ Triumph Modern Classics ทุกรุ่น (Color&ndash;Silver,Black) ชิ้นละ",
+    "descriptionTh": "Clutch Cable Bracket ขาจับสายครัชแต่ง สไตล์ RETRO ผลิตจาก Alloy 6061 ใส่ได้กับ Triumph Modern Classics ทุกรุ่น (Color&ndash;Silver,Black) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/bracket-cluck.jpg"
     ],
@@ -8949,8 +8861,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "KEY RELOCATION BRACKET Alloy ชุดย้ายกุญแจมาไว้ตรงโครงฝั่งซ้ายแต่ง Triumph. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "KEY RELOCATION BRACKET Alloy ชุดย้ายกุญแจมาไว้ตรงโครงฝั่งซ้ายแต่ง Triumph · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "KEY RELOCATION BRACKET Alloy ชุดย้ายกุญแจมาไว้ตรงโครงฝั่งซ้ายแต่ง Triumph ผลิตจากอลูมิเนียมเกรดพิเศษมาตรฐานส่งออก (Color&ndash;Silver,Black) ชุดละ",
+    "descriptionTh": "KEY RELOCATION BRACKET Alloy ชุดย้ายกุญแจมาไว้ตรงโครงฝั่งซ้ายแต่ง Triumph ผลิตจากอลูมิเนียมเกรดพิเศษมาตรฐานส่งออก (Color&ndash;Silver,Black) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/bracket-kee.jpg"
     ],
@@ -8974,8 +8886,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Bracket Short Alloy 41mm. หูยึดไฟหน้า CNC (แบบสั้นหูเยื้อง) ขนาด 41mm. ความยาว 62 mm. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Bracket Short Alloy 41mm. หูยึดไฟหน้า CNC (แบบสั้นหูเยื้อง) ขนาด 41mm. ความยาว 62 mm · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Bracket Short Alloy 41mm. หูยึดไฟหน้า CNC (แบบสั้นหูเยื้อง) ขนาด 41mm. ความยาว 62 mm. ผลิตจาก Alloy 6061 (Color&ndash;Silver,Black) ชุดล่ะ",
+    "descriptionTh": "Headlight Bracket Short Alloy 41mm. หูยึดไฟหน้า CNC (แบบสั้นหูเยื้อง) ขนาด 41mm. ความยาว 62 mm. ผลิตจาก Alloy 6061 (Color&ndash;Silver,Black) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-long.jpg-1.jpg"
     ],
@@ -8999,8 +8911,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมินเนียมเกรดอย่างดี ออกแบบมาเพื่อให้ใช้งานได้ง่ายสะดวก ไม่ต้องใช้เครื่องมือในการติดตั้ง แข็งแรง น้ำหนักเบา และสวยงาม",
-    "description": "Seat Cowl Screw Set Alloy น็อตยึดตูดมดสำหรับ Thruxton. Fits: Triumph Thruxton/T100/T120 · Material: อลูมินเนียมเกรดอย่างดี ออกแบบมาเพื่อให้ใช้งานได้ง่ายสะดวก ไม่ต้องใช้เครื่องมือในการติดตั้ง แข็งแรง น้ำหนักเบา และสวยงาม · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Seat Cowl Screw Set Alloy น็อตยึดตูดมดสำหรับ Thruxton · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมินเนียมเกรดอย่างดี ออกแบบมาเพื่อให้ใช้งานได้ง่ายสะดวก ไม่ต้องใช้เครื่องมือในการติดตั้ง แข็งแรง น้ำหนักเบา และสวยงาม · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Seat Cowl Screw Set Alloy น็อตยึดตูดมดสำหรับ Thruxton ผลิตจากอลูมินเนียมเกรดอย่างดี ออกแบบมาเพื่อให้ใช้งานได้ง่ายสะดวก ไม่ต้องใช้เครื่องมือในการติดตั้ง แข็งแรง น้ำหนักเบา และสวยงาม คู่ละ",
+    "descriptionTh": "Seat Cowl Screw Set Alloy น็อตยึดตูดมดสำหรับ Thruxton ผลิตจากอลูมินเนียมเกรดอย่างดี ออกแบบมาเพื่อให้ใช้งานได้ง่ายสะดวก ไม่ต้องใช้เครื่องมือในการติดตั้ง แข็งแรง น้ำหนักเบา และสวยงาม คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/nut-cover-ka.jpg"
     ],
@@ -9022,8 +8934,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมินเนียมเกรดอย่างดี ออกแบบมาเพื่อให้ใช้งานได้ง่ายสะดวก ไม่ต้องใช้เครื่องมือในการติดตั้ง แข็งแรง น้ำหนักเบา และสวยงาม",
-    "description": "Side Cover Screws Alloy น็อตยึดฝากระเป๋าแต่ง. Fits: Triumph Thruxton/T100/T120 · Material: อลูมินเนียมเกรดอย่างดี ออกแบบมาเพื่อให้ใช้งานได้ง่ายสะดวก ไม่ต้องใช้เครื่องมือในการติดตั้ง แข็งแรง น้ำหนักเบา และสวยงาม · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Side Cover Screws Alloy น็อตยึดฝากระเป๋าแต่ง · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมินเนียมเกรดอย่างดี ออกแบบมาเพื่อให้ใช้งานได้ง่ายสะดวก ไม่ต้องใช้เครื่องมือในการติดตั้ง แข็งแรง น้ำหนักเบา และสวยงาม · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Side Cover Screws Alloy น็อตยึดฝากระเป๋าแต่ง ผลิตจากอลูมินเนียมเกรดอย่างดี ออกแบบมาเพื่อให้ใช้งานได้ง่ายสะดวก ไม่ต้องใช้เครื่องมือในการติดตั้ง แข็งแรง น้ำหนักเบา และสวยงาม คู่ละ",
+    "descriptionTh": "Side Cover Screws Alloy น็อตยึดฝากระเป๋าแต่ง ผลิตจากอลูมินเนียมเกรดอย่างดี ออกแบบมาเพื่อให้ใช้งานได้ง่ายสะดวก ไม่ต้องใช้เครื่องมือในการติดตั้ง แข็งแรง น้ำหนักเบา และสวยงาม คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/nut-cover.jpg"
     ],
@@ -9045,8 +8957,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Boot Cylinder บู๊ทท่อ Triumph Truxton ใส่แทนพักเท้าหลังได้เลย คู่ล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Boot Cylinder บู๊ทท่อ Triumph Truxton ใส่แทนพักเท้าหลังได้เลย คู่ล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Boot Cylinder บู๊ทท่อ Triumph Truxton ใส่แทนพักเท้าหลังได้เลย คู่ล่ะ",
+    "descriptionTh": "Boot Cylinder บู๊ทท่อ Triumph Truxton ใส่แทนพักเท้าหลังได้เลย คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/boot-tor.jpg"
     ],
@@ -9068,8 +8980,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Bracket Alloy 41mm.-95 mm. หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว ขนาด 41mm. ยาว 95 mm. (Color&ndash;Silver,Black) ชุดล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Bracket Alloy 41mm.-95 mm. หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว ขนาด 41mm. ยาว 95 mm. (Color&ndash;Silver,Black) ชุดล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Bracket Alloy 41mm.-95 mm. หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว ขนาด 41mm. ยาว 95 mm. (Color&ndash;Silver,Black) ชุดล่ะ",
+    "descriptionTh": "Headlight Bracket Alloy 41mm.-95 mm. หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว ขนาด 41mm. ยาว 95 mm. (Color&ndash;Silver,Black) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-trong.jpg"
     ],
@@ -9091,8 +9003,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน",
-    "description": "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์หลัง Triumph Truxton. Fits: Triumph Thruxton/T100/T120 · Material: ปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์หลัง Triumph Truxton · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ ปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์หลัง Triumph Truxton ผลิตจากปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์หลัง Triumph Truxton ผลิตจากปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sprocket-new-bl2.jpg"
     ],
@@ -9114,8 +9026,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน",
-    "description": "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์หลัง Triumph Truxton. Fits: Triumph Thruxton/T100/T120 · Material: ปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์หลัง Triumph Truxton · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ ปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์หลัง Triumph Truxton ผลิตจากปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum 7075 Alloy 520-42,43T-Triumph Modern Classics สเตอร์หลัง Triumph Truxton ผลิตจากปิเนียมเกรดพิเศษ สำหรับผลิตสเตอร์โดยเฉพาะ 7075 T6 มี 42,43 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sprocket-new-bl1.jpg"
     ],
@@ -9137,8 +9049,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Nut Oil Cap CNC Alloy 7075 -Triumph Modern Classics น๊อตขันเติมน้ำมันเครื่องแต่ง CNC สำหรับ Triumph Truxton ผลิตอลูมิเนียมเกรด 7075 T6 (Color&ndash;Silver,Black) ชิ้นล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Nut Oil Cap CNC Alloy 7075 -Triumph Modern Classics น๊อตขันเติมน้ำมันเครื่องแต่ง CNC สำหรับ Triumph Truxton ผลิตอลูมิเนียมเกรด 7075 T6 (Color&ndash;Silver,Black) ชิ้นล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Nut Oil Cap CNC Alloy 7075 -Triumph Modern Classics น๊อตขันเติมน้ำมันเครื่องแต่ง CNC สำหรับ Triumph Truxton ผลิตอลูมิเนียมเกรด 7075 T6 (Color&ndash;Silver,Black) ชิ้นล่ะ",
+    "descriptionTh": "Nut Oil Cap CNC Alloy 7075 -Triumph Modern Classics น๊อตขันเติมน้ำมันเครื่องแต่ง CNC สำหรับ Triumph Truxton ผลิตอลูมิเนียมเกรด 7075 T6 (Color&ndash;Silver,Black) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/nut-oli.jpg"
     ],
@@ -9160,8 +9072,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC มาตรฐานส่งออก สำหรับใส่ Triumph Truxton-R",
-    "description": "Turn Signal Bracket Alloy - Triumph Thruxton R ขายึดไฟเลี้ยวหน้าแต่ง. Fits: Triumph Thruxton/T100/T120 · Material: อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC มาตรฐานส่งออก สำหรับใส่ Triumph Truxton-R · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Turn Signal Bracket Alloy - Triumph Thruxton R ขายึดไฟเลี้ยวหน้าแต่ง · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC มาตรฐานส่งออก สำหรับใส่ Triumph Truxton-R · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Turn Signal Bracket Alloy - Triumph Thruxton R ขายึดไฟเลี้ยวหน้าแต่ง ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC มาตรฐานส่งออก สำหรับใส่ Triumph Truxton-R คู่ละ่",
+    "descriptionTh": "Turn Signal Bracket Alloy - Triumph Thruxton R ขายึดไฟเลี้ยวหน้าแต่ง ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC มาตรฐานส่งออก สำหรับใส่ Triumph Truxton-R คู่ละ่",
     "images": [
       "/legacy/webgigabike.com/Triumph/bracket-tu-fron.jpg"
     ],
@@ -9183,8 +9095,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผ่นรองจานเบรค Triumph Truxton900 ,T100 สำหรับรถที่เปลี่ยนใส่ปั๊มเบรค Brembo (Color&ndash;Silver,Black) แผ่นละ. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นรองจานเบรค Triumph Truxton900 ,T100 สำหรับรถที่เปลี่ยนใส่ปั๊มเบรค Brembo (Color&ndash;Silver,Black) แผ่นละ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นรองจานเบรค Triumph Truxton900 ,T100 สำหรับรถที่เปลี่ยนใส่ปั๊มเบรค Brembo (Color&ndash;Silver,Black) แผ่นละ",
+    "descriptionTh": "แผ่นรองจานเบรค Triumph Truxton900 ,T100 สำหรับรถที่เปลี่ยนใส่ปั๊มเบรค Brembo (Color&ndash;Silver,Black) แผ่นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Brake-Rotor-Spacer-triumph.jpg"
     ],
@@ -9206,8 +9118,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดคุณภาพจากต่างประเทศ ด้วยเครื่องจักร CNC",
-    "description": "SKID PLATE -Triumph Modern Classics ( แผ่นรองกันเครื่อง ). Fits: Triumph Thruxton/T100/T120 · Material: อลูมิเนียมเกรดคุณภาพจากต่างประเทศ ด้วยเครื่องจักร CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "SKID PLATE -Triumph Modern Classics ( แผ่นรองกันเครื่อง ) · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมิเนียมเกรดคุณภาพจากต่างประเทศ ด้วยเครื่องจักร CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "SKID PLATE -Triumph Modern Classics ( แผ่นรองกันเครื่อง ) ผลิตจากอลูมิเนียมเกรดคุณภาพจากต่างประเทศ ด้วยเครื่องจักร CNC พร้อมชุบอโนไดร์สีจากโรงงานที่มีคุณภาพส่งออก รองรับ Triumph Modern Classics ทุกรุ่น ชุดล่ะ",
+    "descriptionTh": "SKID PLATE -Triumph Modern Classics ( แผ่นรองกันเครื่อง ) ผลิตจากอลูมิเนียมเกรดคุณภาพจากต่างประเทศ ด้วยเครื่องจักร CNC พร้อมชุบอโนไดร์สีจากโรงงานที่มีคุณภาพส่งออก รองรับ Triumph Modern Classics ทุกรุ่น ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/gard-bl.jpg"
     ],
@@ -9231,8 +9143,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 525-42 ฟัน",
-    "description": "Sprocket Aluminum 7075 Alloy 525-42T - Triumph Truxton-R สเตอร์หลัง Triumph Truxton-R. Fits: Triumph Thruxton/T100/T120 · Material: ปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 525-42 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum 7075 Alloy 525-42T - Triumph Truxton-R สเตอร์หลัง Triumph Truxton-R · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ ปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 525-42 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum 7075 Alloy 525-42T - Triumph Truxton-R สเตอร์หลัง Triumph Truxton-R ผลิตจากปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 525-42 ฟัน ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum 7075 Alloy 525-42T - Triumph Truxton-R สเตอร์หลัง Triumph Truxton-R ผลิตจากปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 525-42 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sprocket-trx-r.jpg"
     ],
@@ -9254,8 +9166,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 520-41 ฟัน",
-    "description": "Sprocket Aluminum 7075 Alloy 520-41T - Triumph Streetwin สเตอร์หลัง Triumph Streetwin. Fits: Triumph Thruxton/T100/T120 · Material: ปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 520-41 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum 7075 Alloy 520-41T - Triumph Streetwin สเตอร์หลัง Triumph Streetwin · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ ปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 520-41 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum 7075 Alloy 520-41T - Triumph Streetwin สเตอร์หลัง Triumph Streetwin ผลิตจากปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 520-41 ฟัน ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum 7075 Alloy 520-41T - Triumph Streetwin สเตอร์หลัง Triumph Streetwin ผลิตจากปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 520-41 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sprocket-t120.jpg"
     ],
@@ -9277,8 +9189,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 525-37 ฟัน",
-    "description": "Sprocket Aluminum 7075 Alloy 525-37T - Triumph T120 สเตอร์หลัง Triumph T120. Fits: Triumph Thruxton/T100/T120 · Material: ปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 525-37 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum 7075 Alloy 525-37T - Triumph T120 สเตอร์หลัง Triumph T120 · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ ปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 525-37 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum 7075 Alloy 525-37T - Triumph T120 สเตอร์หลัง Triumph T120 ผลิตจากปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 525-37 ฟัน ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum 7075 Alloy 525-37T - Triumph T120 สเตอร์หลัง Triumph T120 ผลิตจากปิเนียมเกรดพิเศษ 7075 T6 มีขนาด 525-37 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sprocket-treetwin.jpg"
     ],
@@ -9300,8 +9212,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Bracket Alloy 41mm. หูยึดไฟหน้า CNC แบบตัว V ยาว ขนาด 41mm. ความยาว 110 mm. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Bracket Alloy 41mm. หูยึดไฟหน้า CNC แบบตัว V ยาว ขนาด 41mm. ความยาว 110 mm · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Bracket Alloy 41mm. หูยึดไฟหน้า CNC แบบตัว V ยาว ขนาด 41mm. ความยาว 110 mm. ผลิตจาก Alloy 6061 (Color&ndash;Silver,Black) ชุดล่ะ",
+    "descriptionTh": "Headlight Bracket Alloy 41mm. หูยึดไฟหน้า CNC แบบตัว V ยาว ขนาด 41mm. ความยาว 110 mm. ผลิตจาก Alloy 6061 (Color&ndash;Silver,Black) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/steyheadlight-long.jpg"
     ],
@@ -9325,8 +9237,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Bracket Alloy 41mm. หูยึดไฟหน้า CNC แบบตัว V ยาวและมีหูยึดไฟเลี้ยว ขนาด 41mm. ความยาว 110 mm. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Bracket Alloy 41mm. หูยึดไฟหน้า CNC แบบตัว V ยาวและมีหูยึดไฟเลี้ยว ขนาด 41mm. ความยาว 110 mm · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Bracket Alloy 41mm. หูยึดไฟหน้า CNC แบบตัว V ยาวและมีหูยึดไฟเลี้ยว ขนาด 41mm. ความยาว 110 mm. ผลิตจาก Alloy 6061 (Color&ndash;Silver,Black) ชุดล่ะ",
+    "descriptionTh": "Headlight Bracket Alloy 41mm. หูยึดไฟหน้า CNC แบบตัว V ยาวและมีหูยึดไฟเลี้ยว ขนาด 41mm. ความยาว 110 mm. ผลิตจาก Alloy 6061 (Color&ndash;Silver,Black) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/steyheadlight-long-tune.jpg"
     ],
@@ -9348,8 +9260,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้ง",
-    "description": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องข้าง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย (Color&ndash;Silver,Black) ทั้ง ชุดๆล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องข้าง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย (Color&ndash;Silver,Black) ทั้ง ชุดๆล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องข้าง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย (Color&ndash;Silver,Black) ทั้ง ชุดๆล่ะ",
+    "descriptionTh": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องข้าง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย (Color&ndash;Silver,Black) ทั้ง ชุดๆล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sw-triumph-t1-2.jpg",
       "/legacy/webgigabike.com/Triumph/sw-triumph-t1-1.jpg",
@@ -9376,8 +9288,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้ง",
-    "description": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องข้าง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องข้าง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องข้าง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ",
+    "descriptionTh": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องข้าง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sw-triumph-t1-77.jpg",
       "/legacy/webgigabike.com/Triumph/sw-triumph-t1-11.jpg",
@@ -9407,8 +9319,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้ง",
-    "description": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบ สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบ สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบ สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ",
+    "descriptionTh": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบ สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sw-triumph-t2-6.jpg",
       "/legacy/webgigabike.com/Triumph/sw-triumph-t2-4.jpg",
@@ -9436,8 +9348,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้ง",
-    "description": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบร่องเฉียง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบร่องเฉียง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบร่องเฉียง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ",
+    "descriptionTh": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบร่องเฉียง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sw-triumph-t3-si.jpg"
     ],
@@ -9459,8 +9371,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้ง",
-    "description": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบร่องเฉียง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบร่องเฉียง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบร่องเฉียง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ",
+    "descriptionTh": "Swing arm CNC Alloy 6061- Triumph Truxton 900 , T100 สวิงอาร์มอลูมิเนียมแต่ง CNC แบบร่องเฉียง สำหรับใส่ Triumph Truxton 900 และ Triumph T100 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ใส่ยางรองโซ่และบังโซ่เดิมได้เลย ทั้ง ชุดๆล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sw-triumph-t3-bl-a.jpg",
       "/legacy/webgigabike.com/Triumph/sw-triumph-t3-bl.jpg"
@@ -9483,8 +9395,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีดำสนิท",
-    "description": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900. Fits: Triumph Thruxton/T100/T120 · Material: อลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีดำสนิท · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900 · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีดำสนิท · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900 ผลิตจากอลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีดำสนิท ชิ้นละ",
+    "descriptionTh": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900 ผลิตจากอลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีดำสนิท ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Cover-diss-bl.jpg"
     ],
@@ -9506,8 +9418,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีเงิน",
-    "description": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900. Fits: Triumph Thruxton/T100/T120 · Material: อลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีเงิน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900 · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีเงิน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900 ผลิตจากอลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีเงิน ชิ้นละ",
+    "descriptionTh": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900 ผลิตจากอลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีเงิน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Cover-diss-si.jpg"
     ],
@@ -9529,8 +9441,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีดำกัดลาย",
-    "description": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900. Fits: Triumph Thruxton/T100/T120 · Material: อลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีดำกัดลาย · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900 · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีดำกัดลาย · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900 ผลิตจากอลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีดำกัดลาย ชิ้นละ",
+    "descriptionTh": "Cap Front Brake Reservoir CNC Alloy ฝาครอบปั๊มดิสเบรคบน Triumph Truxton 900 ผลิตจากอลูมิเนียมเกรดพิเศษ 6061 T6 ด้วยเครื่องจักร CNC สีดำกัดลาย ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Cover-diss-si-bl.jpg"
     ],
@@ -9552,8 +9464,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. สีดำ. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. สีดำ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. สีดำ คู่ละ",
+    "descriptionTh": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. สีดำ คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/stey-headlight-t120-bl.jpg"
     ],
@@ -9575,8 +9487,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. สีเงิน. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. สีเงิน · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. สีเงิน คู่ละ",
+    "descriptionTh": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. สีเงิน คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/stey-headlight-t120-si.jpg"
     ],
@@ -9598,8 +9510,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. มี 2 สี (ดำ และ เงิน). Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. มี 2 สี (ดำ และ เงิน) · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. มี 2 สี (ดำ และ เงิน) คู่ละ",
+    "descriptionTh": "Headlight Bracket Long Alloy 41mm.- Triumph T120 หูยึดไฟหน้า Triumph T120 งานCNC ขนาด 41mm. ยาวจากแกนโช๊คถึงน๊อตยึดโคมไฟหน้า 120 มม. มี 2 สี (ดำ และ เงิน) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/stey-headlight-t120-mo-bl.jpg"
     ],
@@ -9621,8 +9533,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดคุณภาพ ด้วยเครื่องจักร CNC",
-    "description": "Skid Plate Aluminum Triumph Truxton 900 , T100 ( แผ่นรองกันเครื่องลายธง ). Fits: Triumph Thruxton/T100/T120 · Material: อลูมิเนียมเกรดคุณภาพ ด้วยเครื่องจักร CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Skid Plate Aluminum Triumph Truxton 900 , T100 ( แผ่นรองกันเครื่องลายธง ) · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ อลูมิเนียมเกรดคุณภาพ ด้วยเครื่องจักร CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Skid Plate Aluminum Triumph Truxton 900 , T100 ( แผ่นรองกันเครื่องลายธง ) ผลิตจากอลูมิเนียมเกรดคุณภาพ ด้วยเครื่องจักร CNC พร้อมสีเพาเดอร์โค๊ท และชุบอโนไดร์สีจากโรงงานที่มีคุณภาพ รองรับ Triumph Modern Classics ทุกรุ่น ชุดล่ะ",
+    "descriptionTh": "Skid Plate Aluminum Triumph Truxton 900 , T100 ( แผ่นรองกันเครื่องลายธง ) ผลิตจากอลูมิเนียมเกรดคุณภาพ ด้วยเครื่องจักร CNC พร้อมสีเพาเดอร์โค๊ท และชุบอโนไดร์สีจากโรงงานที่มีคุณภาพ รองรับ Triumph Modern Classics ทุกรุ่น ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/gard-bl-en.jpg"
     ],
@@ -9646,8 +9558,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061CNC Billet",
-    "description": "Turn Signal Bracket Alloy 41 mm. ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 41 mm. สำหรับ Triumph. Fits: Triumph Thruxton/T100/T120 · Material: Alloy 6061CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Turn Signal Bracket Alloy 41 mm. ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 41 mm. สำหรับ Triumph · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy 6061CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Turn Signal Bracket Alloy 41 mm. ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 41 mm. สำหรับ Triumph ผลิตจาก Alloy 6061 มี 2 สี (ดำ และ เงิน) คู่ล่ะ",
+    "descriptionTh": "Turn Signal Bracket Alloy 41 mm. ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 41 mm. สำหรับ Triumph ผลิตจาก Alloy 6061 มี 2 สี (ดำ และ เงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/Lock-41-mm.jpg"
     ],
@@ -9671,8 +9583,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบายความร้อน. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบายความร้อน · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบายความร้อน ผลิตจากอลูมิเนียมเกรดพิเศษ (Color&ndash;Silver,Black) ใส่ได้กับ Triumph Modern Classics ทุกรุ่น (Truxton900 ,T100) ชุดละ",
+    "descriptionTh": "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบายความร้อน ผลิตจากอลูมิเนียมเกรดพิเศษ (Color&ndash;Silver,Black) ใส่ได้กับ Triumph Modern Classics ทุกรุ่น (Truxton900 ,T100) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Cover-Eni-bl-r.jpg"
     ],
@@ -9694,8 +9606,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบายความร้อน. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบายความร้อน · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบายความร้อน ผลิตจากอลูมิเนียมเกรดพิเศษ (Color&ndash;Silver,Black) ใส่ได้กับ Triumph Modern Classics ทุกรุ่น (Truxton900 ,T100) ชุดละ",
+    "descriptionTh": "Engine Cover Right CNC Alloy ฝาครอบเครื่องข้างขวา ดีไซน์แบบครีบร่องระบายความร้อน ผลิตจากอลูมิเนียมเกรดพิเศษ (Color&ndash;Silver,Black) ใส่ได้กับ Triumph Modern Classics ทุกรุ่น (Truxton900 ,T100) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Cover-Eni-all.jpg",
       "/legacy/webgigabike.com/Triumph/Cover-Eni-sil-r.jpg"
@@ -9718,8 +9630,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Nut M10 Pit 1.25 CNC Alloy 7075 น๊อตสเตอร์หลัง M10 Pit 1.25 อลูมินั่มอัลลอย เกรดพรีเมี่ยม 7075 T651. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Nut M10 Pit 1.25 CNC Alloy 7075 น๊อตสเตอร์หลัง M10 Pit 1.25 อลูมินั่มอัลลอย เกรดพรีเมี่ยม 7075 T651 · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Nut M10 Pit 1.25 CNC Alloy 7075 น๊อตสเตอร์หลัง M10 Pit 1.25 อลูมินั่มอัลลอย เกรดพรีเมี่ยม 7075 T651 ชิ้นละ",
+    "descriptionTh": "Nut M10 Pit 1.25 CNC Alloy 7075 น๊อตสเตอร์หลัง M10 Pit 1.25 อลูมินั่มอัลลอย เกรดพรีเมี่ยม 7075 T651 ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/Nut-m10-Pit-1.25.jpg"
     ],
@@ -9741,8 +9653,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Caliper Adapter CNC Alloy 6061 ขายึดปั๊มเบรคหน้าซ้ายใส่ BREMBO หูชิด สำหรับใส่ Truxton900 ,T100 มี 2 สี (ดำ และ เงิน). Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Caliper Adapter CNC Alloy 6061 ขายึดปั๊มเบรคหน้าซ้ายใส่ BREMBO หูชิด สำหรับใส่ Truxton900 ,T100 มี 2 สี (ดำ และ เงิน) · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Caliper Adapter CNC Alloy 6061 ขายึดปั๊มเบรคหน้าซ้ายใส่ BREMBO หูชิด สำหรับใส่ Truxton900 ,T100 มี 2 สี (ดำ และ เงิน) ชิ้นละ",
+    "descriptionTh": "Caliper Adapter CNC Alloy 6061 ขายึดปั๊มเบรคหน้าซ้ายใส่ BREMBO หูชิด สำหรับใส่ Truxton900 ,T100 มี 2 สี (ดำ และ เงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Dissbreck-front-brembo-trx900.jpg"
     ],
@@ -9767,8 +9679,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า CNC (แบบซี่ตรงสั้น) ขนาด 41mm. ความยาว 62 mm. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า CNC (แบบซี่ตรงสั้น) ขนาด 41mm. ความยาว 62 mm · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า CNC (แบบซี่ตรงสั้น) ขนาด 41mm. ความยาว 62 mm. ผลิตจาก Alloy 6061 (มีสี เงิน-ดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า CNC (แบบซี่ตรงสั้น) ขนาด 41mm. ความยาว 62 mm. ผลิตจาก Alloy 6061 (มีสี เงิน-ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-shot-v-bk.jpg",
       "/legacy/webgigabike.com/part/hoocharng_cnc-shot-v-si.jpg"
@@ -9796,8 +9708,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้าแต่ง CNC แบบซี่ยาวเฉียง ขนาด 41mm. ยาว 95 mm. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้าแต่ง CNC แบบซี่ยาวเฉียง ขนาด 41mm. ยาว 95 mm · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้าแต่ง CNC แบบซี่ยาวเฉียง ขนาด 41mm. ยาว 95 mm. ผลิตจาก Alloy 6061 T6 ขนาด 41mm. (มีสี เงิน-ดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้าแต่ง CNC แบบซี่ยาวเฉียง ขนาด 41mm. ยาว 95 mm. ผลิตจาก Alloy 6061 T6 ขนาด 41mm. (มีสี เงิน-ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-bk-long-v.jpg",
       "/legacy/webgigabike.com/part/hoocharng_cnc-si-long-v.jpg"
@@ -9825,8 +9737,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 ใส่ได้กับ Triumph Modern Classics ทุกรุ่น",
-    "description": "ฝาครอบหัวเกี่ยวสายครัชล่างแต่ง. Fits: Triumph Thruxton/T100/T120 · Material: Alloy 6061 ใส่ได้กับ Triumph Modern Classics ทุกรุ่น · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบหัวเกี่ยวสายครัชล่างแต่ง · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy 6061 ใส่ได้กับ Triumph Modern Classics ทุกรุ่น · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบหัวเกี่ยวสายครัชล่างแต่ง ผลิตจาก Alloy 6061 ใส่ได้กับ Triumph Modern Classics ทุกรุ่น มีสี (ดำ และ เงิน) ชิ้นละ",
+    "descriptionTh": "ฝาครอบหัวเกี่ยวสายครัชล่างแต่ง ผลิตจาก Alloy 6061 ใส่ได้กับ Triumph Modern Classics ทุกรุ่น มีสี (ดำ และ เงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Cover_bracket-cluck.jpg"
     ],
@@ -9848,8 +9760,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 งาน CNC มาตรฐานส่งออก สำหรับใส่ Triumph ทุกรุ่น",
-    "description": "ขายึดไฟเลี้ยวแปะหัวโช๊คหลังแต่ง. Fits: Triumph Thruxton/T100/T120 · Material: Alloy 6061 งาน CNC มาตรฐานส่งออก สำหรับใส่ Triumph ทุกรุ่น · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดไฟเลี้ยวแปะหัวโช๊คหลังแต่ง · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy 6061 งาน CNC มาตรฐานส่งออก สำหรับใส่ Triumph ทุกรุ่น · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดไฟเลี้ยวแปะหัวโช๊คหลังแต่ง ผลิตจาก Alloy 6061 งาน CNC มาตรฐานส่งออก สำหรับใส่ Triumph ทุกรุ่น มีสี (ดำ และ เงิน)คู่ล่ะ",
+    "descriptionTh": "ขายึดไฟเลี้ยวแปะหัวโช๊คหลังแต่ง ผลิตจาก Alloy 6061 งาน CNC มาตรฐานส่งออก สำหรับใส่ Triumph ทุกรุ่น มีสี (ดำ และ เงิน)คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/bracket-tu-rear-show.jpg",
       "/legacy/webgigabike.com/Triumph/bracket-tu-rear.jpg"
@@ -9875,8 +9787,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Wheel-axle-43mm-fo.jpg",
       "/legacy/webgigabike.com/part/brembo-320_43mm-L.jpg"
@@ -9902,8 +9814,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรค Brembo หูชิด ข้างขวา ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิด ข้างขวา ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรค Brembo หูชิด ข้างขวา ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิด ข้างขวา ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-320_43mm.jpg"
     ],
@@ -9925,8 +9837,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075",
-    "description": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ใส่เข้ากับดุมเดิมล้อเดิมได้เลยไม่ต้องดัดแปลง. Fits: Triumph Thruxton/T100/T120 · Material: Alloy 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ใส่เข้ากับดุมเดิมล้อเดิมได้เลยไม่ต้องดัดแปลง · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ใส่เข้ากับดุมเดิมล้อเดิมได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 7075 ชุดล่ะ",
+    "descriptionTh": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ใส่เข้ากับดุมเดิมล้อเดิมได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 7075 ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Wheel-axle-43mm.jpg"
     ],
@@ -9948,8 +9860,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม ไว้สำหรับใส่บังโคลนหน้าเดิมก็ได้แต่งก็ได้ ใส่ได้กับล้อ 17/18/19 นิ้วได้เลย. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม ไว้สำหรับใส่บังโคลนหน้าเดิมก็ได้แต่งก็ได้ ใส่ได้กับล้อ 17/18/19 นิ้วได้เลย · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม ไว้สำหรับใส่บังโคลนหน้าเดิมก็ได้แต่งก็ได้ ใส่ได้กับล้อ 17/18/19 นิ้วได้เลย ผลิตจาก Alloy 6061(มีสี ทอง/ดำ/เงิน) คู่ล่ะ",
+    "descriptionTh": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม ไว้สำหรับใส่บังโคลนหน้าเดิมก็ได้แต่งก็ได้ ใส่ได้กับล้อ 17/18/19 นิ้วได้เลย ผลิตจาก Alloy 6061(มีสี ทอง/ดำ/เงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Clip_FG602_43mm_triumph.jpg"
     ],
@@ -9971,8 +9883,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า ผลิตจาก Alloy 6061(มีสี ทอง/ดำ/เงิน) คู่ล่ะ",
+    "descriptionTh": "หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ไว้สำหรับใส่บังโคลนหน้า ผลิตจาก Alloy 6061(มีสี ทอง/ดำ/เงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Cam-Fender-43mm.jpg"
     ],
@@ -9998,8 +9910,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ได้เลยไม่ต้องดัดแปลง. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ได้เลยไม่ต้องดัดแปลง · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 6061 + 7075 ด้วยเครื่อง CNC สวยงามแข็งแรง (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 6061 + 7075 ด้วยเครื่อง CNC สวยงามแข็งแรง (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/pangcor_43mm_triumph1.jpg",
       "/legacy/webgigabike.com/Triumph/pangcor_43mm_triumph.jpg"
@@ -10024,8 +9936,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ใส้คันเร่งไฟฟ้า แบบอลูมิเนียม. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ใส้คันเร่งไฟฟ้า แบบอลูมิเนียม · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ใส้คันเร่งไฟฟ้า แบบอลูมิเนียม ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC สวยงามแข็งแรง (มีสี ดำ) ชิ้นล่ะ",
+    "descriptionTh": "ใส้คันเร่งไฟฟ้า แบบอลูมิเนียม ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC สวยงามแข็งแรง (มีสี ดำ) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Sai.jpg"
     ],
@@ -10049,8 +9961,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดพักเท้าหลังแต่ง Truxton900 ,T100 ใส่กับหูเดิมได้เลยไม่ต้องดัดแปลง. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหลังแต่ง Truxton900 ,T100 ใส่กับหูเดิมได้เลยไม่ต้องดัดแปลง · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหลังแต่ง Truxton900 ,T100 ใส่กับหูเดิมได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 6061 + SUS สวยงามแข็งแรง (มีสี เงิน/ดำ) คู่ล่ะ",
+    "descriptionTh": "ชุดพักเท้าหลังแต่ง Truxton900 ,T100 ใส่กับหูเดิมได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 6061 + SUS สวยงามแข็งแรง (มีสี เงิน/ดำ) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Footpet_re.jpg"
     ],
@@ -10072,8 +9984,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "คอท่อสแตลเลส New T100 ดัด NC แบบไร้รอยคอด เนียนๆ เฉพาะคอท่องานดิบ คู่ล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "คอท่อสแตลเลส New T100 ดัด NC แบบไร้รอยคอด เนียนๆ เฉพาะคอท่องานดิบ คู่ล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "คอท่อสแตลเลส New T100 ดัด NC แบบไร้รอยคอด เนียนๆ เฉพาะคอท่องานดิบ คู่ล่ะ",
+    "descriptionTh": "คอท่อสแตลเลส New T100 ดัด NC แบบไร้รอยคอด เนียนๆ เฉพาะคอท่องานดิบ คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/handdert100new.jpg"
     ],
@@ -10097,8 +10009,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Bracket Alloy 41mm. Standard 95 mm. หูยึดไฟหน้า CNC แบบตัว V ปกติ ขนาด 41mm. ความยาว 95 mm. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Bracket Alloy 41mm. Standard 95 mm. หูยึดไฟหน้า CNC แบบตัว V ปกติ ขนาด 41mm. ความยาว 95 mm · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Bracket Alloy 41mm. Standard 95 mm. หูยึดไฟหน้า CNC แบบตัว V ปกติ ขนาด 41mm. ความยาว 95 mm. ผลิตจาก Alloy 6061 (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "Headlight Bracket Alloy 41mm. Standard 95 mm. หูยึดไฟหน้า CNC แบบตัว V ปกติ ขนาด 41mm. ความยาว 95 mm. ผลิตจาก Alloy 6061 (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/steyheadlight-long95si.jpg",
       "/legacy/webgigabike.com/Triumph/steyheadlight-long95bk.jpg"
@@ -10123,8 +10035,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Bracket Alloy 41mm.Shot 68 mm. หูยึดไฟหน้า CNC แบบตัว V สั้น ขนาด 41mm. ความยาว 68 mm. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Bracket Alloy 41mm.Shot 68 mm. หูยึดไฟหน้า CNC แบบตัว V สั้น ขนาด 41mm. ความยาว 68 mm · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Bracket Alloy 41mm.Shot 68 mm. หูยึดไฟหน้า CNC แบบตัว V สั้น ขนาด 41mm. ความยาว 68 mm. ผลิตจาก Alloy 6061 (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "Headlight Bracket Alloy 41mm.Shot 68 mm. หูยึดไฟหน้า CNC แบบตัว V สั้น ขนาด 41mm. ความยาว 68 mm. ผลิตจาก Alloy 6061 (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/steyheadlight-Shot-v68si.jpg",
       "/legacy/webgigabike.com/Triumph/steyheadlight-Shot-v68bk.jpg"
@@ -10149,8 +10061,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ทั้ง",
-    "description": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ Truxton900. Fits: Triumph Thruxton/T100/T120 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ Truxton900 · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ Truxton900 ผลิตจาก Alloy CNC Billet ทั้งชุดพร้อมขาหัวสวิงอาร์ม คงทนแข็งแรง (Color&ndash;Silver,Black) ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ Truxton900 ผลิตจาก Alloy CNC Billet ทั้งชุดพร้อมขาหัวสวิงอาร์ม คงทนแข็งแรง (Color&ndash;Silver,Black) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Footstep-1.jpg",
       "/legacy/webgigabike.com/Triumph/Footstep-2.jpg"
@@ -10173,8 +10085,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ฝาครอบปิดถังน้ำมัน Triumph Truxton900 ใส่แทนฝาบนเดิมใส่เข้ากับเกลียวเดิมติดรถมา. Fits: Triumph Thruxton/T100/T120 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบปิดถังน้ำมัน Triumph Truxton900 ใส่แทนฝาบนเดิมใส่เข้ากับเกลียวเดิมติดรถมา · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบปิดถังน้ำมัน Triumph Truxton900 ใส่แทนฝาบนเดิมใส่เข้ากับเกลียวเดิมติดรถมา ผลิตจาก Alloy CNC Billet อันละ",
+    "descriptionTh": "ฝาครอบปิดถังน้ำมัน Triumph Truxton900 ใส่แทนฝาบนเดิมใส่เข้ากับเกลียวเดิมติดรถมา ผลิตจาก Alloy CNC Billet อันละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/cover-tank.jpg"
     ],
@@ -10196,8 +10108,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "ยางอย่างดีเหนียวและทนทาน",
-    "description": "ยางหุ้มโช๊คหน้า Triumph ใส่ โช๊คขนาด 41 mm. ความยาว 190 mm. Fits: Triumph Thruxton/T100/T120 · Material: ยางอย่างดีเหนียวและทนทาน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ยางหุ้มโช๊คหน้า Triumph ใส่ โช๊คขนาด 41 mm. ความยาว 190 mm · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ ยางอย่างดีเหนียวและทนทาน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ยางหุ้มโช๊คหน้า Triumph ใส่ โช๊คขนาด 41 mm. ความยาว 190 mm. ผลิตจากยางอย่างดีเหนียวและทนทาน มีสี ดำและน้ำตาล คู่ละ",
+    "descriptionTh": "ยางหุ้มโช๊คหน้า Triumph ใส่ โช๊คขนาด 41 mm. ความยาว 190 mm. ผลิตจากยางอย่างดีเหนียวและทนทาน มีสี ดำและน้ำตาล คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Tire-cover-chock-brow.jpg",
       "/legacy/webgigabike.com/Triumph/Tire-cover-chock.jpg"
@@ -10220,8 +10132,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว",
-    "description": "Sprocket Aluminum 7075 Alloy Hard Anodize 525-37T - Triumph T120 สเตอร์หลัง Triumph T120. Fits: Triumph Thruxton/T100/T120 · Material: Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum 7075 Alloy Hard Anodize 525-37T - Triumph T120 สเตอร์หลัง Triumph T120 · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum 7075 Alloy Hard Anodize 525-37T - Triumph T120 สเตอร์หลัง Triumph T120 ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 525-37 ฟัน ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum 7075 Alloy Hard Anodize 525-37T - Triumph T120 สเตอร์หลัง Triumph T120 ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 525-37 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sprocket-t120-Hart.jpg"
     ],
@@ -10243,8 +10155,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว",
-    "description": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-41T - Triumph Streetwin สเตอร์หลัง Triumph Streetwin. Fits: Triumph Thruxton/T100/T120 · Material: Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-41T - Triumph Streetwin สเตอร์หลัง Triumph Streetwin · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-41T - Triumph Streetwin สเตอร์หลัง Triumph Streetwin ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-41 ฟัน ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-41T - Triumph Streetwin สเตอร์หลัง Triumph Streetwin ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-41 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sprocket-treetwin-Hart.jpg"
     ],
@@ -10266,8 +10178,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว",
-    "description": "Sprocket Aluminum Alloy 7075 Hard Anodize 525-42T - Triumph Truxton-R สเตอร์หลัง Triumph Truxton-R. Fits: Triumph Thruxton/T100/T120 · Material: Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum Alloy 7075 Hard Anodize 525-42T - Triumph Truxton-R สเตอร์หลัง Triumph Truxton-R · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum Alloy 7075 Hard Anodize 525-42T - Triumph Truxton-R สเตอร์หลัง Triumph Truxton-R ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 525-42 ฟัน ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum Alloy 7075 Hard Anodize 525-42T - Triumph Truxton-R สเตอร์หลัง Triumph Truxton-R ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 525-42 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sprocket-trx-r-Hart.jpg"
     ],
@@ -10289,8 +10201,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คอลูมิเนียมแบบเอียง 9 องศา งาน Alloy CNC CNC Billet (9 degrees)(มีสีดำและสีเงิน) มีขนาด 41mm. คู่ล่ะ. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมแบบเอียง 9 องศา งาน Alloy CNC CNC Billet (9 degrees)(มีสีดำและสีเงิน) มีขนาด 41mm. คู่ล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คอลูมิเนียมแบบเอียง 9 องศา งาน Alloy CNC CNC Billet (9 degrees)(มีสีดำและสีเงิน) มีขนาด 41mm. คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมแบบเอียง 9 องศา งาน Alloy CNC CNC Billet (9 degrees)(มีสีดำและสีเงิน) มีขนาด 41mm. คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Hand41-9degree.jpg",
       "/legacy/webgigabike.com/R3/Hand41-9degree-bk.jpg"
@@ -10313,8 +10225,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-18 ฟัน",
-    "description": "สเตอร์หน้า CNC Billet Truxton900 ใส่ได้กับ Triumph Modern Classics ทุกรุ่น. Fits: Triumph Thruxton/T100/T120 · Material: เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-18 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า CNC Billet Truxton900 ใส่ได้กับ Triumph Modern Classics ทุกรุ่น · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-18 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า CNC Billet Truxton900 ใส่ได้กับ Triumph Modern Classics ทุกรุ่น ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-18 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หน้า CNC Billet Truxton900 ใส่ได้กับ Triumph Modern Classics ทุกรุ่น ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-18 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sprocket-trx-900-520-18t.jpg"
     ],
@@ -10336,8 +10248,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว",
-    "description": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-43T - Triumph Truxton 900 สเตอร์หลัง Truxton900 ,T100 และใส่ได้กับ Triumph Modern Classics ทุกรุ่น. Fits: Triumph Thruxton/T100/T120 · Material: Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-43T - Triumph Truxton 900 สเตอร์หลัง Truxton900 ,T100 และใส่ได้กับ Triumph Modern Classics ทุกรุ่น · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-43T - Triumph Truxton 900 สเตอร์หลัง Truxton900 ,T100 และใส่ได้กับ Triumph Modern Classics ทุกรุ่น ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-43 ฟัน ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-43T - Triumph Truxton 900 สเตอร์หลัง Truxton900 ,T100 และใส่ได้กับ Triumph Modern Classics ทุกรุ่น ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-43 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/sprocket-trx900Hart.jpg"
     ],
@@ -10359,8 +10271,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "9 ฝาครอบปิดปั๊มดิสเบรคบน W650 แบบโลโก้ W แหว่ง มีสองสีให้เลือก. Fits: Kawasaki W650/W800 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "9 ฝาครอบปิดปั๊มดิสเบรคบน W650 แบบโลโก้ W แหว่ง มีสองสีให้เลือก · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "9 ฝาครอบปิดปั๊มดิสเบรคบน W650 แบบโลโก้ W แหว่ง มีสองสีให้เลือก ผลิตจาก Alloy CNC Billet อันล่ะ",
+    "descriptionTh": "9 ฝาครอบปิดปั๊มดิสเบรคบน W650 แบบโลโก้ W แหว่ง มีสองสีให้เลือก ผลิตจาก Alloy CNC Billet อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Cover-Diss-f-2.jpg",
       "/legacy/webgigabike.com/Kawasaki w650/Cover-Diss-f-1.jpg",
@@ -10386,8 +10298,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตนเลสทั้ง",
-    "description": "Rear Fender Stainless บังโคลนหลังแต่ง W650. Fits: Kawasaki W650/W800 · Material: สแตนเลส · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Rear Fender Stainless บังโคลนหลังแต่ง W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ สแตนเลส · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Rear Fender Stainless บังโคลนหลังแต่ง W650 ผลิตจากสแตนเลสทั้งชิ้น อันละ",
+    "descriptionTh": "Rear Fender Stainless บังโคลนหลังแต่ง W650 ผลิตจากสแตนเลสทั้งชิ้น อันละ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/R-fender-w650.jpg"
     ],
@@ -10409,8 +10321,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Front Fender Stainless บังโคลนหน้าแต่ง W650. Fits: Kawasaki W650/W800 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Front Fender Stainless บังโคลนหน้าแต่ง W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Front Fender Stainless บังโคลนหน้าแต่ง W650 ผลิตจากสแตนเลส SUS304 ทั้งอัน รู50มม. ขัดเงาให้เรียบร้อย อันละ",
+    "descriptionTh": "Front Fender Stainless บังโคลนหน้าแต่ง W650 ผลิตจากสแตนเลส SUS304 ทั้งอัน รู50มม. ขัดเงาให้เรียบร้อย อันละ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Front-fender-w650.jpg"
     ],
@@ -10432,8 +10344,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตนเลสทั้ง",
-    "description": "Rear Drum Brake Arm Stainless ขาล๊อคยึดฝาดรั๊มเบรคหลัง W650. Fits: Kawasaki W650/W800 · Material: สแตนเลส · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Rear Drum Brake Arm Stainless ขาล๊อคยึดฝาดรั๊มเบรคหลัง W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ สแตนเลส · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Rear Drum Brake Arm Stainless ขาล๊อคยึดฝาดรั๊มเบรคหลัง W650 ผลิตจากสแตนเลสทั้งชิ้น อันละ",
+    "descriptionTh": "Rear Drum Brake Arm Stainless ขาล๊อคยึดฝาดรั๊มเบรคหลัง W650 ผลิตจากสแตนเลสทั้งชิ้น อันละ",
     "images": [
       "/legacy/webgigabike.com/part/lokcdrumbrek-w650.jpg"
     ],
@@ -10455,8 +10367,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตนเลสทั้ง",
-    "description": "Stone Guard Front Stainless แผ่นกันโคลนแต่ง W650. Fits: Kawasaki W650/W800 · Material: สแตนเลส · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Stone Guard Front Stainless แผ่นกันโคลนแต่ง W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ สแตนเลส · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Stone Guard Front Stainless แผ่นกันโคลนแต่ง W650 ผลิตจากสแตนเลสทั้งชิ้น (มี3แบบ มีสีเงินด้าน ปัดเงาและสีดำ) อันละ",
+    "descriptionTh": "Stone Guard Front Stainless แผ่นกันโคลนแต่ง W650 ผลิตจากสแตนเลสทั้งชิ้น (มี3แบบ มีสีเงินด้าน ปัดเงาและสีดำ) อันละ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/100_2187.jpg"
     ],
@@ -10480,8 +10392,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง w650. Fits: Kawasaki W650/W800 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง w650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง w650 ผลิตจาก Alloy CNC Billet อันละ",
+    "descriptionTh": "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง w650 ผลิตจาก Alloy CNC Billet อันละ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Cover-air-fin.jpg"
     ],
@@ -10503,8 +10415,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "Spark Plug Holder Billet CNC Alloy ฝาครอบปลั๊กหัวเทียน W650. Fits: Kawasaki W650/W800 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Spark Plug Holder Billet CNC Alloy ฝาครอบปลั๊กหัวเทียน W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Spark Plug Holder Billet CNC Alloy ฝาครอบปลั๊กหัวเทียน W650 ผลิตจาก Alloy CNC Billet คู่ละ",
+    "descriptionTh": "Spark Plug Holder Billet CNC Alloy ฝาครอบปลั๊กหัวเทียน W650 ผลิตจาก Alloy CNC Billet คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/spark-w650.jpg"
     ],
@@ -10526,8 +10438,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets 39mm. หูยึดไฟหน้าแต่งอลูมิเนียม W650 แกนโช๊ค 39mm.คู่ล่ะ. Fits: Kawasaki W650/W800 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets 39mm. หูยึดไฟหน้าแต่งอลูมิเนียม W650 แกนโช๊ค 39mm.คู่ล่ะ · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets 39mm. หูยึดไฟหน้าแต่งอลูมิเนียม W650 แกนโช๊ค 39mm.คู่ล่ะ",
+    "descriptionTh": "Headlight Brackets 39mm. หูยึดไฟหน้าแต่งอลูมิเนียม W650 แกนโช๊ค 39mm.คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/hoochang sr/hoochang-p1.jpg"
     ],
@@ -10549,8 +10461,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets Stainless 39mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ w 650 แกนโช๊ค 39mm. คู่ล่ะ. Fits: Kawasaki W650/W800 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets Stainless 39mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ w 650 แกนโช๊ค 39mm. คู่ล่ะ · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets Stainless 39mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ w 650 แกนโช๊ค 39mm. คู่ล่ะ",
+    "descriptionTh": "Headlight Brackets Stainless 39mm. หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ w 650 แกนโช๊ค 39mm. คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharngsr-v.jpg"
     ],
@@ -10572,8 +10484,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้า W650. Fits: Kawasaki W650/W800 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้า W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้า W650 ผลิตจาก Alloy CNC Billet ขนาด 39mm. (มีสีเงินสีทองและสีดำ)",
+    "descriptionTh": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้า W650 ผลิตจาก Alloy CNC Billet ขนาด 39mm. (มีสีเงินสีทองและสีดำ)",
     "images": [
       "/legacy/webgigabike.com/part/cocer-col.jpg"
     ],
@@ -10597,8 +10509,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet มี 37,38 ฟัน",
-    "description": "Sprocket Rear Aluminum Alloy 7075 525 &ndash; 37,38T สเตอร์หลัง W650. Fits: Kawasaki W650/W800 · Material: Alloy CNC Billet มี 37,38 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Rear Aluminum Alloy 7075 525 &ndash; 37,38T สเตอร์หลัง W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy CNC Billet มี 37,38 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Rear Aluminum Alloy 7075 525 &ndash; 37,38T สเตอร์หลัง W650 ผลิตจาก Alloy CNC Billet มี 37,38 ฟัน อันละ",
+    "descriptionTh": "Sprocket Rear Aluminum Alloy 7075 525 &ndash; 37,38T สเตอร์หลัง W650 ผลิตจาก Alloy CNC Billet มี 37,38 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/sprocket.jpg"
     ],
@@ -10620,8 +10532,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Clip-On Handle Bars CNC Alloy 39mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม W650. Fits: Kawasaki W650/W800 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Clip-On Handle Bars CNC Alloy 39mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Clip-On Handle Bars CNC Alloy 39mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม W650 ผลิตจาก Alloy CNC Billet มีขนาด 39mm. (มีสีดำและสีเงิน) คู่ล่ะ",
+    "descriptionTh": "Clip-On Handle Bars CNC Alloy 39mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม W650 ผลิตจาก Alloy CNC Billet มีขนาด 39mm. (มีสีดำและสีเงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hand-aluminum51.jpg"
     ],
@@ -10643,8 +10555,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "Caps Air Suction Valve Finned Billet CNC Alloy ฝาครอบอุดบำบัดไอเสียหน้าเครื่องแต่ง W650 และ W800. Fits: Kawasaki W650/W800 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Caps Air Suction Valve Finned Billet CNC Alloy ฝาครอบอุดบำบัดไอเสียหน้าเครื่องแต่ง W650 และ W800 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Caps Air Suction Valve Finned Billet CNC Alloy ฝาครอบอุดบำบัดไอเสียหน้าเครื่องแต่ง W650 และ W800 ผลิตจาก Alloy CNC Billet คู่ล่ะ",
+    "descriptionTh": "Caps Air Suction Valve Finned Billet CNC Alloy ฝาครอบอุดบำบัดไอเสียหน้าเครื่องแต่ง W650 และ W800 ผลิตจาก Alloy CNC Billet คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/cover-en-bl.jpg",
       "/legacy/webgigabike.com/Kawasaki w650/cover-en.jpg"
@@ -10667,8 +10579,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว มีขนาด 39 mm. (มีสีเงินและสีดำ) ชุดล่ะ. Fits: Kawasaki W650/W800 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว มีขนาด 39 mm. (มีสีเงินและสีดำ) ชุดล่ะ · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว มีขนาด 39 mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว มีขนาด 39 mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-trong.jpg"
     ],
@@ -10690,8 +10602,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "Torque Rod Billet CNC Alloy ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนียม สำหรับใส่ W650. Fits: Kawasaki W650/W800 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Torque Rod Billet CNC Alloy ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนียม สำหรับใส่ W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Torque Rod Billet CNC Alloy ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนียม สำหรับใส่ W650 ผลิตจาก Alloy CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "Torque Rod Billet CNC Alloy ขายึดล๊อคฝาดรั๊มเบรคหลังแต่งอลูเนียม สำหรับใส่ W650 ผลิตจาก Alloy CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Brake-Arm-cnc-w650.jpg"
     ],
@@ -10713,8 +10625,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC ทั้ง",
-    "description": "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องสามเหลี่ยมข้าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ. Fits: Kawasaki W650/W800 · Material: อลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องสามเหลี่ยมข้าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ อลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องสามเหลี่ยมข้าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนแบริ่งสวิงอาร์มครบ ทั้ง ชุดๆล่ะ",
+    "descriptionTh": "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องสามเหลี่ยมข้าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนแบริ่งสวิงอาร์มครบ ทั้ง ชุดๆล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/swingarm-w-mo-bl.jpg"
     ],
@@ -10736,8 +10648,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC ทั้ง",
-    "description": "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องสามเหลี่ยมข้าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ. Fits: Kawasaki W650/W800 · Material: อลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องสามเหลี่ยมข้าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ อลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องสามเหลี่ยมข้าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนแบริ่งสวิงอาร์มครบ ทั้ง ชุดๆล่ะ",
+    "descriptionTh": "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบกัดร่องสามเหลี่ยมข้าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนแบริ่งสวิงอาร์มครบ ทั้ง ชุดๆล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/swingarm-w-mo-si-2.jpg"
     ],
@@ -10759,8 +10671,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC ทั้ง",
-    "description": "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบกัดร่องล่าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ. Fits: Kawasaki W650/W800 · Material: อลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบกัดร่องล่าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ อลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบกัดร่องล่าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนแบริ่งสวิงอาร์มครบ ทั้ง ชุดๆล่ะ",
+    "descriptionTh": "Swing arm CNC Alloy 6061 black color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบกัดร่องล่าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 นำเข้าจากยุโรป กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนแบริ่งสวิงอาร์มครบ ทั้ง ชุดๆล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/swingarm-w-st-bl.jpg",
       "/legacy/webgigabike.com/Kawasaki w650/swingarm-w-st-bl-1.jpg"
@@ -10783,8 +10695,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้ง",
-    "description": "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบกัดร่องล่าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ. Fits: Kawasaki W650/W800 · Material: อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบกัดร่องล่าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ อลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบกัดร่องล่าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ทั้ง ชุดๆล่ะ",
+    "descriptionTh": "Swing arm CNC Alloy 6061 silver color สวิงอาร์มอลูมิเนียมแต่ง CNC แบบเรียบกัดร่องล่าง สำหรับใส่ W650 และ W800 เพิ่มความมีระดับให้รถคุณ ผลิตจากอลูเนียมเกรดพิเศษ 6061 t6 นำเข้าจากต่างประเทศ กัด CNC ทั้งชิ้นไม่ได้ดัดแม้แต่จุดเดียว เซ็นเตอร์มีความความแม่นยำสูง ใส่แทนของเดิมได้เลยไม่ต้องดัดแปลง มีลูกปืนสวิงอาร์มครบ ทั้ง ชุดๆล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/swingarm-w-st-si.jpg"
     ],
@@ -10806,8 +10718,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบหัวเครื่องข้างขวา (เฟืองดอกจอก) แต่ง W650. Fits: Kawasaki W650/W800 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบหัวเครื่องข้างขวา (เฟืองดอกจอก) แต่ง W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบหัวเครื่องข้างขวา (เฟืองดอกจอก) แต่ง W650 ผลิตจาก Alloy CNC Billet แบบกัดร่อง มี3สีให้เลือก( สีเงิน-สีดำ-ปัดเงา) ชิ้นละ",
+    "descriptionTh": "ฝาครอบหัวเครื่องข้างขวา (เฟืองดอกจอก) แต่ง W650 ผลิตจาก Alloy CNC Billet แบบกัดร่อง มี3สีให้เลือก( สีเงิน-สีดำ-ปัดเงา) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/cover-en-top.jpg"
     ],
@@ -10829,8 +10741,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet",
-    "description": "ชุดแผงคอบนแต่ง W650 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิมและใส่กุญแจล็อกคอไ้ด้เลย. Fits: Kawasaki W650/W800 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนแต่ง W650 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิมและใส่กุญแจล็อกคอไ้ด้เลย · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนแต่ง W650 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิมและใส่กุญแจล็อกคอไ้ด้เลย ผลิตจาก Alloy 6061 CNC Billet ชุดละ",
+    "descriptionTh": "ชุดแผงคอบนแต่ง W650 แบบ Cafe สามารถใส่เข้ากับแผงคอล่างเดิมและใส่กุญแจล็อกคอไ้ด้เลย ผลิตจาก Alloy 6061 CNC Billet ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Top-Yoke-Cafe-bk.jpg",
       "/legacy/webgigabike.com/Kawasaki w650/Top-Yoke-Cafe-sl.jpg"
@@ -10853,8 +10765,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ชุดแผงคอบน W650 แบบมีตุ๊กตาสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย. Fits: Kawasaki W650/W800 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบน W650 แบบมีตุ๊กตาสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบน W650 แบบมีตุ๊กตาสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย ผลิตจาก Alloy CNC Billet ชุดละ",
+    "descriptionTh": "ชุดแผงคอบน W650 แบบมีตุ๊กตาสามารถใส่เข้ากับแผงคอล่างเดิมไ้ด้เลย ผลิตจาก Alloy CNC Billet ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Top-Yoke-STD-bk.jpg",
       "/legacy/webgigabike.com/Kawasaki w650/Top-Yoke-STD-sl.jpg"
@@ -10877,8 +10789,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตขันแผงคอกลาง W650 งาน CNC. Fits: Kawasaki W650/W800 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแผงคอกลาง W650 งาน CNC · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแผงคอกลาง W650 งาน CNC ผลิตจาก Alloy 7075 มี 2 สี (ดำ-เงิน) ชิ้นละ",
+    "descriptionTh": "น๊อตขันแผงคอกลาง W650 งาน CNC ผลิตจาก Alloy 7075 มี 2 สี (ดำ-เงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/nut-w650-cnc.jpg"
     ],
@@ -10903,8 +10815,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้าแต่ง W650 แบบก้านวี งาน CNC ขนาด 39 mm. มีสี (เงิน-ดำ) ชุดล่ะ. Fits: Kawasaki W650/W800 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้าแต่ง W650 แบบก้านวี งาน CNC ขนาด 39 mm. มีสี (เงิน-ดำ) ชุดล่ะ · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้าแต่ง W650 แบบก้านวี งาน CNC ขนาด 39 mm. มีสี (เงิน-ดำ) ชุดล่ะ",
+    "descriptionTh": "Headlight Brackets 39mm. Billet CNC Alloy หูยึดไฟหน้าแต่ง W650 แบบก้านวี งาน CNC ขนาด 39 mm. มีสี (เงิน-ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Sty-39-v.jpg"
     ],
@@ -10928,8 +10840,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061",
-    "description": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 39 & 41mm. สำหรับ W650-W800. Fits: Kawasaki W650/W800 · Material: Alloy 6061 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 39 & 41mm. สำหรับ W650-W800 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy 6061 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 39 & 41mm. สำหรับ W650-W800 ผลิตจาก Alloy 6061 มีสี (ดำ และ เงิน) คู่ล่ะ",
+    "descriptionTh": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 39 & 41mm. สำหรับ W650-W800 ผลิตจาก Alloy 6061 มีสี (ดำ และ เงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Royal Enfield/Lock-41-mm.jpg"
     ],
@@ -10954,8 +10866,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่สายเบอร์6 สำหรับ W650. Fits: Kawasaki W650/W800 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่สายเบอร์6 สำหรับ W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่สายเบอร์6 สำหรับ W650 ผลิตจาก Alloy CNC Billet มีสี (ดำ/เงิน) ชุดล่ะ",
+    "descriptionTh": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่สายเบอร์6 สำหรับ W650 ผลิตจาก Alloy CNC Billet มีสี (ดำ/เงิน) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Adapter-Oil-1.jpg"
     ],
@@ -10977,8 +10889,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง แบบเรียบมีหลุม W650 W800. Fits: Kawasaki W650/W800 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง แบบเรียบมีหลุม W650 W800 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง แบบเรียบมีหลุม W650 W800 ผลิตจากAlloy CNC Billet อันละ",
+    "descriptionTh": "Breather Body Finned Billet CNC Alloy ฝาครอบดักไอบนเครื่อง แบบเรียบมีหลุม W650 W800 ผลิตจากAlloy CNC Billet อันละ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Cover-air-flat.jpg"
     ],
@@ -11003,8 +10915,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่ห่วง M14 สำหรับ W650. Fits: Kawasaki W650/W800 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่ห่วง M14 สำหรับ W650 · ใส่ได้กับ Kawasaki W650/W800 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่ห่วง M14 สำหรับ W650 ผลิตจาก Alloy CNC Billet มีสี (ดำ/เงิน) ชุดล่ะ",
+    "descriptionTh": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ ใส่ห่วง M14 สำหรับ W650 ผลิตจาก Alloy CNC Billet มีสี (ดำ/เงิน) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Adapter-Oil-bolt.jpg"
     ],
@@ -11026,8 +10938,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตนเลสทั้งอัน",
-    "description": "บังโคลนหน้าแต่งทรง CAFE รุ่นลวดคาด. Fits: Yamaha XS650/TX650 · Material: สแตนเลสทั้ง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้าแต่งทรง CAFE รุ่นลวดคาด · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ สแตนเลสทั้ง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้าแต่งทรง CAFE รุ่นลวดคาดผลิตจากสแตนเลสทั้งอัน",
+    "descriptionTh": "บังโคลนหน้าแต่งทรง CAFE รุ่นลวดคาดผลิตจากสแตนเลสทั้งอัน",
     "images": [
       "/legacy/webgigabike.com/bangclon sr/bangclonsr-5.jpg"
     ],
@@ -11049,8 +10961,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตลเลสทั้ง",
-    "description": "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm. Fits: Yamaha XS650/TX650 · Material: สแตลเลส · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ สแตลเลส · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm. ผลิตจากสแตลเลสทั้งชิ้น",
+    "descriptionTh": "บังโคลนหน้าแต่ง SR & XS650 ทรง cafe & custom ยาว 500 mm. ผลิตจากสแตลเลสทั้งชิ้น",
     "images": [
       "/legacy/webgigabike.com/bangclon sr/bangclonsr-custom.jpg"
     ],
@@ -11072,8 +10984,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "บังโคลนหน้า SR,XS650 แต่ง. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้า SR,XS650 แต่ง · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้า SR,XS650 แต่งผลิตจากสแตลเลสทั้งอันคงทนแข็งแรงเงางาม ทรงแทร็กเกอร์(ตัวสั้น 400 mm.)",
+    "descriptionTh": "บังโคลนหน้า SR,XS650 แต่งผลิตจากสแตลเลสทั้งอันคงทนแข็งแรงเงางาม ทรงแทร็กเกอร์(ตัวสั้น 400 mm.)",
     "images": [
       "/legacy/webgigabike.com/bangclon sr/bangclonsr-3.jpg"
     ],
@@ -11095,8 +11007,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "บังโคลนหน้า SR,XS650 แต่ง. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้า SR,XS650 แต่ง · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้า SR,XS650 แต่งผลิตจากสแตลเลสทั้งอันคงทนแข็งแรงเงางาม ทรงคาเฟ่ (ยาว 450 mm.) ชิ้นละ",
+    "descriptionTh": "บังโคลนหน้า SR,XS650 แต่งผลิตจากสแตลเลสทั้งอันคงทนแข็งแรงเงางาม ทรงคาเฟ่ (ยาว 450 mm.) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/bangclon sr/bangclonsr-3.jpg"
     ],
@@ -11118,8 +11030,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบกันฝุ่นโช๊คหน้าอลูมิเนียมแต่ง SR ,XS 650 ราคาคู่ละ 1,00. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกันฝุ่นโช๊คหน้าอลูมิเนียมแต่ง SR ,XS 650 ราคาคู่ละ 1,00 · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกันฝุ่นโช๊คหน้าอลูมิเนียมแต่ง SR ,XS 650 ราคาคู่ละ 1,00",
+    "descriptionTh": "ฝาครอบกันฝุ่นโช๊คหน้าอลูมิเนียมแต่ง SR ,XS 650 ราคาคู่ละ 1,00",
     "images": [
       "/legacy/webgigabike.com/part/cover-chok.jpg"
     ],
@@ -11141,8 +11053,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดไฟเลี้ยวแต่งสแตนเลสสำหรับใส่ YAMAHA XS 650. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดไฟเลี้ยวแต่งสแตนเลสสำหรับใส่ YAMAHA XS 650 · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดไฟเลี้ยวแต่งสแตนเลสสำหรับใส่ YAMAHA XS 650 คู่ละ",
+    "descriptionTh": "ขายึดไฟเลี้ยวแต่งสแตนเลสสำหรับใส่ YAMAHA XS 650 คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/kajubfiliay.jpg"
     ],
@@ -11164,8 +11076,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงไมล์แต่งสแตนเลสสำหรับใส่ YAMAHA SR ใส่เข้าไมล์เดโทน่า ราคา. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงไมล์แต่งสแตนเลสสำหรับใส่ YAMAHA SR ใส่เข้าไมล์เดโทน่า ราคา · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงไมล์แต่งสแตนเลสสำหรับใส่ YAMAHA SR ใส่เข้าไมล์เดโทน่า ราคา",
+    "descriptionTh": "แผงไมล์แต่งสแตนเลสสำหรับใส่ YAMAHA SR ใส่เข้าไมล์เดโทน่า ราคา",
     "images": [
       "/legacy/webgigabike.com/part/pangmai-d.jpg"
     ],
@@ -11189,8 +11101,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้าแต่งอลูมิเนียม ของใหม่ คู่ล่ะ. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้าแต่งอลูมิเนียม ของใหม่ คู่ล่ะ · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้าแต่งอลูมิเนียม ของใหม่ คู่ล่ะ",
+    "descriptionTh": "หูยึดไฟหน้าแต่งอลูมิเนียม ของใหม่ คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/hoochang sr/hoochang-p1.jpg"
     ],
@@ -11214,8 +11126,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ SR,XS650 รูแกนโช๊ค 35 มม.คู่ล่ะ. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ SR,XS650 รูแกนโช๊ค 35 มม.คู่ล่ะ · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ SR,XS650 รูแกนโช๊ค 35 มม.คู่ล่ะ",
+    "descriptionTh": "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับใส่ SR,XS650 รูแกนโช๊ค 35 มม.คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharngsr-v.jpg"
     ],
@@ -11237,8 +11149,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตนเลส อย่างดีปัดเงาสวยงาม",
-    "description": "หูจับไฟหน้าแต่ง SR,xs 650 รูแกนโช๊ค 35มม. Fits: Yamaha XS650/TX650 · Material: สแตนเลส อย่างดีปัดเงาสวยงาม · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูจับไฟหน้าแต่ง SR,xs 650 รูแกนโช๊ค 35มม · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ สแตนเลส อย่างดีปัดเงาสวยงาม · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูจับไฟหน้าแต่ง SR,xs 650 รูแกนโช๊ค 35มม. ผลิตจากสแตนเลส อย่างดีปัดเงาสวยงาม ชุดละ",
+    "descriptionTh": "หูจับไฟหน้าแต่ง SR,xs 650 รูแกนโช๊ค 35มม. ผลิตจากสแตนเลส อย่างดีปัดเงาสวยงาม ชุดละ",
     "images": [
       "/legacy/webgigabike.com/part/hoostingkee.jpg"
     ],
@@ -11260,8 +11172,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "STAINLESS + ปิเนียมอย่างดีขัดเงาให้เรียบร้อย มีสองแบบให้เลือกมีแบบเจาะรูบนและไม่เจาะรู",
-    "description": "น๊อตขันปรับหนืดแผงคอบนแต่ง SR,XS650 ใส่ ไ ด้ตั้งแต่ปี 1978-2000 เรา. Fits: Yamaha XS650/TX650 · Material: STAINLESS + ปิเนียมอย่างดีขัดเงาให้เรียบร้อย มีสองแบบให้เลือกมีแบบเจาะรูบนและไม่เจาะรู · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันปรับหนืดแผงคอบนแต่ง SR,XS650 ใส่ ไ ด้ตั้งแต่ปี 1978-2000 เรา · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ STAINLESS + ปิเนียมอย่างดีขัดเงาให้เรียบร้อย มีสองแบบให้เลือกมีแบบเจาะรูบนและไม่เจาะรู · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันปรับหนืดแผงคอบนแต่ง SR,XS650 ใส่ ไ ด้ตั้งแต่ปี 1978-2000 เราผลิตจาก STAINLESS + ปิเนียมอย่างดีขัดเงาให้เรียบร้อย มีสองแบบให้เลือกมีแบบเจาะรูบนและไม่เจาะรู ชิ้นละ",
+    "descriptionTh": "น๊อตขันปรับหนืดแผงคอบนแต่ง SR,XS650 ใส่ ไ ด้ตั้งแต่ปี 1978-2000 เราผลิตจาก STAINLESS + ปิเนียมอย่างดีขัดเงาให้เรียบร้อย มีสองแบบให้เลือกมีแบบเจาะรูบนและไม่เจาะรู ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/nut/nut4.jpg"
     ],
@@ -11283,8 +11195,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650 ขัดเงาสวยงามทนทานปลอดสนิม. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650 ขัดเงาสวยงามทนทานปลอดสนิม · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650 ขัดเงาสวยงามทนทานปลอดสนิม ชิ้นละ",
+    "descriptionTh": "บังโซ่สแตนเลสสำหรับใส่ YAMAHA XS 650 ขัดเงาสวยงามทนทานปลอดสนิม ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/bangso-700.jpg"
     ],
@@ -11306,8 +11218,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คสแตนเลส XS รูแกน 35 มม. มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย คู่ล่ะ. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คสแตนเลส XS รูแกน 35 มม. มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย คู่ล่ะ · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คสแตนเลส XS รูแกน 35 มม. มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คสแตนเลส XS รูแกน 35 มม. มียางซุปเปอรฺ์ลินอุดหัวท้ายเรียบร้อย คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hand.jpg"
     ],
@@ -11329,8 +11241,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบเรียบ. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบเรียบ · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบเรียบ ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) คู่ละ",
+    "descriptionTh": "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบเรียบ ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/XS650/va2-xs650.jpg"
     ],
@@ -11356,8 +11268,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบจานไฟด้านซ้าย XS650,TX650. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบจานไฟด้านซ้าย XS650,TX650 · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบจานไฟด้านซ้าย XS650,TX650 ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นละ",
+    "descriptionTh": "ฝาครอบจานไฟด้านซ้าย XS650,TX650 ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/XS650/va1-xs650.jpg"
     ],
@@ -11382,8 +11294,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบกรองน้ำมันเครื่อง xs650. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่อง xs650 · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกรองน้ำมันเครื่อง xs650 ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ไทเท) ชิ้นละ",
+    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่อง xs650 ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ไทเท) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/XS650/cover-oil-xs650.jpg"
     ],
@@ -11408,8 +11320,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเปเซอร์ขายึดปั๊มเบรมโบ้หูชิดสำหรับใส่ XS650,TX650,SR400. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเปเซอร์ขายึดปั๊มเบรมโบ้หูชิดสำหรับใส่ XS650,TX650,SR400 · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเปเซอร์ขายึดปั๊มเบรมโบ้หูชิดสำหรับใส่ XS650,TX650,SR400 ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) ชิ้นละ",
+    "descriptionTh": "สเปเซอร์ขายึดปั๊มเบรมโบ้หูชิดสำหรับใส่ XS650,TX650,SR400 ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/brembo.jpg"
     ],
@@ -11431,8 +11343,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเปย์เซอร์รองจานเบรคใส่ XS650,TX650,SR 1978 หนา 10 mm. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเปย์เซอร์รองจานเบรคใส่ XS650,TX650,SR 1978 หนา 10 mm · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเปย์เซอร์รองจานเบรคใส่ XS650,TX650,SR 1978 หนา 10 mm. ผลิตจาก Alloy CNC Billet มีีสี (ดำ-เงิน) ชิ้นล่ะ",
+    "descriptionTh": "สเปย์เซอร์รองจานเบรคใส่ XS650,TX650,SR 1978 หนา 10 mm. ผลิตจาก Alloy CNC Billet มีีสี (ดำ-เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/1978-adapter10mm.jpg"
     ],
@@ -11454,8 +11366,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า XS650 รุ่นใหมล่าสุดงานCNC มี 35mm.(สีเงินสีทองและสีดำ). Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า XS650 รุ่นใหมล่าสุดงานCNC มี 35mm.(สีเงินสีทองและสีดำ) · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า XS650 รุ่นใหมล่าสุดงานCNC มี 35mm.(สีเงินสีทองและสีดำ)",
+    "descriptionTh": "หูยึดไฟหน้า XS650 รุ่นใหมล่าสุดงานCNC มี 35mm.(สีเงินสีทองและสีดำ)",
     "images": [
       "/legacy/webgigabike.com/part/cocer-col.jpg"
     ],
@@ -11479,8 +11391,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า SR,XS650 งาน CNC. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า SR,XS650 งาน CNC · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า SR,XS650 งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 35mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า SR,XS650 งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 35mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-po.jpg"
     ],
@@ -11504,8 +11416,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้า SR,XS650 (แบบสั้น) งาน CNC. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้า SR,XS650 (แบบสั้น) งาน CNC · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้า SR,XS650 (แบบสั้น) งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 35mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้า SR,XS650 (แบบสั้น) งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 35mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-long.jpg"
     ],
@@ -11529,8 +11441,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คอลูมิเนียม. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คอลูมิเนียม · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คอลูมิเนียม ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC (มีสีดำและสีเงิน) มีขนาด 34,35 mm.คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คอลูมิเนียม ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC (มีสีดำและสีเงิน) มีขนาด 34,35 mm.คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hand-aluminum34-35-37.jpg"
     ],
@@ -11552,8 +11464,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมินั่มอัลลอยเกรดพิเศษ7075",
-    "description": "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978. Fits: Yamaha XS650/TX650 · Material: อลูมินั่มอัลลอยเกรดพิเศษ7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978 · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ อลูมินั่มอัลลอยเกรดพิเศษ7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978 ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075 ชิ้นล่ะ",
+    "descriptionTh": "น๊อตขันแผงคอบนแต่ง SR,XS650 ปี 1978 ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075 ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nutco1978.jpg"
     ],
@@ -11575,8 +11487,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061",
-    "description": "น็อตขันหัวโช๊ค XS650 แบบเรียบ งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000-2017. Fits: Yamaha XS650/TX650 · Material: Alloy 6061 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตขันหัวโช๊ค XS650 แบบเรียบ งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000-2017 · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ Alloy 6061 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตขันหัวโช๊ค XS650 แบบเรียบ งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000-2017 ผลิตจาก Alloy 6061 มีสี (ดำ-เงิน-ทอง) คู่ละ",
+    "descriptionTh": "น็อตขันหัวโช๊ค XS650 แบบเรียบ งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000-2017 ผลิตจาก Alloy 6061 มีสี (ดำ-เงิน-ทอง) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/XS650/nut-chock-1978.jpg"
     ],
@@ -11598,8 +11510,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061",
-    "description": "น็อตขันหัวโช๊ค XS650 แบบหลุม งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000-2017. Fits: Yamaha XS650/TX650 · Material: Alloy 6061 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตขันหัวโช๊ค XS650 แบบหลุม งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000-2017 · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ Alloy 6061 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตขันหัวโช๊ค XS650 แบบหลุม งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000-2017 ผลิตจาก Alloy 6061 มีสี (ดำ-เงิน-ทอง) คู่ละ",
+    "descriptionTh": "น็อตขันหัวโช๊ค XS650 แบบหลุม งาน CNC และใช้ได้กับ SR ปี 1978 และ 2000-2017 ผลิตจาก Alloy 6061 มีสี (ดำ-เงิน-ทอง) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/nutchok3.jpg"
     ],
@@ -11625,8 +11537,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบตั้งวาร์วไอดี+ไอเสียแต่ง XS650,TX650 แบบครีบ. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบตั้งวาร์วไอดี+ไอเสียแต่ง XS650,TX650 แบบครีบ · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบตั้งวาร์วไอดี+ไอเสียแต่ง XS650,TX650 แบบครีบ ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบตั้งวาร์วไอดี+ไอเสียแต่ง XS650,TX650 แบบครีบ ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/XS650/cover-Intake-valve-2.jpg",
       "/legacy/webgigabike.com/XS650/cover-Intake-valve-id1.jpg"
@@ -11653,8 +11565,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบตั้งวาร์วไอเสียแต่ง XS650,TX650 แบบครีบ. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบตั้งวาร์วไอเสียแต่ง XS650,TX650 แบบครีบ · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบตั้งวาร์วไอเสียแต่ง XS650,TX650 แบบครีบ ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นล่ะ",
+    "descriptionTh": "ฝาครอบตั้งวาร์วไอเสียแต่ง XS650,TX650 แบบครีบ ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/XS650/cover-Exhaust-valve-2.jpg",
       "/legacy/webgigabike.com/XS650/cover-Exhaust-valve-1.jpg"
@@ -11681,8 +11593,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบจานไฟด้านซ้ายลาย OHC ใส่ XS650,TX650. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบจานไฟด้านซ้ายลาย OHC ใส่ XS650,TX650 · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบจานไฟด้านซ้ายลาย OHC ใส่ XS650,TX650 ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นละ",
+    "descriptionTh": "ฝาครอบจานไฟด้านซ้ายลาย OHC ใส่ XS650,TX650 ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ/ปัดเงา) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/XS650/Generater-Ohc-bk.jpg",
       "/legacy/webgigabike.com/XS650/Generater-Ohc-po.jpg",
@@ -11706,8 +11618,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบโค้ง. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบโค้ง · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบโค้ง ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) คู่ละ",
+    "descriptionTh": "ฝาครอบปิดม๊าคไฟบนเครื่อง XS650,TX650 แบบครีบโค้ง ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/XS650/Cover-cam-2.jpg",
       "/legacy/webgigabike.com/XS650/Cover-cam-1.jpg"
@@ -11730,8 +11642,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คอลูมิเนียมแต่งทรง NSR150SP ขนาด 35 มม. เอียง 9 องศา งาน Alloy CNC Billet (สีเงิน) คู่ล่ะ. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมแต่งทรง NSR150SP ขนาด 35 มม. เอียง 9 องศา งาน Alloy CNC Billet (สีเงิน) คู่ล่ะ · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คอลูมิเนียมแต่งทรง NSR150SP ขนาด 35 มม. เอียง 9 องศา งาน Alloy CNC Billet (สีเงิน) คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมแต่งทรง NSR150SP ขนาด 35 มม. เอียง 9 องศา งาน Alloy CNC Billet (สีเงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/2T/Handel-nsr-35m-3.jpg",
       "/legacy/webgigabike.com/2T/Handel-nsr-35m-1.jpg",
@@ -11758,8 +11670,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ดุมสเตอร์หลังแต่ง Alloy CNC Billet ใส่ล้อRS125 เบ้าใส่เสตอร์ 52mm. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ดุมสเตอร์หลังแต่ง Alloy CNC Billet ใส่ล้อRS125 เบ้าใส่เสตอร์ 52mm · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ดุมสเตอร์หลังแต่ง Alloy CNC Billet ใส่ล้อRS125 เบ้าใส่เสตอร์ 52mm. อันละ",
+    "descriptionTh": "ดุมสเตอร์หลังแต่ง Alloy CNC Billet ใส่ล้อRS125 เบ้าใส่เสตอร์ 52mm. อันละ",
     "images": [
       "/legacy/webgigabike.com/2T/Hub-RS-1.jpg"
     ],
@@ -11781,8 +11693,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ห่วงสายเบรคแบบสั้น รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ห่วงสายเบรคแบบสั้น รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ห่วงสายเบรคแบบสั้น รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ ผลิตจาก Alloy CNC Billet มี4สี (น้ำเงิน-ฟ้า-ดำ-แดง) ชิ้นละ",
+    "descriptionTh": "ห่วงสายเบรคแบบสั้น รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ ผลิตจาก Alloy CNC Billet มี4สี (น้ำเงิน-ฟ้า-ดำ-แดง) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/2T/Nut_brake_m10x10_show.jpg",
       "/legacy/webgigabike.com/2T/Nut_brake_m10x3-shot.jpg"
@@ -11806,8 +11718,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตตัวผู้สำหรับต่อเข้าปั๊ม Brembo มีเกลียว M10x1.0 และ M10x1.25. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตตัวผู้สำหรับต่อเข้าปั๊ม Brembo มีเกลียว M10x1.0 และ M10x1.25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตตัวผู้สำหรับต่อเข้าปั๊ม Brembo มีเกลียว M10x1.0 และ M10x1.25 ผลิตจาก Alloy 7075 มี2สี (น้ำเงิน-ดำ) ชิ้นละ",
+    "descriptionTh": "น๊อตตัวผู้สำหรับต่อเข้าปั๊ม Brembo มีเกลียว M10x1.0 และ M10x1.25 ผลิตจาก Alloy 7075 มี2สี (น้ำเงิน-ดำ) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/2T/Nut_brake_m10x10_show1.jpg",
       "/legacy/webgigabike.com/2T/Nut_brake_m10x10.jpg"
@@ -11831,8 +11743,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ห่วงสายเบรคแบบยาว รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ห่วงสายเบรคแบบยาว รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ห่วงสายเบรคแบบยาว รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ ผลิตจาก Alloy CNC Billet มี4สี (น้ำเงิน-ฟ้า-ดำ-แดง) ชิ้นละ",
+    "descriptionTh": "ห่วงสายเบรคแบบยาว รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรคแบบตรงแบบ45และแบบ90องศาได้ ผลิตจาก Alloy CNC Billet มี4สี (น้ำเงิน-ฟ้า-ดำ-แดง) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/2T/Nut_brake_m10x3-long.jpg"
     ],
@@ -11855,8 +11767,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตตัวเมียล๊อคโช๊ตหลัง Ohlins เกลียว M14x1.0. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตตัวเมียล๊อคโช๊ตหลัง Ohlins เกลียว M14x1.0 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตตัวเมียล๊อคโช๊ตหลัง Ohlins เกลียว M14x1.0 ผลิตจาก Alloy 7075 มี2สี (น้ำเงิน-ฟ้า) ชิ้นละ",
+    "descriptionTh": "น๊อตตัวเมียล๊อคโช๊ตหลัง Ohlins เกลียว M14x1.0 ผลิตจาก Alloy 7075 มี2สี (น้ำเงิน-ฟ้า) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/2T/Nut_Ohlins_m14_show.jpg",
       "/legacy/webgigabike.com/2T/Nut_Ohlins_m14.jpg"
@@ -11880,8 +11792,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หัว ห่วงสาย Oil รู 14 mm. สำหรับต่อเข้ากับหัวสาย Oil เบอร์ 6 แบบตรงแบบ45และ90องศาได้. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หัว ห่วงสาย Oil รู 14 mm. สำหรับต่อเข้ากับหัวสาย Oil เบอร์ 6 แบบตรงแบบ45และ90องศาได้ · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หัว ห่วงสาย Oil รู 14 mm. สำหรับต่อเข้ากับหัวสาย Oil เบอร์ 6 แบบตรงแบบ45และ90องศาได้ ผลิตจาก Alloy CNC Billet มี2สี (ฟ้า-ดำ) ชิ้นละ",
+    "descriptionTh": "หัว ห่วงสาย Oil รู 14 mm. สำหรับต่อเข้ากับหัวสาย Oil เบอร์ 6 แบบตรงแบบ45และ90องศาได้ ผลิตจาก Alloy CNC Billet มี2สี (ฟ้า-ดำ) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/2T/Nut_Oil_No6-14_Show.jpg",
       "/legacy/webgigabike.com/2T/Nut_Oil_No6-14.jpg"
@@ -11907,8 +11819,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "น๊อตขันถ้วยลูกปืนคอแต่ง NSR 150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก. Fits: Honda NSR150SP/2T · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันถ้วยลูกปืนคอแต่ง NSR 150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันถ้วยลูกปืนคอแต่ง NSR 150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "น๊อตขันถ้วยลูกปืนคอแต่ง NSR 150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/2T/nut-lock-bearing-nsr-2.jpg",
       "/legacy/webgigabike.com/2T/nut-lock-bearing-nsr-1.jpg"
@@ -11933,8 +11845,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 + 7075 ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda NSR150. Fits: Honda NSR150SP/2T · Material: Alloy 6061 + 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda NSR150 · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ Alloy 6061 + 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda NSR150 ผลิตจาก Alloy 6061 + 7075 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม มี2แบบ สั้นกับยาว ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda NSR150 ผลิตจาก Alloy 6061 + 7075 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม มี2แบบ สั้นกับยาว ชุดละ",
     "images": [
       "/legacy/webgigabike.com/2T/Rearsets-NSR150-Long.jpg"
     ],
@@ -11962,8 +11874,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "จานเบรคแต่ง ลายซิ่ง ใส่กับล้อ RS125 ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง ลายซิ่ง ใส่กับล้อ RS125 ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง ลายซิ่ง ใส่กับล้อ RS125 ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ",
+    "descriptionTh": "จานเบรคแต่ง ลายซิ่ง ใส่กับล้อ RS125 ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/2T/RS125-300-bk.jpg",
       "/legacy/webgigabike.com/2T/RS125-300-gl.jpg"
@@ -11988,8 +11900,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda Dash-Sonic และ ดุมเวฟ100เก่า ใส่โซ่ 415-25-31 ฟัน. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda Dash-Sonic และ ดุมเวฟ100เก่า ใส่โซ่ 415-25-31 ฟัน · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda Dash-Sonic และ ดุมเวฟ100เก่า ใส่โซ่ 415-25-31 ฟัน ชิ้นละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda Dash-Sonic และ ดุมเวฟ100เก่า ใส่โซ่ 415-25-31 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/2T/Sprocket-dash-wave100-415.jpg"
     ],
@@ -12013,8 +11925,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเตอร์หลังแต่ง Alloy 7075 ใส่ดุมล้อRS125และมาร์กรูไว้สำหรับเจาะระยะล้อNS1ได้อีกด้วย แบบรูทึบรูใน50mm. มีขนาด 415-47-50 ฟัน งานดิบ. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Alloy 7075 ใส่ดุมล้อRS125และมาร์กรูไว้สำหรับเจาะระยะล้อNS1ได้อีกด้วย แบบรูทึบรูใน50mm. มีขนาด 415-47-50 ฟัน งานดิบ · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Alloy 7075 ใส่ดุมล้อRS125และมาร์กรูไว้สำหรับเจาะระยะล้อNS1ได้อีกด้วย แบบรูทึบรูใน50mm. มีขนาด 415-47-50 ฟัน งานดิบอันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Alloy 7075 ใส่ดุมล้อRS125และมาร์กรูไว้สำหรับเจาะระยะล้อNS1ได้อีกด้วย แบบรูทึบรูใน50mm. มีขนาด 415-47-50 ฟัน งานดิบอันละ",
     "images": [
       "/legacy/webgigabike.com/2T/Sprocket-RS125-NS1-415-50mm.jpg"
     ],
@@ -12038,8 +11950,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตลเลสทั้งอัน ทรง cafe & custom",
-    "description": "บังโคลนหน้าแต่ง TEMTER 400cc. กว้าง 115มม.ยาว 500มม. Fits: Suzuki Tempter400 · Material: สแตลเลสทั้งอัน ทรง cafe & custom · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้าแต่ง TEMTER 400cc. กว้าง 115มม.ยาว 500มม · ใส่ได้กับ Suzuki Tempter400 · วัสดุ สแตลเลสทั้งอัน ทรง cafe & custom · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้าแต่ง TEMTER 400cc. กว้าง 115มม.ยาว 500มม.ผลิตจากสแตลเลสทั้งอัน ทรง cafe & custom ราคา",
+    "descriptionTh": "บังโคลนหน้าแต่ง TEMTER 400cc. กว้าง 115มม.ยาว 500มม.ผลิตจากสแตลเลสทั้งอัน ทรง cafe & custom ราคา",
     "images": [
       "/legacy/webgigabike.com/bangclon sr/bangclontemter.jpg"
     ],
@@ -12063,8 +11975,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Rear Sprocket For BMW S1000rr New 2020 hole inside 110mm. CNC Billet Alloy 7075 Hard Anodize 520-45,46T สเตอร์หลังแต่ง BMW S1000rr รุ่นเก่าปี2020ลงมา รูใน 110 มม.งาน CNC Billet Alloy 7075 พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45,46ฟัน. Fits: BMW S1000RR · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Rear Sprocket For BMW S1000rr New 2020 hole inside 110mm. CNC Billet Alloy 7075 Hard Anodize 520-45,46T สเตอร์หลังแต่ง BMW S1000rr รุ่นเก่าปี2020ลงมา รูใน 110 มม.งาน CNC Billet Alloy 7075 พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45,46ฟัน · ใส่ได้กับ BMW S1000RR · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Rear Sprocket For BMW S1000rr New 2020 hole inside 110mm. CNC Billet Alloy 7075 Hard Anodize 520-45,46T สเตอร์หลังแต่ง BMW S1000rr รุ่นเก่าปี2020ลงมา รูใน 110 มม.งาน CNC Billet Alloy 7075 พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45,46ฟัน อันละ",
+    "descriptionTh": "Rear Sprocket For BMW S1000rr New 2020 hole inside 110mm. CNC Billet Alloy 7075 Hard Anodize 520-45,46T สเตอร์หลังแต่ง BMW S1000rr รุ่นเก่าปี2020ลงมา รูใน 110 มม.งาน CNC Billet Alloy 7075 พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45,46ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/BMW/S1000rr-45t.jpg"
     ],
@@ -12072,37 +11984,6 @@ export const legacyProducts: Product[] = [
     "published": false,
     "reviewReasons": [
       "no_code"
-    ]
-  },
-  {
-    "id": "lg-cam180",
-    "code": "",
-    "name": "หน้าแรก สินค้าทั้งหมด ทริป SR Gallerry วิธีการชําระเงิน ติดต่อเรา สถิต",
-    "nameTh": "หน้าแรก สินค้าทั้งหมด ทริป SR Gallerry วิธีการชําระเงิน ติดต่อเรา สถิต",
-    "price": 0,
-    "category": "drivetrain",
-    "bikeModels": [],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "",
-    "description": "หน้าแรก สินค้าทั้งหมด ทริป SR Gallerry วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเมื่อ สินค้าทั้งหมด หมวดหมู่สินค้า/บริการ : YAMAHA SR400 ,500 : YAMAHA XT,TT500 : YAMAHA SRX400-600 : Yamaha XS650 : Honda Clubman GB250 , GB400 : Honda CB400ss : Honda CB750 : Kawasaki Estrella250 TR250 : Kawasaki W650 : Suzuki Vorty250 : Suzuki Temter400 : Harlay Davidson : Ducati : Triumph : Royal Enfield (Coming Soon) : : Stallions : สเตอร์หลังอลูมิเนียม Sprocket Alloys : เบาะแต่ง/Sea t : YAMAHA SR ในฝันของคุณ English / Japanese GIGA BIKE SHOP Custom Part & Accessories Tel. +66 81- 424 - 9407 or, E-mail: aonggb@yahoo.com For customers who speak English please contact Tel. (+66)- 87-590-7500 For customers who speak English please contact Tel. (+66)- 81-416-5060 For customers who speak Japanese please contact Tel. (+66)- 89-762-3199 We deliver to customers all around the world. And stores like a dealer's shop please contact us. We design and manufacture decorative parts of motorcycles all models you deserve. ขออภัยครับเว๊ปบอร์ดยังไม่พร้อมให้บริการ. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หน้าแรก สินค้าทั้งหมด ทริป SR Gallerry วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเมื่อ สินค้าทั้งหมด หมวดหมู่สินค้า/บริการ : YAMAHA SR400 ,500 : YAMAHA XT,TT500 : YAMAHA SRX400-600 : Yamaha XS650 : Honda Clubman GB250 , GB400 : Honda CB400ss : Honda CB750 : Kawasaki Estrella250 TR250 : Kawasaki W650 : Suzuki Vorty250 : Suzuki Temter400 : Harlay Davidson : Ducati : Triumph : Royal Enfield (Coming Soon) : : Stallions : สเตอร์หลังอลูมิเนียม Sprocket Alloys : เบาะแต่ง/Sea t : YAMAHA SR ในฝันของคุณ English / Japanese GIGA BIKE SHOP Custom Part & Accessories Tel. +66 81- 424 - 9407 or, E-mail: aonggb@yahoo.com For customers who speak English please contact Tel. (+66)- 87-590-7500 For customers who speak English please contact Tel. (+66)- 81-416-5060 For customers who speak Japanese please contact Tel. (+66)- 89-762-3199 We deliver to customers all around the world. And stores like a dealer's shop please contact us. We design and manufacture decorative parts of motorcycles all models you deserve. ขออภัยครับเว๊ปบอร์ดยังไม่พร้อมให้บริการ · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [
-      "/legacy/webgigabike.com/carbureter/cam180.jpg",
-      "/legacy/webgigabike.com/honda cb750/covercluch-cb750-180.jpg",
-      "/legacy/webgigabike.com/th3/th1.jpg",
-      "/legacy/webgigabike.com/th3/th2.jpg",
-      "/legacy/webgigabike.com/th3/th6.jpg",
-      "/legacy/webgigabike.com/th3/th7.jpg",
-      "/legacy/webgigabike.com/th3/th8.jpg"
-    ],
-    "featured": false,
-    "published": false,
-    "reviewReasons": [
-      "no_code",
-      "no_price",
-      "no_fitment"
     ]
   },
   {
@@ -12119,8 +12000,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ทั้ง",
-    "description": "ชุดพักเท้าหน้าแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CB150R. Fits: Honda CBR150R/250RR/300 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CB150R · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CB150R ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้ว ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CB150R ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้ว ชุดละ",
     "images": [
       "/legacy/webgigabike.com/CB150r/Footsty-cb150r-l.jpg",
       "/legacy/webgigabike.com/CB150r/Footsty-cb150r-r.jpg"
@@ -12143,8 +12024,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet คงทนแข็งแรง",
-    "description": "แป้นรองขาเกียร์แต่ง ใส่แทนแป้นขาตั้งเดี่ยวเดิมได้เลย. Material: Alloy CNC Billet คงทนแข็งแรง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แป้นรองขาเกียร์แต่ง ใส่แทนแป้นขาตั้งเดี่ยวเดิมได้เลย · วัสดุ Alloy CNC Billet คงทนแข็งแรง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แป้นรองขาเกียร์แต่ง ใส่แทนแป้นขาตั้งเดี่ยวเดิมได้เลย ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
+    "descriptionTh": "แป้นรองขาเกียร์แต่ง ใส่แทนแป้นขาตั้งเดี่ยวเดิมได้เลย ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
     "images": [
       "/legacy/webgigabike.com/cbr1000rrr/Adapter-Stand-Alone.jpg"
     ],
@@ -12162,13 +12043,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR1000RR-R",
     "price": 6500,
     "category": "chassis",
-    "bikeModels": [],
+    "bikeModels": [
+      "cbr600"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061+7075 ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR1000RR-R. Material: Alloy 6061+7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR1000RR-R · วัสดุ Alloy 6061+7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR1000RR-R ผลิตจาก Alloy 6061+7075 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR1000RR-R ผลิตจาก Alloy 6061+7075 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม ชุดละ",
     "images": [
       "/legacy/webgigabike.com/cbr1000rrr/Rearsets-cbr10-RR-R-1.jpg",
       "/legacy/webgigabike.com/cbr1000rrr/Rearsets-cbr10-RR-R-2.jpg"
@@ -12176,8 +12059,7 @@ export const legacyProducts: Product[] = [
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -12194,8 +12076,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อุปกรณ์ตกแต่ง CBR150r 2020 ใหม่ๆอยากแนะนำ น็อตแผงคอบน Honda CBR250rr M24x1.0. Fits: Honda CBR150R/250RR/300 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง CBR150r 2020 ใหม่ๆอยากแนะนำ น็อตแผงคอบน Honda CBR250rr M24x1.0 · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง CBR150r 2020 ใหม่ๆอยากแนะนำ น็อตแผงคอบน Honda CBR250rr M24x1.0 ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรง น้ำหนักเพียง 17 g. (มีสี ฮาร์ด) อันล่ะ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง CBR150r 2020 ใหม่ๆอยากแนะนำ น็อตแผงคอบน Honda CBR250rr M24x1.0 ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรง น้ำหนักเพียง 17 g. (มีสี ฮาร์ด) อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/CBR150/cbr150-2020.jpg",
       "/legacy/webgigabike.com/CBR250/Nut-top.jpg"
@@ -12220,8 +12102,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อุปกรณ์ตกแต่ง CBR150r 2024 ใหม่ๆอยากแนะนำ ชุดแผงคอบนล่างแต่ง Honda CBR150rr รุ่นโช๊คหัวกลับขนาด 45mm. ออฟเซ็ดโช๊ค35องศา. Fits: Honda CBR150R/250RR/300 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง CBR150r 2024 ใหม่ๆอยากแนะนำ ชุดแผงคอบนล่างแต่ง Honda CBR150rr รุ่นโช๊คหัวกลับขนาด 45mm. ออฟเซ็ดโช๊ค35องศา · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง CBR150r 2024 ใหม่ๆอยากแนะนำ ชุดแผงคอบนล่างแต่ง Honda CBR150rr รุ่นโช๊คหัวกลับขนาด 45mm. ออฟเซ็ดโช๊ค35องศา ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว น้ำหนักเพียง 1.57 kg. (มีสี ดำและฮาร์ด) ชุดล่ะ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง CBR150r 2024 ใหม่ๆอยากแนะนำ ชุดแผงคอบนล่างแต่ง Honda CBR150rr รุ่นโช๊คหัวกลับขนาด 45mm. ออฟเซ็ดโช๊ค35องศา ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว น้ำหนักเพียง 1.57 kg. (มีสี ดำและฮาร์ด) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/CBR150/cbr150-2024.jpg",
       "/legacy/webgigabike.com/CBR150/Yoke-Set-cbr150-bk-35.jpg",
@@ -12247,8 +12129,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "อุปกรณ์ตกแต่ง CB150r ใหม่ๆอยากแนะนำ สเตอร์หลังอลูมิเนียม CB150R. Fits: Honda CBR150R/250RR/300 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง CB150r ใหม่ๆอยากแนะนำ สเตอร์หลังอลูมิเนียม CB150R · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง CB150r ใหม่ๆอยากแนะนำ สเตอร์หลังอลูมิเนียม CB150R ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสี Hard Anodize ใส่โซ่ 415-42,44/45/46/47/48/49/51 ฟัน อันละ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง CB150r ใหม่ๆอยากแนะนำ สเตอร์หลังอลูมิเนียม CB150R ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสี Hard Anodize ใส่โซ่ 415-42,44/45/46/47/48/49/51 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/CBR150/Footracing-1.jpg",
       "/legacy/webgigabike.com/CBR150/Footracing-4.jpg",
@@ -12275,8 +12157,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "สเตอร์หลังอลูมิเนียม CBR150R. Fits: Honda CBR150R/250RR/300 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังอลูมิเนียม CBR150R · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังอลูมิเนียม CBR150R ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสี Hard Anodize ใส่โซ่ 415-42,44/45/46/47/48/49/51 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังอลูมิเนียม CBR150R ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสี Hard Anodize ใส่โซ่ 415-42,44/45/46/47/48/49/51 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/CBR150/Srocket-cbr150r-ha.jpg"
     ],
@@ -12300,8 +12182,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดบู๊ทล้อหน้าและหลังแต่ง ใส่ Honda CBR250rr ใส่เข้ากับล้อเดิมแบบไม่ต้องถอดซิลกันฝุ่นออก ล้อหมุนลื่นขึ้นมากใส่ล้อเข้ากับตัวรถง่ายมากๆ และบู๊ทไม่สามารถล่นออกมาได้เลย. Fits: Honda CBR150R/250RR/300 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดบู๊ทล้อหน้าและหลังแต่ง ใส่ Honda CBR250rr ใส่เข้ากับล้อเดิมแบบไม่ต้องถอดซิลกันฝุ่นออก ล้อหมุนลื่นขึ้นมากใส่ล้อเข้ากับตัวรถง่ายมากๆ และบู๊ทไม่สามารถล่นออกมาได้เลย · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดบู๊ทล้อหน้าและหลังแต่ง ใส่ Honda CBR250rr ใส่เข้ากับล้อเดิมแบบไม่ต้องถอดซิลกันฝุ่นออก ล้อหมุนลื่นขึ้นมากใส่ล้อเข้ากับตัวรถง่ายมากๆ และบู๊ทไม่สามารถล่นออกมาได้เลย ผลิตจาก Alloy 7075 CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบาอย่างกับนุ่น สามารถกันรอยได้ดี และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) ชุดละ",
+    "descriptionTh": "ชุดบู๊ทล้อหน้าและหลังแต่ง ใส่ Honda CBR250rr ใส่เข้ากับล้อเดิมแบบไม่ต้องถอดซิลกันฝุ่นออก ล้อหมุนลื่นขึ้นมากใส่ล้อเข้ากับตัวรถง่ายมากๆ และบู๊ทไม่สามารถล่นออกมาได้เลย ผลิตจาก Alloy 7075 CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบาอย่างกับนุ่น สามารถกันรอยได้ดี และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/CBR250/Boot-Weel.jpg"
     ],
@@ -12331,8 +12213,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขาเหยียบเบรกเกียร์โยงขวา. Fits: Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาเหยียบเบรกเกียร์โยงขวา · ใส่ได้กับ Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขาเหยียบเบรกเกียร์โยงขวา อันละ",
+    "descriptionTh": "ขาเหยียบเบรกเกียร์โยงขวา อันละ",
     "images": [
       "/legacy/webgigabike.com/CBR250/Breck-cbr25.jpg"
     ],
@@ -12357,8 +12239,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415-16-19 ฟัน",
-    "description": "สเตอร์หน้า Honda CBR250RR Steel CNC Billet Harden. Fits: Honda CBR150R/250RR/300 · Material: เหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415-16-19 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า Honda CBR250RR Steel CNC Billet Harden · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415-16-19 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า Honda CBR250RR Steel CNC Billet Harden ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415-16-19 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หน้า Honda CBR250RR Steel CNC Billet Harden ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415-16-19 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/CBR250/F-cbr250RR-415.jpg"
     ],
@@ -12383,8 +12265,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คอลูมิเนียม KTM RC390 ขนาด 51 มม. แบบยก เอียง9 องศา ปลายแฮนมีรูสามารถใส่ตุ้มแฮนการ์ดเบรกได้ ด้ามแฮนปรับยืดหดได้ งาน Alloy CNC Billet (9 degrees) คู่ล่ะ. Fits: Honda CBR150R/250RR/300 · KTM RC390 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คอลูมิเนียม KTM RC390 ขนาด 51 มม. แบบยก เอียง9 องศา ปลายแฮนมีรูสามารถใส่ตุ้มแฮนการ์ดเบรกได้ ด้ามแฮนปรับยืดหดได้ งาน Alloy CNC Billet (9 degrees) คู่ล่ะ · ใส่ได้กับ Honda CBR150R/250RR/300 · KTM RC390 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คอลูมิเนียม KTM RC390 ขนาด 51 มม. แบบยก เอียง9 องศา ปลายแฮนมีรูสามารถใส่ตุ้มแฮนการ์ดเบรกได้ ด้ามแฮนปรับยืดหดได้ งาน Alloy CNC Billet (9 degrees) คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คอลูมิเนียม KTM RC390 ขนาด 51 มม. แบบยก เอียง9 องศา ปลายแฮนมีรูสามารถใส่ตุ้มแฮนการ์ดเบรกได้ ด้ามแฮนปรับยืดหดได้ งาน Alloy CNC Billet (9 degrees) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/CBR250/Handle-45mm.jpg"
     ],
@@ -12409,8 +12291,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet คงทนแข็งแรง",
-    "description": "อุปกรณ์ตกแต่ง CBR250-300 ใหม่ๆอยากแนะนำ ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น มีความยาว 46,52,60,65 mm. Fits: Honda CBR150R/250RR/300 · Material: Alloy CNC Billet คงทนแข็งแรง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง CBR250-300 ใหม่ๆอยากแนะนำ ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น มีความยาว 46,52,60,65 mm · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ Alloy CNC Billet คงทนแข็งแรง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง CBR250-300 ใหม่ๆอยากแนะนำ ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น มีความยาว 46,52,60,65 mm. ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง CBR250-300 ใหม่ๆอยากแนะนำ ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น มีความยาว 46,52,60,65 mm. ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
     "images": [
       "/legacy/webgigabike.com/CBR250/Honda-CBR250.jpg",
       "/legacy/webgigabike.com/R3/Leverage-gears.jpg"
@@ -12437,8 +12319,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น็อตแผงคอบน Honda Monkey125 ,MSX M24x1.0. Fits: Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตแผงคอบน Honda Monkey125 ,MSX M24x1.0 · ใส่ได้กับ Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตแผงคอบน Honda Monkey125 ,MSX M24x1.0 ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรง น้ำหนักเพียง 17 g. (มีสี ฮาร์ด) อันล่ะ",
+    "descriptionTh": "น็อตแผงคอบน Honda Monkey125 ,MSX M24x1.0 ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรง น้ำหนักเพียง 17 g. (มีสี ฮาร์ด) อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/CBR250/Nut-top.jpg"
     ],
@@ -12462,8 +12344,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Aluminum Alloy CNC Billet",
-    "description": "แผ่นอุดแพร์ PAIR Cover CBR250rr. Fits: Honda CBR150R/250RR/300 · Material: Aluminum Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover CBR250rr · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ Aluminum Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นอุดแพร์ PAIR Cover CBR250rr ผลิตจาก Aluminum Alloy CNC Billet ชิ้นละ",
+    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover CBR250rr ผลิตจาก Aluminum Alloy CNC Billet ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/CBR250/Pair-250rr.jpg"
     ],
@@ -12488,8 +12370,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet Hard Anodize เพิ่มความแข็งมากขึ้น 20%จากเดิม และลื่นมากและกันรอยได้ดี มีขนาด 415-46-52 ฟัน",
-    "description": "สเตอร์หลังแต่ง Honda CBR250RR รูใน 128 mm. Fits: Honda CBR150R/250RR/300 · Material: Alloy CNC Billet Hard Anodize เพิ่มความแข็งมากขึ้น 20%จากเดิม และลื่นมากและกันรอยได้ดี มีขนาด 415-46-52 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Honda CBR250RR รูใน 128 mm · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ Alloy CNC Billet Hard Anodize เพิ่มความแข็งมากขึ้น 20%จากเดิม และลื่นมากและกันรอยได้ดี มีขนาด 415-46-52 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Honda CBR250RR รูใน 128 mm. ผลิตจาก Alloy CNC Billet Hard Anodize เพิ่มความแข็งมากขึ้น 20%จากเดิม และลื่นมากและกันรอยได้ดี มีขนาด 415-46-52 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Honda CBR250RR รูใน 128 mm. ผลิตจาก Alloy CNC Billet Hard Anodize เพิ่มความแข็งมากขึ้น 20%จากเดิม และลื่นมากและกันรอยได้ดี มีขนาด 415-46-52 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/CBR250/R-cbr250RR-415.jpg"
     ],
@@ -12513,8 +12395,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR250. Fits: Honda CBR150R/250RR/300 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR250 · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR250 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง มี สีดำ/สีเงิน ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR250 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง มี สีดำ/สีเงิน ชุดละ",
     "images": [
       "/legacy/webgigabike.com/CBR250/Raersets-cbr250-l.jpg",
       "/legacy/webgigabike.com/CBR250/Raersets-cbr250-r.jpg",
@@ -12540,8 +12422,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR250rr. Fits: Honda CBR150R/250RR/300 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR250rr · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR250rr ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง มี สีดำ/สีเงิน ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR250rr ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง มี สีดำ/สีเงิน ชุดละ",
     "images": [
       "/legacy/webgigabike.com/CBR250/Raersets-cbr250-sl.jpg"
     ],
@@ -12565,8 +12447,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet มีขนาด 415 - 47/48/49/50/51 ฟัน",
-    "description": "สเตอร์หลังแต่ง Honda CBR250-300. Fits: Honda CBR150R/250RR/300 · Material: Alloy 7075 CNC Billet มีขนาด 415 - 47/48/49/50/51 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Honda CBR250-300 · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ Alloy 7075 CNC Billet มีขนาด 415 - 47/48/49/50/51 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Honda CBR250-300 ผลิตจาก Alloy 7075 CNC Billet มีขนาด 415 - 47/48/49/50/51 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Honda CBR250-300 ผลิตจาก Alloy 7075 CNC Billet มีขนาด 415 - 47/48/49/50/51 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/CBR250/Sprock-cbr250-415.jpg"
     ],
@@ -12590,8 +12472,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet Hard Anodize เพิ่มความแข็งและไหลลื่นดีมากและกันรอยได้ดี มีขนาด 520 - 40-43 ฟัน",
-    "description": "สเตอร์หลังแต่ง CBR250RR รูใน 128 mm. Fits: Honda CBR150R/250RR/300 · Material: Alloy 7075 CNC Billet Hard Anodize เพิ่มความแข็งและไหลลื่นดีมากและกันรอยได้ดี มีขนาด 520 - 40-43 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง CBR250RR รูใน 128 mm · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ Alloy 7075 CNC Billet Hard Anodize เพิ่มความแข็งและไหลลื่นดีมากและกันรอยได้ดี มีขนาด 520 - 40-43 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง CBR250RR รูใน 128 mm. ผลิตจาก Alloy 7075 CNC Billet Hard Anodize เพิ่มความแข็งและไหลลื่นดีมากและกันรอยได้ดี มีขนาด 520 - 40-43 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง CBR250RR รูใน 128 mm. ผลิตจาก Alloy 7075 CNC Billet Hard Anodize เพิ่มความแข็งและไหลลื่นดีมากและกันรอยได้ดี มีขนาด 520 - 40-43 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/CBR250/Sprocket-cbr250rr-520.jpg"
     ],
@@ -12615,8 +12497,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนล่างแต่ง Honda CBR250rr รุ่นโช๊คหัวกลับขนาด 45mm. ออฟเซ็ดโช๊ค32องศา. Fits: Honda CBR150R/250RR/300 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่างแต่ง Honda CBR250rr รุ่นโช๊คหัวกลับขนาด 45mm. ออฟเซ็ดโช๊ค32องศา · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่างแต่ง Honda CBR250rr รุ่นโช๊คหัวกลับขนาด 45mm. ออฟเซ็ดโช๊ค32องศา ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว น้ำหนักเพียง 1.63 kg. (มีสี ดำและฮาร์ด) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนล่างแต่ง Honda CBR250rr รุ่นโช๊คหัวกลับขนาด 45mm. ออฟเซ็ดโช๊ค32องศา ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว น้ำหนักเพียง 1.63 kg. (มีสี ดำและฮาร์ด) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/CBR250/Yoke-set-cbr250rr-bk-32.jpg",
       "/legacy/webgigabike.com/CBR250/Yoke-set-cbr250rr-Hard-32.jpg"
@@ -12634,13 +12516,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "แผ่นอุดแพร์ PAIR Cover CBR600",
     "price": 450,
     "category": "accessories",
-    "bikeModels": [],
+    "bikeModels": [
+      "cbr600"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "แผ่นอุดแพร์ PAIR Cover CBR600. Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover CBR600 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นอุดแพร์ PAIR Cover CBR600 ผลิตจาก Alloy CNC Billet ชิ้นละ",
+    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover CBR600 ผลิตจาก Alloy CNC Billet ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/CBR600RR/Cap-EGR-cbr6.jpg"
     ],
@@ -12648,8 +12532,7 @@ export const legacyProducts: Product[] = [
     "published": false,
     "reviewReasons": [
       "no_code",
-      "no_category",
-      "no_fitment"
+      "no_category"
     ]
   },
   {
@@ -12659,13 +12542,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "อุปกรณ์ตกแต่ง CBR600rr ใหม่ๆอยากแนะนำ แฮนจับโช๊คอลูมิเนียมขนาด 48 มม.",
     "price": 4800,
     "category": "suspension",
-    "bikeModels": [],
+    "bikeModels": [
+      "cbr600"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อุปกรณ์ตกแต่ง CBR600rr ใหม่ๆอยากแนะนำ แฮนจับโช๊คอลูมิเนียมขนาด 48 มม. แบบยก เอียง9 องศา งาน Alloy CNC Billet (9 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง CBR600rr ใหม่ๆอยากแนะนำ แฮนจับโช๊คอลูมิเนียมขนาด 48 มม. แบบยก เอียง9 องศา งาน Alloy CNC Billet (9 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง CBR600rr ใหม่ๆอยากแนะนำ แฮนจับโช๊คอลูมิเนียมขนาด 48 มม. แบบยก เอียง9 องศา งาน Alloy CNC Billet (9 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง CBR600rr ใหม่ๆอยากแนะนำ แฮนจับโช๊คอลูมิเนียมขนาด 48 มม. แบบยก เอียง9 องศา งาน Alloy CNC Billet (9 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/CBR600RR/CBR600rr.jpg",
       "/legacy/webgigabike.com/CBR600RR/Handle-cbr600-48mm-1.jpg",
@@ -12674,8 +12559,7 @@ export const legacyProducts: Product[] = [
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -12693,8 +12577,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คอลูมิเนียมขนาด 47 มม. แบบยก เอียง9 องศา ปลายแฮนมีรูสามารถใส่ตุ้มแฮนการ์ดเบรกได้ ด้ามแฮนปรับยืดหดได้ งาน Alloy CNC Billet (9 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ. Fits: Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมขนาด 47 มม. แบบยก เอียง9 องศา ปลายแฮนมีรูสามารถใส่ตุ้มแฮนการ์ดเบรกได้ ด้ามแฮนปรับยืดหดได้ งาน Alloy CNC Billet (9 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ · ใส่ได้กับ Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คอลูมิเนียมขนาด 47 มม. แบบยก เอียง9 องศา ปลายแฮนมีรูสามารถใส่ตุ้มแฮนการ์ดเบรกได้ ด้ามแฮนปรับยืดหดได้ งาน Alloy CNC Billet (9 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมขนาด 47 มม. แบบยก เอียง9 องศา ปลายแฮนมีรูสามารถใส่ตุ้มแฮนการ์ดเบรกได้ ด้ามแฮนปรับยืดหดได้ งาน Alloy CNC Billet (9 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/CBR600RR/Handle-cbr600-48mm-1.jpg",
       "/legacy/webgigabike.com/CBR600RR/Handle-cbr600-48mm-2.jpg"
@@ -12712,21 +12596,22 @@ export const legacyProducts: Product[] = [
     "nameTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR600rr",
     "price": 5500,
     "category": "chassis",
-    "bikeModels": [],
+    "bikeModels": [
+      "cbr600"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061+7075 ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR600rr. Material: Alloy 6061+7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR600rr · วัสดุ Alloy 6061+7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR600rr ผลิตจาก Alloy 6061+7075 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR600rr ผลิตจาก Alloy 6061+7075 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม ชุดละ",
     "images": [
       "/legacy/webgigabike.com/CBR600RR/Rearsets-CBR600.jpg"
     ],
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -12743,8 +12628,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "พักเท้าแบบกลมเรชซิ่งแบบกลมเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบเป็นพิเศษ งาน Alloy CNC Billet ชิ้นล่ะ. Fits: Yamaha R1/R6/R7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "พักเท้าแบบกลมเรชซิ่งแบบกลมเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบเป็นพิเศษ งาน Alloy CNC Billet ชิ้นล่ะ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "พักเท้าแบบกลมเรชซิ่งแบบกลมเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบเป็นพิเศษ งาน Alloy CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "พักเท้าแบบกลมเรชซิ่งแบบกลมเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบเป็นพิเศษ งาน Alloy CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/CBR600RR/Rod-80.jpg"
     ],
@@ -12768,8 +12653,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขาพักเท้าแบบกลมเรชซิ่งแบบกลมเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบเป็นพิเศษ งาน Alloy CNC Billet ชิ้นล่ะ. Fits: Yamaha R1/R6/R7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาพักเท้าแบบกลมเรชซิ่งแบบกลมเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบเป็นพิเศษ งาน Alloy CNC Billet ชิ้นล่ะ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขาพักเท้าแบบกลมเรชซิ่งแบบกลมเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบเป็นพิเศษ งาน Alloy CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "ขาพักเท้าแบบกลมเรชซิ่งแบบกลมเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบเป็นพิเศษ งาน Alloy CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/CBR600RR/Rod-95.jpg"
     ],
@@ -12786,13 +12671,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "CBR1000rrr & CBR600rr 520-41,42,43,44,45,46 Alloy Europe 7075 CNC Bill",
     "price": 2200,
     "category": "accessories",
-    "bikeModels": [],
+    "bikeModels": [
+      "cbr600"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "CBR1000rrr & CBR600rr 520-41,42,43,44,45,46 Alloy Europe 7075 CNC Billet Hard Anodize =. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "CBR1000rrr & CBR600rr 520-41,42,43,44,45,46 Alloy Europe 7075 CNC Billet Hard Anodize = · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "CBR1000rrr & CBR600rr 520-41,42,43,44,45,46 Alloy Europe 7075 CNC Billet Hard Anodize =",
+    "descriptionTh": "CBR1000rrr & CBR600rr 520-41,42,43,44,45,46 Alloy Europe 7075 CNC Billet Hard Anodize =",
     "images": [
       "/legacy/webgigabike.com/CBR600RR/Sprocket-cbr600.jpg"
     ],
@@ -12800,8 +12687,7 @@ export const legacyProducts: Product[] = [
     "published": false,
     "reviewReasons": [
       "no_code",
-      "no_category",
-      "no_fitment"
+      "no_category"
     ]
   },
   {
@@ -12818,8 +12704,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet ใส่โซ่ 420-34ฟัน",
-    "description": "สเตอร์หลังแต่ง Monkey125 4G. Fits: Honda Monkey/MSX125/DAX125 · Material: Alloy 7075 CNC Billet ใส่โซ่ 420-34ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Monkey125 4G · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ Alloy 7075 CNC Billet ใส่โซ่ 420-34ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Monkey125 4G ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 420-34ฟัน อันละ 1,200 สเตอร์หลังแต่ง Monkey125 4G,5G ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 415 - 32-35 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Monkey125 4G ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 420-34ฟัน อันละ 1,200 สเตอร์หลังแต่ง Monkey125 4G,5G ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 415 - 32-35 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/DAX125/Rear-Sprocket-Monkey-4G-420.jpg",
       "/legacy/webgigabike.com/DAX125/Rear-Sprocket-Monkey-5G-415.jpg"
@@ -12844,8 +12730,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet ใส่โซ่ 420-36-38 ฟัน",
-    "description": "สเตอร์หลังแต่ง Monkey125 4G,5G ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 420-36-38 ฟัน อันละ 1,300 อุปกรณ์ตกแต่ง MSX125 ใหม่ๆอยากแนะนำ ชุดบู๊ทล้อหน้าและล้อหลังแต่ง MSX125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 330.5 กรัม บู๊ทแต่งหนักเพียง 118 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท). Fits: Honda Monkey/MSX125/DAX125 · Material: Alloy 7075 CNC Billet ใส่โซ่ 420-36-38 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Monkey125 4G,5G ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 420-36-38 ฟัน อันละ 1,300 อุปกรณ์ตกแต่ง MSX125 ใหม่ๆอยากแนะนำ ชุดบู๊ทล้อหน้าและล้อหลังแต่ง MSX125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 330.5 กรัม บู๊ทแต่งหนักเพียง 118 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ Alloy 7075 CNC Billet ใส่โซ่ 420-36-38 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Monkey125 4G,5G ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 420-36-38 ฟัน อันละ 1,300 อุปกรณ์ตกแต่ง MSX125 ใหม่ๆอยากแนะนำ ชุดบู๊ทล้อหน้าและล้อหลังแต่ง MSX125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 330.5 กรัม บู๊ทแต่งหนักเพียง 118 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) ชุดละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Monkey125 4G,5G ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 420-36-38 ฟัน อันละ 1,300 อุปกรณ์ตกแต่ง MSX125 ใหม่ๆอยากแนะนำ ชุดบู๊ทล้อหน้าและล้อหลังแต่ง MSX125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 330.5 กรัม บู๊ทแต่งหนักเพียง 118 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/DAX125/Rear-Sprocket-Monkey-5G-420.jpg",
       "/legacy/webgigabike.com/MSX/msx125.jpg",
@@ -12871,8 +12757,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบเครื่องด้านซ้าย Ducati M795 , 796. Fits: Ducati Monster795/796 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบเครื่องด้านซ้าย Ducati M795 , 796 · ใส่ได้กับ Ducati Monster795/796 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบเครื่องด้านซ้าย Ducati M795 , 796 ผลิตจากอลูมิเนียมเกรดพิเศษ 7075 มีสองสีให้เลือก (สีแดงและสีทอง) ชิ้นละ",
+    "descriptionTh": "ฝาครอบเครื่องด้านซ้าย Ducati M795 , 796 ผลิตจากอลูมิเนียมเกรดพิเศษ 7075 มีสองสีให้เลือก (สีแดงและสีทอง) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/Cover-en-red.jpg",
       "/legacy/webgigabike.com/Ducati/Cover-en-go.jpg"
@@ -12890,13 +12776,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "Ducati M796 สเตอร์หลัง Ducati M796 821 Hyper821 Alloy เกรดพรีเมี่ยม 70",
     "price": 5000,
     "category": "drivetrain",
-    "bikeModels": [],
+    "bikeModels": [
+      "monster"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Ducati M796 สเตอร์หลัง Ducati M796 821 Hyper821 Alloy เกรดพรีเมี่ยม 7075 มีขนาด 525-42ฟัน ทั้งชุด. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Ducati M796 สเตอร์หลัง Ducati M796 821 Hyper821 Alloy เกรดพรีเมี่ยม 7075 มีขนาด 525-42ฟัน ทั้งชุด · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Ducati M796 สเตอร์หลัง Ducati M796 821 Hyper821 Alloy เกรดพรีเมี่ยม 7075 มีขนาด 525-42ฟัน ทั้งชุด",
+    "descriptionTh": "Ducati M796 สเตอร์หลัง Ducati M796 821 Hyper821 Alloy เกรดพรีเมี่ยม 7075 มีขนาด 525-42ฟัน ทั้งชุด",
     "images": [
       "/legacy/webgigabike.com/Ducati/Ducati-Monster-796.jpg",
       "/legacy/webgigabike.com/Ducati/sprocket-m=sg.jpg",
@@ -12907,8 +12795,7 @@ export const legacyProducts: Product[] = [
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -12925,8 +12812,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ฮับสเตอร์หลัง Ducati Monter M796, Hyper821 (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ AEM ได้). Fits: Ducati Monster795/796 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฮับสเตอร์หลัง Ducati Monter M796, Hyper821 (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ AEM ได้) · ใส่ได้กับ Ducati Monster795/796 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฮับสเตอร์หลัง Ducati Monter M796, Hyper821 (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ AEM ได้) ผลิตจาก Alloy CNC Billet ชิ้นละ",
+    "descriptionTh": "ฮับสเตอร์หลัง Ducati Monter M796, Hyper821 (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ AEM ได้) ผลิตจาก Alloy CNC Billet ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/Hub-796-aem.jpg"
     ],
@@ -12944,15 +12831,14 @@ export const legacyProducts: Product[] = [
     "price": 120,
     "category": "drivetrain",
     "bikeModels": [
-      "monster",
       "monkey"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "น๊อตล๊อคสเตอร์หลัง M10 Pit 1.25 และ M8 Pit 1.0 อลูมินั่มอัลลอย เกรดพรีเมี่ยม 7075 T651. Fits: Ducati Monster795/796 · Honda Monkey/MSX125/DAX125 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตล๊อคสเตอร์หลัง M10 Pit 1.25 และ M8 Pit 1.0 อลูมินั่มอัลลอย เกรดพรีเมี่ยม 7075 T651 · ใส่ได้กับ Ducati Monster795/796 · Honda Monkey/MSX125/DAX125 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตล๊อคสเตอร์หลัง M10 Pit 1.25 และ M8 Pit 1.0 อลูมินั่มอัลลอย เกรดพรีเมี่ยม 7075 T651 ชิ้นละ",
+    "descriptionTh": "น๊อตล๊อคสเตอร์หลัง M10 Pit 1.25 และ M8 Pit 1.0 อลูมินั่มอัลลอย เกรดพรีเมี่ยม 7075 T651 ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/Nut-m10-Pit-1.25.jpg"
     ],
@@ -12977,8 +12863,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075",
-    "description": "น๊อตล๊อคล้อหลัง Ducati M796 821 Hyper821. Fits: Ducati Monster795/796 · Material: Alloy 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตล๊อคล้อหลัง Ducati M796 821 Hyper821 · ใส่ได้กับ Ducati Monster795/796 · วัสดุ Alloy 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตล๊อคล้อหลัง Ducati M796 821 Hyper821 ผลิตจาก Alloy 7075 มีสี (ดำ-น้ำเงิน-ทอง-แดง) คู่ละ",
+    "descriptionTh": "น๊อตล๊อคล้อหลัง Ducati M796 821 Hyper821 ผลิตจาก Alloy 7075 มีสี (ดำ-น้ำเงิน-ทอง-แดง) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/nut-weel_shot.jpg"
     ],
@@ -12996,7 +12882,7 @@ export const legacyProducts: Product[] = [
     "price": 2000,
     "category": "drivetrain",
     "bikeModels": [
-      "monster"
+      "panigale"
     ],
     "colors": [
       "black",
@@ -13006,8 +12892,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 มีขนาด 520-44 ฟัน",
-    "description": "สเตอร์หลัง Ducati Panigale 899. Fits: Ducati Monster795/796 · Material: Alloy 7075 T651 มีขนาด 520-44 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Panigale 899 · ใส่ได้กับ Ducati Monster795/796 · วัสดุ Alloy 7075 T651 มีขนาด 520-44 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Ducati Panigale 899 ผลิตจาก Alloy 7075 T651 มีขนาด 520-44 ฟัน มีสี (ดำ-ทอง-แดง) ชิ้นละ",
+    "descriptionTh": "สเตอร์หลัง Ducati Panigale 899 ผลิตจาก Alloy 7075 T651 มีขนาด 520-44 ฟัน มีสี (ดำ-ทอง-แดง) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/pa-899.jpg"
     ],
@@ -13025,7 +12911,7 @@ export const legacyProducts: Product[] = [
     "price": 2200,
     "category": "drivetrain",
     "bikeModels": [
-      "monster"
+      "ducati_scrambler"
     ],
     "colors": [
       "black",
@@ -13034,8 +12920,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 มีขนาด 520-46 ฟัน",
-    "description": "สเตอร์หลัง Ducati Scrambler. Fits: Ducati Monster795/796 · Material: Alloy 7075 T651 มีขนาด 520-46 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Scrambler · ใส่ได้กับ Ducati Monster795/796 · วัสดุ Alloy 7075 T651 มีขนาด 520-46 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Ducati Scrambler ผลิตจาก Alloy 7075 T651 มีขนาด 520-46 ฟัน มีสี (ดำ-ฮาร์ด) ชิ้นละ",
+    "descriptionTh": "สเตอร์หลัง Ducati Scrambler ผลิตจาก Alloy 7075 T651 มีขนาด 520-46 ฟัน มีสี (ดำ-ฮาร์ด) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/Scambl-520-46.jpg",
       "/legacy/webgigabike.com/Ducati/Scambl-ha-520-46.jpg"
@@ -13060,8 +12946,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน",
-    "description": "สเตอร์หลัง Ducati Monter M796 , Hyper821 (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ CNC Racing & JT ได้). Fits: Ducati Monster795/796 · Material: Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Monter M796 , Hyper821 (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ CNC Racing & JT ได้) · ใส่ได้กับ Ducati Monster795/796 · วัสดุ Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Ducati Monter M796 , Hyper821 (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ CNC Racing & JT ได้)ผลิตจาก Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลัง Ducati Monter M796 , Hyper821 (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ CNC Racing & JT ได้)ผลิตจาก Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/sprocket-796-1.jpg",
       "/legacy/webgigabike.com/Ducati/sprocket-796-520-42-bk.jpg"
@@ -13086,8 +12972,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "ฮับสเตอร์หลัง Ducati Monter M796, Hyper821 (ใส่เข้ากับสเตอร์ของยี่ห้อ CNC Racing & JT ได้). Fits: Ducati Monster795/796 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฮับสเตอร์หลัง Ducati Monter M796, Hyper821 (ใส่เข้ากับสเตอร์ของยี่ห้อ CNC Racing & JT ได้) · ใส่ได้กับ Ducati Monster795/796 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฮับสเตอร์หลัง Ducati Monter M796, Hyper821 (ใส่เข้ากับสเตอร์ของยี่ห้อ CNC Racing & JT ได้)ผลิตจาก Alloy 7075 CNC Billet ชิ้นละ",
+    "descriptionTh": "ฮับสเตอร์หลัง Ducati Monter M796, Hyper821 (ใส่เข้ากับสเตอร์ของยี่ห้อ CNC Racing & JT ได้)ผลิตจาก Alloy 7075 CNC Billet ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/sprocket-796-2.jpg"
     ],
@@ -13104,15 +12990,13 @@ export const legacyProducts: Product[] = [
     "nameTh": "สเตอร์หลัง Ducati",
     "price": 2000,
     "category": "drivetrain",
-    "bikeModels": [
-      "monster"
-    ],
+    "bikeModels": [],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet มีขนาด 520-40 ฟัน",
-    "description": "สเตอร์หลัง Ducati (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ AEM ได้). Fits: Ducati Monster795/796 · Material: Alloy 7075 CNC Billet มีขนาด 520-40 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ AEM ได้) · ใส่ได้กับ Ducati Monster795/796 · วัสดุ Alloy 7075 CNC Billet มีขนาด 520-40 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Ducati (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ AEM ได้) ผลิตจาก Alloy 7075 CNC Billet มีขนาด 520-40 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลัง Ducati (ใส่เข้ากับฮับสเตอร์ของยี่ห้อ AEM ได้) ผลิตจาก Alloy 7075 CNC Billet มีขนาด 520-40 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/sprocket-796-Aem-520-40-bk.jpg",
       "/legacy/webgigabike.com/Ducati/sprocket-796-Aem-520-40-hd.jpg"
@@ -13120,7 +13004,8 @@ export const legacyProducts: Product[] = [
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code"
+      "no_code",
+      "no_fitment"
     ]
   },
   {
@@ -13131,14 +13016,14 @@ export const legacyProducts: Product[] = [
     "price": 2200,
     "category": "drivetrain",
     "bikeModels": [
-      "monster"
+      "ducati_diavel"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน",
-    "description": "ฟันสเตอร์หลัง Ducati diavel. Fits: Ducati Monster795/796 · Material: Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฟันสเตอร์หลัง Ducati diavel · ใส่ได้กับ Ducati Monster795/796 · วัสดุ Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฟันสเตอร์หลัง Ducati diavel ผลิตจาก Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน อันละ",
+    "descriptionTh": "ฟันสเตอร์หลัง Ducati diavel ผลิตจาก Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/sprocket-D6-525-42t-hart.jpg"
     ],
@@ -13156,14 +13041,14 @@ export const legacyProducts: Product[] = [
     "price": 5500,
     "category": "drivetrain",
     "bikeModels": [
-      "monster"
+      "ducati_diavel"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน ทั้ง",
-    "description": "สเตอร์หลัง Ducati diavel. Fits: Ducati Monster795/796 · Material: Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati diavel · ใส่ได้กับ Ducati Monster795/796 · วัสดุ Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Ducati diavel ผลิตจาก Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน ทั้งชุด",
+    "descriptionTh": "สเตอร์หลัง Ducati diavel ผลิตจาก Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน ทั้งชุด",
     "images": [
       "/legacy/webgigabike.com/Ducati/sprocket-D6-bg.jpg",
       "/legacy/webgigabike.com/Ducati/sprocket-D6-rb.jpg"
@@ -13188,8 +13073,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน",
-    "description": "สเตอร์หลัง Ducati Monter M796, Hyper821. Fits: Ducati Monster795/796 · Material: Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Monter M796, Hyper821 · ใส่ได้กับ Ducati Monster795/796 · วัสดุ Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Ducati Monter M796, Hyper821 ผลิตจาก Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน ชุดละ",
+    "descriptionTh": "สเตอร์หลัง Ducati Monter M796, Hyper821 ผลิตจาก Alloy 7075 CNC Billet มีขนาด 525-42 ฟัน ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Ducati/sprocket-m=sg.jpg",
       "/legacy/webgigabike.com/Ducati/sprocket-m-bg.jpg",
@@ -13221,8 +13106,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงคอบนแต่ง Duati Monster 795,796. Fits: Ducati Monster795/796 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงคอบนแต่ง Duati Monster 795,796 · ใส่ได้กับ Ducati Monster795/796 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงคอบนแต่ง Duati Monster 795,796 ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC สวยงามแข็งแรง (มีสี เงิน/ดำ) ชุดล่ะ",
+    "descriptionTh": "แผงคอบนแต่ง Duati Monster 795,796 ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC สวยงามแข็งแรง (มีสี เงิน/ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Ducati/Top-cor-sl1.jpg",
       "/legacy/webgigabike.com/Ducati/Top-cor-bk1.jpg",
@@ -13249,8 +13134,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ + กรอง K&N มือหนื่งแท้ ทั้ง",
-    "description": "ชุดกรองแต่ง HD sporter 883 / 1200 ใช้ได้ตั้งแต่ปี1991-2013 ใส่ใด้ทั้งรถคาบูเรเตอร์และหัวฉีด (ยกเว้นคาบูเรเตอร์ของ S&S ใส่ไม่ใด้ครับ). Fits: Harley-Davidson Sportster883-1200 · Material: อลูมิเนียมเกรดพิเศษ + กรอง K&N มือหนื่งแท้ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดกรองแต่ง HD sporter 883 / 1200 ใช้ได้ตั้งแต่ปี1991-2013 ใส่ใด้ทั้งรถคาบูเรเตอร์และหัวฉีด (ยกเว้นคาบูเรเตอร์ของ S&S ใส่ไม่ใด้ครับ) · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ อลูมิเนียมเกรดพิเศษ + กรอง K&N มือหนื่งแท้ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดกรองแต่ง HD sporter 883 / 1200 ใช้ได้ตั้งแต่ปี1991-2013 ใส่ใด้ทั้งรถคาบูเรเตอร์และหัวฉีด (ยกเว้นคาบูเรเตอร์ของ S&S ใส่ไม่ใด้ครับ) ผลิตจากอลูมิเนียมเกรดพิเศษ + กรอง K&N มือหนื่งแท้ ทั้งชุด",
+    "descriptionTh": "ชุดกรองแต่ง HD sporter 883 / 1200 ใช้ได้ตั้งแต่ปี1991-2013 ใส่ใด้ทั้งรถคาบูเรเตอร์และหัวฉีด (ยกเว้นคาบูเรเตอร์ของ S&S ใส่ไม่ใด้ครับ) ผลิตจากอลูมิเนียมเกรดพิเศษ + กรอง K&N มือหนื่งแท้ ทั้งชุด",
     "images": [
       "/legacy/webgigabike.com/HD/air2.jpg",
       "/legacy/webgigabike.com/HD/air3.jpg",
@@ -13278,8 +13163,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "พักเท้าหลังแต่ง HD sporte. Fits: Harley-Davidson Sportster883-1200 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "พักเท้าหลังแต่ง HD sporte · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "พักเท้าหลังแต่ง HD sporte ผลิตจากอลูเนียมอัลลอยเกรดพิเศษด้วยเครื่อง CNC (มีสี เงิน/ดำ/ปัดเงา)คู่ล่ะ",
+    "descriptionTh": "พักเท้าหลังแต่ง HD sporte ผลิตจากอลูเนียมอัลลอยเกรดพิเศษด้วยเครื่อง CNC (มีสี เงิน/ดำ/ปัดเงา)คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/HD/all2.jpg"
     ],
@@ -13305,8 +13190,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet",
-    "description": "ชุดบังสายพานหน้าแต่ง HD Sportter. Fits: Harley-Davidson Sportster883-1200 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดบังสายพานหน้าแต่ง HD Sportter · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดบังสายพานหน้าแต่ง HD Sportter ผลิตจาก Alloy 6061 CNC Billet มีสี ดำ/สีเงิน ชุดล่ะ",
+    "descriptionTh": "ชุดบังสายพานหน้าแต่ง HD Sportter ผลิตจาก Alloy 6061 CNC Billet มีสี ดำ/สีเงิน ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/HD/cover-en.jpg",
       "/legacy/webgigabike.com/HD/cover-blak.jpg",
@@ -13333,8 +13218,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบเครื่่องข้างขวา ทองเหลือง. Fits: Harley-Davidson Sportster883-1200 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบเครื่่องข้างขวา ทองเหลือง · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบเครื่่องข้างขวา ทองเหลือง",
+    "descriptionTh": "ฝาครอบเครื่่องข้างขวา ทองเหลือง",
     "images": [
       "/legacy/webgigabike.com/HD/fp4.jpg",
       "/legacy/webgigabike.com/HD/fp3.jpg",
@@ -13353,13 +13238,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "Harlay Davidson Sprocket Front Aluminum Alloy 7075 Hard Anodize 530-25",
     "price": 2000,
     "category": "drivetrain",
-    "bikeModels": [],
+    "bikeModels": [
+      "hd883"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "Harlay Davidson Sprocket Front Aluminum Alloy 7075 Hard Anodize 530-25T (Inner hole mm.) สเตอร์หน้า Harlay Davidson. Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Harlay Davidson Sprocket Front Aluminum Alloy 7075 Hard Anodize 530-25T (Inner hole mm.) สเตอร์หน้า Harlay Davidson · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Harlay Davidson Sprocket Front Aluminum Alloy 7075 Hard Anodize 530-25T (Inner hole mm.) สเตอร์หน้า Harlay Davidson ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 530-25ฟัน อันละ",
+    "descriptionTh": "Harlay Davidson Sprocket Front Aluminum Alloy 7075 Hard Anodize 530-25T (Inner hole mm.) สเตอร์หน้า Harlay Davidson ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 530-25ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/HD/harley-davidson-48.jpg",
       "/legacy/webgigabike.com/HD/Sprockets-front-530-25t-1.jpg",
@@ -13368,8 +13255,7 @@ export const legacyProducts: Product[] = [
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -13386,8 +13272,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet Hard Anodize ยาว 10 นิ้ว",
-    "description": "ตุ๊กตา Harlay Davidson แบบเฉียงลายฉลุสามเหลี่ยม. Fits: Harley-Davidson Sportster883-1200 · Material: Alloy CNC Billet Hard Anodize ยาว 10 นิ้ว · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตุ๊กตา Harlay Davidson แบบเฉียงลายฉลุสามเหลี่ยม · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ Alloy CNC Billet Hard Anodize ยาว 10 นิ้ว · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตุ๊กตา Harlay Davidson แบบเฉียงลายฉลุสามเหลี่ยม ผลิตจาก Alloy CNC Billet Hard Anodize ยาว 10 นิ้ว ชุดละ",
+    "descriptionTh": "ตุ๊กตา Harlay Davidson แบบเฉียงลายฉลุสามเหลี่ยม ผลิตจาก Alloy CNC Billet Hard Anodize ยาว 10 นิ้ว ชุดละ",
     "images": [
       "/legacy/webgigabike.com/HD/pillars-10-3-5.jpg",
       "/legacy/webgigabike.com/HD/pillars-10-3-1.jpg",
@@ -13415,8 +13301,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet Hard Anodize ยาว 8 นิ้ว",
-    "description": "ตุ๊กตา Harlay Davidson แบบเฉียงลายฉลุสามเหลี่ยม. Fits: Harley-Davidson Sportster883-1200 · Material: Alloy CNC Billet Hard Anodize ยาว 8 นิ้ว · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตุ๊กตา Harlay Davidson แบบเฉียงลายฉลุสามเหลี่ยม · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ Alloy CNC Billet Hard Anodize ยาว 8 นิ้ว · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตุ๊กตา Harlay Davidson แบบเฉียงลายฉลุสามเหลี่ยม ผลิตจาก Alloy CNC Billet Hard Anodize ยาว 8 นิ้ว ชุดละ",
+    "descriptionTh": "ตุ๊กตา Harlay Davidson แบบเฉียงลายฉลุสามเหลี่ยม ผลิตจาก Alloy CNC Billet Hard Anodize ยาว 8 นิ้ว ชุดละ",
     "images": [
       "/legacy/webgigabike.com/HD/pillars-8-3-5.jpg",
       "/legacy/webgigabike.com/HD/pillars-8-3-4.jpg",
@@ -13444,8 +13330,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet มีความยาว 10 นิ้ว",
-    "description": "ตุ๊กตา Harlay Davidson แบบตรง. Fits: Harley-Davidson Sportster883-1200 · Material: Alloy 6061 CNC Billet มีความยาว 10 นิ้ว · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตุ๊กตา Harlay Davidson แบบตรง · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ Alloy 6061 CNC Billet มีความยาว 10 นิ้ว · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตุ๊กตา Harlay Davidson แบบตรง ผลิตจาก Alloy 6061 CNC Billet มีความยาว 10 นิ้ว ชุดละ",
+    "descriptionTh": "ตุ๊กตา Harlay Davidson แบบตรง ผลิตจาก Alloy 6061 CNC Billet มีความยาว 10 นิ้ว ชุดละ",
     "images": [
       "/legacy/webgigabike.com/HD/pillars-l-10-inch-straight-height-4.jpg",
       "/legacy/webgigabike.com/HD/pillars-l-10-inch-straight-height-3.jpg",
@@ -13473,8 +13359,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ตุ๊กตา Harlay Davidson แบบเฉียง. Fits: Harley-Davidson Sportster883-1200 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตุ๊กตา Harlay Davidson แบบเฉียง · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตุ๊กตา Harlay Davidson แบบเฉียง ผลิตจาก Alloy CNC Billet Hard Anodize มีความยาว 8 นิ้ว ใส่แฮน 1 นิ้ว และใส่แฮนอ้วน 28.6 mm. ชุดละ",
+    "descriptionTh": "ตุ๊กตา Harlay Davidson แบบเฉียง ผลิตจาก Alloy CNC Billet Hard Anodize มีความยาว 8 นิ้ว ใส่แฮน 1 นิ้ว และใส่แฮนอ้วน 28.6 mm. ชุดละ",
     "images": [
       "/legacy/webgigabike.com/HD/pillars-l-6.jpg",
       "/legacy/webgigabike.com/HD/pillars-l-5.jpg",
@@ -13503,8 +13389,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet มีความยาว 8 นิ้ว",
-    "description": "ตุ๊กตา Harlay Davidson แบบตรง. Fits: Harley-Davidson Sportster883-1200 · Material: Alloy 6061 CNC Billet มีความยาว 8 นิ้ว · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตุ๊กตา Harlay Davidson แบบตรง · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ Alloy 6061 CNC Billet มีความยาว 8 นิ้ว · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตุ๊กตา Harlay Davidson แบบตรง ผลิตจาก Alloy 6061 CNC Billet มีความยาว 8 นิ้ว ชุดละ",
+    "descriptionTh": "ตุ๊กตา Harlay Davidson แบบตรง ผลิตจาก Alloy 6061 CNC Billet มีความยาว 8 นิ้ว ชุดละ",
     "images": [
       "/legacy/webgigabike.com/HD/pillars-l-8-inch-straight-height-3.jpg",
       "/legacy/webgigabike.com/HD/pillars-l-8-inch-straight-height-2.jpg",
@@ -13531,8 +13417,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 CNC Billet",
-    "description": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-42T & 525-48,50T & 530-42,45,48,50,51,52T (Inner hole 56 mm.) สเตอร์หลัง Harlay Davidson ผลิตจาก Alloy 7075 T651 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 520-42T & 525-48,50T & 530-42,45,48,50,51,52 ฟัน (รูในของดุม 56 mm.)อันละ 3,500 +รวมแป้นรองเสตอร์ (และรับผลิตสเตอร์ทุกเบอร์ทุกขนาด) ตุ๊กตา Harlay Davidson แบบเฉียง. Fits: Harley-Davidson Sportster883-1200 · Material: Alloy 7075 T651 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-42T & 525-48,50T & 530-42,45,48,50,51,52T (Inner hole 56 mm.) สเตอร์หลัง Harlay Davidson ผลิตจาก Alloy 7075 T651 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 520-42T & 525-48,50T & 530-42,45,48,50,51,52 ฟัน (รูในของดุม 56 mm.)อันละ 3,500 +รวมแป้นรองเสตอร์ (และรับผลิตสเตอร์ทุกเบอร์ทุกขนาด) ตุ๊กตา Harlay Davidson แบบเฉียง · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ Alloy 7075 T651 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-42T & 525-48,50T & 530-42,45,48,50,51,52T (Inner hole 56 mm.) สเตอร์หลัง Harlay Davidson ผลิตจาก Alloy 7075 T651 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 520-42T & 525-48,50T & 530-42,45,48,50,51,52 ฟัน (รูในของดุม 56 mm.)อันละ 3,500 +รวมแป้นรองเสตอร์ (และรับผลิตสเตอร์ทุกเบอร์ทุกขนาด) ตุ๊กตา Harlay Davidson แบบเฉียง ผลิตจาก Alloy CNC Billet Hard Anodize มีความยาว 10 นิ้ว ใส่แฮน 1 นิ้ว และใส่แฮนอ้วน 28.6 mm. ชุดละ",
+    "descriptionTh": "Sprocket Aluminum Alloy 7075 Hard Anodize 520-42T & 525-48,50T & 530-42,45,48,50,51,52T (Inner hole 56 mm.) สเตอร์หลัง Harlay Davidson ผลิตจาก Alloy 7075 T651 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 520-42T & 525-48,50T & 530-42,45,48,50,51,52 ฟัน (รูในของดุม 56 mm.)อันละ 3,500 +รวมแป้นรองเสตอร์ (และรับผลิตสเตอร์ทุกเบอร์ทุกขนาด) ตุ๊กตา Harlay Davidson แบบเฉียง ผลิตจาก Alloy CNC Billet Hard Anodize มีความยาว 10 นิ้ว ใส่แฮน 1 นิ้ว และใส่แฮนอ้วน 28.6 mm. ชุดละ",
     "images": [
       "/legacy/webgigabike.com/HD/Sprockets-530-48-bk.jpg",
       "/legacy/webgigabike.com/HD/Sprockets-530-48-had.jpg",
@@ -13566,8 +13452,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กนำเข้าจากญี่ปุ่น CNC Billet",
-    "description": "Sprocket Front Sportster Steel CNC Billet Harden 530-24T (Inner hole mm.) สเตอร์หน้า Harlay Davidson Sportster รูเฟืองใน 43.5 มิล. Fits: Harley-Davidson Sportster883-1200 · Material: เหล็กนำเข้าจากญี่ปุ่น CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Front Sportster Steel CNC Billet Harden 530-24T (Inner hole mm.) สเตอร์หน้า Harlay Davidson Sportster รูเฟืองใน 43.5 มิล · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ เหล็กนำเข้าจากญี่ปุ่น CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Front Sportster Steel CNC Billet Harden 530-24T (Inner hole mm.) สเตอร์หน้า Harlay Davidson Sportster รูเฟืองใน 43.5 มิล ผลิตจากเหล็กนำเข้าจากญี่ปุ่น CNC Billet พร้อมชุบแข็ง มีขนาด 530-24ฟัน อันละ",
+    "descriptionTh": "Sprocket Front Sportster Steel CNC Billet Harden 530-24T (Inner hole mm.) สเตอร์หน้า Harlay Davidson Sportster รูเฟืองใน 43.5 มิล ผลิตจากเหล็กนำเข้าจากญี่ปุ่น CNC Billet พร้อมชุบแข็ง มีขนาด 530-24ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/HD/Sprockets-front-530-24t-Sportter-2.jpg"
     ],
@@ -13591,8 +13477,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "Sprocket Front Aluminum Alloy 7075 Hard Anodize 530-25T (Inner hole mm.) สเตอร์หน้า Harlay Davidson ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 530-25ฟัน Sprocket Aluminum Alloy 7075 Hard Anodize 520-42T & 525-48,50T & 530-45,48,50T (Inner hole 56 mm.) สเตอร์หลัง Harlay Davidson. Fits: Harley-Davidson Sportster883-1200 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Front Aluminum Alloy 7075 Hard Anodize 530-25T (Inner hole mm.) สเตอร์หน้า Harlay Davidson ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 530-25ฟัน Sprocket Aluminum Alloy 7075 Hard Anodize 520-42T & 525-48,50T & 530-45,48,50T (Inner hole 56 mm.) สเตอร์หลัง Harlay Davidson · ใส่ได้กับ Harley-Davidson Sportster883-1200 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Front Aluminum Alloy 7075 Hard Anodize 530-25T (Inner hole mm.) สเตอร์หน้า Harlay Davidson ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 530-25ฟัน Sprocket Aluminum Alloy 7075 Hard Anodize 520-42T & 525-48,50T & 530-45,48,50T (Inner hole 56 mm.) สเตอร์หลัง Harlay Davidson ผลิตจาก Alloy 7075 T651 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 520-42T & 525-48,50T & 530-45,48,50 ฟัน (รูในของดุม 56 mm.)ชิ้นละ",
+    "descriptionTh": "Sprocket Front Aluminum Alloy 7075 Hard Anodize 530-25T (Inner hole mm.) สเตอร์หน้า Harlay Davidson ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 530-25ฟัน Sprocket Aluminum Alloy 7075 Hard Anodize 520-42T & 525-48,50T & 530-45,48,50T (Inner hole 56 mm.) สเตอร์หลัง Harlay Davidson ผลิตจาก Alloy 7075 T651 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมาก และกันรอยได้ดี มีขนาด 520-42T & 525-48,50T & 530-45,48,50 ฟัน (รูในของดุม 56 mm.)ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/HD/Sprockets-front-530-25t-1.jpg",
       "/legacy/webgigabike.com/HD/Sprockets-front-530-25t.jpg",
@@ -13620,8 +13506,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet ได้มาตรฐานส่งออก",
-    "description": "น๊อตขันแผงคอ NSR150. Fits: Honda NSR150SP/2T · Material: Alloy 7075 CNC Billet ได้มาตรฐานส่งออก · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแผงคอ NSR150 · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ Alloy 7075 CNC Billet ได้มาตรฐานส่งออก · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแผงคอ NSR150 ผลิตจาก Alloy 7075 CNC Billet ได้มาตรฐานส่งออก ชิ้นล่ะ",
+    "descriptionTh": "น๊อตขันแผงคอ NSR150 ผลิตจาก Alloy 7075 CNC Billet ได้มาตรฐานส่งออก ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/honda cb750/nut-cb-cnc.jpg"
     ],
@@ -13645,8 +13531,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูปิเนียมเกรดพิเศษ",
-    "description": "GB400. 7 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย Clubman มีสองสีให้เลือก. Fits: Honda GB250/400/CB400SS · Material: อลูปิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "GB400. 7 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย Clubman มีสองสีให้เลือก · ใส่ได้กับ Honda GB250/400/CB400SS · วัสดุ อลูปิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "GB400. 7 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย Clubman มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
+    "descriptionTh": "GB400. 7 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย Clubman มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/Honda Gb250-400/Cover-Dis-Clubman gb.jpg"
     ],
@@ -13670,8 +13556,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูปิเนียมเกรดพิเศษ",
-    "description": "GB400. 8 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย HRC และลาย Clubman มีสองสีให้เลือก. Fits: Honda GB250/400/CB400SS · Material: อลูปิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "GB400. 8 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย HRC และลาย Clubman มีสองสีให้เลือก · ใส่ได้กับ Honda GB250/400/CB400SS · วัสดุ อลูปิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "GB400. 8 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย HRC และลาย Clubman มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
+    "descriptionTh": "GB400. 8 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย HRC และลาย Clubman มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/Honda Gb250-400/Cover-Dis-HRC-cm-gb.jpg"
     ],
@@ -13695,8 +13581,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูปิเนียมเกรดพิเศษ",
-    "description": "GB400. 6 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย HRC มีสองสีให้เลือก. Fits: Honda GB250/400/CB400SS · Material: อลูปิเนียมเกรดพิเศษ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "GB400. 6 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย HRC มีสองสีให้เลือก · ใส่ได้กับ Honda GB250/400/CB400SS · วัสดุ อลูปิเนียมเกรดพิเศษ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "GB400. 6 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย HRC มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
+    "descriptionTh": "GB400. 6 ฝาครอบปิดปั๊มเบรคบน Honda GB แบบลาย HRC มีสองสีให้เลือก ผลิตจากอลูปิเนียมเกรดพิเศษ อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/Honda Gb250-400/Cover-Dis-HRC-gb.jpg"
     ],
@@ -13720,8 +13606,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตลเลสปั๊มขึ้นรูปทั้ง",
-    "description": "GB400.2 บังโคลนหน้า GB แต่ง. Fits: Honda GB250/400/CB400SS · Material: สแตลเลสปั๊มขึ้นรูป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "GB400.2 บังโคลนหน้า GB แต่ง · ใส่ได้กับ Honda GB250/400/CB400SS · วัสดุ สแตลเลสปั๊มขึ้นรูป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "GB400.2 บังโคลนหน้า GB แต่ง ผลิตจากสแตลเลสปั๊มขึ้นรูปทั้งชิ้น ทรงคาเฟ่ ขนาด 450 มม. (แบบยาว)",
+    "descriptionTh": "GB400.2 บังโคลนหน้า GB แต่ง ผลิตจากสแตลเลสปั๊มขึ้นรูปทั้งชิ้น ทรงคาเฟ่ ขนาด 450 มม. (แบบยาว)",
     "images": [
       "/legacy/webgigabike.com/Honda Gb250-400/fenderclubman-cafe.jpg"
     ],
@@ -13745,8 +13631,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตลเลสปั๊มขึ้นรูปทั้ง",
-    "description": "GB400.1 บังโคลนหน้า GB แต่ง. Fits: Honda GB250/400/CB400SS · Material: สแตลเลสปั๊มขึ้นรูป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "GB400.1 บังโคลนหน้า GB แต่ง · ใส่ได้กับ Honda GB250/400/CB400SS · วัสดุ สแตลเลสปั๊มขึ้นรูป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "GB400.1 บังโคลนหน้า GB แต่ง ผลิตจากสแตลเลสปั๊มขึ้นรูปทั้งชิ้น ทรงแทร็กเกอร์ ขนาด 390 มม. (แบบสั้น)",
+    "descriptionTh": "GB400.1 บังโคลนหน้า GB แต่ง ผลิตจากสแตลเลสปั๊มขึ้นรูปทั้งชิ้น ทรงแทร็กเกอร์ ขนาด 390 มม. (แบบสั้น)",
     "images": [
       "/legacy/webgigabike.com/Honda Gb250-400/fenderclubman-trakter.jpg"
     ],
@@ -13770,8 +13656,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อุปกรณ์ตกแต่ง GB250 ใหม่ๆอยากแนะนำ GB250. 2 หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบวี CNC ขนาด 33 mm. (มีสีเงินและสีดำ) ชุดล่ะ. Fits: Honda GB250/400/CB400SS · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง GB250 ใหม่ๆอยากแนะนำ GB250. 2 หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบวี CNC ขนาด 33 mm. (มีสีเงินและสีดำ) ชุดล่ะ · ใส่ได้กับ Honda GB250/400/CB400SS · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง GB250 ใหม่ๆอยากแนะนำ GB250. 2 หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบวี CNC ขนาด 33 mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง GB250 ใหม่ๆอยากแนะนำ GB250. 2 หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบวี CNC ขนาด 33 mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Honda Gb250-400/gb250.jpg",
       "/legacy/webgigabike.com/Triumph/steyheadlight-long.jpg"
@@ -13797,8 +13683,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "GB250. 1 ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 33 mm. คู่ล่ะ. Fits: Honda GB250/400/CB400SS · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "GB250. 1 ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 33 mm. คู่ล่ะ · ใส่ได้กับ Honda GB250/400/CB400SS · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "GB250. 1 ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 33 mm. คู่ล่ะ",
+    "descriptionTh": "GB250. 1 ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม แบบใส่เข้ากับแกนโช๊คหน้า ขนาด 33 mm. คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Honda Gb250-400/Lock-33-mm.jpg"
     ],
@@ -13822,8 +13708,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก",
-    "description": "GB400. 5 น๊อตขันหัวโช๊ค GB. Fits: Honda GB250/400/CB400SS · Material: อลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "GB400. 5 น๊อตขันหัวโช๊ค GB · ใส่ได้กับ Honda GB250/400/CB400SS · วัสดุ อลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "GB400. 5 น๊อตขันหัวโช๊ค GB ผลิตจากอลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก คู่ล่ะ",
+    "descriptionTh": "GB400. 5 น๊อตขันหัวโช๊ค GB ผลิตจากอลูมิเนียมเกรดพิเศษ7075 ด้วยเครื่อง CNCได้มาตรฐานส่งออก คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Honda Gb250-400/nut-chock.jpg"
     ],
@@ -13847,8 +13733,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets 39mm. หูยึดไฟหน้าแต่งอลูมิเนียม Estrella250 แกนโช๊ค 39mm.คู่ล่ะ. Fits: Kawasaki Estrella250/TR250 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets 39mm. หูยึดไฟหน้าแต่งอลูมิเนียม Estrella250 แกนโช๊ค 39mm.คู่ล่ะ · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets 39mm. หูยึดไฟหน้าแต่งอลูมิเนียม Estrella250 แกนโช๊ค 39mm.คู่ล่ะ",
+    "descriptionTh": "Headlight Brackets 39mm. หูยึดไฟหน้าแต่งอลูมิเนียม Estrella250 แกนโช๊ค 39mm.คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/hoochang sr/hoochang-p1.jpg"
     ],
@@ -13872,8 +13758,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อุปกรณ์ตกแต่ง TR250 ใหม่ๆอยากแนะนำ แฮนจับโช๊คสแตนเลส Kawasaki Tr250 รูแกนโช๊ค 37 มม. ราคาคู่ล่ะ. Fits: Kawasaki Estrella250/TR250 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง TR250 ใหม่ๆอยากแนะนำ แฮนจับโช๊คสแตนเลส Kawasaki Tr250 รูแกนโช๊ค 37 มม. ราคาคู่ล่ะ · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง TR250 ใหม่ๆอยากแนะนำ แฮนจับโช๊คสแตนเลส Kawasaki Tr250 รูแกนโช๊ค 37 มม. ราคาคู่ล่ะ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง TR250 ใหม่ๆอยากแนะนำ แฮนจับโช๊คสแตนเลส Kawasaki Tr250 รูแกนโช๊ค 37 มม. ราคาคู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/kawa 250tr/6ff6b48.jpg",
       "/legacy/webgigabike.com/part/hand1.jpg"
@@ -13891,13 +13777,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "Kawasaki KSR110 สเตอร์หลัง Alloy",
     "price": 800,
     "category": "drivetrain",
-    "bikeModels": [],
+    "bikeModels": [
+      "ksr"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Bille สำหรับใส่ KSR110 ใส่โซ่ 415-29,30,31,32,ฟัน",
-    "description": "Kawasaki KSR110 สเตอร์หลัง Alloy. Material: Alloy 7075 CNC Bille สำหรับใส่ KSR110 ใส่โซ่ 415-29,30,31,32,ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Kawasaki KSR110 สเตอร์หลัง Alloy · วัสดุ Alloy 7075 CNC Bille สำหรับใส่ KSR110 ใส่โซ่ 415-29,30,31,32,ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Kawasaki KSR110 สเตอร์หลัง Alloy ผลิตจาก Alloy 7075 CNC Bille สำหรับใส่ KSR110 ใส่โซ่ 415-29,30,31,32,ฟัน ชิ้นละ",
+    "descriptionTh": "Kawasaki KSR110 สเตอร์หลัง Alloy ผลิตจาก Alloy 7075 CNC Bille สำหรับใส่ KSR110 ใส่โซ่ 415-29,30,31,32,ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/kawasaki ksr 110/kawasaki_ksr110_600.jpg",
       "/legacy/webgigabike.com/kawasaki ksr 110/Sprocket415.jpg"
@@ -13905,8 +13793,7 @@ export const legacyProducts: Product[] = [
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -13923,8 +13810,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "อุปกรณ์ตกแต่ง KR150 ใหม่ๆอยากแนะนำ น๊อตขันถ้วยลูกปืนคอแต่ง Kawasaki KR150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก. Fits: Kawasaki KSR110/KR150 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง KR150 ใหม่ๆอยากแนะนำ น๊อตขันถ้วยลูกปืนคอแต่ง Kawasaki KR150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก · ใส่ได้กับ Kawasaki KSR110/KR150 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง KR150 ใหม่ๆอยากแนะนำ น๊อตขันถ้วยลูกปืนคอแต่ง Kawasaki KR150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง KR150 ใหม่ๆอยากแนะนำ น๊อตขันถ้วยลูกปืนคอแต่ง Kawasaki KR150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/kawasaki ksr 110/ksr110-moto-gp.jpg",
       "/legacy/webgigabike.com/KR150/KR150.jpg",
@@ -13951,8 +13838,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 CNC Billet Material imported from Europe",
-    "description": "Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-29-32T & 420-29-32T KSR110 สเตอร์หลัง KSR110. Fits: Kawasaki KSR110/KR150 · Material: Alloy 7075 T651 CNC Billet Material imported from Europe · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-29-32T & 420-29-32T KSR110 สเตอร์หลัง KSR110 · ใส่ได้กับ Kawasaki KSR110/KR150 · วัสดุ Alloy 7075 T651 CNC Billet Material imported from Europe · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-29-32T & 420-29-32T KSR110 สเตอร์หลัง KSR110 ผลิตจาก Alloy 7075 T651 CNC Billet Material imported from Europe พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 415-29-32 ฟัน ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-29-32T & 420-29-32T KSR110 สเตอร์หลัง KSR110 ผลิตจาก Alloy 7075 T651 CNC Billet Material imported from Europe พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 415-29-32 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/kawasaki ksr 110/Sprocket415-hd.jpg"
     ],
@@ -13979,8 +13866,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ แบบใส่สายเบอร์6 ใส่ Ninja400. Fits: Kawasaki Ninja250/300/400 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ แบบใส่สายเบอร์6 ใส่ Ninja400 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ แบบใส่สายเบอร์6 ใส่ Ninja400 ผลิตจาก Alloy CNC Billet มีสี (ดำ/เงิน) ชุดล่ะ",
+    "descriptionTh": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ แบบใส่สายเบอร์6 ใส่ Ninja400 ผลิตจาก Alloy CNC Billet มีสี (ดำ/เงิน) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Adapter-Oil-1.jpg"
     ],
@@ -14007,8 +13894,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ แบบใส่ห่วง M14 ใส่ Ninja400. Fits: Kawasaki Ninja250/300/400 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ แบบใส่ห่วง M14 ใส่ Ninja400 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ แบบใส่ห่วง M14 ใส่ Ninja400 ผลิตจาก Alloy CNC Billet มีสี (ดำ/เงิน) ชุดล่ะ",
+    "descriptionTh": "อแดปเตอร์กรองน้ำมันเครื่องสำหรับต่อกับออยล์คูลเลอร์ แบบใส่ห่วง M14 ใส่ Ninja400 ผลิตจาก Alloy CNC Billet มีสี (ดำ/เงิน) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Kawasaki w650/Adapter-Oil-bolt.jpg"
     ],
@@ -14032,8 +13919,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดบู๊ทล้อหน้าและหลัง ใส่ Estrella250 รุ่นดิสเบรค ใส่เข้ากับล้อเดิมได้เลย. Fits: Kawasaki Estrella250/TR250 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดบู๊ทล้อหน้าและหลัง ใส่ Estrella250 รุ่นดิสเบรค ใส่เข้ากับล้อเดิมได้เลย · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดบู๊ทล้อหน้าและหลัง ใส่ Estrella250 รุ่นดิสเบรค ใส่เข้ากับล้อเดิมได้เลย ผลิตจาก Alloy 6061 CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบาอย่างกับนุ่น สามารถกันรอยได้ดีและช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา ฮาร์ท) ชุดละ",
+    "descriptionTh": "ชุดบู๊ทล้อหน้าและหลัง ใส่ Estrella250 รุ่นดิสเบรค ใส่เข้ากับล้อเดิมได้เลย ผลิตจาก Alloy 6061 CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบาอย่างกับนุ่น สามารถกันรอยได้ดีและช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา ฮาร์ท) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/kawasaki-Estrella/Bootweel-front-estrela.jpg",
       "/legacy/webgigabike.com/kawasaki-Estrella/Bootwheel-rear-estrela.jpg",
@@ -14059,8 +13946,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet ใสแทนของเดิม่ได้เลยไม่ต้องดัดแปลง",
-    "description": "ขายึดล๊อคฝาดรั๊มเบรคหลังแต่ง สำหรับใส่ Eetrella250 Drum brake. Fits: Kawasaki Estrella250/TR250 · Material: Alloy 6061 CNC Billet ใสแทนของเดิม่ได้เลยไม่ต้องดัดแปลง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดล๊อคฝาดรั๊มเบรคหลังแต่ง สำหรับใส่ Eetrella250 Drum brake · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ Alloy 6061 CNC Billet ใสแทนของเดิม่ได้เลยไม่ต้องดัดแปลง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดล๊อคฝาดรั๊มเบรคหลังแต่ง สำหรับใส่ Eetrella250 Drum brake ผลิตจาก Alloy 6061 CNC Billet ใสแทนของเดิม่ได้เลยไม่ต้องดัดแปลง ชิ้นล่ะ",
+    "descriptionTh": "ขายึดล๊อคฝาดรั๊มเบรคหลังแต่ง สำหรับใส่ Eetrella250 Drum brake ผลิตจาก Alloy 6061 CNC Billet ใสแทนของเดิม่ได้เลยไม่ต้องดัดแปลง ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/kawasaki-Estrella/Lock-cocer-drumbreck.jpg"
     ],
@@ -14084,8 +13971,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet",
-    "description": "น็อตขันปิดที่เติมน้ำมันเครื่อง Estrella250. Fits: Kawasaki Estrella250/TR250 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตขันปิดที่เติมน้ำมันเครื่อง Estrella250 · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตขันปิดที่เติมน้ำมันเครื่อง Estrella250 ผลิตจาก Alloy 6061 CNC Billet มีสี (ส้ม และ เงิน) อันล่ะ",
+    "descriptionTh": "น็อตขันปิดที่เติมน้ำมันเครื่อง Estrella250 ผลิตจาก Alloy 6061 CNC Billet มีสี (ส้ม และ เงิน) อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/kawasaki-Estrella/Nut0il.jpg"
     ],
@@ -14109,8 +13996,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "น๊อตขันแผงคอแต่ง KR 150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก. Fits: Kawasaki KSR110/KR150 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแผงคอแต่ง KR 150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก · ใส่ได้กับ Kawasaki KSR110/KR150 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแผงคอแต่ง KR 150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "น๊อตขันแผงคอแต่ง KR 150 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/KR150/bolt-KR.jpg"
     ],
@@ -14127,13 +14014,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "Kawasaki KR150 Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-33-",
     "price": 1000,
     "category": "drivetrain",
-    "bikeModels": [],
+    "bikeModels": [
+      "ksr"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว",
-    "description": "Kawasaki KR150 Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-33-35T - KR150 สเตอร์หลัง KR150. Material: Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Kawasaki KR150 Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-33-35T - KR150 สเตอร์หลัง KR150 · วัสดุ Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Kawasaki KR150 Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-33-35T - KR150 สเตอร์หลัง KR150 ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 415-33-35 ฟัน ชิ้นละ",
+    "descriptionTh": "Kawasaki KR150 Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-33-35T - KR150 สเตอร์หลัง KR150 ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 415-33-35 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/KR150/KR150.jpg",
       "/legacy/webgigabike.com/KR150/Sprocket-kr150-hart.jpg"
@@ -14141,8 +14030,7 @@ export const legacyProducts: Product[] = [
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -14157,8 +14045,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Yamaha M-Slaz150 Yamaha M-Slaz ใส่โซ่ 415- 46 , 47 , 48 ฟัน =. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Yamaha M-Slaz150 Yamaha M-Slaz ใส่โซ่ 415- 46 , 47 , 48 ฟัน = · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Yamaha M-Slaz150 Yamaha M-Slaz ใส่โซ่ 415- 46 , 47 , 48 ฟัน =",
+    "descriptionTh": "Yamaha M-Slaz150 Yamaha M-Slaz ใส่โซ่ 415- 46 , 47 , 48 ฟัน =",
     "images": [
       "/legacy/webgigabike.com/KR150/M-SLAZ-Edition.jpg",
       "/legacy/webgigabike.com/sprocket all/m-slaz-2.jpg"
@@ -14184,8 +14072,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Honda RS125 สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda RS125 ใส่โซ่ 415-28-33 ฟัน. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Honda RS125 สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda RS125 ใส่โซ่ 415-28-33 ฟัน · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Honda RS125 สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda RS125 ใส่โซ่ 415-28-33 ฟัน ชิ้นละ",
+    "descriptionTh": "Honda RS125 สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda RS125 ใส่โซ่ 415-28-33 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/KR150/rs125r.jpg",
       "/legacy/webgigabike.com/2T/Sprocket-RS125-415.jpg"
@@ -14210,8 +14098,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415-13,14 ฟัน",
-    "description": "สเตอร์หน้าแต่ง KR150 Steel CNC Billet Hardened. Fits: Kawasaki KSR110/KR150 · Material: เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415-13,14 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้าแต่ง KR150 Steel CNC Billet Hardened · ใส่ได้กับ Kawasaki KSR110/KR150 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415-13,14 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้าแต่ง KR150 Steel CNC Billet Hardened ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415-13,14 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หน้าแต่ง KR150 Steel CNC Billet Hardened ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415-13,14 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/KR150/Sprocket-Front-kr150-415.jpg"
     ],
@@ -14235,8 +14123,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว",
-    "description": "Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-33-35T - KR150 สเตอร์หลัง KR150. Fits: Kawasaki KSR110/KR150 · Material: Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-33-35T - KR150 สเตอร์หลัง KR150 · ใส่ได้กับ Kawasaki KSR110/KR150 · วัสดุ Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-33-35T - KR150 สเตอร์หลัง KR150 ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 415-33-35 ฟัน ชิ้นละ",
+    "descriptionTh": "Sprocket Aluminum Alloy 7075 Alloy Hard Anodize 415-33-35T - KR150 สเตอร์หลัง KR150 ผลิตจาก Alloy 7075 T651 CNC Billet ลายใหม่เบาหวิว พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 415-33-35 ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/KR150/Sprocket-kr150-hart.jpg"
     ],
@@ -14244,31 +14132,6 @@ export const legacyProducts: Product[] = [
     "published": false,
     "reviewReasons": [
       "no_code"
-    ]
-  },
-  {
-    "id": "lg-krurngsr640",
-    "code": "",
-    "name": "หน้าแรก สินค้า เว็บบอร์ด ทริป SR Thailand ซื้อขายแลกเปลี่ยน วิธีการชํา",
-    "nameTh": "หน้าแรก สินค้า เว็บบอร์ด ทริป SR Thailand ซื้อขายแลกเปลี่ยน วิธีการชํา",
-    "price": 0,
-    "category": "drivetrain",
-    "bikeModels": [],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "",
-    "description": "หน้าแรก สินค้า เว็บบอร์ด ทริป SR Thailand ซื้อขายแลกเปลี่ยน วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า เปิดร้านเมื่อ ปรับปรุงร้านเมื่อ สินค้าทั้งหมด หมวดหมู่สินค้า/บริการ : YAMAHA : SR 400 ,500 (New) : SRX 400-600 : XS650,TX650 : XT,TT500 : R15,XSR155,XMAX300 : R3,MT03,R25 : R1,R6,R7 (New) : HONDA : CB750 k0-k7 : GB250,GB400,CB400ss : NC30 ,NC35 ,CB1300 : CBR250rr,CBR250-300,CBR150R : Monkey50,125,MSX125,DAX125 : NSR150sp ,Dash125 & 2T : CBR600RR ,CBR1000RR : KAWASAKI : W650 , W800 : Estrella250, TR250 : KSR110, KR150 : Ninja ZX250R,Ninja250,300,400 : ZX10RR , : SUZUKI : Temtepr 400 : Vorty250 : Triumph : Truxton 900,T100 Classics : Sret twin ,New T100 ,T120 : BMW : S1000RR : Royal Enfield : GT 535 ,Interceptor 650 : Ducati : Monster 795/796/Hyper821 : Panigale V4R : : Harlay Davidson : Sportster 883-1200 : : Stallions : Centaur 150 : KTM : RC390 : Ohlins FG620 & FG433 : Yamaha sr ในฝันของคุณ : Parts Circuit & Sprocket Alloys : Giga Bike Racing Tame : Payment วิธีการชำระเงิน : Contac ติดต่อเรา English / Japanese บริการ รับออกแบบตกแต่ง SR และรับผลิตอะไหล่ตามแบบทุกรุ่นทุกยี่ห้อตามที่คุณต้องการ โทร.081-424-9407 , Line id: thaigigabike ,E-mail aonggb@yahoo.com ชิ้นงานทุกชิ้นเราออกแบบและผลิตเองทุกชิ้นครับ OPEN 9.00 CLOSE 20.00. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หน้าแรก สินค้า เว็บบอร์ด ทริป SR Thailand ซื้อขายแลกเปลี่ยน วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า เปิดร้านเมื่อ ปรับปรุงร้านเมื่อ สินค้าทั้งหมด หมวดหมู่สินค้า/บริการ : YAMAHA : SR 400 ,500 (New) : SRX 400-600 : XS650,TX650 : XT,TT500 : R15,XSR155,XMAX300 : R3,MT03,R25 : R1,R6,R7 (New) : HONDA : CB750 k0-k7 : GB250,GB400,CB400ss : NC30 ,NC35 ,CB1300 : CBR250rr,CBR250-300,CBR150R : Monkey50,125,MSX125,DAX125 : NSR150sp ,Dash125 & 2T : CBR600RR ,CBR1000RR : KAWASAKI : W650 , W800 : Estrella250, TR250 : KSR110, KR150 : Ninja ZX250R,Ninja250,300,400 : ZX10RR , : SUZUKI : Temtepr 400 : Vorty250 : Triumph : Truxton 900,T100 Classics : Sret twin ,New T100 ,T120 : BMW : S1000RR : Royal Enfield : GT 535 ,Interceptor 650 : Ducati : Monster 795/796/Hyper821 : Panigale V4R : : Harlay Davidson : Sportster 883-1200 : : Stallions : Centaur 150 : KTM : RC390 : Ohlins FG620 & FG433 : Yamaha sr ในฝันของคุณ : Parts Circuit & Sprocket Alloys : Giga Bike Racing Tame : Payment วิธีการชำระเงิน : Contac ติดต่อเรา English / Japanese บริการ รับออกแบบตกแต่ง SR และรับผลิตอะไหล่ตามแบบทุกรุ่นทุกยี่ห้อตามที่คุณต้องการ โทร.081-424-9407 , Line id: thaigigabike ,E-mail aonggb@yahoo.com ชิ้นงานทุกชิ้นเราออกแบบและผลิตเองทุกชิ้นครับ OPEN 9.00 CLOSE 20.00 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [
-      "/legacy/webgigabike.com/krurngsr640.jpg"
-    ],
-    "featured": false,
-    "published": false,
-    "reviewReasons": [
-      "no_code",
-      "no_price",
-      "no_fitment"
     ]
   },
   {
@@ -14285,8 +14148,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "บู๊ทรองน๊อตล็อกถังน้ำมันด้านข้าง KTM RC390 Alloy CNC Billet คู่ละ 350 บู๊ทรองน๊อตบังเสตอร์หน้า KTM RC390 Alloy CNC Billet. Fits: KTM RC390 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทรองน๊อตล็อกถังน้ำมันด้านข้าง KTM RC390 Alloy CNC Billet คู่ละ 350 บู๊ทรองน๊อตบังเสตอร์หน้า KTM RC390 Alloy CNC Billet · ใส่ได้กับ KTM RC390 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บู๊ทรองน๊อตล็อกถังน้ำมันด้านข้าง KTM RC390 Alloy CNC Billet คู่ละ 350 บู๊ทรองน๊อตบังเสตอร์หน้า KTM RC390 Alloy CNC Billet ชิ้นละ",
+    "descriptionTh": "บู๊ทรองน๊อตล็อกถังน้ำมันด้านข้าง KTM RC390 Alloy CNC Billet คู่ละ 350 บู๊ทรองน๊อตบังเสตอร์หน้า KTM RC390 Alloy CNC Billet ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/KTM/Boottang-rc390.jpg",
       "/legacy/webgigabike.com/KTM/Bootcover-sprocket-front-rc390.jpg"
@@ -14311,8 +14174,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดกันสะบัด KTM RC390 ใส่โช๊คขนาด 51mm. อันล่ะ. Fits: KTM RC390 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดกันสะบัด KTM RC390 ใส่โช๊คขนาด 51mm. อันล่ะ · ใส่ได้กับ KTM RC390 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดกันสะบัด KTM RC390 ใส่โช๊คขนาด 51mm. อันล่ะ",
+    "descriptionTh": "ขายึดกันสะบัด KTM RC390 ใส่โช๊คขนาด 51mm. อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/KTM/Cam51mm-RC390.jpg"
     ],
@@ -14336,8 +14199,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-14,16 ฟัน",
-    "description": "สเตอร์หน้า KTM RC390 CNC Billet. Fits: KTM RC390 · Material: เหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-14,16 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า KTM RC390 CNC Billet · ใส่ได้กับ KTM RC390 · วัสดุ เหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-14,16 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า KTM RC390 CNC Billet ผลิตจากเหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-14,16 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หน้า KTM RC390 CNC Billet ผลิตจากเหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-14,16 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/KTM/Front-sprocket-520.jpg"
     ],
@@ -14361,8 +14224,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น็อตแผงคอบน KTM RC390 Mx1.0. Fits: KTM RC390 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตแผงคอบน KTM RC390 Mx1.0 · ใส่ได้กับ KTM RC390 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตแผงคอบน KTM RC390 Mx1.0 ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรง น้ำหนักเพียง g. (มีสี ฮาร์ด) อันล่ะ",
+    "descriptionTh": "น็อตแผงคอบน KTM RC390 Mx1.0 ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรง น้ำหนักเพียง g. (มีสี ฮาร์ด) อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/KTM/Nuttop-rc390.jpg"
     ],
@@ -14386,8 +14249,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "สปูนขึ้นสแตนล้อหลัง KTM RC390 น็อต M10x1.25. Fits: KTM RC390 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สปูนขึ้นสแตนล้อหลัง KTM RC390 น็อต M10x1.25 · ใส่ได้กับ KTM RC390 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สปูนขึ้นสแตนล้อหลัง KTM RC390 น็อต M10x1.25 ผลิตจาก Alloy CNC Billet คู่ละ",
+    "descriptionTh": "สปูนขึ้นสแตนล้อหลัง KTM RC390 น็อต M10x1.25 ผลิตจาก Alloy CNC Billet คู่ละ",
     "images": [
       "/legacy/webgigabike.com/KTM/Spoon-RC390.jpg"
     ],
@@ -14411,8 +14274,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet Hard Anodize มีขนาด 415 - 51/52 ฟัน",
-    "description": "สเตอร์หลังแต่ง Alloy KTM RC390. Fits: KTM RC390 · Material: Alloy CNC Billet Hard Anodize มีขนาด 415 - 51/52 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Alloy KTM RC390 · ใส่ได้กับ KTM RC390 · วัสดุ Alloy CNC Billet Hard Anodize มีขนาด 415 - 51/52 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Alloy KTM RC390 ผลิตจาก Alloy CNC Billet Hard Anodize มีขนาด 415 - 51/52 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Alloy KTM RC390 ผลิตจาก Alloy CNC Billet Hard Anodize มีขนาด 415 - 51/52 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/KTM/Sprocket-Duke-415.jpg"
     ],
@@ -14436,8 +14299,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet Hard Anodize มีขนาด 520 - 40-45 ฟัน",
-    "description": "สเตอร์หลังแต่ง Alloy KTM RC390. Fits: KTM RC390 · Material: Alloy CNC Billet Hard Anodize มีขนาด 520 - 40-45 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Alloy KTM RC390 · ใส่ได้กับ KTM RC390 · วัสดุ Alloy CNC Billet Hard Anodize มีขนาด 520 - 40-45 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Alloy KTM RC390 ผลิตจาก Alloy CNC Billet Hard Anodize มีขนาด 520 - 40-45 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Alloy KTM RC390 ผลิตจาก Alloy CNC Billet Hard Anodize มีขนาด 520 - 40-45 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/KTM/Sprocket-RC390-520.jpg"
     ],
@@ -14461,8 +14324,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนล่างแต่ง KTM RC390 รุ่นโช๊คหัวกลับขนาด 51mm. มีออฟเซ็ดโช๊ค 30 & 40 องศา. Fits: KTM RC390 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่างแต่ง KTM RC390 รุ่นโช๊คหัวกลับขนาด 51mm. มีออฟเซ็ดโช๊ค 30 & 40 องศา · ใส่ได้กับ KTM RC390 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่างแต่ง KTM RC390 รุ่นโช๊คหัวกลับขนาด 51mm. มีออฟเซ็ดโช๊ค 30 & 40 องศา ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว น้ำหนักเพียง 1.63 kg. (มีสี ดำและฮาร์ด) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนล่างแต่ง KTM RC390 รุ่นโช๊คหัวกลับขนาด 51mm. มีออฟเซ็ดโช๊ค 30 & 40 องศา ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว น้ำหนักเพียง 1.63 kg. (มีสี ดำและฮาร์ด) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/KTM/Topyock-rc390-40-1.jpg",
       "/legacy/webgigabike.com/KTM/Topyock-rc390-40-2.jpg",
@@ -14488,8 +14351,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet สำหรับใส่โซ่ 420-29,30,31,32,33,34,35ฟัน",
-    "description": "สเตอร์หลังแต่งอลูมิเนียม MSX125. Fits: Honda Monkey/MSX125/DAX125 · Material: Alloy 7075 CNC Billet สำหรับใส่โซ่ 420-29,30,31,32,33,34,35ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่งอลูมิเนียม MSX125 · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ Alloy 7075 CNC Billet สำหรับใส่โซ่ 420-29,30,31,32,33,34,35ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่งอลูมิเนียม MSX125 ผลิตจาก Alloy 7075 CNC Billet สำหรับใส่โซ่ 420-29,30,31,32,33,34,35ฟัน ชิ้นละ",
+    "descriptionTh": "สเตอร์หลังแต่งอลูมิเนียม MSX125 ผลิตจาก Alloy 7075 CNC Billet สำหรับใส่โซ่ 420-29,30,31,32,33,34,35ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/MSX/100_2605.jpg"
     ],
@@ -14514,8 +14377,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดบู๊ทล้อหน้าและล้อหลังแต่ง Monkey125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 324.5 กรัม บู๊ทแต่งหนักเพียง 115 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท). Fits: Honda Monkey/MSX125/DAX125 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดบู๊ทล้อหน้าและล้อหลังแต่ง Monkey125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 324.5 กรัม บู๊ทแต่งหนักเพียง 115 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดบู๊ทล้อหน้าและล้อหลังแต่ง Monkey125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 324.5 กรัม บู๊ทแต่งหนักเพียง 115 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) ชุดละ",
+    "descriptionTh": "ชุดบู๊ทล้อหน้าและล้อหลังแต่ง Monkey125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 324.5 กรัม บู๊ทแต่งหนักเพียง 115 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/MSX/Boot-weel-monkey125.jpg"
     ],
@@ -14540,8 +14403,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรกหน้า Brembo 2 Port รุ่นผีเสื้อเก่าเท่านั้น จานเดิม 220 มิล ใส่ Monkey125. Fits: Honda Monkey/MSX125/DAX125 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรกหน้า Brembo 2 Port รุ่นผีเสื้อเก่าเท่านั้น จานเดิม 220 มิล ใส่ Monkey125 · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรกหน้า Brembo 2 Port รุ่นผีเสื้อเก่าเท่านั้น จานเดิม 220 มิล ใส่ Monkey125 ผลิตจาก Alloy CNC Billet แข็งแรงจับเต็มใบจานและจานกลางปั๊ม มี 2 สี (ดำ- เงิน) ชิ้นละ",
+    "descriptionTh": "ขายึดปั๊มเบรกหน้า Brembo 2 Port รุ่นผีเสื้อเก่าเท่านั้น จานเดิม 220 มิล ใส่ Monkey125 ผลิตจาก Alloy CNC Billet แข็งแรงจับเต็มใบจานและจานกลางปั๊ม มี 2 สี (ดำ- เงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/MSX/Caliper-Front-Mokey-2pot.jpg"
     ],
@@ -14565,8 +14428,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรกหลัง Brembo 2 Port จานเดิม 190 มิล แบบปั๊มห้อยล่าง ใส่ Monkey125. Fits: Honda Monkey/MSX125/DAX125 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรกหลัง Brembo 2 Port จานเดิม 190 มิล แบบปั๊มห้อยล่าง ใส่ Monkey125 · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรกหลัง Brembo 2 Port จานเดิม 190 มิล แบบปั๊มห้อยล่าง ใส่ Monkey125 ผลิตจาก Alloy CNC Billet แข็งแรงจับเต็มใบจานและจานกลางปั๊ม มี 2 สี (ดำ- เงิน) ชิ้นละ",
+    "descriptionTh": "ขายึดปั๊มเบรกหลัง Brembo 2 Port จานเดิม 190 มิล แบบปั๊มห้อยล่าง ใส่ Monkey125 ผลิตจาก Alloy CNC Billet แข็งแรงจับเต็มใบจานและจานกลางปั๊ม มี 2 สี (ดำ- เงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/MSX/Caliper-Rear-Mokey-Dow.jpg"
     ],
@@ -14590,8 +14453,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรกหลัง Brembo 2 Port จานเดิม 190 มิล แบบปั๊มด้านบน ใส่ Monkey125. Fits: Honda Monkey/MSX125/DAX125 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรกหลัง Brembo 2 Port จานเดิม 190 มิล แบบปั๊มด้านบน ใส่ Monkey125 · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรกหลัง Brembo 2 Port จานเดิม 190 มิล แบบปั๊มด้านบน ใส่ Monkey125 ผลิตจาก Alloy CNC Billet แข็งแรงจับเต็มใบจานและจานกลางปั๊ม มี 2 สี (ดำ- เงิน) ชิ้นละ",
+    "descriptionTh": "ขายึดปั๊มเบรกหลัง Brembo 2 Port จานเดิม 190 มิล แบบปั๊มด้านบน ใส่ Monkey125 ผลิตจาก Alloy CNC Billet แข็งแรงจับเต็มใบจานและจานกลางปั๊ม มี 2 สี (ดำ- เงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/MSX/Caliper-Rear-Mokey-top.jpg"
     ],
@@ -14615,8 +14478,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet - Materials Europe ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง Type-1 ใส่ Honda Monkey125 & MSX125. Fits: Honda Monkey/MSX125/DAX125 · Material: Alloy CNC Billet - Materials Europe · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง Type-1 ใส่ Honda Monkey125 & MSX125 · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ Alloy CNC Billet - Materials Europe · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง Type-1 ใส่ Honda Monkey125 & MSX125 ผลิตจาก Alloy CNC Billet - Materials Europe ทั้งชุดคงทนแข็งแรง มี สีดำ/สีเงิน ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง Type-1 ใส่ Honda Monkey125 & MSX125 ผลิตจาก Alloy CNC Billet - Materials Europe ทั้งชุดคงทนแข็งแรง มี สีดำ/สีเงิน ชุดละ",
     "images": [
       "/legacy/webgigabike.com/MSX/Foot-msx-bk.jpg",
       "/legacy/webgigabike.com/MSX/Foot-msx.jpg"
@@ -14641,8 +14504,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet - Materials Europe ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง Type-2 ใส่ Honda Monkey125 & MSX125. Fits: Honda Monkey/MSX125/DAX125 · Material: Alloy CNC Billet - Materials Europe · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง Type-2 ใส่ Honda Monkey125 & MSX125 · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ Alloy CNC Billet - Materials Europe · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง Type-2 ใส่ Honda Monkey125 & MSX125 ผลิตจาก Alloy CNC Billet - Materials Europe ทั้งชุดคงทนแข็งแรง มี สีเงิน-สีดำ ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง Type-2 ใส่ Honda Monkey125 & MSX125 ผลิตจาก Alloy CNC Billet - Materials Europe ทั้งชุดคงทนแข็งแรง มี สีเงิน-สีดำ ชุดละ",
     "images": [
       "/legacy/webgigabike.com/MSX/Foot-msx-t2-sl.jpg"
     ],
@@ -14666,8 +14529,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อุปกรณ์ตกแต่ง MONKEY125 ใหม่ๆอยากแนะนำ ชุดแผงคอบนล่างแต่ง Monkey125 โช๊คหัวกลับองศาเดิม ใส่กุญแจเดิมไมล์เดิมตุ๊กตาเดิมและโครงไฟหน้าเดิมได้เลย. Fits: Honda Monkey/MSX125/DAX125 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง MONKEY125 ใหม่ๆอยากแนะนำ ชุดแผงคอบนล่างแต่ง Monkey125 โช๊คหัวกลับองศาเดิม ใส่กุญแจเดิมไมล์เดิมตุ๊กตาเดิมและโครงไฟหน้าเดิมได้เลย · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง MONKEY125 ใหม่ๆอยากแนะนำ ชุดแผงคอบนล่างแต่ง Monkey125 โช๊คหัวกลับองศาเดิม ใส่กุญแจเดิมไมล์เดิมตุ๊กตาเดิมและโครงไฟหน้าเดิมได้เลย ผลิตจาก Alloy CNC Billet สวยงามแข็งแรง เบากว่าของเดิม 1.1 kg. (มี สีเงิน สีดำ สีฮาร์ด) ชุดล่ะ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง MONKEY125 ใหม่ๆอยากแนะนำ ชุดแผงคอบนล่างแต่ง Monkey125 โช๊คหัวกลับองศาเดิม ใส่กุญแจเดิมไมล์เดิมตุ๊กตาเดิมและโครงไฟหน้าเดิมได้เลย ผลิตจาก Alloy CNC Billet สวยงามแข็งแรง เบากว่าของเดิม 1.1 kg. (มี สีเงิน สีดำ สีฮาร์ด) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/MSX/Honda-Monkey-125.jpg",
       "/legacy/webgigabike.com/MSX/Top-set-mk125-si.jpg",
@@ -14694,8 +14557,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเตอร์หลังแต่ง Monkey50 งาน Alloy 7075 CNC Billet Hard Anodize มีขนาด 420-24,25,26,27,28,29,30,31 ฟัน & 415-24,25,26,27,28,29,30 ฟัน. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Monkey50 งาน Alloy 7075 CNC Billet Hard Anodize มีขนาด 420-24,25,26,27,28,29,30,31 ฟัน & 415-24,25,26,27,28,29,30 ฟัน · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Monkey50 งาน Alloy 7075 CNC Billet Hard Anodize มีขนาด 420-24,25,26,27,28,29,30,31 ฟัน & 415-24,25,26,27,28,29,30 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Monkey50 งาน Alloy 7075 CNC Billet Hard Anodize มีขนาด 420-24,25,26,27,28,29,30,31 ฟัน & 415-24,25,26,27,28,29,30 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/MSX/Honda-Monkey.jpg",
       "/legacy/webgigabike.com/MSX/sprocket-monkey-ti.jpg"
@@ -14721,8 +14584,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet - Materials Europe ทั้ง",
-    "description": "ดุมเสตอร์แต่งใส่ Monkey125 4G-M8 & MSX125 แบบใต่เรียบ. Fits: Honda Monkey/MSX125/DAX125 · Material: Alloy CNC Billet - Materials Europe · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ดุมเสตอร์แต่งใส่ Monkey125 4G-M8 & MSX125 แบบใต่เรียบ · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ Alloy CNC Billet - Materials Europe · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ดุมเสตอร์แต่งใส่ Monkey125 4G-M8 & MSX125 แบบใต่เรียบ ผลิตจาก Alloy CNC Billet - Materials Europe ทั้งชุดคงทนแข็งแรง มี สีเงิน-สีฮาร์ด ชุดละ",
+    "descriptionTh": "ดุมเสตอร์แต่งใส่ Monkey125 4G-M8 & MSX125 แบบใต่เรียบ ผลิตจาก Alloy CNC Billet - Materials Europe ทั้งชุดคงทนแข็งแรง มี สีเงิน-สีฮาร์ด ชุดละ",
     "images": [
       "/legacy/webgigabike.com/MSX/Hub-sprocket-1.jpg",
       "/legacy/webgigabike.com/MSX/Hub-sprocket-2.jpg",
@@ -14749,8 +14612,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet - Materials Europe ทั้ง",
-    "description": "ดุมเสตอร์แต่งใส่ Monkey125 4G-M8 & MSX125 แบบหลุม. Fits: Honda Monkey/MSX125/DAX125 · Material: Alloy CNC Billet - Materials Europe · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ดุมเสตอร์แต่งใส่ Monkey125 4G-M8 & MSX125 แบบหลุม · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ Alloy CNC Billet - Materials Europe · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ดุมเสตอร์แต่งใส่ Monkey125 4G-M8 & MSX125 แบบหลุม ผลิตจาก Alloy CNC Billet - Materials Europe ทั้งชุดคงทนแข็งแรง มี สีเงิน-สีฮาร์ด ชุดละ",
+    "descriptionTh": "ดุมเสตอร์แต่งใส่ Monkey125 4G-M8 & MSX125 แบบหลุม ผลิตจาก Alloy CNC Billet - Materials Europe ทั้งชุดคงทนแข็งแรง มี สีเงิน-สีฮาร์ด ชุดละ",
     "images": [
       "/legacy/webgigabike.com/MSX/Hub-sprocket-h-2.jpg",
       "/legacy/webgigabike.com/MSX/Hub-sprocket-3.jpg"
@@ -14776,8 +14639,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อุปกรณ์ตกแต่ง MSX125 ใหม่ๆอยากแนะนำ ชุดบู๊ทล้อหน้าและล้อหลังแต่ง MSX125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 330.5 กรัม บู๊ทแต่งหนักเพียง 118 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท). Fits: Honda Monkey/MSX125/DAX125 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง MSX125 ใหม่ๆอยากแนะนำ ชุดบู๊ทล้อหน้าและล้อหลังแต่ง MSX125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 330.5 กรัม บู๊ทแต่งหนักเพียง 118 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง MSX125 ใหม่ๆอยากแนะนำ ชุดบู๊ทล้อหน้าและล้อหลังแต่ง MSX125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 330.5 กรัม บู๊ทแต่งหนักเพียง 118 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) ชุดละ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง MSX125 ใหม่ๆอยากแนะนำ ชุดบู๊ทล้อหน้าและล้อหลังแต่ง MSX125 แบบเรชซิ่งในสนาม ใส่เข้ากับล้อเดิมได้เลยโดยไม่ต้องแกะซีลกันน้ำกันฝุ่นออกบู๊ทไม่สามารถหลุดออกจากเบ้าลูกปืนล้อเองได้เลย แม้จะเอียงล้อหรือวางล้อแบบไหนบู๊ทล้อก็ไม่สามารถหลุดออกมาได้ ทำให้เราเซอร์วิสรถได้ง่ายและรวดเร็วมากขึ้น ผลิตจาก Alloy CNC Billet และชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบามาก (ของเดิมติดรถหนัก 330.5 กรัม บู๊ทแต่งหนักเพียง 118 กรัม) และช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/MSX/msx125.jpg",
       "/legacy/webgigabike.com/MSX/Boot-weel-msx.jpg",
@@ -14805,8 +14668,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Honda NSR50 สเตอร์หลัง Honda NSR50,80 & NS1 Alloy 7075 Cnc Billet ใส่โซ่ 415-29-30,31,32 ฟัน และใส่โซ่ 420-29,30,31ฟัน. Fits: Honda NSR150SP/2T · Honda Monkey/MSX125/DAX125 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Honda NSR50 สเตอร์หลัง Honda NSR50,80 & NS1 Alloy 7075 Cnc Billet ใส่โซ่ 415-29-30,31,32 ฟัน และใส่โซ่ 420-29,30,31ฟัน · ใส่ได้กับ Honda NSR150SP/2T · Honda Monkey/MSX125/DAX125 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Honda NSR50 สเตอร์หลัง Honda NSR50,80 & NS1 Alloy 7075 Cnc Billet ใส่โซ่ 415-29-30,31,32 ฟัน และใส่โซ่ 420-29,30,31ฟัน ชิ้นละ",
+    "descriptionTh": "Honda NSR50 สเตอร์หลัง Honda NSR50,80 & NS1 Alloy 7075 Cnc Billet ใส่โซ่ 415-29-30,31,32 ฟัน และใส่โซ่ 420-29,30,31ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/MSX/Nsr50.jpg",
       "/legacy/webgigabike.com/MSX/sprocket-nsr50-420-29.jpg"
@@ -14831,8 +14694,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตแกนล้อหน้าและหลังแบบหัวเฟือง MSX125 น็อตเบอร์ M12x1.25 และสามารถใส่รุ่นอื่นๆได้ (ของเดิมติดรถหนัก 20 กรัม น็อตแต่งหนักเพียง 9 กรัม). Fits: Honda Monkey/MSX125/DAX125 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตแกนล้อหน้าและหลังแบบหัวเฟือง MSX125 น็อตเบอร์ M12x1.25 และสามารถใส่รุ่นอื่นๆได้ (ของเดิมติดรถหนัก 20 กรัม น็อตแต่งหนักเพียง 9 กรัม) · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตแกนล้อหน้าและหลังแบบหัวเฟือง MSX125 น็อตเบอร์ M12x1.25 และสามารถใส่รุ่นอื่นๆได้ (ของเดิมติดรถหนัก 20 กรัม น็อตแต่งหนักเพียง 9 กรัม) ผลิตจาก Alloy CNC Billet (มีสีดำฮาร์ด-สีเทาฮาร์ด) ชิ้นล่ะ",
+    "descriptionTh": "น๊อตแกนล้อหน้าและหลังแบบหัวเฟือง MSX125 น็อตเบอร์ M12x1.25 และสามารถใส่รุ่นอื่นๆได้ (ของเดิมติดรถหนัก 20 กรัม น็อตแต่งหนักเพียง 9 กรัม) ผลิตจาก Alloy CNC Billet (มีสีดำฮาร์ด-สีเทาฮาร์ด) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/MSX/Nut-Monkey-m12x125.jpg"
     ],
@@ -14856,8 +14719,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet - Materials Europe ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงถนน Type-3 ใส่ Honda Monkey125 & MSX125. Fits: Honda Monkey/MSX125/DAX125 · Material: Alloy CNC Billet - Materials Europe · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงถนน Type-3 ใส่ Honda Monkey125 & MSX125 · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ Alloy CNC Billet - Materials Europe · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงถนน Type-3 ใส่ Honda Monkey125 & MSX125 ผลิตจาก Alloy CNC Billet - Materials Europe ทั้งชุดคงทนแข็งแรง มี สีเงิน-สีดำ ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงถนน Type-3 ใส่ Honda Monkey125 & MSX125 ผลิตจาก Alloy CNC Billet - Materials Europe ทั้งชุดคงทนแข็งแรง มี สีเงิน-สีดำ ชุดละ",
     "images": [
       "/legacy/webgigabike.com/MSX/Raerset-monkey125-silver.jpg",
       "/legacy/webgigabike.com/MSX/Raerset-monkey125-bk.jpg"
@@ -14882,8 +14745,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415-13-15 ฟัน",
-    "description": "สเตอร์หน้าแต่ง Monkey125 Steel CNC Billet Hardened. Fits: Honda Monkey/MSX125/DAX125 · Material: เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415-13-15 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้าแต่ง Monkey125 Steel CNC Billet Hardened · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415-13-15 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้าแต่ง Monkey125 Steel CNC Billet Hardened ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415-13-15 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หน้าแต่ง Monkey125 Steel CNC Billet Hardened ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415-13-15 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/MSX/sprocket-Front-msx-415.jpg"
     ],
@@ -14907,8 +14770,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 มีขนาด โซ่ 420-29,30 ฟัน",
-    "description": "สเตอร์หลังแต่ง Monkey50 งาน Alloy 7075 CNC Billet มีขนาด 420-26/27/28/29/30/31 ฟัน & 415-26/27/28/29/30 ฟัน. Fits: Honda Monkey/MSX125/DAX125 · Material: Alloy 7075 T651 มีขนาด โซ่ 420-29,30 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Monkey50 งาน Alloy 7075 CNC Billet มีขนาด 420-26/27/28/29/30/31 ฟัน & 415-26/27/28/29/30 ฟัน · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ Alloy 7075 T651 มีขนาด โซ่ 420-29,30 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Monkey50 งาน Alloy 7075 CNC Billet มีขนาด 420-26/27/28/29/30/31 ฟัน & 415-26/27/28/29/30 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Monkey50 งาน Alloy 7075 CNC Billet มีขนาด 420-26/27/28/29/30/31 ฟัน & 415-26/27/28/29/30 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/MSX/sprocket-monkey-go.jpg",
       "/legacy/webgigabike.com/MSX/sprocket-monkey-bk.jpg"
@@ -14934,8 +14797,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 มีขนาด โซ่ 420-24,25,26,27,28,30 ฟัน",
-    "description": "สเตอร์หลังAlloy Honda Monkey50 งาน CNC Billet. Fits: Honda Monkey/MSX125/DAX125 · Material: Alloy 7075 T651 มีขนาด โซ่ 420-24,25,26,27,28,30 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังAlloy Honda Monkey50 งาน CNC Billet · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ Alloy 7075 T651 มีขนาด โซ่ 420-24,25,26,27,28,30 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังAlloy Honda Monkey50 งาน CNC Billet ผลิตจาก Alloy 7075 T651 มีขนาด โซ่ 420-24,25,26,27,28,30 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังAlloy Honda Monkey50 งาน CNC Billet ผลิตจาก Alloy 7075 T651 มีขนาด โซ่ 420-24,25,26,27,28,30 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/MSX/sprocket-monkey-ti.jpg"
     ],
@@ -14959,8 +14822,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet ใส่โซ่ 415 - 32,33,34,35 ฟัน",
-    "description": "สเตอร์หลังแต่ง Monkey125 4G. Fits: Honda Monkey/MSX125/DAX125 · Material: Alloy 7075 CNC Billet ใส่โซ่ 415 - 32,33,34,35 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Monkey125 4G · ใส่ได้กับ Honda Monkey/MSX125/DAX125 · วัสดุ Alloy 7075 CNC Billet ใส่โซ่ 415 - 32,33,34,35 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Monkey125 4G ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 415 - 32,33,34,35 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Monkey125 4G ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 415 - 32,33,34,35 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/MSX/sprocket-msx-415-ti.jpg"
     ],
@@ -14985,8 +14848,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 กัด CNC Billet",
-    "description": "แผ่นอุดแพร์ PAIR Cover ใส่ได้เลยไม่ต้องดัดแปลง สำหรับ Ninja300. Fits: Kawasaki Ninja250/300/400 · Material: Alloy 6061 กัด CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover ใส่ได้เลยไม่ต้องดัดแปลง สำหรับ Ninja300 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy 6061 กัด CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นอุดแพร์ PAIR Cover ใส่ได้เลยไม่ต้องดัดแปลง สำหรับ Ninja300 ผลิตจาก Alloy 6061 กัด CNC Billet อันละ",
+    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover ใส่ได้เลยไม่ต้องดัดแปลง สำหรับ Ninja300 ผลิตจาก Alloy 6061 กัด CNC Billet อันละ",
     "images": [
       "/legacy/webgigabike.com/Ninja300/egr-n3.jpg"
     ],
@@ -15011,8 +14874,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-14 ฟัน พิเศษช่วงแนะนำ",
-    "description": "สเตอร์หน้า CNC Kawasaki Ninja300 / Ninja400. Fits: Kawasaki Ninja250/300/400 · Material: เหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-14 ฟัน พิเศษช่วงแนะนำ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า CNC Kawasaki Ninja300 / Ninja400 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ เหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-14 ฟัน พิเศษช่วงแนะนำ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า CNC Kawasaki Ninja300 / Ninja400 ผลิตจากเหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-14 ฟัน พิเศษช่วงแนะนำ",
+    "descriptionTh": "สเตอร์หน้า CNC Kawasaki Ninja300 / Ninja400 ผลิตจากเหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-14 ฟัน พิเศษช่วงแนะนำ",
     "images": [
       "/legacy/webgigabike.com/Ninja300/Sprocket-ninja300-520-14t.jpg"
     ],
@@ -15037,8 +14900,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet แข็งแรง",
-    "description": "แป้นรองเสตย์พักเท้าหน้าใส่แทนแป้นยึดขาตั้งเดี่ยวได้เลยไม่ต้องดัดแปลง สำหรับ Ninja400. Fits: Kawasaki Ninja250/300/400 · Material: Alloy CNC Billet แข็งแรง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แป้นรองเสตย์พักเท้าหน้าใส่แทนแป้นยึดขาตั้งเดี่ยวได้เลยไม่ต้องดัดแปลง สำหรับ Ninja400 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy CNC Billet แข็งแรง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แป้นรองเสตย์พักเท้าหน้าใส่แทนแป้นยึดขาตั้งเดี่ยวได้เลยไม่ต้องดัดแปลง สำหรับ Ninja400 ผลิตจาก Alloy CNC Billet แข็งแรง อันละ",
+    "descriptionTh": "แป้นรองเสตย์พักเท้าหน้าใส่แทนแป้นยึดขาตั้งเดี่ยวได้เลยไม่ต้องดัดแปลง สำหรับ Ninja400 ผลิตจาก Alloy CNC Billet แข็งแรง อันละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Adap-sty.jpg"
     ],
@@ -15062,8 +14925,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Step-3 Ninja400. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Step-3 Ninja400 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Step-3 Ninja400 ผลิตจาก Alloy CNC Billet แข็งแรง ทดสอบในสนามแข่งมาแล้ว มี (สีดำ กับ สีเงิน) ชุดละ",
+    "descriptionTh": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Step-3 Ninja400 ผลิตจาก Alloy CNC Billet แข็งแรง ทดสอบในสนามแข่งมาแล้ว มี (สีดำ กับ สีเงิน) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Adapter-Foot-ninja400-ST3.jpg"
     ],
@@ -15087,8 +14950,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet Anodize",
-    "description": "แป้นยึดโช๊คหลังด้านบนแต่ง Ninja400 ใส่แทนของเดิมได้เลยน้ำหนักเบาแข็งแรงทดสอบในสนามแข่งแล้ว. Fits: Kawasaki Ninja250/300/400 · Material: Alloy 7075 CNC Billet Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แป้นยึดโช๊คหลังด้านบนแต่ง Ninja400 ใส่แทนของเดิมได้เลยน้ำหนักเบาแข็งแรงทดสอบในสนามแข่งแล้ว · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy 7075 CNC Billet Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แป้นยึดโช๊คหลังด้านบนแต่ง Ninja400 ใส่แทนของเดิมได้เลยน้ำหนักเบาแข็งแรงทดสอบในสนามแข่งแล้ว ผลิตจาก Alloy 7075 CNC Billet Anodize คู่ล่ะ",
+    "descriptionTh": "แป้นยึดโช๊คหลังด้านบนแต่ง Ninja400 ใส่แทนของเดิมได้เลยน้ำหนักเบาแข็งแรงทดสอบในสนามแข่งแล้ว ผลิตจาก Alloy 7075 CNC Billet Anodize คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/AdapterTop-Rear-Shock-bk.jpg",
       "/legacy/webgigabike.com/Ninja400/AdapterTop-Rear-Shock-sl.jpg"
@@ -15113,8 +14976,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดบู๊ทล้อหน้าและหลัง ใส่ Kawasaki Ninja400 ใส่เข้ากับล้อเดิมได้เลย ผลิตจาก Alloy CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบาอย่างกับนุ่น (ของเดิมติดรถหนัก 203 กรัม ของเราหนักเพียง 70 กรัม) สามารถกันรอยได้ดีและช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท). Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดบู๊ทล้อหน้าและหลัง ใส่ Kawasaki Ninja400 ใส่เข้ากับล้อเดิมได้เลย ผลิตจาก Alloy CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบาอย่างกับนุ่น (ของเดิมติดรถหนัก 203 กรัม ของเราหนักเพียง 70 กรัม) สามารถกันรอยได้ดีและช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดบู๊ทล้อหน้าและหลัง ใส่ Kawasaki Ninja400 ใส่เข้ากับล้อเดิมได้เลย ผลิตจาก Alloy CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบาอย่างกับนุ่น (ของเดิมติดรถหนัก 203 กรัม ของเราหนักเพียง 70 กรัม) สามารถกันรอยได้ดีและช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) ชุดละ",
+    "descriptionTh": "ชุดบู๊ทล้อหน้าและหลัง ใส่ Kawasaki Ninja400 ใส่เข้ากับล้อเดิมได้เลย ผลิตจาก Alloy CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นแต่เบาอย่างกับนุ่น (ของเดิมติดรถหนัก 203 กรัม ของเราหนักเพียง 70 กรัม) สามารถกันรอยได้ดีและช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเทา-ฮาร์ท) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Bootwheel-allt-ninja400.jpg"
     ],
@@ -15139,8 +15002,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดบู๊ทรองลูกปืนในล้อหน้าแต่ง ใส่ Ninja400 ใส่เข้ากับล้อเดิมได้เลย. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดบู๊ทรองลูกปืนในล้อหน้าแต่ง ใส่ Ninja400 ใส่เข้ากับล้อเดิมได้เลย · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดบู๊ทรองลูกปืนในล้อหน้าแต่ง ใส่ Ninja400 ใส่เข้ากับล้อเดิมได้เลย ผลิตจาก Alloy 7075 CNC Billet ชุบสี อโนไดซ์ เบาอย่างกับนุ่น (ของเดิมติดรถหนัก กรัม ของเราหนักเพียง 73.5 กรัม) ช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเงิน) อันละ",
+    "descriptionTh": "ชุดบู๊ทรองลูกปืนในล้อหน้าแต่ง ใส่ Ninja400 ใส่เข้ากับล้อเดิมได้เลย ผลิตจาก Alloy 7075 CNC Billet ชุบสี อโนไดซ์ เบาอย่างกับนุ่น (ของเดิมติดรถหนัก กรัม ของเราหนักเพียง 73.5 กรัม) ช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเงิน) อันละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Bootwheel-Front-IN-N4.jpg"
     ],
@@ -15165,8 +15028,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดบู๊ทรองลูกปืนในดุมเสตอร์หลังแต่ง ใส่ Ninja400 ใส่เข้ากับดุมเสตอเดิมได้เลย. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดบู๊ทรองลูกปืนในดุมเสตอร์หลังแต่ง ใส่ Ninja400 ใส่เข้ากับดุมเสตอเดิมได้เลย · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดบู๊ทรองลูกปืนในดุมเสตอร์หลังแต่ง ใส่ Ninja400 ใส่เข้ากับดุมเสตอเดิมได้เลย ผลิตจาก Alloy 7075 CNC Billet ชุบสี อโนไดซ์ เบาอย่างกับนุ่น (ของเดิมติดรถหนัก กรัม ของเราหนักเพียง 29 กรัม) ช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเงิน) อันละ",
+    "descriptionTh": "ชุดบู๊ทรองลูกปืนในดุมเสตอร์หลังแต่ง ใส่ Ninja400 ใส่เข้ากับดุมเสตอเดิมได้เลย ผลิตจาก Alloy 7075 CNC Billet ชุบสี อโนไดซ์ เบาอย่างกับนุ่น (ของเดิมติดรถหนัก กรัม ของเราหนักเพียง 29 กรัม) ช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเงิน) อันละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Bootwheel-Hub-IN-N4.jpg"
     ],
@@ -15191,8 +15054,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดบู๊ทรองลูกปืนในล้อหลังแต่ง ใส่ Ninja400 ใส่เข้ากับล้อเดิมได้เลย. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดบู๊ทรองลูกปืนในล้อหลังแต่ง ใส่ Ninja400 ใส่เข้ากับล้อเดิมได้เลย · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดบู๊ทรองลูกปืนในล้อหลังแต่ง ใส่ Ninja400 ใส่เข้ากับล้อเดิมได้เลย ผลิตจาก Alloy 7075 CNC Billet ชุบสี อโนไดซ์ เบาอย่างกับนุ่น (ของเดิมติดรถหนัก กรัม ของเราหนักเพียง 84.5 กรัม) ช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเงิน) อันละ",
+    "descriptionTh": "ชุดบู๊ทรองลูกปืนในล้อหลังแต่ง ใส่ Ninja400 ใส่เข้ากับล้อเดิมได้เลย ผลิตจาก Alloy 7075 CNC Billet ชุบสี อโนไดซ์ เบาอย่างกับนุ่น (ของเดิมติดรถหนัก กรัม ของเราหนักเพียง 84.5 กรัม) ช่วยระบายความร้อนของลูกปืนล้อได้เร็วยิ่งขึ้น (สีเงิน) อันละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Bootwheel-rear-IN-N4.jpg"
     ],
@@ -15217,8 +15080,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy6061+Pins Alloy7075 CNC Billet *จานมีแบบดิ้นได้และแบบแน่นเหมือนจานเดิม ใบล่ะ",
-    "description": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 5 mm.ลายร่อง ใส้จาน. Fits: Kawasaki Ninja250/300/400 · Material: Alloy6061+Pins Alloy7075 CNC Billet *จานมีแบบดิ้นได้และแบบแน่นเหมือนจานเดิม ใบล่ะ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 5 mm.ลายร่อง ใส้จาน · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy6061+Pins Alloy7075 CNC Billet *จานมีแบบดิ้นได้และแบบแน่นเหมือนจานเดิม ใบล่ะ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 5 mm.ลายร่อง ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใบล่ะ",
+    "descriptionTh": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 5 mm.ลายร่อง ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใบล่ะ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Breck-n4-310-5mm-1.jpg"
     ],
@@ -15242,8 +15105,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy6061+Pins Alloy7075 CNC Billet *จานมีแบบดิ้นได้และแบบแน่นเหมือนจานเดิม ใบล่ะ",
-    "description": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 5 mm.ลายใส้เรียบ ใส้จาน. Fits: Kawasaki Ninja250/300/400 · Material: Alloy6061+Pins Alloy7075 CNC Billet *จานมีแบบดิ้นได้และแบบแน่นเหมือนจานเดิม ใบล่ะ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 5 mm.ลายใส้เรียบ ใส้จาน · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy6061+Pins Alloy7075 CNC Billet *จานมีแบบดิ้นได้และแบบแน่นเหมือนจานเดิม ใบล่ะ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 5 mm.ลายใส้เรียบ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใบล่ะ",
+    "descriptionTh": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 5 mm.ลายใส้เรียบ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใบล่ะ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Breck-n4-310-5mm-2.jpg"
     ],
@@ -15267,8 +15130,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรคหน้า Brembo หูชิด Ninja400 ใส่จาน310มิล ใส่เข้ากับจานเบรคเดิมได้เลย. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหน้า Brembo หูชิด Ninja400 ใส่จาน310มิล ใส่เข้ากับจานเบรคเดิมได้เลย · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหน้า Brembo หูชิด Ninja400 ใส่จาน310มิล ใส่เข้ากับจานเบรคเดิมได้เลย ผลิตจาก Alloy CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น มี 3 สี (ดำ-เงิน-ฮาร์ท) ชิ้นละ",
+    "descriptionTh": "ขายึดปั๊มเบรคหน้า Brembo หูชิด Ninja400 ใส่จาน310มิล ใส่เข้ากับจานเบรคเดิมได้เลย ผลิตจาก Alloy CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น มี 3 สี (ดำ-เงิน-ฮาร์ท) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/caliper-N4-4pot-bk.jpg",
       "/legacy/webgigabike.com/Ninja400/caliper-N4-4pot-310.jpg"
@@ -15297,8 +15160,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ขายึดปั๊มเบรคหลัง Brembo ผีเสื้อห้อยล่าง ใส่ NINJA 400. Fits: Kawasaki Ninja250/300/400 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหลัง Brembo ผีเสื้อห้อยล่าง ใส่ NINJA 400 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหลัง Brembo ผีเสื้อห้อยล่าง ใส่ NINJA 400 ผลิตจาก Alloy CNC Billet มีสี (ดำ-เงิน-เขียว-เทาฮาร์ด) ชิ้นละ",
+    "descriptionTh": "ขายึดปั๊มเบรคหลัง Brembo ผีเสื้อห้อยล่าง ใส่ NINJA 400 ผลิตจาก Alloy CNC Billet มีสี (ดำ-เงิน-เขียว-เทาฮาร์ด) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/caliper-N4-Re-2.jpg",
       "/legacy/webgigabike.com/Ninja400/caliper-N4-Re-1.jpg"
@@ -15323,8 +15186,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขาปั๊มแต่งใส่กับปั๊มเบรกเดิม Ninja 400 ใส่กับขนาดจาน 310mm. เดิมได้เลย ขยับระยะจับจานให้ลึกเข้ากว่าของเดิม ป้องกันจานบิดและจากแตกได้ดีขึ้น. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาปั๊มแต่งใส่กับปั๊มเบรกเดิม Ninja 400 ใส่กับขนาดจาน 310mm. เดิมได้เลย ขยับระยะจับจานให้ลึกเข้ากว่าของเดิม ป้องกันจานบิดและจากแตกได้ดีขึ้น · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขาปั๊มแต่งใส่กับปั๊มเบรกเดิม Ninja 400 ใส่กับขนาดจาน 310mm. เดิมได้เลย ขยับระยะจับจานให้ลึกเข้ากว่าของเดิม ป้องกันจานบิดและจากแตกได้ดีขึ้น อันละ",
+    "descriptionTh": "ขาปั๊มแต่งใส่กับปั๊มเบรกเดิม Ninja 400 ใส่กับขนาดจาน 310mm. เดิมได้เลย ขยับระยะจับจานให้ลึกเข้ากว่าของเดิม ป้องกันจานบิดและจากแตกได้ดีขึ้น อันละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/caliper-N4-STD.jpg"
     ],
@@ -15349,8 +15212,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy Europe 7075 CNC Billet",
-    "description": "ฝากดสปริงคลัชแต่ง Ninja 400 น้ำหนักเบากว่าของเดิม1ใน3 ใส่แทนของเดิมได้เลย ลดภาระของรอบเครื่องได้ดีมาก ลดปัญหาความร้อนสะสมในสปริงได้ดีเยี่ยม. Fits: Kawasaki Ninja250/300/400 · Material: Alloy Europe 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝากดสปริงคลัชแต่ง Ninja 400 น้ำหนักเบากว่าของเดิม1ใน3 ใส่แทนของเดิมได้เลย ลดภาระของรอบเครื่องได้ดีมาก ลดปัญหาความร้อนสะสมในสปริงได้ดีเยี่ยม · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy Europe 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝากดสปริงคลัชแต่ง Ninja 400 น้ำหนักเบากว่าของเดิม1ใน3 ใส่แทนของเดิมได้เลย ลดภาระของรอบเครื่องได้ดีมาก ลดปัญหาความร้อนสะสมในสปริงได้ดีเยี่ยม ผลิตจาก Alloy Europe 7075 CNC Billet อันละ",
+    "descriptionTh": "ฝากดสปริงคลัชแต่ง Ninja 400 น้ำหนักเบากว่าของเดิม1ใน3 ใส่แทนของเดิมได้เลย ลดภาระของรอบเครื่องได้ดีมาก ลดปัญหาความร้อนสะสมในสปริงได้ดีเยี่ยม ผลิตจาก Alloy Europe 7075 CNC Billet อันละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/cover-Cluch.jpg"
     ],
@@ -15374,8 +15237,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 ทั้ง",
-    "description": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-2 Ninja400 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้. Fits: Kawasaki Ninja250/300/400 · Material: Alloy 6061 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-2 Ninja400 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้ · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy 6061 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-2 Ninja400 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้ ผลิตจาก Alloy 6061 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้ว ชุดละ",
+    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-2 Ninja400 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้ ผลิตจาก Alloy 6061 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้ว ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Foot-sil-racing.jpg",
       "/legacy/webgigabike.com/Ninja400/Foot-blkl-racing.jpg",
@@ -15403,8 +15266,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ทั้ง",
-    "description": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-4 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้. Fits: Kawasaki Ninja250/300/400 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-4 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้ · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-4 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้ ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ชุดละ",
+    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-4 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้ ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Footregs-n4-ST4-1.jpg",
       "/legacy/webgigabike.com/Ninja400/Footregs-n4-ST4.jpg"
@@ -15430,8 +15293,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ชุดอัฟเกรดระยะเกียร์โยง Ninja400 ให้ใช้ในสนามแข่งได้ดีมากขึ้น ใส่กับเกียร์โยงแต่งรุ่น1และรุ่น2ได้เลย. Fits: Kawasaki Ninja250/300/400 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดอัฟเกรดระยะเกียร์โยง Ninja400 ให้ใช้ในสนามแข่งได้ดีมากขึ้น ใส่กับเกียร์โยงแต่งรุ่น1และรุ่น2ได้เลย · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดอัฟเกรดระยะเกียร์โยง Ninja400 ให้ใช้ในสนามแข่งได้ดีมากขึ้น ใส่กับเกียร์โยงแต่งรุ่น1และรุ่น2ได้เลย ผลิตจาก Alloy CNC Billet คู่ละ",
+    "descriptionTh": "ชุดอัฟเกรดระยะเกียร์โยง Ninja400 ให้ใช้ในสนามแข่งได้ดีมากขึ้น ใส่กับเกียร์โยงแต่งรุ่น1และรุ่น2ได้เลย ผลิตจาก Alloy CNC Billet คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Footregs-n4-ST4-2.jpg",
       "/legacy/webgigabike.com/Ninja400/adjust-distance.jpg"
@@ -15458,8 +15321,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Ninja400 Step-2. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Ninja400 Step-2 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Ninja400 Step-2 ผลิตจาก Alloy 6061 CNC Billet แข็งแรง ทดสอบในสนามแข่งมาแล้ว มี (สีดำ กับ สีเงิน) ชุดละ",
+    "descriptionTh": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Ninja400 Step-2 ผลิตจาก Alloy 6061 CNC Billet แข็งแรง ทดสอบในสนามแข่งมาแล้ว มี (สีดำ กับ สีเงิน) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Footregs-n4-t3l-sl-all.jpg",
       "/legacy/webgigabike.com/Ninja400/Footregs-n4-t3r-sl-all.jpg",
@@ -15485,8 +15348,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet ทั้ง",
-    "description": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-3 Ninja400 ใช้เข้าแป้นหน้าเดิมได้. Fits: Kawasaki Ninja250/300/400 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-3 Ninja400 ใช้เข้าแป้นหน้าเดิมได้ · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-3 Ninja400 ใช้เข้าแป้นหน้าเดิมได้ ผลิตจาก Alloy 6061 CNC Billet ทั้งชุดคงทนแข็งแรง ชุดละ",
+    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-3 Ninja400 ใช้เข้าแป้นหน้าเดิมได้ ผลิตจาก Alloy 6061 CNC Billet ทั้งชุดคงทนแข็งแรง ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Footregs-n4-t3r-sl.jpg",
       "/legacy/webgigabike.com/Ninja400/Footregs-n4-t3l-sl.jpg"
@@ -15512,8 +15375,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Step-1 Ninja400. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Step-1 Ninja400 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Step-1 Ninja400 ผลิตจาก Alloy 6061 CNC Billet แข็งแรง ทดสอบในสนามแข่งมาแล้ว มี (สีดำ กับ สีเงิน) ชุดละ",
+    "descriptionTh": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Step-1 Ninja400 ผลิตจาก Alloy 6061 CNC Billet แข็งแรง ทดสอบในสนามแข่งมาแล้ว มี (สีดำ กับ สีเงิน) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Footsty-sil-ninja400-l.jpg",
       "/legacy/webgigabike.com/Ninja400/Footsty-sil-ninja400-r.jpg",
@@ -15540,8 +15403,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 ทั้ง",
-    "description": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-1 Ninja400 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้. Fits: Kawasaki Ninja250/300/400 · Material: Alloy 6061 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-1 Ninja400 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้ · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy 6061 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-1 Ninja400 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้ ผลิตจาก Alloy 6061 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้ว ชุดละ",
+    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง Ninja400 Step-1 Ninja400 ใช้กับแป้นหน้าแต่งเท่านั้นแป้นหน้าเดิมใช้กันไม่ได้ ผลิตจาก Alloy 6061 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้ว ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Footsty-sil-ninja400.jpg",
       "/legacy/webgigabike.com/Ninja400/Footsty-blk-ninja400.jpg"
@@ -15567,8 +15430,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet Hard Anodize",
-    "description": "กะเดื่องยึดใส่โช๊คหลังแต่ง Ninja400 ช่วยให้เบาและแน่นกันหลังย๊วยได้เป็นอย่างดีทำให้ควบคุมรถได้ง่ายขึ้น ใส่แทนของเดิมได้เลย. Fits: Kawasaki Ninja250/300/400 · Material: Alloy CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "กะเดื่องยึดใส่โช๊คหลังแต่ง Ninja400 ช่วยให้เบาและแน่นกันหลังย๊วยได้เป็นอย่างดีทำให้ควบคุมรถได้ง่ายขึ้น ใส่แทนของเดิมได้เลย · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "กะเดื่องยึดใส่โช๊คหลังแต่ง Ninja400 ช่วยให้เบาและแน่นกันหลังย๊วยได้เป็นอย่างดีทำให้ควบคุมรถได้ง่ายขึ้น ใส่แทนของเดิมได้เลย ผลิตจาก Alloy CNC Billet Hard Anodize ชุดล่ะ",
+    "descriptionTh": "กะเดื่องยึดใส่โช๊คหลังแต่ง Ninja400 ช่วยให้เบาและแน่นกันหลังย๊วยได้เป็นอย่างดีทำให้ควบคุมรถได้ง่ายขึ้น ใส่แทนของเดิมได้เลย ผลิตจาก Alloy CNC Billet Hard Anodize ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/M-Unitrak-N4-gr-bk.jpg",
       "/legacy/webgigabike.com/Ninja400/M-Unitrak-N4-hd-gl.jpg",
@@ -15594,8 +15457,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "น๊อตขันถ้วยลูกปืนคอแต่ง Ninja 400 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก. Fits: Kawasaki Ninja250/300/400 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันถ้วยลูกปืนคอแต่ง Ninja 400 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันถ้วยลูกปืนคอแต่ง Ninja 400 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "น๊อตขันถ้วยลูกปืนคอแต่ง Ninja 400 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Nut-Bearing-top-N4-1.jpg",
       "/legacy/webgigabike.com/Ninja400/Nut-Bearing-top-N4-2.jpg"
@@ -15620,8 +15483,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "น๊อตขันแผงคอบนแต่ง Ninja 400 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก. Fits: Kawasaki Ninja250/300/400 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแผงคอบนแต่ง Ninja 400 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแผงคอบนแต่ง Ninja 400 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "น๊อตขันแผงคอบนแต่ง Ninja 400 ใส่แทนของเดิมได้เลยน้ำหนักเบามาก ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Nut-top.jpg"
     ],
@@ -15645,8 +15508,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 กัด CNC Billet",
-    "description": "ชุดแผงคอบนล่างแต่ง Kawasaki Ninja400 ผลิตจาก Alloy 6061+7075 ด้วยเครื่อง CNC Billet สวยงามแข็งแรง น้ำหนักเพียง 1.9 kg. เบากว่าของเดิม 1.1 kg. (มีสี เงิน/ดำ) มี offset พิเศษ 26,27,30,32,35 mm. ชุดละ 8,000 แผ่นอุดแพร์ PAIR Cover ใส่ได้เลยไม่ต้องดัดแปลง สำหรับ Ninja400. Fits: Kawasaki Ninja250/300/400 · Material: Alloy 6061 กัด CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่างแต่ง Kawasaki Ninja400 ผลิตจาก Alloy 6061+7075 ด้วยเครื่อง CNC Billet สวยงามแข็งแรง น้ำหนักเพียง 1.9 kg. เบากว่าของเดิม 1.1 kg. (มีสี เงิน/ดำ) มี offset พิเศษ 26,27,30,32,35 mm. ชุดละ 8,000 แผ่นอุดแพร์ PAIR Cover ใส่ได้เลยไม่ต้องดัดแปลง สำหรับ Ninja400 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy 6061 กัด CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่างแต่ง Kawasaki Ninja400 ผลิตจาก Alloy 6061+7075 ด้วยเครื่อง CNC Billet สวยงามแข็งแรง น้ำหนักเพียง 1.9 kg. เบากว่าของเดิม 1.1 kg. (มีสี เงิน/ดำ) มี offset พิเศษ 26,27,30,32,35 mm. ชุดละ 8,000 แผ่นอุดแพร์ PAIR Cover ใส่ได้เลยไม่ต้องดัดแปลง สำหรับ Ninja400 ผลิตจาก Alloy 6061 กัด CNC Billet อันละ",
+    "descriptionTh": "ชุดแผงคอบนล่างแต่ง Kawasaki Ninja400 ผลิตจาก Alloy 6061+7075 ด้วยเครื่อง CNC Billet สวยงามแข็งแรง น้ำหนักเพียง 1.9 kg. เบากว่าของเดิม 1.1 kg. (มีสี เงิน/ดำ) มี offset พิเศษ 26,27,30,32,35 mm. ชุดละ 8,000 แผ่นอุดแพร์ PAIR Cover ใส่ได้เลยไม่ต้องดัดแปลง สำหรับ Ninja400 ผลิตจาก Alloy 6061 กัด CNC Billet อันละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Pangcor-n4-2.jpg",
       "/legacy/webgigabike.com/Ninja400/Pangcor-n4-3.jpg",
@@ -15672,8 +15535,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงคอบนแบบหลุม Ninja400. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงคอบนแบบหลุม Ninja400 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงคอบนแบบหลุม Ninja400 ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC Billet สวยงามแข็งแรง น้ำหนักเบา (มีสี เงิน/ดำ) อันล่ะ",
+    "descriptionTh": "แผงคอบนแบบหลุม Ninja400 ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC Billet สวยงามแข็งแรง น้ำหนักเบา (มีสี เงิน/ดำ) อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Pangcor-n4-step.jpg"
     ],
@@ -15702,8 +15565,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "อุปกรณ์ตกแต่ง Ninja ZX250R ใหม่ๆอยากแนะนำ สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย. Fits: Kawasaki Ninja250/300/400 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง Ninja ZX250R ใหม่ๆอยากแนะนำ สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง Ninja ZX250R ใหม่ๆอยากแนะนำ สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/เขียว/ฮาร์ด คู่ละ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง Ninja ZX250R ใหม่ๆอยากแนะนำ สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/เขียว/ฮาร์ด คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/RC-1.jpg",
       "/legacy/webgigabike.com/Ninja400/RC-3.jpg",
@@ -15733,8 +15596,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy Europe 7075 CNC Billet",
-    "description": "รีเทนเนอร์สปริงวาล์วไอดีไอเสียแต่ง Ninja 400 น้ำหนักเบากว่าของเดิม1ใน3 ใส่ปริงเดิมได้เลย ลดภาระของรอบเครื่องได้ดีมาก ลดปัญหาวาล์วลอยได้ดีมากและระบายความร้อนได้ดีเยี่ยม. Fits: Kawasaki Ninja250/300/400 · Material: Alloy Europe 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "รีเทนเนอร์สปริงวาล์วไอดีไอเสียแต่ง Ninja 400 น้ำหนักเบากว่าของเดิม1ใน3 ใส่ปริงเดิมได้เลย ลดภาระของรอบเครื่องได้ดีมาก ลดปัญหาวาล์วลอยได้ดีมากและระบายความร้อนได้ดีเยี่ยม · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy Europe 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "รีเทนเนอร์สปริงวาล์วไอดีไอเสียแต่ง Ninja 400 น้ำหนักเบากว่าของเดิม1ใน3 ใส่ปริงเดิมได้เลย ลดภาระของรอบเครื่องได้ดีมาก ลดปัญหาวาล์วลอยได้ดีมากและระบายความร้อนได้ดีเยี่ยม ผลิตจาก Alloy Europe 7075 CNC Billet ชุดละ",
+    "descriptionTh": "รีเทนเนอร์สปริงวาล์วไอดีไอเสียแต่ง Ninja 400 น้ำหนักเบากว่าของเดิม1ใน3 ใส่ปริงเดิมได้เลย ลดภาระของรอบเครื่องได้ดีมาก ลดปัญหาวาล์วลอยได้ดีมากและระบายความร้อนได้ดีเยี่ยม ผลิตจาก Alloy Europe 7075 CNC Billet ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/spring-cap.jpg"
     ],
@@ -15758,8 +15621,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415 มีขนาด 16,17,18,19 ฟัน รุ่นใหม่ใส่ได้เลยไม่ต้องรองบู๊ท",
-    "description": "สเตอร์หน้า CNC Kawasaki Ninja ZX250R / Ninja300 / Ninja400. Fits: Kawasaki Ninja250/300/400 · Material: เหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415 มีขนาด 16,17,18,19 ฟัน รุ่นใหม่ใส่ได้เลยไม่ต้องรองบู๊ท · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า CNC Kawasaki Ninja ZX250R / Ninja300 / Ninja400 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415 มีขนาด 16,17,18,19 ฟัน รุ่นใหม่ใส่ได้เลยไม่ต้องรองบู๊ท · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า CNC Kawasaki Ninja ZX250R / Ninja300 / Ninja400 ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415 มีขนาด 16,17,18,19 ฟัน รุ่นใหม่ใส่ได้เลยไม่ต้องรองบู๊ท อันละ",
+    "descriptionTh": "สเตอร์หน้า CNC Kawasaki Ninja ZX250R / Ninja300 / Ninja400 ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415 มีขนาด 16,17,18,19 ฟัน รุ่นใหม่ใส่ได้เลยไม่ต้องรองบู๊ท อันละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Sprockket-Front-N4-415-16-19.jpg"
     ],
@@ -15784,8 +15647,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Ninja400 Step-1. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Ninja400 Step-1 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Ninja400 Step-1 ผลิตจาก Alloy CNC Billet แข็งแรง ทดสอบในสนามแข่งมาแล้ว มี (สีดำ กับ สีเงิน) ชุดละ",
+    "descriptionTh": "แป้นยึดพักเท้าหน้าสำหรับใส่เกียร์โยง Ninja400 Step-1 ผลิตจาก Alloy CNC Billet แข็งแรง ทดสอบในสนามแข่งมาแล้ว มี (สีดำ กับ สีเงิน) ชุดละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/sty-sil-ninja400.jpg"
     ],
@@ -15809,8 +15672,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น",
-    "description": "ปากแตร FI Ninja400 ยาว 60 mm. Fits: Kawasaki Ninja250/300/400 · Material: Alloy CNC Billet ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปากแตร FI Ninja400 ยาว 60 mm · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy CNC Billet ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ปากแตร FI Ninja400 ยาว 60 mm. ผลิตจาก Alloy CNC Billet ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น คู่ละ",
+    "descriptionTh": "ปากแตร FI Ninja400 ยาว 60 mm. ผลิตจาก Alloy CNC Billet ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/trumpet.jpg",
       "/legacy/webgigabike.com/Ninja400/trumpet-n4.jpg"
@@ -15835,8 +15698,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "คานยึดสวิงอาร์มด้านล่างแต่ง Ninja400 ใส่แทนของเดิมได้เลย. Fits: Kawasaki Ninja250/300/400 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "คานยึดสวิงอาร์มด้านล่างแต่ง Ninja400 ใส่แทนของเดิมได้เลย · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "คานยึดสวิงอาร์มด้านล่างแต่ง Ninja400 ใส่แทนของเดิมได้เลย ผลิตจาก Alloy 7075 CNC Billet Hard Anodize คู่ล่ะ",
+    "descriptionTh": "คานยึดสวิงอาร์มด้านล่างแต่ง Ninja400 ใส่แทนของเดิมได้เลย ผลิตจาก Alloy 7075 CNC Billet Hard Anodize คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Ninja400/Unitrak-N4.jpg"
     ],
@@ -15865,8 +15728,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขาเกียร์โยงซ้ายแบบใหม่ใส่แทนแบบเก่าได้. Fits: Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาเกียร์โยงซ้ายแบบใหม่ใส่แทนแบบเก่าได้ · ใส่ได้กับ Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขาเกียร์โยงซ้ายแบบใหม่ใส่แทนแบบเก่าได้ อันละ",
+    "descriptionTh": "ขาเกียร์โยงซ้ายแบบใหม่ใส่แทนแบบเก่าได้ อันละ",
     "images": [
       "/legacy/webgigabike.com/NinjaZX10R/Gear-zx-New.jpg"
     ],
@@ -15884,13 +15747,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet",
     "price": 2000,
     "category": "drivetrain",
-    "bikeModels": [],
+    "bikeModels": [
+      "zx10"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน อันละ",
+    "descriptionTh": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/NinjaZX10R/KRRC-1.jpg",
       "/legacy/webgigabike.com/sprocket all/Er6-Z8-Z1000.jpg"
@@ -15898,8 +15763,7 @@ export const legacyProducts: Product[] = [
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -15914,8 +15778,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป",
-    "description": "M10x1.25x25 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.25 ยาว 25 มิล. Material: เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "M10x1.25x25 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.25 ยาว 25 มิล · วัสดุ เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "M10x1.25x25 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.25 ยาว 25 มิล ผลิตจากเพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป อันละ",
+    "descriptionTh": "M10x1.25x25 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.25 ยาว 25 มิล ผลิตจากเพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป อันละ",
     "images": [
       "/legacy/webgigabike.com/Nut-Sus/M10x1.25x25-1-sus.jpg"
     ],
@@ -15938,8 +15802,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป",
-    "description": "M10x1.25x50 mm. / M10x1.25x57 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.25 ยาว 50และ57 มิล. Material: เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "M10x1.25x50 mm. / M10x1.25x57 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.25 ยาว 50และ57 มิล · วัสดุ เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "M10x1.25x50 mm. / M10x1.25x57 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.25 ยาว 50และ57 มิล ผลิตจากเพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป อันละ",
+    "descriptionTh": "M10x1.25x50 mm. / M10x1.25x57 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.25 ยาว 50และ57 มิล ผลิตจากเพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป อันละ",
     "images": [
       "/legacy/webgigabike.com/Nut-Sus/M10x1.25x50-57-sus.jpg"
     ],
@@ -15962,8 +15826,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป",
-    "description": "M10x1.50x22 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.50 ยาว 22 มิล. Material: เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "M10x1.50x22 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.50 ยาว 22 มิล · วัสดุ เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "M10x1.50x22 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.50 ยาว 22 มิล ผลิตจากเพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป อันละ",
+    "descriptionTh": "M10x1.50x22 mm. SUS 304 CNC Billet แบบเจาะรู น็อต 10x1.50 ยาว 22 มิล ผลิตจากเพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป อันละ",
     "images": [
       "/legacy/webgigabike.com/Nut-Sus/M10x1.50x22-sus.jpg"
     ],
@@ -15986,8 +15850,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป",
-    "description": "M8x1.25x20 SUS 304 CNC Billet แบบไม่เจาะรู น็อต 8 มิลยาว 20 มิล. Material: เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "M8x1.25x20 SUS 304 CNC Billet แบบไม่เจาะรู น็อต 8 มิลยาว 20 มิล · วัสดุ เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "M8x1.25x20 SUS 304 CNC Billet แบบไม่เจาะรู น็อต 8 มิลยาว 20 มิล ผลิตจากเพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป อันละ",
+    "descriptionTh": "M8x1.25x20 SUS 304 CNC Billet แบบไม่เจาะรู น็อต 8 มิลยาว 20 มิล ผลิตจากเพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป อันละ",
     "images": [
       "/legacy/webgigabike.com/Nut-Sus/M8x1.25x20-sus.jpg"
     ],
@@ -16010,8 +15874,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป",
-    "description": "M8x1.25x25 mm. SUS 304 CNC Billet แบบไม่เจาะรู น็อต 8 มิลยาว 25 มิล. Material: เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "M8x1.25x25 mm. SUS 304 CNC Billet แบบไม่เจาะรู น็อต 8 มิลยาว 25 มิล · วัสดุ เพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "M8x1.25x25 mm. SUS 304 CNC Billet แบบไม่เจาะรู น็อต 8 มิลยาว 25 มิล ผลิตจากเพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป อันละ",
+    "descriptionTh": "M8x1.25x25 mm. SUS 304 CNC Billet แบบไม่เจาะรู น็อต 8 มิลยาว 25 มิล ผลิตจากเพลาสแตนเลส เกรด304 เกลียวแบบกลึงเกลียว ไม่ใช่แบบรีดเกลียวเหมือนงานทั่วไป อันละ",
     "images": [
       "/legacy/webgigabike.com/Nut-Sus/M8x1.25x25-sus.jpg"
     ],
@@ -16036,8 +15900,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมพิเศษ 7075 ด้วยเครื่อง CNC ช่วยระบายความร้อนของเครื่องยนต์ได้เป็นอย่างดีเยี่ยม สินค้าลิขสิทธิ์ร้าน GIGABIKE ค่ล่ะ",
-    "description": "น็อตฝาวาล์วแต่ง SRX. Fits: Yamaha SRX400-600 · Material: อลูมิเนียมพิเศษ 7075 ด้วยเครื่อง CNC ช่วยระบายความร้อนของเครื่องยนต์ได้เป็นอย่างดีเยี่ยม สินค้าลิขสิทธิ์ร้าน GIGABIKE ค่ล่ะ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตฝาวาล์วแต่ง SRX · ใส่ได้กับ Yamaha SRX400-600 · วัสดุ อลูมิเนียมพิเศษ 7075 ด้วยเครื่อง CNC ช่วยระบายความร้อนของเครื่องยนต์ได้เป็นอย่างดีเยี่ยม สินค้าลิขสิทธิ์ร้าน GIGABIKE ค่ล่ะ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตฝาวาล์วแต่ง SRX ผลิตจากอลูมิเนียมพิเศษ 7075 ด้วยเครื่อง CNC ช่วยระบายความร้อนของเครื่องยนต์ได้เป็นอย่างดีเยี่ยม สินค้าลิขสิทธิ์ร้าน GIGABIKE ค่ล่ะ",
+    "descriptionTh": "น็อตฝาวาล์วแต่ง SRX ผลิตจากอลูมิเนียมพิเศษ 7075 ด้วยเครื่อง CNC ช่วยระบายความร้อนของเครื่องยนต์ได้เป็นอย่างดีเยี่ยม สินค้าลิขสิทธิ์ร้าน GIGABIKE ค่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/nut/nut-voelsrx.jpg"
     ],
@@ -16057,14 +15921,15 @@ export const legacyProducts: Product[] = [
     "bikeModels": [
       "cbr250",
       "r1",
-      "r3"
+      "r3",
+      "s1000rr"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "BMW S1000rr Sprocket For BMW S1000rr New 2021+ Aluminum Alloy 7075 Hard Anodize 520-45/46/47/48/49/50T สเตอร์หลังแต่ง BMW S1000rr รุ่นใหม่ 2021งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45/46/47/48/49/50 ฟัน. Fits: Honda CBR150R/250RR/300 · Yamaha R1/R6/R7 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "BMW S1000rr Sprocket For BMW S1000rr New 2021+ Aluminum Alloy 7075 Hard Anodize 520-45/46/47/48/49/50T สเตอร์หลังแต่ง BMW S1000rr รุ่นใหม่ 2021งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45/46/47/48/49/50 ฟัน · ใส่ได้กับ Honda CBR150R/250RR/300 · Yamaha R1/R6/R7 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "BMW S1000rr Sprocket For BMW S1000rr New 2021+ Aluminum Alloy 7075 Hard Anodize 520-45/46/47/48/49/50T สเตอร์หลังแต่ง BMW S1000rr รุ่นใหม่ 2021งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45/46/47/48/49/50 ฟัน อันละ",
+    "descriptionTh": "BMW S1000rr Sprocket For BMW S1000rr New 2021+ Aluminum Alloy 7075 Hard Anodize 520-45/46/47/48/49/50T สเตอร์หลังแต่ง BMW S1000rr รุ่นใหม่ 2021งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45/46/47/48/49/50 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/Ohlins/Adapter-Cencer.jpg",
       "/legacy/webgigabike.com/sprocket all/S1000rr-2019.jpg",
@@ -16089,8 +15954,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "น๊อตต่อโช๊คหลังคู่ Ohlins M14 Pit 1.0 มีขนาดความยาว 27 mm. และ 40 mm. Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตต่อโช๊คหลังคู่ Ohlins M14 Pit 1.0 มีขนาดความยาว 27 mm. และ 40 mm · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตต่อโช๊คหลังคู่ Ohlins M14 Pit 1.0 มีขนาดความยาว 27 mm. และ 40 mm. ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น (มีสีขาวและสีฮาร์ท) คู่ละ",
+    "descriptionTh": "น๊อตต่อโช๊คหลังคู่ Ohlins M14 Pit 1.0 มีขนาดความยาว 27 mm. และ 40 mm. ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น (มีสีขาวและสีฮาร์ท) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Ohlins/Adapter-chok.jpg",
       "/legacy/webgigabike.com/Ohlins/Adapter-chok27.jpg",
@@ -16110,21 +15975,22 @@ export const legacyProducts: Product[] = [
     "nameTh": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม",
     "price": 2000,
     "category": "suspension",
-    "bikeModels": [],
+    "bikeModels": [
+      "nc35"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม CB1300sf ไว้สำหรับใส่บังโคลนหน้าเดิมได้เลย. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม CB1300sf ไว้สำหรับใส่บังโคลนหน้าเดิมได้เลย · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม CB1300sf ไว้สำหรับใส่บังโคลนหน้าเดิมได้เลย ผลิตจาก Alloy CNC Billet (มีสี ทอง/ดำ) คู่ล่ะ",
+    "descriptionTh": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม CB1300sf ไว้สำหรับใส่บังโคลนหน้าเดิมได้เลย ผลิตจาก Alloy CNC Billet (มีสี ทอง/ดำ) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Ohlins/Adapter-Fender-SF.jpg"
     ],
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -16135,15 +16001,14 @@ export const legacyProducts: Product[] = [
     "price": 1600,
     "category": "brake",
     "bikeModels": [
-      "monster",
       "r1"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet & Anodize",
-    "description": "ก้านเบรคแบบพับ Brembro Corsa Corta. Fits: Ducati Monster795/796 · Yamaha R1/R6/R7 · Material: Alloy CNC Billet & Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก้านเบรคแบบพับ Brembro Corsa Corta · ใส่ได้กับ Ducati Monster795/796 · Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet & Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ก้านเบรคแบบพับ Brembro Corsa Corta ผลิตจาก Alloy CNC Billet & Anodize อันละ",
+    "descriptionTh": "ก้านเบรคแบบพับ Brembro Corsa Corta ผลิตจาก Alloy CNC Billet & Anodize อันละ",
     "images": [
       "/legacy/webgigabike.com/Ohlins/Brake-Corsa-1.jpg",
       "/legacy/webgigabike.com/Ohlins/Brake-Corsa-2.jpg"
@@ -16162,15 +16027,14 @@ export const legacyProducts: Product[] = [
     "price": 1600,
     "category": "brake",
     "bikeModels": [
-      "monster",
       "r1"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet & Anodize",
-    "description": "ก้านเบรคแบบพับ Brembro โลโก้ขาว & โลโก้แดง. Fits: Ducati Monster795/796 · Yamaha R1/R6/R7 · Material: Alloy CNC Billet & Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก้านเบรคแบบพับ Brembro โลโก้ขาว & โลโก้แดง · ใส่ได้กับ Ducati Monster795/796 · Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet & Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ก้านเบรคแบบพับ Brembro โลโก้ขาว & โลโก้แดง ผลิตจาก Alloy CNC Billet & Anodize อันละ",
+    "descriptionTh": "ก้านเบรคแบบพับ Brembro โลโก้ขาว & โลโก้แดง ผลิตจาก Alloy CNC Billet & Anodize อันละ",
     "images": [
       "/legacy/webgigabike.com/Ohlins/Brake-Racing-1.jpg",
       "/legacy/webgigabike.com/Ohlins/Brake-Racing-2.jpg"
@@ -16189,15 +16053,14 @@ export const legacyProducts: Product[] = [
     "price": 1600,
     "category": "brake",
     "bikeModels": [
-      "monster",
       "r1"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet & Anodize",
-    "description": "ก้านเบรคแบบพับ Brembro Racing & Italy. Fits: Ducati Monster795/796 · Yamaha R1/R6/R7 · Material: Alloy CNC Billet & Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก้านเบรคแบบพับ Brembro Racing & Italy · ใส่ได้กับ Ducati Monster795/796 · Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet & Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ก้านเบรคแบบพับ Brembro Racing & Italy ผลิตจาก Alloy CNC Billet & Anodize อันละ",
+    "descriptionTh": "ก้านเบรคแบบพับ Brembro Racing & Italy ผลิตจาก Alloy CNC Billet & Anodize อันละ",
     "images": [
       "/legacy/webgigabike.com/Ohlins/Brake-Racing-12.jpg",
       "/legacy/webgigabike.com/Ohlins/Brake-Racing-13.jpg"
@@ -16222,8 +16085,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ตุ๊กตาแต่งใส่กับแฮนแฟลตบาร์ (รูใส่แฮน 28.6 mm.). Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตุ๊กตาแต่งใส่กับแฮนแฟลตบาร์ (รูใส่แฮน 28.6 mm.) · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตุ๊กตาแต่งใส่กับแฮนแฟลตบาร์ (รูใส่แฮน 28.6 mm.) ผลิตจาก Alloy 6061 CNC Billet แบบร้อยน๊อตรูเดียวจากด้านล่างเกลียว M10x1.50 (มีสี เงิน/ดำ/ทอง) คู่ล่ ะ",
+    "descriptionTh": "ตุ๊กตาแต่งใส่กับแฮนแฟลตบาร์ (รูใส่แฮน 28.6 mm.) ผลิตจาก Alloy 6061 CNC Billet แบบร้อยน๊อตรูเดียวจากด้านล่างเกลียว M10x1.50 (มีสี เงิน/ดำ/ทอง) คู่ล่ ะ",
     "images": [
       "/legacy/webgigabike.com/Ohlins/flat-bar-adapter.jpg"
     ],
@@ -16246,8 +16109,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "น๊อตต่อโช๊คหลังคู่ YSS M16 Pit 1.0 ความยาว 27 mm. Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตต่อโช๊คหลังคู่ YSS M16 Pit 1.0 ความยาว 27 mm · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตต่อโช๊คหลังคู่ YSS M16 Pit 1.0 ความยาว 27 mm. ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น (มีสี เงิน/ดำ/ฮาร์ด) คู่ละ",
+    "descriptionTh": "น๊อตต่อโช๊คหลังคู่ YSS M16 Pit 1.0 ความยาว 27 mm. ผลิตจาก Alloy 7075 CNC Billet พร้อมชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น (มีสี เงิน/ดำ/ฮาร์ด) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/Ohlins/yss.jpg",
       "/legacy/webgigabike.com/Ohlins/Adapter-chok-yss27.jpg"
@@ -16267,14 +16130,15 @@ export const legacyProducts: Product[] = [
     "price": 1200,
     "category": "accessories",
     "bikeModels": [
-      "xs650"
+      "xs650",
+      "xt500"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "อุปกรณ์ตกแต่ง XT500 ใหม่ๆอยากแนะนำ ฝาครอบทองขาว XT,TT500. Fits: Yamaha XS650/TX650 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง XT500 ใหม่ๆอยากแนะนำ ฝาครอบทองขาว XT,TT500 · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง XT500 ใหม่ๆอยากแนะนำ ฝาครอบทองขาว XT,TT500 ผลิตจาก Alloy CNC Billet อันละ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง XT500 ใหม่ๆอยากแนะนำ ฝาครอบทองขาว XT,TT500 ผลิตจาก Alloy CNC Billet อันละ",
     "images": [
       "/legacy/webgigabike.com/part/1976_XT500.jpg",
       "/legacy/webgigabike.com/part/cocer_xt1.jpg"
@@ -16297,8 +16161,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดบังโคลนหน้าพร้อม หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ใส่กับรูบังโคลนหน้า SR เดิมได้เลยใส่ได้กับล้อ 17,18,19 นิ้ว. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดบังโคลนหน้าพร้อม หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ใส่กับรูบังโคลนหน้า SR เดิมได้เลยใส่ได้กับล้อ 17,18,19 นิ้ว · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดบังโคลนหน้าพร้อม หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ใส่กับรูบังโคลนหน้า SR เดิมได้เลยใส่ได้กับล้อ 17,18,19 นิ้ว ผลิตจาก Alloy CNC Billet (มีสี ทอง-ดำ / ดำล้วน) คู่ล่ะ",
+    "descriptionTh": "ขายึดบังโคลนหน้าพร้อม หูรัดกระบอกโช๊คหน้า ใส่กับโช๊ค Ohlins 43 mm. ใส่กับรูบังโคลนหน้า SR เดิมได้เลยใส่ได้กับล้อ 17,18,19 นิ้ว ผลิตจาก Alloy CNC Billet (มีสี ทอง-ดำ / ดำล้วน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/adab_fender-bk.jpg",
       "/legacy/webgigabike.com/part/adab_fender-g.jpg"
@@ -16322,8 +16186,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สแตนเลส 304 กลึงด้วยเครื่อง cnc",
-    "description": "น็อตยึดปั๊มหน้าและขาปั๊ม brembo Bolt. M10x1.5 ยาว 20 & M10x1.25 ยาว 20 & 25 mm. Material: สแตนเลส 304 กลึงด้วยเครื่อง cnc · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตยึดปั๊มหน้าและขาปั๊ม brembo Bolt. M10x1.5 ยาว 20 & M10x1.25 ยาว 20 & 25 mm · วัสดุ สแตนเลส 304 กลึงด้วยเครื่อง cnc · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตยึดปั๊มหน้าและขาปั๊ม brembo Bolt. M10x1.5 ยาว 20 & M10x1.25 ยาว 20 & 25 mm.ผลิตจากสแตนเลส 304 กลึงด้วยเครื่อง cnc อันละ 100 น๊อตตัวเมียสเตอร์หลัง M10 Pit 1.25 & M10x1.0 ผลิตจาก Alloy 7075 CNC Billet ชิ้นละ",
+    "descriptionTh": "น็อตยึดปั๊มหน้าและขาปั๊ม brembo Bolt. M10x1.5 ยาว 20 & M10x1.25 ยาว 20 & 25 mm.ผลิตจากสแตนเลส 304 กลึงด้วยเครื่อง cnc อันละ 100 น๊อตตัวเมียสเตอร์หลัง M10 Pit 1.25 & M10x1.0 ผลิตจาก Alloy 7075 CNC Billet ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/Bolt-Sus-M10x1.25-1.50.jpg",
       "/legacy/webgigabike.com/Ducati/Nut-m10-Pit-1.25.jpg"
@@ -16342,13 +16206,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม",
     "price": 2000,
     "category": "suspension",
-    "bikeModels": [],
+    "bikeModels": [
+      "thruxton"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม Truxton900 ไว้สำหรับใส่บังโคลนหน้าเดิมก็ได้แต่งก็ได้ ใส่ได้กับล้อ 17/18/19 นิ้วได้เลย. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม Truxton900 ไว้สำหรับใส่บังโคลนหน้าเดิมก็ได้แต่งก็ได้ ใส่ได้กับล้อ 17/18/19 นิ้วได้เลย · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม Truxton900 ไว้สำหรับใส่บังโคลนหน้าเดิมก็ได้แต่งก็ได้ ใส่ได้กับล้อ 17/18/19 นิ้วได้เลย ผลิตจาก Alloy 6061(มีสี ทอง/ดำ/เงิน) คู่ล่ะ",
+    "descriptionTh": "หูรัดกระบอกโช๊คหน้า Ohlins FG 602/FG 43 + ขายึดบังโคลนหน้าตำแหน่งเดิม Truxton900 ไว้สำหรับใส่บังโคลนหน้าเดิมก็ได้แต่งก็ได้ ใส่ได้กับล้อ 17/18/19 นิ้วได้เลย ผลิตจาก Alloy 6061(มีสี ทอง/ดำ/เงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Br43.jpg",
       "/legacy/webgigabike.com/Triumph/Clip_FG602_43mm_triumph.jpg"
@@ -16356,8 +16222,7 @@ export const legacyProducts: Product[] = [
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -16378,8 +16243,8 @@ export const legacyProducts: Product[] = [
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "จานเบรคแต่ง ลายซิ่ง ใส่กับล้อ TZ125 ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง ลายซิ่ง ใส่กับล้อ TZ125 ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง ลายซิ่ง ใส่กับล้อ TZ125 ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ",
+    "descriptionTh": "จานเบรคแต่ง ลายซิ่ง ใส่กับล้อ TZ125 ได้ ขนาดจาน 300 mm.หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Brake-sr-300-1978-new-hg.jpg",
       "/legacy/webgigabike.com/part/Brake-sr-300-1978-new-bk.jpg",
@@ -16398,7 +16263,9 @@ export const legacyProducts: Product[] = [
     "nameTh": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins",
     "price": 1600,
     "category": "brake",
-    "bikeModels": [],
+    "bikeModels": [
+      "thruxton"
+    ],
     "colors": [
       "black",
       "silver"
@@ -16406,16 +16273,15 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิด ข้างซ้าย Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-320_43mm-L.jpg"
     ],
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -16433,8 +16299,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรค Brembo หูชิดใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิดใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรค Brembo หูชิดใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรค Brembo หูชิดใส่กับโช๊ค Ohlins 43 mm.ใส่จาน 320 mm. ผลิตจาก Alloy 6061(มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-320_43mmA.jpg"
     ],
@@ -16462,8 +16328,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรคหลังใส่ปั๊ม BREMBO ใส่ล้อ RS125 ใส่จานขนาด 196 มม.รูแกนล้อ 12 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหลังใส่ปั๊ม BREMBO ใส่ล้อ RS125 ใส่จานขนาด 196 มม.รูแกนล้อ 12 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหลังใส่ปั๊ม BREMBO ใส่ล้อ RS125 ใส่จานขนาด 196 มม.รูแกนล้อ 12 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรคหลังใส่ปั๊ม BREMBO ใส่ล้อ RS125 ใส่จานขนาด 196 มม.รูแกนล้อ 12 มม.(มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/brembo-rs125-196-mm.jpg"
     ],
@@ -16488,8 +16354,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบม้าคแคมแต่ง แบบเลนท์ใส. Fits: Yamaha XS650/TX650 · Yamaha XT/TT500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบม้าคแคมแต่ง แบบเลนท์ใส · ใส่ได้กับ Yamaha XS650/TX650 · Yamaha XT/TT500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบม้าคแคมแต่ง แบบเลนท์ใส ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075 (อโนไดซ์สีเงินและสืทอง)สำหรับใส่ SR,XT ราคา",
+    "descriptionTh": "ฝาครอบม้าคแคมแต่ง แบบเลนท์ใส ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075 (อโนไดซ์สีเงินและสืทอง)สำหรับใส่ SR,XT ราคา",
     "images": [
       "/legacy/webgigabike.com/part/capcamlend-gold.jpg"
     ],
@@ -16514,8 +16380,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝาครอบตัวตั้งวาล์ว แบบเลนท์ใส. Fits: Yamaha XS650/TX650 · Yamaha XT/TT500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบตัวตั้งวาล์ว แบบเลนท์ใส · ใส่ได้กับ Yamaha XS650/TX650 · Yamaha XT/TT500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบตัวตั้งวาล์ว แบบเลนท์ใส ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075(อโนไดซ์สีเงินและสืทอง)สำหรับใส่ SR,XT ราคา",
+    "descriptionTh": "ฝาครอบตัวตั้งวาล์ว แบบเลนท์ใส ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075(อโนไดซ์สีเงินและสืทอง)สำหรับใส่ SR,XT ราคา",
     "images": [
       "/legacy/webgigabike.com/part/cover-valulend-gold.jpg"
     ],
@@ -16539,8 +16405,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ES. Clip-On Handle Bars CNC Alloy 6061 39 mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม งาน CNC. Fits: Kawasaki Estrella250/TR250 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ES. Clip-On Handle Bars CNC Alloy 6061 39 mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม งาน CNC · ใส่ได้กับ Kawasaki Estrella250/TR250 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ES. Clip-On Handle Bars CNC Alloy 6061 39 mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม งาน CNC ผลิตจาก Alloy 6061 ขนาด 39mm. (มีสีดำและสีเงิน) คู่ล่ะ",
+    "descriptionTh": "ES. Clip-On Handle Bars CNC Alloy 6061 39 mm. 1&ldquo;,7/8 แฮนจับโช๊คอลูมิเนียม งาน CNC ผลิตจาก Alloy 6061 ขนาด 39mm. (มีสีดำและสีเงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hand-aluminum51.jpg"
     ],
@@ -16559,14 +16425,15 @@ export const legacyProducts: Product[] = [
     "category": "suspension",
     "bikeModels": [
       "gb400",
+      "volty",
       "tempter"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คสแตนเลส Suzuki Vorty250 รูแกนโช๊ค 37 มม. ราคาคู่ล่ะ. Fits: Honda GB250/400/CB400SS · Suzuki Tempter400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คสแตนเลส Suzuki Vorty250 รูแกนโช๊ค 37 มม. ราคาคู่ล่ะ · ใส่ได้กับ Honda GB250/400/CB400SS · Suzuki Tempter400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คสแตนเลส Suzuki Vorty250 รูแกนโช๊ค 37 มม. ราคาคู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คสแตนเลส Suzuki Vorty250 รูแกนโช๊ค 37 มม. ราคาคู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hand1.jpg"
     ],
@@ -16592,8 +16459,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หูยึดไฟหน้าแต่ง CNC แบบซี่ยาวเฉียง ใส่แกนโชีค 43mm. ยาว 95 mm. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดไฟหน้าแต่ง CNC แบบซี่ยาวเฉียง ใส่แกนโชีค 43mm. ยาว 95 mm · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดไฟหน้าแต่ง CNC แบบซี่ยาวเฉียง ใส่แกนโชีค 43mm. ยาว 95 mm. ผลิตจาก Alloy 6061 T6 (มีสี เงิน-ดำ) ชุดล่ะ",
+    "descriptionTh": "หูยึดไฟหน้าแต่ง CNC แบบซี่ยาวเฉียง ใส่แกนโชีค 43mm. ยาว 95 mm. ผลิตจาก Alloy 6061 T6 (มีสี เงิน-ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-bk-long-v.jpg"
     ],
@@ -16617,8 +16484,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Bracket Short Alloy 43mm. หูยึดไฟหน้า CNC (แบบสั้นหูเยื้อง) ขนาด 43mm. ความยาว 62 mm. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Bracket Short Alloy 43mm. หูยึดไฟหน้า CNC (แบบสั้นหูเยื้อง) ขนาด 43mm. ความยาว 62 mm · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Bracket Short Alloy 43mm. หูยึดไฟหน้า CNC (แบบสั้นหูเยื้อง) ขนาด 43mm. ความยาว 62 mm. ผลิตจาก Alloy 6061 (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "Headlight Bracket Short Alloy 43mm. หูยึดไฟหน้า CNC (แบบสั้นหูเยื้อง) ขนาด 43mm. ความยาว 62 mm. ผลิตจาก Alloy 6061 (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-long.jpg-1.jpg"
     ],
@@ -16642,8 +16509,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Brackets 43mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งาน CNC. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Brackets 43mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งาน CNC · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Brackets 43mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 43mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "Headlight Brackets 43mm. Billet CNC Alloy หูยึดไฟหน้า Triumph งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 43mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-po.jpg"
     ],
@@ -16672,8 +16539,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "STAR .11 หูยึดไฟหน้า Centoue150 (แบบตรงสั้น) งาน CNC. Fits: Stallions Centaur150 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "STAR .11 หูยึดไฟหน้า Centoue150 (แบบตรงสั้น) งาน CNC · ใส่ได้กับ Stallions Centaur150 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "STAR .11 หูยึดไฟหน้า Centoue150 (แบบตรงสั้น) งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 51mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "STAR .11 หูยึดไฟหน้า Centoue150 (แบบตรงสั้น) งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 51mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-shot-v-bk.jpg",
       "/legacy/webgigabike.com/part/hoocharng_cnc-shot-v-si.jpg"
@@ -16697,8 +16564,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Headlight Bracket Alloy 43mm. หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว ขนาด 43mm. (มีสีเงินและสีดำ) ชุดล่ะ. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Headlight Bracket Alloy 43mm. หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว ขนาด 43mm. (มีสีเงินและสีดำ) ชุดล่ะ · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Headlight Bracket Alloy 43mm. หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว ขนาด 43mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "Headlight Bracket Alloy 43mm. หูยึดไฟหน้ารุ่นใหม่ล่าสุดแบบตรงงาน CNC พร้อมรูสำหรับใส่ไฟเลี้ยว ขนาด 43mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharng_cnc-trong.jpg"
     ],
@@ -16723,8 +16590,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "GB400.4 หูจับไฟหน้าแต่งสแตนเลสแบบตัว V รูแกนโช๊ค 35 มม.ราคา คู่ล่ะ. Fits: Honda GB250/400/CB400SS · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "GB400.4 หูจับไฟหน้าแต่งสแตนเลสแบบตัว V รูแกนโช๊ค 35 มม.ราคา คู่ล่ะ · ใส่ได้กับ Honda GB250/400/CB400SS · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "GB400.4 หูจับไฟหน้าแต่งสแตนเลสแบบตัว V รูแกนโช๊ค 35 มม.ราคา คู่ล่ะ",
+    "descriptionTh": "GB400.4 หูจับไฟหน้าแต่งสแตนเลสแบบตัว V รูแกนโช๊ค 35 มม.ราคา คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/hoocharngsr-v.jpg"
     ],
@@ -16742,14 +16609,15 @@ export const legacyProducts: Product[] = [
     "price": 2200,
     "category": "accessories",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "tdr"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผ่นรองจานเบรกแต่งสำหรับ SR ที่ใส่ล้อแต่งเกลสปีดใส่จาน TDR. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นรองจานเบรกแต่งสำหรับ SR ที่ใส่ล้อแต่งเกลสปีดใส่จาน TDR · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นรองจานเบรกแต่งสำหรับ SR ที่ใส่ล้อแต่งเกลสปีดใส่จาน TDR อันละ",
+    "descriptionTh": "แผ่นรองจานเบรกแต่งสำหรับ SR ที่ใส่ล้อแต่งเกลสปีดใส่จาน TDR อันละ",
     "images": [
       "/legacy/webgigabike.com/part/Hub-Dis-gel-TDR.jpg"
     ],
@@ -16774,8 +16642,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ดุมเสตอร์แต่งสำหรับ SR ที่ใส่ล้อแต่งมาเชสซี่นี่. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ดุมเสตอร์แต่งสำหรับ SR ที่ใส่ล้อแต่งมาเชสซี่นี่ · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ดุมเสตอร์แต่งสำหรับ SR ที่ใส่ล้อแต่งมาเชสซี่นี่ อันละ",
+    "descriptionTh": "ดุมเสตอร์แต่งสำหรับ SR ที่ใส่ล้อแต่งมาเชสซี่นี่ อันละ",
     "images": [
       "/legacy/webgigabike.com/part/Hub-ma-sr.jpg"
     ],
@@ -16801,8 +16669,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดกันสะบัดแต่ง ใส่กับแกนโช๊ค Ohlins ขนาด 43 mm. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดกันสะบัดแต่ง ใส่กับแกนโช๊ค Ohlins ขนาด 43 mm · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดกันสะบัดแต่ง ใส่กับแกนโช๊ค Ohlins ขนาด 43 mm. ผลิตจาก Alloy CNC Billet (มีสี ดำ/เงิน) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดกันสะบัดแต่ง ใส่กับแกนโช๊ค Ohlins ขนาด 43 mm. ผลิตจาก Alloy CNC Billet (มีสี ดำ/เงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/lock-kunsabus-43.jpg"
     ],
@@ -16825,8 +16693,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตดิสเบรคทวินใส่สายเบรคได้2เส้น. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตดิสเบรคทวินใส่สายเบรคได้2เส้น · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตดิสเบรคทวินใส่สายเบรคได้2เส้น ผลิตจาก Alloy 7075 CNC Billet M10x1.25 มี3สี (ดำ-ขาว-ทอง) ชิ้นละ",
+    "descriptionTh": "น๊อตดิสเบรคทวินใส่สายเบรคได้2เส้น ผลิตจาก Alloy 7075 CNC Billet M10x1.25 มี3สี (ดำ-ขาว-ทอง) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Dis-twin.jpg"
     ],
@@ -16849,8 +16717,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตดิสเบรค มีเกลียว M10 Pit 1.0 สำหรับปั๊มเบรค Brembo และ เกลียว M10 Pit 1.25 สำหรับปั๊ม Nissin. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตดิสเบรค มีเกลียว M10 Pit 1.0 สำหรับปั๊มเบรค Brembo และ เกลียว M10 Pit 1.25 สำหรับปั๊ม Nissin · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตดิสเบรค มีเกลียว M10 Pit 1.0 สำหรับปั๊มเบรค Brembo และ เกลียว M10 Pit 1.25 สำหรับปั๊ม Nissin ผลิตจาก Alloy 7075 T6 มี3สี (ดำ-ขาว-ฟ้า) ชิ้นละ",
+    "descriptionTh": "น๊อตดิสเบรค มีเกลียว M10 Pit 1.0 สำหรับปั๊มเบรค Brembo และ เกลียว M10 Pit 1.25 สำหรับปั๊ม Nissin ผลิตจาก Alloy 7075 T6 มี3สี (ดำ-ขาว-ฟ้า) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Dis5.jpg",
       "/legacy/webgigabike.com/part/Nut-Dis-all.jpg"
@@ -16876,8 +16744,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตแกนล้อหน้า R3. Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตแกนล้อหน้า R3 · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตแกนล้อหน้า R3 ผลิตจาก Alloy 7075 CNC Billet M14x1.5 ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น (มีสีดำและสีฮาร์ท) ชิ้นล่ะ",
+    "descriptionTh": "น๊อตแกนล้อหน้า R3 ผลิตจาก Alloy 7075 CNC Billet M14x1.5 ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น (มีสีดำและสีฮาร์ท) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nut-lor-m14x1.5.jpg"
     ],
@@ -16901,8 +16769,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตแกนล้อหลัง R3. Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตแกนล้อหลัง R3 · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตแกนล้อหลัง R3 ผลิตจาก Alloy 7075 CNC Billet M16x1.5 (มีสีดำและสีเงิน) ชิ้นล่ะ",
+    "descriptionTh": "น๊อตแกนล้อหลัง R3 ผลิตจาก Alloy 7075 CNC Billet M16x1.5 (มีสีดำและสีเงิน) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nut-lor.jpg"
     ],
@@ -16928,8 +16796,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "น๊อตสายออยล์แต่งขนาด M14 Pit 1.50. Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตสายออยล์แต่งขนาด M14 Pit 1.50 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตสายออยล์แต่งขนาด M14 Pit 1.50 ผลิตจาก Alloy CNC Billet มีสี (ดำ-น้ำเงิน-ฟ้า) ชิ้นละ",
+    "descriptionTh": "น๊อตสายออยล์แต่งขนาด M14 Pit 1.50 ผลิตจาก Alloy CNC Billet มีสี (ดำ-น้ำเงิน-ฟ้า) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Oilcool-m14.jpg"
     ],
@@ -16955,8 +16823,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "น๊อตสายออยล์แต่งขนาด M12 Pit 1.50. Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตสายออยล์แต่งขนาด M12 Pit 1.50 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตสายออยล์แต่งขนาด M12 Pit 1.50 ผลิตจาก Alloy CNC Billet มีสี (ดำ-น้ำเงิน) ชิ้นละ",
+    "descriptionTh": "น๊อตสายออยล์แต่งขนาด M12 Pit 1.50 ผลิตจาก Alloy CNC Billet มีสี (ดำ-น้ำเงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/part/Nut-Oilcool1.jpg",
       "/legacy/webgigabike.com/part/Nut-Oilcool.jpg"
@@ -16982,8 +16850,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "น๊อตขันแผงคอบนแต่ง Yamaha. Fits: Yamaha R3/MT-03/R25 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแผงคอบนแต่ง Yamaha · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแผงคอบนแต่ง Yamaha ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
+    "descriptionTh": "น๊อตขันแผงคอบนแต่ง Yamaha ผลิตจาก Alloy 7075 CNC Billet ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nutco1978.jpg"
     ],
@@ -17009,8 +16877,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "น๊อตขันแกนคอบนแต่ง Yamaha. Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตขันแกนคอบนแต่ง Yamaha · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตขันแกนคอบนแต่ง Yamaha ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ,เทา)ชิ้นล่ะ",
+    "descriptionTh": "น๊อตขันแกนคอบนแต่ง Yamaha ผลิตจาก Alloy 7075 CNC Billet มีสี (เงิน,ดำ,เทา)ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/nutco2001.jpg"
     ],
@@ -17036,8 +16904,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง. Fits: Yamaha XS650/TX650 · Yamaha XT/TT500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง · ใส่ได้กับ Yamaha XS650/TX650 · Yamaha XT/TT500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075(อโนไดซ์สีเงินและสืทอง) สำหรับใส่ SR,XT ราคา",
+    "descriptionTh": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075(อโนไดซ์สีเงินและสืทอง) สำหรับใส่ SR,XT ราคา",
     "images": [
       "/legacy/webgigabike.com/part/nutval7075-gold.jpg"
     ],
@@ -17062,8 +16930,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง แบบเลนท์ใส. Fits: Yamaha XS650/TX650 · Yamaha XT/TT500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง แบบเลนท์ใส · ใส่ได้กับ Yamaha XS650/TX650 · Yamaha XT/TT500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง แบบเลนท์ใส ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075 (อโนไดซ์สีเงินและสืทอง)สำหรับใส่ SR,XT ราคา",
+    "descriptionTh": "น็อตครอบตั้งโซ่ราวลิ้นแต่ง แบบเลนท์ใส ผลิตจากอลูมินั่มอัลลอยเกรดพิเศษ7075 (อโนไดซ์สีเงินและสืทอง)สำหรับใส่ SR,XT ราคา",
     "images": [
       "/legacy/webgigabike.com/part/nutvallend7075-gold.jpg"
     ],
@@ -17082,14 +16950,15 @@ export const legacyProducts: Product[] = [
     "category": "engine",
     "bikeModels": [
       "xs650",
+      "srx",
       "xt500"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมด้วยเครื่อง CNC มี3สีให้เลือก",
-    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ลายPeace. Fits: Yamaha XS650/TX650 · Yamaha XT/TT500 · Material: อลูมิเนียมด้วยเครื่อง CNC มี3สีให้เลือก · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ลายPeace · ใส่ได้กับ Yamaha XS650/TX650 · Yamaha XT/TT500 · วัสดุ อลูมิเนียมด้วยเครื่อง CNC มี3สีให้เลือก · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ลายPeace ผลิตจากอลูมิเนียมด้วยเครื่อง CNC มี3สีให้เลือก ราคา",
+    "descriptionTh": "ฝาครอบกรองน้ำมันเครื่องแต่ง SR,SRX ลายPeace ผลิตจากอลูมิเนียมด้วยเครื่อง CNC มี3สีให้เลือก ราคา",
     "images": [
       "/legacy/webgigabike.com/part/oilfilter-pe.jpg"
     ],
@@ -17121,8 +16990,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ฝากรองแต่ง แบบเลนส์ใส ใส่SR400/500,XT,TT. Fits: Yamaha XS650/TX650 · Yamaha XT/TT500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝากรองแต่ง แบบเลนส์ใส ใส่SR400/500,XT,TT · ใส่ได้กับ Yamaha XS650/TX650 · Yamaha XT/TT500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ฝากรองแต่ง แบบเลนส์ใส ใส่SR400/500,XT,TT ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ทอง/ดำ-เงิน/ดำ-ทอง/ดำ-เขียว/ดำ-แดง/ฮาร์ด) ชิ้นล่ะ",
+    "descriptionTh": "ฝากรองแต่ง แบบเลนส์ใส ใส่SR400/500,XT,TT ผลิตจาก Alloy CNC Billet (มีสี เงิน/ดำ/ทอง/ดำ-เงิน/ดำ-ทอง/ดำ-เขียว/ดำ-แดง/ฮาร์ด) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/oilfilter-sr-win-2.jpg",
       "/legacy/webgigabike.com/part/oilfilter-sr-win-3.jpg"
@@ -17148,8 +17017,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊ค Ohlins FG433 & FG621 Sweden 43 mm. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊ค Ohlins FG433 & FG621 Sweden 43 mm · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊ค Ohlins FG433 & FG621 Sweden 43 mm. ผลิตจาก Alloy CNC Billet สวยงามแข็งแรง (มีสี เงิน/ดำ) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนแบบใส่ลูกยางกันสั่นกับตุ๊กตาเดิม SR ได้เลย ใส่กับโช๊ค Ohlins FG433 & FG621 Sweden 43 mm. ผลิตจาก Alloy CNC Billet สวยงามแข็งแรง (มีสี เงิน/ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/pangkorl-sr43-st1.jpg",
       "/legacy/webgigabike.com/part/pangkorl-sr43-st2.jpg"
@@ -17173,8 +17042,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075",
-    "description": "นัทขันปรับสปริงโช๊คหลัง Ohlins. Material: Alloy 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "นัทขันปรับสปริงโช๊คหลัง Ohlins · วัสดุ Alloy 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "นัทขันปรับสปริงโช๊คหลัง Ohlins ผลิตจาก Alloy 7075 มีสี (ดำ-เทา) คู่ละ",
+    "descriptionTh": "นัทขันปรับสปริงโช๊คหลัง Ohlins ผลิตจาก Alloy 7075 มีสี (ดำ-เทา) คู่ละ",
     "images": [
       "/legacy/webgigabike.com/part/Part_ohlins.jpg"
     ],
@@ -17197,8 +17066,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "แสตนเลส กัดหลี่ยม12เหลี่ยมลายเฟือง",
-    "description": "แกนล้อ17x250 mm.12เหลี่ยม ใส่เข้ากับโช๊คหน้า Ohlins 43 mm. Material: แสตนเลส กัดหลี่ยม12เหลี่ยมลายเฟือง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แกนล้อ17x250 mm.12เหลี่ยม ใส่เข้ากับโช๊คหน้า Ohlins 43 mm · วัสดุ แสตนเลส กัดหลี่ยม12เหลี่ยมลายเฟือง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แกนล้อ17x250 mm.12เหลี่ยม ใส่เข้ากับโช๊คหน้า Ohlins 43 mm. ผลิตจาก แสตนเลส กัดหลี่ยม12เหลี่ยมลายเฟือง อันละ",
+    "descriptionTh": "แกนล้อ17x250 mm.12เหลี่ยม ใส่เข้ากับโช๊คหน้า Ohlins 43 mm. ผลิตจาก แสตนเลส กัดหลี่ยม12เหลี่ยมลายเฟือง อันละ",
     "images": [
       "/legacy/webgigabike.com/part/Rear-axle-17mm-250mm-12-1.jpg",
       "/legacy/webgigabike.com/part/Rear-axle-17mm-250mm-12.jpg"
@@ -17222,8 +17091,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "แสตนเลส กัดหลี่ยม6เหลี่ยมลายเฟือง",
-    "description": "แกนล้อ17x250 mm.6เหลี่ยม ใส่เข้ากับโช๊คหน้า Ohlins 43 mm. Material: แสตนเลส กัดหลี่ยม6เหลี่ยมลายเฟือง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แกนล้อ17x250 mm.6เหลี่ยม ใส่เข้ากับโช๊คหน้า Ohlins 43 mm · วัสดุ แสตนเลส กัดหลี่ยม6เหลี่ยมลายเฟือง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แกนล้อ17x250 mm.6เหลี่ยม ใส่เข้ากับโช๊คหน้า Ohlins 43 mm. ผลิตจาก แสตนเลส กัดหลี่ยม6เหลี่ยมลายเฟือง อันละ",
+    "descriptionTh": "แกนล้อ17x250 mm.6เหลี่ยม ใส่เข้ากับโช๊คหน้า Ohlins 43 mm. ผลิตจาก แสตนเลส กัดหลี่ยม6เหลี่ยมลายเฟือง อันละ",
     "images": [
       "/legacy/webgigabike.com/part/Rear-axle-17mm-250mm-6-1.jpg",
       "/legacy/webgigabike.com/part/Rear-axle-17mm-250mm-6.jpg"
@@ -17249,8 +17118,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "น๊อตแกนล้อหลัง. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตแกนล้อหลัง · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "น๊อตแกนล้อหลัง ผลิตจาก Alloy 7075 CNC Billet M16x1.5 (มีสีดำ-สีเงิน-สีทอง-สีเทาฮาร์ท) ชิ้นล่ะ",
+    "descriptionTh": "น๊อตแกนล้อหลัง ผลิตจาก Alloy 7075 CNC Billet M16x1.5 (มีสีดำ-สีเงิน-สีทอง-สีเทาฮาร์ท) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/part/Rear-axle-nut.jpg"
     ],
@@ -17273,8 +17142,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายขาว ราคา. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายขาว ราคา · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายขาว ราคา",
+    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายขาว ราคา",
     "images": [
       "/legacy/webgigabike.com/part/se.jpg"
     ],
@@ -17297,8 +17166,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่งทรงคาเฟ่ หนังน้ำตาล-ด้ายขาว ราคา. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังน้ำตาล-ด้ายขาว ราคา · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่งทรงคาเฟ่ หนังน้ำตาล-ด้ายขาว ราคา",
+    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังน้ำตาล-ด้ายขาว ราคา",
     "images": [
       "/legacy/webgigabike.com/part/se1.jpg"
     ],
@@ -17321,8 +17190,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง ราคา. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง ราคา · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง ราคา",
+    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง ราคา",
     "images": [
       "/legacy/webgigabike.com/part/se2.jpg"
     ],
@@ -17345,8 +17214,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายดำ-ใส่หมุด ราคา. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายดำ-ใส่หมุด ราคา · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายดำ-ใส่หมุด ราคา",
+    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายดำ-ใส่หมุด ราคา",
     "images": [
       "/legacy/webgigabike.com/part/se3.jpg"
     ],
@@ -17369,8 +17238,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง-ใส่หมุด ราคา. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง-ใส่หมุด ราคา · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง-ใส่หมุด ราคา",
+    "descriptionTh": "เบาะแต่งทรงคาเฟ่ หนังดำ-ด้ายแดง-ใส่หมุด ราคา",
     "images": [
       "/legacy/webgigabike.com/part/se4.jpg"
     ],
@@ -17393,8 +17262,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่ง หนังดำ-ด้ายดำ-ใส่หมุด ราคา. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่ง หนังดำ-ด้ายดำ-ใส่หมุด ราคา · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่ง หนังดำ-ด้ายดำ-ใส่หมุด ราคา",
+    "descriptionTh": "เบาะแต่ง หนังดำ-ด้ายดำ-ใส่หมุด ราคา",
     "images": [
       "/legacy/webgigabike.com/part/seat1.jpg"
     ],
@@ -17417,8 +17286,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เบาะแต่ง หนังดำ-ด้ายขาว ราคา. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เบาะแต่ง หนังดำ-ด้ายขาว ราคา · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เบาะแต่ง หนังดำ-ด้ายขาว ราคา",
+    "descriptionTh": "เบาะแต่ง หนังดำ-ด้ายขาว ราคา",
     "images": [
       "/legacy/webgigabike.com/part/seat12.jpg"
     ],
@@ -17437,14 +17306,16 @@ export const legacyProducts: Product[] = [
     "price": 1800,
     "category": "drivetrain",
     "bikeModels": [
-      "sr400"
+      "sr400",
+      "srx",
+      "tdr"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet ใส่โซ่ 428-54-56 ฟัน & 520-41-44 ฟัน",
-    "description": "Sprocket For Hub Y'S GEAR ,TDR, Aluminum Alloy 7075 Hard Anodize 428-54-56T สเตอร์หลังแต่ง ใส่ล้อแม็ก Y'S GEAR,TDR, XJR,SRX. Fits: Yamaha SR400/500 · Material: Alloy 7075 CNC Billet ใส่โซ่ 428-54-56 ฟัน & 520-41-44 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket For Hub Y'S GEAR ,TDR, Aluminum Alloy 7075 Hard Anodize 428-54-56T สเตอร์หลังแต่ง ใส่ล้อแม็ก Y'S GEAR,TDR, XJR,SRX · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 CNC Billet ใส่โซ่ 428-54-56 ฟัน & 520-41-44 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket For Hub Y'S GEAR ,TDR, Aluminum Alloy 7075 Hard Anodize 428-54-56T สเตอร์หลังแต่ง ใส่ล้อแม็ก Y'S GEAR,TDR, XJR,SRX ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 428-54-56 ฟัน & 520-41-44 ฟัน",
+    "descriptionTh": "Sprocket For Hub Y'S GEAR ,TDR, Aluminum Alloy 7075 Hard Anodize 428-54-56T สเตอร์หลังแต่ง ใส่ล้อแม็ก Y'S GEAR,TDR, XJR,SRX ผลิตจาก Alloy 7075 CNC Billet ใส่โซ่ 428-54-56 ฟัน & 520-41-44 ฟัน",
     "images": [
       "/legacy/webgigabike.com/part/sprocket-Tdr-428.jpg"
     ],
@@ -17468,8 +17339,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ขายึดกันสะบัดรัดกับกระบอกโช๊คหน้าขนาด 54mm. R1,R6. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดกันสะบัดรัดกับกระบอกโช๊คหน้าขนาด 54mm. R1,R6 · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดกันสะบัดรัดกับกระบอกโช๊คหน้าขนาด 54mm. R1,R6 ผลิตจาก Alloy CNC Billet อันละ",
+    "descriptionTh": "ขายึดกันสะบัดรัดกับกระบอกโช๊คหน้าขนาด 54mm. R1,R6 ผลิตจาก Alloy CNC Billet อันละ",
     "images": [
       "/legacy/webgigabike.com/R1/Adapter-Chok-52mm.jpg"
     ],
@@ -17493,8 +17364,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet 3D แข็งแรงทดสอบในสนามแข่งมาแล้ว",
-    "description": "ขายึดกันสะบัดแบบใส่กับโครงรถข้างซ้าย R1. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet 3D แข็งแรงทดสอบในสนามแข่งมาแล้ว · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดกันสะบัดแบบใส่กับโครงรถข้างซ้าย R1 · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet 3D แข็งแรงทดสอบในสนามแข่งมาแล้ว · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดกันสะบัดแบบใส่กับโครงรถข้างซ้าย R1 ผลิตจาก Alloy CNC Billet 3D แข็งแรงทดสอบในสนามแข่งมาแล้ว อันละ",
+    "descriptionTh": "ขายึดกันสะบัดแบบใส่กับโครงรถข้างซ้าย R1 ผลิตจาก Alloy CNC Billet 3D แข็งแรงทดสอบในสนามแข่งมาแล้ว อันละ",
     "images": [
       "/legacy/webgigabike.com/R1/Adapter-Chok.jpg"
     ],
@@ -17518,8 +17389,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet คงทนแข็งแรง",
-    "description": "แป้นรองขางัดเกียร์แต่ง R1 ใส่แทนแป้นขาตั้งเดี่ยวเดิมได้เลย. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet คงทนแข็งแรง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แป้นรองขางัดเกียร์แต่ง R1 ใส่แทนแป้นขาตั้งเดี่ยวเดิมได้เลย · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet คงทนแข็งแรง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แป้นรองขางัดเกียร์แต่ง R1 ใส่แทนแป้นขาตั้งเดี่ยวเดิมได้เลย ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
+    "descriptionTh": "แป้นรองขางัดเกียร์แต่ง R1 ใส่แทนแป้นขาตั้งเดี่ยวเดิมได้เลย ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
     "images": [
       "/legacy/webgigabike.com/R1/Adapter-Gear.jpg"
     ],
@@ -17543,8 +17414,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "บู๊ทล้อหน้าและล้อหลังแต่ง R1 ทำให้ถอดล้อใส่ล้อง่ายเร็วขึ้นมากโดยไม่ต้องถอดซีลกันน้ำกันฝุ่นออกและช่วยระบายความร้อนที่สะสมในลูกปืนล้อได้ดีขึ้น. Fits: Yamaha R1/R6/R7 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทล้อหน้าและล้อหลังแต่ง R1 ทำให้ถอดล้อใส่ล้อง่ายเร็วขึ้นมากโดยไม่ต้องถอดซีลกันน้ำกันฝุ่นออกและช่วยระบายความร้อนที่สะสมในลูกปืนล้อได้ดีขึ้น · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บู๊ทล้อหน้าและล้อหลังแต่ง R1 ทำให้ถอดล้อใส่ล้อง่ายเร็วขึ้นมากโดยไม่ต้องถอดซีลกันน้ำกันฝุ่นออกและช่วยระบายความร้อนที่สะสมในลูกปืนล้อได้ดีขึ้น ผลิตจาก Alloy 7075 CNC Billet Hard Anodize ชุดละ",
+    "descriptionTh": "บู๊ทล้อหน้าและล้อหลังแต่ง R1 ทำให้ถอดล้อใส่ล้อง่ายเร็วขึ้นมากโดยไม่ต้องถอดซีลกันน้ำกันฝุ่นออกและช่วยระบายความร้อนที่สะสมในลูกปืนล้อได้ดีขึ้น ผลิตจาก Alloy 7075 CNC Billet Hard Anodize ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R1/Boot-R1.jpg"
     ],
@@ -17570,8 +17441,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet คงทนแข็งแรง",
-    "description": "แป้นที่แขวนโซ่แต่ง R1,R6 ใส่เพื่อสะดวกเวลาถอดลอหลังออกโซ่จะได้ไม่หล่นไปเลอะยางและสวิงอาร์ม มี2แบบ ใส่โซ่ 428 & 520. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet คงทนแข็งแรง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แป้นที่แขวนโซ่แต่ง R1,R6 ใส่เพื่อสะดวกเวลาถอดลอหลังออกโซ่จะได้ไม่หล่นไปเลอะยางและสวิงอาร์ม มี2แบบ ใส่โซ่ 428 & 520 · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet คงทนแข็งแรง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แป้นที่แขวนโซ่แต่ง R1,R6 ใส่เพื่อสะดวกเวลาถอดลอหลังออกโซ่จะได้ไม่หล่นไปเลอะยางและสวิงอาร์ม มี2แบบ ใส่โซ่ 428 & 520 ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
+    "descriptionTh": "แป้นที่แขวนโซ่แต่ง R1,R6 ใส่เพื่อสะดวกเวลาถอดลอหลังออกโซ่จะได้ไม่หล่นไปเลอะยางและสวิงอาร์ม มี2แบบ ใส่โซ่ 428 & 520 ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
     "images": [
       "/legacy/webgigabike.com/R1/Chain-hanger.jpg"
     ],
@@ -17595,8 +17466,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Clip-On Handle Bars CNC Alloy 50&52 mm.7/8 แฮนจับโช๊คใส่ R1 มีขนาด 50,52mm. งาน Alloy 6061 CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ. Fits: Yamaha R1/R6/R7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Clip-On Handle Bars CNC Alloy 50&52 mm.7/8 แฮนจับโช๊คใส่ R1 มีขนาด 50,52mm. งาน Alloy 6061 CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Clip-On Handle Bars CNC Alloy 50&52 mm.7/8 แฮนจับโช๊คใส่ R1 มีขนาด 50,52mm. งาน Alloy 6061 CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
+    "descriptionTh": "Clip-On Handle Bars CNC Alloy 50&52 mm.7/8 แฮนจับโช๊คใส่ R1 มีขนาด 50,52mm. งาน Alloy 6061 CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R1/Clipon-50-bk.jpg",
       "/legacy/webgigabike.com/R1/Clipon-50-sl.jpg"
@@ -17621,8 +17492,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Clip-On Handle Bars CNC Alloy 50 mm.7/8 แฮนจับโช๊คใส่ R1แบบยก มีขนาด 50 mm. งาน Alloy 6061 CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ. Fits: Yamaha R1/R6/R7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Clip-On Handle Bars CNC Alloy 50 mm.7/8 แฮนจับโช๊คใส่ R1แบบยก มีขนาด 50 mm. งาน Alloy 6061 CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Clip-On Handle Bars CNC Alloy 50 mm.7/8 แฮนจับโช๊คใส่ R1แบบยก มีขนาด 50 mm. งาน Alloy 6061 CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
+    "descriptionTh": "Clip-On Handle Bars CNC Alloy 50 mm.7/8 แฮนจับโช๊คใส่ R1แบบยก มีขนาด 50 mm. งาน Alloy 6061 CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R1/Clipon-50-up-sl.jpg"
     ],
@@ -17646,8 +17517,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 + 7075 ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R1. Fits: Yamaha R1/R6/R7 · Material: Alloy 6061 + 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R1 · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 6061 + 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R1ผลิตจาก Alloy 6061 + 7075 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R1ผลิตจาก Alloy 6061 + 7075 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R1/Footsty-R1-2017-blk.jpg",
       "/legacy/webgigabike.com/R1/Footsty-R1-2017-sil.jpg"
@@ -17672,8 +17543,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "ชุดอัฟเกรดพักเท้าหน้าแต่ง Yamaha R1 เพิ่มความสูงจากเดิม 15 มม. แก้ไขปัญหาขามักหลุดจากหลอดพักเท้าตอนเข้าโค้ง เหมาะสำหรับคนขี่ที่ขายาวไม่พอกับท่านั่ง. Fits: Yamaha R1/R6/R7 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดอัฟเกรดพักเท้าหน้าแต่ง Yamaha R1 เพิ่มความสูงจากเดิม 15 มม. แก้ไขปัญหาขามักหลุดจากหลอดพักเท้าตอนเข้าโค้ง เหมาะสำหรับคนขี่ที่ขายาวไม่พอกับท่านั่ง · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดอัฟเกรดพักเท้าหน้าแต่ง Yamaha R1 เพิ่มความสูงจากเดิม 15 มม. แก้ไขปัญหาขามักหลุดจากหลอดพักเท้าตอนเข้าโค้ง เหมาะสำหรับคนขี่ที่ขายาวไม่พอกับท่านั่ง ผลิตจาก Alloy 7075 CNC Billet คู่ละ",
+    "descriptionTh": "ชุดอัฟเกรดพักเท้าหน้าแต่ง Yamaha R1 เพิ่มความสูงจากเดิม 15 มม. แก้ไขปัญหาขามักหลุดจากหลอดพักเท้าตอนเข้าโค้ง เหมาะสำหรับคนขี่ที่ขายาวไม่พอกับท่านั่ง ผลิตจาก Alloy 7075 CNC Billet คู่ละ",
     "images": [
       "/legacy/webgigabike.com/R1/Footsty-R1-Up15mm.jpg"
     ],
@@ -17690,13 +17561,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "Yamaha R1 Yamaha R1M-520-5 hole = Aluminum Alloy 7075 Hard Anodize 520",
     "price": 2200,
     "category": "accessories",
-    "bikeModels": [],
+    "bikeModels": [
+      "r1"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Yamaha R1 Yamaha R1M-520-5 hole = Aluminum Alloy 7075 Hard Anodize 520-41-48T =. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Yamaha R1 Yamaha R1M-520-5 hole = Aluminum Alloy 7075 Hard Anodize 520-41-48T = · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Yamaha R1 Yamaha R1M-520-5 hole = Aluminum Alloy 7075 Hard Anodize 520-41-48T =",
+    "descriptionTh": "Yamaha R1 Yamaha R1M-520-5 hole = Aluminum Alloy 7075 Hard Anodize 520-41-48T =",
     "images": [
       "/legacy/webgigabike.com/R1/R1-2017.jpg",
       "/legacy/webgigabike.com/R1/Sprocket-r1m-ha1.jpg",
@@ -17706,8 +17579,7 @@ export const legacyProducts: Product[] = [
     "published": false,
     "reviewReasons": [
       "no_code",
-      "no_category",
-      "no_fitment"
+      "no_category"
     ]
   },
   {
@@ -17724,8 +17596,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-15,16,17 ฟัน",
-    "description": "สเตอร์หน้า Yamaha R1,R9 Steel CNC Billet Hardened. Fits: Yamaha R1/R6/R7 · Material: เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-15,16,17 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า Yamaha R1,R9 Steel CNC Billet Hardened · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-15,16,17 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า Yamaha R1,R9 Steel CNC Billet Hardened ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-15,16,17 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หน้า Yamaha R1,R9 Steel CNC Billet Hardened ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-15,16,17 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/R1/Sprocket-r1-520-15.jpg"
     ],
@@ -17749,8 +17621,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเตอร์หลัง Yamaha R1M-520-5 hole = Alloy 7075 CNC Billet Hard Anodize 520 - 41- 48T =. Fits: Yamaha R1/R6/R7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Yamaha R1M-520-5 hole = Alloy 7075 CNC Billet Hard Anodize 520 - 41- 48T = · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Yamaha R1M-520-5 hole = Alloy 7075 CNC Billet Hard Anodize 520 - 41- 48T =",
+    "descriptionTh": "สเตอร์หลัง Yamaha R1M-520-5 hole = Alloy 7075 CNC Billet Hard Anodize 520 - 41- 48T =",
     "images": [
       "/legacy/webgigabike.com/R1/Sprocket-r1m-ha1.jpg",
       "/legacy/webgigabike.com/R1/Sprocket-r1m-ha2.jpg"
@@ -17769,14 +17641,15 @@ export const legacyProducts: Product[] = [
     "price": 5500,
     "category": "suspension",
     "bikeModels": [
-      "r15"
+      "r15",
+      "r1"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอล่างแต่ง Yamaha R15 รุ่นโช๊คหัวกลับขนาด 47mm. องศาเดิมสามารถใส่เข้ากับแผงคอบนเดิมได้เลย. Fits: Yamaha R15/XSR155/XMAX300 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอล่างแต่ง Yamaha R15 รุ่นโช๊คหัวกลับขนาด 47mm. องศาเดิมสามารถใส่เข้ากับแผงคอบนเดิมได้เลย · ใส่ได้กับ Yamaha R15/XSR155/XMAX300 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอล่างแต่ง Yamaha R15 รุ่นโช๊คหัวกลับขนาด 47mm. องศาเดิมสามารถใส่เข้ากับแผงคอบนเดิมได้เลย ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว น้ำหนักเพียง 1.07 kg. (มีสี ดำและฮาร์ด) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอล่างแต่ง Yamaha R15 รุ่นโช๊คหัวกลับขนาด 47mm. องศาเดิมสามารถใส่เข้ากับแผงคอบนเดิมได้เลย ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว น้ำหนักเพียง 1.07 kg. (มีสี ดำและฮาร์ด) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/R15/Yoke-bk-std.jpg"
     ],
@@ -17794,14 +17667,15 @@ export const legacyProducts: Product[] = [
     "price": 8000,
     "category": "suspension",
     "bikeModels": [
-      "r15"
+      "r15",
+      "r1"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนล่างแต่ง Yamaha R15 รุ่นโช๊คหัวกลับขนาด 47mm. มีออฟเซ็ดโช๊ค2แบบให้เลือก 1.องศาเดิม 2.องศาพิเศษ35องศา. Fits: Yamaha R15/XSR155/XMAX300 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่างแต่ง Yamaha R15 รุ่นโช๊คหัวกลับขนาด 47mm. มีออฟเซ็ดโช๊ค2แบบให้เลือก 1.องศาเดิม 2.องศาพิเศษ35องศา · ใส่ได้กับ Yamaha R15/XSR155/XMAX300 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่างแต่ง Yamaha R15 รุ่นโช๊คหัวกลับขนาด 47mm. มีออฟเซ็ดโช๊ค2แบบให้เลือก 1.องศาเดิม 2.องศาพิเศษ35องศา ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว น้ำหนักเพียง 1.45 kg. (มีสี ดำและฮาร์ด) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนล่างแต่ง Yamaha R15 รุ่นโช๊คหัวกลับขนาด 47mm. มีออฟเซ็ดโช๊ค2แบบให้เลือก 1.องศาเดิม 2.องศาพิเศษ35องศา ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว น้ำหนักเพียง 1.45 kg. (มีสี ดำและฮาร์ด) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/R15/Yoke-Set-R15-Hadd-std.jpg",
       "/legacy/webgigabike.com/R15/Yoke-Set-R15-bk-35.jpg"
@@ -17820,14 +17694,15 @@ export const legacyProducts: Product[] = [
     "price": 4800,
     "category": "brake",
     "bikeModels": [
-      "r3"
+      "r3",
+      "r15"
     ],
     "colors": [],
     "inStock": false,
     "stockCount": 0,
     "material": "",
-    "description": "จานเบรคแต่ง R3 ขนาด 300mm.หนา 4.5mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน. Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง R3 ขนาด 300mm.หนา 4.5mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง R3 ขนาด 300mm.หนา 4.5mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet ใส่ XMAX300 ก็ได้ (มีหลายสีหลายแบบให้เลือกตามต้องการ) ชุดล่ะ",
+    "descriptionTh": "จานเบรคแต่ง R3 ขนาด 300mm.หนา 4.5mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet ใส่ XMAX300 ก็ได้ (มีหลายสีหลายแบบให้เลือกตามต้องการ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Breck-300-bk.jpg"
     ],
@@ -17855,8 +17730,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "จานเบรคหลังแต่ง R3 ขนาดจาน 220 mm. หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน. Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคหลังแต่ง R3 ขนาดจาน 220 mm. หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคหลังแต่ง R3 ขนาดจาน 220 mm. หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy7075+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ",
+    "descriptionTh": "จานเบรคหลังแต่ง R3 ขนาดจาน 220 mm. หนา 4.5 mm. แผ่นจานเบรคเป็นของแท้ซันสตาร์ ใส้จาน ผลิตจาก Alloy7075+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ใส้จานมีสี ดำ/ทอง/ฮาร์ด ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Breck-R-220-bk.jpg",
       "/legacy/webgigabike.com/R3/Breck-R-220-ha.jpg"
@@ -17881,8 +17756,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรคหน้า Brembo หูชิด R3 ใส่จาน310มิล. Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหน้า Brembo หูชิด R3 ใส่จาน310มิล · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหน้า Brembo หูชิด R3 ใส่จาน310มิล ผลิตจาก Alloy CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น มี 3 สี (ดำ-เงิน-ฮาร์ท) ชิ้นละ",
+    "descriptionTh": "ขายึดปั๊มเบรคหน้า Brembo หูชิด R3 ใส่จาน310มิล ผลิตจาก Alloy CNC Billet ชุบสี อโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นกันรอยได้ดีและทำให้เกลียวแข็งแรงมากขึ้น มี 3 สี (ดำ-เงิน-ฮาร์ท) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/R3/caliper-brembo-r3-310.jpg"
     ],
@@ -17906,8 +17781,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรกหน้า Brembo หูชิด ใส่ Yamaha R25,R3 รุ่นโช๊คหัวกลับ USD.ใส่เข้ากับจานเบรคเดิมได้เลย. Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรกหน้า Brembo หูชิด ใส่ Yamaha R25,R3 รุ่นโช๊คหัวกลับ USD.ใส่เข้ากับจานเบรคเดิมได้เลย · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรกหน้า Brembo หูชิด ใส่ Yamaha R25,R3 รุ่นโช๊คหัวกลับ USD.ใส่เข้ากับจานเบรคเดิมได้เลย ผลิตจาก Alloy CNC Billet มี 2 สี (ดำ- เงิน) ชิ้นละ",
+    "descriptionTh": "ขายึดปั๊มเบรกหน้า Brembo หูชิด ใส่ Yamaha R25,R3 รุ่นโช๊คหัวกลับ USD.ใส่เข้ากับจานเบรคเดิมได้เลย ผลิตจาก Alloy CNC Billet มี 2 สี (ดำ- เงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/R3/caliper-brembo-r3-new.jpg"
     ],
@@ -17931,8 +17806,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรกหลัง Brembo ผีเสื้อห้อยล่าง ใส่ Yamaha R25,R3,MT03. Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรกหลัง Brembo ผีเสื้อห้อยล่าง ใส่ Yamaha R25,R3,MT03 · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรกหลัง Brembo ผีเสื้อห้อยล่าง ใส่ Yamaha R25,R3,MT03 ผลิตจาก Alloy CNC Billet มี 2 สี (ดำ- เงิน) ชิ้นละ",
+    "descriptionTh": "ขายึดปั๊มเบรกหลัง Brembo ผีเสื้อห้อยล่าง ใส่ Yamaha R25,R3,MT03 ผลิตจาก Alloy CNC Billet มี 2 สี (ดำ- เงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/R3/caliper-brembo-r3-R.jpg"
     ],
@@ -17956,8 +17831,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรคหน้า Brembo หูชิด ใส่ Yamaha R25,R3,MT03 ใส่เข้ากับจานเบรคเดิมได้เลย 298 mm. Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรคหน้า Brembo หูชิด ใส่ Yamaha R25,R3,MT03 ใส่เข้ากับจานเบรคเดิมได้เลย 298 mm · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรคหน้า Brembo หูชิด ใส่ Yamaha R25,R3,MT03 ใส่เข้ากับจานเบรคเดิมได้เลย 298 mm. ผลิตจาก Alloy CNC Billet มี 2 สี (ดำ- เงิน) ชิ้นละ",
+    "descriptionTh": "ขายึดปั๊มเบรคหน้า Brembo หูชิด ใส่ Yamaha R25,R3,MT03 ใส่เข้ากับจานเบรคเดิมได้เลย 298 mm. ผลิตจาก Alloy CNC Billet มี 2 สี (ดำ- เงิน) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/R3/caliper-brembo-r3.jpg"
     ],
@@ -17982,8 +17857,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คหัวกลับ USD.อลูมิเนียมขนาด 47mm. แบบเอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ. Fits: Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คหัวกลับ USD.อลูมิเนียมขนาด 47mm. แบบเอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ · ใส่ได้กับ Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คหัวกลับ USD.อลูมิเนียมขนาด 47mm. แบบเอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คหัวกลับ USD.อลูมิเนียมขนาด 47mm. แบบเอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Chock-47-11bk.jpg",
       "/legacy/webgigabike.com/R3/Chock-47-11sl.jpg"
@@ -18009,8 +17884,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คอลูมิเนียมขนาด 41 มม. แบบเอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ. Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมขนาด 41 มม. แบบเอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คอลูมิเนียมขนาด 41 มม. แบบเอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมขนาด 41 มม. แบบเอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) มี คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Chock-47-11sl.jpg"
     ],
@@ -18037,8 +17912,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนล่างแต่ง Yamaha R25,R3 โช๊คขนาด 41mm. Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่างแต่ง Yamaha R25,R3 โช๊คขนาด 41mm · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่างแต่ง Yamaha R25,R3 โช๊คขนาด 41mm. ผลิตจาก Alloy 6061+7075 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ เบากว่าของเดิม 1.3 kg. (มีสี เงิน/ดำ) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนล่างแต่ง Yamaha R25,R3 โช๊คขนาด 41mm. ผลิตจาก Alloy 6061+7075 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ เบากว่าของเดิม 1.3 kg. (มีสี เงิน/ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/cor-sl.jpg",
       "/legacy/webgigabike.com/R3/cor-bk.jpg"
@@ -18063,8 +17938,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "แผ่นอุดแพร์ PAIR Cover yamaha r3 แบบครีบช่วยระบายตวามร้อนได้ดีเยี่ยม. Fits: Yamaha R3/MT-03/R25 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover yamaha r3 แบบครีบช่วยระบายตวามร้อนได้ดีเยี่ยม · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นอุดแพร์ PAIR Cover yamaha r3 แบบครีบช่วยระบายตวามร้อนได้ดีเยี่ยม ผลิตจาก Alloy CNC Billet ชิ้นละ",
+    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover yamaha r3 แบบครีบช่วยระบายตวามร้อนได้ดีเยี่ยม ผลิตจาก Alloy CNC Billet ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/R3/Cover_Egr_r3.jpg"
     ],
@@ -18089,8 +17964,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "โซ่สำหรับรถแข่งโดยเฉพาะ DID 415 ERZ Racing 140 ข้อ. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "โซ่สำหรับรถแข่งโดยเฉพาะ DID 415 ERZ Racing 140 ข้อ · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "โซ่สำหรับรถแข่งโดยเฉพาะ DID 415 ERZ Racing 140 ข้อ ชุดละ",
+    "descriptionTh": "โซ่สำหรับรถแข่งโดยเฉพาะ DID 415 ERZ Racing 140 ข้อ ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R3/Did-ErZ-415-140-3.jpg",
       "/legacy/webgigabike.com/R3/Did-ErZ-415-140-1.jpg",
@@ -18117,8 +17992,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "แผ่นอุดแพร์ PAIR Cover yamaha r3 แบบเรียบ. Fits: Yamaha R3/MT-03/R25 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover yamaha r3 แบบเรียบ · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นอุดแพร์ PAIR Cover yamaha r3 แบบเรียบ ผลิตจาก Alloy CNC Billet ชิ้นละ",
+    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover yamaha r3 แบบเรียบ ผลิตจาก Alloy CNC Billet ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/R3/egr-r3n.jpg"
     ],
@@ -18143,8 +18018,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 CNC Billet เบามากเหมาะสำหรับรถแข่งครับ",
-    "description": "หูยึดเครื่อง R3. Fits: Yamaha R3/MT-03/R25 · Material: Alloy 6061 CNC Billet เบามากเหมาะสำหรับรถแข่งครับ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูยึดเครื่อง R3 · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ Alloy 6061 CNC Billet เบามากเหมาะสำหรับรถแข่งครับ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หูยึดเครื่อง R3 ผลิตจาก Alloy 6061 CNC Billet เบามากเหมาะสำหรับรถแข่งครับ พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นไม่บิดงอง่ายและกันรอยได้ดี (มีสีดำและสีฮาร์ท) ชุดล่ะ",
+    "descriptionTh": "หูยึดเครื่อง R3 ผลิตจาก Alloy 6061 CNC Billet เบามากเหมาะสำหรับรถแข่งครับ พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นไม่บิดงอง่ายและกันรอยได้ดี (มีสีดำและสีฮาร์ท) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Engine-mount-r3.jpg"
     ],
@@ -18169,8 +18044,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ทั้ง",
-    "description": "ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R25,R3 Step-1. Fits: Yamaha R3/MT-03/R25 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R25,R3 Step-1 · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R25,R3 Step-1 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งและใช้แข่งในรายการ ARRC มาแล้วและได้ขึ้นโพเดี้ยมอันดับ2มาแล้ว ทั้งชุด ชุดละ",
+    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R25,R3 Step-1 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งและใช้แข่งในรายการ ARRC มาแล้วและได้ขึ้นโพเดี้ยมอันดับ2มาแล้ว ทั้งชุด ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R3/GB-asia.jpg",
       "/legacy/webgigabike.com/R3/Footpet-r3-sl-rc.jpg"
@@ -18199,8 +18074,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขาเกียร์โยงซ้าย. Fits: Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาเกียร์โยงซ้าย · ใส่ได้กับ Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขาเกียร์โยงซ้าย อันละ",
+    "descriptionTh": "ขาเกียร์โยงซ้าย อันละ",
     "images": [
       "/legacy/webgigabike.com/R3/Gear-L.jpg"
     ],
@@ -18227,8 +18102,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คหัวกลับ USD.อลูมิเนียมขนาด 47 มม. แบบยก เอียง10 องศา งาน Alloy CNC Billet (10 degrees)(มีสีดำและสีเงิน) คู่ล่ะ. Fits: Kawasaki Ninja250/300/400 · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คหัวกลับ USD.อลูมิเนียมขนาด 47 มม. แบบยก เอียง10 องศา งาน Alloy CNC Billet (10 degrees)(มีสีดำและสีเงิน) คู่ล่ะ · ใส่ได้กับ Kawasaki Ninja250/300/400 · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คหัวกลับ USD.อลูมิเนียมขนาด 47 มม. แบบยก เอียง10 องศา งาน Alloy CNC Billet (10 degrees)(มีสีดำและสีเงิน) คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คหัวกลับ USD.อลูมิเนียมขนาด 47 มม. แบบยก เอียง10 องศา งาน Alloy CNC Billet (10 degrees)(มีสีดำและสีเงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Hand-47-1.jpg",
       "/legacy/webgigabike.com/R3/Hand-47-3.jpg",
@@ -18256,8 +18131,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คอลูมิเนียมแบบเอียง 10 องศา งาน Alloy CNC CNC Billet (10 degrees)(มีสีดำและสีเงิน) มีขนาด 41mm. คู่ล่ะ. Fits: Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมแบบเอียง 10 องศา งาน Alloy CNC CNC Billet (10 degrees)(มีสีดำและสีเงิน) มีขนาด 41mm. คู่ล่ะ · ใส่ได้กับ Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คอลูมิเนียมแบบเอียง 10 องศา งาน Alloy CNC CNC Billet (10 degrees)(มีสีดำและสีเงิน) มีขนาด 41mm. คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมแบบเอียง 10 องศา งาน Alloy CNC CNC Billet (10 degrees)(มีสีดำและสีเงิน) มีขนาด 41mm. คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Hand41-9degree.jpg",
       "/legacy/webgigabike.com/R3/Hand41-9degree-bk.jpg"
@@ -18282,8 +18157,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แฮนจับโช๊คอลูมิเนียมงาน CNC (มีสีดำและสีเงิน) มีขนาด 41mm.(11 degrees) คู่ล่ะ. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมงาน CNC (มีสีดำและสีเงิน) มีขนาด 41mm.(11 degrees) คู่ล่ะ · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แฮนจับโช๊คอลูมิเนียมงาน CNC (มีสีดำและสีเงิน) มีขนาด 41mm.(11 degrees) คู่ล่ะ",
+    "descriptionTh": "แฮนจับโช๊คอลูมิเนียมงาน CNC (มีสีดำและสีเงิน) มีขนาด 41mm.(11 degrees) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Hand41-r6.jpg"
     ],
@@ -18311,8 +18186,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet คงทนแข็งแรง",
-    "description": "ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น มีความยาว 46,52,60,65 mm. Fits: Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · Material: Alloy CNC Billet คงทนแข็งแรง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น มีความยาว 46,52,60,65 mm · ใส่ได้กับ Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · วัสดุ Alloy CNC Billet คงทนแข็งแรง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น มีความยาว 46,52,60,65 mm. ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
+    "descriptionTh": "ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น มีความยาว 46,52,60,65 mm. ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
     "images": [
       "/legacy/webgigabike.com/R3/Leverage-gears.jpg"
     ],
@@ -18342,8 +18217,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "แกนส่งเกียร์โยงแต่ง M6 L+R. Fits: Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แกนส่งเกียร์โยงแต่ง M6 L+R · ใส่ได้กับ Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แกนส่งเกียร์โยงแต่ง M6 L+R ผลิตจาก Alloy 7075 CNC Billet อันละ",
+    "descriptionTh": "แกนส่งเกียร์โยงแต่ง M6 L+R ผลิตจาก Alloy 7075 CNC Billet อันละ",
     "images": [
       "/legacy/webgigabike.com/R3/Link-Gear.jpg"
     ],
@@ -18373,8 +18248,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet +ยาง คงทนแข็งแรง",
-    "description": "ตุ้มขาเบรกขาเกียร์แต่ง. Fits: Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · Material: Alloy CNC Billet +ยาง คงทนแข็งแรง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตุ้มขาเบรกขาเกียร์แต่ง · ใส่ได้กับ Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · วัสดุ Alloy CNC Billet +ยาง คงทนแข็งแรง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตุ้มขาเบรกขาเกียร์แต่ง ผลิตจาก Alloy CNC Billet +ยาง คงทนแข็งแรง อันละ",
+    "descriptionTh": "ตุ้มขาเบรกขาเกียร์แต่ง ผลิตจาก Alloy CNC Billet +ยาง คงทนแข็งแรง อันละ",
     "images": [
       "/legacy/webgigabike.com/R3/Parts-1.jpg"
     ],
@@ -18399,8 +18274,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 ด้วยเครื่อง CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ มี สีดำกับสีเงิน",
-    "description": "ชุดขายึดกันสะบัดใส่โช๊คขนาด 47mm. Yamaha R25,R3 2019 แบบใหม่ล่าสุดติดตั้งและเซอร์วิสง่ายขึ้น. Fits: Yamaha R3/MT-03/R25 · Material: Alloy 6061 ด้วยเครื่อง CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ มี สีดำกับสีเงิน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดขายึดกันสะบัดใส่โช๊คขนาด 47mm. Yamaha R25,R3 2019 แบบใหม่ล่าสุดติดตั้งและเซอร์วิสง่ายขึ้น · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ Alloy 6061 ด้วยเครื่อง CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ มี สีดำกับสีเงิน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดขายึดกันสะบัดใส่โช๊คขนาด 47mm. Yamaha R25,R3 2019 แบบใหม่ล่าสุดติดตั้งและเซอร์วิสง่ายขึ้น ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ มี สีดำกับสีเงิน ชุดละ",
+    "descriptionTh": "ชุดขายึดกันสะบัดใส่โช๊คขนาด 47mm. Yamaha R25,R3 2019 แบบใหม่ล่าสุดติดตั้งและเซอร์วิสง่ายขึ้น ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ มี สีดำกับสีเงิน ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R3/Slow-r3-new-bk.jpg"
     ],
@@ -18424,8 +18299,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ มี สีดำกับสีเงิน",
-    "description": "ชุดขายึดกันสะบัด Yamaha R25,R3. Fits: Yamaha R3/MT-03/R25 · Material: Alloy 6061 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ มี สีดำกับสีเงิน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดขายึดกันสะบัด Yamaha R25,R3 · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ Alloy 6061 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ มี สีดำกับสีเงิน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดขายึดกันสะบัด Yamaha R25,R3 ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ มี สีดำกับสีเงิน ชุดละ",
+    "descriptionTh": "ชุดขายึดกันสะบัด Yamaha R25,R3 ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ มี สีดำกับสีเงิน ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R3/Slow-r3.jpg"
     ],
@@ -18450,8 +18325,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet มีขนาด 520-42 ฟัน",
-    "description": "สเตอร์หลัง Ninja 250,300,400 และสามารถใส่ได้กับ R3. Fits: Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · Material: Alloy 7075 CNC Billet มีขนาด 520-42 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ninja 250,300,400 และสามารถใส่ได้กับ R3 · ใส่ได้กับ Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · วัสดุ Alloy 7075 CNC Billet มีขนาด 520-42 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Ninja 250,300,400 และสามารถใส่ได้กับ R3 ผลิตจาก Alloy 7075 CNC Billet มีขนาด 520-42 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลัง Ninja 250,300,400 และสามารถใส่ได้กับ R3 ผลิตจาก Alloy 7075 CNC Billet มีขนาด 520-42 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/R3/Speocket-520-r3.jpg"
     ],
@@ -18480,8 +18355,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/เขียว/ฮาร์ด คู่ละ",
+    "descriptionTh": "สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/เขียว/ฮาร์ด คู่ละ",
     "images": [
       "/legacy/webgigabike.com/R3/Spoon-m6-1.jpg",
       "/legacy/webgigabike.com/R3/Spoon-m6-2.jpg"
@@ -18507,8 +18382,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "สปริง Stainles ปอนด์อย่างดี น็อต Alloy CNC Billet & Anodize",
-    "description": "สปริงปั๊มกะทุ้งเบรกหลัง M8 แบบเล็ก. Fits: Honda NSR150SP/2T · Yamaha R3/MT-03/R25 · Material: สปริง Stainles ปอนด์อย่างดี น็อต Alloy CNC Billet & Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สปริงปั๊มกะทุ้งเบรกหลัง M8 แบบเล็ก · ใส่ได้กับ Honda NSR150SP/2T · Yamaha R3/MT-03/R25 · วัสดุ สปริง Stainles ปอนด์อย่างดี น็อต Alloy CNC Billet & Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สปริงปั๊มกะทุ้งเบรกหลัง M8 แบบเล็ก ผลิตจาก สปริง Stainles ปอนด์อย่างดี น็อต Alloy CNC Billet & Anodize ชุดละ",
+    "descriptionTh": "สปริงปั๊มกะทุ้งเบรกหลัง M8 แบบเล็ก ผลิตจาก สปริง Stainles ปอนด์อย่างดี น็อต Alloy CNC Billet & Anodize ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R3/Spring-gb-1.jpg",
       "/legacy/webgigabike.com/R3/Spring-gb-2.jpg"
@@ -18533,8 +18408,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-13,14 ฟัน",
-    "description": "สเตอร์หน้า R25, R3 CNC Billet. Fits: Yamaha R3/MT-03/R25 · Material: เหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-13,14 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า R25, R3 CNC Billet · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ เหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-13,14 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า R25, R3 CNC Billet ผลิตจากเหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-13,14 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หน้า R25, R3 CNC Billet ผลิตจากเหล็กกล้าจากญี่ปุ่นและชุบแข็งอย่างดี ใส่โซ่ 520-13,14 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/R3/Sprocket-Front-r3-520-14t.jpg"
     ],
@@ -18558,8 +18433,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415 มีขนาด 15,16,17,18,19 ฟัน",
-    "description": "สเตอร์หน้า CNC Yamaha R3,R25. Fits: Yamaha R3/MT-03/R25 · Material: เหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415 มีขนาด 15,16,17,18,19 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า CNC Yamaha R3,R25 · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415 มีขนาด 15,16,17,18,19 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า CNC Yamaha R3,R25 ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415 มีขนาด 15,16,17,18,19 ฟัน",
+    "descriptionTh": "สเตอร์หน้า CNC Yamaha R3,R25 ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี สำหรับใส่โซ่ 415 มีขนาด 15,16,17,18,19 ฟัน",
     "images": [
       "/legacy/webgigabike.com/R3/Sprocket-Front-r3.jpg"
     ],
@@ -18579,14 +18454,15 @@ export const legacyProducts: Product[] = [
     "bikeModels": [
       "ninja250",
       "r15",
+      "r1",
       "r3"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเตอร์หลังแต่ง Yamaha R15All New Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งและลื่นมากและกันรอยได้ดี มีขนาด 415-47/48/49/50/51/52/53/54/55/56 ฟัน. Fits: Kawasaki Ninja250/300/400 · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Yamaha R15All New Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งและลื่นมากและกันรอยได้ดี มีขนาด 415-47/48/49/50/51/52/53/54/55/56 ฟัน · ใส่ได้กับ Kawasaki Ninja250/300/400 · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Yamaha R15All New Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งและลื่นมากและกันรอยได้ดี มีขนาด 415-47/48/49/50/51/52/53/54/55/56 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Yamaha R15All New Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งและลื่นมากและกันรอยได้ดี มีขนาด 415-47/48/49/50/51/52/53/54/55/56 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/R3/Sprocket-Rear-r3.jpg"
     ],
@@ -18614,8 +18490,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงคอบนแต่ง Yamaha R25,R3 (แบบฉลุข้างใส่กุญแจได้เลย). Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงคอบนแต่ง Yamaha R25,R3 (แบบฉลุข้างใส่กุญแจได้เลย) · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงคอบนแต่ง Yamaha R25,R3 (แบบฉลุข้างใส่กุญแจได้เลย) ผลิตจาก Alloy 6061 T651 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ (มีสี เงิน/ดำ) ชุดล่ะ",
+    "descriptionTh": "แผงคอบนแต่ง Yamaha R25,R3 (แบบฉลุข้างใส่กุญแจได้เลย) ผลิตจาก Alloy 6061 T651 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ (มีสี เงิน/ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Top-cor-sl.jpg",
       "/legacy/webgigabike.com/R3/Top-cor-bk.jpg"
@@ -18643,8 +18519,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงคอบนแต่ง Yamaha R25,R3 (แบบฉลุหน้าใส่กุญแจได้เลย). Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงคอบนแต่ง Yamaha R25,R3 (แบบฉลุหน้าใส่กุญแจได้เลย) · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงคอบนแต่ง Yamaha R25,R3 (แบบฉลุหน้าใส่กุญแจได้เลย) ผลิตจาก Alloy 6061 T651 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ (มีสี เงิน/ดำ) ชุดล่ะ",
+    "descriptionTh": "แผงคอบนแต่ง Yamaha R25,R3 (แบบฉลุหน้าใส่กุญแจได้เลย) ผลิตจาก Alloy 6061 T651 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ (มีสี เงิน/ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Top-cor-sl1.jpg",
       "/legacy/webgigabike.com/R3/Top-cor-bk1.jpg"
@@ -18672,8 +18548,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผงคอบนแต่ง Yamaha R25,R3 (แบบยกสูงลายฉลุ). Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงคอบนแต่ง Yamaha R25,R3 (แบบยกสูงลายฉลุ) · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผงคอบนแต่ง Yamaha R25,R3 (แบบยกสูงลายฉลุ) ผลิตจาก Alloy 6061 T651 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ (มีสี เงิน/ดำ) ชุดล่ะ",
+    "descriptionTh": "แผงคอบนแต่ง Yamaha R25,R3 (แบบยกสูงลายฉลุ) ผลิตจาก Alloy 6061 T651 ด้วยเครื่อง CNC สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้วหลายสนาม และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ (มีสี เงิน/ดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/Top-cor-Step-bk.jpg",
       "/legacy/webgigabike.com/R3/Top-cor-Step-si.jpg"
@@ -18698,8 +18574,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 ด้วยเครื่อง CNC ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่นแน่นอน",
-    "description": "ปากแตร FI R3 แบบใหม่ล่าสุดน้ำหนักเบา. Fits: Yamaha R3/MT-03/R25 · Material: Alloy 6061 ด้วยเครื่อง CNC ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่นแน่นอน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปากแตร FI R3 แบบใหม่ล่าสุดน้ำหนักเบา · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ Alloy 6061 ด้วยเครื่อง CNC ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่นแน่นอน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ปากแตร FI R3 แบบใหม่ล่าสุดน้ำหนักเบา ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่นแน่นอน คู่ละ",
+    "descriptionTh": "ปากแตร FI R3 แบบใหม่ล่าสุดน้ำหนักเบา ผลิตจาก Alloy 6061 ด้วยเครื่อง CNC ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่นแน่นอน คู่ละ",
     "images": [
       "/legacy/webgigabike.com/R3/Trum2.jpg"
     ],
@@ -18723,8 +18599,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ทั้ง",
-    "description": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R25,R3,MT03 2019 ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R25,R3 Step-1. Fits: Yamaha R3/MT-03/R25 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R25,R3,MT03 2019 ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R25,R3 Step-1 · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R25,R3,MT03 2019 ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R25,R3 Step-1 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งและใช้แข่งในรายการ ARRC มาแล้วและได้ขึ้นโพเดี้ยมอันดับ2มาแล้ว ทั้งชุด ชุดละ",
+    "descriptionTh": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R25,R3,MT03 2019 ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R25,R3 Step-1 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งและใช้แข่งในรายการ ARRC มาแล้วและได้ขึ้นโพเดี้ยมอันดับ2มาแล้ว ทั้งชุด ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R3/Yamaha-R3.jpg",
       "/legacy/webgigabike.com/R3/GB-asia.jpg",
@@ -18753,8 +18629,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนล่างแต่ง Yamaha R25,R3 ปี 2020 โช๊คหัวกลับขนาด 47mm. มีออฟเซ็ดโช๊ค2แบบให้เลือก 1.องศาเดิม35องศา 2.องศาพิเศษ 32องศา. Fits: Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่างแต่ง Yamaha R25,R3 ปี 2020 โช๊คหัวกลับขนาด 47mm. มีออฟเซ็ดโช๊ค2แบบให้เลือก 1.องศาเดิม35องศา 2.องศาพิเศษ 32องศา · ใส่ได้กับ Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่างแต่ง Yamaha R25,R3 ปี 2020 โช๊คหัวกลับขนาด 47mm. มีออฟเซ็ดโช๊ค2แบบให้เลือก 1.องศาเดิม35องศา 2.องศาพิเศษ 32องศา ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว เบากว่าของเดิม 1.3 kg. (มีสี ฮาร์ด) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนล่างแต่ง Yamaha R25,R3 ปี 2020 โช๊คหัวกลับขนาด 47mm. มีออฟเซ็ดโช๊ค2แบบให้เลือก 1.องศาเดิม35องศา 2.องศาพิเศษ 32องศา ผลิตจาก Alloy CNC Billet Hard Anodize สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว เบากว่าของเดิม 1.3 kg. (มีสี ฮาร์ด) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/R3/YokeSet-R3-2020-1.jpg",
       "/legacy/webgigabike.com/R3/YokeSet-R3-2020.jpg"
@@ -18779,8 +18655,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "บู๊ทล้อหน้าและล้อหลังแต่ง R6 ทำให้ถอดล้อใส่ล้อง่ายเร็วขึ้นมากโดยไม่ต้องถอดซีลกันน้ำกันฝุ่นออกและช่วยระบายความร้อนที่สะสมในลูกปืนล้อได้ดีขึ้น. Fits: Yamaha R1/R6/R7 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทล้อหน้าและล้อหลังแต่ง R6 ทำให้ถอดล้อใส่ล้อง่ายเร็วขึ้นมากโดยไม่ต้องถอดซีลกันน้ำกันฝุ่นออกและช่วยระบายความร้อนที่สะสมในลูกปืนล้อได้ดีขึ้น · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บู๊ทล้อหน้าและล้อหลังแต่ง R6 ทำให้ถอดล้อใส่ล้อง่ายเร็วขึ้นมากโดยไม่ต้องถอดซีลกันน้ำกันฝุ่นออกและช่วยระบายความร้อนที่สะสมในลูกปืนล้อได้ดีขึ้น ผลิตจาก Alloy 7075 CNC Billet Hard Anodize ชุดละ",
+    "descriptionTh": "บู๊ทล้อหน้าและล้อหลังแต่ง R6 ทำให้ถอดล้อใส่ล้อง่ายเร็วขึ้นมากโดยไม่ต้องถอดซีลกันน้ำกันฝุ่นออกและช่วยระบายความร้อนที่สะสมในลูกปืนล้อได้ดีขึ้น ผลิตจาก Alloy 7075 CNC Billet Hard Anodize ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R6/Boot-Farts-R6.jpg"
     ],
@@ -18806,8 +18682,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "แผ่นอุดบำบับไอเสีย EGR Cover Yamaha R6 & R1 แบบเรียบ. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นอุดบำบับไอเสีย EGR Cover Yamaha R6 & R1 แบบเรียบ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นอุดบำบับไอเสีย EGR Cover Yamaha R6 & R1 แบบเรียบ ผลิตจาก Alloy CNC Billet ชิ้นละ",
+    "descriptionTh": "แผ่นอุดบำบับไอเสีย EGR Cover Yamaha R6 & R1 แบบเรียบ ผลิตจาก Alloy CNC Billet ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/R6/EGR-Cover-R6.jpg"
     ],
@@ -18832,8 +18708,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R6. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R6 · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R6 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R6 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R6/Footregs-R6-T3.jpg",
       "/legacy/webgigabike.com/R6/Footregs-R6.jpg"
@@ -18851,21 +18727,22 @@ export const legacyProducts: Product[] = [
     "nameTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R6",
     "price": 5500,
     "category": "chassis",
-    "bikeModels": [],
+    "bikeModels": [
+      "r1"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R6. Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R6 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R6 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R6 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้วหลายสนาม ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R6/Footregs-R6.jpg"
     ],
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -18883,8 +18760,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet คงทนแข็งแรง",
-    "description": "ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น. Fits: Kawasaki ZX-10RR · Yamaha R1/R6/R7 · Material: Alloy CNC Billet คงทนแข็งแรง · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น · ใส่ได้กับ Kawasaki ZX-10RR · Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet คงทนแข็งแรง · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
+    "descriptionTh": "ขางัดกะปุกเกียร์แต่ง ใส่แทนของเดิมได้เลยทำให้การเข้าเกียร์แม่นยำมากขึ้น ผลิตจาก Alloy CNC Billet คงทนแข็งแรง อันละ",
     "images": [
       "/legacy/webgigabike.com/R6/H1-Shot.jpg"
     ],
@@ -18909,8 +18786,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R9,R6 แกนโช๊ค50mm. งาน Alloy CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ. Fits: Yamaha R1/R6/R7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R9,R6 แกนโช๊ค50mm. งาน Alloy CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R9,R6 แกนโช๊ค50mm. งาน Alloy CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
+    "descriptionTh": "Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R9,R6 แกนโช๊ค50mm. งาน Alloy CNC Billet ด้ามแฮนแบบขันเกลียว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R6/Handle-r6-bk.jpg",
       "/legacy/webgigabike.com/R6/Handle-r6-sl.jpg"
@@ -18935,8 +18812,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1,R6,R9 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ. Fits: Yamaha R1/R6/R7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1,R6,R9 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1,R6,R9 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
+    "descriptionTh": "Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1,R6,R9 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R6/Handle-r6-sil-t2-1.jpg",
       "/legacy/webgigabike.com/R6/Handle-r6-bk-t2-1.jpg"
@@ -18961,8 +18838,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้",
-    "description": "ชุดขายึดกันสะบัดแบบยื่นกันสะบัดไปด้านหน้าใส่ติดกับโครงรถข้างขวาห่วงรู 52 มม.Yamaha R6. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดขายึดกันสะบัดแบบยื่นกันสะบัดไปด้านหน้าใส่ติดกับโครงรถข้างขวาห่วงรู 52 มม.Yamaha R6 · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดขายึดกันสะบัดแบบยื่นกันสะบัดไปด้านหน้าใส่ติดกับโครงรถข้างขวาห่วงรู 52 มม.Yamaha R6 ผลิตจาก Alloy CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ ชุดละ",
+    "descriptionTh": "ชุดขายึดกันสะบัดแบบยื่นกันสะบัดไปด้านหน้าใส่ติดกับโครงรถข้างขวาห่วงรู 52 มม.Yamaha R6 ผลิตจาก Alloy CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R6/Kunsabut-long.jpg"
     ],
@@ -18987,8 +18864,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet คงทนแข็งแรง คู่",
-    "description": "ชุดขึ้นแสตนสวิงอาร์มแต่งทรงสนาม ใส่ Yamaha R1 & R6. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet คงทนแข็งแรง คู่ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดขึ้นแสตนสวิงอาร์มแต่งทรงสนาม ใส่ Yamaha R1 & R6 · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet คงทนแข็งแรง คู่ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดขึ้นแสตนสวิงอาร์มแต่งทรงสนาม ใส่ Yamaha R1 & R6 ผลิตจาก Alloy CNC Billet คงทนแข็งแรง คู่",
+    "descriptionTh": "ชุดขึ้นแสตนสวิงอาร์มแต่งทรงสนาม ใส่ Yamaha R1 & R6 ผลิตจาก Alloy CNC Billet คงทนแข็งแรง คู่",
     "images": [
       "/legacy/webgigabike.com/R6/lock.jpg"
     ],
@@ -19012,8 +18889,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R6 Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1-R6 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ. Fits: Yamaha R1/R6/R7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R6 Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1-R6 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R6 Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1-R6 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
+    "descriptionTh": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R6 Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1-R6 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R6/R6-19.jpg",
       "/legacy/webgigabike.com/R6/Handle-r6-sil-t2-1.jpg",
@@ -19041,8 +18918,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 428-16,17,18,19,20 ฟัน",
-    "description": "สเตอร์หน้า Yamaha R6 CNC Billet. Fits: Yamaha R1/R6/R7 · Material: เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 428-16,17,18,19,20 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า Yamaha R6 CNC Billet · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 428-16,17,18,19,20 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า Yamaha R6 CNC Billet ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 428-16,17,18,19,20 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หน้า Yamaha R6 CNC Billet ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 428-16,17,18,19,20 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/R6/R6-428-F.jpg"
     ],
@@ -19066,8 +18943,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเตอร์หลัง Yamaha R6-428 = Alloy 7075 CNC Billet Hard Anodize R6-428 52,53,54,55,56T =. Fits: Yamaha R1/R6/R7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Yamaha R6-428 = Alloy 7075 CNC Billet Hard Anodize R6-428 52,53,54,55,56T = · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Yamaha R6-428 = Alloy 7075 CNC Billet Hard Anodize R6-428 52,53,54,55,56T =",
+    "descriptionTh": "สเตอร์หลัง Yamaha R6-428 = Alloy 7075 CNC Billet Hard Anodize R6-428 52,53,54,55,56T =",
     "images": [
       "/legacy/webgigabike.com/R6/R6-428-R.jpg"
     ],
@@ -19091,8 +18968,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-14,15,16 ฟัน",
-    "description": "สเตอร์หน้า Yamaha R6 CNC Billet. Fits: Yamaha R1/R6/R7 · Material: เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-14,15,16 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า Yamaha R6 CNC Billet · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-14,15,16 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า Yamaha R6 CNC Billet ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-14,15,16 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หน้า Yamaha R6 CNC Billet ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 520-14,15,16 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/R6/R6-520-15.jpg"
     ],
@@ -19118,8 +18995,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเตอร์หลัง Yamaha R6,R7,R3,R25, 520-35-39,40,41,42,43,44,45,46,47,48,49T Alloy 7075 CNC Billet Hard Anodize =. Fits: Kawasaki Ninja250/300/400 · Yamaha R1/R6/R7 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Yamaha R6,R7,R3,R25, 520-35-39,40,41,42,43,44,45,46,47,48,49T Alloy 7075 CNC Billet Hard Anodize = · ใส่ได้กับ Kawasaki Ninja250/300/400 · Yamaha R1/R6/R7 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Yamaha R6,R7,R3,R25, 520-35-39,40,41,42,43,44,45,46,47,48,49T Alloy 7075 CNC Billet Hard Anodize =",
+    "descriptionTh": "สเตอร์หลัง Yamaha R6,R7,R3,R25, 520-35-39,40,41,42,43,44,45,46,47,48,49T Alloy 7075 CNC Billet Hard Anodize =",
     "images": [
       "/legacy/webgigabike.com/R6/R6-520-ha.jpg"
     ],
@@ -19143,8 +19020,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้",
-    "description": "สปูนขึ้นสแตนหลัง Yamaha R6. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สปูนขึ้นสแตนหลัง Yamaha R6 · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สปูนขึ้นสแตนหลัง Yamaha R6 ผลิตจาก Alloy CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ ชุดละ",
+    "descriptionTh": "สปูนขึ้นสแตนหลัง Yamaha R6 ผลิตจาก Alloy CNC Billet สวยงามแข็งแรงทดสอบในสนามแข่งมาแล้ว และทีมแข่งแนวหน้าของเมืองไทยก็เลือกใช้ ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R6/Spoon.jpg"
     ],
@@ -19173,8 +19050,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "SUS CNC Billet",
-    "description": "ตุ้มปลายแฮนแต่งสแตนเลส R7 รู6มิล สั้นกว่าเดิม6มิลแต่น้ำหนักใกล้เคียงเดิม ทำให้ขี่ซ๊อกแซ็กในที่แคบง่ายขึ้น ผลิตจาก SUS CNC Billet คู่ละ 600 ใส้คันเร่งแต่ง R7 ใส่เข้าปะกับเร่งเดิมได้เลยระยะบิดคันเร่งสั้นกว่าเดิม 20% ออกตัวตึ๊ดกว่าเดิมแน่นอน ผลิตจาก Alloy CNC Billet อันละ 1300 กาดขึ้นสแตนล้อหลัง ออกแบบมาให้เพรียวเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย และใส่กาดบังสเตอร์หลังเพิ่มได้ตามกฏในสนามแข่ง. Fits: Yamaha R1/R6/R7 · Material: SUS CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตุ้มปลายแฮนแต่งสแตนเลส R7 รู6มิล สั้นกว่าเดิม6มิลแต่น้ำหนักใกล้เคียงเดิม ทำให้ขี่ซ๊อกแซ็กในที่แคบง่ายขึ้น ผลิตจาก SUS CNC Billet คู่ละ 600 ใส้คันเร่งแต่ง R7 ใส่เข้าปะกับเร่งเดิมได้เลยระยะบิดคันเร่งสั้นกว่าเดิม 20% ออกตัวตึ๊ดกว่าเดิมแน่นอน ผลิตจาก Alloy CNC Billet อันละ 1300 กาดขึ้นสแตนล้อหลัง ออกแบบมาให้เพรียวเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย และใส่กาดบังสเตอร์หลังเพิ่มได้ตามกฏในสนามแข่ง · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ SUS CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ตุ้มปลายแฮนแต่งสแตนเลส R7 รู6มิล สั้นกว่าเดิม6มิลแต่น้ำหนักใกล้เคียงเดิม ทำให้ขี่ซ๊อกแซ็กในที่แคบง่ายขึ้น ผลิตจาก SUS CNC Billet คู่ละ 600 ใส้คันเร่งแต่ง R7 ใส่เข้าปะกับเร่งเดิมได้เลยระยะบิดคันเร่งสั้นกว่าเดิม 20% ออกตัวตึ๊ดกว่าเดิมแน่นอน ผลิตจาก Alloy CNC Billet อันละ 1300 กาดขึ้นสแตนล้อหลัง ออกแบบมาให้เพรียวเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย และใส่กาดบังสเตอร์หลังเพิ่มได้ตามกฏในสนามแข่ง ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ฮาร์ด คู่ละ",
+    "descriptionTh": "ตุ้มปลายแฮนแต่งสแตนเลส R7 รู6มิล สั้นกว่าเดิม6มิลแต่น้ำหนักใกล้เคียงเดิม ทำให้ขี่ซ๊อกแซ็กในที่แคบง่ายขึ้น ผลิตจาก SUS CNC Billet คู่ละ 600 ใส้คันเร่งแต่ง R7 ใส่เข้าปะกับเร่งเดิมได้เลยระยะบิดคันเร่งสั้นกว่าเดิม 20% ออกตัวตึ๊ดกว่าเดิมแน่นอน ผลิตจาก Alloy CNC Billet อันละ 1300 กาดขึ้นสแตนล้อหลัง ออกแบบมาให้เพรียวเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย และใส่กาดบังสเตอร์หลังเพิ่มได้ตามกฏในสนามแข่ง ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/ฮาร์ด คู่ละ",
     "images": [
       "/legacy/webgigabike.com/R7/Handle-st.jpg",
       "/legacy/webgigabike.com/R7/Handle-Sus.jpg",
@@ -19204,8 +19081,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R7 Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1-R6 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ. Fits: Yamaha R1/R6/R7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R7 Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1-R6 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R7 Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1-R6 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
+    "descriptionTh": "อุปกรณ์ตกแต่งใหม่ๆอยากแนะนำ R7 Clip-On Handle Bars CNC Alloy 50mm.7/8 แฮนจับโช๊คใส่ R1-R6 ขนาด 50mm. แบบสลัก งาน Alloy CNC Billet ด้ามแฮนแบบสลักขันหนีบเหมาะสำหรับใช้ในสนามแข่งสามารถถอดเปลี่ยนด้ามแฮนได้อย่างรวดเร็ว องศาเดียวกันกับแฮนเดิม (มีสีเงิน/ดำ) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/R7/R7-60-th.jpg",
       "/legacy/webgigabike.com/R6/Handle-r6-sil-t2-1.jpg",
@@ -19235,8 +19112,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ทั้ง",
-    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R7. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R7 · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R7 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ชุดละ",
+    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R7 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ชุดละ",
     "images": [
       "/legacy/webgigabike.com/R7/Rearset-r7-r.jpg",
       "/legacy/webgigabike.com/R7/Rearset-r7-l.jpg",
@@ -19268,8 +19145,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "กาดบังสเตอร์หลัง ใส่ตามกฏในสนามแข่ง เพื่อป้องกันนิ้วมือและท้าว เข้าโซ่ เวลาเกิดอุบัติเหตุ ผลิตจาก Alloy CNC Billet (มีสี ดำ/ฮาร์ด/เขียว) ชุดละ 800 สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย. Fits: Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "กาดบังสเตอร์หลัง ใส่ตามกฏในสนามแข่ง เพื่อป้องกันนิ้วมือและท้าว เข้าโซ่ เวลาเกิดอุบัติเหตุ ผลิตจาก Alloy CNC Billet (มีสี ดำ/ฮาร์ด/เขียว) ชุดละ 800 สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย · ใส่ได้กับ Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "กาดบังสเตอร์หลัง ใส่ตามกฏในสนามแข่ง เพื่อป้องกันนิ้วมือและท้าว เข้าโซ่ เวลาเกิดอุบัติเหตุ ผลิตจาก Alloy CNC Billet (มีสี ดำ/ฮาร์ด/เขียว) ชุดละ 800 สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/เขียว/ฮาร์ด คู่ละ",
+    "descriptionTh": "กาดบังสเตอร์หลัง ใส่ตามกฏในสนามแข่ง เพื่อป้องกันนิ้วมือและท้าว เข้าโซ่ เวลาเกิดอุบัติเหตุ ผลิตจาก Alloy CNC Billet (มีสี ดำ/ฮาร์ด/เขียว) ชุดละ 800 สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 ออกแบบมาให้เพรียวโค้งมนเล็กกะทัดรัด หากเกิดอุบัติเหตุขึ้นมาสวิงอาร์มจะได้ไม่เสียหาย ผลิตจาก Alloy CNC Billet มีสี ดำ/เงิน/เขียว/ฮาร์ด คู่ละ",
     "images": [
       "/legacy/webgigabike.com/R7/Sprocket-cover-2.jpg",
       "/legacy/webgigabike.com/R7/LowerChainGuard-all.jpg",
@@ -19296,8 +19173,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น",
-    "description": "ปากแตร R7 ยาว 50 mm. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปากแตร R7 ยาว 50 mm · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ปากแตร R7 ยาว 50 mm. ผลิตจาก Alloy CNC Billet ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น คู่ละ",
+    "descriptionTh": "ปากแตร R7 ยาว 50 mm. ผลิตจาก Alloy CNC Billet ช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น คู่ละ",
     "images": [
       "/legacy/webgigabike.com/R7/velocity-stacks-R7-Alloy.jpg"
     ],
@@ -19321,8 +19198,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "POM CNC Billet ไม่อมความร้อนช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น",
-    "description": "ปากแตร R7 ยาว 50 mm. Fits: Yamaha R1/R6/R7 · Material: POM CNC Billet ไม่อมความร้อนช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปากแตร R7 ยาว 50 mm · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ POM CNC Billet ไม่อมความร้อนช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ปากแตร R7 ยาว 50 mm. ผลิตจาก POM CNC Billet ไม่อมความร้อนช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น คู่ละ",
+    "descriptionTh": "ปากแตร R7 ยาว 50 mm. ผลิตจาก POM CNC Billet ไม่อมความร้อนช่วยรีดและเรียงอากาศทำให้อากาศไหลลื่น คู่ละ",
     "images": [
       "/legacy/webgigabike.com/R7/velocity-stacks-R7-pom.jpg",
       "/legacy/webgigabike.com/R7/velocity-stacks-R7.jpg"
@@ -19349,8 +19226,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "กาดบังสเตอร์หลัง ใส่ตามกฏในสนามแข่ง เพื่อป้องกันนิ้วมือและท้าวเข้าโซ่เวลาเกิดอุบัติเหตุ. Fits: Yamaha R1/R6/R7 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "กาดบังสเตอร์หลัง ใส่ตามกฏในสนามแข่ง เพื่อป้องกันนิ้วมือและท้าวเข้าโซ่เวลาเกิดอุบัติเหตุ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "กาดบังสเตอร์หลัง ใส่ตามกฏในสนามแข่ง เพื่อป้องกันนิ้วมือและท้าวเข้าโซ่เวลาเกิดอุบัติเหตุ ผลิตจาก Alloy CNC Billet (มีสี ดำ และสีเงิน) ชุดละ 900 สเตอร์หลัง Yamaha R9,R6,R7, 520-39-49T Alloy 7075 CNC Billet Hard Anodize =",
+    "descriptionTh": "กาดบังสเตอร์หลัง ใส่ตามกฏในสนามแข่ง เพื่อป้องกันนิ้วมือและท้าวเข้าโซ่เวลาเกิดอุบัติเหตุ ผลิตจาก Alloy CNC Billet (มีสี ดำ และสีเงิน) ชุดละ 900 สเตอร์หลัง Yamaha R9,R6,R7, 520-39-49T Alloy 7075 CNC Billet Hard Anodize =",
     "images": [
       "/legacy/webgigabike.com/R9/Cover-gard.jpg",
       "/legacy/webgigabike.com/R6/R6-520-ha.jpg"
@@ -19380,8 +19257,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หลอดพักเท้าเกียร์โยงแบบหนึบปานกลางเหมาะสำหรับใช้บนถนนและสนามได้ดี แข็งแรง. Fits: Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หลอดพักเท้าเกียร์โยงแบบหนึบปานกลางเหมาะสำหรับใช้บนถนนและสนามได้ดี แข็งแรง · ใส่ได้กับ Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หลอดพักเท้าเกียร์โยงแบบหนึบปานกลางเหมาะสำหรับใช้บนถนนและสนามได้ดี แข็งแรง ผลิตจาก Alloy CNC Billet ความยาว 80 mm.เกลียว M8 ชิ้นล่ะ",
+    "descriptionTh": "หลอดพักเท้าเกียร์โยงแบบหนึบปานกลางเหมาะสำหรับใช้บนถนนและสนามได้ดี แข็งแรง ผลิตจาก Alloy CNC Billet ความยาว 80 mm.เกลียว M8 ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Racing/Footpeg-rc-rd.jpg"
     ],
@@ -19410,8 +19287,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หลอดพักเท้าเกียร์โยงแบบหนึบมากเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบมากแข็งแรง. Fits: Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หลอดพักเท้าเกียร์โยงแบบหนึบมากเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบมากแข็งแรง · ใส่ได้กับ Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หลอดพักเท้าเกียร์โยงแบบหนึบมากเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบมากแข็งแรง ผลิตจาก Alloy CNC Billet ความยาว 80 mm.เกลียว M8 ชิ้นล่ะ",
+    "descriptionTh": "หลอดพักเท้าเกียร์โยงแบบหนึบมากเหมาะสำหรับใช้ในสนามแข่งเท่านั้น หนึบมากแข็งแรง ผลิตจาก Alloy CNC Billet ความยาว 80 mm.เกลียว M8 ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Racing/Footpeg-rc.jpg"
     ],
@@ -19434,8 +19311,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขาพักเท้าเกียร์โยงแบบไม่หนึบเหมาะสำหรับใช้บนถนนเท่านั้น แข็งแรง. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาพักเท้าเกียร์โยงแบบไม่หนึบเหมาะสำหรับใช้บนถนนเท่านั้น แข็งแรง · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขาพักเท้าเกียร์โยงแบบไม่หนึบเหมาะสำหรับใช้บนถนนเท่านั้น แข็งแรง ผลิตจาก Alloy CNC Billet ความยาว 80 mm.เกลียว M8 ชิ้นล่ะ",
+    "descriptionTh": "ขาพักเท้าเกียร์โยงแบบไม่หนึบเหมาะสำหรับใช้บนถนนเท่านั้น แข็งแรง ผลิตจาก Alloy CNC Billet ความยาว 80 mm.เกลียว M8 ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Racing/Footpeg-rd.jpg"
     ],
@@ -19460,8 +19337,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขาพักเท้าเกียร์โยงแบบไม่หนึบเหมาะสำหรับใช้บนถนนแข็งแรง. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาพักเท้าเกียร์โยงแบบไม่หนึบเหมาะสำหรับใช้บนถนนแข็งแรง · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขาพักเท้าเกียร์โยงแบบไม่หนึบเหมาะสำหรับใช้บนถนนแข็งแรง ผลิตจาก Alloy CNC Billet ความยาว 80 mm.เกลียว M8 ชิ้นล่ะ",
+    "descriptionTh": "ขาพักเท้าเกียร์โยงแบบไม่หนึบเหมาะสำหรับใช้บนถนนแข็งแรง ผลิตจาก Alloy CNC Billet ความยาว 80 mm.เกลียว M8 ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Racing/Footpeg-Road.jpg"
     ],
@@ -19490,8 +19367,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075",
-    "description": "ขาพักเท้าแบบเรชซิ่งเหมาะสำหรับใช้ในสนามแข่งเท่านั้น แข็งและหนึบเป็นพิเศษ งาน CNC Billet. Fits: Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R1/R6/R7 · Yamaha R3/MT-03/R25 · Material: Alloy 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาพักเท้าแบบเรชซิ่งเหมาะสำหรับใช้ในสนามแข่งเท่านั้น แข็งและหนึบเป็นพิเศษ งาน CNC Billet · ใส่ได้กับ Honda CBR150R/250RR/300 · Honda Monkey/MSX125/DAX125 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R1/R6/R7 · Yamaha R3/MT-03/R25 · วัสดุ Alloy 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขาพักเท้าแบบเรชซิ่งเหมาะสำหรับใช้ในสนามแข่งเท่านั้น แข็งและหนึบเป็นพิเศษ งาน CNC Billet ผลิตจาก Alloy 7075 ชิ้นล่ะ",
+    "descriptionTh": "ขาพักเท้าแบบเรชซิ่งเหมาะสำหรับใช้ในสนามแข่งเท่านั้น แข็งและหนึบเป็นพิเศษ งาน CNC Billet ผลิตจาก Alloy 7075 ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Racing/Footpegs2.jpg",
       "/legacy/webgigabike.com/Racing/Footpegs3.jpg",
@@ -19518,8 +19395,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075",
-    "description": "ขาพักเท้าแบบเรชซิ่งเหมาะสำหรับใช้ในสนามแข่งเท่านั้น แข็งและหนึบเป็นพิเศษ งาน CNC Billet. Fits: Kawasaki Ninja250/300/400 · Material: Alloy 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาพักเท้าแบบเรชซิ่งเหมาะสำหรับใช้ในสนามแข่งเท่านั้น แข็งและหนึบเป็นพิเศษ งาน CNC Billet · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขาพักเท้าแบบเรชซิ่งเหมาะสำหรับใช้ในสนามแข่งเท่านั้น แข็งและหนึบเป็นพิเศษ งาน CNC Billet ผลิตจาก Alloy 7075 ชิ้นล่ะ",
+    "descriptionTh": "ขาพักเท้าแบบเรชซิ่งเหมาะสำหรับใช้ในสนามแข่งเท่านั้น แข็งและหนึบเป็นพิเศษ งาน CNC Billet ผลิตจาก Alloy 7075 ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Racing/Footpegs3.jpg",
       "/legacy/webgigabike.com/Racing/Footpegs5.jpg"
@@ -19544,8 +19421,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet Hard Anodize มีขนาด โซ่ 520-40,41,42 ฟัน",
-    "description": "สเตอร์หลังแต่ง Aprilia. Fits: Yamaha SR400/500 · Material: Alloy 7075 CNC Billet Hard Anodize มีขนาด โซ่ 520-40,41,42 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Aprilia · ใส่ได้กับ Yamaha SR400/500 · วัสดุ Alloy 7075 CNC Billet Hard Anodize มีขนาด โซ่ 520-40,41,42 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Aprilia ผลิตจาก Alloy 7075 CNC Billet Hard Anodize มีขนาด โซ่ 520-40,41,42 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Aprilia ผลิตจาก Alloy 7075 CNC Billet Hard Anodize มีขนาด โซ่ 520-40,41,42 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/Arilia250-520-42T.jpg"
     ],
@@ -19567,8 +19444,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet Hard Anodize มีขนาด โซ่ 520-40,41,42 ฟัน",
-    "description": "Aprilia RS250 สเตอร์หลังแต่ง Aprilia. Material: Alloy 7075 CNC Billet Hard Anodize มีขนาด โซ่ 520-40,41,42 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Aprilia RS250 สเตอร์หลังแต่ง Aprilia · วัสดุ Alloy 7075 CNC Billet Hard Anodize มีขนาด โซ่ 520-40,41,42 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Aprilia RS250 สเตอร์หลังแต่ง Aprilia ผลิตจาก Alloy 7075 CNC Billet Hard Anodize มีขนาด โซ่ 520-40,41,42 ฟัน อันละ",
+    "descriptionTh": "Aprilia RS250 สเตอร์หลังแต่ง Aprilia ผลิตจาก Alloy 7075 CNC Billet Hard Anodize มีขนาด โซ่ 520-40,41,42 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/Arilia250.jpg",
       "/legacy/webgigabike.com/sprocket all/Arilia250-520-42T.jpg"
@@ -19587,21 +19464,22 @@ export const legacyProducts: Product[] = [
     "nameTh": "สเตอร์หลังAlloy Honda CB650F งาน CNC Billet",
     "price": 1800,
     "category": "drivetrain",
-    "bikeModels": [],
+    "bikeModels": [
+      "cbr650r"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T651 มีขนาด โซ่ 525-44 ฟันและ มีขนาด โซ่ 520-44,45,46 ฟัน",
-    "description": "สเตอร์หลังAlloy Honda CB650F งาน CNC Billet. Material: Alloy 7075 T651 มีขนาด โซ่ 525-44 ฟันและ มีขนาด โซ่ 520-44,45,46 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังAlloy Honda CB650F งาน CNC Billet · วัสดุ Alloy 7075 T651 มีขนาด โซ่ 525-44 ฟันและ มีขนาด โซ่ 520-44,45,46 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังAlloy Honda CB650F งาน CNC Billet ผลิตจาก Alloy 7075 T651 มีขนาด โซ่ 525-44 ฟันและ มีขนาด โซ่ 520-44,45,46 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังAlloy Honda CB650F งาน CNC Billet ผลิตจาก Alloy 7075 T651 มีขนาด โซ่ 525-44 ฟันและ มีขนาด โซ่ 520-44,45,46 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/CB650F-525-44t.jpg"
     ],
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -19611,13 +19489,15 @@ export const legacyProducts: Product[] = [
     "nameTh": "อุปกรณ์ตกแต่ง CBR650r ใหม่ๆอยากแนะนำ ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรง",
     "price": 5500,
     "category": "chassis",
-    "bikeModels": [],
+    "bikeModels": [
+      "cbr650r"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061+7075 ทั้ง",
-    "description": "อุปกรณ์ตกแต่ง CBR650r ใหม่ๆอยากแนะนำ ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR650r. Material: Alloy 6061+7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง CBR650r ใหม่ๆอยากแนะนำ ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR650r · วัสดุ Alloy 6061+7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง CBR650r ใหม่ๆอยากแนะนำ ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR650r ผลิตจาก Alloy 6061+7075 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ชุดละ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง CBR650r ใหม่ๆอยากแนะนำ ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR650r ผลิตจาก Alloy 6061+7075 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ชุดละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/CBR650r.jpg",
       "/legacy/webgigabike.com/CBR600RR/Rearsets-CBR650r.jpg",
@@ -19627,7 +19507,6 @@ export const legacyProducts: Product[] = [
     "published": false,
     "reviewReasons": [
       "no_code",
-      "no_fitment",
       "price_conflict"
     ]
   },
@@ -19645,8 +19524,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Honada Dash125 สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda Dash และดุม Sonic ใส่โซ่ 415-28,29,30,31,32,ฟัน. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Honada Dash125 สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda Dash และดุม Sonic ใส่โซ่ 415-28,29,30,31,32,ฟัน · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Honada Dash125 สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda Dash และดุม Sonic ใส่โซ่ 415-28,29,30,31,32,ฟัน ชิ้นละ",
+    "descriptionTh": "Honada Dash125 สเตอร์หลังแต่ง Alloy CNC Billet สำหรับใส่ดุม Honda Dash และดุม Sonic ใส่โซ่ 415-28,29,30,31,32,ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/dash125.jpg",
       "/legacy/webgigabike.com/sprocket all/Nova-Dash.jpg"
@@ -19671,8 +19550,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน. Fits: Kawasaki ZX-10RR · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน · ใส่ได้กับ Kawasaki ZX-10RR · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน อันละ",
+    "descriptionTh": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/Er6-Z8-Z1000.jpg"
     ],
@@ -19689,15 +19568,13 @@ export const legacyProducts: Product[] = [
     "nameTh": "GaleSpeed สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ",
     "price": 2200,
     "category": "drivetrain",
-    "bikeModels": [
-      "rc390"
-    ],
+    "bikeModels": [],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "GaleSpeed สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ. Fits: KTM RC390 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "GaleSpeed สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ · ใส่ได้กับ KTM RC390 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "GaleSpeed สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ ผลิตจาก Alloy 7075 CNC Billet พร้อม Hard Anodize มีขนาด ใส่โซ่ 530,525,520-43 ฟัน อันละ",
+    "descriptionTh": "GaleSpeed สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ ผลิตจาก Alloy 7075 CNC Billet พร้อม Hard Anodize มีขนาด ใส่โซ่ 530,525,520-43 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/Galespeedwi.jpg",
       "/legacy/webgigabike.com/sprocket all/Gelspeed-520-hard-O.jpg",
@@ -19707,7 +19584,8 @@ export const legacyProducts: Product[] = [
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code"
+      "no_code",
+      "no_fitment"
     ]
   },
   {
@@ -19718,7 +19596,6 @@ export const legacyProducts: Product[] = [
     "price": 1800,
     "category": "drivetrain",
     "bikeModels": [
-      "rc390",
       "ninja250",
       "r3"
     ],
@@ -19726,8 +19603,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet Hard Anodize มีขนาด ใส่โซ่ 415 - 45-55 ฟัน",
-    "description": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ. Fits: KTM RC390 · Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · Material: Alloy 7075 CNC Billet Hard Anodize มีขนาด ใส่โซ่ 415 - 45-55 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ · ใส่ได้กับ KTM RC390 · Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · วัสดุ Alloy 7075 CNC Billet Hard Anodize มีขนาด ใส่โซ่ 415 - 45-55 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ ผลิตจาก Alloy 7075 CNC Billet Hard Anodize มีขนาด ใส่โซ่ 415 - 45-55 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ ผลิตจาก Alloy 7075 CNC Billet Hard Anodize มีขนาด ใส่โซ่ 415 - 45-55 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/Gelspeed-415-ha.jpg"
     ],
@@ -19753,8 +19630,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet",
-    "description": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ. Fits: Honda CBR150R/250RR/300 · Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ · ใส่ได้กับ Honda CBR150R/250RR/300 · Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ ผลิตจาก Alloy 7075 CNC Billet พร้อม Hard Anodize ใส่โซ่ 520-40-44 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ ผลิตจาก Alloy 7075 CNC Billet พร้อม Hard Anodize ใส่โซ่ 520-40-44 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/Gelspeed-520-hard-O.jpg"
     ],
@@ -19778,8 +19655,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "เสตอร์หลังแต่งสำหรับ SR ที่ใส่ดุมล้อแต่งเกลสปีด 520-41ฟัน. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "เสตอร์หลังแต่งสำหรับ SR ที่ใส่ดุมล้อแต่งเกลสปีด 520-41ฟัน · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "เสตอร์หลังแต่งสำหรับ SR ที่ใส่ดุมล้อแต่งเกลสปีด 520-41ฟัน อันละ",
+    "descriptionTh": "เสตอร์หลังแต่งสำหรับ SR ที่ใส่ดุมล้อแต่งเกลสปีด 520-41ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/Gelspeed-520-sr.jpg"
     ],
@@ -19804,8 +19681,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ดุมเสตอร์แต่งสำหรับ SR ที่ใส่ล้อแต่งเกลสปีด. Fits: Yamaha SR400/500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ดุมเสตอร์แต่งสำหรับ SR ที่ใส่ล้อแต่งเกลสปีด · ใส่ได้กับ Yamaha SR400/500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ดุมเสตอร์แต่งสำหรับ SR ที่ใส่ล้อแต่งเกลสปีด อันละ",
+    "descriptionTh": "ดุมเสตอร์แต่งสำหรับ SR ที่ใส่ล้อแต่งเกลสปีด อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/Gelspeed-Hub-sr.jpg"
     ],
@@ -19830,8 +19707,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 CNC Billet Hard Anodize มีขนาด ใส่โซ่ 415 - 45-55 ฟัน",
-    "description": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ. Fits: Honda CBR150R/250RR/300 · Material: Alloy 7075 CNC Billet Hard Anodize มีขนาด ใส่โซ่ 415 - 45-55 ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ · ใส่ได้กับ Honda CBR150R/250RR/300 · วัสดุ Alloy 7075 CNC Billet Hard Anodize มีขนาด ใส่โซ่ 415 - 45-55 ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ ผลิตจาก Alloy 7075 CNC Billet Hard Anodize มีขนาด ใส่โซ่ 415 - 45-55 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่งใส่ล้อ GaleSpeed, MFZ ผลิตจาก Alloy 7075 CNC Billet Hard Anodize มีขนาด ใส่โซ่ 415 - 45-55 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/Gelspeed415-hard.jpg",
       "/legacy/webgigabike.com/sprocket all/Gelspeed-415-ha.jpg"
@@ -19856,8 +19733,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 6061 ทั้ง",
-    "description": "อุปกรณ์ตกแต่ง Ninja250,300 ใหม่ๆอยากแนะนำ ชุดพักเท้าหน้าแบบเกียร์โยงทรงสนามแข่ง ใส่ Kawasaki Ninja250,300. Fits: Kawasaki Ninja250/300/400 · Material: Alloy 6061 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง Ninja250,300 ใหม่ๆอยากแนะนำ ชุดพักเท้าหน้าแบบเกียร์โยงทรงสนามแข่ง ใส่ Kawasaki Ninja250,300 · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy 6061 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง Ninja250,300 ใหม่ๆอยากแนะนำ ชุดพักเท้าหน้าแบบเกียร์โยงทรงสนามแข่ง ใส่ Kawasaki Ninja250,300 ผลิตจาก Alloy 6061 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้ว ชุดละ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง Ninja250,300 ใหม่ๆอยากแนะนำ ชุดพักเท้าหน้าแบบเกียร์โยงทรงสนามแข่ง ใส่ Kawasaki Ninja250,300 ผลิตจาก Alloy 6061 ทั้งชุดและกัด CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่งมาแล้ว ชุดละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/Kawasaki-ZX10R.jpg",
       "/legacy/webgigabike.com/Ninja300/ninja-300.jpg",
@@ -19885,8 +19762,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Yamaha M-Slaz ใส่โซ่ 415- 46 , 47 , 48 ฟัน =. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Yamaha M-Slaz ใส่โซ่ 415- 46 , 47 , 48 ฟัน = · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Yamaha M-Slaz ใส่โซ่ 415- 46 , 47 , 48 ฟัน =",
+    "descriptionTh": "Yamaha M-Slaz ใส่โซ่ 415- 46 , 47 , 48 ฟัน =",
     "images": [
       "/legacy/webgigabike.com/sprocket all/m-slaz-1.jpg"
     ],
@@ -19909,8 +19786,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Marchassini Sprocket For Marchassini & OZ Wheel Aluminum Alloy 7075 Hard Anodize 530-38,39,43T สเตอร์หลังแต่งใส่กับล้อ Marchassini & OZ Wheel Alloy 7075 CNC Billet พร้อม Hard Anodize มีขนาด 530-38,39,43 ฟัน. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Marchassini Sprocket For Marchassini & OZ Wheel Aluminum Alloy 7075 Hard Anodize 530-38,39,43T สเตอร์หลังแต่งใส่กับล้อ Marchassini & OZ Wheel Alloy 7075 CNC Billet พร้อม Hard Anodize มีขนาด 530-38,39,43 ฟัน · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Marchassini Sprocket For Marchassini & OZ Wheel Aluminum Alloy 7075 Hard Anodize 530-38,39,43T สเตอร์หลังแต่งใส่กับล้อ Marchassini & OZ Wheel Alloy 7075 CNC Billet พร้อม Hard Anodize มีขนาด 530-38,39,43 ฟัน อันละ",
+    "descriptionTh": "Marchassini Sprocket For Marchassini & OZ Wheel Aluminum Alloy 7075 Hard Anodize 530-38,39,43T สเตอร์หลังแต่งใส่กับล้อ Marchassini & OZ Wheel Alloy 7075 CNC Billet พร้อม Hard Anodize มีขนาด 530-38,39,43 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/marchesini-1.jpg",
       "/legacy/webgigabike.com/sprocket all/marchesini-530-43-h1.jpg",
@@ -19938,8 +19815,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Sprocket For Marchassini & OZ, RCB, Wheel Aluminum Alloy 7075 Hard Anodize 520-41-45T สเตอร์หลังแต่งใส่กับดุมล้อ Marchassini & OZ Wheel Alloy 7075 CNC Billet พร้อมชุบ Hard Anodize มีขนาด 520-41-45 ฟัน. Fits: Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket For Marchassini & OZ, RCB, Wheel Aluminum Alloy 7075 Hard Anodize 520-41-45T สเตอร์หลังแต่งใส่กับดุมล้อ Marchassini & OZ Wheel Alloy 7075 CNC Billet พร้อมชุบ Hard Anodize มีขนาด 520-41-45 ฟัน · ใส่ได้กับ Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket For Marchassini & OZ, RCB, Wheel Aluminum Alloy 7075 Hard Anodize 520-41-45T สเตอร์หลังแต่งใส่กับดุมล้อ Marchassini & OZ Wheel Alloy 7075 CNC Billet พร้อมชุบ Hard Anodize มีขนาด 520-41-45 ฟัน อันละ",
+    "descriptionTh": "Sprocket For Marchassini & OZ, RCB, Wheel Aluminum Alloy 7075 Hard Anodize 520-41-45T สเตอร์หลังแต่งใส่กับดุมล้อ Marchassini & OZ Wheel Alloy 7075 CNC Billet พร้อมชุบ Hard Anodize มีขนาด 520-41-45 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/marchesini-520-43-h1.jpg"
     ],
@@ -19965,8 +19842,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Sprocket For Marchassini, OZ, RCB Wheel Aluminum Alloy 7075 Hard Anodize 415-49-54T สเตอร์หลังแต่ง สำหรับใส่กับดุมล้อ Marchassini, OZ, RCB Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 415-49-54 ฟัน. Fits: Honda CBR150R/250RR/300 · Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket For Marchassini, OZ, RCB Wheel Aluminum Alloy 7075 Hard Anodize 415-49-54T สเตอร์หลังแต่ง สำหรับใส่กับดุมล้อ Marchassini, OZ, RCB Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 415-49-54 ฟัน · ใส่ได้กับ Honda CBR150R/250RR/300 · Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket For Marchassini, OZ, RCB Wheel Aluminum Alloy 7075 Hard Anodize 415-49-54T สเตอร์หลังแต่ง สำหรับใส่กับดุมล้อ Marchassini, OZ, RCB Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 415-49-54 ฟัน อันละ",
+    "descriptionTh": "Sprocket For Marchassini, OZ, RCB Wheel Aluminum Alloy 7075 Hard Anodize 415-49-54T สเตอร์หลังแต่ง สำหรับใส่กับดุมล้อ Marchassini, OZ, RCB Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 415-49-54 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/marchesini-RCB-415.jpg"
     ],
@@ -19983,21 +19860,22 @@ export const legacyProducts: Product[] = [
     "nameTh": "Sprocket For BMW S1000rr 2020- Aluminum Alloy 7075 Hard Anodize 520-45",
     "price": 2200,
     "category": "drivetrain",
-    "bikeModels": [],
+    "bikeModels": [
+      "s1000rr"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Sprocket For BMW S1000rr 2020- Aluminum Alloy 7075 Hard Anodize 520-45,46T สเตอร์หลังแต่ง BMW S1000rr รุ่นเก่า งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45,46ฟัน. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Sprocket For BMW S1000rr 2020- Aluminum Alloy 7075 Hard Anodize 520-45,46T สเตอร์หลังแต่ง BMW S1000rr รุ่นเก่า งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45,46ฟัน · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Sprocket For BMW S1000rr 2020- Aluminum Alloy 7075 Hard Anodize 520-45,46T สเตอร์หลังแต่ง BMW S1000rr รุ่นเก่า งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45,46ฟัน อันละ",
+    "descriptionTh": "Sprocket For BMW S1000rr 2020- Aluminum Alloy 7075 Hard Anodize 520-45,46T สเตอร์หลังแต่ง BMW S1000rr รุ่นเก่า งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-45,46ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/S1000rr-45t.jpg"
     ],
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -20014,8 +19892,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเตอร์หลัง Alloy 7075 T651 ใส่ล้อ Honda RS125 แบบลายรู รูใน54มิล มีขนาด 415-30-37. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Alloy 7075 T651 ใส่ล้อ Honda RS125 แบบลายรู รูใน54มิล มีขนาด 415-30-37 · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Alloy 7075 T651 ใส่ล้อ Honda RS125 แบบลายรู รูใน54มิล มีขนาด 415-30-37 อันละ",
+    "descriptionTh": "สเตอร์หลัง Alloy 7075 T651 ใส่ล้อ Honda RS125 แบบลายรู รูใน54มิล มีขนาด 415-30-37 อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/SPR-RS125-G.jpg"
     ],
@@ -20032,21 +19910,22 @@ export const legacyProducts: Product[] = [
     "nameTh": "สเตอร์หน้า CNC NINJA 250-300 , Z300",
     "price": 600,
     "category": "drivetrain",
-    "bikeModels": [],
+    "bikeModels": [
+      "ninja250"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415 -15,16,17,18,19ฟัน พิเศษช่วงแนะนำ",
-    "description": "สเตอร์หน้า CNC NINJA 250-300 , Z300. Material: เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415 -15,16,17,18,19ฟัน พิเศษช่วงแนะนำ · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า CNC NINJA 250-300 , Z300 · วัสดุ เหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415 -15,16,17,18,19ฟัน พิเศษช่วงแนะนำ · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หน้า CNC NINJA 250-300 , Z300 ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415 -15,16,17,18,19ฟัน พิเศษช่วงแนะนำ",
+    "descriptionTh": "สเตอร์หน้า CNC NINJA 250-300 , Z300 ผลิตจากเหล็กกล้าและชุบแข็งอย่างดี ใส่โซ่ 415 -15,16,17,18,19ฟัน พิเศษช่วงแนะนำ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/Sprocket-Front-z300.jpg"
     ],
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -20063,8 +19942,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเตอร์หลัง Alloy เกรด 6061 T651 ชุบHard Anodize ใส่ล้อ Honda RS125 แบบรูทึบรูใน38มิล มีขนาด 415-42,43ฟัน. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Alloy เกรด 6061 T651 ชุบHard Anodize ใส่ล้อ Honda RS125 แบบรูทึบรูใน38มิล มีขนาด 415-42,43ฟัน · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Alloy เกรด 6061 T651 ชุบHard Anodize ใส่ล้อ Honda RS125 แบบรูทึบรูใน38มิล มีขนาด 415-42,43ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลัง Alloy เกรด 6061 T651 ชุบHard Anodize ใส่ล้อ Honda RS125 แบบรูทึบรูใน38มิล มีขนาด 415-42,43ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/sprocket-rs-415-no.jpg"
     ],
@@ -20088,8 +19967,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเตอร์หลัง Alloy เกรด 6061 T651 ชุบHard Anodize ใส่ล้อ Honda RS125 แบบลาย รูใน41มิล มีขนาด 415-41,42,43,44,45ฟัน. Fits: Honda NSR150SP/2T · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Alloy เกรด 6061 T651 ชุบHard Anodize ใส่ล้อ Honda RS125 แบบลาย รูใน41มิล มีขนาด 415-41,42,43,44,45ฟัน · ใส่ได้กับ Honda NSR150SP/2T · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง Alloy เกรด 6061 T651 ชุบHard Anodize ใส่ล้อ Honda RS125 แบบลาย รูใน41มิล มีขนาด 415-41,42,43,44,45ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลัง Alloy เกรด 6061 T651 ชุบHard Anodize ใส่ล้อ Honda RS125 แบบลาย รูใน41มิล มีขนาด 415-41,42,43,44,45ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/sprocket-rs-415.jpg"
     ],
@@ -20113,8 +19992,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "สเตอร์หลัง งาน CNC Billet Alloy 7075 T651 สำหรับใส่ KR150 โซ่ 420- 32/33/34/35/36/37ฟันและโซ่ 415 30-37ฟัน. Fits: Kawasaki KSR110/KR150 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง งาน CNC Billet Alloy 7075 T651 สำหรับใส่ KR150 โซ่ 420- 32/33/34/35/36/37ฟันและโซ่ 415 30-37ฟัน · ใส่ได้กับ Kawasaki KSR110/KR150 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลัง งาน CNC Billet Alloy 7075 T651 สำหรับใส่ KR150 โซ่ 420- 32/33/34/35/36/37ฟันและโซ่ 415 30-37ฟัน ชิ้นละ",
+    "descriptionTh": "สเตอร์หลัง งาน CNC Billet Alloy 7075 T651 สำหรับใส่ KR150 โซ่ 420- 32/33/34/35/36/37ฟันและโซ่ 415 30-37ฟัน ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/st-kr150.jpg"
     ],
@@ -20136,8 +20015,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Yamaha TMax Sprocket For Yamaha TMAX530 Aluminum Alloy 7075 Hard Anodize 520-36-42T สเตอร์หลังแต่ง Yamaha TMAX530 งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-36-42ฟัน. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Yamaha TMax Sprocket For Yamaha TMAX530 Aluminum Alloy 7075 Hard Anodize 520-36-42T สเตอร์หลังแต่ง Yamaha TMAX530 งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-36-42ฟัน · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Yamaha TMax Sprocket For Yamaha TMAX530 Aluminum Alloy 7075 Hard Anodize 520-36-42T สเตอร์หลังแต่ง Yamaha TMAX530 งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-36-42ฟัน อันละ",
+    "descriptionTh": "Yamaha TMax Sprocket For Yamaha TMAX530 Aluminum Alloy 7075 Hard Anodize 520-36-42T สเตอร์หลังแต่ง Yamaha TMAX530 งาน Aluminum Alloy 7075 CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากและกันรอยได้ดี มีขนาด 520-36-42ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/sprocket all/TMAX.jpg",
       "/legacy/webgigabike.com/sprocket all/Tmax-520-42t.jpg"
@@ -20152,216 +20031,36 @@ export const legacyProducts: Product[] = [
   {
     "id": "lg-sr-gb1",
     "code": "",
-    "name": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม",
-    "nameTh": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเม",
-    "price": 4200,
+    "name": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา sompon manucham Viwe Update Al",
+    "nameTh": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา sompon manucham Viwe Update Al",
+    "price": 2400,
     "category": "drivetrain",
     "bikeModels": [
-      "nsr150",
-      "s1000rr",
-      "cbr250",
-      "monster",
-      "estrella",
-      "hd883",
-      "gb400",
-      "ksr",
-      "rc390",
-      "monkey",
-      "nc35",
-      "ninja250",
-      "zx10",
-      "r15",
-      "r1",
-      "r3",
-      "interceptor",
       "srx",
-      "centaur",
-      "tempter",
+      "xt500",
+      "gb400",
+      "monkey",
+      "volty",
       "thruxton",
-      "w650",
-      "xt500"
+      "hd883",
+      "centaur"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเมื่อ หมวดหมู่สินค้า/บริการ : YAMAHA : SR 400 ,500 (New) : SRX 400-600 : XS650,TX650 : XT,TT500 : R15,XSR155,XMAX300 : R3,MT03,R25 : R1,R6,R7 (New) : HONDA : CB750 k0-k7 : GB250,GB400,CB400ss : NC30 ,NC35 ,CB1300 : NSR150sp,Dash125 & 2T,NSR50 : Monkey50,125,MSX,Grom,DAX125 : CBR250rr,CBR250-300,CBR150R : CBR600RR, CBR1000RR, CBR650R : KAWASAKI : W650 , W800 : Estrella250, TR250 : KSR110, KR150 : Ninja ZX250R,Ninja250,300,400 : ZX10RR , : SUZUKI : Temtepr 400 : Vorty250 : Triumph : Truxton 900,T100 Classics : Sret twin ,New T100 ,T120 : BMW : S1000RR : Royal Enfield : GT 535 ,Interceptor 650 : Ducati : Monster 795/796/Hyper821 : Panigale V4R : : Harlay Davidson : Sportster 883-1200 : : Stallions : Centaur 150 : KTM : RC390 : Ohlins FG620 & FG433 : Yamaha sr ในฝันของคุณ : Parts Circuit & Sprocket Alloys : Giga Bike Racing Tame : Payment วิธีการชำระเงิน : Contac ติดต่อเรา CNC Racing Parts - Custom Part & Accessories บริการ รับออกแบบตกแต่ง SR และรับผลิตอะไหล่ตามแบบทุกรุ่นทุกยี่ฮ้อตามที่คุณต้องการ โทร.081-424-9407 , Line id: thaigigabike ,E-mail aonggb@yahoo.com ชิ้นงานทุกชิ้นเราออกแบบและผลิตเองทุกชิ้นครับ OPEN 9.00 CLOSE 20.00 GIGA BIKE FACTORY Custom Part & Accessories Tel. 081-424-9407 or, E-mail: aonggb@yahoo.com , Line id: thaigigabike We deliver to customers all around the world. And stores like a dealer's shop please contact us. We design and manufacture decorative parts of motorcycles all models you deserve. (Product Of Thailand) ติดต่อเรา E:mail aonggb@yahoo.com Tel.081-424- 9407 อ๋อง. , Line id: thaigigabike 99/21-22 ถ.พระราม2 แสมดำ บางขุนเทียน กทม . 10150 ตัวแทนจำหน่าย อย่างเป็นทางการ ภูกิจ มหามตย์กุล (ช่างหนู่ม) 19 ม.2 ต.มาบโป่ง อ.พานทอง จ.ชลบุรี 20160 081-141-4164 เอกรัตน์ ระวังการ *จิ๋ว 269/1-2 ม.4 ต.ทุ่งสมอ อ.เขาค้อ เพชรบูรณ์ 67270 *ร้าน 71 bike shop *091-771-4979 ณรงค์ฤทธิ์ ทาสิงห์คำ 17 ม.1 ต.สันผักหวาน อ.หางดง จ.เชียงใหม่ 50230 083-201-2068 (SR 108) กีร์ติ กล่ำกองกูล (ติ) 156/2 ม.1 ต.รั้วใหญ่ อ.เมือง สุพรรณบุรี 72000 082-567-1345 *ร้าน ติสุพรรณ ธนภัทร สังข์อุ่น (โอม) บ้านชายทุ่ง 134 ม.6 ต.เกาะสำโรง อ.เมือง จ.กาญจนบุรี 71000 090-872-6523 (Thanapat Classic Bike) ธีรยุทธ์ พิมพ์ทอง (กุ้ง พระราม.7) 89/41 ซ.วัดหลวง แขวงบางซื่อ เขตบางซื่อ กทม.10800 086-899-2199 เอกพจน์ ขวัญกระโทก (พจน์) 107/1 ม.14 ต.โชคชัย อ.โชคชัย นครราชสีมา 30190 080-731-4544 *ร้าน Poj Motor Shop เอกชัย จันทร์ทอง 116/8 ม.4 ต.ตาขัน อ.บ้านค่าย ระยอง 21120 (ร้าน 168 SHOP) 062-127-4074 ร้าน โน้ต ปากน้ำ (ฉันทัช พิทยาเลิศสุวรรณ) 178/31 ถ.สายลวด ต.ปากน้ำ อ.เมือง สมุทรปราการ 10270 โทร.083-038-5424 วิษณุ เลิศจันทรางกูร *เต้ย 090-226-4388 34 หมู่บ้าน พิบูลย์การ์เด้นวิว ถ.พิบูลสงคราม ซ.16 ต.บางเขน อ.เมือง นนทบุรี 11000 K.โจ (ว่าไง วัยรุ่น) 70/1 ม.2 ต.พญาเย็น อ.ปากช่อง นครราชสีมา 30320 *ร้าน SR Story *087-926-1731 ทนงศักดิ์ ปริมาณ (มาส) 118 ม.5 ต.ท่าชัย อ.ศรีสัชนาลัย สุโขทัย 64190 Mas Racing *086-374-4431 ชญานนท์ ชูมา 885/3 ม.1 ต.เขาทราย อ.ทับคล้อ จ.พิจิตร 66230 062-919-2998 *โปเต้พิจิตร ร้าน ทีที เรซซิ่ง Shop K. ณัฐพร (ช่าง ต้อง) 141/48 ซ.8 ท่าอิฐบน ต.ท่าอิฐ อ.เมือง อุตรดิตถ์ 53000 080-514-5193 ร้าน WSW Custom Bike วินสัน (โย) 97/10-11 ถ.บ้านดอนตูม อ.บ้านโป่ง จ.ราชบุรี 70110 โทร.086-054-2992 ร้าน Pu Cycles (วัชรินทร์) 14 ม.5 ต.เบิกไพร อ.บ้านโป่ง จ.ราชบุรี 70110 099-398-4444 (เจี๊ยบ) พงษ์พันธ์ ท่องแจ้ง (Banana Boat) 2/189 ถ.โชคชัย4 ซ.20 แขวง-เขต ลาดพร้าว กทม.10230 Tel.085-953-5666 *กฎตัวแทนจำหน่าย 1.ต้องสั่งของไปสต๊อกเพื่อนจำหน่ายเท่านั้น *ห้ามจับเสือมือเปล่า *และห้ามขายต่ำกว่าราคาร้าน 2.ถ้าฝากส่งของให้ลูกค้าเลย ทางร้านจะเก็บค่าบริการครั้งละ. Fits: Honda NSR150SP/2T · BMW S1000RR · Honda CBR150R/250RR/300 · Ducati Monster795/796 · Kawasaki Estrella250/TR250 · Harley-Davidson Sportster883-1200 · Honda GB250/400/CB400SS · Kawasaki KSR110/KR150 · KTM RC390 · Honda Monkey/MSX125/DAX125 · Honda NC30/NC35/CB1300 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R1/R6/R7 · Yamaha R3/MT-03/R25 · Royal Enfield GT535/Interceptor650 · Yamaha SRX400-600 · Stallions Centaur150 · Suzuki Tempter400 · Triumph Thruxton/T100/T120 · Kawasaki W650/W800 · Yamaha XT/TT500 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา สถิติของร้านค้า ปรับปรุงร้านเมื่อ หมวดหมู่สินค้า/บริการ : YAMAHA : SR 400 ,500 (New) : SRX 400-600 : XS650,TX650 : XT,TT500 : R15,XSR155,XMAX300 : R3,MT03,R25 : R1,R6,R7 (New) : HONDA : CB750 k0-k7 : GB250,GB400,CB400ss : NC30 ,NC35 ,CB1300 : NSR150sp,Dash125 & 2T,NSR50 : Monkey50,125,MSX,Grom,DAX125 : CBR250rr,CBR250-300,CBR150R : CBR600RR, CBR1000RR, CBR650R : KAWASAKI : W650 , W800 : Estrella250, TR250 : KSR110, KR150 : Ninja ZX250R,Ninja250,300,400 : ZX10RR , : SUZUKI : Temtepr 400 : Vorty250 : Triumph : Truxton 900,T100 Classics : Sret twin ,New T100 ,T120 : BMW : S1000RR : Royal Enfield : GT 535 ,Interceptor 650 : Ducati : Monster 795/796/Hyper821 : Panigale V4R : : Harlay Davidson : Sportster 883-1200 : : Stallions : Centaur 150 : KTM : RC390 : Ohlins FG620 & FG433 : Yamaha sr ในฝันของคุณ : Parts Circuit & Sprocket Alloys : Giga Bike Racing Tame : Payment วิธีการชำระเงิน : Contac ติดต่อเรา CNC Racing Parts - Custom Part & Accessories บริการ รับออกแบบตกแต่ง SR และรับผลิตอะไหล่ตามแบบทุกรุ่นทุกยี่ฮ้อตามที่คุณต้องการ โทร.081-424-9407 , Line id: thaigigabike ,E-mail aonggb@yahoo.com ชิ้นงานทุกชิ้นเราออกแบบและผลิตเองทุกชิ้นครับ OPEN 9.00 CLOSE 20.00 GIGA BIKE FACTORY Custom Part & Accessories Tel. 081-424-9407 or, E-mail: aonggb@yahoo.com , Line id: thaigigabike We deliver to customers all around the world. And stores like a dealer's shop please contact us. We design and manufacture decorative parts of motorcycles all models you deserve. (Product Of Thailand) ติดต่อเรา E:mail aonggb@yahoo.com Tel.081-424- 9407 อ๋อง. , Line id: thaigigabike 99/21-22 ถ.พระราม2 แสมดำ บางขุนเทียน กทม . 10150 ตัวแทนจำหน่าย อย่างเป็นทางการ ภูกิจ มหามตย์กุล (ช่างหนู่ม) 19 ม.2 ต.มาบโป่ง อ.พานทอง จ.ชลบุรี 20160 081-141-4164 เอกรัตน์ ระวังการ *จิ๋ว 269/1-2 ม.4 ต.ทุ่งสมอ อ.เขาค้อ เพชรบูรณ์ 67270 *ร้าน 71 bike shop *091-771-4979 ณรงค์ฤทธิ์ ทาสิงห์คำ 17 ม.1 ต.สันผักหวาน อ.หางดง จ.เชียงใหม่ 50230 083-201-2068 (SR 108) กีร์ติ กล่ำกองกูล (ติ) 156/2 ม.1 ต.รั้วใหญ่ อ.เมือง สุพรรณบุรี 72000 082-567-1345 *ร้าน ติสุพรรณ ธนภัทร สังข์อุ่น (โอม) บ้านชายทุ่ง 134 ม.6 ต.เกาะสำโรง อ.เมือง จ.กาญจนบุรี 71000 090-872-6523 (Thanapat Classic Bike) ธีรยุทธ์ พิมพ์ทอง (กุ้ง พระราม.7) 89/41 ซ.วัดหลวง แขวงบางซื่อ เขตบางซื่อ กทม.10800 086-899-2199 เอกพจน์ ขวัญกระโทก (พจน์) 107/1 ม.14 ต.โชคชัย อ.โชคชัย นครราชสีมา 30190 080-731-4544 *ร้าน Poj Motor Shop เอกชัย จันทร์ทอง 116/8 ม.4 ต.ตาขัน อ.บ้านค่าย ระยอง 21120 (ร้าน 168 SHOP) 062-127-4074 ร้าน โน้ต ปากน้ำ (ฉันทัช พิทยาเลิศสุวรรณ) 178/31 ถ.สายลวด ต.ปากน้ำ อ.เมือง สมุทรปราการ 10270 โทร.083-038-5424 วิษณุ เลิศจันทรางกูร *เต้ย 090-226-4388 34 หมู่บ้าน พิบูลย์การ์เด้นวิว ถ.พิบูลสงคราม ซ.16 ต.บางเขน อ.เมือง นนทบุรี 11000 K.โจ (ว่าไง วัยรุ่น) 70/1 ม.2 ต.พญาเย็น อ.ปากช่อง นครราชสีมา 30320 *ร้าน SR Story *087-926-1731 ทนงศักดิ์ ปริมาณ (มาส) 118 ม.5 ต.ท่าชัย อ.ศรีสัชนาลัย สุโขทัย 64190 Mas Racing *086-374-4431 ชญานนท์ ชูมา 885/3 ม.1 ต.เขาทราย อ.ทับคล้อ จ.พิจิตร 66230 062-919-2998 *โปเต้พิจิตร ร้าน ทีที เรซซิ่ง Shop K. ณัฐพร (ช่าง ต้อง) 141/48 ซ.8 ท่าอิฐบน ต.ท่าอิฐ อ.เมือง อุตรดิตถ์ 53000 080-514-5193 ร้าน WSW Custom Bike วินสัน (โย) 97/10-11 ถ.บ้านดอนตูม อ.บ้านโป่ง จ.ราชบุรี 70110 โทร.086-054-2992 ร้าน Pu Cycles (วัชรินทร์) 14 ม.5 ต.เบิกไพร อ.บ้านโป่ง จ.ราชบุรี 70110 099-398-4444 (เจี๊ยบ) พงษ์พันธ์ ท่องแจ้ง (Banana Boat) 2/189 ถ.โชคชัย4 ซ.20 แขวง-เขต ลาดพร้าว กทม.10230 Tel.085-953-5666 *กฎตัวแทนจำหน่าย 1.ต้องสั่งของไปสต๊อกเพื่อนจำหน่ายเท่านั้น *ห้ามจับเสือมือเปล่า *และห้ามขายต่ำกว่าราคาร้าน 2.ถ้าฝากส่งของให้ลูกค้าเลย ทางร้านจะเก็บค่าบริการครั้งละ · ใส่ได้กับ Honda NSR150SP/2T · BMW S1000RR · Honda CBR150R/250RR/300 · Ducati Monster795/796 · Kawasaki Estrella250/TR250 · Harley-Davidson Sportster883-1200 · Honda GB250/400/CB400SS · Kawasaki KSR110/KR150 · KTM RC390 · Honda Monkey/MSX125/DAX125 · Honda NC30/NC35/CB1300 · Kawasaki Ninja250/300/400 · Kawasaki ZX-10RR · Yamaha R15/XSR155/XMAX300 · Yamaha R1/R6/R7 · Yamaha R3/MT-03/R25 · Royal Enfield GT535/Interceptor650 · Yamaha SRX400-600 · Stallions Centaur150 · Suzuki Tempter400 · Triumph Thruxton/T100/T120 · Kawasaki W650/W800 · Yamaha XT/TT500 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา sompon manucham Viwe Update All Products Products /service : YAMAHA SR400 ,500 : YAMAHA XT,TT500 : YAMAHA SRX400-600 : Yamaha XS650 : Honda Clubman GB250 , GB400 : Honda CB400ss : Honda CB750 : Kawasaki Estrella250 TR250 : Kawasaki W650 : Suzuki Vorty250 : Suzuki Temter400 : Harlay Davidson Sportter : Ducati 795 , 796 (Coming Soon) : Triumph Truxton , T100 : Royal Enfield (Coming Soon) : : : Stallions Centaur : เบาะแต่ง/Sea t : Yamaha sr ในฝันของคุณ : Honda MSX125 (Coming Soon ) : สเตอร์หลังอลูมิเนียม Sprocket Alloys : Giga Bike Racing Tame : Payment วิธีการโอนเงิน : Contac ติดต่อเรา GIGA BIKE FACTORY Custom Part & Accessories Tel. +66 92-408-2220,+66 81-424-9407 or, E-mail: aonggb@yahoo.com We deliver to customers all around the world. And stores like a dealer's shop please contact us. We design and manufacture decorative parts of motorcycles all models you deserve. (Product Of Thailand 100%) Accessories by gigabike เบาะแต่ง หนังน้ำตาล-ด้ายขาว-ใส่หมุด ราคา",
+    "descriptionTh": "หน้าแรก Home วิธีการชําระเงิน ติดต่อเรา sompon manucham Viwe Update All Products Products /service : YAMAHA SR400 ,500 : YAMAHA XT,TT500 : YAMAHA SRX400-600 : Yamaha XS650 : Honda Clubman GB250 , GB400 : Honda CB400ss : Honda CB750 : Kawasaki Estrella250 TR250 : Kawasaki W650 : Suzuki Vorty250 : Suzuki Temter400 : Harlay Davidson Sportter : Ducati 795 , 796 (Coming Soon) : Triumph Truxton , T100 : Royal Enfield (Coming Soon) : : : Stallions Centaur : เบาะแต่ง/Sea t : Yamaha sr ในฝันของคุณ : Honda MSX125 (Coming Soon ) : สเตอร์หลังอลูมิเนียม Sprocket Alloys : Giga Bike Racing Tame : Payment วิธีการโอนเงิน : Contac ติดต่อเรา GIGA BIKE FACTORY Custom Part & Accessories Tel. +66 92-408-2220,+66 81-424-9407 or, E-mail: aonggb@yahoo.com We deliver to customers all around the world. And stores like a dealer's shop please contact us. We design and manufacture decorative parts of motorcycles all models you deserve. (Product Of Thailand 100%) Accessories by gigabike เบาะแต่ง หนังน้ำตาล-ด้ายขาว-ใส่หมุด ราคา",
     "images": [
       "/legacy/webgigabike.com/sr-gb1.jpg",
       "/legacy/webgigabike.com/honda cb750/CB750-.jpg",
       "/legacy/webgigabike.com/Triumph/triumph100.jpg",
-      "/legacy/webgigabike.com/2T/Rs125.jpg",
-      "/legacy/webgigabike.com/2T/NSR150sp-1.jpg",
-      "/legacy/webgigabike.com/2T/Handel-nsr-31m-2.jpg",
-      "/legacy/webgigabike.com/2T/Handel-nsr-31m-1.jpg",
-      "/legacy/webgigabike.com/BMW/S1000rr-2019.jpg",
-      "/legacy/webgigabike.com/BMW/S1000rr-2021-45t.jpg",
-      "/legacy/webgigabike.com/Nut-Sus/nut-m10.jpg",
-      "/legacy/Part All_clip_image004.jpg",
-      "/legacy/Part All_clip_image006.jpg",
-      "/legacy/Part All_clip_image016.jpg",
-      "/legacy/Part All_clip_image012.jpg",
-      "/legacy/Part All_clip_image020.jpg",
-      "/legacy/Part All_clip_image010.jpg",
-      "/legacy/Part All_clip_image028.jpg",
-      "/legacy/Part All_clip_image026.jpg",
-      "/legacy/Part All_clip_image018.jpg",
-      "/legacy/Part All_clip_image036.jpg",
-      "/legacy/Part All_clip_image034.jpg",
-      "/legacy/Part All_clip_image032.jpg",
-      "/legacy/Part All_clip_image030.jpg",
-      "/legacy/Part All_clip_image038.jpg",
-      "/legacy/Part All_clip_image042.jpg",
-      "/legacy/Part All_clip_image040.jpg",
-      "/legacy/Part All_clip_image044.jpg",
-      "/legacy/Part All_clip_image046.jpg",
-      "/legacy/Part All_clip_image048.jpg",
-      "/legacy/Part All_clip_image060.jpg",
-      "/legacy/Part All_clip_image062.jpg",
-      "/legacy/Part All_clip_image064.jpg",
-      "/legacy/Part All_clip_image052.jpg",
-      "/legacy/Part All_clip_image070.jpg",
-      "/legacy/Part All_clip_image068.jpg",
-      "/legacy/Part All_clip_image066.jpg",
-      "/legacy/Part All_clip_image082.jpg",
-      "/legacy/Part All_clip_image084.jpg",
-      "/legacy/Part All_clip_image086.jpg",
-      "/legacy/Part All_clip_image088.jpg",
-      "/legacy/Part All_clip_image090.jpg",
-      "/legacy/webgigabike.com/Nut-Sus/M8x1.25x20-hol-sus.jpg",
-      "/legacy/webgigabike.com/CBR250/Honda-CBR250RR.jpg",
-      "/legacy/webgigabike.com/CBR250/Handle-45mm.jpg",
-      "/legacy/webgigabike.com/CBR250/Diss-250rr-310-5.0-Gold.jpg",
-      "/legacy/webgigabike.com/CBR250/Diss-250rr-310-5.0.jpg",
-      "/legacy/webgigabike.com/honda cb750/covercluch-cb750-180.jpg",
-      "/legacy/webgigabike.com/Ducati/Ducati-V4R.jpg",
-      "/legacy/webgigabike.com/Ducati/Ducati-Monster-795.jpg",
-      "/legacy/webgigabike.com/Ducati/top-1.jpg",
-      "/legacy/webgigabike.com/Ducati/V4R-hd.jpg",
-      "/legacy/webgigabike.com/Ducati/V4R-hd-bk.jpg",
-      "/legacy/webgigabike.com/Ducati/V4R-2.jpg",
-      "/legacy/webgigabike.com/Ducati/V4R-4.jpg",
-      "/legacy/webgigabike.com/Ducati/V4R-1.jpg",
-      "/legacy/webgigabike.com/kawasaki-Estrella/estrella-250.jpg",
-      "/legacy/webgigabike.com/part/hoocharngsr-v.jpg",
-      "/legacy/webgigabike.com/HD/harley-davidson-48.jpg",
-      "/legacy/webgigabike.com/HD/Cylinder-HD-2.jpg",
-      "/legacy/webgigabike.com/HD/Cylinder-HD-3.jpg",
-      "/legacy/webgigabike.com/HD/Cylinder-HD-1.jpg",
-      "/legacy/webgigabike.com/HD/Sprockets-front-530-25t-Steel.jpg",
-      "/legacy/webgigabike.com/honda cb400ss/Honda-CB400SS.jpg",
-      "/legacy/webgigabike.com/honda cb400ss/cb400ss_cafe.jpg",
-      "/legacy/webgigabike.com/Honda Gb250-400/gb400tt1985.jpg",
-      "/legacy/webgigabike.com/Honda Gb250-400/Lock-33-mm.jpg",
-      "/legacy/webgigabike.com/cbr1000rrr/cbr10-rrr-1.jpg",
-      "/legacy/webgigabike.com/R6/Handle-r6-sil-t2-1.jpg",
-      "/legacy/webgigabike.com/R6/Handle-r6-bk-t2-1.jpg",
-      "/legacy/webgigabike.com/honda cb750/nut-cb.jpg",
-      "/legacy/webgigabike.com/kawasaki/estrella-250.html",
-      "/legacy/webgigabike.com/kawasaki/nut-cover-oil-es-1.html",
-      "/legacy/webgigabike.com/kawasaki/Swingarm-estrella-sil-1.html",
-      "/legacy/webgigabike.com/kawasaki/Swingarm-estrella-sil.html",
-      "/legacy/webgigabike.com/kawasaki/Swingarm-estrella-bk.html",
-      "/legacy/webgigabike.com/kawasaki ksr 110/kawasaki_ksr110_600.jpg",
-      "/legacy/webgigabike.com/kawasaki ksr 110/Sprocket415.jpg",
-      "/legacy/webgigabike.com/KTM/RC390.jpg",
-      "/legacy/webgigabike.com/KTM/Raerset-rc390-1.jpg",
-      "/legacy/webgigabike.com/DAX125/Dax125.jpg",
-      "/legacy/webgigabike.com/MSX/sprocket-Front-msx-415.jpg",
-      "/legacy/webgigabike.com/Honda NC35/nc35.jpg",
-      "/legacy/webgigabike.com/CB1300/CB1300.jpg",
-      "/legacy/webgigabike.com/Ohlins/Adapter-Fender-SF.jpg",
-      "/legacy/webgigabike.com/CB1300/CB1300-2.jpg",
-      "/legacy/webgigabike.com/CB1300/CB1300-1.jpg",
-      "/legacy/webgigabike.com/Ninja400/ninja400.jpg",
-      "/legacy/webgigabike.com/Ninja400/Key-tang-sl.jpg",
-      "/legacy/webgigabike.com/Ninja400/Key-tang-bk.jpg",
-      "/legacy/webgigabike.com/Ninja400/caliper-N4-STD.jpg",
-      "/legacy/webgigabike.com/NinjaZX10R/KRRC-1.jpg",
-      "/legacy/webgigabike.com/NinjaZX10R/Rearset-zx10rr.jpg",
-      "/legacy/webgigabike.com/Ohlins/FG-621g.jpg",
-      "/legacy/webgigabike.com/Ohlins/FG-621.jpg",
-      "/legacy/webgigabike.com/Ohlins/Fg43-100m-bk2.jpg",
-      "/legacy/webgigabike.com/Ohlins/Fg43-100m-sl2.jpg",
-      "/legacy/webgigabike.com/Ohlins/Fg43-100m-bk1.jpg",
-      "/legacy/webgigabike.com/R3/kushi.jpg",
-      "/legacy/webgigabike.com/XSR/Yamaha-YZF-R15-V3.jpg",
-      "/legacy/webgigabike.com/R15/Boot-weel-R15.jpg",
-      "/legacy/webgigabike.com/R1/R1-2017.jpg",
-      "/legacy/webgigabike.com/R3/real.jpg",
-      "/legacy/webgigabike.com/R3/gbracing-vor.jpg",
-      "/legacy/webgigabike.com/R3/Yamaha-R3-19.jpg",
-      "/legacy/webgigabike.com/R3/Footpet-r3-T2-sl2.jpg",
-      "/legacy/webgigabike.com/R3/Footpet-r3-T2-sl1.jpg",
-      "/legacy/webgigabike.com/R3/Footpet-r3-T2-sl.jpg",
-      "/legacy/webgigabike.com/R9/R9-2025.jpg",
-      "/legacy/webgigabike.com/R9/Rearset-R9-silver-2.jpg",
-      "/legacy/webgigabike.com/R9/Rearset-R9-silver-1.jpg",
-      "/legacy/webgigabike.com/R9/Rearset-R9-silver.jpg",
-      "/legacy/webgigabike.com/Royal Enfield/RoyalEnfieldP.jpg",
-      "/legacy/webgigabike.com/Triumph/Sty-tun-allnew.jpg",
-      "/legacy/webgigabike.com/part/seat11.jpg",
-      "/legacy/webgigabike.com/HD/pillars-10-3-5.jpg",
-      "/legacy/webgigabike.com/HD/pillars-10-3-1.jpg",
-      "/legacy/webgigabike.com/HD/pillars-10-3-2.jpg",
-      "/legacy/webgigabike.com/HD/pillars-10-3-4.jpg",
-      "/legacy/webgigabike.com/HD/pillars-10-3-3.jpg",
-      "/legacy/webgigabike.com/R3/Leverage-gears.jpg",
-      "/legacy/webgigabike.com/sr93-06/2012-1.jpg",
-      "/legacy/webgigabike.com/sr93-06/2012-2.jpg",
-      "/legacy/webgigabike.com/sr93-06/pic_001zoom.jpg",
-      "/legacy/webgigabike.com/sr93-06/2008-1.jpg",
-      "/legacy/webgigabike.com/official/of10.jpg",
-      "/legacy/webgigabike.com/2005-drmd-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/2004-bwc1-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/2005-50th-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/2005-yb-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/2006-bdom1-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr-2003-le-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr-2002-silver3-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr-2002-vdgm1-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr-2000-gmb-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr-2000-400bg-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr-1999-dprc3-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr-1998-400drc2-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr-1996-400gb-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr-1995-dcm2-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr-1993-bb-02-640.jpg",
-      "/legacy/webgigabike.com/sr93-06/sr-1993-400gb-02-640.jpg",
-      "/legacy/webgigabike.com/srm1.jpg",
-      "/legacy/webgigabike.com/official/of8.jpg",
-      "/legacy/webgigabike.com/official/of1.jpg",
-      "/legacy/webgigabike.com/official/of2.jpg",
-      "/legacy/webgigabike.com/official/of3.jpg",
-      "/legacy/webgigabike.com/official/of4.jpg",
-      "/legacy/webgigabike.com/official/of5.jpg",
-      "/legacy/webgigabike.com/official/of6.jpg",
-      "/legacy/webgigabike.com/official/of7.jpg",
-      "/legacy/webgigabike.com/krurngsr640.jpg",
-      "/legacy/webgigabike.com/Srx/SRX600-86.jpg",
-      "/legacy/webgigabike.com/Srx/Footsty-SRX600-blk.jpg",
-      "/legacy/webgigabike.com/Srx/Footsty-SRX600-sil.jpg",
-      "/legacy/webgigabike.com/Stallions centaur/Stallions-centaur.jpg",
-      "/legacy/webgigabike.com/part/hoocharng_cnc-bk-long-v.jpg",
-      "/legacy/webgigabike.com/part/hoocharng_cnc-si-long-v.jpg",
-      "/legacy/webgigabike.com/suzuki/temter400/temter400-1.jpg",
-      "/legacy/webgigabike.com/Triumph/triumph-thrux.jpg",
-      "/legacy/webgigabike.com/Triumph/triumph-gigabike.jpg",
-      "/legacy/webgigabike.com/Kawasaki w650/w.jpg",
-      "/legacy/webgigabike.com/Kawasaki w650/Nut-lock-Bearing.jpg",
-      "/legacy/webgigabike.com/part/1976_XT500.jpg",
-      "/legacy/webgigabike.com/part/cocer_xt1.jpg",
-      "/legacy/webgigabike.com/R3/Spoon-m6-1.jpg",
-      "/legacy/webgigabike.com/R3/Spoon-m6-2.jpg",
-      "/legacy/webgigabike.com/Racing Gb/srgiga3.jpg",
-      "/legacy/webgigabike.com/bsagoldsta.jpg"
+      "/legacy/webgigabike.com/part/seat11.jpg"
     ],
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "price_conflict"
+      "no_code"
     ]
   },
   {
@@ -20376,8 +20075,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ห่วงสายเบรค รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรค แบบตรงแบบ45และ90องศาได้. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ห่วงสายเบรค รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรค แบบตรงแบบ45และ90องศาได้ · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ห่วงสายเบรค รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรค แบบตรงแบบ45และ90องศาได้ ผลิตจาก Alloy 6061 มี3สี (น้ำเงิน-ฟ้า-ดำ) ชิ้นละ",
+    "descriptionTh": "ห่วงสายเบรค รู 10 mm. สำหรับต่อเข้ากับหัวสายเบรค แบบตรงแบบ45และ90องศาได้ ผลิตจาก Alloy 6061 มี3สี (น้ำเงิน-ฟ้า-ดำ) ชิ้นละ",
     "images": [
       "/legacy/webgigabike.com/srgiga3.jpg",
       "/legacy/webgigabike.com/2T/Nut_brake_m10x10_show.jpg",
@@ -20404,8 +20103,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075 T6 51 CNC Billet ใส่โซ่ 520 มีขนาด 41-42ฟัน",
-    "description": "สเตอร์หลังแต่ง SRX , XJR. Fits: Yamaha SRX400-600 · Material: Alloy 7075 T6 51 CNC Billet ใส่โซ่ 520 มีขนาด 41-42ฟัน · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง SRX , XJR · ใส่ได้กับ Yamaha SRX400-600 · วัสดุ Alloy 7075 T6 51 CNC Billet ใส่โซ่ 520 มีขนาด 41-42ฟัน · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง SRX , XJR ผลิตจาก Alloy 7075 T6 51 CNC Billet ใส่โซ่ 520 มีขนาด 41-42ฟัน อันล่ะ",
+    "descriptionTh": "สเตอร์หลังแต่ง SRX , XJR ผลิตจาก Alloy 7075 T6 51 CNC Billet ใส่โซ่ 520 มีขนาด 41-42ฟัน อันล่ะ",
     "images": [
       "/legacy/webgigabike.com/Srx/Footsty-SRX600.jpg",
       "/legacy/webgigabike.com/Srx/Footsty-SRX6l.jpg",
@@ -20431,8 +20130,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC",
-    "description": "STAR .3 ฝาปิดสเตอร์หน้าแต่งอลูมิเนียมสำหรับใส่ Centoue150. Fits: Stallions Centaur150 · Material: อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "STAR .3 ฝาปิดสเตอร์หน้าแต่งอลูมิเนียมสำหรับใส่ Centoue150 · ใส่ได้กับ Stallions Centaur150 · วัสดุ อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "STAR .3 ฝาปิดสเตอร์หน้าแต่งอลูมิเนียมสำหรับใส่ Centoue150 ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC ชิ้นล่ะ",
+    "descriptionTh": "STAR .3 ฝาปิดสเตอร์หน้าแต่งอลูมิเนียมสำหรับใส่ Centoue150 ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Stallions centaur/bs2.jpg"
     ],
@@ -20456,8 +20155,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC",
-    "description": "STAR .4 ฝาปิดสเตอร์หน้าแต่งอลูมิเนียมสำหรับใส่ Centoue150. Fits: Stallions Centaur150 · Material: อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "STAR .4 ฝาปิดสเตอร์หน้าแต่งอลูมิเนียมสำหรับใส่ Centoue150 · ใส่ได้กับ Stallions Centaur150 · วัสดุ อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "STAR .4 ฝาปิดสเตอร์หน้าแต่งอลูมิเนียมสำหรับใส่ Centoue150 ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC ชิ้นล่ะ",
+    "descriptionTh": "STAR .4 ฝาปิดสเตอร์หน้าแต่งอลูมิเนียมสำหรับใส่ Centoue150 ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Stallions centaur/bs3.jpg",
       "/legacy/webgigabike.com/Stallions centaur/bs1.jpg"
@@ -20482,8 +20181,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC",
-    "description": "STAR .1 ฝาปิดโซ่ราวลิ้นแต่งอสำหรับใส่ Centoue150. Fits: Stallions Centaur150 · Material: อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "STAR .1 ฝาปิดโซ่ราวลิ้นแต่งอสำหรับใส่ Centoue150 · ใส่ได้กับ Stallions Centaur150 · วัสดุ อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "STAR .1 ฝาปิดโซ่ราวลิ้นแต่งอสำหรับใส่ Centoue150 ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC ชิ้นล่ะ",
+    "descriptionTh": "STAR .1 ฝาปิดโซ่ราวลิ้นแต่งอสำหรับใส่ Centoue150 ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Stallions centaur/cam2.jpg",
       "/legacy/webgigabike.com/Stallions centaur/cam1.jpg"
@@ -20508,8 +20207,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC",
-    "description": "STAR .2 ฝาปิดโซ่ราวลิ้นแต่งอลูมิเนียมสำหรับใส่ Centoue150. Fits: Stallions Centaur150 · Material: อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "STAR .2 ฝาปิดโซ่ราวลิ้นแต่งอลูมิเนียมสำหรับใส่ Centoue150 · ใส่ได้กับ Stallions Centaur150 · วัสดุ อลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "STAR .2 ฝาปิดโซ่ราวลิ้นแต่งอลูมิเนียมสำหรับใส่ Centoue150 ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC ชิ้นล่ะ",
+    "descriptionTh": "STAR .2 ฝาปิดโซ่ราวลิ้นแต่งอลูมิเนียมสำหรับใส่ Centoue150 ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Stallions centaur/cam3.jpg"
     ],
@@ -20526,22 +20225,21 @@ export const legacyProducts: Product[] = [
     "nameTh": "STAR .10 แฮนจับโช๊คอลูมิเนียม",
     "price": 2000,
     "category": "suspension",
-    "bikeModels": [
-      "centaur"
-    ],
+    "bikeModels": [],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "STAR .10 แฮนจับโช๊คอลูมิเนียม. Fits: Stallions Centaur150 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "STAR .10 แฮนจับโช๊คอลูมิเนียม · ใส่ได้กับ Stallions Centaur150 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "STAR .10 แฮนจับโช๊คอลูมิเนียม ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC (มีสีดำและสีเงิน) ขนาด 51mm.คู่ล่ะ",
+    "descriptionTh": "STAR .10 แฮนจับโช๊คอลูมิเนียม ผลิตจากอลูมิเนียมเกรดพิเศษด้วยเครื่อง CNC (มีสีดำและสีเงิน) ขนาด 51mm.คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/Stallions centaur/hand1.jpg"
     ],
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code"
+      "no_code",
+      "no_fitment"
     ]
   },
   {
@@ -20558,8 +20256,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "STAR .5 หูยึดไฟหน้า Centoue150 (แบบสั้น) งาน CNC. Fits: Stallions Centaur150 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "STAR .5 หูยึดไฟหน้า Centoue150 (แบบสั้น) งาน CNC · ใส่ได้กับ Stallions Centaur150 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "STAR .5 หูยึดไฟหน้า Centoue150 (แบบสั้น) งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 51mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "STAR .5 หูยึดไฟหน้า Centoue150 (แบบสั้น) งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 51mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Stallions centaur/hoo1.jpg"
     ],
@@ -20584,8 +20282,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "STAR .6 หูยึดไฟหน้า Centoue150 งาน CNC. Fits: Stallions Centaur150 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "STAR .6 หูยึดไฟหน้า Centoue150 งาน CNC · ใส่ได้กับ Stallions Centaur150 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "STAR .6 หูยึดไฟหน้า Centoue150 งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 51mm. (มีสีเงินและสีดำ) ชุดล่ะ",
+    "descriptionTh": "STAR .6 หูยึดไฟหน้า Centoue150 งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ ขนาด 51mm. (มีสีเงินและสีดำ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Stallions centaur/hoo2.jpg"
     ],
@@ -20610,8 +20308,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "STAR .7 แผงคอบนแต่ง Centoue150 งาน CNC. Fits: Stallions Centaur150 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "STAR .7 แผงคอบนแต่ง Centoue150 งาน CNC · ใส่ได้กับ Stallions Centaur150 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "STAR .7 แผงคอบนแต่ง Centoue150 งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ (มีสีเงินและสีดำ) ชิ้นล่ะ",
+    "descriptionTh": "STAR .7 แผงคอบนแต่ง Centoue150 งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ (มีสีเงินและสีดำ) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Stallions centaur/p1.jpg"
     ],
@@ -20635,8 +20333,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "STAR .8 แผงคอบนแต่ง Centoue150 งาน CNC. Fits: Stallions Centaur150 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "STAR .8 แผงคอบนแต่ง Centoue150 งาน CNC · ใส่ได้กับ Stallions Centaur150 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "STAR .8 แผงคอบนแต่ง Centoue150 งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ (มีสีเงินและสีดำ) ชิ้นล่ะ",
+    "descriptionTh": "STAR .8 แผงคอบนแต่ง Centoue150 งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ (มีสีเงินและสีดำ) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Stallions centaur/p2-1.jpg"
     ],
@@ -20660,8 +20358,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "STAR .9 แผงคอบนแต่ง Centoue150 งาน CNC. Fits: Stallions Centaur150 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "STAR .9 แผงคอบนแต่ง Centoue150 งาน CNC · ใส่ได้กับ Stallions Centaur150 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "STAR .9 แผงคอบนแต่ง Centoue150 งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ (มีสีเงินและสีดำ) ชิ้นล่ะ",
+    "descriptionTh": "STAR .9 แผงคอบนแต่ง Centoue150 งาน CNC ผลิตจากอลูมิเนียมเกรดพิเศษ (มีสีเงินและสีดำ) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/Stallions centaur/p3-1.jpg",
       "/legacy/webgigabike.com/Stallions centaur/p3.jpg"
@@ -20680,14 +20378,15 @@ export const legacyProducts: Product[] = [
     "price": 2200,
     "category": "chassis",
     "bikeModels": [
+      "volty",
       "tempter"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "สแตลเลสทั้ง",
-    "description": "บังโคลนหน้า Suzuki Vorty250 แต่ง. Fits: Suzuki Tempter400 · Material: สแตลเลส · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้า Suzuki Vorty250 แต่ง · ใส่ได้กับ Suzuki Tempter400 · วัสดุ สแตลเลส · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "บังโคลนหน้า Suzuki Vorty250 แต่งผลิตจากสแตลเลสทั้งชิ้น ทรง Cafe,Custom ราคา",
+    "descriptionTh": "บังโคลนหน้า Suzuki Vorty250 แต่งผลิตจากสแตลเลสทั้งชิ้น ทรง Cafe,Custom ราคา",
     "images": [
       "/legacy/webgigabike.com/suzuki/bangklon-vorty.jpg"
     ],
@@ -20711,8 +20410,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "แผ่นรองจานเบรกTruxton900,T100 รถที่เปลี่ยนใส่ปั๊ม Brembo ต้องใส่ที่รองจานด้วยไม่งั้นปั๊มเบรกติดซี่ลวด (Silver,Black). Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นรองจานเบรกTruxton900,T100 รถที่เปลี่ยนใส่ปั๊ม Brembo ต้องใส่ที่รองจานด้วยไม่งั้นปั๊มเบรกติดซี่ลวด (Silver,Black) · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "แผ่นรองจานเบรกTruxton900,T100 รถที่เปลี่ยนใส่ปั๊ม Brembo ต้องใส่ที่รองจานด้วยไม่งั้นปั๊มเบรกติดซี่ลวด (Silver,Black) อันละ",
+    "descriptionTh": "แผ่นรองจานเบรกTruxton900,T100 รถที่เปลี่ยนใส่ปั๊ม Brembo ต้องใส่ที่รองจานด้วยไม่งั้นปั๊มเบรกติดซี่ลวด (Silver,Black) อันละ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Brake-Rotor-Spacer-triumph.jpg"
     ],
@@ -20735,8 +20434,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Triumph 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize =. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Triumph 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize = · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Triumph 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize =",
+    "descriptionTh": "Triumph 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize =",
     "images": [
       "/legacy/webgigabike.com/Triumph/daytona-675.jpg",
       "/legacy/webgigabike.com/Triumph/sprocket-daytona-675.jpg"
@@ -20756,7 +20455,9 @@ export const legacyProducts: Product[] = [
     "nameTh": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm",
     "price": 14500,
     "category": "suspension",
-    "bikeModels": [],
+    "bikeModels": [
+      "thruxton"
+    ],
     "colors": [
       "silver",
       "black",
@@ -20765,8 +20466,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ได้เลยไม่ต้องดัดแปลง. Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ได้เลยไม่ต้องดัดแปลง · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 6061 + 7075 ด้วยเครื่อง CNC สวยงามแข็งแรง (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
+    "descriptionTh": "ชุดแผงคอบนล่างแบบมีตุ๊กตาแต่ง Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 6061 + 7075 ด้วยเครื่อง CNC สวยงามแข็งแรง (มีสี เงิน/ดำ/ทอง) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/pangcor_43mm_triumph.jpg",
       "/legacy/webgigabike.com/Triumph/pangcor_43mm_triumph1.jpg"
@@ -20774,8 +20475,7 @@ export const legacyProducts: Product[] = [
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -20792,8 +20492,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Triumph 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize =. Fits: Triumph Thruxton/T100/T120 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Triumph 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize = · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Triumph 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize =",
+    "descriptionTh": "Triumph 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize =",
     "images": [
       "/legacy/webgigabike.com/Triumph/triumph-thruxton1.jpg",
       "/legacy/webgigabike.com/Triumph/triumph-thruxton3.jpg",
@@ -20816,21 +20516,22 @@ export const legacyProducts: Product[] = [
     "nameTh": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlin",
     "price": 2200,
     "category": "suspension",
-    "bikeModels": [],
+    "bikeModels": [
+      "thruxton"
+    ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy 7075",
-    "description": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ใส่เข้ากับดุมเดิมล้อเดิมได้เลยไม่ต้องดัดแปลง. Material: Alloy 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ใส่เข้ากับดุมเดิมล้อเดิมได้เลยไม่ต้องดัดแปลง · วัสดุ Alloy 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ใส่เข้ากับดุมเดิมล้อเดิมได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 7075 ชุดล่ะ",
+    "descriptionTh": "ชุดแกนล้อ17 mm.+บู๊ทล้อ+บู๊ทโช๊คหน้า Truxton900 ,T100 ใส่กับโช๊ค Ohlins 43 mm. ใส่เข้ากับดุมเดิมล้อเดิมได้เลยไม่ต้องดัดแปลง ผลิตจาก Alloy 7075 ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/Triumph/Wheel-axle-43mm.jpg"
     ],
     "featured": false,
     "published": false,
     "reviewReasons": [
-      "no_code",
-      "no_fitment"
+      "no_code"
     ]
   },
   {
@@ -20847,8 +20548,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "คอท่อแต่งสแตนเลส XS650 ราคา. Fits: Yamaha XS650/TX650 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "คอท่อแต่งสแตนเลส XS650 ราคา · ใส่ได้กับ Yamaha XS650/TX650 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "คอท่อแต่งสแตนเลส XS650 ราคาคู่ละ",
+    "descriptionTh": "คอท่อแต่งสแตนเลส XS650 ราคาคู่ละ",
     "images": [
       "/legacy/webgigabike.com/XS650/torxs1.jpg"
     ],
@@ -20867,14 +20568,15 @@ export const legacyProducts: Product[] = [
     "price": 600,
     "category": "accessories",
     "bikeModels": [
-      "r15"
+      "r15",
+      "r1"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "ขายึดท่อใส่ Yamaha New R15 ใส่เข้ากับที่ยึดปั๊มเบรกเกียร์โยงแต่ง. Fits: Yamaha R15/XSR155/XMAX300 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดท่อใส่ Yamaha New R15 ใส่เข้ากับที่ยึดปั๊มเบรกเกียร์โยงแต่ง · ใส่ได้กับ Yamaha R15/XSR155/XMAX300 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดท่อใส่ Yamaha New R15 ใส่เข้ากับที่ยึดปั๊มเบรกเกียร์โยงแต่ง ผลิตจาก Alloy CNC Billet อันละ",
+    "descriptionTh": "ขายึดท่อใส่ Yamaha New R15 ใส่เข้ากับที่ยึดปั๊มเบรกเกียร์โยงแต่ง ผลิตจาก Alloy CNC Billet อันละ",
     "images": [
       "/legacy/webgigabike.com/XSR/Adapter-Silencer.jpg"
     ],
@@ -20898,8 +20600,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "จานเบรคแต่ง XSR ขนาดจาน 298mm. แผ่นจานเบรคเป็นของแท้เบิกจากบริษัท yamaha ใส้จาน. Fits: Yamaha R15/XSR155/XMAX300 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง XSR ขนาดจาน 298mm. แผ่นจานเบรคเป็นของแท้เบิกจากบริษัท yamaha ใส้จาน · ใส่ได้กับ Yamaha R15/XSR155/XMAX300 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง XSR ขนาดจาน 298mm. แผ่นจานเบรคเป็นของแท้เบิกจากบริษัท yamaha ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ชุดล่ะ",
+    "descriptionTh": "จานเบรคแต่ง XSR ขนาดจาน 298mm. แผ่นจานเบรคเป็นของแท้เบิกจากบริษัท yamaha ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/XSR/brake-xsr-gl-bk.jpg",
       "/legacy/webgigabike.com/XSR/brake-xsr-gl-gr.jpg",
@@ -20930,8 +20632,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ XSR155 ใส่จาน 298 มม. Fits: Yamaha R15/XSR155/XMAX300 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ XSR155 ใส่จาน 298 มม · ใส่ได้กับ Yamaha R15/XSR155/XMAX300 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ XSR155 ใส่จาน 298 มม. ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ) ชิ้นล่ะ",
+    "descriptionTh": "ขายึดปั๊มเบรค BREMBO หูชิดใส่ XSR155 ใส่จาน 298 มม. ผลิตจาก Alloy 6061 CNC Billet (มีสี เงิน/ดำ) ชิ้นล่ะ",
     "images": [
       "/legacy/webgigabike.com/XSR/Caliper-298.jpg"
     ],
@@ -20956,8 +20658,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 4.5 mm. ใส้จาน. Fits: Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 4.5 mm. ใส้จาน · ใส่ได้กับ Kawasaki Ninja250/300/400 · Yamaha R3/MT-03/R25 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 4.5 mm. ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ชุดล่ะ",
+    "descriptionTh": "จานเบรคแต่ง Ninja 400 ขนาดจาน 310mm. เท่าของเดิม แผ่นจานเบรคเป็นของแท้เบิกซันสตาร์ ใบจานหนา 4.5 mm. ใส้จาน ผลิตจาก Alloy6061+Pins Alloy7075 CNC Billet (มีหลายสีหลายแบบให้เลือกตามต้องการ) ชุดล่ะ",
     "images": [
       "/legacy/webgigabike.com/XSR/Pins-Color.jpg",
       "/legacy/webgigabike.com/Ninja400/Breck-n4-310.jpg",
@@ -20978,14 +20680,15 @@ export const legacyProducts: Product[] = [
     "price": 1600,
     "category": "drivetrain",
     "bikeModels": [
-      "r15"
+      "r15",
+      "r1"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Yamaha R15-2019 Yamaha R15-2017 สเตอร์หลัง R15-2017 งาน Alloy 7075 CNC Billet Hard Anodize ใส่โซ่ 415-44-54 ฟัน. Fits: Yamaha R15/XSR155/XMAX300 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Yamaha R15-2019 Yamaha R15-2017 สเตอร์หลัง R15-2017 งาน Alloy 7075 CNC Billet Hard Anodize ใส่โซ่ 415-44-54 ฟัน · ใส่ได้กับ Yamaha R15/XSR155/XMAX300 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Yamaha R15-2019 Yamaha R15-2017 สเตอร์หลัง R15-2017 งาน Alloy 7075 CNC Billet Hard Anodize ใส่โซ่ 415-44-54 ฟัน อันละ",
+    "descriptionTh": "Yamaha R15-2019 Yamaha R15-2017 สเตอร์หลัง R15-2017 งาน Alloy 7075 CNC Billet Hard Anodize ใส่โซ่ 415-44-54 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/XSR/R15Racing-2.jpg",
       "/legacy/webgigabike.com/XSR/R15Racing-1.jpg",
@@ -21007,14 +20710,15 @@ export const legacyProducts: Product[] = [
     "price": 3800,
     "category": "accessories",
     "bikeModels": [
-      "r15"
+      "r15",
+      "r1"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet ทั้ง",
-    "description": "ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha New R15. Fits: Yamaha R15/XSR155/XMAX300 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha New R15 · ใส่ได้กับ Yamaha R15/XSR155/XMAX300 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha New R15 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่ง ชุดละ",
+    "descriptionTh": "ชุดเกียร์โยงทรงสนามแข่ง ใส่ Yamaha New R15 ผลิตจาก Alloy CNC Billet ทั้งชุดคงทนแข็งแรง ทดสอบในสนามแข่ง ชุดละ",
     "images": [
       "/legacy/webgigabike.com/XSR/Rearset-YZF-R15-V3-r.jpg",
       "/legacy/webgigabike.com/XSR/Rearset-YZF-R15-V3-l.jpg",
@@ -21041,8 +20745,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "อุปกรณ์ตกแต่ง XSR155 ใหม่ๆอยากแนะนำ แฮนจับโช๊คอลูมิเนียมขนาด 47 มม. แบบยก เอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) คู่ล่ะ. Fits: Yamaha R15/XSR155/XMAX300 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "อุปกรณ์ตกแต่ง XSR155 ใหม่ๆอยากแนะนำ แฮนจับโช๊คอลูมิเนียมขนาด 47 มม. แบบยก เอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) คู่ล่ะ · ใส่ได้กับ Yamaha R15/XSR155/XMAX300 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "อุปกรณ์ตกแต่ง XSR155 ใหม่ๆอยากแนะนำ แฮนจับโช๊คอลูมิเนียมขนาด 47 มม. แบบยก เอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) คู่ล่ะ",
+    "descriptionTh": "อุปกรณ์ตกแต่ง XSR155 ใหม่ๆอยากแนะนำ แฮนจับโช๊คอลูมิเนียมขนาด 47 มม. แบบยก เอียง11 องศา งาน Alloy CNC Billet (11 degrees)(มีสีดำและสีเงิน) คู่ล่ะ",
     "images": [
       "/legacy/webgigabike.com/XSR/Yamaha-XSR155.jpg",
       "/legacy/webgigabike.com/R3/Hand-47-1.jpg",
@@ -21068,8 +20772,8 @@ export const legacyProducts: Product[] = [
     "inStock": true,
     "stockCount": 10,
     "material": "Alloy CNC Billet",
-    "description": "สเตอร์หลังแต่ง Alloy Kawasaki Ninja ZX250R. Fits: Kawasaki Ninja250/300/400 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง Alloy Kawasaki Ninja ZX250R · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "สเตอร์หลังแต่ง Alloy Kawasaki Ninja ZX250R ผลิตจาก Alloy CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากขึ้นและกันรอยได้ดี มีขนาด 415 - 54/55/56 ฟัน อันละ",
+    "descriptionTh": "สเตอร์หลังแต่ง Alloy Kawasaki Ninja ZX250R ผลิตจาก Alloy CNC Billet พร้อมชุบสีอโนไดซ์ แบบ Hard Anodize เพิ่มความแข็งมากขึ้นลื่นมากขึ้นและกันรอยได้ดี มีขนาด 415 - 54/55/56 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/ZX250R/Sprocket-R-ha.jpg"
     ],
@@ -21087,14 +20791,15 @@ export const legacyProducts: Product[] = [
     "price": 2200,
     "category": "drivetrain",
     "bikeModels": [
-      "ninja250"
+      "ninja250",
+      "zx10"
     ],
     "colors": [],
     "inStock": true,
     "stockCount": 10,
     "material": "",
-    "description": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน. Fits: Kawasaki Ninja250/300/400 · Material: CNC Billet Alloy 6061 T6 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน · ใส่ได้กับ Kawasaki Ninja250/300/400 · วัสดุ CNC Billet Alloy 6061 T6 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
+    "description": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน อันละ",
+    "descriptionTh": "Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 Aluminum Alloy 7075 CNC Billet Hard Anodize สเตอร์หลัง Alloy Kawasaki Ninja ZX10r ,ER6N ,Z800 ,Z1000 งาน CNC Billet Alloy 7075 Hard Anodize มีขนาด 520-39,40,41,42,45 ฟัน อันละ",
     "images": [
       "/legacy/webgigabike.com/ZX250R/ZX250R-1.jpg",
       "/legacy/webgigabike.com/ZX250R/ZX250R-2.jpg",
@@ -21106,2013 +20811,5 @@ export const legacyProducts: Product[] = [
     "reviewReasons": [
       "no_code"
     ]
-  },
-  {
-    "id": "bmw_1",
-    "code": "BMW.1",
-    "name": "Rear Sprocket BMW S1000rr 2021+ 119mm bore 520-45/46/47/48/49/50T",
-    "nameTh": "สเตอร์หลังแต่ง BMW S1000rr 2021+ รูใน 119mm CNC Billet Alloy 7075 Hard Anodize 520-45/46/47/48/49/50T",
-    "price": 2400,
-    "category": "drivetrain",
-    "bikeModels": [
-      "s1000rr"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket BMW S1000rr 2021+ 119mm bore 520-45/46/47/48/49/50T. Fits: BMW S1000RR · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง BMW S1000rr 2021+ รูใน 119mm CNC Billet Alloy 7075 Hard Anodize 520-45/46/47/48/49/50T · ใส่ได้กับ BMW S1000RR · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "bmw_2",
-    "code": "BMW.2",
-    "name": "Rear Sprocket BMW S1000rr 2020 older 110mm bore 520-45,46T",
-    "nameTh": "สเตอร์หลังแต่ง BMW S1000rr 2020 ลงมา รูใน 110mm CNC Billet Alloy 7075 Hard Anodize 520-45,46T",
-    "price": 2200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "s1000rr"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket BMW S1000rr 2020 older 110mm bore 520-45,46T. Fits: BMW S1000RR · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง BMW S1000rr 2020 ลงมา รูใน 110mm CNC Billet Alloy 7075 Hard Anodize 520-45,46T · ใส่ได้กับ BMW S1000RR · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "srx_1",
-    "code": "SRX.1",
-    "name": "Front Rearset Gear-Link for Yamaha SRX400/SRX600 twin shock Alloy 6061 CNC Billet",
-    "nameTh": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ Yamaha SRX400,SRX600 รุ่นโช๊คหลังคู่ Alloy 6061 CNC Billet",
-    "price": 3500,
-    "category": "accessories",
-    "bikeModels": [
-      "srx"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 6061 CNC Billet",
-    "description": "Front Rearset Gear-Link for Yamaha SRX400/SRX600 twin shock Alloy 6061 CNC Billet. Fits: Yamaha SRX400-600 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแบบเกียร์โยง ใส่ Yamaha SRX400,SRX600 รุ่นโช๊คหลังคู่ Alloy 6061 CNC Billet · ใส่ได้กับ Yamaha SRX400-600 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "srx_2",
-    "code": "SRX.2",
-    "name": "Rear Sprocket SRX/XJR Alloy 7075 T6 CNC Billet 520-41,42T Gold/Black",
-    "nameTh": "สเตอร์หลังแต่ง SRX, XJR Alloy 7075 T6 CNC Billet ใส่โซ่ 520 มีขนาด 41-42ฟัน (ทอง/ดำ)",
-    "price": 1300,
-    "category": "drivetrain",
-    "bikeModels": [
-      "srx"
-    ],
-    "colors": [
-      "ทอง",
-      "ดำ"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 T6 CNC Billet",
-    "description": "Rear Sprocket SRX/XJR Alloy 7075 T6 CNC Billet 520-41,42T Gold/Black. Fits: Yamaha SRX400-600 · Material: Alloy 7075 T6 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลังแต่ง SRX, XJR Alloy 7075 T6 CNC Billet ใส่โซ่ 520 มีขนาด 41-42ฟัน (ทอง/ดำ) · ใส่ได้กับ Yamaha SRX400-600 · วัสดุ Alloy 7075 T6 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "srx_3",
-    "code": "SRX.3",
-    "name": "Valve Cover Nut SRX Alloy 7075 CNC heat dissipation",
-    "nameTh": "น็อตฝาวาล์วแต่ง SRX อลูมิเนียมพิเศษ 7075 CNC ช่วยระบายความร้อน",
-    "price": 1300,
-    "category": "engine",
-    "bikeModels": [
-      "srx"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC",
-    "description": "Valve Cover Nut SRX Alloy 7075 CNC heat dissipation. Fits: Yamaha SRX400-600 · Material: Alloy 7075 CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น็อตฝาวาล์วแต่ง SRX อลูมิเนียมพิเศษ 7075 CNC ช่วยระบายความร้อน · ใส่ได้กับ Yamaha SRX400-600 · วัสดุ Alloy 7075 CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "tem_1",
-    "code": "TEM.1",
-    "name": "Stainless V-type Headlight Bracket for Temter 41mm fork pair",
-    "nameTh": "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับ TEMTER รูแกนโช๊ค 41mm. คู่ล่ะ",
-    "price": 1500,
-    "category": "accessories",
-    "bikeModels": [
-      "tempter"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Stainless Steel CNC",
-    "description": "Stainless V-type Headlight Bracket for Temter 41mm fork pair. Fits: Suzuki Tempter 400 · Material: Stainless Steel CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "หูจับไฟหน้าแต่งสแตนเลสแบบตัว V สำหรับ TEMTER รูแกนโช๊ค 41mm. คู่ล่ะ · ใส่ได้กับ Suzuki Tempter 400 · วัสดุ Stainless Steel CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "tem_2",
-    "code": "TEM.2",
-    "name": "Front Fender Temter 400cc 115x500mm Stainless Steel Cafe/Custom style",
-    "nameTh": "บังโคลนหน้าแต่ง TEMTER 400cc กว้าง 115mm ยาว 500mm สแตลเลสทั้งอัน ทรง Cafe & Custom",
-    "price": 2200,
-    "category": "chassis",
-    "bikeModels": [
-      "tempter"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Stainless Steel",
-    "description": "Front Fender Temter 400cc 115x500mm Stainless Steel Cafe/Custom style. Fits: Suzuki Tempter 400 · Material: Stainless Steel · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้าแต่ง TEMTER 400cc กว้าง 115mm ยาว 500mm สแตลเลสทั้งอัน ทรง Cafe & Custom · ใส่ได้กับ Suzuki Tempter 400 · วัสดุ Stainless Steel · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "vol_1",
-    "code": "VOL.1",
-    "name": "Stainless Steel Fork Clamp Suzuki Volty250 37mm fork pair",
-    "nameTh": "แฮนจับโช๊คสแตนเลส Suzuki Vorty250 รูแกนโช๊ค 37mm. ราคาคู่ล่ะ",
-    "price": 1400,
-    "category": "accessories",
-    "bikeModels": [
-      "volty"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Stainless Steel",
-    "description": "Stainless Steel Fork Clamp Suzuki Volty250 37mm fork pair. Fits: Suzuki Volty 250 · Material: Stainless Steel · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คสแตนเลส Suzuki Vorty250 รูแกนโช๊ค 37mm. ราคาคู่ล่ะ · ใส่ได้กับ Suzuki Volty 250 · วัสดุ Stainless Steel · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "vol_2",
-    "code": "VOL.2",
-    "name": "Front Fender Suzuki Volty250 Stainless Steel Cafe/Custom style",
-    "nameTh": "บังโคลนหน้า Suzuki Vorty250 แต่งสแตลเลสทั้งชิ้น ทรง Cafe, Custom",
-    "price": 2200,
-    "category": "chassis",
-    "bikeModels": [
-      "volty"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Stainless Steel",
-    "description": "Front Fender Suzuki Volty250 Stainless Steel Cafe/Custom style. Fits: Suzuki Volty 250 · Material: Stainless Steel · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บังโคลนหน้า Suzuki Vorty250 แต่งสแตลเลสทั้งชิ้น ทรง Cafe, Custom · ใส่ได้กับ Suzuki Volty 250 · วัสดุ Stainless Steel · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r9_1",
-    "code": "R9.1",
-    "name": "Racing Rearset Gear-Link Footpeg Set Yamaha R9 11-position adjustable, Alloy CNC Billet",
-    "nameTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนาม ใส่ Yamaha R9 ปรับระดับได้ 11 ระดับ พร้อมแป้นรองขาเกียร์ Alloy CNC Billet",
-    "price": 6500,
-    "category": "accessories",
-    "bikeModels": [
-      "r9"
-    ],
-    "colors": [
-      "ดำ",
-      "เงิน"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Racing Rearset Gear-Link Footpeg Set Yamaha R9 11-position adjustable, Alloy CNC Billet. Fits: Yamaha R9 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนาม ใส่ Yamaha R9 ปรับระดับได้ 11 ระดับ พร้อมแป้นรองขาเกียร์ Alloy CNC Billet · ใส่ได้กับ Yamaha R9 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r9_2",
-    "code": "R9.2",
-    "name": "Sprocket Chain Guard racing track rules Alloy CNC Billet R9 (Black/Silver)",
-    "nameTh": "กาดบังสเตอร์หลัง ใส่ตามกฏในสนามแข่ง Alloy CNC Billet R9 (ดำ/เงิน) ชุดละ",
-    "price": 900,
-    "category": "accessories",
-    "bikeModels": [
-      "r9"
-    ],
-    "colors": [
-      "ดำ",
-      "เงิน"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Sprocket Chain Guard racing track rules Alloy CNC Billet R9 (Black/Silver). Fits: Yamaha R9 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "กาดบังสเตอร์หลัง ใส่ตามกฏในสนามแข่ง Alloy CNC Billet R9 (ดำ/เงิน) ชุดละ · ใส่ได้กับ Yamaha R9 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r9_3",
-    "code": "R9.3",
-    "name": "Rear Sprocket Yamaha R9/R6/R7 520-39-49T Alloy 7075 Hard Anodize",
-    "nameTh": "สเตอร์หลัง Yamaha R9,R6,R7 520-39-49T Alloy 7075 CNC Billet Hard Anodize",
-    "price": 2200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "r1",
-      "r7",
-      "r9"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket Yamaha R9/R6/R7 520-39-49T Alloy 7075 Hard Anodize. Fits: Yamaha R7 · Yamaha R9 · Yamaha R1/R6/R7 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Yamaha R9,R6,R7 520-39-49T Alloy 7075 CNC Billet Hard Anodize · ใส่ได้กับ Yamaha R7 · Yamaha R9 · Yamaha R1/R6/R7 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r9_4",
-    "code": "R9.4",
-    "name": "Front Sprocket Yamaha R1/R9 Steel CNC Billet Hardened 520-15/16/17T",
-    "nameTh": "สเตอร์หน้า Yamaha R1,R9 Steel CNC Billet Hardened ใส่โซ่ 520-15,16,17 ฟัน",
-    "price": 900,
-    "category": "drivetrain",
-    "bikeModels": [
-      "r1",
-      "r9"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Steel CNC Billet Hardened",
-    "description": "Front Sprocket Yamaha R1/R9 Steel CNC Billet Hardened 520-15/16/17T. Fits: Yamaha R9 · Yamaha R1/R6/R7 · Material: Steel CNC Billet Hardened · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า Yamaha R1,R9 Steel CNC Billet Hardened ใส่โซ่ 520-15,16,17 ฟัน · ใส่ได้กับ Yamaha R9 · Yamaha R1/R6/R7 · วัสดุ Steel CNC Billet Hardened · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r9_5",
-    "code": "R9.5",
-    "name": "Clip-On Handlebars R9/R6 50mm fork screw-type Alloy CNC Billet (Silver/Black)",
-    "nameTh": "แฮนจับโช๊คใส่ R9,R6 แกนโช๊ค 50mm. Alloy CNC Billet แบบขันเกลียว (เงิน/ดำ)",
-    "price": 5500,
-    "category": "accessories",
-    "bikeModels": [
-      "r1",
-      "r9"
-    ],
-    "colors": [
-      "เงิน",
-      "ดำ"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Clip-On Handlebars R9/R6 50mm fork screw-type Alloy CNC Billet (Silver/Black). Fits: Yamaha R9 · Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คใส่ R9,R6 แกนโช๊ค 50mm. Alloy CNC Billet แบบขันเกลียว (เงิน/ดำ) · ใส่ได้กับ Yamaha R9 · Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r9_6",
-    "code": "R9.6",
-    "name": "Clip-On Handlebars R1/R6/R9 50mm pin-type Alloy CNC Billet (Silver/Black)",
-    "nameTh": "แฮนจับโช๊คใส่ R1,R6,R9 ขนาด 50mm. แบบสลัก Alloy CNC Billet (เงิน/ดำ)",
-    "price": 5500,
-    "category": "accessories",
-    "bikeModels": [
-      "r1",
-      "r9"
-    ],
-    "colors": [
-      "เงิน",
-      "ดำ"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Clip-On Handlebars R1/R6/R9 50mm pin-type Alloy CNC Billet (Silver/Black). Fits: Yamaha R9 · Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คใส่ R1,R6,R9 ขนาด 50mm. แบบสลัก Alloy CNC Billet (เงิน/ดำ) · ใส่ได้กับ Yamaha R9 · Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r9_7",
-    "code": "R9.7",
-    "name": "Wheel Axle Spacer Boots Front+Rear R9 Alloy 7075 CNC Billet Hard Anodize",
-    "nameTh": "บู๊ทล้อหน้าและล้อหลังแต่ง R9 Alloy 7075 CNC Billet Hard Anodize L19-R12.5mm.",
-    "price": 2500,
-    "category": "suspension",
-    "bikeModels": [
-      "r9"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Wheel Axle Spacer Boots Front+Rear R9 Alloy 7075 CNC Billet Hard Anodize. Fits: Yamaha R9 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทล้อหน้าและล้อหลังแต่ง R9 Alloy 7075 CNC Billet Hard Anodize L19-R12.5mm. · ใส่ได้กับ Yamaha R9 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r9_8",
-    "code": "R9.8",
-    "name": "Swingarm Spool Bobbins M6 R9 Alloy CNC Billet (Black/Silver/Green/Hard)",
-    "nameTh": "สปูนขึ้นสแตนล้อหลัง น็อต M6 Alloy CNC Billet (ดำ/เงิน/เขียว/ฮาร์ด) R9",
-    "price": 450,
-    "category": "accessories",
-    "bikeModels": [
-      "r9"
-    ],
-    "colors": [
-      "ดำ",
-      "เงิน",
-      "เขียว",
-      "ฮาร์ด"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Swingarm Spool Bobbins M6 R9 Alloy CNC Billet (Black/Silver/Green/Hard). Fits: Yamaha R9 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สปูนขึ้นสแตนล้อหลัง น็อต M6 Alloy CNC Billet (ดำ/เงิน/เขียว/ฮาร์ด) R9 · ใส่ได้กับ Yamaha R9 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_1",
-    "code": "R7.1",
-    "name": "Racing Rearset Gear-Link Footpeg Set Yamaha R7 Alloy CNC Billet",
-    "nameTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R7 Alloy CNC Billet ชุดละ",
-    "price": 4800,
-    "category": "accessories",
-    "bikeModels": [
-      "r7"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Racing Rearset Gear-Link Footpeg Set Yamaha R7 Alloy CNC Billet. Fits: Yamaha R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R7 Alloy CNC Billet ชุดละ · ใส่ได้กับ Yamaha R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_2",
-    "code": "R7.2",
-    "name": "Round Racing Footpeg Alloy CNC Billet 80mm each",
-    "nameTh": "พักเท้าแบบกลมเรชซิ่ง Alloy CNC Billet 80mm. ชิ้นล่ะ",
-    "price": 400,
-    "category": "accessories",
-    "bikeModels": [
-      "r1",
-      "r7",
-      "r9"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Round Racing Footpeg Alloy CNC Billet 80mm each. Fits: Yamaha R7 · Yamaha R9 · Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "พักเท้าแบบกลมเรชซิ่ง Alloy CNC Billet 80mm. ชิ้นล่ะ · ใส่ได้กับ Yamaha R7 · Yamaha R9 · Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_3",
-    "code": "R7.3",
-    "name": "Bar End Weights Stainless R7 6mm hole SUS CNC Billet pair",
-    "nameTh": "ตุ้มปลายแฮนแต่งสแตนเลส R7 รู 6มิล SUS CNC Billet คู่ละ",
-    "price": 600,
-    "category": "accessories",
-    "bikeModels": [
-      "r7"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Stainless Steel (SUS) CNC Billet",
-    "description": "Bar End Weights Stainless R7 6mm hole SUS CNC Billet pair. Fits: Yamaha R7 · Material: Stainless Steel (SUS) CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตุ้มปลายแฮนแต่งสแตนเลส R7 รู 6มิล SUS CNC Billet คู่ละ · ใส่ได้กับ Yamaha R7 · วัสดุ Stainless Steel (SUS) CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_4",
-    "code": "R7.4",
-    "name": "Short Throttle Tube R7 -20% throw Alloy CNC Billet each",
-    "nameTh": "ใส้คันเร่งแต่ง R7 ระยะบิดสั้นกว่าเดิม 20% Alloy CNC Billet อันละ",
-    "price": 1300,
-    "category": "accessories",
-    "bikeModels": [
-      "r7"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Short Throttle Tube R7 -20% throw Alloy CNC Billet each. Fits: Yamaha R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ใส้คันเร่งแต่ง R7 ระยะบิดสั้นกว่าเดิม 20% Alloy CNC Billet อันละ · ใส่ได้กับ Yamaha R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_5",
-    "code": "R7.5",
-    "name": "Rear Stand Spool Hook with Chain Guard Mount R7 Alloy CNC Billet (Black/Silver/Hard)",
-    "nameTh": "กาดขึ้นสแตนล้อหลัง R7 พร้อมใส่กาดบังสเตอร์ Alloy CNC Billet (ดำ/เงิน/ฮาร์ด) คู่ละ",
-    "price": 1400,
-    "category": "accessories",
-    "bikeModels": [
-      "r7"
-    ],
-    "colors": [
-      "ดำ",
-      "เงิน",
-      "ฮาร์ด"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Rear Stand Spool Hook with Chain Guard Mount R7 Alloy CNC Billet (Black/Silver/Hard). Fits: Yamaha R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "กาดขึ้นสแตนล้อหลัง R7 พร้อมใส่กาดบังสเตอร์ Alloy CNC Billet (ดำ/เงิน/ฮาร์ด) คู่ละ · ใส่ได้กับ Yamaha R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_6",
-    "code": "R7.6",
-    "name": "Sprocket Chain Guard R7 racing track rules Alloy CNC Billet (Black/Hard/Green)",
-    "nameTh": "กาดบังสเตอร์หลัง R7 ตามกฏในสนามแข่ง Alloy CNC Billet (ดำ/ฮาร์ด/เขียว) ชุดละ",
-    "price": 800,
-    "category": "accessories",
-    "bikeModels": [
-      "r7"
-    ],
-    "colors": [
-      "ดำ",
-      "ฮาร์ด",
-      "เขียว"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Sprocket Chain Guard R7 racing track rules Alloy CNC Billet (Black/Hard/Green). Fits: Yamaha R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "กาดบังสเตอร์หลัง R7 ตามกฏในสนามแข่ง Alloy CNC Billet (ดำ/ฮาร์ด/เขียว) ชุดละ · ใส่ได้กับ Yamaha R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_7",
-    "code": "R7.7",
-    "name": "Swingarm Spool Bobbins M6/M8 R7 Alloy CNC Billet (Black/Silver/Green/Hard)",
-    "nameTh": "สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 Alloy CNC Billet (ดำ/เงิน/เขียว/ฮาร์ด) R7 คู่ละ",
-    "price": 450,
-    "category": "accessories",
-    "bikeModels": [
-      "r7"
-    ],
-    "colors": [
-      "ดำ",
-      "เงิน",
-      "เขียว",
-      "ฮาร์ด"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Swingarm Spool Bobbins M6/M8 R7 Alloy CNC Billet (Black/Silver/Green/Hard). Fits: Yamaha R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สปูนขึ้นสแตนล้อหลัง น็อต M6 & M8 Alloy CNC Billet (ดำ/เงิน/เขียว/ฮาร์ด) R7 คู่ละ · ใส่ได้กับ Yamaha R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_8",
-    "code": "R7.8",
-    "name": "Clip-On Handlebars R7 50mm fork screw-type Alloy CNC Billet (Silver/Black)",
-    "nameTh": "แฮนจับโช๊คใส่ R7 แกนโช๊ค 50mm. Alloy CNC Billet แบบขันเกลียว (เงิน/ดำ) คู่ล่ะ",
-    "price": 5500,
-    "category": "accessories",
-    "bikeModels": [
-      "r7"
-    ],
-    "colors": [
-      "เงิน",
-      "ดำ"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Clip-On Handlebars R7 50mm fork screw-type Alloy CNC Billet (Silver/Black). Fits: Yamaha R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คใส่ R7 แกนโช๊ค 50mm. Alloy CNC Billet แบบขันเกลียว (เงิน/ดำ) คู่ล่ะ · ใส่ได้กับ Yamaha R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_9",
-    "code": "R7.9",
-    "name": "Velocity Stack Intake Trumpet R7 50mm Alloy CNC Billet pair",
-    "nameTh": "ปากแตร R7 ยาว 50mm. Alloy CNC Billet คู่ละ",
-    "price": 1500,
-    "category": "engine",
-    "bikeModels": [
-      "r7"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Velocity Stack Intake Trumpet R7 50mm Alloy CNC Billet pair. Fits: Yamaha R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปากแตร R7 ยาว 50mm. Alloy CNC Billet คู่ละ · ใส่ได้กับ Yamaha R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_10",
-    "code": "R7.10",
-    "name": "Velocity Stack Intake Trumpet R7 50mm POM CNC Billet pair",
-    "nameTh": "ปากแตร R7 ยาว 50mm. POM CNC Billet คู่ละ",
-    "price": 1500,
-    "category": "engine",
-    "bikeModels": [
-      "r7"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "POM CNC Billet",
-    "description": "Velocity Stack Intake Trumpet R7 50mm POM CNC Billet pair. Fits: Yamaha R7 · Material: POM CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ปากแตร R7 ยาว 50mm. POM CNC Billet คู่ละ · ใส่ได้กับ Yamaha R7 · วัสดุ POM CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_11",
-    "code": "R7.11",
-    "name": "Front Sprocket Yamaha R7/R1/R1M Steel CNC Billet Hardened 520-15/16/17T",
-    "nameTh": "สเตอร์หน้า Yamaha R7,R1,R1M Steel CNC Billet Hardened ใส่โซ่ 520-15,16,17 ฟัน",
-    "price": 900,
-    "category": "drivetrain",
-    "bikeModels": [
-      "r1",
-      "r7"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Steel CNC Billet Hardened",
-    "description": "Front Sprocket Yamaha R7/R1/R1M Steel CNC Billet Hardened 520-15/16/17T. Fits: Yamaha R7 · Yamaha R1/R6/R7 · Material: Steel CNC Billet Hardened · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า Yamaha R7,R1,R1M Steel CNC Billet Hardened ใส่โซ่ 520-15,16,17 ฟัน · ใส่ได้กับ Yamaha R7 · Yamaha R1/R6/R7 · วัสดุ Steel CNC Billet Hardened · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r7_12",
-    "code": "R7.12",
-    "name": "Rear Sprocket Yamaha R6/R7/R3/R25 520-35-49T Alloy 7075 Hard Anodize",
-    "nameTh": "สเตอร์หลัง Yamaha R6,R7,R3,R25 520-35-49T Alloy 7075 CNC Billet Hard Anodize",
-    "price": 2200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "r1",
-      "r3",
-      "r7"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket Yamaha R6/R7/R3/R25 520-35-49T Alloy 7075 Hard Anodize. Fits: Yamaha R3/MT-03/R25 · Yamaha R7 · Yamaha R1/R6/R7 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Yamaha R6,R7,R3,R25 520-35-49T Alloy 7075 CNC Billet Hard Anodize · ใส่ได้กับ Yamaha R3/MT-03/R25 · Yamaha R7 · Yamaha R1/R6/R7 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_1",
-    "code": "R1.1",
-    "name": "Swingarm Spool Bobbins M6 R1 Alloy CNC Billet (Black/Silver/Green/Hard)",
-    "nameTh": "สปูนขึ้นสแตนล้อหลัง น็อต M6 Alloy CNC Billet (ดำ/เงิน/เขียว/ฮาร์ด) R1 คู่ละ",
-    "price": 450,
-    "category": "accessories",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [
-      "ดำ",
-      "เงิน",
-      "เขียว",
-      "ฮาร์ด"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Swingarm Spool Bobbins M6 R1 Alloy CNC Billet (Black/Silver/Green/Hard). Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สปูนขึ้นสแตนล้อหลัง น็อต M6 Alloy CNC Billet (ดำ/เงิน/เขียว/ฮาร์ด) R1 คู่ละ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_2",
-    "code": "R1.2",
-    "name": "Wheel Axle Spacer Boots Front+Rear R1 Alloy 7075 CNC Billet Hard Anodize",
-    "nameTh": "บู๊ทล้อหน้าและล้อหลังแต่ง R1 Alloy 7075 CNC Billet Hard Anodize ชุดละ",
-    "price": 2000,
-    "category": "suspension",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Wheel Axle Spacer Boots Front+Rear R1 Alloy 7075 CNC Billet Hard Anodize. Fits: Yamaha R1/R6/R7 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทล้อหน้าและล้อหลังแต่ง R1 Alloy 7075 CNC Billet Hard Anodize ชุดละ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_3",
-    "code": "R1.3",
-    "name": "Raised Clip-On Handlebars R1 50mm Alloy 6061 CNC Billet screw-type (Silver/Black)",
-    "nameTh": "แฮนจับโช๊คใส่ R1 แบบยก 50mm. Alloy 6061 CNC Billet แบบขันเกลียว (เงิน/ดำ) คู่ล่ะ",
-    "price": 6500,
-    "category": "accessories",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [
-      "เงิน",
-      "ดำ"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 6061 CNC Billet",
-    "description": "Raised Clip-On Handlebars R1 50mm Alloy 6061 CNC Billet screw-type (Silver/Black). Fits: Yamaha R1/R6/R7 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คใส่ R1 แบบยก 50mm. Alloy 6061 CNC Billet แบบขันเกลียว (เงิน/ดำ) คู่ล่ะ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_4",
-    "code": "R1.4",
-    "name": "Front Sprocket Yamaha R1/R1M Steel CNC Billet Hardened 520-15/16/17T",
-    "nameTh": "สเตอร์หน้า Yamaha R1,R1M Steel CNC Billet Hardened ใส่โซ่ 520-15,16,17 ฟัน",
-    "price": 900,
-    "category": "drivetrain",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Steel CNC Billet Hardened",
-    "description": "Front Sprocket Yamaha R1/R1M Steel CNC Billet Hardened 520-15/16/17T. Fits: Yamaha R1/R6/R7 · Material: Steel CNC Billet Hardened · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า Yamaha R1,R1M Steel CNC Billet Hardened ใส่โซ่ 520-15,16,17 ฟัน · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Steel CNC Billet Hardened · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_5",
-    "code": "R1.5",
-    "name": "Rear Sprocket Yamaha R1M 5-hole 520-43-48T Alloy 7075 Hard Anodize",
-    "nameTh": "สเตอร์หลัง Yamaha R1M 520-5hole Alloy 7075 CNC Billet Hard Anodize 520-43-48T",
-    "price": 2200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket Yamaha R1M 5-hole 520-43-48T Alloy 7075 Hard Anodize. Fits: Yamaha R1/R6/R7 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Yamaha R1M 520-5hole Alloy 7075 CNC Billet Hard Anodize 520-43-48T · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_6",
-    "code": "R1.6",
-    "name": "EGR Cover Plate Yamaha R6/R1 plain Alloy CNC Billet each",
-    "nameTh": "แผ่นอุดบำบับไอเสีย EGR Cover Yamaha R6 & R1 แบบเรียบ Alloy CNC Billet ชิ้นละ",
-    "price": 450,
-    "category": "engine",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "EGR Cover Plate Yamaha R6/R1 plain Alloy CNC Billet each. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นอุดบำบับไอเสีย EGR Cover Yamaha R6 & R1 แบบเรียบ Alloy CNC Billet ชิ้นละ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_7",
-    "code": "R1.7",
-    "name": "Folding Brake Lever Brembo Corsa Corta Alloy CNC Billet & Anodize each",
-    "nameTh": "ก้านเบรคแบบพับ Brembro Corsa Corta Alloy CNC Billet & Anodize อันละ",
-    "price": 1600,
-    "category": "brake",
-    "bikeModels": [
-      "r1",
-      "r7"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet Anodize",
-    "description": "Folding Brake Lever Brembo Corsa Corta Alloy CNC Billet & Anodize each. Fits: Yamaha R7 · Yamaha R1/R6/R7 · Material: Alloy CNC Billet Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก้านเบรคแบบพับ Brembro Corsa Corta Alloy CNC Billet & Anodize อันละ · ใส่ได้กับ Yamaha R7 · Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_8",
-    "code": "R1.8",
-    "name": "Folding Brake Lever Brembo Racing/Italy Alloy CNC Billet & Anodize each",
-    "nameTh": "ก้านเบรคแบบพับ Brembro Racing & Italy Alloy CNC Billet & Anodize อันละ",
-    "price": 1600,
-    "category": "brake",
-    "bikeModels": [
-      "r1",
-      "r7"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet Anodize",
-    "description": "Folding Brake Lever Brembo Racing/Italy Alloy CNC Billet & Anodize each. Fits: Yamaha R7 · Yamaha R1/R6/R7 · Material: Alloy CNC Billet Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก้านเบรคแบบพับ Brembro Racing & Italy Alloy CNC Billet & Anodize อันละ · ใส่ได้กับ Yamaha R7 · Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_9",
-    "code": "R1.9",
-    "name": "Racing Rearset Gear-Link Footpeg Set Yamaha R1 Alloy 6061+7075 CNC Billet",
-    "nameTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R1 Alloy 6061+7075 CNC Billet ชุดละ",
-    "price": 6000,
-    "category": "accessories",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 6061+7075 CNC Billet",
-    "description": "Racing Rearset Gear-Link Footpeg Set Yamaha R1 Alloy 6061+7075 CNC Billet. Fits: Yamaha R1/R6/R7 · Material: Alloy 6061+7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R1 Alloy 6061+7075 CNC Billet ชุดละ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 6061+7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_10",
-    "code": "R1.10",
-    "name": "Racing Footpeg peg Alloy 7075 CNC Billet each 72/80/95mm options",
-    "nameTh": "ขาพักเท้าแบบเรชซิ่ง Alloy 7075 CNC Billet ชิ้นล่ะ 72,80,95mm.",
-    "price": 450,
-    "category": "accessories",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet",
-    "description": "Racing Footpeg peg Alloy 7075 CNC Billet each 72/80/95mm options. Fits: Yamaha R1/R6/R7 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาพักเท้าแบบเรชซิ่ง Alloy 7075 CNC Billet ชิ้นล่ะ 72,80,95mm. · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_11",
-    "code": "R1.11",
-    "name": "Clip-On Handlebars R1 50/52mm Alloy 6061 CNC Billet screw-type (Silver/Black)",
-    "nameTh": "แฮนจับโช๊คใส่ R1 ขนาด 50,52mm. Alloy 6061 CNC Billet แบบขันเกลียว (เงิน/ดำ) คู่ล่ะ",
-    "price": 5500,
-    "category": "accessories",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [
-      "เงิน",
-      "ดำ"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 6061 CNC Billet",
-    "description": "Clip-On Handlebars R1 50/52mm Alloy 6061 CNC Billet screw-type (Silver/Black). Fits: Yamaha R1/R6/R7 · Material: Alloy 6061 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คใส่ R1 ขนาด 50,52mm. Alloy 6061 CNC Billet แบบขันเกลียว (เงิน/ดำ) คู่ล่ะ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 6061 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r1_12",
-    "code": "R1.12",
-    "name": "Swingarm Stand Spool Set track style Yamaha R1/R6 Alloy CNC Billet pair",
-    "nameTh": "ชุดขึ้นแสตนสวิงอาร์มแต่งทรงสนาม ใส่ Yamaha R1 & R6 Alloy CNC Billet คู่",
-    "price": 1800,
-    "category": "accessories",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Swingarm Stand Spool Set track style Yamaha R1/R6 Alloy CNC Billet pair. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดขึ้นแสตนสวิงอาร์มแต่งทรงสนาม ใส่ Yamaha R1 & R6 Alloy CNC Billet คู่ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r6_1",
-    "code": "R6.1",
-    "name": "Rear Sprocket Yamaha R6 428-chain 52-56T Alloy 7075 Hard Anodize",
-    "nameTh": "สเตอร์หลัง Yamaha R6 428 Alloy 7075 CNC Billet Hard Anodize R6-428 52-56T",
-    "price": 2400,
-    "category": "drivetrain",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket Yamaha R6 428-chain 52-56T Alloy 7075 Hard Anodize. Fits: Yamaha R1/R6/R7 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Yamaha R6 428 Alloy 7075 CNC Billet Hard Anodize R6-428 52-56T · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r6_2",
-    "code": "R6.2",
-    "name": "Front Sprocket Yamaha R6 Steel CNC Billet Hardened 520-16-20T",
-    "nameTh": "สเตอร์หน้า Yamaha R6 Steel CNC Billet Hardened ใส่โซ่ 520-16,17,18,19,20 ฟัน",
-    "price": 1000,
-    "category": "drivetrain",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Steel CNC Billet Hardened",
-    "description": "Front Sprocket Yamaha R6 Steel CNC Billet Hardened 520-16-20T. Fits: Yamaha R1/R6/R7 · Material: Steel CNC Billet Hardened · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า Yamaha R6 Steel CNC Billet Hardened ใส่โซ่ 520-16,17,18,19,20 ฟัน · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Steel CNC Billet Hardened · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r6_3",
-    "code": "R6.3",
-    "name": "Swingarm Spool Bobbins M6 R6 Alloy CNC Billet (Black/Silver/Green/Hard)",
-    "nameTh": "สปูนขึ้นสแตนล้อหลัง น็อต M6 Alloy CNC Billet (ดำ/เงิน/เขียว/ฮาร์ด) R6 คู่ละ",
-    "price": 450,
-    "category": "accessories",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [
-      "ดำ",
-      "เงิน",
-      "เขียว",
-      "ฮาร์ด"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Swingarm Spool Bobbins M6 R6 Alloy CNC Billet (Black/Silver/Green/Hard). Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สปูนขึ้นสแตนล้อหลัง น็อต M6 Alloy CNC Billet (ดำ/เงิน/เขียว/ฮาร์ด) R6 คู่ละ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r6_4",
-    "code": "R6.4",
-    "name": "Wheel Axle Spacer Boots Front+Rear R6 Alloy 7075 CNC Billet Hard Anodize",
-    "nameTh": "บู๊ทล้อหน้าและล้อหลังแต่ง R6 Alloy 7075 CNC Billet Hard Anodize ชุดละ",
-    "price": 2000,
-    "category": "suspension",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Wheel Axle Spacer Boots Front+Rear R6 Alloy 7075 CNC Billet Hard Anodize. Fits: Yamaha R1/R6/R7 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "บู๊ทล้อหน้าและล้อหลังแต่ง R6 Alloy 7075 CNC Billet Hard Anodize ชุดละ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r6_5",
-    "code": "R6.5",
-    "name": "Front Sprocket Yamaha R6 Steel CNC Billet 520-15,16T",
-    "nameTh": "สเตอร์หน้า Yamaha R6 Steel CNC Billet Hardened ใส่โซ่ 520-15,16 ฟัน",
-    "price": 900,
-    "category": "drivetrain",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Steel CNC Billet Hardened",
-    "description": "Front Sprocket Yamaha R6 Steel CNC Billet 520-15,16T. Fits: Yamaha R1/R6/R7 · Material: Steel CNC Billet Hardened · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หน้า Yamaha R6 Steel CNC Billet Hardened ใส่โซ่ 520-15,16 ฟัน · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Steel CNC Billet Hardened · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r6_6",
-    "code": "R6.6",
-    "name": "Rear Sprocket Yamaha R6 6-hole 520-44-49T Alloy 7075 Hard Anodize",
-    "nameTh": "สเตอร์หลัง Yamaha R6 520-6holes Alloy 7075 CNC Billet Hard Anodize 520-44-49T",
-    "price": 2200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket Yamaha R6 6-hole 520-44-49T Alloy 7075 Hard Anodize. Fits: Yamaha R1/R6/R7 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Yamaha R6 520-6holes Alloy 7075 CNC Billet Hard Anodize 520-44-49T · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r6_7",
-    "code": "R6.7",
-    "name": "Steering Damper Bracket Side-mount Yamaha R6 Alloy CNC Billet",
-    "nameTh": "ชุดขายึดกันสะบัดแบบใส่ด้านข้าง Yamaha R6 Alloy CNC Billet ชุดละ",
-    "price": 1500,
-    "category": "suspension",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Steering Damper Bracket Side-mount Yamaha R6 Alloy CNC Billet. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดขายึดกันสะบัดแบบใส่ด้านข้าง Yamaha R6 Alloy CNC Billet ชุดละ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r6_8",
-    "code": "R6.8",
-    "name": "Rear Stand Spool Set Yamaha R6 Alloy CNC Billet",
-    "nameTh": "สปูนขึ้นสแตนหลัง Yamaha R6 Alloy CNC Billet ชุดละ",
-    "price": 800,
-    "category": "accessories",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Rear Stand Spool Set Yamaha R6 Alloy CNC Billet. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สปูนขึ้นสแตนหลัง Yamaha R6 Alloy CNC Billet ชุดละ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r6_9",
-    "code": "R6.9",
-    "name": "Gear Shift Aid / Quickshifter Lever Alloy CNC Billet each",
-    "nameTh": "ตัวงัดกะปุกเกียร์แต่ง ใส่แล้วทำให้การเข้าเกียร์สมูทมากขึ้น Alloy CNC Billet อันละ",
-    "price": 700,
-    "category": "drivetrain",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Gear Shift Aid / Quickshifter Lever Alloy CNC Billet each. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตัวงัดกะปุกเกียร์แต่ง ใส่แล้วทำให้การเข้าเกียร์สมูทมากขึ้น Alloy CNC Billet อันละ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r6_10",
-    "code": "R6.10",
-    "name": "Racing Rearset Gear-Link Footpeg Set Yamaha R6 Alloy CNC Billet",
-    "nameTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R6 Alloy CNC Billet ชุดละ",
-    "price": 5500,
-    "category": "accessories",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Racing Rearset Gear-Link Footpeg Set Yamaha R6 Alloy CNC Billet. Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Yamaha R6 Alloy CNC Billet ชุดละ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "r6_11",
-    "code": "R6.11",
-    "name": "Clip-On Handlebars R6 50mm Alloy CNC Billet screw-type (Silver/Black)",
-    "nameTh": "แฮนจับโช๊คใส่ R6 แกนโช๊ค 50mm. Alloy CNC Billet แบบขันเกลียว (เงิน/ดำ) คู่ล่ะ",
-    "price": 5500,
-    "category": "accessories",
-    "bikeModels": [
-      "r1"
-    ],
-    "colors": [
-      "เงิน",
-      "ดำ"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Clip-On Handlebars R6 50mm Alloy CNC Billet screw-type (Silver/Black). Fits: Yamaha R1/R6/R7 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คใส่ R6 แกนโช๊ค 50mm. Alloy CNC Billet แบบขันเกลียว (เงิน/ดำ) คู่ล่ะ · ใส่ได้กับ Yamaha R1/R6/R7 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr1000_1",
-    "code": "CBR1000.1",
-    "name": "Clip-On Handlebars CBR1000RR-R 50mm pin-type Alloy CNC Billet (Silver/Black)",
-    "nameTh": "แฮนจับโช๊คใส่ CBR1000RR-R ขนาด 50mm. แบบสลัก Alloy CNC Billet (เงิน/ดำ) คู่ล่ะ",
-    "price": 5500,
-    "category": "accessories",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [
-      "เงิน",
-      "ดำ"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Clip-On Handlebars CBR1000RR-R 50mm pin-type Alloy CNC Billet (Silver/Black). Fits: Honda CBR600RR/1000RR · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คใส่ CBR1000RR-R ขนาด 50mm. แบบสลัก Alloy CNC Billet (เงิน/ดำ) คู่ล่ะ · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr1000_2",
-    "code": "CBR1000.2",
-    "name": "Racing Rearset Gear-Link Footpeg Set Honda CBR1000RR-R Alloy 6061+7075 CNC Billet",
-    "nameTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR1000RR-R Alloy 6061+7075 CNC Billet ชุดละ",
-    "price": 6500,
-    "category": "accessories",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 6061+7075 CNC Billet",
-    "description": "Racing Rearset Gear-Link Footpeg Set Honda CBR1000RR-R Alloy 6061+7075 CNC Billet. Fits: Honda CBR600RR/1000RR · Material: Alloy 6061+7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR1000RR-R Alloy 6061+7075 CNC Billet ชุดละ · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy 6061+7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr1000_3",
-    "code": "CBR1000.3",
-    "name": "Gear Shift Tip Plate Side Stand Replacement Alloy CNC Billet each",
-    "nameTh": "แป้นรองขาเกียร์แต่ง ใส่แทนแป้นขาตั้งเดี่ยวเดิมได้เลย Alloy CNC Billet อันละ",
-    "price": 700,
-    "category": "accessories",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Gear Shift Tip Plate Side Stand Replacement Alloy CNC Billet each. Fits: Honda CBR600RR/1000RR · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แป้นรองขาเกียร์แต่ง ใส่แทนแป้นขาตั้งเดี่ยวเดิมได้เลย Alloy CNC Billet อันละ · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr1000_4",
-    "code": "CBR1000.4",
-    "name": "Racing Footpeg notch-cut type Alloy CNC Billet each 500B, 72/80/95mm",
-    "nameTh": "ขาพักเท้าแบบเรชซิ่งแบบปาดแหว่ง Alloy CNC Billet ชิ้นล่ะ 500 มีขนาด 72,80,95mm.",
-    "price": 500,
-    "category": "accessories",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Racing Footpeg notch-cut type Alloy CNC Billet each 500B, 72/80/95mm. Fits: Honda CBR600RR/1000RR · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาพักเท้าแบบเรชซิ่งแบบปาดแหว่ง Alloy CNC Billet ชิ้นล่ะ 500 มีขนาด 72,80,95mm. · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr1000_5",
-    "code": "CBR1000.5",
-    "name": "Round Racing Footpeg Alloy CNC Billet each 450B 95mm",
-    "nameTh": "ขาพักเท้าแบบกลมเรชซิ่ง Alloy CNC Billet ชิ้นล่ะ 450 มีขนาด 95mm.",
-    "price": 450,
-    "category": "accessories",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Round Racing Footpeg Alloy CNC Billet each 450B 95mm. Fits: Honda CBR600RR/1000RR · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขาพักเท้าแบบกลมเรชซิ่ง Alloy CNC Billet ชิ้นล่ะ 450 มีขนาด 95mm. · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr1000_6",
-    "code": "CBR1000.6",
-    "name": "Round Racing Footpeg Alloy CNC Billet each 400B 80mm",
-    "nameTh": "พักเท้าแบบกลมเรชซิ่ง Alloy CNC Billet ชิ้นล่ะ 400 มีขนาด 80mm.",
-    "price": 400,
-    "category": "accessories",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Round Racing Footpeg Alloy CNC Billet each 400B 80mm. Fits: Honda CBR600RR/1000RR · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "พักเท้าแบบกลมเรชซิ่ง Alloy CNC Billet ชิ้นล่ะ 400 มีขนาด 80mm. · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr1000_7",
-    "code": "CBR1000.7",
-    "name": "Rear Sprocket CBR1000RR-R/CBR600RR 520-41-46T Alloy 7075 Hard Anodize",
-    "nameTh": "สเตอร์หลัง CBR1000RR-R & CBR600RR 520-41-46T Alloy Europe 7075 CNC Billet Hard Anodize",
-    "price": 2200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket CBR1000RR-R/CBR600RR 520-41-46T Alloy 7075 Hard Anodize. Fits: Honda CBR600RR/1000RR · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง CBR1000RR-R & CBR600RR 520-41-46T Alloy Europe 7075 CNC Billet Hard Anodize · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr1000_8",
-    "code": "CBR1000.8",
-    "name": "Folding Brake Lever Brembo Racing/Italy Alloy CNC Billet & Anodize (CBR)",
-    "nameTh": "ก้านเบรคแบบพับ Brembro Racing & Italy Alloy CNC Billet & Anodize อันละ (CBR)",
-    "price": 1600,
-    "category": "brake",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet Anodize",
-    "description": "Folding Brake Lever Brembo Racing/Italy Alloy CNC Billet & Anodize (CBR). Fits: Honda CBR600RR/1000RR · Material: Alloy CNC Billet Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก้านเบรคแบบพับ Brembro Racing & Italy Alloy CNC Billet & Anodize อันละ (CBR) · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy CNC Billet Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr1000_9",
-    "code": "CBR1000.9",
-    "name": "Folding Brake Lever Brembo Corsa Corta Alloy CNC Billet & Anodize (CBR)",
-    "nameTh": "ก้านเบรคแบบพับ Brembro Corsa Corta Alloy CNC Billet & Anodize อันละ (CBR)",
-    "price": 1600,
-    "category": "brake",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet Anodize",
-    "description": "Folding Brake Lever Brembo Corsa Corta Alloy CNC Billet & Anodize (CBR). Fits: Honda CBR600RR/1000RR · Material: Alloy CNC Billet Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก้านเบรคแบบพับ Brembro Corsa Corta Alloy CNC Billet & Anodize อันละ (CBR) · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy CNC Billet Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr1000_10",
-    "code": "CBR1000.10",
-    "name": "Folding Brake Lever Brembo white/red logo Alloy CNC Billet & Anodize (CBR)",
-    "nameTh": "ก้านเบรคแบบพับ Brembro โลโก้ขาว & โลโก้แดง Alloy CNC Billet & Anodize (CBR)",
-    "price": 1600,
-    "category": "brake",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet Anodize",
-    "description": "Folding Brake Lever Brembo white/red logo Alloy CNC Billet & Anodize (CBR). Fits: Honda CBR600RR/1000RR · Material: Alloy CNC Billet Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก้านเบรคแบบพับ Brembro โลโก้ขาว & โลโก้แดง Alloy CNC Billet & Anodize (CBR) · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy CNC Billet Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr600_1",
-    "code": "CBR600.1",
-    "name": "Raised Clip-On Handlebars CBR600RR 48mm 9-degree Alloy CNC Billet (Black/Silver)",
-    "nameTh": "แฮนจับโช๊คอลูมิเนียม CBR600RR ขนาด 48mm. แบบยก เอียง 9 องศา Alloy CNC Billet (ดำ/เงิน) คู่ล่ะ",
-    "price": 4800,
-    "category": "accessories",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [
-      "ดำ",
-      "เงิน"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Raised Clip-On Handlebars CBR600RR 48mm 9-degree Alloy CNC Billet (Black/Silver). Fits: Honda CBR600RR/1000RR · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แฮนจับโช๊คอลูมิเนียม CBR600RR ขนาด 48mm. แบบยก เอียง 9 องศา Alloy CNC Billet (ดำ/เงิน) คู่ล่ะ · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr600_2",
-    "code": "CBR600.2",
-    "name": "Racing Rearset Gear-Link Footpeg Set Honda CBR600RR Alloy 6061+7075 CNC Billet",
-    "nameTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR600RR Alloy 6061+7075 CNC Billet ชุดละ",
-    "price": 5500,
-    "category": "accessories",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 6061+7075 CNC Billet",
-    "description": "Racing Rearset Gear-Link Footpeg Set Honda CBR600RR Alloy 6061+7075 CNC Billet. Fits: Honda CBR600RR/1000RR · Material: Alloy 6061+7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR600RR Alloy 6061+7075 CNC Billet ชุดละ · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy 6061+7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr600_3",
-    "code": "CBR600.3",
-    "name": "PAIR Air Injection Cover Plate CBR600 Alloy CNC Billet each",
-    "nameTh": "แผ่นอุดแพร์ PAIR Cover CBR600 Alloy CNC Billet (Pulse Air Injection) ชิ้นละ",
-    "price": 450,
-    "category": "engine",
-    "bikeModels": [
-      "cbr600"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "PAIR Air Injection Cover Plate CBR600 Alloy CNC Billet each. Fits: Honda CBR600RR/1000RR · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผ่นอุดแพร์ PAIR Cover CBR600 Alloy CNC Billet (Pulse Air Injection) ชิ้นละ · ใส่ได้กับ Honda CBR600RR/1000RR · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr650_1",
-    "code": "CBR650.1",
-    "name": "Racing Rearset Gear-Link Footpeg Set Honda CBR650R Alloy 6061+7075 CNC Billet",
-    "nameTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR650R Alloy 6061+7075 CNC Billet ชุดละ",
-    "price": 5500,
-    "category": "accessories",
-    "bikeModels": [
-      "cbr650r"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 6061+7075 CNC Billet",
-    "description": "Racing Rearset Gear-Link Footpeg Set Honda CBR650R Alloy 6061+7075 CNC Billet. Fits: Honda CBR650R/CB650F · Material: Alloy 6061+7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ชุดพักเท้าหน้าแต่งแบบเกียร์โยงทรงสนามแข่ง ใส่ Honda CBR650R Alloy 6061+7075 CNC Billet ชุดละ · ใส่ได้กับ Honda CBR650R/CB650F · วัสดุ Alloy 6061+7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "cbr650_2",
-    "code": "CBR650.2",
-    "name": "Rear Sprocket Honda CB650F Alloy 7075 T651 CNC Billet 525-44T or 520-44,45,46T",
-    "nameTh": "สเตอร์หลัง Alloy Honda CB650F CNC Billet Alloy 7075 T651 โซ่ 525-44T หรือ 520-44,45,46T",
-    "price": 1800,
-    "category": "drivetrain",
-    "bikeModels": [
-      "cbr650r"
-    ],
-    "colors": [
-      "เทาฮาร์ต"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 T651 CNC Billet",
-    "description": "Rear Sprocket Honda CB650F Alloy 7075 T651 CNC Billet 525-44T or 520-44,45,46T. Fits: Honda CBR650R/CB650F · Material: Alloy 7075 T651 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Alloy Honda CB650F CNC Billet Alloy 7075 T651 โซ่ 525-44T หรือ 520-44,45,46T · ใส่ได้กับ Honda CBR650R/CB650F · วัสดุ Alloy 7075 T651 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "tri_73a",
-    "code": "TRI.73A",
-    "name": "Front Turn Signal Bracket 41mm Alloy 6061 CNC Triumph (Black/Silver) pair",
-    "nameTh": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม ขนาด 41mm. แบบใส่เข้ากับแกนโช๊คหน้า Alloy 6061 Triumph (ดำ/เงิน) คู่ล่ะ",
-    "price": 1000,
-    "category": "accessories",
-    "bikeModels": [
-      "thruxton"
-    ],
-    "colors": [
-      "ดำ",
-      "เงิน"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 6061 CNC",
-    "description": "Front Turn Signal Bracket 41mm Alloy 6061 CNC Triumph (Black/Silver) pair. Fits: Triumph Thruxton/T100/T120 · Material: Alloy 6061 CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ขายึดไฟเลี้ยวหน้าแต่งอลูมิเนียม ขนาด 41mm. แบบใส่เข้ากับแกนโช๊คหน้า Alloy 6061 Triumph (ดำ/เงิน) คู่ล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy 6061 CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "tri_73b",
-    "code": "TRI.73B",
-    "name": "Handlebar Riser Clamp for flat bar 28.6mm Alloy 6061 CNC M10x1.50 (Silver/Black/Gold)",
-    "nameTh": "ตุ๊กตาแต่งใส่กับแฮนแฟลตบาร์ รูใส่แฮน 28.6mm. Alloy 6061 CNC เกลียว M10x1.50 (เงิน/ดำ/ทอง) คู่ล่ะ",
-    "price": 1200,
-    "category": "accessories",
-    "bikeModels": [
-      "thruxton"
-    ],
-    "colors": [
-      "เงิน",
-      "ดำ",
-      "ทอง"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 6061 CNC",
-    "description": "Handlebar Riser Clamp for flat bar 28.6mm Alloy 6061 CNC M10x1.50 (Silver/Black/Gold). Fits: Triumph Thruxton/T100/T120 · Material: Alloy 6061 CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ตุ๊กตาแต่งใส่กับแฮนแฟลตบาร์ รูใส่แฮน 28.6mm. Alloy 6061 CNC เกลียว M10x1.50 (เงิน/ดำ/ทอง) คู่ล่ะ · ใส่ได้กับ Triumph Thruxton/T100/T120 · วัสดุ Alloy 6061 CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "tri_daytona",
-    "code": "TRI.DAYTONA",
-    "name": "Rear Sprocket Triumph Daytona 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize",
-    "nameTh": "สเตอร์หลัง Triumph Daytona 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize",
-    "price": 2400,
-    "category": "drivetrain",
-    "bikeModels": [
-      "daytona675"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket Triumph Daytona 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize. Fits: Triumph Daytona 675 · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Triumph Daytona 675 520-46-50T Alloy 7075 CNC Billet Hard Anodize · ใส่ได้กับ Triumph Daytona 675 · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_1",
-    "code": "DUC.1",
-    "name": "Rear Sprocket Ducati Panigale V4R Racing Alloy 7075 520-39-47T sprocket teeth only",
-    "nameTh": "สเตอร์หลัง Ducati Panigale V4R Racing Alloy 7075 CNC Billet Hard Anodize 520-39-47T เฉพาะฟันสเตอร์ ชิ้นล่ะ",
-    "price": 2000,
-    "category": "drivetrain",
-    "bikeModels": [
-      "panigale"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket Ducati Panigale V4R Racing Alloy 7075 520-39-47T sprocket teeth only. Fits: Ducati Panigale V4R · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Panigale V4R Racing Alloy 7075 CNC Billet Hard Anodize 520-39-47T เฉพาะฟันสเตอร์ ชิ้นล่ะ · ใส่ได้กับ Ducati Panigale V4R · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_2",
-    "code": "DUC.2",
-    "name": "Rear Sprocket Hub Ducati Panigale V4R Racing Alloy 7075 hub only",
-    "nameTh": "ฮับสเตอร์หลัง Ducati Panigale V4R Racing Alloy 7075 CNC Billet Hard Anodize เฉพาะดุมสเตอร์ ชิ้นล่ะ",
-    "price": 3500,
-    "category": "drivetrain",
-    "bikeModels": [
-      "panigale"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket Hub Ducati Panigale V4R Racing Alloy 7075 hub only. Fits: Ducati Panigale V4R · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฮับสเตอร์หลัง Ducati Panigale V4R Racing Alloy 7075 CNC Billet Hard Anodize เฉพาะดุมสเตอร์ ชิ้นล่ะ · ใส่ได้กับ Ducati Panigale V4R · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_3",
-    "code": "DUC.3",
-    "name": "Rear Sprocket+Hub Set Ducati Panigale V4R quick-change 520-40-47T Alloy 7075 full set",
-    "nameTh": "สเตอร์หลัง Ducati Panigale V4R Racing ชุดถอดเปลี่ยนเฉพาะฟันโดยไม่ต้องถอดน๊อตล้อ Alloy 7075 520-40-47T ทั้งชุด",
-    "price": 5500,
-    "category": "drivetrain",
-    "bikeModels": [
-      "panigale"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet Hard Anodize",
-    "description": "Rear Sprocket+Hub Set Ducati Panigale V4R quick-change 520-40-47T Alloy 7075 full set. Fits: Ducati Panigale V4R · Material: Alloy 7075 CNC Billet Hard Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Panigale V4R Racing ชุดถอดเปลี่ยนเฉพาะฟันโดยไม่ต้องถอดน๊อตล้อ Alloy 7075 520-40-47T ทั้งชุด · ใส่ได้กับ Ducati Panigale V4R · วัสดุ Alloy 7075 CNC Billet Hard Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_4",
-    "code": "DUC.4",
-    "name": "Rear Sprocket Teeth Ducati Diavel Alloy 7075 525-42T each",
-    "nameTh": "ฟันสเตอร์หลัง Ducati Diavel Alloy 7075 CNC Billet 525-42T อันละ",
-    "price": 2200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "ducati_diavel"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet",
-    "description": "Rear Sprocket Teeth Ducati Diavel Alloy 7075 525-42T each. Fits: Ducati Diavel · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฟันสเตอร์หลัง Ducati Diavel Alloy 7075 CNC Billet 525-42T อันละ · ใส่ได้กับ Ducati Diavel · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_5",
-    "code": "DUC.5",
-    "name": "Rear Sprocket Set Ducati Diavel Alloy 7075 525-42T full set",
-    "nameTh": "สเตอร์หลัง Ducati Diavel Alloy 7075 CNC Billet 525-42T ทั้งชุด",
-    "price": 5500,
-    "category": "drivetrain",
-    "bikeModels": [
-      "ducati_diavel"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet",
-    "description": "Rear Sprocket Set Ducati Diavel Alloy 7075 525-42T full set. Fits: Ducati Diavel · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Diavel Alloy 7075 CNC Billet 525-42T ทั้งชุด · ใส่ได้กับ Ducati Diavel · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_6",
-    "code": "DUC.6",
-    "name": "Rear Sprocket Ducati Monster M796/Hyper821 Alloy 7075 525-42T (Black/Red/Gold/Hard)",
-    "nameTh": "สเตอร์หลัง Ducati Monster M796, Hyper821 Alloy 7075 CNC Billet 525-42T (ดำ/แดง/ทอง/ฮาร์ท) อันละ",
-    "price": 1800,
-    "category": "drivetrain",
-    "bikeModels": [
-      "monster"
-    ],
-    "colors": [
-      "ดำ",
-      "แดง",
-      "ทอง",
-      "ฮาร์ท"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet",
-    "description": "Rear Sprocket Ducati Monster M796/Hyper821 Alloy 7075 525-42T (Black/Red/Gold/Hard). Fits: Ducati Monster 795/796 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Monster M796, Hyper821 Alloy 7075 CNC Billet 525-42T (ดำ/แดง/ทอง/ฮาร์ท) อันละ · ใส่ได้กับ Ducati Monster 795/796 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_7",
-    "code": "DUC.7",
-    "name": "Rear Sprocket Hub Ducati Monster M796/Hyper821 Alloy 7075 (Black/Red/Gold/Hard)",
-    "nameTh": "ฮับสเตอร์หลัง Ducati Monster M796, Hyper821 Alloy 7075 CNC Billet (ดำ/แดง/ทอง/ฮาร์ท) ชิ้นละ",
-    "price": 3200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "monster"
-    ],
-    "colors": [
-      "ดำ",
-      "แดง",
-      "ทอง",
-      "ฮาร์ท"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet",
-    "description": "Rear Sprocket Hub Ducati Monster M796/Hyper821 Alloy 7075 (Black/Red/Gold/Hard). Fits: Ducati Monster 795/796 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฮับสเตอร์หลัง Ducati Monster M796, Hyper821 Alloy 7075 CNC Billet (ดำ/แดง/ทอง/ฮาร์ท) ชิ้นละ · ใส่ได้กับ Ducati Monster 795/796 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_8",
-    "code": "DUC.8",
-    "name": "Rear Sprocket Set Ducati Monster M796/Hyper821 Alloy 7075 525-42T full set",
-    "nameTh": "สเตอร์หลัง Ducati Monster M796, Hyper821 Alloy 7075 CNC Billet 525-42T ทั้งชุด ชุดละ",
-    "price": 5000,
-    "category": "drivetrain",
-    "bikeModels": [
-      "monster"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet",
-    "description": "Rear Sprocket Set Ducati Monster M796/Hyper821 Alloy 7075 525-42T full set. Fits: Ducati Monster 795/796 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Monster M796, Hyper821 Alloy 7075 CNC Billet 525-42T ทั้งชุด ชุดละ · ใส่ได้กับ Ducati Monster 795/796 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_9",
-    "code": "DUC.9",
-    "name": "Rear Sprocket Set Ducati Monster M796/Hyper821 Alloy 7075 525-45T full set",
-    "nameTh": "สเตอร์หลัง Ducati Monster M796, Hyper821 Alloy 7075 CNC Billet 525-45T ทั้งชุด ชุดละ",
-    "price": 5200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "monster"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet",
-    "description": "Rear Sprocket Set Ducati Monster M796/Hyper821 Alloy 7075 525-45T full set. Fits: Ducati Monster 795/796 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Monster M796, Hyper821 Alloy 7075 CNC Billet 525-45T ทั้งชุด ชุดละ · ใส่ได้กับ Ducati Monster 795/796 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_10",
-    "code": "DUC.10",
-    "name": "Rear Sprocket Ducati fits AEM hub Alloy 7075 520-40T each",
-    "nameTh": "สเตอร์หลัง Ducati (ใส่เข้ากับฮับสเตอร์ AEM ได้) Alloy 7075 CNC Billet 520-40T อันละ",
-    "price": 2000,
-    "category": "drivetrain",
-    "bikeModels": [
-      "monster"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet",
-    "description": "Rear Sprocket Ducati fits AEM hub Alloy 7075 520-40T each. Fits: Ducati Monster 795/796 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati (ใส่เข้ากับฮับสเตอร์ AEM ได้) Alloy 7075 CNC Billet 520-40T อันละ · ใส่ได้กับ Ducati Monster 795/796 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_11",
-    "code": "DUC.11",
-    "name": "Rear Sprocket Hub Ducati Monster M796/Hyper821 AEM-compatible Alloy CNC Billet",
-    "nameTh": "ฮับสเตอร์หลัง Ducati Monster M796, Hyper821 (ใส่เข้ากับฮับสเตอร์ AEM ได้) Alloy CNC Billet (ดำ/แดง/ทอง/ฮาร์ท) ชิ้นละ",
-    "price": 3200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "monster"
-    ],
-    "colors": [
-      "ดำ",
-      "แดง",
-      "ทอง",
-      "ฮาร์ท"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet",
-    "description": "Rear Sprocket Hub Ducati Monster M796/Hyper821 AEM-compatible Alloy CNC Billet. Fits: Ducati Monster 795/796 · Material: Alloy CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฮับสเตอร์หลัง Ducati Monster M796, Hyper821 (ใส่เข้ากับฮับสเตอร์ AEM ได้) Alloy CNC Billet (ดำ/แดง/ทอง/ฮาร์ท) ชิ้นละ · ใส่ได้กับ Ducati Monster 795/796 · วัสดุ Alloy CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_12",
-    "code": "DUC.12",
-    "name": "Rear Sprocket Ducati Scrambler Alloy 7075 T651 520-46T (Black/Hard)",
-    "nameTh": "สเตอร์หลัง Ducati Scrambler Alloy 7075 T651 520-46T (ดำ-ฮาร์ด) ชิ้นละ",
-    "price": 2200,
-    "category": "drivetrain",
-    "bikeModels": [
-      "ducati_scrambler"
-    ],
-    "colors": [
-      "ดำ",
-      "ฮาร์ด"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 T651",
-    "description": "Rear Sprocket Ducati Scrambler Alloy 7075 T651 520-46T (Black/Hard). Fits: Ducati Scrambler · Material: Alloy 7075 T651 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Scrambler Alloy 7075 T651 520-46T (ดำ-ฮาร์ด) ชิ้นละ · ใส่ได้กับ Ducati Scrambler · วัสดุ Alloy 7075 T651 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_13",
-    "code": "DUC.13",
-    "name": "Rear Sprocket Ducati Panigale 899 Alloy 7075 T651 520-44T (Black/Gold/Red)",
-    "nameTh": "สเตอร์หลัง Ducati Panigale 899 Alloy 7075 T651 520-44T (ดำ/ทอง/แดง) ชิ้นละ",
-    "price": 2000,
-    "category": "drivetrain",
-    "bikeModels": [
-      "panigale"
-    ],
-    "colors": [
-      "ดำ",
-      "ทอง",
-      "แดง"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 T651",
-    "description": "Rear Sprocket Ducati Panigale 899 Alloy 7075 T651 520-44T (Black/Gold/Red). Fits: Ducati Panigale V4R · Material: Alloy 7075 T651 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "สเตอร์หลัง Ducati Panigale 899 Alloy 7075 T651 520-44T (ดำ/ทอง/แดง) ชิ้นละ · ใส่ได้กับ Ducati Panigale V4R · วัสดุ Alloy 7075 T651 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_14",
-    "code": "DUC.14",
-    "name": "Rear Axle Lock Nut Ducati M796/821/Hyper821 Alloy 7075 (Black/Blue/Gold/Red) pair",
-    "nameTh": "น๊อตล๊อคล้อหลัง Ducati M796 821 Hyper821 Alloy 7075 (ดำ/น้ำเงิน/ทอง/แดง) คู่ละ",
-    "price": 1200,
-    "category": "hardware",
-    "bikeModels": [
-      "monster"
-    ],
-    "colors": [
-      "ดำ",
-      "น้ำเงิน",
-      "ทอง",
-      "แดง"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075",
-    "description": "Rear Axle Lock Nut Ducati M796/821/Hyper821 Alloy 7075 (Black/Blue/Gold/Red) pair. Fits: Ducati Monster 795/796 · Material: Alloy 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตล๊อคล้อหลัง Ducati M796 821 Hyper821 Alloy 7075 (ดำ/น้ำเงิน/ทอง/แดง) คู่ละ · ใส่ได้กับ Ducati Monster 795/796 · วัสดุ Alloy 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_15",
-    "code": "DUC.15",
-    "name": "Rear Sprocket Nut M10 Pitch 1.25/1.0 Ducati Alloy 7075 CNC Billet each",
-    "nameTh": "น๊อตสเตอร์หลัง M10 Pit1.25 & M10x1.0 Ducati Alloy 7075 CNC Billet ชิ้นละ",
-    "price": 120,
-    "category": "hardware",
-    "bikeModels": [
-      "monster"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075 CNC Billet",
-    "description": "Rear Sprocket Nut M10 Pitch 1.25/1.0 Ducati Alloy 7075 CNC Billet each. Fits: Ducati Monster 795/796 · Material: Alloy 7075 CNC Billet · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "น๊อตสเตอร์หลัง M10 Pit1.25 & M10x1.0 Ducati Alloy 7075 CNC Billet ชิ้นละ · ใส่ได้กับ Ducati Monster 795/796 · วัสดุ Alloy 7075 CNC Billet · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_16",
-    "code": "DUC.16",
-    "name": "Top Yoke Alloy 6061 CNC Ducati Monster 795/796 (Silver/Black)",
-    "nameTh": "แผงคอบนแต่ง Ducati Monster 795,796 Alloy 6061 CNC (เงิน/ดำ) ชุดล่ะ",
-    "price": 5000,
-    "category": "suspension",
-    "bikeModels": [
-      "monster"
-    ],
-    "colors": [
-      "เงิน",
-      "ดำ"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 6061 CNC",
-    "description": "Top Yoke Alloy 6061 CNC Ducati Monster 795/796 (Silver/Black). Fits: Ducati Monster 795/796 · Material: Alloy 6061 CNC · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "แผงคอบนแต่ง Ducati Monster 795,796 Alloy 6061 CNC (เงิน/ดำ) ชุดล่ะ · ใส่ได้กับ Ducati Monster 795/796 · วัสดุ Alloy 6061 CNC · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_17",
-    "code": "DUC.17",
-    "name": "Left Engine Cover Ducati M795/796 Alloy 7075 (Red/Gold) each",
-    "nameTh": "ฝาครอบเครื่องด้านซ้าย Ducati M795,796 Alloy 7075 (แดง/ทอง) ชิ้นละ",
-    "price": 600,
-    "category": "engine",
-    "bikeModels": [
-      "monster"
-    ],
-    "colors": [
-      "แดง",
-      "ทอง"
-    ],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy 7075",
-    "description": "Left Engine Cover Ducati M795/796 Alloy 7075 (Red/Gold) each. Fits: Ducati Monster 795/796 · Material: Alloy 7075 · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ฝาครอบเครื่องด้านซ้าย Ducati M795,796 Alloy 7075 (แดง/ทอง) ชิ้นละ · ใส่ได้กับ Ducati Monster 795/796 · วัสดุ Alloy 7075 · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_18",
-    "code": "DUC.18",
-    "name": "Folding Brake Lever Brembo Racing/Italy Alloy CNC Billet & Anodize (Ducati)",
-    "nameTh": "ก้านเบรคแบบพับ Brembro Racing & Italy Alloy CNC Billet & Anodize อันละ (Ducati)",
-    "price": 1600,
-    "category": "brake",
-    "bikeModels": [
-      "monster",
-      "panigale"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet Anodize",
-    "description": "Folding Brake Lever Brembo Racing/Italy Alloy CNC Billet & Anodize (Ducati). Fits: Ducati Monster 795/796 · Ducati Panigale V4R · Material: Alloy CNC Billet Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก้านเบรคแบบพับ Brembro Racing & Italy Alloy CNC Billet & Anodize อันละ (Ducati) · ใส่ได้กับ Ducati Monster 795/796 · Ducati Panigale V4R · วัสดุ Alloy CNC Billet Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_19",
-    "code": "DUC.19",
-    "name": "Folding Brake Lever Brembo Corsa Corta Alloy CNC Billet & Anodize (Ducati)",
-    "nameTh": "ก้านเบรคแบบพับ Brembro Corsa Corta Alloy CNC Billet & Anodize อันละ (Ducati)",
-    "price": 1600,
-    "category": "brake",
-    "bikeModels": [
-      "monster",
-      "panigale"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet Anodize",
-    "description": "Folding Brake Lever Brembo Corsa Corta Alloy CNC Billet & Anodize (Ducati). Fits: Ducati Monster 795/796 · Ducati Panigale V4R · Material: Alloy CNC Billet Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก้านเบรคแบบพับ Brembro Corsa Corta Alloy CNC Billet & Anodize อันละ (Ducati) · ใส่ได้กับ Ducati Monster 795/796 · Ducati Panigale V4R · วัสดุ Alloy CNC Billet Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
-  },
-  {
-    "id": "duc_20",
-    "code": "DUC.20",
-    "name": "Folding Brake Lever Brembo white/red logo Alloy CNC Billet & Anodize (Ducati)",
-    "nameTh": "ก้านเบรคแบบพับ Brembro โลโก้ขาว & โลโก้แดง Alloy CNC Billet & Anodize (Ducati)",
-    "price": 1600,
-    "category": "brake",
-    "bikeModels": [
-      "monster",
-      "panigale"
-    ],
-    "colors": [],
-    "inStock": true,
-    "stockCount": 10,
-    "material": "Alloy CNC Billet Anodize",
-    "description": "Folding Brake Lever Brembo white/red logo Alloy CNC Billet & Anodize (Ducati). Fits: Ducati Monster 795/796 · Ducati Panigale V4R · Material: Alloy CNC Billet Anodize · Designed & machined by GIGA BIKE FACTORY, Thailand.",
-    "descriptionTh": "ก้านเบรคแบบพับ Brembro โลโก้ขาว & โลโก้แดง Alloy CNC Billet & Anodize (Ducati) · ใส่ได้กับ Ducati Monster 795/796 · Ducati Panigale V4R · วัสดุ Alloy CNC Billet Anodize · ออกแบบและผลิตโดย GIGA BIKE FACTORY ประเทศไทย",
-    "images": [],
-    "featured": false,
-    "published": true,
-    "reviewReasons": []
   }
 ]

@@ -9,6 +9,10 @@
  * It NEVER invents data. Anything missing or ambiguous is left blank
  * and the product is flagged `needs_review` with the reason(s) why.
  *
+ * Fitment is determined by TWO complementary rules (see legacy-model-map.mjs):
+ *   1. PAGE_ALWAYS  — source page → model(s) for all products on that page
+ *   2. KEYWORD_RULES — product description text → model(s) based on keywords
+ *
  * Usage:
  *   node scripts/import-legacy.mjs ["<path to mirror www dir>"]
  *
@@ -23,6 +27,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { PAGE_ALWAYS, KEYWORD_RULES, TYPO_MAP, EXTRA_SKIP_PAGES } from './legacy-model-map.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = path.resolve(__dirname, '..', '..')
@@ -33,69 +38,22 @@ const MIRROR = process.argv[2]
 
 const OUT_DIR = path.resolve(__dirname, 'out')
 
-// ── Page → bike-model fitment ─────────────────────────────────────
-// Only model-specific pages assert fitment. Brand landing pages and
-// part-category pages assert no fitment ([]); their products inherit
-// fitment from the model pages via cross-page de-duplication.
-const PAGE_MODELS = {
-  'SR.html': ['sr400'],
-  'srx.html': ['srx'],
-  'xs650.html': ['xs650'],
-  'xt500.html': ['xt500'],
-  'R15_XSR.html': ['r15'],
-  'R3.html': ['r3'],
-  'R1_R6.html': ['r1'],
-  'R9-R7.html': ['r1'],
-  'CB750k.html': ['cb750'],
-  'honda_GB250_400.html': ['gb400'],
-  'honda gb250-400.html': ['gb400'],
-  'honda cb400ss.html': ['gb400'],
-  'NC35.html': ['nc35'],
-  'CBR150r_CBR250rr.html': ['cbr250'],
-  'CB150r.html': ['cbr250'],
-  'Monkey_msx125.html': ['monkey'],
-  'msx125.html': ['monkey'],
-  '2T.html': ['nsr150'],
-  'w650.html': ['w650'],
-  'Estrella250.html': ['estrella'],
-  'KSR110.html': ['ksr'],
-  'Ninja250_300_Ninja400.html': ['ninja250'],
-  'Ninja300.html': ['ninja250'],
-  'Ninjazx10rr.html': ['zx10'],
-  'Tempter400.html': ['tempter'],
-  'triumph_Truxton900.html': ['thruxton'],
-  'BMW.html': ['s1000rr'],
-  'RoyalEnfield_GT500.html': ['interceptor'],
-  'ducati_Monter795.html': ['monster'],
-  'HD.html': ['hd883'],
-  'Sportter.html': ['hd883'],
-  'Stallions.html': ['centaur'],
-  'KTM-RC390.html': ['rc390'],
-  // part-category pages — real products, fitment varies / universal
-  'Ohlins.html': [],
-  'Sprocket_Alloys.html': [],
-  'Bolts-nut.html': [],
-  'Seat.html': [],
-}
-
 // Pages that are navigation / info only — never parsed for products.
 const SKIP_PAGES = new Set([
   'contact.html', 'payment.html', 'QR.html', 'Pictures.html',
   'Racing.html', 'Racing Tame.html', 'Line logo.html',
+  ...EXTRA_SKIP_PAGES,
 ])
 
 // ── Category inference (Thai keywords, priority order) ────────────
-// Fasteners are checked before assembly groups so "น๊อตขันแผงคอ" (a bolt)
-// lands in `hardware` — matching the old site's own "Bolts-nut" category —
-// rather than `suspension`. brake/drivetrain stay first (e.g. น๊อตสายเบรค→brake).
 const CATEGORY_RULES = [
-  ['brake', ['จานเบรค', 'ดิสเบรค', 'ปั๊มเบรค', 'ดรัมเบรค', 'สายเบรค', 'ห่วงสายเบรค', 'มือเบรค', 'ขายึดปั๊ม', 'เบรค']],
+  ['brake',      ['จานเบรค', 'ดิสเบรค', 'ปั๊มเบรค', 'ดรัมเบรค', 'สายเบรค', 'ห่วงสายเบรค', 'มือเบรค', 'ขายึดปั๊ม', 'เบรค']],
   ['drivetrain', ['สเตอร์', 'สปร็อค', 'โซ่', 'sprocket']],
-  ['hardware', ['น๊อต', 'น็อต', 'สกรู', 'แหวน', 'สลัก', 'ห่วง']],
+  ['hardware',   ['น๊อต', 'น็อต', 'สกรู', 'แหวน', 'สลัก', 'ห่วง']],
   ['suspension', ['แผงคอ', 'ตุ๊กตา', 'โช้ค', 'โช๊ค', 'ohlins', 'กระเดื่อง']],
-  ['engine', ['ฝาคลัช', 'ฝากด', 'คลัช', 'เสื้อสูบ', 'ลูกสูบ', 'วาล์ว', 'วาร์ว', 'แคม', 'ปากแตร', 'คาร์บ', 'กรองน้ำมัน', 'กรอง', 'ยกวาล์ว', 'ออยล์', 'น้ำมันเครื่อง', 'ฝาครอบเครื่อง', 'หัวเทียน']],
-  ['chassis', ['สวิงอาร์ม', 'บังโคลน', 'ขาตั้ง', 'กันล้ม', 'พักเท้า', 'เบาะ', 'แฮนด์', 'เฟรม', 'แร็ค', 'ตัวถัง', 'ที่จับ']],
-  ['accessories', ['ไฟเลี้ยว', 'กระจก', 'ขายึด', 'ฝาน้ำมัน', 'จุก', 'ฝาครอบ', 'ฝา']],
+  ['engine',     ['ฝาคลัช', 'ฝากด', 'คลัช', 'เสื้อสูบ', 'ลูกสูบ', 'วาล์ว', 'วาร์ว', 'แคม', 'ปากแตร', 'คาร์บ', 'กรองน้ำมัน', 'กรอง', 'ยกวาล์ว', 'ออยล์', 'น้ำมันเครื่อง', 'ฝาครอบเครื่อง', 'หัวเทียน']],
+  ['chassis',    ['สวิงอาร์ม', 'บังโคลน', 'ขาตั้ง', 'กันล้ม', 'พักเท้า', 'เบาะ', 'แฮนด์', 'เฟรม', 'แร็ค', 'ตัวถัง', 'ที่จับ']],
+  ['accessories',['ไฟเลี้ยว', 'กระจก', 'ขายึด', 'ฝาน้ำมัน', 'จุก', 'ฝาครอบ', 'ฝา']],
 ]
 
 const COLOR_MAP = {
@@ -117,13 +75,22 @@ function decodeEntities(s) {
     .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(+d))
 }
 
+/** Apply typo normalizations to text (case-preserving where possible). */
+function normalizeTypos(text) {
+  let s = text
+  for (const [wrong, correct] of TYPO_MAP) {
+    // case-insensitive replace of the wrong form
+    s = s.replace(new RegExp(wrong, 'gi'), correct)
+  }
+  return s
+}
+
 /** Strip a page to a linear text stream with inline IMGSRC= image markers. */
 function linearize(html) {
   html = html
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
     .replace(/<style[\s\S]*?<\/style>/gi, ' ')
     .replace(/<!--[\s\S]*?-->/g, ' ')
-    // image src has no raw spaces in the mirror (%20-encoded) → safe ASCII marker
     .replace(/<img\b[^>]*?\bsrc\s*=\s*"([^"]+)"[^>]*>/gi, (_, src) => ' IMGSRC=' + src + ' ')
     .replace(/<[^>]+>/g, ' ')
   return decodeEntities(html).replace(/[ \t\r\f\v]+/g, ' ')
@@ -151,19 +118,18 @@ function tokenize(stream, page) {
 
   TOKEN_RE.lastIndex = 0
   while ((m = TOKEN_RE.exec(stream))) {
-    // text between tokens → belongs to the open block's description
     if (m.index > last && cur && !cur.closed) cur.text += stream.slice(last, m.index)
     last = TOKEN_RE.lastIndex
 
-    if (m[1] !== undefined) {            // image — a closed block means a new product begins
+    if (m[1] !== undefined) {
       if (cur && cur.closed) push()
       open(); cur.images.push(m[1])
-    } else if (m[2] !== undefined) {     // product code
+    } else if (m[2] !== undefined) {
       if (cur && (cur.closed || cur.code !== null)) push()
       open(); cur.code = m[2].replace(/\s+/g, '')
-    } else if (m[3] !== undefined) {     // price closes the block
+    } else if (m[3] !== undefined) {
       if (cur && cur.price === null) { cur.price = parseInt(m[3].replace(/,/g, ''), 10); cur.closed = true }
-    } else if (m[4] !== undefined) {     // sold-out marker
+    } else if (m[4] !== undefined) {
       if (cur) cur.soldout = true
     }
   }
@@ -207,7 +173,7 @@ function resolveImages(srcs, pageDir) {
   const seen = new Set()
   for (const src of srcs) {
     if (IMG_JUNK.test(src)) continue
-    if (/^https?:\/\//i.test(src)) continue          // remote template assets
+    if (/^https?:\/\//i.test(src)) continue
     const rel = decodeURIComponent(src).replace(/\\/g, '/')
     const abs = path.resolve(pageDir, rel)
     const key = rel.toLowerCase()
@@ -216,6 +182,34 @@ function resolveImages(srcs, pageDir) {
     out.push({ src: rel, exists: fs.existsSync(abs) })
   }
   return out
+}
+
+/**
+ * Assign bikeModel fitment for one product using two-tier rules:
+ *   1. PAGE_ALWAYS  : source page → model(s) for all products on that page
+ *   2. KEYWORD_RULES: product text → model(s) based on keywords (any page)
+ *
+ * Keyword matching uses typo-normalized text and is case-insensitive.
+ */
+function assignFitment(page, text, existingModels) {
+  const models = new Set(existingModels)
+
+  // Tier 1 — page-level (applies to existing PAGE_ALWAYS pages that haven't
+  // been assigned yet on this call; avoids double-adding on dedup merge)
+  const pageModels = PAGE_ALWAYS[page]
+  if (Array.isArray(pageModels)) {
+    for (const m of pageModels) models.add(m)
+  }
+
+  // Tier 2 — keyword matching on normalized description text
+  const normUpper = normalizeTypos(text).toUpperCase()
+  for (const rule of KEYWORD_RULES) {
+    if (rule.keywords.some((kw) => normUpper.includes(kw.toUpperCase()))) {
+      models.add(rule.model)
+    }
+  }
+
+  return models
 }
 
 // ── Main ──────────────────────────────────────────────────────────
@@ -228,7 +222,7 @@ function main() {
 
   const files = fs.readdirSync(MIRROR).filter((f) =>
     /\.html$/i.test(f) &&
-    !/(?:8836|823c|b015|4039)\.html$/i.test(f) &&   // HTTrack dup variants
+    !/(?:8836|823c|b015|4039)\.html$/i.test(f) &&
     !/^index/i.test(f) &&
     !SKIP_PAGES.has(f) &&
     fs.statSync(path.join(MIRROR, f)).size > 2000
@@ -238,7 +232,6 @@ function main() {
   let rawCount = 0
 
   for (const file of files) {
-    const models = PAGE_MODELS[file] // undefined = unmapped page (fitment unknown)
     let html
     try { html = decode(path.join(MIRROR, file)) } catch { continue }
     const raw = tokenize(linearize(html), file)
@@ -252,13 +245,19 @@ function main() {
       if (r.code) {
         if (!/^[A-Z]{1,4}\.\d/.test(r.code)) continue
       } else {
-        // code-less block: keep only if it has a price, or a real image + text
         if (r.price === null && !(realImgs.length >= 1 && text.length >= 8)) continue
         if (realImgs.length === 0 && text.length < 8) continue
       }
+
+      // ── navigation-text filter ──
+      // Pages embed their nav menu in the linear text stream; blocks that
+      // contain menu items like "หน้าแรก" + "วิธีการชำระเงิน" are chrome,
+      // not product descriptions — drop them entirely.
+      if (text.includes('วิธีการชำระเงิน') || text.includes('วิธีการชํารเงิน') || text.includes('วิธีชำระเงิน')) continue
+      if (text.includes('หมวดหมู่สินค้า') && text.includes('หน้าแรก')) continue
+
       rawCount++
 
-      // dedup key: SKU code, else the first real product photo, else page block
       const firstImg = (realImgs[0] || imgs[0])?.src
       const key = r.code ? r.code : (firstImg ? 'IMG#' + firstImg : 'BLK#' + r.page + '#' + r.seq)
 
@@ -266,7 +265,7 @@ function main() {
         id: key,
         code: r.code,
         name_th: '',
-        name: '',                 // EN — not present on legacy site
+        name: '',
         description_th: '',
         price: null,
         priceConflict: false,
@@ -279,7 +278,7 @@ function main() {
         sourcePages: new Set(),
       }
 
-      // keep the richest description
+      // Keep the richest description (do NOT overwrite longer with shorter)
       if (text.length > rec.description_th.length) {
         rec.description_th = text
         rec.name_th = shortName(text)
@@ -287,14 +286,19 @@ function main() {
         const mat = extractMaterial(text); if (mat) rec.material = mat
         for (const c of extractColors(text)) rec.colors.add(c)
       }
-      // price (flag conflicts between pages)
+
       if (r.price !== null) {
         if (rec.price !== null && rec.price !== r.price) rec.priceConflict = true
         if (rec.price === null) rec.price = r.price
       }
       if (r.soldout) rec.inStock = false
       for (const im of imgs) if (!rec.images.some((x) => x.src === im.src)) rec.images.push(im)
-      if (Array.isArray(models)) for (const mm of models) rec.bikeModels.add(mm)
+
+      // Two-tier fitment assignment (page-level + keyword)
+      // Run on the richest available text to maximise keyword coverage
+      const richText = text.length >= rec.description_th.length ? text : rec.description_th
+      rec.bikeModels = assignFitment(file, richText, rec.bikeModels)
+
       rec.sourcePages.add(file)
       byCode.set(key, rec)
     }
@@ -333,7 +337,6 @@ function main() {
       needs_translation: r.name === '',
     }
   }).sort((a, b) => {
-    // coded products first (numeric by code), then code-less blocks by id
     if (a.code && b.code) return a.code.localeCompare(b.code, undefined, { numeric: true })
     if (a.code) return -1
     if (b.code) return 1
@@ -378,7 +381,6 @@ function main() {
   }
   fs.writeFileSync(path.join(OUT_DIR, 'legacy-report.json'), JSON.stringify(report, null, 2))
 
-  // ── console summary ──
   console.log('\n✓ Parsed ' + files.length + ' pages → ' + products.length + ' unique products (' + rawCount + ' raw blocks)')
   console.log('  complete: ' + report.complete + '   needs_review: ' + report.needsReview)
   console.log('  with price: ' + report.withPrice + '   with image: ' + report.withImages + '   with fitment: ' + report.withFitment)

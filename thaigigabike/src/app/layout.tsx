@@ -1,6 +1,21 @@
 import type { Metadata } from 'next'
+import { Barlow_Condensed, Barlow } from 'next/font/google'
 import '../styles/globals.css'
 import { CartProvider } from '@/lib/cart'
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-display',
+  display: 'swap',
+})
+
+const barlow = Barlow({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-body',
+  display: 'swap',
+})
 import { LangProvider } from '@/lib/lang'
 import { ThemeProvider } from '@/lib/theme'
 import { Navbar } from '@/components/layout/Navbar'
@@ -24,7 +39,7 @@ const themeScript = `(function(){
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="th" suppressHydrationWarning>
+    <html lang="th" suppressHydrationWarning className={`${barlowCondensed.variable} ${barlow.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

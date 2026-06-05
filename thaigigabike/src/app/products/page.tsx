@@ -1,10 +1,12 @@
 'use client'
 import { Suspense, useState, useMemo, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { Search, X } from 'lucide-react'
+import { Search, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 import { products, bikeModels, categories } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
+
+const PAGE_SIZE = 24
 
 const SORT_OPTIONS = [
   { id: 'default',    th: 'ค่าเริ่มต้น',   en: 'Default' },
@@ -13,7 +15,6 @@ const SORT_OPTIONS = [
 ] as const
 type SortId = (typeof SORT_OPTIONS)[number]['id']
 
-// Category item counts (pre-computed once)
 const CAT_COUNTS: Record<string, number> = {}
 products.forEach(p => { CAT_COUNTS[p.category] = (CAT_COUNTS[p.category] || 0) + 1 })
 
@@ -37,15 +38,88 @@ function FilterChip({ label, onRemove }: { label: string; onRemove: () => void }
   )
 }
 
+function Pagination({
+  page, totalPages, onPage, locale,
+}: {
+  page: number; totalPages: number; onPage: (p: number) => void; locale: string
+}) {
+  if (totalPages <= 1) return null
+
+  // Build page window: always show first, last, current ±2
+  const pages: (number | '…')[] = []
+  for (let i = 1; i <= totalPages; i++) {
+    if (i === 1 || i === totalPages || (i >= page - 2 && i <= page + 2)) {
+      pages.push(i)
+    } else if (pages[pages.length - 1] !== '…') {
+      pages.push('…')
+    }
+  }
+
+  const btnBase: React.CSSProperties = {
+    minWidth: 36, height: 36, borderRadius: 8, fontSize: 14, fontWeight: 500,
+    border: '0.5px solid var(--border2)', cursor: 'pointer',
+    display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+    transition: 'all .15s',
+  }
+
+  return (
+    <nav aria-label={locale === 'th' ? 'หน้าสินค้า' : 'Product pages'}
+      style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, padding: '32px 0 8px', flexWrap: 'wrap' }}>
+
+      <button
+        onClick={() => onPage(page - 1)}
+        disabled={page === 1}
+        aria-label="Previous page"
+        style={{ ...btnBase, background: 'var(--bg3)', color: 'var(--text2)', opacity: page === 1 ? 0.35 : 1, padding: '0 10px' }}
+      >
+        <ChevronLeft size={16} />
+      </button>
+
+      {pages.map((p, i) =>
+        p === '…' ? (
+          <span key={`ellipsis-${i}`} style={{ width: 28, textAlign: 'center', color: 'var(--text3)', fontSize: 14 }}>…</span>
+        ) : (
+          <button
+            key={p}
+            onClick={() => onPage(p as number)}
+            aria-label={`Page ${p}`}
+            aria-current={p === page ? 'page' : undefined}
+            style={{
+              ...btnBase,
+              background: p === page ? 'var(--green)' : 'var(--bg3)',
+              color:      p === page ? '#fff'         : 'var(--text2)',
+              borderColor: p === page ? 'var(--green)' : 'var(--border2)',
+              fontWeight: p === page ? 700 : 500,
+            }}
+          >
+            {p}
+          </button>
+        )
+      )}
+
+      <button
+        onClick={() => onPage(page + 1)}
+        disabled={page === totalPages}
+        aria-label="Next page"
+        style={{ ...btnBase, background: 'var(--bg3)', color: 'var(--text2)', opacity: page === totalPages ? 0.35 : 1, padding: '0 10px' }}
+      >
+        <ChevronRight size={16} />
+      </button>
+    </nav>
+  )
+}
+
 function ProductsContent() {
   const searchParams = useSearchParams()
   const { t, locale } = useLang()
 
-  const [query, setQuery]           = useState(searchParams.get('q') || '')
+  const [query, setQuery]               = useState(searchParams.get('q') || '')
   const [selectedBike, setSelectedBike] = useState(searchParams.get('bike') || 'all')
   const [selectedCat, setSelectedCat]   = useState(searchParams.get('cat') || 'all')
-  const [sortBy, setSortBy]         = useState<SortId>('default')
+  const [sortBy, setSortBy]             = useState<SortId>('default')
+  const [page, setPage]                 = useState(1)
 
+  // Sync initial URL params
   useEffect(() => {
     const q    = searchParams.get('q')
     const bike = searchParams.get('bike')
@@ -70,8 +144,19 @@ function ProductsContent() {
     return list
   }, [query, selectedBike, selectedCat, sortBy])
 
+  // Reset to page 1 whenever filters/sort change
+  useEffect(() => { setPage(1) }, [query, selectedBike, selectedCat, sortBy])
+
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
+  const paginated  = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+
   const hasFilters = query !== '' || selectedBike !== 'all' || selectedCat !== 'all'
   const clearAll = () => { setQuery(''); setSelectedBike('all'); setSelectedCat('all'); setSortBy('default') }
+
+  const handlePage = (p: number) => {
+    setPage(Math.max(1, Math.min(p, totalPages)))
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   const ALL_CATS = [
     { id: 'all', th: 'ทั้งหมด', en: 'All', count: products.length },
@@ -82,10 +167,13 @@ function ProductsContent() {
     ...bikeModels,
   ]
 
-  const activeCatLabel = ALL_CATS.find(c => c.id === selectedCat)?.[locale === 'th' ? 'th' : 'en']
+  const activeCatLabel  = ALL_CATS.find(c => c.id === selectedCat)?.[locale === 'th' ? 'th' : 'en']
   const activeBikeLabel = selectedBike === 'all' ? '' : bikeModels.find(b => b.id === selectedBike)
     ? `${bikeModels.find(b => b.id === selectedBike)!.brand} ${bikeModels.find(b => b.id === selectedBike)!.model}`
     : ''
+
+  const pageStart = filtered.length === 0 ? 0 : (page - 1) * PAGE_SIZE + 1
+  const pageEnd   = Math.min(page * PAGE_SIZE, filtered.length)
 
   return (
     <div>
@@ -216,10 +304,25 @@ function ProductsContent() {
           {/* Results bar */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, flexWrap: 'wrap', gap: 8 }}>
             <p style={{ fontSize: 15, color: 'var(--text2)' }}>
-              <span style={{ fontWeight: 700, color: 'var(--text)', fontFamily: 'var(--font-display)', fontSize: 17 }}>
-                {filtered.length}
-              </span>
-              {' '}{locale === 'th' ? 'รายการ' : 'items'}
+              {filtered.length > 0 ? (
+                <>
+                  <span style={{ fontWeight: 700, color: 'var(--text)', fontFamily: 'var(--font-display)', fontSize: 17 }}>
+                    {pageStart}–{pageEnd}
+                  </span>
+                  {' '}{locale === 'th' ? 'จาก' : 'of'}{' '}
+                  <span style={{ fontWeight: 700, color: 'var(--text)', fontFamily: 'var(--font-display)', fontSize: 17 }}>
+                    {filtered.length}
+                  </span>
+                  {' '}{locale === 'th' ? 'รายการ' : 'items'}
+                  {totalPages > 1 && (
+                    <span style={{ color: 'var(--text3)', fontSize: 13 }}>
+                      {' '}· {locale === 'th' ? `หน้า ${page}/${totalPages}` : `Page ${page}/${totalPages}`}
+                    </span>
+                  )}
+                </>
+              ) : (
+                <span style={{ fontWeight: 700, color: 'var(--text)', fontFamily: 'var(--font-display)', fontSize: 17 }}>0</span>
+              )}
             </p>
             {hasFilters && (
               <button
@@ -261,9 +364,12 @@ function ProductsContent() {
               </button>
             </div>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(182px, 1fr))', gap: 10 }}>
-              {filtered.map(p => <ProductCard key={p.id} product={p} />)}
-            </div>
+            <>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(182px, 1fr))', gap: 10 }}>
+                {paginated.map(p => <ProductCard key={p.id} product={p} />)}
+              </div>
+              <Pagination page={page} totalPages={totalPages} onPage={handlePage} locale={locale} />
+            </>
           )}
         </div>
       </div>
@@ -276,11 +382,10 @@ export default function ProductsPage() {
     <Suspense fallback={
       <div className="section">
         <div className="container" style={{ color: 'var(--text3)' }}>
-          {/* skeleton header */}
           <div style={{ height: 48, background: 'var(--bg3)', borderRadius: 8, marginBottom: 16, maxWidth: 600 }} />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(182px, 1fr))', gap: 10 }}>
-            {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} style={{ height: 240, background: 'var(--bg3)', borderRadius: 12, opacity: 1 - i * 0.06 }} />
+            {Array.from({ length: 24 }).map((_, i) => (
+              <div key={i} style={{ height: 240, background: 'var(--bg3)', borderRadius: 12, opacity: 1 - i * 0.04 }} />
             ))}
           </div>
         </div>

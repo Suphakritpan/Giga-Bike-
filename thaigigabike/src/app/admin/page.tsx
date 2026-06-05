@@ -26,7 +26,7 @@ type Order = {
   recipient_name: string; recipient_phone: string; recipient_address: string
   shipping_method: string; shipping_fee: number; payment_method: string
   items: OrderItem[]; subtotal: number; cod_fee: number; total: number
-  slip_url: string | null; tracking_no: string | null
+  slip_url: string | null; slip_path: string | null; tracking_no: string | null
 }
 
 const STATUS_COLORS: Record<OrderStatus, string> = {
@@ -197,6 +197,29 @@ export default function AdminPage() {
   const updateOrderStatus = async (id: string, status: OrderStatus) => {
     setOrders(prev => prev.map(o => o.id === id ? { ...o, status } : o))
     await supabase.from('orders').update({ status }).eq('id', id)
+  }
+
+  const [slipLoading, setSlipLoading] = useState<string | null>(null)
+  // Open the order's payment slip via a short-lived signed URL (private bucket).
+  const viewSlip = async (orderId: string) => {
+    setSlipLoading(orderId)
+    // Open the tab synchronously so the browser doesn't block it after the await.
+    const w = window.open('', '_blank')
+    try {
+      const res = await fetch(`/api/admin/orders/${encodeURIComponent(orderId)}/slip-url`, { method: 'POST' })
+      const data = await res.json()
+      if (res.ok && data.signedUrl) {
+        if (w) w.location.href = data.signedUrl
+      } else {
+        if (w) w.close()
+        alert(data.error === 'No slip on this order' ? 'ออเดอร์นี้ไม่มีสลิป' : 'ไม่สามารถเปิดสลิปได้')
+      }
+    } catch {
+      if (w) w.close()
+      alert('ไม่สามารถเปิดสลิปได้')
+    } finally {
+      setSlipLoading(null)
+    }
   }
 
   const saveTracking = async (orderId: string) => {
@@ -591,7 +614,15 @@ export default function AdminPage() {
                         <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 2 }}>การชำระ</div>
                         <div style={{ fontSize: 14 }}>
                           {o.payment_method === 'transfer' ? 'โอนเงิน' : 'COD'}
-                          {o.slip_url && <a href={o.slip_url} target="_blank" rel="noopener noreferrer" style={{ marginLeft: 8, fontSize: 12, color: 'var(--green)', textDecoration: 'underline' }}>ดูสลิป</a>}
+                          {(o.slip_path || o.slip_url) && (
+                            <button
+                              onClick={() => viewSlip(o.id)}
+                              disabled={slipLoading === o.id}
+                              style={{ marginLeft: 8, fontSize: 12, color: 'var(--green)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline', padding: 0 }}
+                            >
+                              {slipLoading === o.id ? 'กำลังเปิด...' : 'ดูสลิป'}
+                            </button>
+                          )}
                         </div>
                       </div>
                       <div>
