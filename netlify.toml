@@ -1,6 +1,6 @@
 [build]
   base    = "thaigigabike"
-  command = "npm ci && npm run build"
+  command = "npm ci && npm run build-catalog && npm run build"
   publish = ".next"
 
 [build.environment]

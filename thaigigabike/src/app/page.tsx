@@ -1,10 +1,76 @@
 'use client'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
-import { ChevronRight, ChevronLeft, Zap, Shield, Truck, Award } from 'lucide-react'
+import { ChevronRight, ChevronLeft, Zap, Shield, Truck, Award, Star, PenLine } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 import { products, bikeModels, categories } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
+
+type Review = { id: string; reviewer_name: string; rating: number; comment: string | null; product_id: string | null }
+
+function ReviewsStrip() {
+  const { locale } = useLang()
+  const [reviews, setReviews] = useState<Review[]>([])
+
+  useEffect(() => {
+    fetch('/api/reviews?page=1')
+      .then(r => r.json())
+      .then(d => setReviews((d.reviews ?? []).slice(0, 4)))
+      .catch(() => {})
+  }, [])
+
+  if (reviews.length === 0) return null
+
+  return (
+    <section style={{ background: 'var(--bg2)', borderTop: '0.5px solid var(--border)', padding: '36px 0' }}>
+      <div className="container">
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16, flexWrap: 'wrap', gap: 8 }}>
+          <h2 style={{ fontSize: 24, fontWeight: 800 }}>
+            {locale === 'th' ? 'รีวิวจากลูกค้า' : 'Customer Reviews'}
+          </h2>
+          <Link href="/reviews" style={{ fontSize: 14, color: 'var(--green)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4 }}>
+            {locale === 'th' ? 'ดูทั้งหมด' : 'See all'} <ChevronRight size={14} />
+          </Link>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 10 }}>
+          {reviews.map(r => (
+            <div key={r.id} style={{
+              background: 'var(--bg)', border: '0.5px solid var(--border)',
+              borderRadius: 12, padding: '16px 18px',
+            }}>
+              <div style={{ display: 'flex', gap: 2, marginBottom: 6 }}>
+                {[1,2,3,4,5].map(n => (
+                  <Star key={n} size={13} fill={r.rating >= n ? '#f59e0b' : 'none'} color={r.rating >= n ? '#f59e0b' : 'var(--border2)'} />
+                ))}
+              </div>
+              {r.comment && (
+                <p style={{ fontSize: 13, color: 'var(--text2)', lineHeight: 1.6, marginBottom: 8,
+                  overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical',
+                }}>
+                  {r.comment}
+                </p>
+              )}
+              <div style={{ fontSize: 12, color: 'var(--text3)', fontWeight: 600 }}>{r.reviewer_name}</div>
+              {r.product_id && <div style={{ fontSize: 11, color: 'var(--green)' }}>{r.product_id}</div>}
+            </div>
+          ))}
+          {/* Write review CTA card */}
+          <Link href="/reviews" style={{
+            background: 'rgba(34,197,94,.06)', border: '1px dashed rgba(34,197,94,.35)',
+            borderRadius: 12, padding: '16px 18px', textDecoration: 'none',
+            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+            gap: 8, color: 'var(--green)', cursor: 'pointer',
+          }}>
+            <PenLine size={22} />
+            <span style={{ fontSize: 14, fontWeight: 700 }}>
+              {locale === 'th' ? 'เขียนรีวิว' : 'Write a review'}
+            </span>
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 // Pick products that have images for the carousel
 const SHOWCASE = products
@@ -267,6 +333,9 @@ export default function HomePage() {
           )}
         </div>
       </section>
+
+      {/* Reviews social proof */}
+      <ReviewsStrip />
     </div>
   )
 }

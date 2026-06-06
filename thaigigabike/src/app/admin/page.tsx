@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import {
   Package, ShoppingBag, TrendingUp, Plus, Edit, Trash2, Download,
   ChevronDown, Minus, AlertTriangle, CheckCircle, XCircle, Boxes,
-  LogOut, Search, Zap, Bell,
+  LogOut, Search, Zap, Bell, MessageCircle, Star,
 } from 'lucide-react'
 import { products as initialProducts } from '@/data/products'
 import type { Product } from '@/data/products'
@@ -13,7 +13,17 @@ import { createClient } from '@/lib/supabase/client'
 import { toCsvRow } from '@/lib/csv'
 
 type OrderStatus = 'pending' | 'paid' | 'shipping' | 'delivered' | 'cancelled'
-type Tab = 'products' | 'orders' | 'stock'
+type Tab = 'products' | 'orders' | 'stock' | 'messages' | 'reviews'
+
+type AdminMessage = {
+  id: string; sender_name: string; sender_email: string; sender_phone: string | null
+  subject: string | null; body: string; product_code: string | null
+  status: 'new' | 'replied' | 'closed'; created_at: string
+}
+type AdminReview = {
+  id: string; product_id: string | null; reviewer_name: string
+  rating: number; comment: string | null; published: boolean; created_at: string
+}
 
 const LOW_STOCK_THRESHOLD = 5
 const PAGE_SIZE = 50
@@ -89,6 +99,11 @@ export default function AdminPage() {
   const [stockPage, setStockPage]       = useState(1)
   const [orderSearch, setOrderSearch]   = useState('')
 
+  const [adminMessages, setAdminMessages]   = useState<AdminMessage[]>([])
+  const [loadingMessages, setLoadingMessages] = useState(false)
+  const [adminReviews, setAdminReviews]     = useState<AdminReview[]>([])
+  const [loadingReviews, setLoadingReviews] = useState(false)
+
   const [editingTracking, setEditingTracking] = useState<string | null>(null)
   const [trackingInput, setTrackingInput]     = useState('')
   const [savingTracking, setSavingTracking]   = useState(false)
@@ -112,30 +127,36 @@ export default function AdminPage() {
   // ─── Load products ───
   const loadProducts = useCallback(async () => {
     setLoadingProducts(true)
-    const { data, error } = await supabase.from('products').select('*').order('created_at')
-    if (!error && data && data.length > 0) {
-      setProducts(data.map((r: Record<string, unknown>) => ({
-        id: r.id as string, code: r.code as string,
-        name: r.name as string, nameTh: r.name_th as string,
-        price: r.price as number, category: r.category as string,
-        bikeModels: r.bike_models as string[], colors: r.colors as string[],
-        inStock: r.in_stock as boolean, stockCount: r.stock_count as number,
-        material: r.material as string, description: r.description as string,
-        descriptionTh: r.description_th as string, images: r.images as string[],
-        featured: r.featured as boolean, published: (r.published as boolean) ?? true,
-        reviewReasons: (r.review_reasons as string[]) ?? [],
-      })))
+    const res = await fetch('/api/admin/products')
+    if (res.ok) {
+      const json = await res.json()
+      if (json.products?.length > 0) {
+        setProducts(json.products.map((r: Record<string, unknown>) => ({
+          id: r.id as string, code: r.code as string,
+          name: r.name as string, nameTh: r.name_th as string,
+          price: r.price as number, category: r.category as string,
+          bikeModels: r.bike_models as string[], colors: r.colors as string[],
+          inStock: r.in_stock as boolean, stockCount: r.stock_count as number,
+          material: r.material as string, description: r.description as string,
+          descriptionTh: r.description_th as string, images: r.images as string[],
+          featured: r.featured as boolean, published: (r.published as boolean) ?? true,
+          reviewReasons: (r.review_reasons as string[]) ?? [],
+        })))
+      }
     }
     setLoadingProducts(false)
-  }, [supabase])
+  }, [])
 
   // ─── Load orders ───
   const loadOrders = useCallback(async () => {
     setLoadingOrders(true)
-    const { data, error } = await supabase.from('orders').select('*').order('created_at', { ascending: false })
-    if (!error && data) setOrders(data as Order[])
+    const res = await fetch('/api/admin/orders')
+    if (res.ok) {
+      const json = await res.json()
+      if (json.orders) setOrders(json.orders as Order[])
+    }
     setLoadingOrders(false)
-  }, [supabase])
+  }, [])
 
   useEffect(() => {
     if (!authChecked) return
@@ -154,15 +175,24 @@ export default function AdminPage() {
       images: data.images, featured: data.featured, published: data.published,
       review_reasons: data.reviewReasons ?? [],
     }
-    const { error } = await supabase.from('products').upsert(row)
-    if (error) throw new Error(error.message)
+    const res = await fetch('/api/admin/products', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(row),
+    })
+    if (!res.ok) {
+      const json = await res.json()
+      throw new Error(json.error || 'Failed to save product')
+    }
     await loadProducts()
   }
 
   const handleDelete = async (product: Product) => {
     setDeleting(true)
-    const { error } = await supabase.from('products').delete().eq('id', product.id)
-    if (!error) setProducts(prev => prev.filter(p => p.id !== product.id))
+    const res = await fetch(`/api/admin/products/${encodeURIComponent(product.id)}`, {
+      method: 'DELETE',
+    })
+    if (res.ok) setProducts(prev => prev.filter(p => p.id !== product.id))
     setDeleteConfirm(null)
     setDeleting(false)
   }
@@ -171,18 +201,28 @@ export default function AdminPage() {
   const openEdit = (p: Product) => { setEditingProduct(p); setModalOpen(true) }
 
   // ─── Stock ───
+  const patchStock = (id: string, stockCount: number, inStock: boolean) =>
+    fetch(`/api/admin/products/${encodeURIComponent(id)}/stock`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ stock_count: stockCount, in_stock: inStock }),
+    })
+
   const adjustStock = async (id: string, delta: number) => {
     const p = products.find(x => x.id === id)
     if (!p) return
     const next = Math.max(0, p.stockCount + delta)
     setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: next, inStock: next > 0 } : x))
-    await supabase.from('products').update({ stock_count: next, in_stock: next > 0 }).eq('id', id)
+    const res = await patchStock(id, next, next > 0)
+    if (!res.ok) setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: p.stockCount, inStock: p.inStock } : x))
   }
 
   const setStock = async (id: string, value: number) => {
     const count = Math.max(0, isNaN(value) ? 0 : Math.floor(value))
-    setProducts(prev => prev.map(p => p.id === id ? { ...p, stockCount: count, inStock: count > 0 } : p))
-    await supabase.from('products').update({ stock_count: count, in_stock: count > 0 }).eq('id', id)
+    const p = products.find(x => x.id === id)
+    setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: count, inStock: count > 0 } : x))
+    const res = await patchStock(id, count, count > 0)
+    if (!res.ok && p) setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: p.stockCount, inStock: p.inStock } : x))
   }
 
   const toggleInStock = async (id: string) => {
@@ -191,13 +231,18 @@ export default function AdminPage() {
     const next = !p.inStock
     const count = next && p.stockCount === 0 ? 1 : p.stockCount
     setProducts(prev => prev.map(x => x.id === id ? { ...x, inStock: next, stockCount: count } : x))
-    await supabase.from('products').update({ in_stock: next, stock_count: count }).eq('id', id)
+    const res = await patchStock(id, count, next)
+    if (!res.ok) setProducts(prev => prev.map(x => x.id === id ? { ...x, inStock: p.inStock, stockCount: p.stockCount } : x))
   }
 
   // ─── Orders ───
   const updateOrderStatus = async (id: string, status: OrderStatus) => {
     setOrders(prev => prev.map(o => o.id === id ? { ...o, status } : o))
-    await supabase.from('orders').update({ status }).eq('id', id)
+    await fetch(`/api/admin/orders/${encodeURIComponent(id)}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status }),
+    })
   }
 
   const [slipLoading, setSlipLoading] = useState<string | null>(null)
@@ -226,11 +271,60 @@ export default function AdminPage() {
   const saveTracking = async (orderId: string) => {
     const no = trackingInput.trim()
     setSavingTracking(true)
-    await supabase.from('orders').update({ tracking_no: no || null, status: no ? 'shipping' : undefined }).eq('id', orderId)
+    const patch: Record<string, unknown> = { tracking_no: no || null }
+    if (no) patch.status = 'shipping'
+    await fetch(`/api/admin/orders/${encodeURIComponent(orderId)}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(patch),
+    })
     setOrders(prev => prev.map(o => o.id === orderId ? { ...o, tracking_no: no || null, status: no ? 'shipping' : o.status } : o))
     setEditingTracking(null)
     setSavingTracking(false)
   }
+
+  // ─── Messages ───
+  const loadMessages = useCallback(async () => {
+    setLoadingMessages(true)
+    const res = await fetch('/api/admin/messages')
+    if (res.ok) { const j = await res.json(); setAdminMessages(j.messages ?? []) }
+    setLoadingMessages(false)
+  }, [])
+
+  const markMessage = async (id: string, status: AdminMessage['status']) => {
+    setAdminMessages(prev => prev.map(m => m.id === id ? { ...m, status } : m))
+    await fetch(`/api/admin/messages/${encodeURIComponent(id)}`, {
+      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status }),
+    })
+  }
+
+  // ─── Reviews ───
+  const loadReviews = useCallback(async () => {
+    setLoadingReviews(true)
+    const res = await fetch('/api/admin/reviews')
+    if (res.ok) { const j = await res.json(); setAdminReviews(j.reviews ?? []) }
+    setLoadingReviews(false)
+  }, [])
+
+  const toggleReviewPublished = async (id: string, published: boolean) => {
+    setAdminReviews(prev => prev.map(r => r.id === id ? { ...r, published } : r))
+    await fetch(`/api/admin/reviews/${encodeURIComponent(id)}`, {
+      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ published }),
+    })
+  }
+
+  const deleteReview = async (id: string) => {
+    await fetch(`/api/admin/reviews/${encodeURIComponent(id)}`, { method: 'DELETE' })
+    setAdminReviews(prev => prev.filter(r => r.id !== id))
+  }
+
+  // Load messages/reviews when switching to their tabs
+  useEffect(() => {
+    if (tab === 'messages' && adminMessages.length === 0) loadMessages()
+    if (tab === 'reviews'  && adminReviews.length === 0)  loadReviews()
+  }, [tab, adminMessages.length, adminReviews.length, loadMessages, loadReviews])
 
   const handleLogout = async () => { await supabase.auth.signOut(); router.push('/admin/login') }
 
@@ -284,10 +378,15 @@ export default function AdminPage() {
     return o.id.toLowerCase().includes(q) || o.recipient_name.toLowerCase().includes(q) || o.recipient_phone.includes(q)
   })
 
+  const newMessagesCount = adminMessages.filter(m => m.status === 'new').length
+  const pendingReviewsCount = adminReviews.filter(r => !r.published).length
+
   const TABS: { id: Tab; label: string; count?: number }[] = [
-    { id: 'products', label: 'สินค้า', count: products.length },
-    { id: 'stock',    label: 'สต็อก',  count: outOfStock + lowStock > 0 ? outOfStock + lowStock : undefined },
-    { id: 'orders',   label: 'ออเดอร์', count: pendingCount > 0 ? pendingCount : undefined },
+    { id: 'products', label: 'สินค้า',    count: products.length },
+    { id: 'stock',    label: 'สต็อก',     count: outOfStock + lowStock > 0 ? outOfStock + lowStock : undefined },
+    { id: 'orders',   label: 'ออเดอร์',   count: pendingCount > 0 ? pendingCount : undefined },
+    { id: 'messages', label: 'ข้อความ',   count: newMessagesCount > 0 ? newMessagesCount : undefined },
+    { id: 'reviews',  label: 'รีวิว',     count: pendingReviewsCount > 0 ? pendingReviewsCount : undefined },
   ]
 
   // ─── Loading / Auth check ───
@@ -671,6 +770,160 @@ export default function AdminPage() {
             )}
           </div>
         )}
+        {/* ── Messages tab ──────────────────────── */}
+        {tab === 'messages' && (
+          <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
+              <span style={{ fontSize: 14, color: 'var(--text2)' }}>
+                {adminMessages.length} ข้อความ · {newMessagesCount} ใหม่
+              </span>
+              <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }} onClick={loadMessages}>
+                รีเฟรช
+              </button>
+            </div>
+            {loadingMessages ? (
+              <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
+            ) : adminMessages.length === 0 ? (
+              <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
+                <MessageCircle size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
+                ยังไม่มีข้อความ
+              </div>
+            ) : (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {adminMessages.map(msg => (
+                  <div key={msg.id} style={{
+                    background: 'var(--bg2)', border: `0.5px solid ${msg.status === 'new' ? 'rgba(34,197,94,.4)' : 'var(--border)'}`,
+                    borderLeft: `3px solid ${msg.status === 'new' ? '#22c55e' : msg.status === 'replied' ? '#3b82f6' : 'var(--border2)'}`,
+                    borderRadius: 10, padding: '14px 18px',
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
+                      <div>
+                        <div style={{ fontWeight: 700, fontSize: 15 }}>{msg.sender_name}</div>
+                        <div style={{ fontSize: 13, color: 'var(--text3)' }}>
+                          {msg.sender_email}
+                          {msg.sender_phone && ` · ${msg.sender_phone}`}
+                          {msg.product_code && <span style={{ color: 'var(--green)', marginLeft: 6 }}>รหัส: {msg.product_code}</span>}
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                        <span style={{
+                          fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 999,
+                          background: msg.status === 'new' ? 'rgba(34,197,94,.15)' : msg.status === 'replied' ? 'rgba(59,130,246,.15)' : 'var(--bg3)',
+                          color: msg.status === 'new' ? '#22c55e' : msg.status === 'replied' ? '#3b82f6' : 'var(--text3)',
+                        }}>
+                          {msg.status === 'new' ? 'ใหม่' : msg.status === 'replied' ? 'ตอบแล้ว' : 'ปิด'}
+                        </span>
+                        <span style={{ fontSize: 12, color: 'var(--text3)' }}>
+                          {new Date(msg.created_at).toLocaleDateString('th-TH')}
+                        </span>
+                      </div>
+                    </div>
+                    {msg.subject && <div style={{ fontSize: 13, color: 'var(--text2)', marginTop: 8, fontWeight: 600 }}>{msg.subject}</div>}
+                    <p style={{ fontSize: 14, color: 'var(--text2)', marginTop: 8, lineHeight: 1.65, whiteSpace: 'pre-wrap' }}>{msg.body}</p>
+                    <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+                      <a href={`mailto:${msg.sender_email}?subject=Re: ${msg.subject || 'ข้อความจาก GigaBike'}`}
+                        style={{
+                          fontSize: 13, padding: '5px 12px', borderRadius: 7,
+                          background: '#3b82f6', color: '#fff', textDecoration: 'none', fontWeight: 600,
+                        }}>
+                        ตอบกลับ Email
+                      </a>
+                      {msg.status !== 'replied' && (
+                        <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }}
+                          onClick={() => markMessage(msg.id, 'replied')}>
+                          ✓ ทำเครื่องหมายตอบแล้ว
+                        </button>
+                      )}
+                      {msg.status !== 'closed' && (
+                        <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px', color: 'var(--text3)' }}
+                          onClick={() => markMessage(msg.id, 'closed')}>
+                          ปิด
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ── Reviews tab ───────────────────────── */}
+        {tab === 'reviews' && (
+          <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
+              <span style={{ fontSize: 14, color: 'var(--text2)' }}>
+                {adminReviews.length} รีวิว · {pendingReviewsCount} รอ approve
+              </span>
+              <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }} onClick={loadReviews}>
+                รีเฟรช
+              </button>
+            </div>
+            {loadingReviews ? (
+              <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
+            ) : adminReviews.length === 0 ? (
+              <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
+                <Star size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
+                ยังไม่มีรีวิว
+              </div>
+            ) : (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {adminReviews.map(rev => (
+                  <div key={rev.id} style={{
+                    background: 'var(--bg2)',
+                    border: `0.5px solid ${!rev.published ? 'rgba(249,115,22,.35)' : 'var(--border)'}`,
+                    borderLeft: `3px solid ${!rev.published ? '#f97316' : '#22c55e'}`,
+                    borderRadius: 10, padding: '14px 18px',
+                  }}>
+                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
+                      <div>
+                        <div style={{ fontWeight: 700, fontSize: 15 }}>{rev.reviewer_name}</div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 3 }}>
+                          {Array.from({ length: 5 }, (_, i) => (
+                            <Star key={i} size={13} fill={rev.rating > i ? '#f59e0b' : 'none'} color={rev.rating > i ? '#f59e0b' : 'var(--border2)'} />
+                          ))}
+                          {rev.product_id && (
+                            <span style={{ fontSize: 12, color: 'var(--green)', marginLeft: 4 }}>{rev.product_id}</span>
+                          )}
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                        <span style={{
+                          fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 999,
+                          background: rev.published ? 'rgba(34,197,94,.15)' : 'rgba(249,115,22,.15)',
+                          color: rev.published ? '#22c55e' : '#f97316',
+                        }}>
+                          {rev.published ? 'เผยแพร่' : 'รอ approve'}
+                        </span>
+                        <span style={{ fontSize: 12, color: 'var(--text3)' }}>
+                          {new Date(rev.created_at).toLocaleDateString('th-TH')}
+                        </span>
+                      </div>
+                    </div>
+                    {rev.comment && <p style={{ fontSize: 14, color: 'var(--text2)', marginTop: 8, lineHeight: 1.65 }}>{rev.comment}</p>}
+                    <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+                      <button
+                        onClick={() => toggleReviewPublished(rev.id, !rev.published)}
+                        style={{
+                          fontSize: 13, padding: '5px 12px', borderRadius: 7, cursor: 'pointer',
+                          background: rev.published ? 'var(--bg3)' : '#22c55e',
+                          color: rev.published ? 'var(--text2)' : '#fff',
+                          border: '0.5px solid var(--border2)', fontWeight: 600,
+                        }}>
+                        {rev.published ? 'ซ่อน' : '✓ Approve'}
+                      </button>
+                      <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px', color: 'var(--red)' }}
+                        onClick={() => deleteReview(rev.id)}>
+                        ลบ
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
       </div>
 
       {/* Product modal */}

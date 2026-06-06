@@ -21,6 +21,7 @@ import { ThemeProvider } from '@/lib/theme'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { PageLoader } from '@/components/PageLoader'
+import { LineFloatButton } from '@/components/layout/LineFloatButton'
 
 export const metadata: Metadata = {
   title: 'ThaiGigaBike — CNC Racing Parts',
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 {children}
               </main>
               <Footer />
+              <LineFloatButton />
             </CartProvider>
           </LangProvider>
         </ThemeProvider>

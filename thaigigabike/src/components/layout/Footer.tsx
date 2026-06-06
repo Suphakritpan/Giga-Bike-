@@ -47,6 +47,24 @@ export function Footer() {
 
           <div>
             <h4 style={{ fontSize: 16, fontWeight: 600, color: 'var(--text)', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '.06em' }}>
+              {t.nav.support}
+            </h4>
+            {[
+              { href: '/search',        label: t.nav.search.split(' ')[0] === 'ค้นหา' ? 'ค้นหาสินค้า' : 'Search' },
+              { href: '/support',       label: t.nav.support },
+              { href: '/notifications', label: t.nav.notifications },
+              { href: '/messages',      label: t.nav.messages },
+              { href: '/reviews',       label: t.nav.reviews },
+              { href: '/order',         label: t.nav.trackOrder },
+            ].map(item => (
+              <Link key={item.href} href={item.href} style={{ display: 'block', fontSize: 15, color: 'var(--text2)', textDecoration: 'none', marginBottom: 7 }}>
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          <div>
+            <h4 style={{ fontSize: 16, fontWeight: 600, color: 'var(--text)', marginBottom: 12, textTransform: 'uppercase', letterSpacing: '.06em' }}>
               {t.nav.contact}
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -82,11 +100,13 @@ export function Footer() {
         <div style={{ borderTop: '0.5px solid var(--border)', paddingTop: 20, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
           <p style={{ fontSize: 14, color: 'var(--text3)' }}>© 2006–{new Date().getFullYear()} GIGA BIKE FACTORY — ThaiGigaBike. All rights reserved.</p>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <Link href="/racing" style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.racing}</Link>
-            <Link href="/dealer" style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.dealer}</Link>
-            <Link href="/payment" style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.payment}</Link>
-            <Link href="/order" style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.trackOrder}</Link>
-            <Link href="/contact" style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.contact}</Link>
+            <Link href="/racing"        style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.racing}</Link>
+            <Link href="/dealer"        style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.dealer}</Link>
+            <Link href="/payment"       style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.payment}</Link>
+            <Link href="/support"       style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.support}</Link>
+            <Link href="/reviews"       style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.reviews}</Link>
+            <Link href="/order"         style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.trackOrder}</Link>
+            <Link href="/contact"       style={{ fontSize: 14, color: 'var(--text3)', textDecoration: 'none' }}>{t.nav.contact}</Link>
           </div>
         </div>
       </div>

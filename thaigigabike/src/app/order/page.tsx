@@ -3,7 +3,7 @@ import { Suspense, useState, useEffect, useRef } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import {
   Search, CheckCircle, Truck, XCircle, Clock, Check,
-  Mail, RefreshCw, Lock, Package,
+  Mail, RefreshCw, Lock, Package, CalendarCheck,
 } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 
@@ -400,6 +400,33 @@ function OrderContent() {
                     <span style={{ color: 'var(--green)', fontWeight: 600, fontFamily: 'var(--font-display)' }}>
                       {order.tracking_no}
                     </span>
+                    {order.shipping_method === 'kerry' && (
+                      <a
+                        href={`https://th.kerryexpress.com/en/track/?track=${encodeURIComponent(order.tracking_no)}`}
+                        target="_blank" rel="noopener noreferrer"
+                        style={{ marginLeft: 10, fontSize: 13, color: 'var(--green)', textDecoration: 'underline' }}
+                      >
+                        {locale === 'th' ? 'ติดตามพัสดุ Kerry →' : 'Track on Kerry →'}
+                      </a>
+                    )}
+                    {order.shipping_method === 'flash' && (
+                      <a
+                        href={`https://www.flashexpress.co.th/tracking/?se=${encodeURIComponent(order.tracking_no)}`}
+                        target="_blank" rel="noopener noreferrer"
+                        style={{ marginLeft: 10, fontSize: 13, color: 'var(--green)', textDecoration: 'underline' }}
+                      >
+                        {locale === 'th' ? 'ติดตามพัสดุ Flash →' : 'Track on Flash →'}
+                      </a>
+                    )}
+                    {order.shipping_method !== 'kerry' && order.shipping_method !== 'flash' && order.shipping_method !== 'pickup' && (
+                      <a
+                        href={`https://track.aftership.com/${encodeURIComponent(order.tracking_no)}`}
+                        target="_blank" rel="noopener noreferrer"
+                        style={{ marginLeft: 10, fontSize: 13, color: 'var(--green)', textDecoration: 'underline' }}
+                      >
+                        {locale === 'th' ? 'ติดตามพัสดุ →' : 'Track shipment →'}
+                      </a>
+                    )}
                   </div>
                 ) : (
                   <div style={{ color: 'var(--text3)', fontSize: 14 }}>
@@ -409,11 +436,157 @@ function OrderContent() {
               </div>
             </div>
 
-            <button className="btn-ghost" onClick={handleReset} style={{ fontSize: 15 }}>
+            {/* Vertical Status Timeline */}
+            <OrderTimeline order={order} locale={locale} />
+
+            <button className="btn-ghost" onClick={handleReset} style={{ fontSize: 15, marginTop: 8 }}>
               {locale === 'th' ? '← ค้นหาออเดอร์อื่น' : '← Search another order'}
             </button>
           </div>
         )}
+      </div>
+    </div>
+  )
+}
+
+// ── Status timeline helpers ────────────────────────────────────────────────
+const STATUS_META: Record<OrderStatus, {
+  iconDone: React.ReactNode
+  colorDone: string
+  labelTh: string
+  labelEn: string
+  descTh: string
+  descEn: string
+}> = {
+  pending: {
+    iconDone: <Clock size={16} />,
+    colorDone: 'var(--text3)',
+    labelTh: 'รอชำระเงิน',
+    labelEn: 'Pending Payment',
+    descTh: 'ออเดอร์ถูกบันทึกแล้ว รอการชำระเงินจากคุณ',
+    descEn: 'Order received — waiting for your payment.',
+  },
+  paid: {
+    iconDone: <Package size={16} />,
+    colorDone: 'var(--green)',
+    labelTh: 'ยืนยันการชำระแล้ว',
+    labelEn: 'Payment Confirmed',
+    descTh: 'ร้านได้รับการชำระเงินแล้ว กำลังเตรียมจัดส่งสินค้า',
+    descEn: 'Payment received — we are preparing your order.',
+  },
+  shipping: {
+    iconDone: <Truck size={16} />,
+    colorDone: 'var(--orange)',
+    labelTh: 'กำลังจัดส่ง',
+    labelEn: 'Shipped',
+    descTh: 'สินค้าถูกส่งออกแล้ว ติดตามพัสดุด้วยเลขที่ให้ไว้',
+    descEn: 'Your order is on its way — track with the number above.',
+  },
+  delivered: {
+    iconDone: <CheckCircle size={16} />,
+    colorDone: 'var(--green)',
+    labelTh: 'จัดส่งสำเร็จ',
+    labelEn: 'Delivered',
+    descTh: 'สินค้าถูกจัดส่งสำเร็จแล้ว ขอบคุณที่ใช้บริการ!',
+    descEn: 'Order delivered. Thank you for shopping with us!',
+  },
+  cancelled: {
+    iconDone: <XCircle size={16} />,
+    colorDone: 'var(--red)',
+    labelTh: 'ยกเลิกแล้ว',
+    labelEn: 'Cancelled',
+    descTh: 'ออเดอร์นี้ถูกยกเลิกแล้ว',
+    descEn: 'This order has been cancelled.',
+  },
+}
+
+// Steps shown in cancelled state
+const CANCEL_STEPS: OrderStatus[] = ['pending', 'cancelled']
+
+function OrderTimeline({ order, locale }: { order: VerifiedOrder; locale: string }) {
+  const orderedAt = new Date(order.created_at)
+  const steps = order.status === 'cancelled' ? CANCEL_STEPS : STATUS_STEPS
+
+  const currentIdx = steps.indexOf(order.status)
+  const fmt = (d: Date) => d.toLocaleString(locale === 'th' ? 'th-TH' : 'en-GB', {
+    dateStyle: 'medium', timeStyle: 'short',
+  })
+
+  return (
+    <div style={{
+      background: 'var(--bg2)', border: '0.5px solid var(--border)',
+      borderRadius: 12, padding: 20, marginBottom: 16,
+    }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
+        <CalendarCheck size={16} color="var(--green)" />
+        <h3 style={{ fontSize: 16, fontWeight: 700 }}>
+          {locale === 'th' ? 'ไทม์ไลน์ออเดอร์' : 'Order Timeline'}
+        </h3>
+      </div>
+
+      <div style={{ position: 'relative', paddingLeft: 28 }}>
+        {/* Vertical line */}
+        <div style={{
+          position: 'absolute', left: 9, top: 8, bottom: 8, width: 2,
+          background: 'var(--border2)',
+        }} />
+
+        {steps.map((s, i) => {
+          const meta = STATUS_META[s]
+          const done = i <= currentIdx
+          const active = i === currentIdx
+          const color = done ? meta.colorDone : 'var(--text3)'
+
+          return (
+            <div key={s} style={{
+              position: 'relative', paddingBottom: i < steps.length - 1 ? 20 : 0,
+            }}>
+              {/* Dot */}
+              <div style={{
+                position: 'absolute', left: -28, top: 1,
+                width: 20, height: 20, borderRadius: '50%',
+                background: done ? meta.colorDone : 'var(--bg3)',
+                border: `2px solid ${done ? meta.colorDone : 'var(--border2)'}`,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                color: done ? '#fff' : 'var(--text3)',
+                zIndex: 1,
+              }}>
+                {done ? <Check size={11} /> : <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--border2)', display: 'block' }} />}
+              </div>
+
+              {/* Content */}
+              <div>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: 15, fontWeight: active ? 700 : 500, color: active ? color : (done ? 'var(--text)' : 'var(--text3)') }}>
+                    {locale === 'th' ? meta.labelTh : meta.labelEn}
+                  </span>
+                  {active && (
+                    <span style={{
+                      fontSize: 11, fontWeight: 700, padding: '1px 7px', borderRadius: 999,
+                      background: meta.colorDone, color: '#fff',
+                    }}>
+                      {locale === 'th' ? 'ปัจจุบัน' : 'CURRENT'}
+                    </span>
+                  )}
+                </div>
+
+                {/* Timestamp: only order placed (pending) has a real timestamp */}
+                {s === 'pending' && (
+                  <div style={{ fontSize: 12, color: 'var(--text3)', marginTop: 2 }}>
+                    {fmt(orderedAt)}
+                  </div>
+                )}
+
+                {/* Description for done or active steps */}
+                {(done) && (
+                  <div style={{ fontSize: 13, color: 'var(--text2)', marginTop: 3, lineHeight: 1.5 }}>
+                    {locale === 'th' ? meta.descTh : meta.descEn}
+                  </div>
+                )}
+              </div>
+            </div>
+          )
+        })}
       </div>
     </div>
   )

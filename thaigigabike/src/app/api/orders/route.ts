@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'node:crypto'
 import { createServiceClient } from '@/lib/supabase/service'
 import { allProducts as STATIC_CATALOG } from '@/data/products'
+import { sendOrderConfirmationEmail } from '@/lib/email'
 
 // ── Canonical config — the server is the single source of truth for these. ──
 // Never accept shipping fees, COD fees, prices, or totals from the client.
@@ -156,7 +157,10 @@ export async function POST(request: NextRequest) {
     )
 
     // Build trusted order item snapshots.
-    const orderItems: object[] = []
+    // dbItemsForRpc: DB-backed items only — these are locked + decremented atomically.
+    // Static-catalog items are included in orderItems/subtotal but NOT in dbItemsForRpc.
+    const orderItems:    object[] = []
+    const dbItemsForRpc: { product_id: string; quantity: number }[] = []
     let subtotal = 0
     const notFound:  string[] = []
     const stockErrs: string[] = []
@@ -174,7 +178,7 @@ export async function POST(request: NextRequest) {
             { status: 400 }
           )
         }
-        // Stock validation (read-only; no decrement yet — oversell risk documented below).
+        // Early read-only stock check (fast feedback). Authoritative check is in the RPC.
         if (!db.in_stock || db.stock_count < qty) {
           stockErrs.push(db.code || pid)
           continue
@@ -189,9 +193,11 @@ export async function POST(request: NextRequest) {
           color:     String(raw.color ?? ''),
           image:     db.images?.[0] ?? '',
         })
+        dbItemsForRpc.push({ product_id: pid, quantity: qty })
         subtotal += db.price * qty
       } else {
         // Fallback: static catalog — trusted (server-side) but no real-time stock.
+        // Static catalog items are NOT decremented atomically (no DB row to lock).
         const s = STATIC_CATALOG.find((p) => p.id === pid)
         if (!s) { notFound.push(pid); continue }
 
@@ -254,41 +260,74 @@ export async function POST(request: NextRequest) {
       slipPath = path
     }
 
-    // ── 10. Insert order ──────────────────────────────────────────────────
-    const { error: insertErr } = await supabase.from('orders').insert({
-      id:                orderId,
-      status:            'pending',
+    // ── 10. Atomic: idempotency race-check + stock decrement + order insert ──
+    // create_order_atomic RPC runs inside a single DB transaction:
+    //   - Race-safe idempotency check (SELECT orders WHERE idempotency_key)
+    //   - FOR UPDATE lock on each DB-backed product row
+    //   - Stock decrement + in_stock flag update
+    //   - stock_movements insert per item
+    //   - orders INSERT
+    // If any item has insufficient stock the whole transaction rolls back.
+    const orderData = {
       recipient_name:    name,
       recipient_phone:   phone,
       recipient_address: address,
       shipping_method:   shippingMethod,
-      shipping_fee:      shippingFee,   // server-canonical, never from client
+      shipping_fee:      shippingFee,
       payment_method:    paymentMethod,
-      items:             orderItems,    // server-verified price snapshots
-      subtotal,                         // server-computed
-      cod_fee:           codFee,        // server-canonical, never from client
-      total,                            // server-computed
-      slip_path:         slipPath,
-      idempotency_key:   idempotencyKey,
+      items:             orderItems,
+      subtotal,
+      cod_fee:           codFee,
+      total,
+      slip_path:         slipPath ?? '',
       contact_email:     email,
+    }
+
+    const { data: rpcResult, error: rpcErr } = await supabase.rpc('create_order_atomic', {
+      p_order_id:        orderId,
+      p_db_items:        dbItemsForRpc,
+      p_order_data:      orderData,
+      p_idempotency_key: idempotencyKey ?? '',
     })
 
-    if (insertErr) {
-      // Unique-constraint violation (code 23505) means a concurrent request
-      // already created this order — look it up and return idempotently.
-      if (insertErr.code === '23505' && idempotencyKey) {
-        const { data: race } = await supabase
-          .from('orders')
-          .select('id')
-          .eq('idempotency_key', idempotencyKey)
-          .maybeSingle()
-        if (race) return NextResponse.json({ orderId: (race as { id: string }).id })
+    if (rpcErr) {
+      const msg = rpcErr.message ?? ''
+      if (msg.includes('insufficient_stock')) {
+        const code = msg.split('::')[1] ?? 'item'
+        return NextResponse.json(
+          { error: `Insufficient stock for: ${code}` },
+          { status: 400 }
+        )
       }
-      console.error('Order insert failed')
+      if (msg.includes('product_not_found')) {
+        return NextResponse.json(
+          { error: 'A product in your cart is no longer available. Please refresh and try again.' },
+          { status: 400 }
+        )
+      }
+      console.error('create_order_atomic failed:', msg)
       return NextResponse.json({ error: 'Failed to save order' }, { status: 500 })
     }
 
-    return NextResponse.json({ orderId })
+    const result = rpcResult as { order_id: string; idempotent: boolean } | null
+    if (!result?.order_id) {
+      console.error('create_order_atomic returned no order_id')
+      return NextResponse.json({ error: 'Failed to save order' }, { status: 500 })
+    }
+
+    // Send confirmation email only for newly created orders (not idempotent retries).
+    if (!result.idempotent) {
+      sendOrderConfirmationEmail(email!, {
+        orderId: result.order_id,
+        recipientName: name!,
+        items: orderItems as Parameters<typeof sendOrderConfirmationEmail>[1]['items'],
+        subtotal, shippingFee, codFee, total,
+        shippingMethod: shippingMethod!,
+        paymentMethod: paymentMethod!,
+      }).catch(err => console.error('[orders] confirmation email error:', err))
+    }
+
+    return NextResponse.json({ orderId: result.order_id })
   } catch {
     console.error('Order creation failed')
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
@@ -296,14 +335,14 @@ export async function POST(request: NextRequest) {
 }
 
 /*
- * ── Known limitation: stock oversell window ──────────────────────────────
+ * ── P1-C: Stock atomicity ─────────────────────────────────────────────────
  *
- * Stock is VALIDATED (read) but NOT DECREMENTED in this batch.
- * A race between two simultaneous orders for the last unit in stock will
- * cause both to pass the stock check and both to be created. This is a
- * known limitation to be resolved in a future "stock_movements" batch that
- * will use Supabase RPC / row locking for atomic check-and-decrement.
+ * DB-backed items: stock decremented atomically inside create_order_atomic
+ * (single Postgres transaction with FOR UPDATE row lock per product).
+ * Race condition between concurrent checkouts is eliminated for these items.
  *
- * Risk level: low for a low-volume niche motorcycle parts shop.
- * Mitigation: admin reviews "pending" orders and rejects if stock is gone.
+ * Static-catalog-only items (product exists in /data/products but not in the
+ * Supabase products table): stock is validated read-only from the static
+ * snapshot but NOT decremented atomically. Oversell remains possible for
+ * these items. Mitigation: seed all products into the DB via build-catalog.mjs.
  */

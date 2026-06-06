@@ -3,8 +3,6 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { X, Save, AlertCircle, Upload, Trash2, ImagePlus, ChevronLeft, ChevronRight, Star } from 'lucide-react'
 import { categories, bikeModels } from '@/data/products'
 import type { Product } from '@/data/products'
-import { createClient } from '@/lib/supabase/client'
-
 const ALL_COLORS = ['black', 'silver', 'gold', 'hard', 'polished', 'black-silver', 'raw', 'gray']
 const COLOR_LABELS: Record<string, string> = {
   black: 'ดำ', silver: 'เงิน', gold: 'ทอง', hard: 'ฮาร์ด',
@@ -80,7 +78,6 @@ type Props = {
 
 export function ProductModal({ product, onClose, onSave }: Props) {
   const isEdit = !!product
-  const supabase = createClient()
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const [section, setSection] = useState<Section>('info')
@@ -132,7 +129,7 @@ export function ProductModal({ product, onClose, onSave }: Props) {
       ? (form[field] as string[]).filter(v => v !== val)
       : [...(form[field] as string[]), val])
 
-  // ─── Image upload to Supabase Storage ───
+  // ─── Image upload via guarded server API ───
   const uploadFiles = useCallback(async (files: FileList | File[]) => {
     const arr = Array.from(files)
     const allowed = ['image/jpeg', 'image/png', 'image/webp']
@@ -145,24 +142,28 @@ export function ProductModal({ product, onClose, onSave }: Props) {
     setUploadError('')
     const newUrls: string[] = []
 
+    // Sanitize code for use as a path segment.
+    const productId = (form.code || 'product')
+      .replace(/[^A-Za-z0-9._\-]/g, '-').replace(/-+/g, '-').slice(0, 80)
+
     for (const file of arr) {
-      const ext = file.name.split('.').pop() ?? 'jpg'
-      const path = `products/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`
-      const { error } = await supabase.storage
-        .from('product-images')
-        .upload(path, file, { contentType: file.type, upsert: false })
-      if (error) {
-        setUploadError(`อัปโหลดล้มเหลว: ${error.message}`)
+      const fd = new FormData()
+      fd.append('file', file)
+      fd.append('productId', productId)
+      const res = await fetch('/api/admin/product-images/upload', { method: 'POST', body: fd })
+      if (!res.ok) {
+        const json = await res.json().catch(() => ({}))
+        setUploadError(`อัปโหลดล้มเหลว: ${json.error ?? 'Unknown error'}`)
         setUploading(false)
         return
       }
-      const { data } = supabase.storage.from('product-images').getPublicUrl(path)
-      newUrls.push(data.publicUrl)
+      const { url } = await res.json()
+      newUrls.push(url)
     }
 
     setForm(prev => ({ ...prev, images: [...prev.images, ...newUrls] }))
     setUploading(false)
-  }, [supabase])
+  }, [form.code])
 
   const addImageUrl = () => {
     const url = urlInput.trim()
@@ -174,10 +175,16 @@ export function ProductModal({ product, onClose, onSave }: Props) {
   }
 
   const removeImage = (idx: number) => {
-    setForm(prev => {
-      const next = prev.images.filter((_, i) => i !== idx)
-      return { ...prev, images: next }
-    })
+    const url = form.images[idx]
+    // Best-effort: delete from storage if this is a product-images storage object.
+    if (url?.includes('/storage/v1/object/public/product-images/')) {
+      fetch('/api/admin/product-images/delete', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url }),
+      }).catch(() => { /* non-blocking */ })
+    }
+    setForm(prev => ({ ...prev, images: prev.images.filter((_, i) => i !== idx) }))
     setPreviewIdx(prev => Math.min(prev, Math.max(0, form.images.length - 2)))
   }
 

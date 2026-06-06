@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto'
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase/service'
 import { isAdminEmail } from '@/lib/auth/admin'
+import { writeAuditLog } from '@/lib/audit'
 
 const MAX_ATTEMPTS = 5
 const WINDOW_MS = 15 * 60 * 1000  // 15 minutes
@@ -64,25 +65,28 @@ export async function POST(req: NextRequest) {
     }
   )
 
+  const userAgent = req.headers.get('user-agent')?.slice(0, 200) ?? null
+
   const { data, error } = await supabase.auth.signInWithPassword({ email, password })
 
   if (error || !data.user) {
     if (svc) await svc.from('admin_login_attempts').insert({ email, ip_hash: ipHash, success: false })
+    await writeAuditLog({ actor_email: email, action: 'admin.login.failure', entity_type: 'admin_session', ip_hash: ipHash, user_agent: userAgent })
     return NextResponse.json({ error: 'อีเมลหรือรหัสผ่านไม่ถูกต้อง' }, { status: 401 })
   }
 
   // ── Allowlist check ───────────────────────────────────────────────────────────
   if (!isAdminEmail(data.user.email)) {
-    // Revoke server-side session: user should never receive the tokens
     await supabase.auth.signOut()
     if (svc) await svc.from('admin_login_attempts').insert({ email, ip_hash: ipHash, success: false })
     console.warn(`[admin/login] non-allowlisted login attempt (userId: ${data.user.id})`)
-    // Generic error: do not reveal the allowlist
+    await writeAuditLog({ actor_email: email, actor_user_id: data.user.id || null, action: 'admin.login.non_allowlisted', entity_type: 'admin_session', ip_hash: ipHash, user_agent: userAgent })
     return NextResponse.json({ error: 'อีเมลหรือรหัสผ่านไม่ถูกต้อง' }, { status: 401 })
   }
 
   // ── Success ───────────────────────────────────────────────────────────────────
   if (svc) await svc.from('admin_login_attempts').insert({ email, ip_hash: ipHash, success: true })
+  await writeAuditLog({ actor_email: email, actor_user_id: data.user.id || null, action: 'admin.login.success', entity_type: 'admin_session', ip_hash: ipHash, user_agent: userAgent })
 
   const response = NextResponse.json({ ok: true })
   cookiesToSet.forEach(args => response.cookies.set(...args))

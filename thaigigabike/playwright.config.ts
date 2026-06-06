@@ -15,9 +15,14 @@ export default defineConfig({
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
   ],
   webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:3000',
+    // In CI (fresh environment, full control over server lifecycle):
+    //   use url: 'http://localhost:3000/api/health' for precise 2xx readiness check.
+    // In local dev (a potentially broken dev server may already be on port 3000):
+    //   use port: 3000 — TCP check detects any listener and reuses it regardless of
+    //   HTTP response, avoiding the spawn-a-new-server→port-conflict→timeout cycle.
+    command: 'npx next dev',
+    port: 3000,
     reuseExistingServer: true,
-    timeout: 60000,
+    timeout: 120000,
   },
 })

@@ -77,7 +77,7 @@ export function Navbar() {
                 onChange={e => setSearchQuery(e.target.value)}
                 onKeyDown={e => {
                   if (e.key === 'Enter' && searchQuery.trim()) {
-                    router.push(`/products?q=${encodeURIComponent(searchQuery)}`)
+                    router.push(`/search?q=${encodeURIComponent(searchQuery)}`)
                     setSearchOpen(false)
                     setSearchQuery('')
                   }
@@ -167,6 +167,10 @@ export function Navbar() {
             { href: '/dealer', label: t.nav.dealer },
             { href: '/payment', label: t.nav.payment },
             { href: '/contact', label: t.nav.contact },
+            { href: '/support', label: t.nav.support },
+            { href: '/notifications', label: t.nav.notifications },
+            { href: '/messages', label: t.nav.messages },
+            { href: '/reviews', label: t.nav.reviews },
             { href: '/order', label: t.nav.trackOrder },
           ].map(({ href, label }) => (
             <Link key={href} href={href} onClick={() => setMobileOpen(false)} style={{

@@ -1,12 +1,100 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, notFound } from 'next/navigation'
-import { ShoppingCart, ChevronRight, ChevronLeft, ImageOff, Check, Minus, Plus, ZoomIn } from 'lucide-react'
+import { ShoppingCart, ChevronRight, ChevronLeft, ImageOff, Check, Minus, Plus, ZoomIn, Star, PenLine } from 'lucide-react'
 import Link from 'next/link'
 import { useLang } from '@/lib/lang'
 import { useCart } from '@/lib/cart'
 import { getProductById, products, bikeModels } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
+
+type Review = { id: string; reviewer_name: string; rating: number; comment: string | null; created_at: string }
+
+function StarRow({ rating, size = 14 }: { rating: number; size?: number }) {
+  return (
+    <span style={{ display: 'inline-flex', gap: 1 }}>
+      {[1, 2, 3, 4, 5].map(n => (
+        <Star key={n} size={size} fill={rating >= n ? '#f59e0b' : 'none'} color={rating >= n ? '#f59e0b' : 'var(--border2)'} />
+      ))}
+    </span>
+  )
+}
+
+function ProductReviews({ productId, locale }: { productId: string; locale: string }) {
+  const [reviews, setReviews] = useState<Review[]>([])
+  const [avg, setAvg]         = useState(0)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetch(`/api/reviews?productId=${encodeURIComponent(productId)}&page=1`)
+      .then(r => r.json())
+      .then(d => {
+        const list: Review[] = d.reviews ?? []
+        setReviews(list)
+        if (list.length > 0) setAvg(list.reduce((s, r) => s + r.rating, 0) / list.length)
+      })
+      .catch(() => {/* ignore */})
+      .finally(() => setLoading(false))
+  }, [productId])
+
+  if (loading) return <div style={{ height: 80, background: 'var(--bg3)', borderRadius: 12 }} />
+
+  return (
+    <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, padding: '20px 24px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16, flexWrap: 'wrap', gap: 8 }}>
+        <div>
+          <h3 style={{ fontSize: 19, marginBottom: 4 }}>
+            {locale === 'th' ? 'รีวิว' : 'Reviews'}
+            {reviews.length > 0 && (
+              <span style={{ marginLeft: 8, fontSize: 14, color: 'var(--text3)', fontWeight: 400 }}>({reviews.length})</span>
+            )}
+          </h3>
+          {reviews.length > 0 && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <StarRow rating={Math.round(avg)} size={16} />
+              <span style={{ fontSize: 15, fontWeight: 700, color: '#f59e0b' }}>{avg.toFixed(1)}</span>
+            </div>
+          )}
+        </div>
+        <Link
+          href={`/reviews?write=1&product=${encodeURIComponent(productId)}`}
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: 6,
+            background: 'var(--bg3)', color: 'var(--text)',
+            border: '0.5px solid var(--border2)', borderRadius: 8,
+            padding: '7px 14px', fontSize: 14, fontWeight: 600, textDecoration: 'none',
+          }}
+        >
+          <PenLine size={13} />
+          {locale === 'th' ? 'เขียนรีวิว' : 'Write review'}
+        </Link>
+      </div>
+
+      {reviews.length === 0 ? (
+        <p style={{ fontSize: 14, color: 'var(--text3)' }}>
+          {locale === 'th' ? 'ยังไม่มีรีวิว — เป็นคนแรกที่รีวิวสินค้านี้' : 'No reviews yet — be the first!'}
+        </p>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          {reviews.slice(0, 3).map(r => (
+            <div key={r.id} style={{ paddingBottom: 14, borderBottom: '0.5px solid var(--border)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                <StarRow rating={r.rating} />
+                <span style={{ fontSize: 14, fontWeight: 600 }}>{r.reviewer_name}</span>
+              </div>
+              {r.comment && <p style={{ fontSize: 14, color: 'var(--text2)', lineHeight: 1.6 }}>{r.comment}</p>}
+            </div>
+          ))}
+          {reviews.length > 3 && (
+            <Link href={`/reviews?productId=${encodeURIComponent(productId)}`} style={{ fontSize: 14, color: 'var(--green)', textDecoration: 'none', fontWeight: 600 }}>
+              {locale === 'th' ? `ดูรีวิวทั้งหมด ${reviews.length} รีวิว →` : `See all ${reviews.length} reviews →`}
+            </Link>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
 
 export default function ProductDetailPage() {
   const params = useParams()
@@ -216,6 +304,16 @@ export default function ProductDetailPage() {
                 {t.product.askLine}
               </a>
             </div>
+            <Link
+              href={`/messages?product=${encodeURIComponent(product.code)}`}
+              style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, marginTop: 8,
+                fontSize: 14, color: 'var(--text2)', textDecoration: 'none',
+                border: '0.5px solid var(--border2)', borderRadius: 8, padding: '8px 0',
+              }}
+            >
+              ✉ {locale === 'th' ? 'ส่งข้อความถามเรื่องสินค้านี้' : 'Send message about this product'}
+            </Link>
 
             {/* Material */}
             <div style={{ marginTop: 16, paddingTop: 16, borderTop: '0.5px solid var(--border)', fontSize: 14, color: 'var(--text3)' }}>
@@ -230,6 +328,11 @@ export default function ProductDetailPage() {
             <h3 style={{ fontSize: 19, marginBottom: 10 }}>{t.product.description}</h3>
             <p style={{ fontSize: 17, color: 'var(--text2)', lineHeight: 1.8 }}>{desc}</p>
           </div>
+        </div>
+
+        {/* Reviews */}
+        <div className="container" style={{ marginTop: 24 }}>
+          <ProductReviews productId={product.id} locale={locale} />
         </div>
 
         {/* Related */}

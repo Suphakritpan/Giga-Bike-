@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createServiceClient } from '@/lib/supabase/service'
 import { isAdminEmail } from '@/lib/auth/admin'
+import { writeAuditLog } from '@/lib/audit'
 
 const SIGNED_URL_TTL_SECONDS = 600 // 10 minutes
 
@@ -81,6 +82,13 @@ export async function POST(
     )
   }
 
+  await writeAuditLog({
+    actor_user_id: user.id || null,
+    actor_email: user.email ?? null,
+    action: 'order.slip_url_requested',
+    entity_type: 'order',
+    entity_id: params.orderId,
+  })
   return NextResponse.json({
     signedUrl: signed.signedUrl,
     expiresIn: SIGNED_URL_TTL_SECONDS,
