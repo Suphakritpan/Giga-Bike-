@@ -2,9 +2,10 @@
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import { Plus, ImageOff } from 'lucide-react'
+import { Plus, ImageOff, Heart } from 'lucide-react'
 import { useCart } from '@/lib/cart'
 import { useLang } from '@/lib/lang'
+import { useWishlist } from '@/lib/wishlist'
 import type { Product } from '@/data/products'
 
 type Props = { product: Product }
@@ -12,8 +13,10 @@ type Props = { product: Product }
 export function ProductCard({ product }: Props) {
   const { add } = useCart()
   const { t, locale } = useLang()
+  const { isSaved, toggle } = useWishlist()
   const router = useRouter()
   const [imgError, setImgError] = useState(false)
+  const saved = isSaved(product.id)
   const name = locale === 'th' ? product.nameTh : product.name
   const thumb = product.images?.[0]
 
@@ -55,6 +58,20 @@ export function ProductCard({ product }: Props) {
               แนะนำ
             </div>
           )}
+          {/* Wishlist heart */}
+          <button
+            onClick={e => { e.preventDefault(); e.stopPropagation(); toggle(product.id) }}
+            aria-label={saved ? (locale === 'th' ? 'นำออกจากรายการโปรด' : 'Remove from wishlist') : (locale === 'th' ? 'เพิ่มในรายการโปรด' : 'Add to wishlist')}
+            style={{
+              position: 'absolute', top: 8, right: 8, zIndex: 2,
+              width: 30, height: 30, borderRadius: '50%', border: 'none', cursor: 'pointer',
+              background: 'rgba(255,255,255,.85)', backdropFilter: 'blur(4px)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              transition: 'transform .15s',
+            }}
+          >
+            <Heart size={16} fill={saved ? '#ef4444' : 'none'} color={saved ? '#ef4444' : '#666'} />
+          </button>
           {!product.inStock && (
             <div style={{
               position: 'absolute', inset: 0, background: 'rgba(0,0,0,.55)',

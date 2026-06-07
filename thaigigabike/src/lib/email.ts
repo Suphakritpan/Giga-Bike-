@@ -204,3 +204,87 @@ export async function sendOtpEmail(
     return { success: false, error: 'Email send failed' }
   }
 }
+
+/**
+ * Notify customer when their order status changes.
+ * Fire-and-forget: never throws, never blocks the caller.
+ */
+export async function sendStatusUpdateEmail(
+  to: string,
+  payload: { orderId: string; recipientName: string; status: string; trackingNo: string | null }
+): Promise<EmailResult> {
+  const apiKey = process.env.RESEND_API_KEY
+  const from   = process.env.EMAIL_FROM ?? 'orders@thaigigabike.com'
+
+  const STATUS_TH: Record<string, string> = {
+    pending:   'รอชำระเงิน',
+    paid:      'ยืนยันการชำระเงินแล้ว — กำลังเตรียมจัดส่ง',
+    shipping:  'จัดส่งสินค้าแล้ว',
+    delivered: 'ส่งสำเร็จแล้ว',
+    cancelled: 'ยกเลิกออเดอร์',
+  }
+  const STATUS_EN: Record<string, string> = {
+    pending:   'Pending payment',
+    paid:      'Payment confirmed — preparing to ship',
+    shipping:  'Your order has been shipped',
+    delivered: 'Your order has been delivered',
+    cancelled: 'Order cancelled',
+  }
+  const statusTh = STATUS_TH[payload.status] ?? payload.status
+  const statusEn = STATUS_EN[payload.status] ?? payload.status
+
+  const trackingHtml = payload.trackingNo
+    ? `<p style="margin:12px 0;font-size:14px;color:#555">
+        <strong>Tracking / เลขพัสดุ:</strong>
+        <span style="font-family:monospace;font-weight:700;color:#111"> ${payload.trackingNo}</span>
+       </p>`
+    : ''
+
+  const html = `
+<div style="font-family:'Helvetica Neue',sans-serif;max-width:500px;margin:0 auto;padding:32px 24px;background:#fff">
+  <div style="margin-bottom:20px">
+    <span style="font-size:22px;font-weight:800;color:#16a34a">⚡ Thai</span><span style="font-size:22px;font-weight:800">GigaBike</span>
+  </div>
+  <h2 style="font-size:19px;font-weight:700;margin:0 0 4px">อัปเดตสถานะออเดอร์</h2>
+  <p style="font-size:14px;color:#555;margin:0 0 20px">สวัสดีคุณ ${payload.recipientName}</p>
+  <div style="background:#f9fafb;border-radius:10px;padding:16px 20px;margin-bottom:16px">
+    <div style="font-size:13px;color:#888;margin-bottom:4px">ออเดอร์ / Order ID</div>
+    <div style="font-size:20px;font-weight:800;letter-spacing:1px;color:#111">${payload.orderId}</div>
+  </div>
+  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:16px 20px;margin-bottom:16px">
+    <div style="font-size:13px;color:#166534;font-weight:600;margin-bottom:4px">สถานะใหม่ / New Status</div>
+    <div style="font-size:18px;font-weight:800;color:#16a34a">${statusTh}</div>
+    <div style="font-size:13px;color:#555;margin-top:2px">${statusEn}</div>
+  </div>
+  ${trackingHtml}
+  <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:12px 16px;font-size:13px;color:#166534;margin-bottom:20px">
+    ติดตามออเดอร์ได้ที่ <a href="https://thaigigabike.com/order?id=${payload.orderId}" style="color:#16a34a;font-weight:600">thaigigabike.com/order</a>
+  </div>
+  <hr style="border:none;border-top:1px solid #eee;margin:0 0 14px">
+  <p style="font-size:12px;color:#aaa">Order ${payload.orderId} · ThaiGigaBike · thaigigabike.com</p>
+</div>`
+
+  if (!apiKey) {
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(`[DEV EMAIL] Status update for ${payload.orderId} → ${to} : ${payload.status}`)
+      return { success: true }
+    }
+    return { success: false, error: 'Email provider not configured' }
+  }
+
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method:  'POST',
+      headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        from, to: [to],
+        subject: `อัปเดตออเดอร์ ${payload.orderId} — ${statusTh} | GigaBike`,
+        html,
+      }),
+    })
+    if (!res.ok) return { success: false, error: 'Email send failed' }
+    return { success: true }
+  } catch {
+    return { success: false, error: 'Email send failed' }
+  }
+}

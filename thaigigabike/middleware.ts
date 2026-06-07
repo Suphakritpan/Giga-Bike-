@@ -31,8 +31,9 @@ export async function middleware(request: NextRequest) {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  const isAdminRoute = request.nextUrl.pathname.startsWith('/admin')
-  const isLoginPage = request.nextUrl.pathname === '/admin/login'
+  const path = request.nextUrl.pathname
+  const isAdminRoute = path.startsWith('/admin')
+  const isLoginPage = path === '/admin/login'
 
   if (isAdminRoute && !isLoginPage) {
     if (!user) {
@@ -57,9 +58,27 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(adminUrl)
   }
 
+  // ── Customer account routes — require any authenticated user ──
+  if (path.startsWith('/account')) {
+    if (!user) {
+      const loginUrl = request.nextUrl.clone()
+      loginUrl.pathname = '/login'
+      loginUrl.search = `?next=${encodeURIComponent(path)}`
+      return NextResponse.redirect(loginUrl)
+    }
+  }
+
+  // Logged-in user visiting /login or /signup → bounce to account
+  if ((path === '/login' || path === '/signup') && user) {
+    const acctUrl = request.nextUrl.clone()
+    acctUrl.pathname = '/account'
+    acctUrl.search = ''
+    return NextResponse.redirect(acctUrl)
+  }
+
   return supabaseResponse
 }
 
 export const config = {
-  matcher: ['/admin/:path*'],
+  matcher: ['/admin/:path*', '/account/:path*', '/login', '/signup'],
 }

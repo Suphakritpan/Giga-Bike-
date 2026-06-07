@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import Link from 'next/link'
 import { ChevronRight, ChevronLeft, Zap, Shield, Truck, Award, Star, PenLine } from 'lucide-react'
 import { useLang } from '@/lib/lang'
@@ -100,9 +100,10 @@ function HeroCarousel() {
 
   return (
     <div
+      className="hero-carousel"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
-      style={{ position: 'relative', width: 380, flexShrink: 0, borderRadius: 16, overflow: 'hidden', border: '0.5px solid var(--border2)', boxShadow: '0 12px 60px rgba(0,0,0,.5)' }}
+      style={{ position: 'relative', width: 380, flexShrink: 0, borderRadius: 16, overflow: 'hidden', border: '0.5px solid var(--border2)', boxShadow: '0 12px 40px rgba(0,0,0,.18)' }}
     >
       {/* Image */}
       <Link href={`/products/${current.id}`} style={{ display: 'block', textDecoration: 'none' }}>
@@ -168,24 +169,49 @@ function HeroCarousel() {
   )
 }
 
+const HOME_PAGE_SIZE = 24
+
 export default function HomePage() {
   const { t, locale } = useLang()
-  const [activeBike, setActiveBike] = useState('all')
-  const [activeCategory, setActiveCategory] = useState('all')
+  const [activeBikes, setActiveBikes] = useState<Set<string>>(new Set())
+  const [activeCats,  setActiveCats]  = useState<Set<string>>(new Set())
+  const [page, setPage] = useState(1)
 
-  const filtered = products.filter(p => {
-    const bikeOk = activeBike === 'all' || p.bikeModels.includes(activeBike)
-    const catOk = activeCategory === 'all' || p.category === activeCategory
-    return bikeOk && catOk
+  const toggleHomeBike = (id: string) => setActiveBikes(prev => {
+    const next = new Set(prev); next.has(id) ? next.delete(id) : next.add(id); return next
   })
+  const toggleHomeCat = (id: string) => setActiveCats(prev => {
+    const next = new Set(prev); next.has(id) ? next.delete(id) : next.add(id); return next
+  })
+
+  const homeBikesKey = [...activeBikes].sort().join(',')
+  const homeCatsKey  = [...activeCats].sort().join(',')
+
+  const filtered = useMemo(() => products.filter(p => {
+    if (activeBikes.size > 0 && !p.bikeModels.some(b => activeBikes.has(b))) return false
+    if (activeCats.size  > 0 && !activeCats.has(p.category))                 return false
+    return true
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }), [homeBikesKey, homeCatsKey])
+
+  const totalPages = Math.ceil(filtered.length / HOME_PAGE_SIZE)
+  const paginated  = filtered.slice((page - 1) * HOME_PAGE_SIZE, page * HOME_PAGE_SIZE)
+
+  const handlePage = (p: number) => {
+    setPage(Math.max(1, Math.min(p, totalPages)))
+    document.getElementById('home-products')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  // Reset to page 1 on filter change
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => setPage(1), [homeBikesKey, homeCatsKey])
 
   return (
     <div>
       {/* Hero */}
-      <section style={{
+      <section className="hero-section" style={{
         background: 'var(--hero-bg)',
         borderBottom: '1px solid var(--border)',
-        padding: '64px 0',
         position: 'relative', overflow: 'hidden',
       }}>
         {/* BG accent */}
@@ -202,20 +228,20 @@ export default function HomePage() {
           pointerEvents: 'none',
         }} />
 
-        <div className="container" style={{ display: 'flex', alignItems: 'center', gap: 40 }}>
-          <div style={{ flex: 1, position: 'relative', zIndex: 1 }}>
+        <div className="container hero-flex">
+          <div style={{ flex: 1, position: 'relative', zIndex: 1, minWidth: 0 }}>
             <div className="badge badge-green" style={{ marginBottom: 16 }}>
               <Zap size={11} /> {t.home.heroTag}
             </div>
-            <h1 style={{ fontSize: 62, lineHeight: 1.1, marginBottom: 14 }}>
+            <h1 className="hero-title">
               {t.home.heroTitle}<br />
               <span style={{ color: 'var(--green)' }}>{t.home.heroHighlight}</span>{' '}
               {t.home.heroTitleSuffix}
             </h1>
-            <p style={{ fontSize: 19, color: 'var(--text2)', marginBottom: 24, lineHeight: 1.7 }}>
+            <p className="hero-sub" style={{ color: 'var(--text2)', marginBottom: 24 }}>
               {t.home.heroSub}
             </p>
-            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
+            <div className="hero-cta">
               <Link href="/products" className="btn-primary">
                 {t.home.browseAll} <ChevronRight size={15} />
               </Link>
@@ -251,7 +277,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Filter bar */}
+      {/* Filter bar — bike multi-select */}
       <section style={{ background: 'var(--bg)', borderBottom: '0.5px solid var(--border)', padding: '16px 0' }}>
         <div className="container">
           <p style={{ fontSize: 13, color: 'var(--text3)', marginBottom: 8, textTransform: 'uppercase', letterSpacing: '.06em' }}>
@@ -259,62 +285,74 @@ export default function HomePage() {
           </p>
           <div className="filter-pills">
             <button
-              onClick={() => setActiveBike('all')}
+              onClick={() => setActiveBikes(new Set())}
               style={{
                 padding: '5px 14px', borderRadius: 999, fontSize: 13, fontWeight: 500,
                 border: '0.5px solid', cursor: 'pointer', transition: 'all .15s',
-                background: activeBike === 'all' ? 'var(--green)' : 'var(--bg3)',
-                color: activeBike === 'all' ? '#000' : 'var(--text2)',
-                borderColor: activeBike === 'all' ? 'var(--green)' : 'var(--border2)',
+                background: activeBikes.size === 0 ? 'var(--green)' : 'var(--bg3)',
+                color: activeBikes.size === 0 ? '#fff' : 'var(--text2)',
+                borderColor: activeBikes.size === 0 ? 'var(--green)' : 'var(--border2)',
               }}
             >
               {t.home.allModels}
             </button>
-            {bikeModels.map(bm => (
-              <button
-                key={bm.id}
-                onClick={() => setActiveBike(bm.id)}
-                style={{
+            {bikeModels.map(bm => {
+              const active = activeBikes.has(bm.id)
+              return (
+                <button key={bm.id} onClick={() => toggleHomeBike(bm.id)} style={{
                   padding: '5px 14px', borderRadius: 999, fontSize: 13, fontWeight: 500,
                   border: '0.5px solid', cursor: 'pointer', transition: 'all .15s',
-                  background: activeBike === bm.id ? 'var(--green)' : 'var(--bg3)',
-                  color: activeBike === bm.id ? '#000' : 'var(--text2)',
-                  borderColor: activeBike === bm.id ? 'var(--green)' : 'var(--border2)',
-                }}
-              >
-                {bm.brand} {bm.model}
-              </button>
-            ))}
+                  background: active ? 'var(--green)' : 'var(--bg3)',
+                  color: active ? '#fff' : 'var(--text2)',
+                  borderColor: active ? 'var(--green)' : 'var(--border2)',
+                }}>
+                  {bm.brand} {bm.model}
+                </button>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Category tabs */}
+      {/* Category tabs — multi-select */}
       <section style={{ borderBottom: '0.5px solid var(--border)' }}>
-        <div className="container" style={{ display: 'flex', gap: 0 }}>
-          {[{ id: 'all', th: 'ทั้งหมด', en: 'All' }, ...categories.map(c => ({ id: c.id, th: c.nameTh, en: c.name }))].map(cat => (
-            <button
-              key={cat.id}
-              onClick={() => setActiveCategory(cat.id)}
-              style={{
-                padding: '12px 16px', fontSize: 18, fontWeight: 500,
-                border: 'none', borderBottom: activeCategory === cat.id ? '2px solid var(--green)' : '2px solid transparent',
-                background: 'transparent', cursor: 'pointer',
-                color: activeCategory === cat.id ? 'var(--green)' : 'var(--text2)',
-                transition: 'all .15s',
-              }}
-            >
-              {locale === 'th' ? cat.th : cat.en}
-            </button>
-          ))}
+        <div className="container" style={{ display: 'flex', gap: 0, overflowX: 'auto' }}>
+          {[{ id: 'all', th: 'ทั้งหมด', en: 'All' }, ...categories.map(c => ({ id: c.id, th: c.nameTh, en: c.name }))].map(cat => {
+            const isAll  = cat.id === 'all'
+            const active = isAll ? activeCats.size === 0 : activeCats.has(cat.id)
+            return (
+              <button
+                key={cat.id}
+                onClick={() => isAll ? setActiveCats(new Set()) : toggleHomeCat(cat.id)}
+                style={{
+                  padding: '12px 16px', fontSize: 18, fontWeight: 500, whiteSpace: 'nowrap',
+                  border: 'none', borderBottom: active ? '2px solid var(--green)' : '2px solid transparent',
+                  background: 'transparent', cursor: 'pointer',
+                  color: active ? 'var(--green)' : 'var(--text2)',
+                  transition: 'all .15s',
+                }}
+              >
+                {locale === 'th' ? cat.th : cat.en}
+              </button>
+            )
+          })}
         </div>
       </section>
 
       {/* Products grid */}
-      <section className="section">
+      <section id="home-products" className="section">
         <div className="container">
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-            <h2 style={{ fontSize: 29 }}>{t.home.featured}</h2>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16, flexWrap: 'wrap', gap: 8 }}>
+            <div>
+              <h2 style={{ fontSize: 29, marginBottom: 2 }}>{t.home.featured}</h2>
+              <p style={{ fontSize: 14, color: 'var(--text3)' }}>
+                <span style={{ fontWeight: 700, color: 'var(--text)', fontFamily: 'var(--font-display)' }}>{filtered.length}</span>
+                {' '}{locale === 'th' ? 'รายการ' : 'items'}
+                {totalPages > 1 && (
+                  <span style={{ marginLeft: 6 }}>· {locale === 'th' ? `หน้า ${page}/${totalPages}` : `Page ${page}/${totalPages}`}</span>
+                )}
+              </p>
+            </div>
             <Link href="/products" style={{
               display: 'flex', alignItems: 'center', gap: 4,
               fontSize: 18, color: 'var(--green)', textDecoration: 'none',
@@ -322,14 +360,75 @@ export default function HomePage() {
               {t.home.viewAll} <ChevronRight size={14} />
             </Link>
           </div>
+
           {filtered.length === 0 ? (
             <div style={{ textAlign: 'center', padding: '48px 0', color: 'var(--text2)' }}>
               {locale === 'th' ? 'ไม่พบสินค้าในหมวดนี้' : 'No products found'}
             </div>
           ) : (
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
-              {filtered.map(p => <ProductCard key={p.id} product={p} />)}
-            </div>
+            <>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
+                {paginated.map(p => <ProductCard key={p.id} product={p} />)}
+              </div>
+
+              {/* Pagination */}
+              {totalPages > 1 && (
+                <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, paddingTop: 28, flexWrap: 'wrap' }}>
+                  <button
+                    onClick={() => handlePage(page - 1)}
+                    disabled={page === 1}
+                    style={{
+                      minWidth: 36, height: 36, borderRadius: 8, fontSize: 14,
+                      border: '0.5px solid var(--border2)', cursor: 'pointer',
+                      background: 'var(--bg3)', color: 'var(--text2)',
+                      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                      opacity: page === 1 ? 0.35 : 1, padding: '0 10px',
+                    }}
+                  >
+                    <ChevronLeft size={16} />
+                  </button>
+
+                  {(() => {
+                    const pages: (number | '…')[] = []
+                    for (let i = 1; i <= totalPages; i++) {
+                      if (i === 1 || i === totalPages || (i >= page - 2 && i <= page + 2)) pages.push(i)
+                      else if (pages[pages.length - 1] !== '…') pages.push('…')
+                    }
+                    return pages.map((p, i) =>
+                      p === '…' ? (
+                        <span key={`e${i}`} style={{ width: 28, textAlign: 'center', color: 'var(--text3)', fontSize: 14 }}>…</span>
+                      ) : (
+                        <button key={p} onClick={() => handlePage(p as number)}
+                          style={{
+                            minWidth: 36, height: 36, borderRadius: 8, fontSize: 14, fontWeight: p === page ? 700 : 500,
+                            border: '0.5px solid', cursor: 'pointer',
+                            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                            background: p === page ? 'var(--green)' : 'var(--bg3)',
+                            color:      p === page ? '#fff'         : 'var(--text2)',
+                            borderColor: p === page ? 'var(--green)' : 'var(--border2)',
+                          }}>
+                          {p}
+                        </button>
+                      )
+                    )
+                  })()}
+
+                  <button
+                    onClick={() => handlePage(page + 1)}
+                    disabled={page === totalPages}
+                    style={{
+                      minWidth: 36, height: 36, borderRadius: 8, fontSize: 14,
+                      border: '0.5px solid var(--border2)', cursor: 'pointer',
+                      background: 'var(--bg3)', color: 'var(--text2)',
+                      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                      opacity: page === totalPages ? 0.35 : 1, padding: '0 10px',
+                    }}
+                  >
+                    <ChevronRight size={16} />
+                  </button>
+                </nav>
+              )}
+            </>
           )}
         </div>
       </section>

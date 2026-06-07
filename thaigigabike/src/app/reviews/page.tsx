@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
-import { Star, CheckCircle, ThumbsUp, PenLine, X } from 'lucide-react'
+import { Star, CheckCircle, ThumbsUp, PenLine, X, Camera, Loader } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 
 type Review = {
@@ -141,13 +141,29 @@ function RatingSummary({ reviews }: { reviews: Review[] }) {
 
 function WriteReviewForm({ onClose, onSuccess }: { onClose: () => void; onSuccess: () => void }) {
   const { t, locale } = useLang()
-  const [name, setName]         = useState('')
+  const [name, setName]           = useState('')
   const [productId, setProductId] = useState('')
-  const [orderId, setOrderId]   = useState('')
-  const [rating, setRating]     = useState(0)
-  const [comment, setComment]   = useState('')
-  const [loading, setLoading]   = useState(false)
-  const [error, setError]       = useState<string | null>(null)
+  const [orderId, setOrderId]     = useState('')
+  const [rating, setRating]       = useState(0)
+  const [comment, setComment]     = useState('')
+  const [photos, setPhotos]       = useState<string[]>([])
+  const [uploading, setUploading] = useState(false)
+  const [loading, setLoading]     = useState(false)
+  const [error, setError]         = useState<string | null>(null)
+
+  const uploadPhoto = async (file: File) => {
+    if (photos.length >= 3) return
+    setUploading(true)
+    try {
+      const fd = new FormData()
+      fd.append('image', file)
+      const res  = await fetch('/api/reviews/upload-image', { method: 'POST', body: fd })
+      const data = await res.json()
+      if (res.ok && data.url) setPhotos(prev => [...prev, data.url])
+      else setError(data.error ?? 'Upload failed')
+    } catch { setError('Upload failed') }
+    setUploading(false)
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -157,7 +173,7 @@ function WriteReviewForm({ onClose, onSuccess }: { onClose: () => void; onSucces
       const res = await fetch('/api/reviews', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ reviewer_name: name, product_id: productId, order_id: orderId, rating, comment }),
+        body: JSON.stringify({ reviewer_name: name, product_id: productId, order_id: orderId, rating, comment, images: photos }),
       })
       if (!res.ok) throw new Error()
       onSuccess()
@@ -236,6 +252,36 @@ function WriteReviewForm({ onClose, onSuccess }: { onClose: () => void; onSucces
             />
           </div>
 
+          {/* Photo upload */}
+          <div style={{ marginBottom: 16 }}>
+            <label style={{ fontSize: 13, color: 'var(--text3)', display: 'block', marginBottom: 8 }}>
+              {locale === 'th' ? 'รูปภาพ (สูงสุด 3 รูป)' : 'Photos (max 3)'}
+            </label>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+              {photos.map((url, i) => (
+                <div key={i} style={{ position: 'relative', width: 70, height: 70 }}>
+                  <img src={url} alt={`review-${i}`} style={{ width: 70, height: 70, objectFit: 'cover', borderRadius: 8, border: '0.5px solid var(--border2)' }} />
+                  <button type="button" onClick={() => setPhotos(p => p.filter((_, j) => j !== i))}
+                    style={{ position: 'absolute', top: -6, right: -6, width: 20, height: 20, borderRadius: '50%', background: 'var(--red)', border: 'none', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <X size={11} />
+                  </button>
+                </div>
+              ))}
+              {photos.length < 3 && (
+                <label style={{
+                  width: 70, height: 70, borderRadius: 8, border: '1.5px dashed var(--border2)',
+                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                  cursor: uploading ? 'default' : 'pointer', gap: 4, color: 'var(--text3)',
+                }}>
+                  <input type="file" accept="image/jpeg,image/png,image/webp" style={{ display: 'none' }}
+                    onChange={e => { const f = e.target.files?.[0]; if (f) uploadPhoto(f) }} disabled={uploading} />
+                  {uploading ? <Loader size={18} style={{ animation: 'spin .7s linear infinite' }} /> : <Camera size={18} />}
+                  <span style={{ fontSize: 10 }}>{uploading ? '...' : (locale === 'th' ? 'เพิ่มรูป' : 'Add')}</span>
+                </label>
+              )}
+            </div>
+          </div>
+
           {error && (
             <div style={{
               padding: '10px 14px', borderRadius: 8, marginBottom: 14, fontSize: 14,
@@ -245,7 +291,7 @@ function WriteReviewForm({ onClose, onSuccess }: { onClose: () => void; onSucces
             </div>
           )}
 
-          <button type="submit" className="btn-primary" disabled={loading}
+          <button type="submit" className="btn-primary" disabled={loading || uploading}
             style={{ width: '100%', justifyContent: 'center', opacity: loading ? 0.7 : 1 }}>
             {loading ? t.reviews.submitting : t.reviews.submit}
           </button>

@@ -1,13 +1,15 @@
 'use client'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import {
   Upload, Check, User, Truck, CreditCard,
-  X, ShoppingCart, AlertCircle, Shield, RefreshCw,
+  X, ShoppingCart, AlertCircle, Shield, RefreshCw, QrCode, MapPin,
 } from 'lucide-react'
+import { PromptPayQR } from '@/components/PromptPayQR'
 import { useCart } from '@/lib/cart'
 import { useLang } from '@/lib/lang'
+import { useAuth } from '@/lib/auth/AuthContext'
 import type { CartItem } from '@/lib/cart'
 
 type ShippingMethod = { id: string; labelTh: string; labelEn: string; price: number }
@@ -107,10 +109,13 @@ function Field({ label, error, children }: { label: string; error?: string; chil
   )
 }
 
+type SavedAddress = { id: string; label: string; recipient_name: string; phone: string; address: string; is_default: boolean }
+
 /* ── Main page ──────────────────────────────────── */
 export default function CheckoutPage() {
   const { items, totalPrice, clear } = useCart()
   const { t, locale } = useLang()
+  const { user, profile } = useAuth()
   const router    = useRouter()
   const fileRef   = useRef<HTMLInputElement>(null)
 
@@ -120,6 +125,33 @@ export default function CheckoutPage() {
   const idempotencyKeyRef = useRef<string | null>(null)
 
   const [form, setForm]       = useState({ name: '', phone: '', email: '', address: '' })
+  const [savedAddresses, setSavedAddresses] = useState<SavedAddress[]>([])
+  const [selectedAddrId, setSelectedAddrId] = useState<string | null>(null)
+
+  // Prefill from profile + saved addresses for logged-in users
+  useEffect(() => {
+    if (!user) return
+    setForm(f => ({
+      ...f,
+      name:  f.name  || profile?.full_name || '',
+      phone: f.phone || profile?.phone || '',
+      email: f.email || user.email || '',
+    }))
+    fetch('/api/account/addresses').then(r => r.json()).then(d => {
+      const list: SavedAddress[] = d.addresses ?? []
+      setSavedAddresses(list)
+      const def = list.find(a => a.is_default) ?? list[0]
+      if (def) {
+        setSelectedAddrId(def.id)
+        setForm(f => ({ ...f, name: def.recipient_name, phone: def.phone, address: def.address }))
+      }
+    }).catch(() => {})
+  }, [user, profile])
+
+  const pickAddress = (a: SavedAddress) => {
+    setSelectedAddrId(a.id)
+    setForm(f => ({ ...f, name: a.recipient_name, phone: a.phone, address: a.address }))
+  }
   const [shipping, setShipping] = useState('kerry')
   const [payment, setPayment]   = useState('transfer')
   const [slipFile, setSlipFile] = useState<File | null>(null)
@@ -258,6 +290,30 @@ export default function CheckoutPage() {
               {t.checkout.recipientInfo}
             </h3>
 
+            {/* Saved address picker (logged-in users) */}
+            {user && savedAddresses.length > 0 && (
+              <div style={{ marginBottom: 16 }}>
+                <p style={{ fontSize: 13, color: 'var(--text3)', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <MapPin size={13} /> {locale === 'th' ? 'เลือกที่อยู่ที่บันทึกไว้' : 'Use a saved address'}
+                </p>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  {savedAddresses.map(a => {
+                    const active = selectedAddrId === a.id
+                    return (
+                      <button key={a.id} type="button" onClick={() => pickAddress(a)} style={{
+                        textAlign: 'left', maxWidth: 220, padding: '8px 12px', borderRadius: 9, cursor: 'pointer',
+                        border: `1px solid ${active ? 'var(--green)' : 'var(--border2)'}`,
+                        background: active ? 'rgba(34,197,94,.06)' : 'var(--bg3)',
+                      }}>
+                        <div style={{ fontSize: 13, fontWeight: 700, color: active ? 'var(--green)' : 'var(--text)' }}>{a.recipient_name}</div>
+                        <div style={{ fontSize: 11, color: 'var(--text3)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{a.address}</div>
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
+
             <div className="grid-form-2">
               <Field label={`${t.checkout.fullName} *`} error={errors.name}>
                 <input className="input" style={borderErr('name')} value={form.name}
@@ -367,8 +423,33 @@ export default function CheckoutPage() {
                   background: 'var(--bg3)', border: '0.5px solid var(--border)',
                   borderRadius: 10, padding: '14px 16px', marginBottom: 12,
                 }}>
-                  <p style={{ fontSize: 13, color: 'var(--text3)', marginBottom: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.05em' }}>
-                    {locale === 'th' ? 'บัญชีธนาคาร' : 'Bank Account'}
+                  {/* PromptPay QR */}
+                  <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start', flexWrap: 'wrap', marginBottom: 14 }}>
+                    <PromptPayQR amount={grandTotal} size={150} />
+                    <div style={{ flex: 1, minWidth: 160 }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
+                        <QrCode size={16} color="var(--green)" />
+                        <span style={{ fontSize: 14, fontWeight: 700 }}>
+                          {locale === 'th' ? 'สแกน PromptPay' : 'Scan PromptPay'}
+                        </span>
+                      </div>
+                      <p style={{ fontSize: 13, color: 'var(--text2)', lineHeight: 1.7, marginBottom: 8 }}>
+                        {locale === 'th'
+                          ? 'เปิดแอปธนาคาร → สแกน QR → ยอดเงินจะกรอกอัตโนมัติ'
+                          : 'Open your banking app → Scan QR → amount pre-filled'}
+                      </p>
+                      <div style={{ fontSize: 13, color: 'var(--text3)' }}>
+                        {locale === 'th' ? 'หรือโอนผ่านเลขพร้อมเพย์:' : 'Or transfer to PromptPay:'}
+                        <div style={{ fontWeight: 700, fontSize: 16, color: 'var(--text)', fontFamily: 'var(--font-display)', marginTop: 2 }}>
+                          081-424-9407
+                        </div>
+                        <div style={{ fontSize: 12, marginTop: 1 }}>GIGA BIKE FACTORY</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p style={{ fontSize: 13, color: 'var(--text3)', marginBottom: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.05em', borderTop: '0.5px solid var(--border)', paddingTop: 10 }}>
+                    {locale === 'th' ? 'หรือโอนผ่านธนาคาร' : 'Or Bank Transfer'}
                   </p>
                   {['กสิกรไทย (KBank)', 'ไทยพาณิชย์ (SCB)', 'กรุงไทย (KTB)'].map(bank => (
                     <div key={bank} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 0', borderBottom: '0.5px solid var(--border)', fontSize: 14 }}>

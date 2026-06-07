@@ -5,6 +5,7 @@ import { Search, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 import { products, bikeModels, categories } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
+import { recordBike, recordCat } from '@/lib/recentlyViewed'
 
 const PAGE_SIZE = 24
 
@@ -114,25 +115,47 @@ function ProductsContent() {
   const { t, locale } = useLang()
 
   const [query, setQuery]               = useState(searchParams.get('q') || '')
-  const [selectedBike, setSelectedBike] = useState(searchParams.get('bike') || 'all')
-  const [selectedCat, setSelectedCat]   = useState(searchParams.get('cat') || 'all')
+  const [selectedBikes, setSelectedBikes] = useState<Set<string>>(() => {
+    const b = searchParams.get('bike')
+    return b && b !== 'all' ? new Set([b]) : new Set()
+  })
+  const [selectedCats, setSelectedCats] = useState<Set<string>>(() => {
+    const c = searchParams.get('cat')
+    return c && c !== 'all' ? new Set([c]) : new Set()
+  })
   const [sortBy, setSortBy]             = useState<SortId>('default')
   const [page, setPage]                 = useState(1)
 
-  // Sync initial URL params
+  // Sync initial URL params (only on first mount — bike/cat params set initial state above)
   useEffect(() => {
-    const q    = searchParams.get('q')
-    const bike = searchParams.get('bike')
-    const cat  = searchParams.get('cat')
+    const q = searchParams.get('q')
     if (q !== null) setQuery(q)
-    if (bike)       setSelectedBike(bike)
-    if (cat)        setSelectedCat(cat)
   }, [searchParams])
+
+  const toggleBike = (id: string) => {
+    setSelectedBikes(prev => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id); else { next.add(id); recordBike(id) }
+      return next
+    })
+  }
+
+  const toggleCat = (id: string) => {
+    setSelectedCats(prev => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id); else { next.add(id); recordCat(id) }
+      return next
+    })
+  }
+
+  // Stable keys for useMemo/useEffect dependency
+  const bikesKey = [...selectedBikes].sort().join(',')
+  const catsKey  = [...selectedCats].sort().join(',')
 
   const filtered = useMemo(() => {
     let list = products.filter(p => {
-      if (selectedBike !== 'all' && !p.bikeModels.includes(selectedBike)) return false
-      if (selectedCat  !== 'all' && p.category !== selectedCat)           return false
+      if (selectedBikes.size > 0 && !p.bikeModels.some(b => selectedBikes.has(b))) return false
+      if (selectedCats.size  > 0 && !selectedCats.has(p.category))                 return false
       if (query) {
         const q = query.toLowerCase()
         if (!p.code.toLowerCase().includes(q) && !p.name.toLowerCase().includes(q) && !p.nameTh.includes(q)) return false
@@ -142,16 +165,18 @@ function ProductsContent() {
     if (sortBy === 'price-asc')  list = [...list].sort((a, b) => a.price - b.price)
     if (sortBy === 'price-desc') list = [...list].sort((a, b) => b.price - a.price)
     return list
-  }, [query, selectedBike, selectedCat, sortBy])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query, bikesKey, catsKey, sortBy])
 
   // Reset to page 1 whenever filters/sort change
-  useEffect(() => { setPage(1) }, [query, selectedBike, selectedCat, sortBy])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { setPage(1) }, [query, bikesKey, catsKey, sortBy])
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE)
   const paginated  = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
 
-  const hasFilters = query !== '' || selectedBike !== 'all' || selectedCat !== 'all'
-  const clearAll = () => { setQuery(''); setSelectedBike('all'); setSelectedCat('all'); setSortBy('default') }
+  const hasFilters = query !== '' || selectedBikes.size > 0 || selectedCats.size > 0
+  const clearAll = () => { setQuery(''); setSelectedBikes(new Set()); setSelectedCats(new Set()); setSortBy('default') }
 
   const handlePage = (p: number) => {
     setPage(Math.max(1, Math.min(p, totalPages)))
@@ -162,15 +187,6 @@ function ProductsContent() {
     { id: 'all', th: 'ทั้งหมด', en: 'All', count: products.length },
     ...categories.map(c => ({ id: c.id, th: c.nameTh, en: c.name, count: CAT_COUNTS[c.id] || 0 })),
   ]
-  const ALL_BIKES = [
-    { id: 'all', brand: '', model: locale === 'th' ? 'ทุกรุ่น' : 'All Models' },
-    ...bikeModels,
-  ]
-
-  const activeCatLabel  = ALL_CATS.find(c => c.id === selectedCat)?.[locale === 'th' ? 'th' : 'en']
-  const activeBikeLabel = selectedBike === 'all' ? '' : bikeModels.find(b => b.id === selectedBike)
-    ? `${bikeModels.find(b => b.id === selectedBike)!.brand} ${bikeModels.find(b => b.id === selectedBike)!.model}`
-    : ''
 
   const pageStart = filtered.length === 0 ? 0 : (page - 1) * PAGE_SIZE + 1
   const pageEnd   = Math.min(page * PAGE_SIZE, filtered.length)
@@ -233,14 +249,18 @@ function ProductsContent() {
             </div>
           </div>
 
-          {/* Category pill row */}
+          {/* Category pill row — multi-select */}
           <div className="filter-pills">
             {ALL_CATS.map(cat => {
-              const active = selectedCat === cat.id
+              const isAll    = cat.id === 'all'
+              const active   = isAll ? selectedCats.size === 0 : selectedCats.has(cat.id)
+              const onClick  = isAll
+                ? () => setSelectedCats(new Set())
+                : () => toggleCat(cat.id)
               return (
                 <button
                   key={cat.id}
-                  onClick={() => setSelectedCat(cat.id)}
+                  onClick={onClick}
                   style={{
                     padding: '5px 13px', borderRadius: 999, fontSize: 14, fontWeight: 500,
                     border: '0.5px solid', cursor: 'pointer', transition: 'all .15s',
@@ -251,7 +271,7 @@ function ProductsContent() {
                   }}
                 >
                   {locale === 'th' ? cat.th : cat.en}
-                  {cat.id !== 'all' && (
+                  {!isAll && (
                     <span style={{
                       fontSize: 11, fontWeight: 700,
                       background: active ? 'rgba(255,255,255,.25)' : 'var(--bg4)',
@@ -268,30 +288,55 @@ function ProductsContent() {
       </section>
 
       <div className="container section grid-products">
-        {/* Sidebar — bike model filter */}
+        {/* Sidebar — bike model multi-select */}
         <aside className="sticky-panel" style={{ top: 160 }}>
           <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, padding: 14 }}>
-            <p style={{
-              fontSize: 11, color: 'var(--text3)', marginBottom: 10,
-              textTransform: 'uppercase', letterSpacing: '.07em', fontWeight: 700,
-            }}>
-              {t.home.filterBy}
-            </p>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
+              <p style={{ fontSize: 11, color: 'var(--text3)', textTransform: 'uppercase', letterSpacing: '.07em', fontWeight: 700 }}>
+                {t.home.filterBy}
+              </p>
+              {selectedBikes.size > 0 && (
+                <button onClick={() => setSelectedBikes(new Set())}
+                  style={{ fontSize: 11, color: 'var(--red)', background: 'none', border: 'none', cursor: 'pointer', fontWeight: 600 }}>
+                  ล้าง ({selectedBikes.size})
+                </button>
+              )}
+            </div>
             <div style={{ maxHeight: 420, overflowY: 'auto', paddingRight: 4 }}>
-              {ALL_BIKES.map(bm => {
-                const active = selectedBike === bm.id
+              {/* "All" item */}
+              <button
+                onClick={() => setSelectedBikes(new Set())}
+                style={{
+                  display: 'flex', width: '100%', textAlign: 'left', alignItems: 'center', gap: 7,
+                  padding: '6px 10px', borderRadius: 6, fontSize: 13, cursor: 'pointer',
+                  border: 'none', marginBottom: 2, transition: 'all .12s',
+                  background: selectedBikes.size === 0 ? 'rgba(34,197,94,.12)' : 'transparent',
+                  color:      selectedBikes.size === 0 ? 'var(--green)'         : 'var(--text2)',
+                  fontWeight: selectedBikes.size === 0 ? 600 : 400,
+                }}
+              >
+                {locale === 'th' ? 'ทุกรุ่น' : 'All Models'}
+              </button>
+              {bikeModels.map(bm => {
+                const active = selectedBikes.has(bm.id)
                 return (
-                  <button key={bm.id} onClick={() => setSelectedBike(bm.id)} style={{
-                    display: 'block', width: '100%', textAlign: 'left',
+                  <button key={bm.id} onClick={() => toggleBike(bm.id)} style={{
+                    display: 'flex', width: '100%', textAlign: 'left', alignItems: 'center', gap: 7,
                     padding: '6px 10px', borderRadius: 6, fontSize: 13, cursor: 'pointer',
                     border: 'none', marginBottom: 2, transition: 'all .12s',
                     background: active ? 'rgba(34,197,94,.12)' : 'transparent',
                     color:      active ? 'var(--green)'         : 'var(--text2)',
                     fontWeight: active ? 600 : 400,
                   }}>
-                    {bm.id === 'all'
-                      ? (locale === 'th' ? 'ทุกรุ่น' : 'All Models')
-                      : `${bm.brand} ${bm.model}`}
+                    <span style={{
+                      width: 14, height: 14, borderRadius: 3, flexShrink: 0,
+                      border: `1.5px solid ${active ? 'var(--green)' : 'var(--border2)'}`,
+                      background: active ? 'var(--green)' : 'transparent',
+                      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                    }}>
+                      {active && <span style={{ width: 8, height: 8, borderRadius: 1, background: '#fff', display: 'block' }} />}
+                    </span>
+                    {bm.brand} {bm.model}
                   </button>
                 )
               })}
@@ -338,12 +383,16 @@ function ProductsContent() {
           {hasFilters && (
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 14 }}>
               {query && <FilterChip label={`"${query}"`} onRemove={() => setQuery('')} />}
-              {selectedCat !== 'all' && activeCatLabel && (
-                <FilterChip label={String(activeCatLabel)} onRemove={() => setSelectedCat('all')} />
-              )}
-              {selectedBike !== 'all' && activeBikeLabel && (
-                <FilterChip label={activeBikeLabel} onRemove={() => setSelectedBike('all')} />
-              )}
+              {[...selectedCats].map(id => {
+                const cat = ALL_CATS.find(c => c.id === id)
+                if (!cat) return null
+                return <FilterChip key={id} label={locale === 'th' ? cat.th : cat.en} onRemove={() => toggleCat(id)} />
+              })}
+              {[...selectedBikes].map(id => {
+                const bm = bikeModels.find(b => b.id === id)
+                if (!bm) return null
+                return <FilterChip key={id} label={`${bm.brand} ${bm.model}`} onRemove={() => toggleBike(id)} />
+              })}
             </div>
           )}
 

@@ -201,14 +201,9 @@ export default function RacingPage() {
       {/* ── Race Gallery ─────────────────────────── */}
       <section id="gallery" className="section">
         <div className="container">
-          <h2 style={{ fontSize: 32, marginBottom: 4 }}>
+          <h2 style={{ fontSize: 32, marginBottom: 20 }}>
             {locale === 'th' ? '🏆 ผลงานการแข่งขัน' : '🏆 Race & Event Gallery'}
           </h2>
-          <p style={{ color: 'var(--text2)', fontSize: 16, marginBottom: 24 }}>
-            {locale === 'th'
-              ? 'GigaBike เข้าร่วมงานแสดงรถและการแข่งขันทั่วประเทศไทยมาตั้งแต่ปี 2549'
-              : 'GigaBike has participated in bike shows and racing events across Thailand since 2006'}
-          </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 10 }}>
             {RACE_GALLERY.map((photo, i) => (
               <RacePhoto key={i} src={photo.src} caption={photo.caption} onClick={() => openLightbox('race', i)} />

@@ -406,9 +406,235 @@ CREATE POLICY "Anon reads published announcements"
 
 CREATE INDEX IF NOT EXISTS announcements_idx ON announcements (published, pinned DESC, created_at DESC);
 
+-- ── Phase 2: Review images storage ───────────────────────────────────────────
+-- Public bucket — review photos are visible to all storefront visitors.
+INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+VALUES (
+  'review-images', 'review-images', true, 5242880,
+  ARRAY['image/jpeg','image/png','image/webp']
+) ON CONFLICT (id) DO NOTHING;
+
+DROP POLICY IF EXISTS "Public read review images" ON storage.objects;
+CREATE POLICY "Public read review images" ON storage.objects
+  FOR SELECT USING (bucket_id = 'review-images');
+
+-- ===================================================
+-- Phase 3: Customer Account System
+-- ===================================================
+
+-- ── profiles (1:1 with auth.users) ───────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS profiles (
+  id           UUID        PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+  full_name    TEXT,
+  phone        TEXT,
+  avatar_url   TEXT,
+  locale       TEXT        NOT NULL DEFAULT 'th',
+  notify_order BOOLEAN     NOT NULL DEFAULT true,
+  notify_promo BOOLEAN     NOT NULL DEFAULT true,
+  notify_reply BOOLEAN     NOT NULL DEFAULT true,
+  created_at   TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Users read own profile"   ON profiles;
+DROP POLICY IF EXISTS "Users update own profile" ON profiles;
+CREATE POLICY "Users read own profile"
+  ON profiles FOR SELECT TO authenticated
+  USING (auth.uid() = id);
+CREATE POLICY "Users update own profile"
+  ON profiles FOR UPDATE TO authenticated
+  USING (auth.uid() = id) WITH CHECK (auth.uid() = id);
+
+-- Auto-create profile row when a new auth user signs up.
+CREATE OR REPLACE FUNCTION handle_new_user()
+RETURNS TRIGGER
+LANGUAGE plpgsql SECURITY DEFINER SET search_path = public
+AS $$
+BEGIN
+  INSERT INTO profiles (id, full_name, avatar_url)
+  VALUES (
+    NEW.id,
+    NEW.raw_user_meta_data->>'full_name',
+    NEW.raw_user_meta_data->>'avatar_url'
+  )
+  ON CONFLICT (id) DO NOTHING;
+  RETURN NEW;
+END;
+$$;
+
+DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
+CREATE TRIGGER on_auth_user_created
+  AFTER INSERT ON auth.users
+  FOR EACH ROW EXECUTE FUNCTION handle_new_user();
+
+-- ── addresses (address book) ─────────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS addresses (
+  id             UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id        UUID        NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  label          TEXT        NOT NULL DEFAULT 'home'
+                 CHECK (label IN ('home','work','shop','other')),
+  recipient_name TEXT        NOT NULL,
+  phone          TEXT        NOT NULL,
+  address        TEXT        NOT NULL,
+  is_default     BOOLEAN     NOT NULL DEFAULT false,
+  created_at     TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+ALTER TABLE addresses ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Users manage own addresses" ON addresses;
+CREATE POLICY "Users manage own addresses"
+  ON addresses FOR ALL TO authenticated
+  USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+
+CREATE INDEX IF NOT EXISTS addresses_user_idx ON addresses (user_id, is_default DESC, created_at DESC);
+
+-- ── wishlists (saved products) ───────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS wishlists (
+  id          UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id     UUID        NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  product_id  TEXT        NOT NULL,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (user_id, product_id)
+);
+
+ALTER TABLE wishlists ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Users manage own wishlist" ON wishlists;
+CREATE POLICY "Users manage own wishlist"
+  ON wishlists FOR ALL TO authenticated
+  USING (auth.uid() = user_id) WITH CHECK (auth.uid() = user_id);
+
+CREATE INDEX IF NOT EXISTS wishlists_user_idx ON wishlists (user_id, created_at DESC);
+
+-- ── support_tickets ──────────────────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS support_tickets (
+  id          UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id     UUID        REFERENCES auth.users(id) ON DELETE SET NULL,
+  email       TEXT        NOT NULL,
+  topic       TEXT        NOT NULL DEFAULT 'general'
+              CHECK (topic IN ('general','order','shipping','product','refund','claim','payment')),
+  order_id    TEXT,
+  subject     TEXT        NOT NULL,
+  body        TEXT        NOT NULL,
+  images      JSONB       NOT NULL DEFAULT '[]',
+  status      TEXT        NOT NULL DEFAULT 'open'
+              CHECK (status IN ('open','answered','closed')),
+  rating      INTEGER     CHECK (rating BETWEEN 1 AND 5),
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+ALTER TABLE support_tickets ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Users read own tickets" ON support_tickets;
+CREATE POLICY "Users read own tickets"
+  ON support_tickets FOR SELECT TO authenticated
+  USING (auth.uid() = user_id);
+
+CREATE INDEX IF NOT EXISTS support_tickets_user_idx ON support_tickets (user_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS support_tickets_status_idx ON support_tickets (status, created_at DESC);
+
+-- ── Link orders to user account (guest orders keep user_id NULL) ─────────────
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS user_id UUID REFERENCES auth.users(id) ON DELETE SET NULL;
+CREATE INDEX IF NOT EXISTS orders_user_idx ON orders (user_id, created_at DESC) WHERE user_id IS NOT NULL;
+DROP POLICY IF EXISTS "Users read own orders" ON orders;
+CREATE POLICY "Users read own orders"
+  ON orders FOR SELECT TO authenticated
+  USING (auth.uid() = user_id);
+
+-- ── Link reviews to user account (for "my reviews") ──────────────────────────
+ALTER TABLE reviews ADD COLUMN IF NOT EXISTS user_id UUID REFERENCES auth.users(id) ON DELETE SET NULL;
+CREATE INDEX IF NOT EXISTS reviews_user_idx ON reviews (user_id, created_at DESC) WHERE user_id IS NOT NULL;
+DROP POLICY IF EXISTS "Users read own reviews" ON reviews;
+CREATE POLICY "Users read own reviews"
+  ON reviews FOR SELECT TO authenticated
+  USING (auth.uid() = user_id);
+
+-- ── Wishlist alert preferences (price-drop / restock) ────────────────────────
+ALTER TABLE wishlists ADD COLUMN IF NOT EXISTS notify_price_drop BOOLEAN NOT NULL DEFAULT false;
+ALTER TABLE wishlists ADD COLUMN IF NOT EXISTS notify_restock    BOOLEAN NOT NULL DEFAULT false;
+
+-- ── Message replies (customer ↔ shop thread) ─────────────────────────────────
+CREATE TABLE IF NOT EXISTS message_replies (
+  id          UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+  message_id  UUID        NOT NULL REFERENCES messages(id) ON DELETE CASCADE,
+  author      TEXT        NOT NULL CHECK (author IN ('customer','shop')),
+  body        TEXT        NOT NULL,
+  images      JSONB       NOT NULL DEFAULT '[]',
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+ALTER TABLE message_replies ENABLE ROW LEVEL SECURITY;
+-- service_role only — customer access via /api/account/messages routes (filtered by email).
+CREATE INDEX IF NOT EXISTS message_replies_msg_idx ON message_replies (message_id, created_at);
+
+-- ── Ticket replies (support thread) ──────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS ticket_replies (
+  id          UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+  ticket_id   UUID        NOT NULL REFERENCES support_tickets(id) ON DELETE CASCADE,
+  author      TEXT        NOT NULL CHECK (author IN ('customer','shop')),
+  body        TEXT        NOT NULL,
+  images      JSONB       NOT NULL DEFAULT '[]',
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+ALTER TABLE ticket_replies ENABLE ROW LEVEL SECURITY;
+CREATE INDEX IF NOT EXISTS ticket_replies_ticket_idx ON ticket_replies (ticket_id, created_at);
+
+-- ── Login events (login history) ─────────────────────────────────────────────
+CREATE TABLE IF NOT EXISTS login_events (
+  id          UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id     UUID        NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  ip_hash     TEXT,
+  user_agent  TEXT,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+ALTER TABLE login_events ENABLE ROW LEVEL SECURITY;
+DROP POLICY IF EXISTS "Users read own login events" ON login_events;
+CREATE POLICY "Users read own login events"
+  ON login_events FOR SELECT TO authenticated
+  USING (auth.uid() = user_id);
+CREATE INDEX IF NOT EXISTS login_events_user_idx ON login_events (user_id, created_at DESC);
+
+-- ── Tax invoice requests (linked to order) ───────────────────────────────────
+CREATE TABLE IF NOT EXISTS tax_invoice_requests (
+  id          UUID        PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id     UUID        REFERENCES auth.users(id) ON DELETE SET NULL,
+  order_id    TEXT        NOT NULL,
+  tax_id      TEXT        NOT NULL,
+  company     TEXT        NOT NULL,
+  address     TEXT        NOT NULL,
+  status      TEXT        NOT NULL DEFAULT 'requested' CHECK (status IN ('requested','issued')),
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+ALTER TABLE tax_invoice_requests ENABLE ROW LEVEL SECURITY;
+DROP POLICY IF EXISTS "Users read own tax requests" ON tax_invoice_requests;
+CREATE POLICY "Users read own tax requests"
+  ON tax_invoice_requests FOR SELECT TO authenticated
+  USING (auth.uid() = user_id);
+CREATE INDEX IF NOT EXISTS tax_req_user_idx ON tax_invoice_requests (user_id, created_at DESC);
+
+-- Allow customers to cancel their own pending/paid orders via API (service role enforces rule).
+
+-- ── Avatar storage bucket ────────────────────────────────────────────────────
+INSERT INTO storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+VALUES ('avatars', 'avatars', true, 2097152, ARRAY['image/jpeg','image/png','image/webp'])
+ON CONFLICT (id) DO NOTHING;
+
+DROP POLICY IF EXISTS "Public read avatars"     ON storage.objects;
+DROP POLICY IF EXISTS "Users upload own avatar" ON storage.objects;
+CREATE POLICY "Public read avatars" ON storage.objects
+  FOR SELECT USING (bucket_id = 'avatars');
+CREATE POLICY "Users upload own avatar" ON storage.objects
+  FOR INSERT TO authenticated
+  WITH CHECK (bucket_id = 'avatars' AND (storage.foldername(name))[1] = auth.uid()::text);
+
 -- ===================================================
 -- Environment variables (.env.local / Netlify)
 -- ===================================================
 -- NEXT_PUBLIC_SUPABASE_URL       = your project URL
 -- NEXT_PUBLIC_SUPABASE_ANON_KEY  = your anon key
 -- SUPABASE_SERVICE_ROLE_KEY      = your service role key (server only)
+--
+-- Phase 3 (Customer Auth):
+-- Enable Email + Google providers in Supabase Dashboard → Authentication → Providers
+-- Set Redirect URLs incl. http://localhost:3000/auth/callback

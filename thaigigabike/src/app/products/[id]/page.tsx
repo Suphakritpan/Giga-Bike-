@@ -1,10 +1,12 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useParams, notFound } from 'next/navigation'
-import { ShoppingCart, ChevronRight, ChevronLeft, ImageOff, Check, Minus, Plus, ZoomIn, Star, PenLine } from 'lucide-react'
+import { ShoppingCart, ChevronRight, ChevronLeft, ImageOff, Check, Minus, Plus, ZoomIn, Star, PenLine, Heart } from 'lucide-react'
 import Link from 'next/link'
 import { useLang } from '@/lib/lang'
 import { useCart } from '@/lib/cart'
+import { useWishlist } from '@/lib/wishlist'
+import { recordView } from '@/lib/recentlyViewed'
 import { getProductById, products, bikeModels } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
 
@@ -100,15 +102,20 @@ export default function ProductDetailPage() {
   const params = useParams()
   const { t, locale } = useLang()
   const { add } = useCart()
+  const { isSaved, toggle } = useWishlist()
   const product = getProductById(params.id as string)
   const [selectedColor, setSelectedColor] = useState(product?.colors[0] ?? '')
   const [qty, setQty] = useState(1)
+
+  // Record view for "recently viewed" history
+  useEffect(() => { if (product) recordView(product.id) }, [product])
   const [added, setAdded] = useState(false)
   const [activeImg, setActiveImg] = useState(0)
   const [lightbox, setLightbox] = useState(false)
   const [imgErrors, setImgErrors] = useState<Record<number, boolean>>({})
 
-  if (!product) return notFound()
+  // Draft / unpublished products must not be reachable via direct URL.
+  if (!product || !product.published) return notFound()
 
   const name = locale === 'th' ? product.nameTh : product.name
   const desc = locale === 'th' ? product.descriptionTh : product.description
@@ -295,6 +302,15 @@ export default function ProductDetailPage() {
               <button onClick={handleAddToCart} disabled={!product.inStock} className="btn-primary"
                 style={{ flex: 1, justifyContent: 'center', opacity: product.inStock ? 1 : 0.5 }}>
                 {added ? <><Check size={15} /> {locale === 'th' ? 'เพิ่มแล้ว!' : 'Added!'}</> : <><ShoppingCart size={15} /> {t.product.addToCart}</>}
+              </button>
+              <button
+                onClick={() => toggle(product.id)}
+                aria-label={isSaved(product.id) ? (locale === 'th' ? 'นำออกจากรายการโปรด' : 'Remove from wishlist') : (locale === 'th' ? 'บันทึกในรายการโปรด' : 'Save to wishlist')}
+                style={{
+                  width: 46, flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  background: 'var(--bg3)', border: '1px solid var(--border2)', borderRadius: 8, cursor: 'pointer',
+                }}>
+                <Heart size={18} fill={isSaved(product.id) ? '#ef4444' : 'none'} color={isSaved(product.id) ? '#ef4444' : 'var(--text2)'} />
               </button>
               <a href="https://line.me/ti/p/~thaigigabike" target="_blank" rel="noopener noreferrer" style={{
                 flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'node:crypto'
 import { createServiceClient } from '@/lib/supabase/service'
+import { createClient } from '@/lib/supabase/server'
 import { allProducts as STATIC_CATALOG } from '@/data/products'
 import { sendOrderConfirmationEmail } from '@/lib/email'
 
@@ -313,6 +314,17 @@ export async function POST(request: NextRequest) {
     if (!result?.order_id) {
       console.error('create_order_atomic returned no order_id')
       return NextResponse.json({ error: 'Failed to save order' }, { status: 500 })
+    }
+
+    // ── Link order to logged-in customer (if any) — enables account order history.
+    // Read from the session cookie; never trust a client-sent user_id.
+    if (!result.idempotent) {
+      try {
+        const { data: { user } } = await createClient().auth.getUser()
+        if (user) {
+          await supabase.from('orders').update({ user_id: user.id }).eq('id', result.order_id)
+        }
+      } catch { /* guest checkout — no session */ }
     }
 
     // Send confirmation email only for newly created orders (not idempotent retries).

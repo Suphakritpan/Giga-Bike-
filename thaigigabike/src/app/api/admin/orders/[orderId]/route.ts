@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { requireAdmin } from '@/lib/auth/require-admin'
 import { createServiceClient } from '@/lib/supabase/service'
 import { writeAuditLog } from '@/lib/audit'
+import { sendStatusUpdateEmail } from '@/lib/email'
 
 const VALID_STATUSES = new Set(['pending', 'paid', 'shipping', 'delivered', 'cancelled'])
 
@@ -44,6 +45,24 @@ export async function PATCH(
     .eq('id', params.orderId)
 
   if (dbErr) return NextResponse.json({ error: dbErr.message }, { status: 500 })
+
+  // Fire status-update email (non-blocking — never fails the response)
+  if (patch.status) {
+    const { data: order } = await supabase
+      .from('orders')
+      .select('contact_email, recipient_name, tracking_no')
+      .eq('id', params.orderId)
+      .single()
+
+    if (order?.contact_email) {
+      sendStatusUpdateEmail(order.contact_email, {
+        orderId:       params.orderId,
+        recipientName: order.recipient_name ?? '',
+        status:        patch.status as string,
+        trackingNo:    (patch.tracking_no ?? order.tracking_no) as string | null,
+      }).catch(() => {/* fire-and-forget */})
+    }
+  }
 
   await writeAuditLog({
     actor_user_id: user.id || null,

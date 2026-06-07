@@ -3,8 +3,9 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import {
   Package, ShoppingBag, TrendingUp, Plus, Edit, Trash2, Download,
-  ChevronDown, Minus, AlertTriangle, CheckCircle, XCircle, Boxes,
+  ChevronDown, ChevronUp, Minus, AlertTriangle, CheckCircle, XCircle, Boxes,
   LogOut, Search, Zap, Bell, MessageCircle, Star,
+  Send, Camera, Loader, X, Receipt, Headphones,
 } from 'lucide-react'
 import { products as initialProducts } from '@/data/products'
 import type { Product } from '@/data/products'
@@ -13,7 +14,7 @@ import { createClient } from '@/lib/supabase/client'
 import { toCsvRow } from '@/lib/csv'
 
 type OrderStatus = 'pending' | 'paid' | 'shipping' | 'delivered' | 'cancelled'
-type Tab = 'products' | 'orders' | 'stock' | 'messages' | 'reviews'
+type Tab = 'products' | 'orders' | 'stock' | 'messages' | 'tickets' | 'tax' | 'reviews'
 
 type AdminMessage = {
   id: string; sender_name: string; sender_email: string; sender_phone: string | null
@@ -23,6 +24,23 @@ type AdminMessage = {
 type AdminReview = {
   id: string; product_id: string | null; reviewer_name: string
   rating: number; comment: string | null; published: boolean; created_at: string
+}
+type TicketStatus = 'open' | 'answered' | 'closed'
+type AdminTicket = {
+  id: string; user_id: string | null; email: string; topic: string
+  order_id: string | null; subject: string; body: string; images: string[]
+  status: TicketStatus; rating: number | null; created_at: string
+}
+type TaxRequest = {
+  id: string; user_id: string | null; order_id: string; tax_id: string
+  company: string; address: string; status: 'requested' | 'issued'; created_at: string
+  order_total: number | null; order_email: string | null
+}
+type ThreadReply = { id: string; author: 'customer' | 'shop'; body: string; images: string[]; created_at: string }
+
+const TICKET_TOPIC_LABELS: Record<string, string> = {
+  general: 'ทั่วไป', order: 'ออเดอร์', shipping: 'จัดส่ง', product: 'สินค้า',
+  refund: 'คืนเงิน', claim: 'เคลม', payment: 'ชำระเงิน',
 }
 
 const LOW_STOCK_THRESHOLD = 5
@@ -82,6 +100,101 @@ function AlertBanner({ type, message }: { type: 'error' | 'warn'; message: strin
   )
 }
 
+/* ── Admin reply thread (chat bubbles + reply box with image) ─── */
+function AdminThread({ base, onSent }: { base: string; onSent?: () => void }) {
+  const [replies, setReplies]   = useState<ThreadReply[]>([])
+  const [loading, setLoading]   = useState(true)
+  const [text, setText]         = useState('')
+  const [images, setImages]     = useState<string[]>([])
+  const [uploading, setUploading] = useState(false)
+  const [sending, setSending]   = useState(false)
+
+  const load = useCallback(async () => {
+    const d = await fetch(base).then(r => r.json()).catch(() => ({ replies: [] }))
+    setReplies(d.replies ?? [])
+    setLoading(false)
+  }, [base])
+  useEffect(() => { load() }, [load])
+
+  const upload = async (file: File) => {
+    if (images.length >= 3) return
+    setUploading(true)
+    const fd = new FormData(); fd.append('image', file)
+    const d = await fetch('/api/reviews/upload-image', { method: 'POST', body: fd }).then(r => r.json()).catch(() => ({}))
+    if (d.url) setImages(prev => [...prev, d.url])
+    setUploading(false)
+  }
+
+  const send = async () => {
+    if (!text.trim()) return
+    setSending(true)
+    await fetch(base, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ body: text, images }),
+    })
+    setText(''); setImages([]); setSending(false)
+    await load()
+    onSent?.()
+  }
+
+  return (
+    <div style={{ marginTop: 12, paddingTop: 12, borderTop: '0.5px solid var(--border)' }}>
+      {loading ? (
+        <div style={{ color: 'var(--text3)', fontSize: 13 }}>กำลังโหลด...</div>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 12 }}>
+          {replies.length === 0 && <p style={{ fontSize: 13, color: 'var(--text3)' }}>ยังไม่มีการตอบกลับ</p>}
+          {replies.map(r => (
+            <div key={r.id} style={{ alignSelf: r.author === 'shop' ? 'flex-end' : 'flex-start', maxWidth: '80%' }}>
+              <div style={{
+                background: r.author === 'shop' ? 'var(--green)' : 'var(--bg3)',
+                color: r.author === 'shop' ? '#fff' : 'var(--text)',
+                borderRadius: 12, padding: '8px 12px', fontSize: 14, lineHeight: 1.5, whiteSpace: 'pre-wrap',
+              }}>
+                {r.body}
+                {r.images?.length > 0 && (
+                  <div style={{ display: 'flex', gap: 6, marginTop: 6, flexWrap: 'wrap' }}>
+                    {r.images.map((u, i) => <a key={i} href={u} target="_blank" rel="noreferrer"><img src={u} alt="" style={{ width: 60, height: 60, objectFit: 'cover', borderRadius: 6 }} /></a>)}
+                  </div>
+                )}
+              </div>
+              <div style={{ fontSize: 10, color: 'var(--text3)', marginTop: 2, textAlign: r.author === 'shop' ? 'right' : 'left' }}>
+                {r.author === 'shop' ? 'ร้าน' : 'ลูกค้า'} · {new Date(r.created_at).toLocaleString('th-TH')}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* reply box */}
+      <div style={{ display: 'flex', gap: 6, alignItems: 'flex-end' }}>
+        <div style={{ flex: 1 }}>
+          {images.length > 0 && (
+            <div style={{ display: 'flex', gap: 6, marginBottom: 6, flexWrap: 'wrap' }}>
+              {images.map((u, i) => (
+                <div key={i} style={{ position: 'relative' }}>
+                  <img src={u} alt="" style={{ width: 44, height: 44, objectFit: 'cover', borderRadius: 6 }} />
+                  <button onClick={() => setImages(p => p.filter((_, j) => j !== i))} style={{ position: 'absolute', top: -5, right: -5, width: 16, height: 16, borderRadius: '50%', background: 'var(--red)', border: 'none', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><X size={9} /></button>
+                </div>
+              ))}
+            </div>
+          )}
+          <textarea value={text} onChange={e => setText(e.target.value)} placeholder="พิมพ์คำตอบถึงลูกค้า..."
+            style={{ width: '100%', minHeight: 44, padding: '8px 12px', fontSize: 14, border: '1px solid var(--border2)', borderRadius: 9, background: 'var(--bg3)', color: 'var(--text)', outline: 'none', boxSizing: 'border-box', resize: 'vertical' }} />
+        </div>
+        <label style={{ width: 40, height: 40, borderRadius: 9, border: '1px solid var(--border2)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'var(--text3)', flexShrink: 0 }}>
+          <input type="file" accept="image/jpeg,image/png,image/webp" style={{ display: 'none' }} onChange={e => { const f = e.target.files?.[0]; if (f) upload(f) }} disabled={uploading || images.length >= 3} />
+          {uploading ? <Loader size={16} style={{ animation: 'spin .7s linear infinite' }} /> : <Camera size={16} />}
+        </label>
+        <button onClick={send} disabled={sending || !text.trim()} className="btn-primary" style={{ width: 40, height: 40, padding: 0, justifyContent: 'center', flexShrink: 0, opacity: (sending || !text.trim()) ? 0.6 : 1 }}>
+          <Send size={16} />
+        </button>
+      </div>
+      <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
+    </div>
+  )
+}
+
 export default function AdminPage() {
   const router  = useRouter()
   const supabase = createClient()
@@ -101,8 +214,16 @@ export default function AdminPage() {
 
   const [adminMessages, setAdminMessages]   = useState<AdminMessage[]>([])
   const [loadingMessages, setLoadingMessages] = useState(false)
+  const [openMessageId, setOpenMessageId]   = useState<string | null>(null)
   const [adminReviews, setAdminReviews]     = useState<AdminReview[]>([])
   const [loadingReviews, setLoadingReviews] = useState(false)
+
+  const [adminTickets, setAdminTickets]     = useState<AdminTicket[]>([])
+  const [loadingTickets, setLoadingTickets] = useState(false)
+  const [openTicketId, setOpenTicketId]     = useState<string | null>(null)
+
+  const [taxRequests, setTaxRequests]       = useState<TaxRequest[]>([])
+  const [loadingTax, setLoadingTax]         = useState(false)
 
   const [editingTracking, setEditingTracking] = useState<string | null>(null)
   const [trackingInput, setTrackingInput]     = useState('')
@@ -320,11 +441,45 @@ export default function AdminPage() {
     setAdminReviews(prev => prev.filter(r => r.id !== id))
   }
 
-  // Load messages/reviews when switching to their tabs
+  // ─── Tickets ───
+  const loadTickets = useCallback(async () => {
+    setLoadingTickets(true)
+    const res = await fetch('/api/admin/tickets')
+    if (res.ok) { const j = await res.json(); setAdminTickets(j.tickets ?? []) }
+    setLoadingTickets(false)
+  }, [])
+
+  const setTicketStatus = async (id: string, status: TicketStatus) => {
+    setAdminTickets(prev => prev.map(t => t.id === id ? { ...t, status } : t))
+    await fetch(`/api/admin/tickets/${encodeURIComponent(id)}`, {
+      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status }),
+    })
+  }
+
+  // ─── Tax invoice requests ───
+  const loadTax = useCallback(async () => {
+    setLoadingTax(true)
+    const res = await fetch('/api/admin/tax-invoices')
+    if (res.ok) { const j = await res.json(); setTaxRequests(j.requests ?? []) }
+    setLoadingTax(false)
+  }, [])
+
+  const setTaxStatus = async (id: string, status: TaxRequest['status']) => {
+    setTaxRequests(prev => prev.map(r => r.id === id ? { ...r, status } : r))
+    await fetch(`/api/admin/tax-invoices/${encodeURIComponent(id)}`, {
+      method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status }),
+    })
+  }
+
+  // Load messages/reviews/tickets/tax when switching to their tabs
   useEffect(() => {
     if (tab === 'messages' && adminMessages.length === 0) loadMessages()
     if (tab === 'reviews'  && adminReviews.length === 0)  loadReviews()
-  }, [tab, adminMessages.length, adminReviews.length, loadMessages, loadReviews])
+    if (tab === 'tickets'  && adminTickets.length === 0)  loadTickets()
+    if (tab === 'tax'      && taxRequests.length === 0)   loadTax()
+  }, [tab, adminMessages.length, adminReviews.length, adminTickets.length, taxRequests.length, loadMessages, loadReviews, loadTickets, loadTax])
 
   const handleLogout = async () => { await supabase.auth.signOut(); router.push('/admin/login') }
 
@@ -380,12 +535,16 @@ export default function AdminPage() {
 
   const newMessagesCount = adminMessages.filter(m => m.status === 'new').length
   const pendingReviewsCount = adminReviews.filter(r => !r.published).length
+  const openTicketsCount = adminTickets.filter(t => t.status === 'open').length
+  const pendingTaxCount = taxRequests.filter(r => r.status === 'requested').length
 
   const TABS: { id: Tab; label: string; count?: number }[] = [
     { id: 'products', label: 'สินค้า',    count: products.length },
     { id: 'stock',    label: 'สต็อก',     count: outOfStock + lowStock > 0 ? outOfStock + lowStock : undefined },
     { id: 'orders',   label: 'ออเดอร์',   count: pendingCount > 0 ? pendingCount : undefined },
     { id: 'messages', label: 'ข้อความ',   count: newMessagesCount > 0 ? newMessagesCount : undefined },
+    { id: 'tickets',  label: 'ซัพพอร์ต',  count: openTicketsCount > 0 ? openTicketsCount : undefined },
+    { id: 'tax',      label: 'ใบกำกับภาษี', count: pendingTaxCount > 0 ? pendingTaxCount : undefined },
     { id: 'reviews',  label: 'รีวิว',     count: pendingReviewsCount > 0 ? pendingReviewsCount : undefined },
   ]
 
@@ -820,7 +979,11 @@ export default function AdminPage() {
                     </div>
                     {msg.subject && <div style={{ fontSize: 13, color: 'var(--text2)', marginTop: 8, fontWeight: 600 }}>{msg.subject}</div>}
                     <p style={{ fontSize: 14, color: 'var(--text2)', marginTop: 8, lineHeight: 1.65, whiteSpace: 'pre-wrap' }}>{msg.body}</p>
-                    <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+                    <div style={{ display: 'flex', gap: 8, marginTop: 12, flexWrap: 'wrap' }}>
+                      <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }}
+                        onClick={() => setOpenMessageId(openMessageId === msg.id ? null : msg.id)}>
+                        {openMessageId === msg.id ? <ChevronUp size={13} /> : <ChevronDown size={13} />} ตอบกลับในแชต
+                      </button>
                       <a href={`mailto:${msg.sender_email}?subject=Re: ${msg.subject || 'ข้อความจาก GigaBike'}`}
                         style={{
                           fontSize: 13, padding: '5px 12px', borderRadius: 7,
@@ -841,8 +1004,179 @@ export default function AdminPage() {
                         </button>
                       )}
                     </div>
+                    {openMessageId === msg.id && (
+                      <AdminThread
+                        base={`/api/admin/messages/${encodeURIComponent(msg.id)}`}
+                        onSent={() => setAdminMessages(prev => prev.map(m => m.id === msg.id ? { ...m, status: 'replied' } : m))}
+                      />
+                    )}
                   </div>
                 ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ── Support tickets tab ───────────────── */}
+        {tab === 'tickets' && (
+          <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
+              <span style={{ fontSize: 14, color: 'var(--text2)' }}>
+                {adminTickets.length} ตั๋ว · {openTicketsCount} รอตอบ
+              </span>
+              <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }} onClick={loadTickets}>
+                รีเฟรช
+              </button>
+            </div>
+            {loadingTickets ? (
+              <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
+            ) : adminTickets.length === 0 ? (
+              <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
+                <Headphones size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
+                ยังไม่มีตั๋วซัพพอร์ต
+              </div>
+            ) : (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {adminTickets.map(tk => {
+                  const open = openTicketId === tk.id
+                  const sc = tk.status === 'open' ? '#22c55e' : tk.status === 'answered' ? '#3b82f6' : 'var(--text3)'
+                  const sbg = tk.status === 'open' ? 'rgba(34,197,94,.15)' : tk.status === 'answered' ? 'rgba(59,130,246,.15)' : 'var(--bg3)'
+                  const sLabel = tk.status === 'open' ? 'รอตอบ' : tk.status === 'answered' ? 'ตอบแล้ว' : 'ปิด'
+                  return (
+                    <div key={tk.id} style={{
+                      background: 'var(--bg2)', border: `0.5px solid ${tk.status === 'open' ? 'rgba(34,197,94,.4)' : 'var(--border)'}`,
+                      borderLeft: `3px solid ${sc}`, borderRadius: 10, padding: '14px 18px',
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
+                        <div style={{ minWidth: 0 }}>
+                          <div style={{ fontWeight: 700, fontSize: 15 }}>
+                            {tk.subject}
+                            <span className="badge badge-gray" style={{ fontSize: 11, marginLeft: 8 }}>{TICKET_TOPIC_LABELS[tk.topic] ?? tk.topic}</span>
+                          </div>
+                          <div style={{ fontSize: 13, color: 'var(--text3)' }}>
+                            {tk.email}
+                            {tk.order_id && <span style={{ color: 'var(--green)', marginLeft: 6, fontFamily: 'var(--font-display)' }}>{tk.order_id}</span>}
+                          </div>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                          {tk.rating != null && (
+                            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 2, fontSize: 12, color: '#f59e0b' }}>
+                              <Star size={12} fill="#f59e0b" color="#f59e0b" /> {tk.rating}
+                            </span>
+                          )}
+                          <span style={{ fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 999, background: sbg, color: sc }}>{sLabel}</span>
+                          <span style={{ fontSize: 12, color: 'var(--text3)' }}>{new Date(tk.created_at).toLocaleDateString('th-TH')}</span>
+                        </div>
+                      </div>
+                      <p style={{ fontSize: 14, color: 'var(--text2)', marginTop: 8, lineHeight: 1.65, whiteSpace: 'pre-wrap' }}>{tk.body}</p>
+                      {tk.images?.length > 0 && (
+                        <div style={{ display: 'flex', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
+                          {tk.images.map((u, i) => <a key={i} href={u} target="_blank" rel="noreferrer"><img src={u} alt="" style={{ width: 64, height: 64, objectFit: 'cover', borderRadius: 6 }} /></a>)}
+                        </div>
+                      )}
+                      <div style={{ display: 'flex', gap: 8, marginTop: 12, flexWrap: 'wrap' }}>
+                        <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }}
+                          onClick={() => setOpenTicketId(open ? null : tk.id)}>
+                          {open ? <ChevronUp size={13} /> : <ChevronDown size={13} />} บทสนทนา
+                        </button>
+                        {tk.status !== 'closed' ? (
+                          <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px', color: 'var(--text3)' }}
+                            onClick={() => setTicketStatus(tk.id, 'closed')}>
+                            ปิดตั๋ว
+                          </button>
+                        ) : (
+                          <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }}
+                            onClick={() => setTicketStatus(tk.id, 'open')}>
+                            เปิดใหม่
+                          </button>
+                        )}
+                      </div>
+                      {open && (
+                        <AdminThread
+                          base={`/api/admin/tickets/${encodeURIComponent(tk.id)}`}
+                          onSent={() => setAdminTickets(prev => prev.map(t => t.id === tk.id ? { ...t, status: 'answered' } : t))}
+                        />
+                      )}
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ── Tax invoice requests tab ──────────── */}
+        {tab === 'tax' && (
+          <div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
+              <span style={{ fontSize: 14, color: 'var(--text2)' }}>
+                {taxRequests.length} คำขอ · {pendingTaxCount} รอออก
+              </span>
+              <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }} onClick={loadTax}>
+                รีเฟรช
+              </button>
+            </div>
+            {loadingTax ? (
+              <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
+            ) : taxRequests.length === 0 ? (
+              <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
+                <Receipt size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
+                ยังไม่มีคำขอใบกำกับภาษี
+              </div>
+            ) : (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {taxRequests.map(r => {
+                  const issued = r.status === 'issued'
+                  return (
+                    <div key={r.id} style={{
+                      background: 'var(--bg2)', border: `0.5px solid ${issued ? 'var(--border)' : 'rgba(249,115,22,.35)'}`,
+                      borderLeft: `3px solid ${issued ? '#22c55e' : '#f97316'}`, borderRadius: 10, padding: '14px 18px',
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
+                        <div style={{ minWidth: 0 }}>
+                          <div style={{ fontWeight: 700, fontSize: 15 }}>{r.company}</div>
+                          <div style={{ fontSize: 13, color: 'var(--text3)' }}>
+                            เลขผู้เสียภาษี: <span style={{ fontFamily: 'var(--font-display)', color: 'var(--text2)' }}>{r.tax_id}</span>
+                          </div>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
+                          <span style={{
+                            fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 999,
+                            background: issued ? 'rgba(34,197,94,.15)' : 'rgba(249,115,22,.15)',
+                            color: issued ? '#22c55e' : '#f97316',
+                          }}>
+                            {issued ? 'ออกแล้ว' : 'รอออก'}
+                          </span>
+                          <span style={{ fontSize: 12, color: 'var(--text3)' }}>{new Date(r.created_at).toLocaleDateString('th-TH')}</span>
+                        </div>
+                      </div>
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 10, marginTop: 10 }}>
+                        <div>
+                          <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 2 }}>ออเดอร์</div>
+                          <div style={{ fontSize: 14, fontFamily: 'var(--font-display)', color: 'var(--green)' }}>{r.order_id}</div>
+                          {r.order_total != null && <div style={{ fontSize: 13, color: 'var(--text3)' }}>฿{r.order_total.toLocaleString()} · {r.order_email}</div>}
+                        </div>
+                        <div>
+                          <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 2 }}>ที่อยู่ออกใบกำกับ</div>
+                          <div style={{ fontSize: 13, color: 'var(--text2)', lineHeight: 1.5, whiteSpace: 'pre-wrap' }}>{r.address}</div>
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+                        {!issued ? (
+                          <button onClick={() => setTaxStatus(r.id, 'issued')}
+                            style={{ fontSize: 13, padding: '5px 12px', borderRadius: 7, cursor: 'pointer', background: '#22c55e', color: '#fff', border: 'none', fontWeight: 600 }}>
+                            ✓ ออกใบกำกับแล้ว
+                          </button>
+                        ) : (
+                          <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px', color: 'var(--text3)' }}
+                            onClick={() => setTaxStatus(r.id, 'requested')}>
+                            ย้อนเป็นรอออก
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
             )}
           </div>
