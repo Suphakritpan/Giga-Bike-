@@ -1,0 +1,33 @@
+# ── Python ─────────────────────────────────────────────────
+.venv/
+__pycache__/
+*.pyc
+
+# ── Node ───────────────────────────────────────────────────
+node_modules/
+
+# ── Build / test artifacts ─────────────────────────────────
+.next/
+out/
+test-results/
+playwright-report/
+*.tsbuildinfo
+
+# ── Environment variables — NEVER commit real values ───────
+.env
+.env.local
+.env.*.local
+.env.production
+
+# ── Legacy migration source (kept local, not needed to deploy) ──
+# The site mirror and analysis dumps were the one-time input to the
+# catalog migration. The generated output (products.generated.ts,
+# public/legacy/**) is committed, so these are not needed on Netlify.
+HTTrack My Web Sites/
+legacy-analysis/
+sitemap-out/
+
+# ── OS / editor ────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
