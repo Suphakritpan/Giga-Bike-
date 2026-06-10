@@ -3,16 +3,14 @@ import { Suspense, useState } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { LogIn, Eye, EyeOff } from 'lucide-react'
-import { createClient } from '@/lib/supabase/client'
 import { useLang } from '@/lib/lang'
 import { sanitizeNextPath } from '@/lib/safe-next'
-import { AuthShell, GoogleButton, authInput, authLabel } from '@/components/auth/AuthShell'
+import { AuthShell, authInput, authLabel } from '@/components/auth/AuthShell'
 
 function LoginContent() {
   const { t } = useLang()
   const router = useRouter()
   const params = useSearchParams()
-  const supabase = createClient()
   // Validated to an internal path — never trust ?next= for redirects (open-redirect guard).
   const next = sanitizeNextPath(params.get('next'))
 
@@ -26,9 +24,14 @@ function LoginContent() {
     e.preventDefault()
     setError('')
     setLoading(true)
-    const { error } = await supabase.auth.signInWithPassword({ email: email.trim().toLowerCase(), password })
-    if (error) {
-      setError(t.auth.invalidCred)
+    const res = await fetch('/api/auth/login', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ email: email.trim().toLowerCase(), password }),
+    })
+    if (!res.ok) {
+      const data = await res.json()
+      setError(data.error || t.auth.invalidCred)
       setLoading(false)
       return
     }
@@ -38,27 +41,12 @@ function LoginContent() {
     router.refresh()
   }
 
-  const handleGoogle = async () => {
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}` },
-    })
-  }
-
   return (
     <AuthShell
       title={t.auth.loginTitle}
       subtitle={t.auth.loginSub}
       footer={<>{t.auth.noAccount} <Link href="/signup" style={{ color: 'var(--green)', fontWeight: 700 }}>{t.auth.signup}</Link></>}
     >
-      <GoogleButton onClick={handleGoogle} label={t.auth.googleLogin} />
-
-      <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '18px 0' }}>
-        <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
-        <span style={{ fontSize: 13, color: 'var(--text3)' }}>{t.auth.orDivider}</span>
-        <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
-      </div>
-
       <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
         <div>
           <label style={authLabel}>{t.auth.email}</label>

@@ -10,7 +10,6 @@ import {
 import { products as initialProducts } from '@/data/products'
 import type { Product } from '@/data/products'
 import { ProductModal } from '@/components/admin/ProductModal'
-import { createClient } from '@/lib/supabase/client'
 import { toCsvRow } from '@/lib/csv'
 
 type OrderStatus = 'pending' | 'paid' | 'shipping' | 'delivered' | 'cancelled'
@@ -197,7 +196,6 @@ function AdminThread({ base, onSent }: { base: string; onSent?: () => void }) {
 
 export default function AdminPage() {
   const router  = useRouter()
-  const supabase = createClient()
 
   const [authChecked, setAuthChecked]   = useState(false)
   const [tab, setTab]                   = useState<Tab>('products')
@@ -237,13 +235,13 @@ export default function AdminPage() {
   const [editingStock, setEditingStock] = useState<string | null>(null)
   const [stockInput, setStockInput]     = useState('')
 
-  // ─── Auth ───
+  // ─── Auth ─── (server layout already guards this page; client-side confirm)
   useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
-      if (!data.session) router.replace('/admin/login')
+    fetch('/api/auth/me').then(r => {
+      if (!r.ok) router.replace('/login?next=/admin')
       else setAuthChecked(true)
     })
-  }, [supabase, router])
+  }, [router])
 
   // ─── Load products ───
   const loadProducts = useCallback(async () => {
@@ -481,7 +479,7 @@ export default function AdminPage() {
     if (tab === 'tax'      && taxRequests.length === 0)   loadTax()
   }, [tab, adminMessages.length, adminReviews.length, adminTickets.length, taxRequests.length, loadMessages, loadReviews, loadTickets, loadTax])
 
-  const handleLogout = async () => { await supabase.auth.signOut(); router.push('/admin/login') }
+  const handleLogout = async () => { await fetch('/api/auth/logout', { method: 'POST' }); router.push('/login') }
 
   const exportOrders = () => {
     const csv = [

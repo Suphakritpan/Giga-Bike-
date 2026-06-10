@@ -30,7 +30,7 @@ export async function GET() {
 
   const payload = {
     exported_at: new Date().toISOString(),
-    account: { id: user.id, email: user.email, created_at: user.created_at },
+    account: { id: user.id, email: user.email },
     profile, addresses, wishlist, reviews, tickets, messages,
     orders: [...ordersByUser, ...ordersByEmail],
   }

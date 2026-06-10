@@ -1,7 +1,6 @@
 'use client'
 import { createContext, useContext, useEffect, useState, useCallback, ReactNode } from 'react'
-import { createClient } from '@/lib/supabase/client'
-import type { User } from '@supabase/supabase-js'
+import type { CustomUser } from '@/types/user'
 
 export type Profile = {
   id: string
@@ -16,7 +15,7 @@ export type Profile = {
 }
 
 type AuthContextType = {
-  user: User | null
+  user: CustomUser | null
   profile: Profile | null
   loading: boolean
   signOut: () => Promise<void>
@@ -26,44 +25,37 @@ type AuthContextType = {
 const AuthContext = createContext<AuthContextType | null>(null)
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const supabase = createClient()
-  const [user, setUser]       = useState<User | null>(null)
+  const [user, setUser]       = useState<CustomUser | null>(null)
   const [profile, setProfile] = useState<Profile | null>(null)
   const [loading, setLoading] = useState(true)
 
-  const loadProfile = useCallback(async (uid: string) => {
-    const { data } = await supabase.from('profiles').select('*').eq('id', uid).single()
-    setProfile(data as Profile | null)
-  }, [supabase])
+  const loadProfile = useCallback(async () => {
+    const res = await fetch('/api/account/profile')
+    if (res.ok) setProfile((await res.json()) as Profile)
+  }, [])
 
   const refreshProfile = useCallback(async () => {
-    if (user) await loadProfile(user.id)
-  }, [user, loadProfile])
+    await loadProfile()
+  }, [loadProfile])
 
   useEffect(() => {
-    // Initial session
-    supabase.auth.getUser().then(({ data }) => {
-      setUser(data.user)
-      if (data.user) loadProfile(data.user.id)
-      setLoading(false)
-    })
-
-    // Subscribe to auth state changes (login/logout/refresh)
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      const u = session?.user ?? null
-      setUser(u)
-      if (u) loadProfile(u.id)
-      else   setProfile(null)
-    })
-
-    return () => subscription.unsubscribe()
-  }, [supabase, loadProfile])
+    fetch('/api/auth/me')
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (data?.user) {
+          setUser(data.user as CustomUser)
+          loadProfile()
+        }
+        setLoading(false)
+      })
+      .catch(() => setLoading(false))
+  }, [loadProfile])
 
   const signOut = useCallback(async () => {
-    await supabase.auth.signOut()
+    await fetch('/api/auth/logout', { method: 'POST' })
     setUser(null)
     setProfile(null)
-  }, [supabase])
+  }, [])
 
   return (
     <AuthContext.Provider value={{ user, profile, loading, signOut, refreshProfile }}>

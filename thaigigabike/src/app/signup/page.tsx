@@ -1,17 +1,16 @@
 'use client'
 import { Suspense, useState } from 'react'
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
-import { UserPlus, Eye, EyeOff, MailCheck } from 'lucide-react'
-import { createClient } from '@/lib/supabase/client'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { UserPlus, Eye, EyeOff } from 'lucide-react'
 import { useLang } from '@/lib/lang'
-import { AuthShell, GoogleButton, authInput, authLabel } from '@/components/auth/AuthShell'
+import { AuthShell, authInput, authLabel } from '@/components/auth/AuthShell'
 
 function SignupContent() {
   const { t } = useLang()
+  const router = useRouter()
   const params = useSearchParams()
-  const supabase = createClient()
-  const next = params.get('next') || '/account'
+  const next   = params.get('next') || '/account'
 
   const [fullName, setFullName] = useState('')
   const [email, setEmail]       = useState('')
@@ -19,44 +18,29 @@ function SignupContent() {
   const [show, setShow]         = useState(false)
   const [loading, setLoading]   = useState(false)
   const [error, setError]       = useState('')
-  const [sent, setSent]         = useState(false)
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
     if (password.length < 8) { setError(t.auth.pwMin); return }
     setLoading(true)
-    const { data, error } = await supabase.auth.signUp({
-      email: email.trim().toLowerCase(),
-      password,
-      options: {
-        data: { full_name: fullName.trim() },
-        emailRedirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`,
-      },
+    const res = await fetch('/api/auth/register', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({
+        email:     email.trim().toLowerCase(),
+        password,
+        full_name: fullName.trim() || null,
+      }),
     })
-    if (error) { setError(error.message); setLoading(false); return }
-    // If email confirmation required, session is null
-    if (!data.session) { setSent(true); setLoading(false); return }
-    window.location.href = next
-  }
-
-  const handleGoogle = async () => {
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}` },
-    })
-  }
-
-  if (sent) {
-    return (
-      <AuthShell title={t.auth.checkEmail}>
-        <div style={{ textAlign: 'center', padding: '12px 0' }}>
-          <MailCheck size={48} color="var(--green)" style={{ display: 'block', margin: '0 auto 14px' }} />
-          <p style={{ fontSize: 15, color: 'var(--text2)', lineHeight: 1.6, marginBottom: 18 }}>{t.auth.checkEmailSub}</p>
-          <Link href="/login" className="btn-ghost" style={{ fontSize: 15 }}>{t.auth.login}</Link>
-        </div>
-      </AuthShell>
-    )
+    if (!res.ok) {
+      const data = await res.json()
+      setError(data.error || 'Registration failed')
+      setLoading(false)
+      return
+    }
+    router.push(next)
+    router.refresh()
   }
 
   return (
@@ -65,14 +49,6 @@ function SignupContent() {
       subtitle={t.auth.signupSub}
       footer={<>{t.auth.haveAccount} <Link href="/login" style={{ color: 'var(--green)', fontWeight: 700 }}>{t.auth.login}</Link></>}
     >
-      <GoogleButton onClick={handleGoogle} label={t.auth.googleLogin} />
-
-      <div style={{ display: 'flex', alignItems: 'center', gap: 12, margin: '18px 0' }}>
-        <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
-        <span style={{ fontSize: 13, color: 'var(--text3)' }}>{t.auth.orDivider}</span>
-        <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
-      </div>
-
       <form onSubmit={handleSignup} style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
         <div>
           <label style={authLabel}>{t.auth.fullName}</label>
