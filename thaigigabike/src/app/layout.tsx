@@ -23,7 +23,7 @@ import { AuthProvider } from '@/lib/auth/AuthContext'
 import { WishlistProvider } from '@/lib/wishlist'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
-import { PageLoader } from '@/components/PageLoader'
+import { PageLoader } from '@/components/layout/PageLoader'
 import { LineFloatButton } from '@/components/layout/LineFloatButton'
 
 const SITE_DESCRIPTION =

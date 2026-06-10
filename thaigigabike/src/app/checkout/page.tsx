@@ -6,7 +6,7 @@ import {
   Upload, Check, User, Truck, CreditCard,
   X, ShoppingCart, AlertCircle, Shield, RefreshCw, QrCode, MapPin,
 } from 'lucide-react'
-import { PromptPayQR } from '@/components/PromptPayQR'
+import { PromptPayQR } from '@/components/ui/PromptPayQR'
 import { useCart } from '@/lib/cart'
 import { useLang } from '@/lib/lang'
 import { useAuth } from '@/lib/auth/AuthContext'

@@ -25,7 +25,7 @@ const MIRROR = path.resolve(REPO_ROOT, 'HTTrack My Web Sites', 'Giga-Bike-', 'ww
 
 const IN = path.resolve(__dirname, 'out', 'legacy-products.json')
 const OUT_TS = path.resolve(APP_ROOT, 'src', 'data', 'products.generated.ts')
-const OUT_SQL = path.resolve(APP_ROOT, 'supabase-products.sql')
+const OUT_SQL = path.resolve(APP_ROOT, 'supabase', 'products-seed.sql')
 const PUBLIC_LEGACY = path.resolve(APP_ROOT, 'public', 'legacy')
 
 // Curated English copy for the flagship products (legacy site is Thai-only).
