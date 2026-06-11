@@ -1,6 +1,7 @@
 # ThaiGigaBike — แผนที่โปรเจกต์ (Project Map)
-> อัปเดต: 2026-06-06 | Next.js 14 App Router · Supabase · Netlify · Resend
-> Phase 1 ✅ · Phase 2 ✅ · Phase 3 ✅ (ครบ 12 หมวด) · Build ✅ 0 error (66 หน้า)
+> อัปเดต: 2026-06-11 | Next.js 14 App Router · Supabase (DB+Storage เท่านั้น) · Netlify · Resend
+> Phase 1 ✅ · Phase 2 ✅ · Phase 3 ✅ · **Custom Auth ✅ (แทน Supabase Auth ทั้งหมด)** · Build ✅ 0 error (78 หน้า)
+> 📘 API spec เต็ม: `thaigigabike/docs/API.md`
 
 > 🪨 Doc write caveman. Word short. Meaning same. Code block no touch.
 
@@ -8,11 +9,13 @@
 
 ## Phase 3: Customer Account System — foundation ✅
 
-ระบบสมาชิกครบ keystone — Supabase Auth ต่อยอดจาก admin. Build ผ่าน 62 หน้า.
+ระบบสมาชิกครบ keystone — **custom auth ทั้งระบบ ไม่ใช้ Supabase Auth แล้ว**
 
-### Auth (`/login` `/signup` `/forgot-password` `/reset-password` `/auth/callback`)
-- Email+password signup/login, **Google OAuth**, email confirmation, password reset ✅
-- Session = Supabase cookie. middleware กัน `/account/*` (guest → /login?next=). logged-in → /login เด้งไป /account ✅
+### Auth (`/login` `/signup` `/forgot-password` `/reset-password`)
+- Email+password signup/login (bcrypt 12 rounds) — ไม่มี Google OAuth / email confirmation แล้ว ✅
+- Session = random token → SHA-256 → `user_sessions` table; browser ได้ httpOnly cookie `tgb_session` ✅
+- Password reset = token ใช้ครั้งเดียว 30 นาที (`password_reset_tokens`) ส่งลิงก์ผ่าน Resend ✅
+- middleware กัน `/admin/*` + `/account/*` (เช็ค cookie อย่างเดียว, DB เช็คจริงใน layout/route) ✅
 - ลบบัญชี (ยืนยันรหัสผ่าน) + ดาวน์โหลดข้อมูล (PDPA export JSON) ✅
 
 ### Account area (`/account/*` — sidebar layout)
@@ -28,9 +31,10 @@
 | `/account/tickets` | support ticket: เปิด/ดู, topic (order/refund/claim/...), ผูก order |
 | `/account/settings` | theme/lang, notification prefs toggle, privacy, danger zone (ลบบัญชี/export) |
 
-### Tables ใหม่ (Phase 3) — RLS `auth.uid()` owner-only
-- `profiles` (1:1 auth.users, auto-trigger on signup) · `addresses` · `wishlists` · `support_tickets`
-- `orders.user_id` + `reviews.user_id` (link to account) · bucket `avatars`
+### Tables (Phase 3 + Custom Auth) — service-role only, API filter `user_id` เอง
+- `users` · `user_sessions` · `login_attempts` · `password_reset_tokens` · `admin_audit_logs`
+- `profiles` (1:1 **public.users**, สร้างตอน register/เข้าครั้งแรก) · `addresses` · `wishlists` · `support_tickets`
+- `orders.user_id` + `reviews.user_id` (FK → public.users) · bucket `avatars` (upload ผ่าน `/api/account/avatar`)
 
 ### Cross-cutting
 - **Wishlist** — `WishlistProvider`: DB เมื่อ login, localStorage เมื่อ guest, **merge ตอน login**. Heart button บน ProductCard + product detail ✅
@@ -48,7 +52,7 @@ profile (GET/PATCH) · addresses (GET/POST + [id] PATCH/DELETE) · wishlist (GET
 - **Reviews**: inline edit UI (แก้แล้ว reset เป็น pending)
 - **Messages**: reply thread (`message_replies`) + แนบรูป, re-open ตอนลูกค้าตอบ
 - **Tickets**: reply thread (`ticket_replies`) + แนบรูป + **ปิด ticket** + **ให้คะแนน** (rating)
-- **Security**: เปลี่ยน email (verify), **login history** (`login_events`), **logout ทุกอุปกรณ์** (global scope)
+- **Security**: เปลี่ยน email (ยืนยันรหัสผ่าน — `/api/account/change-email`), **login history** (`login_events`), **logout ทุกอุปกรณ์** (`/api/auth/logout-all`)
 
 ### Phase 3.5: Admin Customer Care ✅
 ปิดช่องว่างฝั่ง admin — ไม่ต้องตอบผ่าน Supabase dashboard อีกต่อไป.
@@ -66,10 +70,10 @@ profile (GET/PATCH) · addresses (GET/POST + [id] PATCH/DELETE) · wishlist (GET
 ### Table/Storage เพิ่ม (รอบ 2)
 `message_replies` · `ticket_replies` · `login_events` · `tax_invoice_requests` · `wishlists.notify_price_drop/restock` · `support_tickets.rating`
 
-### Setup ก่อนใช้ Phase 3
-1. รัน SQL ส่วน Phase 3 ใน `supabase-setup.sql`
-2. Supabase Dashboard → Authentication → เปิด Email + Google provider
-3. ตั้ง Redirect URL: `http://localhost:3000/auth/callback` + production URL
+### Setup ก่อนใช้ (Custom Auth)
+1. รัน SQL ตามลำดับ: `supabase/setup.sql` → `supabase/custom-auth.sql` → `supabase/custom-auth-phase2.sql`
+2. ตั้ง env: `ADMIN_SETUP_SECRET` (ค่า random) + `CUSTOM_AUTH_SESSION_COOKIE/DAYS`
+3. สมัครที่ `/signup` → `POST /api/admin/setup-owner` `{ secret, email }` → ได้ owner คนแรก
 
 ---
 
@@ -133,7 +137,8 @@ thaigigabike/
 | Route | File | ทำอะไร |
 |-------|------|--------|
 | `/admin` | `app/admin/page.tsx` | Dashboard 7 แท็บ: สินค้า / สต็อก / ออเดอร์ / ข้อความ / ซัพพอร์ต / ใบกำกับภาษี / รีวิว |
-| `/admin/login` | `app/admin/login/page.tsx` | login (Supabase Auth + ADMIN_EMAILS allowlist) |
+| `/admin/login` | `app/admin/login/page.tsx` | redirect → `/login?next=/admin` (ใช้ login กลาง) |
+| (guard) | `app/admin/layout.tsx` | server-side check: role admin/owner + admin_active จาก DB |
 
 ---
 
@@ -155,11 +160,22 @@ thaigigabike/
 | `/api/announcements` | GET | ดึง announcement published (anon read) |
 | `/api/health` | GET | health check |
 
-### Admin (ต้อง Supabase session + ADMIN_EMAILS)
+### Auth (custom — รายละเอียดเต็มใน docs/API.md)
 
 | Endpoint | Method | ทำอะไร |
 |----------|--------|--------|
-| `/api/admin/auth/login` | POST | login + rate limit (5/15min per IP) + audit |
+| `/api/auth/register` | POST | สมัคร (rate limit 5/ชม./IP, สร้าง profile, set cookie) |
+| `/api/auth/login` | POST | login (rate limit 10 fail/15น./IP+email, bcrypt เสมอกัน timing) |
+| `/api/auth/logout` · `/logout-all` | POST | ออกจากระบบ เครื่องนี้ / ทุกเครื่อง |
+| `/api/auth/me` | GET | user ปัจจุบันจาก session cookie |
+| `/api/auth/forgot-password` · `/reset-password` | POST | reset รหัสผ่านผ่านลิงก์อีเมล (token ครั้งเดียว 30 นาที) |
+| `/api/admin/setup-owner` | POST | bootstrap owner คนแรก (secret, timing-safe) |
+| `/api/admin/users/[id]/role` | PATCH | owner เปลี่ยน role/admin_active (กัน demote ตัวเอง + audit) |
+
+### Admin (ต้อง session + role admin/owner — `requireAdmin()`)
+
+| Endpoint | Method | ทำอะไร |
+|----------|--------|--------|
 | `/api/admin/orders` | GET | ดึง order หมด |
 | `/api/admin/orders/[orderId]` | PATCH | update status / tracking → **email แจ้งลูกค้า (Resend)** |
 | `/api/admin/orders/[orderId]/slip-url` | POST | signed URL slip (private bucket) |
@@ -331,10 +347,14 @@ components/
 | `lib/supabase/client.ts` | browser client (SSR) |
 | `lib/supabase/server.ts` | server client |
 | `lib/supabase/service.ts` | service role client — bypass RLS |
-| `lib/auth/admin.ts` | `isAdminEmail()` — ADMIN_EMAILS allowlist |
-| `lib/auth/require-admin.ts` | `requireAdmin()` — guard for API route |
+| `lib/auth.ts` | `getCurrentUser()` / `requireUser()` / `requireAdmin()` / `requireOwner()` |
+| `lib/session.ts` | custom session: token → SHA-256 → `user_sessions` + httpOnly cookie |
+| `lib/password.ts` | bcrypt hash/verify (12 rounds) |
+| `lib/auth/require-admin.ts` `require-user.ts` | guard เก่า — delegate ไป `lib/auth.ts` |
+| `lib/api/` | **API toolkit**: `apiOk/apiError+ERR` (error codes) · `apiLog` (JSON log) · `isRateLimited/recordAttempt` (DB-backed) · `readJson` |
 | `lib/audit.ts` | `writeAuditLog()` → audit_logs (server-only, never throw) |
-| `lib/email.ts` | `sendOrderConfirmationEmail()` + `sendOtpEmail()` + `sendStatusUpdateEmail()` via Resend |
+| `lib/admin-audit.ts` | `logAdminAction()` → admin_audit_logs |
+| `lib/email.ts` | order confirm + OTP + status update + **password reset** via Resend |
 | `lib/csv.ts` | `escapeCsvCell()` + `toCsvRow()` — กัน formula injection |
 | `lib/promptpay.ts` | `buildPromptPayPayload()` — EMV QR (CRC16, TLV), static + dynamic amount |
 
@@ -342,14 +362,16 @@ components/
 
 ## Security Architecture
 
-### Admin Auth Flow
+### Auth Flow (custom)
 ```
-POST /api/admin/auth/login
-  → rate limit: 5 attempts / 15 min per IP (SHA-256 hashed)
-  → isAdminEmail() checks ADMIN_EMAILS env var
-  → Supabase signInWithPassword
-  → writeAuditLog({ action: 'login' })
-  → cookie session
+POST /api/auth/login
+  → rate limit: 10 fails / 15 min per IP + per email (DB-backed, login_attempts)
+  → bcrypt.compare เสมอ (แม้ไม่พบ user — กัน timing attack)
+  → check status='active'
+  → random token 32 bytes → SHA-256 → user_sessions
+  → httpOnly cookie tgb_session (secure, sameSite=lax)
+
+/admin → middleware เช็ค cookie → admin/layout.tsx เช็ค role+admin_active จาก DB
 ```
 
 ### Order Lookup OTP Flow
@@ -515,7 +537,7 @@ Admin ข้อความ tab → ตอบ Email → PATCH mark replied
 | Vertical order timeline | ✅ | status step + timestamp |
 | Tracking link (Kerry/Flash) | ✅ | clickable ใน /order |
 | Email: confirm + OTP + **status update** | ✅ | Resend, แจ้งลูกค้าตอน status เปลี่ยน |
-| Admin auth (allowlist) | ✅ | ADMIN_EMAILS + rate limit + audit |
+| Auth (custom, ไม่ใช้ Supabase Auth) | ✅ | bcrypt + session token + rate limit + audit |
 | Admin: Products CRUD | ✅ | ProductModal 3-section |
 | Admin: Stock | ✅ | inline edit, +/-, Export CSV |
 | Admin: Orders | ✅ | status + tracking, Export CSV |
@@ -551,8 +573,13 @@ NEXT_PUBLIC_SUPABASE_URL=       # project URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=  # anon key (browser-safe)
 SUPABASE_SERVICE_ROLE_KEY=      # service role key (server only)
 
-# Admin auth
-ADMIN_EMAILS=                   # comma-separated เช่น admin@example.com,dev@example.com
+# Custom auth
+CUSTOM_AUTH_SESSION_COOKIE=tgb_session
+CUSTOM_AUTH_SESSION_DAYS=14
+ADMIN_SETUP_SECRET=             # ค่า random — ใช้ bootstrap owner คนแรกแล้วเปลี่ยนทิ้ง
+
+# Site
+NEXT_PUBLIC_SITE_URL=           # origin จริง เช่น https://www.thaigigabike.com (ใช้สร้างลิงก์ reset password)
 
 # Email (Resend)
 RESEND_API_KEY=                 # order confirm + OTP + status email

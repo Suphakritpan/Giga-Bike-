@@ -1,15 +1,17 @@
 'use client'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { Suspense, useState } from 'react'
+import Link from 'next/link'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { KeyRound, Eye, EyeOff, CheckCircle } from 'lucide-react'
-import { createClient } from '@/lib/supabase/client'
 import { useLang } from '@/lib/lang'
 import { AuthShell, authInput, authLabel } from '@/components/auth/AuthShell'
 
-export default function ResetPasswordPage() {
+function ResetPasswordContent() {
   const { t } = useLang()
   const router = useRouter()
-  const supabase = createClient()
+  const params = useSearchParams()
+  const token  = params.get('token') ?? ''
+
   const [password, setPassword] = useState('')
   const [confirm, setConfirm]   = useState('')
   const [show, setShow]         = useState(false)
@@ -23,12 +25,36 @@ export default function ResetPasswordPage() {
     if (password.length < 8) { setError(t.auth.pwMin); return }
     if (password !== confirm) { setError(t.auth.pwMismatch); return }
     setLoading(true)
-    // The recovery link establishes a session; updateUser sets the new password.
-    const { error } = await supabase.auth.updateUser({ password })
-    if (error) { setError(error.message); setLoading(false); return }
+    const res = await fetch('/api/auth/reset-password', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ token, password }),
+    })
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}))
+      setError(data.error || 'เกิดข้อผิดพลาด กรุณาลองใหม่')
+      setLoading(false)
+      return
+    }
     setDone(true)
     setLoading(false)
-    setTimeout(() => { router.push('/account'); router.refresh() }, 1500)
+    setTimeout(() => { router.push('/login'); router.refresh() }, 1500)
+  }
+
+  // No token in the URL — the link is broken or was typed by hand
+  if (!token) {
+    return (
+      <AuthShell title={t.auth.resetTitle}>
+        <div style={{ textAlign: 'center', padding: '12px 0' }}>
+          <p style={{ fontSize: 15, color: 'var(--text2)', lineHeight: 1.6, marginBottom: 18 }}>
+            ลิงก์ไม่ถูกต้องหรือหมดอายุ — กรุณาขอลิงก์ตั้งรหัสผ่านใหม่อีกครั้ง
+          </p>
+          <Link href="/forgot-password" className="btn-primary" style={{ fontSize: 15, justifyContent: 'center' }}>
+            {t.auth.sendResetLink}
+          </Link>
+        </div>
+      </AuthShell>
+    )
   }
 
   if (done) {
@@ -36,7 +62,7 @@ export default function ResetPasswordPage() {
       <AuthShell title={t.auth.passwordUpdated}>
         <div style={{ textAlign: 'center', padding: '12px 0' }}>
           <CheckCircle size={48} color="var(--green)" style={{ display: 'block', margin: '0 auto 14px' }} />
-          <p style={{ fontSize: 15, color: 'var(--text2)' }}>→ {t.account.dashboard}</p>
+          <p style={{ fontSize: 15, color: 'var(--text2)' }}>→ {t.auth.login}</p>
         </div>
       </AuthShell>
     )
@@ -67,4 +93,8 @@ export default function ResetPasswordPage() {
       </form>
     </AuthShell>
   )
+}
+
+export default function ResetPasswordPage() {
+  return <Suspense fallback={null}><ResetPasswordContent /></Suspense>
 }

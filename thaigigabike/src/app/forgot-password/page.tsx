@@ -2,13 +2,11 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Mail, MailCheck } from 'lucide-react'
-import { createClient } from '@/lib/supabase/client'
 import { useLang } from '@/lib/lang'
 import { AuthShell, authInput, authLabel } from '@/components/auth/AuthShell'
 
 export default function ForgotPasswordPage() {
   const { t } = useLang()
-  const supabase = createClient()
   const [email, setEmail]     = useState('')
   const [loading, setLoading] = useState(false)
   const [sent, setSent]       = useState(false)
@@ -16,9 +14,11 @@ export default function ForgotPasswordPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    await supabase.auth.resetPasswordForEmail(email.trim().toLowerCase(), {
-      redirectTo: `${window.location.origin}/reset-password`,
-    })
+    await fetch('/api/auth/forgot-password', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify({ email: email.trim().toLowerCase() }),
+    }).catch(() => {})
     // Always show success (no enumeration)
     setSent(true)
     setLoading(false)

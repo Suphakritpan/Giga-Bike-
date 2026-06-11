@@ -127,6 +127,73 @@ export async function sendOrderConfirmationEmail(
 }
 
 /**
+ * Send a password-reset link (custom auth).
+ *
+ * Same provider strategy as OTP: Resend in production, console in dev,
+ * graceful failure when unconfigured. The caller always returns a generic
+ * response, so a send failure never reveals whether the account exists.
+ */
+export async function sendPasswordResetEmail(
+  to: string,
+  resetUrl: string,
+): Promise<EmailResult> {
+  const apiKey = process.env.RESEND_API_KEY
+  const from   = process.env.EMAIL_FROM ?? 'orders@thaigigabike.com'
+
+  if (!apiKey) {
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(`[DEV EMAIL] Password reset for ${to} → ${resetUrl}`)
+      return { success: true }
+    }
+    console.error('[EMAIL] RESEND_API_KEY not set — password reset could not be sent')
+    return { success: false, error: 'Email provider not configured' }
+  }
+
+  const html = `
+<div style="font-family:'Helvetica Neue',sans-serif;max-width:480px;margin:0 auto;padding:32px 24px;background:#fff">
+  <div style="margin-bottom:24px">
+    <span style="font-size:22px;font-weight:800;color:#16a34a">⚡ Thai</span><span style="font-size:22px;font-weight:800">GigaBike</span>
+  </div>
+  <h2 style="font-size:18px;font-weight:700;margin:0 0 8px">ตั้งรหัสผ่านใหม่</h2>
+  <p style="font-size:14px;color:#555;margin:0 0 24px">
+    เราได้รับคำขอตั้งรหัสผ่านใหม่สำหรับบัญชีนี้ — กดปุ่มด้านล่างเพื่อดำเนินการต่อ
+  </p>
+  <a href="${resetUrl}"
+     style="display:inline-block;background:#16a34a;color:#fff;font-size:15px;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;margin-bottom:20px">
+    ตั้งรหัสผ่านใหม่
+  </a>
+  <p style="font-size:13px;color:#888;margin:16px 0 8px">ลิงก์หมดอายุใน 30 นาที · ใช้ได้ครั้งเดียว</p>
+  <p style="font-size:13px;color:#888;margin:0 0 8px">ถ้าคุณไม่ได้ขอเปลี่ยนรหัสผ่าน ไม่ต้องทำอะไร — รหัสผ่านเดิมยังใช้ได้ตามปกติ</p>
+  <hr style="border:none;border-top:1px solid #eee;margin:20px 0">
+  <p style="font-size:12px;color:#aaa">
+    Reset your ThaiGigaBike password: <a href="${resetUrl}" style="color:#16a34a">${resetUrl}</a><br>
+    Expires in 30 minutes · Single-use only
+  </p>
+</div>`
+
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method:  'POST',
+      headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        from,
+        to:      [to],
+        subject: 'ตั้งรหัสผ่านใหม่ | GigaBike',
+        html,
+      }),
+    })
+    if (!res.ok) {
+      console.error('[EMAIL] Resend API error (password reset):', res.status)
+      return { success: false, error: 'Email send failed' }
+    }
+    return { success: true }
+  } catch {
+    console.error('[EMAIL] Network error sending password reset')
+    return { success: false, error: 'Email send failed' }
+  }
+}
+
+/**
  * Send a 6-digit OTP to the given address.
  *
  * Provider strategy:

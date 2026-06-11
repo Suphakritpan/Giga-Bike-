@@ -4,11 +4,13 @@ import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { LogIn, Eye, EyeOff } from 'lucide-react'
 import { useLang } from '@/lib/lang'
+import { useAuth } from '@/lib/auth/AuthContext'
 import { sanitizeNextPath } from '@/lib/safe-next'
 import { AuthShell, authInput, authLabel } from '@/components/auth/AuthShell'
 
 function LoginContent() {
   const { t } = useLang()
+  const { refreshUser } = useAuth()
   const router = useRouter()
   const params = useSearchParams()
   // Validated to an internal path — never trust ?next= for redirects (open-redirect guard).
@@ -30,13 +32,12 @@ function LoginContent() {
       body:    JSON.stringify({ email: email.trim().toLowerCase(), password }),
     })
     if (!res.ok) {
-      const data = await res.json()
+      const data = await res.json().catch(() => ({}))
       setError(data.error || t.auth.invalidCred)
       setLoading(false)
       return
     }
-    // Record login event (fire-and-forget)
-    fetch('/api/account/login-events', { method: 'POST' }).catch(() => {})
+    await refreshUser()
     router.push(next)
     router.refresh()
   }

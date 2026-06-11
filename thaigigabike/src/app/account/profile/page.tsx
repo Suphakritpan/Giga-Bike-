@@ -3,12 +3,10 @@ import { useState, useEffect, useRef } from 'react'
 import { Camera, Check, Loader } from 'lucide-react'
 import { useAuth } from '@/lib/auth/AuthContext'
 import { useLang } from '@/lib/lang'
-import { createClient } from '@/lib/supabase/client'
 
 export default function ProfilePage() {
   const { user, profile, refreshProfile } = useAuth()
   const { t } = useLang()
-  const supabase = createClient()
 
   const [fullName, setFullName] = useState('')
   const [phone, setPhone]       = useState('')
@@ -29,17 +27,12 @@ export default function ProfilePage() {
   const handleAvatar = async (file: File) => {
     if (!user) return
     setUploading(true)
-    const ext = file.name.split('.').pop()
-    const path = `${user.id}/avatar.${ext}`
-    const { error } = await supabase.storage.from('avatars').upload(path, file, { upsert: true })
-    if (!error) {
-      const { data: { publicUrl } } = supabase.storage.from('avatars').getPublicUrl(path)
-      const busted = `${publicUrl}?v=${Date.now()}`
-      setAvatarUrl(busted)
-      await fetch('/api/account/profile', {
-        method: 'PATCH', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ avatar_url: busted }),
-      })
+    const form = new FormData()
+    form.append('file', file)
+    const res = await fetch('/api/account/avatar', { method: 'POST', body: form }).catch(() => null)
+    if (res?.ok) {
+      const d = await res.json()
+      setAvatarUrl(d.avatar_url)
       await refreshProfile()
     }
     setUploading(false)

@@ -4,13 +4,17 @@ import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { UserPlus, Eye, EyeOff } from 'lucide-react'
 import { useLang } from '@/lib/lang'
+import { useAuth } from '@/lib/auth/AuthContext'
+import { sanitizeNextPath } from '@/lib/safe-next'
 import { AuthShell, authInput, authLabel } from '@/components/auth/AuthShell'
 
 function SignupContent() {
   const { t } = useLang()
+  const { refreshUser } = useAuth()
   const router = useRouter()
   const params = useSearchParams()
-  const next   = params.get('next') || '/account'
+  // Validated to an internal path — never trust ?next= for redirects (open-redirect guard).
+  const next   = sanitizeNextPath(params.get('next'))
 
   const [fullName, setFullName] = useState('')
   const [email, setEmail]       = useState('')
@@ -34,11 +38,12 @@ function SignupContent() {
       }),
     })
     if (!res.ok) {
-      const data = await res.json()
-      setError(data.error || 'Registration failed')
+      const data = await res.json().catch(() => ({}))
+      setError(data.error || (t.auth.genericError ?? 'สมัครสมาชิกไม่สำเร็จ กรุณาลองใหม่'))
       setLoading(false)
       return
     }
+    await refreshUser()
     router.push(next)
     router.refresh()
   }

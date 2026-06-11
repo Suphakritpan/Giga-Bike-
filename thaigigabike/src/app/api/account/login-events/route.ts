@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createHash } from 'node:crypto'
-import { createClient } from '@/lib/supabase/server'
 import { createServiceClient } from '@/lib/supabase/service'
 import { requireUser } from '@/lib/auth/require-user'
 
@@ -13,7 +12,7 @@ function ipHash(req: NextRequest): string | null {
 export async function GET() {
   const { user, error } = await requireUser()
   if (error) return error
-  const db = createClient()
+  const db = createServiceClient()
   const { data } = await db.from('login_events')
     .select('id, ip_hash, user_agent, created_at')
     .eq('user_id', user.id).order('created_at', { ascending: false }).limit(20)

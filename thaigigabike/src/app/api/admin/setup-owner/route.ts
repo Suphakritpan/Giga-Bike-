@@ -1,5 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { createHash, timingSafeEqual } from 'node:crypto'
 import { createServiceClient } from '@/lib/supabase/service'
+
+function secretMatches(given: string, expected: string): boolean {
+  // Hash both sides so lengths are equal — timingSafeEqual requires it
+  const a = createHash('sha256').update(given).digest()
+  const b = createHash('sha256').update(expected).digest()
+  return timingSafeEqual(a, b)
+}
 
 export async function POST(req: NextRequest) {
   const secret = process.env.ADMIN_SETUP_SECRET
@@ -7,11 +15,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Setup disabled' }, { status: 403 })
   }
 
-  const body = await req.json()
-  if (body.secret !== secret) {
+  let body: Record<string, unknown> = {}
+  try { body = await req.json() } catch { /* invalid JSON */ }
+  if (typeof body.secret !== 'string' || !secretMatches(body.secret, secret)) {
     return NextResponse.json({ error: 'Invalid secret' }, { status: 403 })
   }
-  const email = (body.email || '').trim().toLowerCase()
+  const email = String(body.email ?? '').trim().toLowerCase()
   if (!email) {
     return NextResponse.json({ error: 'Email required' }, { status: 400 })
   }

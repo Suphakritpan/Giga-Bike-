@@ -5,7 +5,6 @@ import { Sun, Moon, Globe, Bell, Download, Trash2, AlertTriangle, Check, Shield,
 import { useLang } from '@/lib/lang'
 import { useTheme } from '@/lib/theme'
 import { useAuth } from '@/lib/auth/AuthContext'
-import { createClient } from '@/lib/supabase/client'
 import type { Locale } from '@/lib/i18n'
 
 type LoginEvent = { id: string; ip_hash: string | null; user_agent: string | null; created_at: string }
@@ -15,11 +14,12 @@ export default function SettingsPage() {
   const { theme, toggle } = useTheme()
   const { user, profile, refreshProfile, signOut } = useAuth()
   const router = useRouter()
-  const supabase = createClient()
 
   const [prefs, setPrefs] = useState({ notify_order: true, notify_promo: true, notify_reply: true })
   const [newEmail, setNewEmail] = useState('')
+  const [emailPassword, setEmailPassword] = useState('')
   const [emailMsg, setEmailMsg] = useState('')
+  const [emailErr, setEmailErr] = useState('')
   const [showEmail, setShowEmail] = useState(false)
   const [loginEvents, setLoginEvents] = useState<LoginEvent[]>([])
   const [showHistory, setShowHistory] = useState(false)
@@ -47,14 +47,25 @@ export default function SettingsPage() {
   const changeEmail = async (e: React.FormEvent) => {
     e.preventDefault()
     setEmailMsg('')
-    const { error } = await supabase.auth.updateUser({ email: newEmail.trim().toLowerCase() })
-    setEmailMsg(error ? error.message : (locale === 'th' ? 'ส่งลิงก์ยืนยันไปยังอีเมลใหม่แล้ว — กรุณายืนยันเพื่อเปลี่ยน' : 'Verification link sent to the new email — confirm to apply'))
-    if (!error) setNewEmail('')
+    setEmailErr('')
+    const res = await fetch('/api/account/change-email', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ new_email: newEmail.trim().toLowerCase(), password: emailPassword }),
+    })
+    const d = await res.json().catch(() => ({}))
+    if (!res.ok) {
+      setEmailErr(d.error || (locale === 'th' ? 'เกิดข้อผิดพลาด กรุณาลองใหม่' : 'Something went wrong'))
+      return
+    }
+    setEmailMsg(locale === 'th' ? 'เปลี่ยนอีเมลเรียบร้อยแล้ว' : 'Email updated')
+    setNewEmail('')
+    setEmailPassword('')
+    router.refresh()
   }
 
   const logoutAllDevices = async () => {
     if (!confirm(locale === 'th' ? 'ออกจากระบบทุกอุปกรณ์?' : 'Log out from all devices?')) return
-    await supabase.auth.signOut({ scope: 'global' })
+    await fetch('/api/auth/logout-all', { method: 'POST' }).catch(() => {})
     await signOut()
     router.push('/login')
     router.refresh()
@@ -144,10 +155,13 @@ export default function SettingsPage() {
             <div style={{ fontSize: 13, color: 'var(--text3)' }}>{locale === 'th' ? 'อีเมลปัจจุบัน' : 'Current'}: {user?.email}</div>
             <input type="email" value={newEmail} onChange={e => setNewEmail(e.target.value)} placeholder={locale === 'th' ? 'อีเมลใหม่' : 'New email'} required
               style={{ padding: '10px 14px', fontSize: 15, border: '1px solid var(--border2)', borderRadius: 9, background: 'var(--bg3)', color: 'var(--text)', outline: 'none' }} />
+            <input type="password" value={emailPassword} onChange={e => setEmailPassword(e.target.value)} placeholder={locale === 'th' ? 'รหัสผ่านปัจจุบัน (เพื่อยืนยัน)' : 'Current password (to confirm)'} required
+              style={{ padding: '10px 14px', fontSize: 15, border: '1px solid var(--border2)', borderRadius: 9, background: 'var(--bg3)', color: 'var(--text)', outline: 'none' }} />
             {emailMsg && <span style={{ fontSize: 13, color: 'var(--green)' }}>{emailMsg}</span>}
+            {emailErr && <span style={{ fontSize: 13, color: 'var(--red)' }}>{emailErr}</span>}
             <div style={{ display: 'flex', gap: 8 }}>
-              <button type="submit" className="btn-primary" style={{ fontSize: 14, padding: '8px 16px' }}>{locale === 'th' ? 'ส่งลิงก์ยืนยัน' : 'Send link'}</button>
-              <button type="button" onClick={() => { setShowEmail(false); setEmailMsg('') }} className="btn-ghost" style={{ fontSize: 14 }}>{t.account.cancel}</button>
+              <button type="submit" className="btn-primary" style={{ fontSize: 14, padding: '8px 16px' }}>{locale === 'th' ? 'เปลี่ยนอีเมล' : 'Change email'}</button>
+              <button type="button" onClick={() => { setShowEmail(false); setEmailMsg(''); setEmailErr('') }} className="btn-ghost" style={{ fontSize: 14 }}>{t.account.cancel}</button>
             </div>
           </form>
         )}

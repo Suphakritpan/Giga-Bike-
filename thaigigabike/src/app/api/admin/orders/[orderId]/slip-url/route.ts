@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
 import { createServiceClient } from '@/lib/supabase/service'
-import { isAdminEmail } from '@/lib/auth/admin'
+import { requireAdmin } from '@/lib/auth'
 import { writeAuditLog } from '@/lib/audit'
 
 const SIGNED_URL_TTL_SECONDS = 600 // 10 minutes
@@ -10,10 +9,9 @@ const SIGNED_URL_TTL_SECONDS = 600 // 10 minutes
  * POST /api/admin/orders/[orderId]/slip-url
  *
  * Returns a short-lived signed URL for the order's payment slip
- * (stored in the PRIVATE order-slips bucket). Callers must hold
- * a valid Supabase session.
+ * (stored in the PRIVATE order-slips bucket).
  *
- * Auth (P0-B6): requires valid session + allowlisted admin email.
+ * Auth: custom session + admin/owner role (requireAdmin).
  * The page that calls this is also behind the /admin middleware guard.
  *
  * Security:
@@ -26,16 +24,8 @@ export async function POST(
   _req: NextRequest,
   { params }: { params: { orderId: string } }
 ) {
-  // Require an active session from an allowlisted admin email.
-  const serverClient = createClient()
-  const { data: { user } } = await serverClient.auth.getUser()
-  if (!user) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
-  if (!isAdminEmail(user.email)) {
-    console.warn(`[admin/slip-url] non-allowlisted access attempt (userId: ${user.id})`)
-    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-  }
+  const { user, error: authError } = await requireAdmin()
+  if (authError) return authError
 
   // Use the service client so RLS does not block the lookup.
   const supabase = createServiceClient()

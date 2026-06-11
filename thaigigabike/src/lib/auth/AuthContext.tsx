@@ -20,6 +20,7 @@ type AuthContextType = {
   loading: boolean
   signOut: () => Promise<void>
   refreshProfile: () => Promise<void>
+  refreshUser: () => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextType | null>(null)
@@ -31,25 +32,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const loadProfile = useCallback(async () => {
     const res = await fetch('/api/account/profile')
-    if (res.ok) setProfile((await res.json()) as Profile)
+    if (res.ok) {
+      const data = await res.json()
+      setProfile((data.profile ?? null) as Profile | null)
+    }
   }, [])
 
   const refreshProfile = useCallback(async () => {
     await loadProfile()
   }, [loadProfile])
 
-  useEffect(() => {
-    fetch('/api/auth/me')
-      .then(r => r.ok ? r.json() : null)
-      .then(data => {
-        if (data?.user) {
-          setUser(data.user as CustomUser)
-          loadProfile()
-        }
-        setLoading(false)
-      })
-      .catch(() => setLoading(false))
+  const refreshUser = useCallback(async () => {
+    try {
+      const res = await fetch('/api/auth/me')
+      const data = res.ok ? await res.json() : null
+      if (data?.user) {
+        setUser(data.user as CustomUser)
+        await loadProfile()
+      } else {
+        setUser(null)
+        setProfile(null)
+      }
+    } catch { /* network error — keep current state */ }
+    setLoading(false)
   }, [loadProfile])
+
+  useEffect(() => { refreshUser() }, [refreshUser])
 
   const signOut = useCallback(async () => {
     await fetch('/api/auth/logout', { method: 'POST' })
@@ -58,7 +66,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [])
 
   return (
-    <AuthContext.Provider value={{ user, profile, loading, signOut, refreshProfile }}>
+    <AuthContext.Provider value={{ user, profile, loading, signOut, refreshProfile, refreshUser }}>
       {children}
     </AuthContext.Provider>
   )

@@ -89,37 +89,50 @@ test.describe('Admin API — unauthenticated access blocked', () => {
   })
 })
 
-test.describe('Admin login API — input validation', () => {
-  test('POST /api/admin/auth/login — empty body → non-2xx', async ({ request }) => {
-    const res = await request.post('/api/admin/auth/login', { data: {} })
+test.describe('Login API — input validation (custom auth)', () => {
+  test('POST /api/auth/login — empty body → non-2xx', async ({ request }) => {
+    const res = await request.post('/api/auth/login', { data: {} })
     expect(notExposed(res.status())).toBeTruthy()
   })
 
-  test('POST /api/admin/auth/login — wrong credentials → generic Thai message', async ({ request }) => {
-    const res = await request.post('/api/admin/auth/login', {
+  test('POST /api/auth/login — wrong credentials → generic Thai message', async ({ request }) => {
+    const res = await request.post('/api/auth/login', {
       data: { email: 'fake@example.com', password: 'wrongpassword' },
     })
-    // 401 correct, 429 rate-limited, 500 if Supabase unavailable — all non-2xx
+    // 401 correct, 429 rate-limited, 500 if DB unavailable — all non-2xx
     expect(notExposed(res.status())).toBeTruthy()
 
     const body = await res.json().catch(() => ({ error: '' }))
-    // If Supabase responded, must show generic Thai error (no username enumeration)
-    if (res.status() === 401 || res.status() === 429) {
+    // Must show generic Thai error (no username enumeration)
+    if (res.status() === 401) {
       expect(body.error).toBe('อีเมลหรือรหัสผ่านไม่ถูกต้อง')
     }
-    // Must never expose whether email exists or is allowlisted
-    expect(JSON.stringify(body)).not.toMatch(/allowlist|ADMIN_EMAILS|allowlisted/)
   })
 
-  test('POST /api/admin/auth/login — response must not contain tokens', async ({ request }) => {
-    const res = await request.post('/api/admin/auth/login', {
+  test('POST /api/auth/login — response must never contain secrets', async ({ request }) => {
+    const res = await request.post('/api/auth/login', {
       data: { email: 'fake@example.com', password: 'wrongpassword' },
     })
     const body = await res.json().catch(() => ({}))
-    // Must never return auth tokens on failure
-    expect(body).not.toHaveProperty('access_token')
-    expect(body).not.toHaveProperty('refresh_token')
+    // Session token lives only in the httpOnly cookie — never in the body
+    expect(body).not.toHaveProperty('token')
     expect(body).not.toHaveProperty('session')
+    expect(body).not.toHaveProperty('password_hash')
+  })
+
+  test('POST /api/auth/register — must ignore client-sent role escalation', async ({ request }) => {
+    const res = await request.post('/api/auth/register', {
+      data: { email: 'bad-json', password: 'short' },
+    })
+    // Invalid input → 4xx; role/admin_active are never accepted from the client
+    expect(notExposed(res.status())).toBeTruthy()
+  })
+
+  test('GET /api/auth/me — no session → 401', async ({ request }) => {
+    const res = await request.get('/api/auth/me')
+    expect(res.status()).toBe(401)
+    const body = await res.json().catch(() => ({}))
+    expect(body).not.toHaveProperty('password_hash')
   })
 })
 

@@ -25,11 +25,12 @@ export async function GET(req: NextRequest) {
     // Table may not exist yet — return empty gracefully
     return NextResponse.json({ reviews: [], total: 0, pages: 0 })
   }
+  // CDN cache: 60s fresh, serve stale for 5 min while revalidating
   return NextResponse.json({
     reviews: data ?? [],
     total:   count ?? 0,
     pages:   Math.ceil((count ?? 0) / PAGE_SIZE),
-  })
+  }, { headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300' } })
 }
 
 // POST /api/reviews

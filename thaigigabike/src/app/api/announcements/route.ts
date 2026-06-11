@@ -16,5 +16,9 @@ export async function GET() {
     // Table may not exist yet — return empty gracefully
     return NextResponse.json({ announcements: [] })
   }
-  return NextResponse.json({ announcements: data ?? [] })
+  // CDN cache: 60s fresh, serve stale for 5 min while revalidating
+  return NextResponse.json(
+    { announcements: data ?? [] },
+    { headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300' } }
+  )
 }

@@ -1,26 +1,24 @@
 import { NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
 import { createServiceClient } from '@/lib/supabase/service'
 import { requireUser } from '@/lib/auth/require-user'
 
 // PDPA / GDPR-style data export — returns all account data as JSON.
+// Service role: account tables are service-only; every query filters by user.
 export async function GET() {
   const { user, error } = await requireUser()
   if (error) return error
 
-  const db = createClient()
   const svc = createServiceClient()
 
   const [profile, addresses, wishlist, reviews, tickets] = await Promise.all([
-    db.from('profiles').select('*').eq('id', user.id).single().then(r => r.data),
-    db.from('addresses').select('*').eq('user_id', user.id).then(r => r.data),
-    db.from('wishlists').select('*').eq('user_id', user.id).then(r => r.data),
-    db.from('reviews').select('*').eq('user_id', user.id).then(r => r.data),
-    db.from('support_tickets').select('*').eq('user_id', user.id).then(r => r.data),
+    svc.from('profiles').select('*').eq('id', user.id).single().then(r => r.data),
+    svc.from('addresses').select('*').eq('user_id', user.id).then(r => r.data),
+    svc.from('wishlists').select('*').eq('user_id', user.id).then(r => r.data),
+    svc.from('reviews').select('*').eq('user_id', user.id).then(r => r.data),
+    svc.from('support_tickets').select('*').eq('user_id', user.id).then(r => r.data),
   ])
 
-  // orders by user_id + email (service role for guest orders)
-  const ordersByUser = (await db.from('orders').select('*').eq('user_id', user.id)).data ?? []
+  const ordersByUser = (await svc.from('orders').select('*').eq('user_id', user.id)).data ?? []
   const ordersByEmail = user.email
     ? (await svc.from('orders').select('*').eq('contact_email', user.email).is('user_id', null)).data ?? []
     : []

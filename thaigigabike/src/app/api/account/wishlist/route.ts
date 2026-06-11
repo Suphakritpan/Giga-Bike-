@@ -1,11 +1,11 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+﻿import { NextRequest, NextResponse } from 'next/server'
+import { createServiceClient } from '@/lib/supabase/service'
 import { requireUser } from '@/lib/auth/require-user'
 
 export async function GET() {
   const { user, error } = await requireUser()
   if (error) return error
-  const db = createClient()
+  const db = createServiceClient()
   const { data } = await db.from('wishlists')
     .select('product_id, created_at, notify_price_drop, notify_restock').eq('user_id', user.id)
     .order('created_at', { ascending: false })
@@ -26,7 +26,7 @@ export async function PATCH(req: NextRequest) {
   if ('notify_restock'    in body) patch.notify_restock    = body.notify_restock === true
   if (Object.keys(patch).length === 0) return NextResponse.json({ error: 'Nothing to update' }, { status: 400 })
 
-  const db = createClient()
+  const db = createServiceClient()
   const { error: dbErr } = await db.from('wishlists').update(patch)
     .eq('user_id', user.id).eq('product_id', product_id)
   if (dbErr) return NextResponse.json({ error: dbErr.message }, { status: 500 })
@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
   const product_id = String(body.product_id ?? '').trim()
   if (!product_id) return NextResponse.json({ error: 'product_id required' }, { status: 400 })
 
-  const db = createClient()
+  const db = createServiceClient()
   const { error: dbErr } = await db.from('wishlists')
     .upsert({ user_id: user.id, product_id }, { onConflict: 'user_id,product_id' })
   if (dbErr) return NextResponse.json({ error: dbErr.message }, { status: 500 })
@@ -55,7 +55,7 @@ export async function DELETE(req: NextRequest) {
   const product_id = searchParams.get('product_id')
   if (!product_id) return NextResponse.json({ error: 'product_id required' }, { status: 400 })
 
-  const db = createClient()
+  const db = createServiceClient()
   const { error: dbErr } = await db.from('wishlists').delete()
     .eq('user_id', user.id).eq('product_id', product_id)
   if (dbErr) return NextResponse.json({ error: dbErr.message }, { status: 500 })

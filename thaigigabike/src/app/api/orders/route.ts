@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { randomUUID } from 'node:crypto'
 import { createServiceClient } from '@/lib/supabase/service'
-import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from '@/lib/auth'
 import { allProducts as STATIC_CATALOG } from '@/data/products'
 import { sendOrderConfirmationEmail } from '@/lib/email'
 
@@ -320,7 +320,7 @@ export async function POST(request: NextRequest) {
     // Read from the session cookie; never trust a client-sent user_id.
     if (!result.idempotent) {
       try {
-        const { data: { user } } = await createClient().auth.getUser()
+        const user = await getCurrentUser()
         if (user) {
           await supabase.from('orders').update({ user_id: user.id }).eq('id', result.order_id)
         }

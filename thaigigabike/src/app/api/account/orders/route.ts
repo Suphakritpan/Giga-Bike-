@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
 import { createServiceClient } from '@/lib/supabase/service'
 import { requireUser } from '@/lib/auth/require-user'
 
@@ -11,14 +10,12 @@ export async function GET() {
 
   const cols = 'id, status, created_at, items, subtotal, cod_fee, total, shipping_method, shipping_fee, tracking_no'
 
-  // user_id-linked orders (RLS allows own)
-  const db = createClient()
-  const { data: byUser } = await db.from('orders').select(cols).eq('user_id', user.id)
+  const svc = createServiceClient()
+  const { data: byUser } = await svc.from('orders').select(cols).eq('user_id', user.id)
 
-  // email-matched guest orders via service role (RLS would block these)
+  // email-matched guest orders (pre-account purchases)
   let byEmail: Record<string, unknown>[] = []
   if (user.email) {
-    const svc = createServiceClient()
     const { data } = await svc.from('orders').select(cols)
       .eq('contact_email', user.email).is('user_id', null)
     byEmail = data ?? []
