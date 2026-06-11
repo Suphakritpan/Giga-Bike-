@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase/service'
+import { isRateLimited, recordAttempt, hashIp } from '@/lib/api'
 
 const MAX_LEN = { name: 100, email: 200, phone: 30, subject: 200, body: 2000, product_code: 30 }
+const MAX_PER_HOUR = 10
 
 function clamp(s: unknown, max: number): string {
   if (typeof s !== 'string') return ''
@@ -9,6 +11,13 @@ function clamp(s: unknown, max: number): string {
 }
 
 export async function POST(req: NextRequest) {
+  // Anti-spam: contact form is a public write endpoint
+  const ipHash = hashIp(req)
+  if (await isRateLimited({ kind: 'message', ipHash, max: MAX_PER_HOUR, windowMs: 3_600_000 })) {
+    return NextResponse.json({ error: 'ส่งข้อความบ่อยเกินไป กรุณาลองใหม่ภายหลัง' }, { status: 429 })
+  }
+  await recordAttempt({ kind: 'message', email: '', ipHash, success: true })
+
   let body: Record<string, unknown> | null = null
   try { body = await req.json() } catch { /* ignore */ }
 

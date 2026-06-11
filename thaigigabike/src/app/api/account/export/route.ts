@@ -18,11 +18,13 @@ export async function GET() {
     svc.from('support_tickets').select('*').eq('user_id', user.id).then(r => r.data),
   ])
 
+  // Email-matched data requires a VERIFIED email (see /api/account/orders)
+  const emailVerified = !!user.email_verified_at
   const ordersByUser = (await svc.from('orders').select('*').eq('user_id', user.id)).data ?? []
-  const ordersByEmail = user.email
+  const ordersByEmail = user.email && emailVerified
     ? (await svc.from('orders').select('*').eq('contact_email', user.email).is('user_id', null)).data ?? []
     : []
-  const messages = user.email
+  const messages = user.email && emailVerified
     ? (await svc.from('messages').select('*').eq('sender_email', user.email)).data ?? []
     : []
 

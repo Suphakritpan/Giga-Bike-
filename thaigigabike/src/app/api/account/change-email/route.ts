@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase/service'
 import { requireUser } from '@/lib/auth'
 import { verifyPassword } from '@/lib/password'
+import { issueVerificationEmail } from '@/lib/verification'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -45,6 +46,15 @@ export async function POST(req: NextRequest) {
   if (updErr) {
     return NextResponse.json({ error: 'เกิดข้อผิดพลาด กรุณาลองใหม่' }, { status: 500 })
   }
+
+  // New address starts UNVERIFIED — email-matched guest data is hidden again
+  // until the new link is clicked. Separate best-effort update so this still
+  // works if the phase3 migration hasn't been applied yet.
+  await db.from('users')
+    .update({ email_verified_at: null }).eq('id', user.id)
+    .then(() => {}, () => {})
+
+  issueVerificationEmail(user.id, newEmail).catch(() => {})
 
   return NextResponse.json({ ok: true, email: newEmail })
 }

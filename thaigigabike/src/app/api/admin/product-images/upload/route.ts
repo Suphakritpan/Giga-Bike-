@@ -3,14 +3,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { requireAdmin } from '@/lib/auth/require-admin'
 import { createServiceClient } from '@/lib/supabase/service'
 import { writeAuditLog } from '@/lib/audit'
+import { sniffFile, IMAGE_KINDS, KIND_MIME } from '@/lib/api'
 
 const MAX_BYTES = 5 * 1024 * 1024  // 5 MB
-
-const MIME_TO_EXT: Record<string, string> = {
-  'image/jpeg': 'jpg',
-  'image/png':  'png',
-  'image/webp': 'webp',
-}
 
 // productId must be filesystem-safe: letters, digits, dot, dash, underscore only.
 const SAFE_ID = /^[A-Za-z0-9._\-]+$/
@@ -37,25 +32,26 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'file is required' }, { status: 400 })
   }
 
-  const ext = MIME_TO_EXT[file.type]
-  if (!ext) {
+  if (file.size > MAX_BYTES) {
+    return NextResponse.json({ error: 'File too large (max 5 MB)' }, { status: 400 })
+  }
+
+  // Magic-bytes check — browser MIME type is not trusted
+  const sniffed = await sniffFile(file)
+  if (!sniffed || !IMAGE_KINDS.includes(sniffed.kind)) {
     return NextResponse.json(
       { error: 'Only image/jpeg, image/png, image/webp are allowed' },
       { status: 400 }
     )
   }
 
-  if (file.size > MAX_BYTES) {
-    return NextResponse.json({ error: 'File too large (max 5 MB)' }, { status: 400 })
-  }
-
   // Server-controlled path — client never chooses the filename or directory.
-  const path = `products/${productId}/${randomUUID()}.${ext}`
+  const path = `products/${productId}/${randomUUID()}.${sniffed.kind}`
 
   const supabase = createServiceClient()
   const { error: uploadErr } = await supabase.storage
     .from('product-images')
-    .upload(path, await file.arrayBuffer(), { contentType: file.type, upsert: false })
+    .upload(path, sniffed.buffer, { contentType: KIND_MIME[sniffed.kind], upsert: false })
 
   if (uploadErr) {
     console.error(`[admin/upload] storage error for ${user.email}:`, uploadErr.message)

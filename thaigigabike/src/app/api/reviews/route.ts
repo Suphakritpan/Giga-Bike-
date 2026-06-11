@@ -1,8 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase/service'
 import { createClient } from '@/lib/supabase/server'
+import { isRateLimited, recordAttempt, hashIp } from '@/lib/api'
 
 const PAGE_SIZE = 20
+const MAX_REVIEWS_PER_HOUR = 5
 
 // GET /api/reviews?productId=xxx&rating=5&page=1
 export async function GET(req: NextRequest) {
@@ -35,6 +37,13 @@ export async function GET(req: NextRequest) {
 
 // POST /api/reviews
 export async function POST(req: NextRequest) {
+  // Anti-spam: public write endpoint (reviews queue for approval)
+  const ipHash = hashIp(req)
+  if (await isRateLimited({ kind: 'review', ipHash, max: MAX_REVIEWS_PER_HOUR, windowMs: 3_600_000 })) {
+    return NextResponse.json({ error: 'ส่งรีวิวบ่อยเกินไป กรุณาลองใหม่ภายหลัง' }, { status: 429 })
+  }
+  await recordAttempt({ kind: 'review', email: '', ipHash, success: true })
+
   let body: Record<string, unknown> | null = null
   try { body = await req.json() } catch { /* ignore */ }
 

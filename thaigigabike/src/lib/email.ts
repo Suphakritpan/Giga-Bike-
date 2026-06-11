@@ -127,6 +127,66 @@ export async function sendOrderConfirmationEmail(
 }
 
 /**
+ * Send an email-verification link (custom auth).
+ *
+ * Verification gates email-matched guest data (orders/messages) in the
+ * account section — see docs/API.md.
+ */
+export async function sendVerifyEmail(
+  to: string,
+  verifyUrl: string,
+): Promise<EmailResult> {
+  const apiKey = process.env.RESEND_API_KEY
+  const from   = process.env.EMAIL_FROM ?? 'orders@thaigigabike.com'
+
+  if (!apiKey) {
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(`[DEV EMAIL] Verify email for ${to} → ${verifyUrl}`)
+      return { success: true }
+    }
+    console.error('[EMAIL] RESEND_API_KEY not set — verification email not sent')
+    return { success: false, error: 'Email provider not configured' }
+  }
+
+  const html = `
+<div style="font-family:'Helvetica Neue',sans-serif;max-width:480px;margin:0 auto;padding:32px 24px;background:#fff">
+  <div style="margin-bottom:24px">
+    <span style="font-size:22px;font-weight:800;color:#16a34a">⚡ Thai</span><span style="font-size:22px;font-weight:800">GigaBike</span>
+  </div>
+  <h2 style="font-size:18px;font-weight:700;margin:0 0 8px">ยืนยันอีเมลของคุณ</h2>
+  <p style="font-size:14px;color:#555;margin:0 0 24px">
+    กดปุ่มด้านล่างเพื่อยืนยันว่าอีเมลนี้เป็นของคุณ — หลังยืนยันจะเห็นประวัติออเดอร์ที่สั่งด้วยอีเมลนี้ทั้งหมดในหน้าบัญชี
+  </p>
+  <a href="${verifyUrl}"
+     style="display:inline-block;background:#16a34a;color:#fff;font-size:15px;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;margin-bottom:20px">
+    ยืนยันอีเมล
+  </a>
+  <p style="font-size:13px;color:#888;margin:16px 0 8px">ลิงก์หมดอายุใน 24 ชั่วโมง · ใช้ได้ครั้งเดียว</p>
+  <p style="font-size:13px;color:#888;margin:0">ถ้าคุณไม่ได้สมัครสมาชิก ไม่ต้องทำอะไรกับอีเมลฉบับนี้</p>
+  <hr style="border:none;border-top:1px solid #eee;margin:20px 0">
+  <p style="font-size:12px;color:#aaa">
+    Verify your ThaiGigaBike email: <a href="${verifyUrl}" style="color:#16a34a">${verifyUrl}</a>
+  </p>
+</div>`
+
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method:  'POST',
+      headers: { 'Authorization': `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ from, to: [to], subject: 'ยืนยันอีเมลของคุณ | GigaBike', html }),
+    })
+    if (!res.ok) {
+      console.error('[EMAIL] Resend API error (verify):', res.status)
+      return { success: false, error: 'Email send failed' }
+    }
+    return { success: true }
+  } catch {
+    console.error('[EMAIL] Network error sending verification email')
+    return { success: false, error: 'Email send failed' }
+  }
+}
+
+/**
  * Send a password-reset link (custom auth).
  *
  * Same provider strategy as OTP: Resend in production, console in dev,

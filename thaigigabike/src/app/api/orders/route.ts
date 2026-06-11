@@ -4,17 +4,12 @@ import { createServiceClient } from '@/lib/supabase/service'
 import { getCurrentUser } from '@/lib/auth'
 import { allProducts as STATIC_CATALOG } from '@/data/products'
 import { sendOrderConfirmationEmail } from '@/lib/email'
+import { sniffFile, KIND_MIME, isRateLimited, recordAttempt, hashIp } from '@/lib/api'
 
 // ── Canonical config — the server is the single source of truth for these. ──
 // Never accept shipping fees, COD fees, prices, or totals from the client.
 
-const MIME_EXT: Record<string, string> = {
-  'image/jpeg': 'jpg',
-  'image/png':  'png',
-  'image/webp': 'webp',
-  'application/pdf': 'pdf',
-}
-const ALLOWED_TYPES = Object.keys(MIME_EXT)
+// Slip uploads: JPG/PNG/WebP/PDF, validated by magic bytes (sniffFile)
 const MAX_SIZE = 5 * 1024 * 1024 // 5 MB
 
 /** Server-canonical shipping fees (THB). Client value is ignored. */
@@ -43,6 +38,14 @@ type RawItem = { productId: unknown; quantity: unknown; color: unknown }
 
 export async function POST(request: NextRequest) {
   try {
+    // Anti-abuse: public write endpoint (idempotent retries also count,
+    // so the cap stays generous for real shoppers)
+    const ipHash = hashIp(request)
+    if (await isRateLimited({ kind: 'order', ipHash, max: 10, windowMs: 3_600_000 })) {
+      return NextResponse.json({ error: 'สั่งซื้อถี่เกินไป กรุณาลองใหม่ภายหลัง' }, { status: 429 })
+    }
+    await recordAttempt({ kind: 'order', email: '', ipHash, success: true })
+
     const fd = await request.formData()
 
     // ── 1. Parse basic fields ─────────────────────────────────────────────
@@ -97,7 +100,8 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // ── 5. Slip validation (server-side; repeats client-side check) ───────
+    // ── 5. Slip validation — magic bytes, not the client-sent MIME type ───
+    let slipSniffed: Awaited<ReturnType<typeof sniffFile>> = null
     if (paymentMethod === 'transfer') {
       if (!slip || slip.size === 0) {
         return NextResponse.json({ error: 'Payment slip required' }, { status: 400 })
@@ -105,7 +109,8 @@ export async function POST(request: NextRequest) {
       if (slip.size > MAX_SIZE) {
         return NextResponse.json({ error: 'Slip file must be under 5 MB' }, { status: 400 })
       }
-      if (!ALLOWED_TYPES.includes(slip.type)) {
+      slipSniffed = await sniffFile(slip)
+      if (!slipSniffed) {
         return NextResponse.json(
           { error: 'Invalid file type. Use JPG, PNG, WebP or PDF' },
           { status: 400 }
@@ -244,12 +249,11 @@ export async function POST(request: NextRequest) {
     const orderId  = generateOrderId()
     let slipPath: string | null = null
 
-    if (paymentMethod === 'transfer' && slip) {
-      const ext  = MIME_EXT[slip.type] ?? 'bin'
-      const path = `${orderId}/${randomUUID()}.${ext}`
+    if (paymentMethod === 'transfer' && slipSniffed) {
+      const path = `${orderId}/${randomUUID()}.${slipSniffed.kind}`
       const { error: uploadErr } = await supabase.storage
         .from('order-slips')
-        .upload(path, slip, { contentType: slip.type, upsert: false })
+        .upload(path, slipSniffed.buffer, { contentType: KIND_MIME[slipSniffed.kind], upsert: false })
       if (uploadErr) {
         console.error('Slip upload failed')
         // Fail the order rather than silently create an unpaid-looking record.

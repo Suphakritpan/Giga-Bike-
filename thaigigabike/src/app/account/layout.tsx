@@ -7,6 +7,7 @@ import {
 } from 'lucide-react'
 import { useAuth } from '@/lib/auth/AuthContext'
 import { useLang } from '@/lib/lang'
+import { Spinner } from '@/components/ui'
 
 export default function AccountLayout({ children }: { children: React.ReactNode }) {
   const { user, profile, loading, signOut } = useAuth()
@@ -35,9 +36,8 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
 
   if (loading) {
     return (
-      <div className="container section" style={{ textAlign: 'center', color: 'var(--text3)' }}>
-        <div style={{ width: 40, height: 40, border: '3px solid var(--green)', borderTopColor: 'transparent', borderRadius: '50%', margin: '40px auto', animation: 'spin .8s linear infinite' }} />
-        <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
+      <div className="container section">
+        <Spinner center />
       </div>
     )
   }
@@ -67,7 +67,7 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
             </div>
 
             {/* Nav */}
-            <nav style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            <nav aria-label={locale === 'th' ? 'เมนูบัญชี' : 'Account menu'} style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               {NAV.map(item => {
                 const active = item.href === '/account' ? pathname === '/account' : pathname.startsWith(item.href)
                 return (

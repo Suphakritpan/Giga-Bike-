@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import { createServiceClient } from '@/lib/supabase/service'
 import { hashPassword } from '@/lib/password'
 import { createSession, cookieName } from '@/lib/session'
+import { issueVerificationEmail } from '@/lib/verification'
 import { apiOk, apiError, ERR, apiLog, isRateLimited, recordAttempt, hashIp, readJson } from '@/lib/api'
 
 const ROUTE         = 'POST /api/auth/register'
@@ -58,6 +59,9 @@ export async function POST(req: NextRequest) {
   await db.from('profiles')
     .upsert({ id: newUser.id, full_name: fullName }, { onConflict: 'id' })
     .then(() => {}, () => {})
+
+  // Verification link — email-matched guest orders stay hidden until clicked
+  issueVerificationEmail(newUser.id as string, email).catch(() => {})
 
   const { token, expiresAt } = await createSession(newUser.id as string, {
     ipHash,

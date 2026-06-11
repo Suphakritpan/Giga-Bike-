@@ -34,9 +34,12 @@ export async function createSession(
 
 export async function getSessionUser(token: string): Promise<CustomUser | null> {
   const db = createServiceClient()
+  // select(*) keeps this resilient to columns added by later migrations
+  // (e.g. email_verified_at). NEVER return `u` directly — map explicit
+  // fields only, password_hash must not escape this function.
   const { data } = await db
     .from('user_sessions')
-    .select('users!inner(id, email, full_name, phone, line_id, role, admin_active, status)')
+    .select('users!inner(*)')
     .eq('session_token_hash', hashToken(token))
     .gt('expires_at', new Date().toISOString())
     .single()
@@ -44,14 +47,15 @@ export async function getSessionUser(token: string): Promise<CustomUser | null> 
   if (!data?.users) return null
   const u = data.users as unknown as Record<string, unknown>
   return {
-    id:           u.id as string,
-    email:        u.email as string,
-    full_name:    u.full_name as string | null,
-    phone:        u.phone as string | null,
-    line_id:      u.line_id as string | null,
-    role:         u.role as CustomUser['role'],
-    admin_active: u.admin_active as boolean,
-    status:       u.status as CustomUser['status'],
+    id:                u.id as string,
+    email:             u.email as string,
+    full_name:         u.full_name as string | null,
+    phone:             u.phone as string | null,
+    line_id:           u.line_id as string | null,
+    role:              u.role as CustomUser['role'],
+    admin_active:      u.admin_active as boolean,
+    status:            u.status as CustomUser['status'],
+    email_verified_at: (u.email_verified_at as string | null) ?? null,
   }
 }
 

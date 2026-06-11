@@ -93,6 +93,54 @@ await recordAttempt({ kind: 'login', email, ipHash, success })
 | `login` | IP และ email (นับเฉพาะ fail) | 10 | 15 นาที |
 | `register` | IP | 5 | 1 ชั่วโมง |
 | `reset` | IP | 5 | 15 นาที |
+| `verify` (ส่งลิงก์ยืนยันอีเมล) | email | 3 | 15 นาที |
+| `setup` (setup-owner) | IP | 5 | 1 ชั่วโมง |
+| `order` (POST /api/orders) | IP | 10 | 1 ชั่วโมง |
+| `message` (contact form) | IP | 10 | 1 ชั่วโมง |
+| `review` | IP | 5 | 1 ชั่วโมง |
+| `review_image` | IP | 15 | 1 ชั่วโมง |
+
+### CSRF (middleware.ts)
+
+cookie เป็น `sameSite=lax` อยู่แล้ว และ middleware เพิ่มชั้นที่สอง: ทุก request
+ที่ไม่ใช่ GET/HEAD/OPTIONS ไปยัง `/api/*` ถ้ามี `Origin` header ที่ host ไม่ตรงกับ
+request host หรือ `NEXT_PUBLIC_SITE_URL` → ตอบ 403 ทันที
+
+### Uploads — กฎเหล็ก
+
+ทุก endpoint ที่รับไฟล์ต้องผ่าน `sniffFile()` (จาก `@/lib/api`) — ตรวจ **magic
+bytes** จริง ไม่เชื่อ MIME ที่ browser ส่งมา:
+
+| endpoint | ชนิดที่รับ | ขนาด | ชื่อไฟล์ |
+|---|---|---|---|
+| `/api/account/avatar` | jpg/png/webp | 2 MB | `<userId>/avatar.<ext>` (จาก session) |
+| `/api/reviews/upload-image` | jpg/png/webp | 5 MB | `<uuid>.<ext>` (สุ่มฝั่ง server) |
+| `/api/admin/product-images/upload` | jpg/png/webp | 5 MB | `products/<id>/<uuid>.<ext>` |
+| สลิปใน `POST /api/orders` | jpg/png/webp/pdf | 5 MB | private bucket, `<orderId>/<uuid>.<ext>` |
+
+client ไม่มีสิทธิ์กำหนด path/ชื่อไฟล์ในทุกกรณี
+(งานต่อ: strip EXIF + re-encode รูป — ต้องเพิ่ม dependency เช่น sharp)
+
+### Ownership helper
+
+ทุก lookup รายแถวของ user ใช้ `getOwnedRow(table, id, user.id)` — คืน null ทั้ง
+กรณีไม่มีแถวและกรณีเป็นของคนอื่น (ไม่ leak ว่าข้อมูลมีอยู่):
+
+```ts
+const ticket = await getOwnedRow('support_tickets', params.ticketId, user.id)
+if (!ticket) return NextResponse.json({ error: 'Not found' }, { status: 404 })
+```
+
+### Email verification — gate ข้อมูลที่ match ด้วยอีเมล
+
+สมัครสมาชิกไม่บังคับยืนยันอีเมล **แต่** ข้อมูลที่ merge ด้วยอีเมล (guest orders,
+inbox, export) จะมองเห็นได้ก็ต่อเมื่อ `users.email_verified_at` ถูกตั้งแล้วเท่านั้น
+— กันคนสมัครด้วยอีเมลของคนอื่นแล้วอ่านประวัติ guest order ของเจ้าของอีเมล
+
+Flow: register/เปลี่ยนอีเมล → ส่งลิงก์อัตโนมัติ (`email_verification_tokens`,
+24 ชม., ครั้งเดียว) → คลิก `GET /api/auth/verify-email?token=` → redirect กลับ
+`/account/settings?verified=1` · ส่งซ้ำ: `POST /api/auth/send-verification`
+· เปลี่ยนอีเมล = reset เป็น unverified เสมอ
 
 ### Caching (public GET)
 
@@ -133,6 +181,8 @@ if (error) return error                          // error เป็น NextRespo
 | `GET /api/auth/me` | cookie | — | `{ user: CustomUser }` หรือ 401 `{ user: null }` |
 | `POST /api/auth/forgot-password` | — | `{ email }` | `{ ok: true }` เสมอ (ไม่บอกว่ามีบัญชีไหม) |
 | `POST /api/auth/reset-password` | — | `{ token, password (≥8) }` | `{ ok: true }` + ลบทุก session |
+| `POST /api/auth/send-verification` | session | — | `{ ok: true }` ส่งลิงก์ยืนยันอีเมล |
+| `GET /api/auth/verify-email?token=` | — | — | redirect → `/account/settings?verified=1\|0` |
 
 ความปลอดภัย: login รัน bcrypt เสมอแม้ไม่พบ user (กัน timing attack) ·
 register ไม่รับ `role`/`admin_active`/`status` จาก client เด็ดขาด ·
@@ -171,7 +221,7 @@ reset token ใช้ครั้งเดียว หมดอายุ 30 น
 | ตั๋ว | `GET /api/admin/tickets`, `PATCH /[ticketId]` |
 | ใบกำกับภาษี | `GET /api/admin/tax-invoices`, `PATCH /[id]` |
 | จัดการสิทธิ์ | `PATCH /api/admin/users/[id]/role` — **owner เท่านั้น**; กัน owner ลดสิทธิ์ตัวเอง; เขียน audit log |
-| Bootstrap | `POST /api/admin/setup-owner` — `{ secret, email }`; ปิดตัวเองถ้า `ADMIN_SETUP_SECRET` เป็นค่า default; เทียบ secret แบบ timing-safe |
+| Bootstrap | `POST /api/admin/setup-owner` — `{ secret, email }`; ปิดถ้า secret เป็น default; **production ต้องตั้ง `ALLOW_ADMIN_SETUP=true` ชั่วคราว**; **ตายถาวร (410) เมื่อมี owner แล้ว**; rate limit 5/ชม.; log ทุก attempt; เทียบ secret แบบ timing-safe |
 
 ทุก action สำคัญเขียน audit log (`lib/audit.ts` → `audit_logs`, `lib/admin-audit.ts` → `admin_audit_logs`)
 
@@ -222,12 +272,15 @@ reset token ใช้ครั้งเดียว หมดอายุ 30 น
 
 migration ตามลำดับ: `supabase/setup.sql` → `supabase/custom-auth.sql` → `supabase/custom-auth-phase2.sql`
 
+migration ตามลำดับ: `setup.sql` → `custom-auth.sql` → `custom-auth-phase2.sql` → `custom-auth-phase3.sql`
+
 | ตาราง | เก็บอะไร |
 |---|---|
-| `users` | บัญชี + `password_hash` (bcrypt) + role/status |
+| `users` | บัญชี + `password_hash` (bcrypt) + role/status + `email_verified_at` |
 | `user_sessions` | SHA-256 ของ session token + expiry |
-| `login_attempts` | rate limiting (`kind`: login/register/reset) |
+| `login_attempts` | rate limiting ทุก kind (login/register/reset/verify/setup/order/message/review/...) |
 | `password_reset_tokens` | SHA-256 ของ reset token, ใช้ครั้งเดียว |
+| `email_verification_tokens` | SHA-256 ของ verify token, 24 ชม., ครั้งเดียว |
 | `login_events` | ประวัติการล็อกอิน (โชว์ใน settings) |
 | `admin_audit_logs` | การกระทำของแอดมิน |
 

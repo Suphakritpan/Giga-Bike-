@@ -10,4 +10,7 @@ export type CustomUser = {
   role: UserRole
   admin_active: boolean
   status: UserStatus
+  /** Set when the user clicked the verification link — null = unverified.
+   *  Email-matched guest data (orders/messages/export) is hidden until verified. */
+  email_verified_at: string | null
 }

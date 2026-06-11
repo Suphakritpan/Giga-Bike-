@@ -6,6 +6,7 @@ import { useLang } from '@/lib/lang'
 import { useCart } from '@/lib/cart'
 import { getProductById, bikeModels } from '@/data/products'
 import type { Product } from '@/data/products'
+import { EmptyState, PageHeader, SkeletonList } from '@/components/ui'
 
 type Item = { product_id: string; notify_price_drop: boolean; notify_restock: boolean }
 
@@ -49,17 +50,24 @@ export default function WishlistPage() {
   const withProduct = items.map(i => ({ item: i, product: getProductById(i.product_id) }))
     .filter((x): x is { item: Item; product: Product } => !!x.product)
 
-  if (loading) return <div style={{ color: 'var(--text3)', padding: 40, textAlign: 'center' }}>...</div>
+  if (loading) {
+    return (
+      <div>
+        <PageHeader title={t.account.wishlist} />
+        <SkeletonList rows={3} height={92} />
+      </div>
+    )
+  }
 
   if (items.length === 0) {
     return (
       <div>
-        <h1 style={{ fontSize: 26, fontWeight: 800, marginBottom: 20 }}>{t.account.wishlist}</h1>
-        <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
-          <Heart size={40} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
-          <p style={{ marginBottom: 16 }}>{t.account.wishlistEmpty}</p>
-          <Link href="/products" className="btn-primary" style={{ fontSize: 15 }}>{locale === 'th' ? 'เลือกซื้อสินค้า' : 'Browse products'}</Link>
-        </div>
+        <PageHeader title={t.account.wishlist} />
+        <EmptyState
+          icon={<Heart size={40} />}
+          title={t.account.wishlistEmpty}
+          action={<Link href="/products" className="btn-primary" style={{ fontSize: 15 }}>{locale === 'th' ? 'เลือกซื้อสินค้า' : 'Browse products'}</Link>}
+        />
       </div>
     )
   }

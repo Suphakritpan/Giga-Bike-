@@ -1,10 +1,11 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { Sun, Moon, Globe, Bell, Download, Trash2, AlertTriangle, Check, Shield, Mail, LogOut, Monitor } from 'lucide-react'
+import { Sun, Moon, Globe, Bell, Download, Trash2, AlertTriangle, Check, Shield, Mail, LogOut, Monitor, MailCheck, MailWarning } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 import { useTheme } from '@/lib/theme'
 import { useAuth } from '@/lib/auth/AuthContext'
+import { Card, Toggle, PageHeader } from '@/components/ui'
 import type { Locale } from '@/lib/i18n'
 
 type LoginEvent = { id: string; ip_hash: string | null; user_agent: string | null; created_at: string }
@@ -20,6 +21,8 @@ export default function SettingsPage() {
   const [emailPassword, setEmailPassword] = useState('')
   const [emailMsg, setEmailMsg] = useState('')
   const [emailErr, setEmailErr] = useState('')
+  const [verifySent, setVerifySent] = useState(false)
+  const [verifySending, setVerifySending] = useState(false)
   const [showEmail, setShowEmail] = useState(false)
   const [loginEvents, setLoginEvents] = useState<LoginEvent[]>([])
   const [showHistory, setShowHistory] = useState(false)
@@ -71,6 +74,13 @@ export default function SettingsPage() {
     router.refresh()
   }
 
+  const sendVerification = async () => {
+    setVerifySending(true)
+    const res = await fetch('/api/auth/send-verification', { method: 'POST' }).catch(() => null)
+    setVerifySending(false)
+    if (res?.ok) setVerifySent(true)
+  }
+
   const loadHistory = async () => {
     if (!showHistory) {
       const d = await fetch('/api/account/login-events').then(r => r.json()).catch(() => ({ events: [] }))
@@ -94,28 +104,20 @@ export default function SettingsPage() {
     setDeleting(false)
   }
 
-  const Card = ({ children }: { children: React.ReactNode }) => (
-    <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 14, padding: 20, marginBottom: 16, maxWidth: 560 }}>{children}</div>
-  )
   const Row = ({ icon, label, control }: { icon: React.ReactNode; label: string; control: React.ReactNode }) => (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 0' }}>
       <span style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 15, color: 'var(--text)' }}>{icon} {label}</span>
       {control}
     </div>
   )
-  const Toggle = ({ on, onClick }: { on: boolean; onClick: () => void }) => (
-    <button onClick={onClick} aria-pressed={on} style={{ width: 44, height: 26, borderRadius: 999, border: 'none', cursor: 'pointer', background: on ? 'var(--green)' : 'var(--border2)', position: 'relative', transition: 'background .15s' }}>
-      <span style={{ position: 'absolute', top: 3, left: on ? 21 : 3, width: 20, height: 20, borderRadius: '50%', background: '#fff', transition: 'left .15s' }} />
-    </button>
-  )
+  const cardStyle = { maxWidth: 560 }
 
   return (
     <div>
-      <h1 style={{ fontSize: 26, fontWeight: 800, marginBottom: 20 }}>{t.account.settings}</h1>
+      <PageHeader title={t.account.settings} />
 
       {/* Appearance */}
-      <Card>
-        <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--text3)', textTransform: 'uppercase', letterSpacing: '.05em', marginBottom: 8 }}>{t.account.theme} & {t.account.language}</h3>
+      <Card style={cardStyle} title={<>{t.account.theme} & {t.account.language}</>}>
         <Row icon={theme === 'dark' ? <Moon size={17} color="var(--text2)" /> : <Sun size={17} color="var(--text2)" />} label={t.account.theme}
           control={<button onClick={toggle} className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }}>{theme === 'dark' ? 'Dark' : 'Light'}</button>} />
         <Row icon={<Globe size={17} color="var(--text2)" />} label={t.account.language}
@@ -129,21 +131,46 @@ export default function SettingsPage() {
       </Card>
 
       {/* Notifications */}
-      <Card>
-        <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--text3)', textTransform: 'uppercase', letterSpacing: '.05em', marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
-          <Bell size={14} /> {locale === 'th' ? 'การแจ้งเตือน' : 'Notifications'}
-          {savedPrefs && <span style={{ color: 'var(--green)', fontSize: 12, fontWeight: 600 }}><Check size={12} /> {t.account.saved}</span>}
-        </h3>
-        <Row icon={<span style={{ width: 17 }} />} label={t.account.notifyOrder} control={<Toggle on={prefs.notify_order} onClick={() => togglePref('notify_order')} />} />
-        <Row icon={<span style={{ width: 17 }} />} label={t.account.notifyPromo} control={<Toggle on={prefs.notify_promo} onClick={() => togglePref('notify_promo')} />} />
-        <Row icon={<span style={{ width: 17 }} />} label={t.account.notifyReply} control={<Toggle on={prefs.notify_reply} onClick={() => togglePref('notify_reply')} />} />
+      <Card style={cardStyle} title={<>
+        <Bell size={14} /> {locale === 'th' ? 'การแจ้งเตือน' : 'Notifications'}
+        {savedPrefs && <span style={{ color: 'var(--green)', fontSize: 12, fontWeight: 600 }}><Check size={12} /> {t.account.saved}</span>}
+      </>}>
+        <Row icon={<span style={{ width: 17 }} />} label={t.account.notifyOrder} control={<Toggle on={prefs.notify_order} onClick={() => togglePref('notify_order')} label={t.account.notifyOrder} />} />
+        <Row icon={<span style={{ width: 17 }} />} label={t.account.notifyPromo} control={<Toggle on={prefs.notify_promo} onClick={() => togglePref('notify_promo')} label={t.account.notifyPromo} />} />
+        <Row icon={<span style={{ width: 17 }} />} label={t.account.notifyReply} control={<Toggle on={prefs.notify_reply} onClick={() => togglePref('notify_reply')} label={t.account.notifyReply} />} />
       </Card>
 
       {/* Security */}
-      <Card>
-        <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--text3)', textTransform: 'uppercase', letterSpacing: '.05em', marginBottom: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
-          <Shield size={14} /> {locale === 'th' ? 'ความปลอดภัย' : 'Security'}
-        </h3>
+      <Card style={cardStyle} title={<>
+        <Shield size={14} /> {locale === 'th' ? 'ความปลอดภัย' : 'Security'}
+      </>}>
+
+        {/* Email verification status */}
+        {user?.email_verified_at ? (
+          <p style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--green)', marginBottom: 12 }}>
+            <MailCheck size={15} /> {locale === 'th' ? 'ยืนยันอีเมลแล้ว' : 'Email verified'}
+          </p>
+        ) : (
+          <div style={{ background: 'rgba(234,88,12,.07)', border: '1px solid rgba(234,88,12,.3)', borderRadius: 10, padding: '10px 14px', marginBottom: 14 }}>
+            <p style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 14, color: 'var(--orange)', fontWeight: 600, marginBottom: 4 }}>
+              <MailWarning size={15} /> {locale === 'th' ? 'ยังไม่ได้ยืนยันอีเมล' : 'Email not verified'}
+            </p>
+            <p style={{ fontSize: 13, color: 'var(--text2)', marginBottom: 8 }}>
+              {locale === 'th'
+                ? 'ยืนยันอีเมลเพื่อดูประวัติออเดอร์ที่เคยสั่งด้วยอีเมลนี้ และกล่องข้อความ'
+                : 'Verify your email to see guest orders and messages sent with this address.'}
+            </p>
+            {verifySent ? (
+              <span style={{ fontSize: 13, color: 'var(--green)' }}>
+                ✓ {locale === 'th' ? 'ส่งลิงก์แล้ว — เช็คกล่องอีเมลของคุณ' : 'Link sent — check your inbox'}
+              </span>
+            ) : (
+              <button onClick={sendVerification} disabled={verifySending} className="btn-ghost" style={{ fontSize: 13, padding: '6px 12px' }}>
+                <Mail size={14} /> {verifySending ? '...' : (locale === 'th' ? 'ส่งลิงก์ยืนยัน' : 'Send verification link')}
+              </button>
+            )}
+          </div>
+        )}
 
         {/* Change email */}
         {!showEmail ? (
@@ -194,8 +221,7 @@ export default function SettingsPage() {
       </Card>
 
       {/* Privacy / Data */}
-      <Card>
-        <h3 style={{ fontSize: 14, fontWeight: 700, color: 'var(--text3)', textTransform: 'uppercase', letterSpacing: '.05em', marginBottom: 8 }}>{t.account.privacy}</h3>
+      <Card style={cardStyle} title={t.account.privacy}>
         <button onClick={downloadData} className="btn-ghost" style={{ fontSize: 14 }}>
           <Download size={15} /> {t.account.downloadData}
         </button>

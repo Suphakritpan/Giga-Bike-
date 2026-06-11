@@ -137,15 +137,76 @@ test.describe('Login API — input validation (custom auth)', () => {
 })
 
 test.describe('Deprecated endpoint behaviour', () => {
-  test('GET /api/orders/[id] → 4xx/5xx, no order data exposed', async ({ request }) => {
+  test('GET /api/orders/[id] → strict 410, no order data exposed', async ({ request }) => {
     const res = await request.get('/api/orders/GGB-ANYTHINGHERE')
-    // Must not return 200 with order data
+    // Public order lookup by id alone is permanently gone (use OTP flow)
+    expect(res.status()).toBe(410)
     const body = await res.json().catch(() => ({}))
     expect(body).not.toHaveProperty('items')
     expect(body).not.toHaveProperty('recipient_name')
     expect(body).not.toHaveProperty('contact_email')
-    // Latest code returns 410; older server might return 404/500 — all acceptable
-    expect([404, 410, 500]).toContain(res.status())
+  })
+})
+
+test.describe('Account API — every endpoint requires a session (401 sweep)', () => {
+  // Service-role queries bypass RLS, so the auth guard is the only wall.
+  // Every /api/account route must reject anonymous requests.
+  const GETS = [
+    '/api/account/profile',
+    '/api/account/addresses',
+    '/api/account/wishlist',
+    '/api/account/orders',
+    '/api/account/orders/GGB-TEST',
+    '/api/account/reviews',
+    '/api/account/messages',
+    '/api/account/tickets',
+    '/api/account/tickets/00000000-0000-0000-0000-000000000000',
+    '/api/account/login-events',
+    '/api/account/export',
+  ]
+  for (const path of GETS) {
+    test(`GET ${path} → 401 without session`, async ({ request }) => {
+      const res = await request.get(path)
+      expect(res.status()).toBe(401)
+    })
+  }
+
+  const POSTS = [
+    '/api/account/addresses',
+    '/api/account/wishlist',
+    '/api/account/tickets',
+    '/api/account/tax-invoice',
+    '/api/account/change-email',
+    '/api/account/avatar',
+    '/api/account/delete',
+    '/api/auth/logout-all',
+    '/api/auth/send-verification',
+  ]
+  for (const path of POSTS) {
+    test(`POST ${path} → 401 without session`, async ({ request }) => {
+      const res = await request.post(path, { data: {} })
+      expect(res.status()).toBe(401)
+    })
+  }
+})
+
+test.describe('Admin bootstrap — setup-owner is locked down', () => {
+  test('POST /api/admin/setup-owner without valid secret → never 2xx', async ({ request }) => {
+    const res = await request.post('/api/admin/setup-owner', {
+      data: { secret: 'definitely-wrong', email: 'x@example.com' },
+    })
+    // 403 (bad secret/disabled), 410 (owner already exists), 429 (rate limited)
+    expect([403, 410, 429]).toContain(res.status())
+  })
+})
+
+test.describe('CSRF — cross-origin writes are rejected', () => {
+  test('POST /api/auth/login with foreign Origin → 403', async ({ request }) => {
+    const res = await request.post('/api/auth/login', {
+      headers: { Origin: 'https://evil.example.com' },
+      data: { email: 'a@b.com', password: 'xxxxxxxx' },
+    })
+    expect(res.status()).toBe(403)
   })
 })
 

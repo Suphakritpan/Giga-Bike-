@@ -75,9 +75,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <AuthProvider>
               <WishlistProvider>
                 <CartProvider>
+                  <a href="#main-content" className="skip-link">ข้ามไปยังเนื้อหา</a>
                   <PageLoader />
                   <Navbar />
-                  <main style={{ minHeight: '100vh' }}>
+                  <main id="main-content" style={{ minHeight: '100vh' }}>
                     {children}
                   </main>
                   <Footer />

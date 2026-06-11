@@ -4,6 +4,9 @@ import { requireUser } from '@/lib/auth/require-user'
 
 // Returns the user's orders: those linked by user_id PLUS any guest orders
 // placed with the account's email (so pre-account purchases still show up).
+//
+// SECURITY: the email merge requires a VERIFIED email — otherwise anyone
+// could register with someone else's address and read their guest orders.
 export async function GET() {
   const { user, error } = await requireUser()
   if (error) return error
@@ -13,9 +16,10 @@ export async function GET() {
   const svc = createServiceClient()
   const { data: byUser } = await svc.from('orders').select(cols).eq('user_id', user.id)
 
-  // email-matched guest orders (pre-account purchases)
+  // email-matched guest orders — verified email only
+  const emailVerified = !!user.email_verified_at
   let byEmail: Record<string, unknown>[] = []
-  if (user.email) {
+  if (user.email && emailVerified) {
     const { data } = await svc.from('orders').select(cols)
       .eq('contact_email', user.email).is('user_id', null)
     byEmail = data ?? []
@@ -27,5 +31,6 @@ export async function GET() {
   const orders = [...map.values()].sort((a, b) =>
     new Date(b.created_at as string).getTime() - new Date(a.created_at as string).getTime())
 
-  return NextResponse.json({ orders })
+  // email_merge tells the UI why guest orders may be missing
+  return NextResponse.json({ orders, email_merge: emailVerified ? 'included' : 'requires_verification' })
 }
