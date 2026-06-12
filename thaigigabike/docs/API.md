@@ -274,7 +274,10 @@ reset token ใช้ครั้งเดียว หมดอายุ 30 น
 
 migration ตามลำดับ: `supabase/setup.sql` → `supabase/custom-auth.sql` → `supabase/custom-auth-phase2.sql`
 
-migration ตามลำดับ: `setup.sql` → `custom-auth.sql` → `custom-auth-phase2.sql` → `custom-auth-phase3.sql`
+migration ตามลำดับ: `setup.sql` → `custom-auth.sql` → `custom-auth-phase2.sql` → `custom-auth-phase3.sql` → `custom-auth-phase4-hardening.sql`
+(`schema.sql` เป็นไฟล์ยุคแรก — ถูกแทนด้วย setup.sql แล้ว อย่ารัน · `products-seed.sql` = seed สินค้า 818 รายการ)
+
+> สถานะ DB จริง ตรวจเมื่อ 2026-06-12: phase 1-3 รันครบแล้ว (FK ชี้ public.users, email_verified_at มี) — เหลือรัน phase4
 
 | ตาราง | เก็บอะไร |
 |---|---|
