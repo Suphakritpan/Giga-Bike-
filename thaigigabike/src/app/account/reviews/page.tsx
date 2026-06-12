@@ -2,6 +2,7 @@
 import { useEffect, useState, useCallback } from 'react'
 import { Star, Trash2, Pencil, Check, X } from 'lucide-react'
 import { useLang } from '@/lib/lang'
+import { PageHeader, SkeletonList, EmptyState } from '@/components/ui'
 
 type Review = {
   id: string; product_id: string | null; rating: number; comment: string | null
@@ -47,14 +48,11 @@ export default function MyReviewsPage() {
 
   return (
     <div>
-      <h1 style={{ fontSize: 26, fontWeight: 800, marginBottom: 20 }}>{t.account.reviews}</h1>
+      <PageHeader title={t.account.reviews} />
       {loading ? (
-        <div style={{ color: 'var(--text3)', padding: 40, textAlign: 'center' }}>...</div>
+        <SkeletonList rows={3} height={110} />
       ) : reviews.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
-          <Star size={40} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
-          {t.account.empty}
-        </div>
+        <EmptyState icon={<Star size={40} />} title={t.account.empty} />
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {reviews.map(r => {

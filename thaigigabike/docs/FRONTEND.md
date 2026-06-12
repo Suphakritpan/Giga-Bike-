@@ -64,7 +64,12 @@ import { Button, Field, Card, Toggle, Spinner, Skeleton, SkeletonList, EmptyStat
 | `PageHeader` | h1 มาตรฐานของทุกหน้า account/admin (+`subtitle`, `actions`) | `<PageHeader title={t.account.orders} />` |
 
 **กติกา:** ห้ามเขียน inline `@keyframes`, กล่องการ์ด, หรือ h1 fontSize เองอีก — ใช้ kit
-หน้าตัวอย่างที่ refactor แล้ว: `account/layout.tsx`, `account/profile`, `account/settings`, `account/wishlist`
+
+**Migrate แล้วทั้ง account section** (ทุกหน้าใช้ PageHeader + SkeletonList + EmptyState):
+layout, dashboard, orders (+detail), addresses, wishlist, reviews, messages, tickets, history, profile, settings
+
+**`VerifyEmailBanner`** (`components/account/`) — แบนเนอร์เตือนยืนยันอีเมล แสดงอัตโนมัติเมื่อ
+`user.email_verified_at` เป็น null (ใช้ใน dashboard, orders, messages) — render เป็น null เมื่อยืนยันแล้ว
 
 ## 4. มาตรฐานสร้างหน้าใหม่ (checklist)
 
@@ -97,6 +102,6 @@ Flow: login → `POST /api/auth/login` → `refreshUser()` → `router.push(next
 ## 7. สิ่งที่รู้ไว้ / หนี้ทางเทคนิค
 
 - ฐาน font-size 24px ใน globals.css ใหญ่กว่ามาตรฐาน — หน้าเก่าชดเชยด้วย inline fontSize; ห้ามแก้ฐานโดยไม่ไล่ตรวจทุกหน้า
-- หน้า storefront เก่า (products, checkout, ฯลฯ) ยังเป็น inline style — เวลาแตะไฟล์ไหน ให้ migrate มาใช้ UI kit ไปด้วย
+- account section migrate เข้า kit ครบแล้ว; หน้า storefront (products, checkout, cart, ฯลฯ) ยังเป็น inline style — เวลาแตะไฟล์ไหน ให้ migrate มาใช้ UI kit ไปด้วย
 - ยังไม่มี Toast system — feedback ใช้ inline message; `window.confirm` ยังใช้ใน 2-3 จุด
 - รูปใช้ `<img>` ธรรมดา (ไม่ใช่ next/image) — ตั้งใจ เพราะรูป legacy หลากหลายขนาด

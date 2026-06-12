@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { MapPin, Plus, Star, Trash2, Edit2, X, Check } from 'lucide-react'
 import { useLang } from '@/lib/lang'
+import { PageHeader, SkeletonList, EmptyState, Button } from '@/components/ui'
 
 type Address = {
   id: string; label: string; recipient_name: string; phone: string
@@ -38,12 +39,14 @@ export default function AddressesPage() {
 
   return (
     <div>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-        <h1 style={{ fontSize: 26, fontWeight: 800 }}>{t.account.addresses}</h1>
-        <button className="btn-primary" style={{ fontSize: 15, padding: '8px 16px' }} onClick={() => { setEditing(null); setShowForm(true) }}>
-          <Plus size={15} /> {t.account.addAddress}
-        </button>
-      </div>
+      <PageHeader
+        title={t.account.addresses}
+        actions={
+          <Button style={{ padding: '8px 16px' }} onClick={() => { setEditing(null); setShowForm(true) }}>
+            <Plus size={15} /> {t.account.addAddress}
+          </Button>
+        }
+      />
 
       {showForm && (
         <AddressForm
@@ -54,12 +57,9 @@ export default function AddressesPage() {
       )}
 
       {loading ? (
-        <div style={{ color: 'var(--text3)', padding: 40, textAlign: 'center' }}>...</div>
+        <SkeletonList rows={2} height={140} />
       ) : addresses.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
-          <MapPin size={40} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
-          {t.account.empty}
-        </div>
+        <EmptyState icon={<MapPin size={40} />} title={t.account.empty} />
       ) : (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 12 }}>
           {addresses.map(a => (

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Package, Heart, Star, MessageSquare, ChevronRight } from 'lucide-react'
 import { useAuth } from '@/lib/auth/AuthContext'
 import { useLang } from '@/lib/lang'
+import { VerifyEmailBanner } from '@/components/account/VerifyEmailBanner'
 
 export default function AccountDashboard() {
   const { user, profile } = useAuth()
@@ -42,6 +43,8 @@ export default function AccountDashboard() {
         <h1 style={{ fontSize: 28, fontWeight: 800 }}>{t.account.greeting}, {displayName} 👋</h1>
         {memberSince && <p style={{ fontSize: 14, color: 'var(--text3)', marginTop: 4 }}>{t.account.memberSince} {memberSince}</p>}
       </div>
+
+      <VerifyEmailBanner />
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: 12 }}>
         {cards.map(c => (

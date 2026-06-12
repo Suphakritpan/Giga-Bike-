@@ -6,6 +6,7 @@ import { useHistory } from '@/lib/recentlyViewed'
 import { getProductById, bikeModels, categories, products } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
 import type { Product } from '@/data/products'
+import { EmptyState } from '@/components/ui'
 
 export default function HistoryPage() {
   const { t, locale } = useLang()
@@ -44,10 +45,11 @@ export default function HistoryPage() {
       </div>
 
       {empty ? (
-        <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
-          <Clock size={40} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
-          {t.account.empty}
-        </div>
+        <EmptyState
+          icon={<Clock size={40} />}
+          title={t.account.empty}
+          action={<Link href="/products" className="btn-primary" style={{ fontSize: 15 }}>{locale === 'th' ? 'เลือกซื้อสินค้า' : 'Browse products'}</Link>}
+        />
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
           {/* Recent searches + filters */}

@@ -2,6 +2,7 @@
 import { useEffect, useState, useCallback } from 'react'
 import { LifeBuoy, Plus, X, Check, ChevronDown, ChevronUp, Send, Camera, Loader, Star, CheckCircle } from 'lucide-react'
 import { useLang } from '@/lib/lang'
+import { PageHeader, SkeletonList, EmptyState, Button } from '@/components/ui'
 
 type Ticket = {
   id: string; topic: string; order_id: string | null; subject: string; body: string
@@ -40,22 +41,21 @@ export default function TicketsPage() {
 
   return (
     <div>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-        <h1 style={{ fontSize: 26, fontWeight: 800 }}>{t.account.tickets}</h1>
-        <button className="btn-primary" style={{ fontSize: 15, padding: '8px 16px' }} onClick={() => setShowForm(true)}>
-          <Plus size={15} /> {locale === 'th' ? 'เปิด Ticket' : 'New ticket'}
-        </button>
-      </div>
+      <PageHeader
+        title={t.account.tickets}
+        actions={
+          <Button style={{ padding: '8px 16px' }} onClick={() => setShowForm(true)}>
+            <Plus size={15} /> {locale === 'th' ? 'เปิด Ticket' : 'New ticket'}
+          </Button>
+        }
+      />
 
       {showForm && <TicketForm onClose={() => setShowForm(false)} onSaved={() => { setShowForm(false); load() }} />}
 
       {loading ? (
-        <div style={{ color: 'var(--text3)', padding: 40, textAlign: 'center' }}>...</div>
+        <SkeletonList rows={3} height={110} />
       ) : tickets.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
-          <LifeBuoy size={40} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
-          {t.account.empty}
-        </div>
+        <EmptyState icon={<LifeBuoy size={40} />} title={t.account.empty} />
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {tickets.map(tk => {

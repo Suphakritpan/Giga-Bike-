@@ -6,6 +6,7 @@ import { ChevronLeft, Printer, FileText, XCircle, RotateCcw, Truck } from 'lucid
 import { useLang } from '@/lib/lang'
 import { useCart } from '@/lib/cart'
 import { getProductById } from '@/data/products'
+import { SkeletonList, EmptyState } from '@/components/ui'
 
 type OrderItem = { productId: string; code: string; name: string; nameTh: string; price: number; quantity: number; color: string }
 type Order = {
@@ -49,8 +50,15 @@ export default function OrderDetailPage() {
     alert(locale === 'th' ? 'เพิ่มลงตะกร้าแล้ว' : 'Added to cart')
   }
 
-  if (loading) return <div style={{ color: 'var(--text3)', padding: 40, textAlign: 'center' }}>...</div>
-  if (!order) return <div style={{ color: 'var(--text3)', padding: 40, textAlign: 'center' }}>{t.account.empty}</div>
+  if (loading) return <SkeletonList rows={3} height={120} />
+  if (!order) {
+    return (
+      <EmptyState
+        title={t.account.empty}
+        action={<Link href="/account/orders" className="btn-ghost" style={{ fontSize: 14 }}>← {t.account.orders}</Link>}
+      />
+    )
+  }
 
   const canCancel = ['pending', 'paid'].includes(order.status)
 

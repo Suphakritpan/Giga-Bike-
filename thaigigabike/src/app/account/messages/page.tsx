@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { MessageSquare, Plus, ChevronDown, ChevronUp, Send, Camera, Loader, X } from 'lucide-react'
 import { useLang } from '@/lib/lang'
+import { PageHeader, SkeletonList, EmptyState } from '@/components/ui'
+import { VerifyEmailBanner } from '@/components/account/VerifyEmailBanner'
 
 type Msg = { id: string; subject: string | null; body: string; product_code: string | null; status: 'new' | 'replied' | 'closed'; created_at: string }
 type Reply = { id: string; author: 'customer' | 'shop'; body: string; images: string[]; created_at: string }
@@ -28,20 +30,20 @@ export default function MyMessagesPage() {
 
   return (
     <div>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 20 }}>
-        <h1 style={{ fontSize: 26, fontWeight: 800 }}>{t.account.messages}</h1>
-        <Link href="/messages" className="btn-primary" style={{ fontSize: 15, padding: '8px 16px' }}>
-          <Plus size={15} /> {locale === 'th' ? 'ส่งข้อความ' : 'New message'}
-        </Link>
-      </div>
+      <PageHeader
+        title={t.account.messages}
+        actions={
+          <Link href="/messages" className="btn-primary" style={{ fontSize: 15, padding: '8px 16px' }}>
+            <Plus size={15} /> {locale === 'th' ? 'ส่งข้อความ' : 'New message'}
+          </Link>
+        }
+      />
+      <VerifyEmailBanner />
 
       {loading ? (
-        <div style={{ color: 'var(--text3)', padding: 40, textAlign: 'center' }}>...</div>
+        <SkeletonList rows={3} height={110} />
       ) : messages.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
-          <MessageSquare size={40} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
-          {t.account.empty}
-        </div>
+        <EmptyState icon={<MessageSquare size={40} />} title={t.account.empty} />
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {messages.map(m => {

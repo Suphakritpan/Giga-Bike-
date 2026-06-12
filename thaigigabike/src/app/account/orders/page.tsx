@@ -5,6 +5,8 @@ import { Package, Truck, CheckCircle, XCircle, Clock, ChevronRight, RotateCcw } 
 import { useLang } from '@/lib/lang'
 import { useCart } from '@/lib/cart'
 import { getProductById } from '@/data/products'
+import { PageHeader, SkeletonList, EmptyState } from '@/components/ui'
+import { VerifyEmailBanner } from '@/components/account/VerifyEmailBanner'
 
 type OrderStatus = 'pending' | 'paid' | 'shipping' | 'delivered' | 'cancelled'
 type OrderItem = { productId: string; code: string; name: string; nameTh: string; price: number; quantity: number; color: string }
@@ -49,15 +51,17 @@ export default function AccountOrdersPage() {
 
   return (
     <div>
-      <h1 style={{ fontSize: 26, fontWeight: 800, marginBottom: 20 }}>{t.account.orders}</h1>
+      <PageHeader title={t.account.orders} />
+      <VerifyEmailBanner />
 
       {loading ? (
-        <div style={{ color: 'var(--text3)', padding: 40, textAlign: 'center' }}>...</div>
+        <SkeletonList rows={3} height={120} />
       ) : orders.length === 0 ? (
-        <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
-          <Package size={40} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
-          {t.account.empty}
-        </div>
+        <EmptyState
+          icon={<Package size={40} />}
+          title={t.account.empty}
+          action={<Link href="/products" className="btn-primary" style={{ fontSize: 15 }}>{locale === 'th' ? 'เลือกซื้อสินค้า' : 'Browse products'}</Link>}
+        />
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
           {orders.map(o => (

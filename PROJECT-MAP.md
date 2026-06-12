@@ -19,6 +19,7 @@
 - ลบบัญชี (ยืนยันรหัสผ่าน) + ดาวน์โหลดข้อมูล (PDPA export JSON) ✅
 
 ### Account area (`/account/*` — sidebar layout)
+> ทุกหน้าใช้ UI kit (`components/ui`): PageHeader + SkeletonList + EmptyState + VerifyEmailBanner — ดู `docs/FRONTEND.md`
 | Page | ทำอะไร |
 |------|--------|
 | `/account` | dashboard: greeting, member since, นับ order/wishlist/review/message |
