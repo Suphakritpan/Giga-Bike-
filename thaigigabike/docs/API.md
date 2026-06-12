@@ -94,6 +94,7 @@ await recordAttempt({ kind: 'login', email, ipHash, success })
 | `register` | IP | 5 | 1 ชั่วโมง |
 | `reset` | IP | 5 | 15 นาที |
 | `verify` (ส่งลิงก์ยืนยันอีเมล) | email | 3 | 15 นาที |
+| `password` (เปลี่ยนรหัสผ่าน — นับเฉพาะ fail) | email | 5 | 15 นาที |
 | `setup` (setup-owner) | IP | 5 | 1 ชั่วโมง |
 | `order` (POST /api/orders) | IP | 10 | 1 ชั่วโมง |
 | `message` (contact form) | IP | 10 | 1 ชั่วโมง |
@@ -192,9 +193,10 @@ reset token ใช้ครั้งเดียว หมดอายุ 30 น
 
 | Method + Path | ใช้ทำอะไร |
 |---|---|
-| `GET/PATCH /api/account/profile` | โปรไฟล์ (สร้าง row อัตโนมัติถ้ายังไม่มี) |
+| `GET/PATCH /api/account/profile` | โปรไฟล์ (สร้าง row อัตโนมัติถ้ายังไม่มี) — PATCH รับ `full_name, phone, line_id, avatar_url, locale, notify_*` (`line_id` เก็บที่ตาราง users) |
 | `POST /api/account/avatar` | อัปโหลดรูป (multipart `file`; JPG/PNG/WebP ≤2MB) → `{ avatar_url }` |
-| `POST /api/account/change-email` | `{ new_email, password }` — ต้องยืนยันรหัสผ่าน |
+| `POST /api/account/change-email` | `{ new_email, password }` — ต้องยืนยันรหัสผ่าน; reset เป็น unverified |
+| `POST /api/account/change-password` | `{ current_password, new_password (≥8) }` — revoke ทุก session อื่น (เครื่องนี้ยังล็อกอินอยู่); rate limit 5 fail/15น. |
 | `GET/POST /api/account/addresses` + `PATCH/DELETE /[addressId]` | สมุดที่อยู่ |
 | `GET/POST/PATCH/DELETE /api/account/wishlist` | สินค้าที่ถูกใจ (+ตั้งแจ้งเตือน) |
 | `GET /api/account/orders` + `GET /[orderId]` + `POST /[orderId]/cancel` | ออเดอร์ของฉัน (รวม guest order ที่อีเมลตรง) |

@@ -71,6 +71,10 @@ layout, dashboard, orders (+detail), addresses, wishlist, reviews, messages, tic
 **`VerifyEmailBanner`** (`components/account/`) — แบนเนอร์เตือนยืนยันอีเมล แสดงอัตโนมัติเมื่อ
 `user.email_verified_at` เป็น null (ใช้ใน dashboard, orders, messages) — render เป็น null เมื่อยืนยันแล้ว
 
+**หน้าโปรไฟล์/ความปลอดภัย:**
+- `/account/profile` — ชื่อ, เบอร์, **LINE ID** (เก็บที่ users table ผ่าน profile PATCH), avatar, อีเมล (read-only + badge สถานะยืนยัน ลิงก์ไป settings)
+- `/account/settings` Security card — ยืนยันอีเมล, เปลี่ยนอีเมล (ยืนยันรหัสผ่าน), **เปลี่ยนรหัสผ่าน** (`/api/account/change-password` — revoke session อื่นทั้งหมด), ประวัติล็อกอิน, ออกจากระบบทุกอุปกรณ์
+
 ## 4. มาตรฐานสร้างหน้าใหม่ (checklist)
 
 1. Page wrapper: `<div className="container section">` (storefront) หรือใช้ layout ของกลุ่ม (account/admin มีอยู่แล้ว)

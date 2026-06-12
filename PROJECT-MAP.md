@@ -53,7 +53,8 @@ profile (GET/PATCH) · addresses (GET/POST + [id] PATCH/DELETE) · wishlist (GET
 - **Reviews**: inline edit UI (แก้แล้ว reset เป็น pending)
 - **Messages**: reply thread (`message_replies`) + แนบรูป, re-open ตอนลูกค้าตอบ
 - **Tickets**: reply thread (`ticket_replies`) + แนบรูป + **ปิด ticket** + **ให้คะแนน** (rating)
-- **Security**: เปลี่ยน email (ยืนยันรหัสผ่าน — `/api/account/change-email`), **login history** (`login_events`), **logout ทุกอุปกรณ์** (`/api/auth/logout-all`)
+- **Security**: เปลี่ยน email (ยืนยันรหัสผ่าน — `/api/account/change-email`), **เปลี่ยนรหัสผ่าน** (`/api/account/change-password` — revoke session อื่น), **login history** (`login_events`), **logout ทุกอุปกรณ์** (`/api/auth/logout-all`)
+- **Profile**: ชื่อ/เบอร์/**LINE ID**/avatar + badge สถานะยืนยันอีเมล
 
 ### Phase 3.5: Admin Customer Care ✅
 ปิดช่องว่างฝั่ง admin — ไม่ต้องตอบผ่าน Supabase dashboard อีกต่อไป.

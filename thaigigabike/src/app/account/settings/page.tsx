@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { Sun, Moon, Globe, Bell, Download, Trash2, AlertTriangle, Check, Shield, Mail, LogOut, Monitor, MailCheck, MailWarning } from 'lucide-react'
+import { Sun, Moon, Globe, Bell, Download, Trash2, AlertTriangle, Check, Shield, Mail, LogOut, Monitor, MailCheck, MailWarning, KeyRound } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 import { useTheme } from '@/lib/theme'
 import { useAuth } from '@/lib/auth/AuthContext'
@@ -23,6 +23,13 @@ export default function SettingsPage() {
   const [emailErr, setEmailErr] = useState('')
   const [verifySent, setVerifySent] = useState(false)
   const [verifySending, setVerifySending] = useState(false)
+  const [showPw, setShowPw] = useState(false)
+  const [pwCurrent, setPwCurrent] = useState('')
+  const [pwNew, setPwNew] = useState('')
+  const [pwConfirm, setPwConfirm] = useState('')
+  const [pwMsg, setPwMsg] = useState('')
+  const [pwErr, setPwErr] = useState('')
+  const [pwSaving, setPwSaving] = useState(false)
   const [showEmail, setShowEmail] = useState(false)
   const [loginEvents, setLoginEvents] = useState<LoginEvent[]>([])
   const [showHistory, setShowHistory] = useState(false)
@@ -72,6 +79,27 @@ export default function SettingsPage() {
     await signOut()
     router.push('/login')
     router.refresh()
+  }
+
+  const changePassword = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setPwMsg('')
+    setPwErr('')
+    if (pwNew.length < 8) { setPwErr(t.auth.pwMin); return }
+    if (pwNew !== pwConfirm) { setPwErr(t.auth.pwMismatch); return }
+    setPwSaving(true)
+    const res = await fetch('/api/account/change-password', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ current_password: pwCurrent, new_password: pwNew }),
+    }).catch(() => null)
+    setPwSaving(false)
+    const d = await res?.json().catch(() => ({}))
+    if (!res?.ok) {
+      setPwErr(d?.error || t.auth.genericError)
+      return
+    }
+    setPwMsg(locale === 'th' ? 'เปลี่ยนรหัสผ่านแล้ว — อุปกรณ์อื่นถูกออกจากระบบ' : 'Password changed — other devices were signed out')
+    setPwCurrent(''); setPwNew(''); setPwConfirm('')
   }
 
   const sendVerification = async () => {
@@ -189,6 +217,30 @@ export default function SettingsPage() {
             <div style={{ display: 'flex', gap: 8 }}>
               <button type="submit" className="btn-primary" style={{ fontSize: 14, padding: '8px 16px' }}>{locale === 'th' ? 'เปลี่ยนอีเมล' : 'Change email'}</button>
               <button type="button" onClick={() => { setShowEmail(false); setEmailMsg(''); setEmailErr('') }} className="btn-ghost" style={{ fontSize: 14 }}>{t.account.cancel}</button>
+            </div>
+          </form>
+        )}
+
+        {/* Change password */}
+        {!showPw ? (
+          <button onClick={() => setShowPw(true)} className="btn-ghost" style={{ fontSize: 14, marginBottom: 10, display: 'block' }}>
+            <KeyRound size={15} /> {locale === 'th' ? 'เปลี่ยนรหัสผ่าน' : 'Change password'}
+          </button>
+        ) : (
+          <form onSubmit={changePassword} style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 12, maxWidth: 360 }}>
+            <input type="password" value={pwCurrent} onChange={e => setPwCurrent(e.target.value)} placeholder={locale === 'th' ? 'รหัสผ่านปัจจุบัน' : 'Current password'} required autoComplete="current-password"
+              style={{ padding: '10px 14px', fontSize: 15, border: '1px solid var(--border2)', borderRadius: 9, background: 'var(--bg3)', color: 'var(--text)', outline: 'none' }} />
+            <input type="password" value={pwNew} onChange={e => setPwNew(e.target.value)} placeholder={locale === 'th' ? 'รหัสผ่านใหม่ (อย่างน้อย 8 ตัวอักษร)' : 'New password (min 8 chars)'} required autoComplete="new-password"
+              style={{ padding: '10px 14px', fontSize: 15, border: '1px solid var(--border2)', borderRadius: 9, background: 'var(--bg3)', color: 'var(--text)', outline: 'none' }} />
+            <input type="password" value={pwConfirm} onChange={e => setPwConfirm(e.target.value)} placeholder={locale === 'th' ? 'ยืนยันรหัสผ่านใหม่' : 'Confirm new password'} required autoComplete="new-password"
+              style={{ padding: '10px 14px', fontSize: 15, border: '1px solid var(--border2)', borderRadius: 9, background: 'var(--bg3)', color: 'var(--text)', outline: 'none' }} />
+            {pwMsg && <span style={{ fontSize: 13, color: 'var(--green)' }}>{pwMsg}</span>}
+            {pwErr && <span style={{ fontSize: 13, color: 'var(--red)' }}>{pwErr}</span>}
+            <div style={{ display: 'flex', gap: 8 }}>
+              <button type="submit" disabled={pwSaving} className="btn-primary" style={{ fontSize: 14, padding: '8px 16px', opacity: pwSaving ? 0.7 : 1 }}>
+                {pwSaving ? '...' : (locale === 'th' ? 'เปลี่ยนรหัสผ่าน' : 'Change password')}
+              </button>
+              <button type="button" onClick={() => { setShowPw(false); setPwMsg(''); setPwErr(''); setPwCurrent(''); setPwNew(''); setPwConfirm('') }} className="btn-ghost" style={{ fontSize: 14 }}>{t.account.cancel}</button>
             </div>
           </form>
         )}
