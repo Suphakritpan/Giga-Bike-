@@ -1,8 +1,24 @@
 'use client'
 import Link from 'next/link'
-import { Trash2, Plus, Minus, ShoppingCart, ChevronRight } from 'lucide-react'
+import { useState } from 'react'
+import { Trash2, Plus, Minus, ShoppingCart, ChevronRight, ImageOff } from 'lucide-react'
 import { useCart } from '@/lib/cart'
 import { useLang } from '@/lib/lang'
+
+function ItemThumb({ src, alt, productId }: { src?: string; alt: string; productId: string }) {
+  const [err, setErr] = useState(false)
+  return (
+    <Link href={`/products/${productId}`} style={{
+      width: 60, height: 52, background: 'var(--bg3)', border: '0.5px solid var(--border)',
+      borderRadius: 8, flexShrink: 0, overflow: 'hidden',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+    }}>
+      {src && !err
+        ? <img src={src} alt={alt} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={() => setErr(true)} />
+        : <ImageOff size={16} color="var(--text3)" />}
+    </Link>
+  )
+}
 
 export default function CartPage() {
   const { items, remove, updateQty, totalPrice } = useCart()
@@ -33,8 +49,8 @@ export default function CartPage() {
               const name = locale === 'th' ? item.product.nameTh : item.product.name
               return (
                 <div key={`${item.product.id}-${item.color}`} style={{ display: 'flex', gap: 16, padding: 16, background: 'var(--bg2)', alignItems: 'center' }}>
-                  {/* Image placeholder */}
-                  <div style={{ width: 60, height: 52, background: 'var(--bg3)', border: '0.5px solid var(--border)', borderRadius: 8, flexShrink: 0 }} />
+                  {/* Product image — links back to the product page */}
+                  <ItemThumb src={item.product.images?.[0]} alt={name} productId={item.product.id} />
 
                   {/* Info */}
                   <div style={{ flex: 1, minWidth: 0 }}>
@@ -45,13 +61,18 @@ export default function CartPage() {
                     </div>
                   </div>
 
-                  {/* Qty */}
+                  {/* Qty — cart context clamps to stockCount */}
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-                    <button onClick={() => updateQty(item.product.id, item.color, item.quantity - 1)} style={{ width: 26, height: 26, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                    <button onClick={() => updateQty(item.product.id, item.color, item.quantity - 1)}
+                      aria-label={locale === 'th' ? `ลดจำนวน ${name}` : `Decrease quantity of ${name}`}
+                      style={{ width: 26, height: 26, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                       <Minus size={12} />
                     </button>
-                    <span style={{ fontSize: 17, fontWeight: 500, width: 24, textAlign: 'center' }}>{item.quantity}</span>
-                    <button onClick={() => updateQty(item.product.id, item.color, item.quantity + 1)} style={{ width: 26, height: 26, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+                    <span style={{ fontSize: 17, fontWeight: 500, width: 24, textAlign: 'center' }} aria-live="polite">{item.quantity}</span>
+                    <button onClick={() => updateQty(item.product.id, item.color, item.quantity + 1)}
+                      disabled={item.quantity >= item.product.stockCount}
+                      aria-label={locale === 'th' ? `เพิ่มจำนวน ${name}` : `Increase quantity of ${name}`}
+                      style={{ width: 26, height: 26, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: item.quantity >= item.product.stockCount ? 'not-allowed' : 'pointer', opacity: item.quantity >= item.product.stockCount ? 0.4 : 1 }}>
                       <Plus size={12} />
                     </button>
                   </div>
@@ -62,7 +83,9 @@ export default function CartPage() {
                   </div>
 
                   {/* Remove */}
-                  <button onClick={() => remove(item.product.id, item.color)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text3)', display: 'flex', padding: 4, transition: 'color .15s', flexShrink: 0 }}
+                  <button onClick={() => remove(item.product.id, item.color)}
+                    aria-label={locale === 'th' ? `ลบ ${name} ออกจากตะกร้า` : `Remove ${name} from cart`}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text3)', display: 'flex', padding: 4, transition: 'color .15s', flexShrink: 0 }}
                     onMouseEnter={e => (e.currentTarget.style.color = 'var(--red)') }
                     onMouseLeave={e => (e.currentTarget.style.color = 'var(--text3)')}>
                     <Trash2 size={16} />

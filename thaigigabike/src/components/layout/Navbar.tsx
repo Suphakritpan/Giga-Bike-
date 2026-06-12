@@ -186,27 +186,25 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Cart */}
-          <Link href="/cart" style={{ textDecoration: 'none' }}>
-            <button style={{
-              display: 'flex', alignItems: 'center', gap: 7,
-              background: 'var(--green)', color: '#fff',
-              border: 'none', borderRadius: 8,
-              padding: '8px 16px', fontSize: 18, fontWeight: 700,
-              cursor: 'pointer', fontFamily: 'var(--font-display)',
-              transition: 'background .15s',
-            }}>
-              <ShoppingCart size={17} />
-              {t.nav.cart}
-              {totalItems > 0 && (
-                <span style={{
-                  background: '#fff', color: 'var(--green)',
-                  borderRadius: 999, padding: '1px 8px', fontSize: 14, fontWeight: 800,
-                }}>
-                  {totalItems}
-                </span>
-              )}
-            </button>
+          {/* Cart — single anchor styled as button (no nested interactive elements) */}
+          <Link href="/cart" style={{
+            display: 'flex', alignItems: 'center', gap: 7,
+            background: 'var(--green)', color: '#fff',
+            border: 'none', borderRadius: 8,
+            padding: '8px 16px', fontSize: 18, fontWeight: 700,
+            cursor: 'pointer', fontFamily: 'var(--font-display)',
+            transition: 'background .15s', textDecoration: 'none',
+          }}>
+            <ShoppingCart size={17} />
+            {t.nav.cart}
+            {totalItems > 0 && (
+              <span aria-label={locale === 'th' ? `${totalItems} รายการ` : `${totalItems} items`} style={{
+                background: '#fff', color: 'var(--green)',
+                borderRadius: 999, padding: '1px 8px', fontSize: 14, fontWeight: 800,
+              }}>
+                {totalItems}
+              </span>
+            )}
           </Link>
 
           {/* Mobile menu toggle */}

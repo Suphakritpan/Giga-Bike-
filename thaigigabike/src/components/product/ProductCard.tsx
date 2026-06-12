@@ -55,7 +55,7 @@ export function ProductCard({ product }: Props) {
           )}
           {product.featured && (
             <div style={{ position: 'absolute', top: 8, left: 8, background: 'var(--green)', color: '#000', fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 4 }}>
-              แนะนำ
+              {locale === 'th' ? 'แนะนำ' : 'Featured'}
             </div>
           )}
           {/* Wishlist heart */}
@@ -107,6 +107,7 @@ export function ProductCard({ product }: Props) {
             onClick={handleAdd}
             disabled={!product.inStock}
             title={product.colors.length > 1 ? (locale === 'th' ? 'เลือกสี' : 'Choose color') : t.product.addToCart}
+            aria-label={product.colors.length > 1 ? (locale === 'th' ? `เลือกสี ${name}` : `Choose color for ${name}`) : `${t.product.addToCart} ${name}`}
             style={{
               width: 30, height: 30, borderRadius: 7,
               background: product.inStock ? 'var(--green)' : 'var(--bg4)',

@@ -114,6 +114,18 @@ export default function ProductDetailPage() {
   const [lightbox, setLightbox] = useState(false)
   const [imgErrors, setImgErrors] = useState<Record<number, boolean>>({})
 
+  // Keyboard support for the lightbox: Escape closes, arrows navigate
+  useEffect(() => {
+    if (!lightbox) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightbox(false)
+      if (e.key === 'ArrowLeft') setActiveImg(i => (i - 1 + (product?.images?.length ?? 1)) % (product?.images?.length ?? 1))
+      if (e.key === 'ArrowRight') setActiveImg(i => (i + 1) % (product?.images?.length ?? 1))
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [lightbox, product])
+
   // Draft / unpublished products must not be reachable via direct URL.
   if (!product || !product.published) return notFound()
 
@@ -182,19 +194,23 @@ export default function ProductDetailPage() {
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, color: 'var(--text3)' }}>
                   <ImageOff size={48} />
-                  <span style={{ fontSize: 14 }}>ยังไม่มีรูปภาพ</span>
+                  <span style={{ fontSize: 14 }}>{locale === 'th' ? 'ยังไม่มีรูปภาพ' : 'No image yet'}</span>
                 </div>
               )}
 
               {/* Nav arrows */}
               {images.length > 1 && (
                 <>
-                  <button onClick={e => { e.stopPropagation(); prevImg() }} style={{
+                  <button onClick={e => { e.stopPropagation(); prevImg() }}
+                    aria-label={locale === 'th' ? 'รูปก่อนหน้า' : 'Previous image'}
+                    style={{
                     position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)',
                     background: 'rgba(0,0,0,.5)', border: 'none', borderRadius: 8, color: '#fff',
                     cursor: 'pointer', display: 'flex', padding: '6px 4px', zIndex: 1,
                   }}><ChevronLeft size={20} /></button>
-                  <button onClick={e => { e.stopPropagation(); nextImg() }} style={{
+                  <button onClick={e => { e.stopPropagation(); nextImg() }}
+                    aria-label={locale === 'th' ? 'รูปถัดไป' : 'Next image'}
+                    style={{
                     position: 'absolute', right: 10, top: '50%', transform: 'translateY(-50%)',
                     background: 'rgba(0,0,0,.5)', border: 'none', borderRadius: 8, color: '#fff',
                     cursor: 'pointer', display: 'flex', padding: '6px 4px', zIndex: 1,
@@ -216,13 +232,16 @@ export default function ProductDetailPage() {
               <div style={{ display: 'flex', gap: 8, overflowX: 'auto', paddingBottom: 4 }}>
                 {images.map((url, i) => (
                   !imgErrors[i] && (
-                    <button key={i} onClick={() => setActiveImg(i)} style={{
+                    <button key={i} onClick={() => setActiveImg(i)}
+                      aria-label={locale === 'th' ? `ดูรูปที่ ${i + 1}` : `View image ${i + 1}`}
+                      aria-current={activeImg === i ? 'true' : undefined}
+                      style={{
                       width: 64, height: 64, flexShrink: 0, padding: 0,
                       border: `2px solid ${activeImg === i ? 'var(--green)' : 'var(--border2)'}`,
                       borderRadius: 8, overflow: 'hidden', cursor: 'pointer', background: 'var(--bg3)',
                       transition: 'border-color .15s',
                     }}>
-                      <img src={url} alt={`thumb-${i}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      <img src={url} alt={`${name} — ${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         onError={() => setImgErrors(prev => ({ ...prev, [i]: true }))} />
                     </button>
                   )
@@ -266,9 +285,13 @@ export default function ProductDetailPage() {
                     {locale === 'th' ? (t.colors as Record<string, string>)[selectedColor] || selectedColor : selectedColor}
                   </span>
                 </p>
-                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }} role="radiogroup" aria-label={t.product.chooseColor}>
                   {product.colors.map(c => (
-                    <button key={c} onClick={() => setSelectedColor(c)} title={c} style={{
+                    <button key={c} onClick={() => setSelectedColor(c)} title={c}
+                      role="radio"
+                      aria-checked={selectedColor === c}
+                      aria-label={locale === 'th' ? ((t.colors as Record<string, string>)[c] || c) : c}
+                      style={{
                       width: 28, height: 28, borderRadius: '50%',
                       background: colorMap[c] || '#888',
                       border: selectedColor === c ? '2.5px solid var(--green)' : '0.5px solid var(--border2)',
@@ -280,14 +303,19 @@ export default function ProductDetailPage() {
               </div>
             )}
 
-            {/* Quantity */}
+            {/* Quantity — honest clamp at stockCount (cart also enforces it) */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
               <span style={{ fontSize: 14, color: 'var(--text3)' }}>{t.product.quantity}:</span>
-              <button onClick={() => setQty(Math.max(1, qty - 1))} style={{ width: 32, height: 32, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+              <button onClick={() => setQty(Math.max(1, qty - 1))}
+                aria-label={locale === 'th' ? 'ลดจำนวน' : 'Decrease quantity'}
+                style={{ width: 32, height: 32, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                 <Minus size={14} />
               </button>
-              <span style={{ fontSize: 20, fontWeight: 600, width: 36, textAlign: 'center', fontFamily: 'var(--font-display)' }}>{qty}</span>
-              <button onClick={() => setQty(qty + 1)} style={{ width: 32, height: 32, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
+              <span style={{ fontSize: 20, fontWeight: 600, width: 36, textAlign: 'center', fontFamily: 'var(--font-display)' }} aria-live="polite">{qty}</span>
+              <button onClick={() => setQty(Math.min(product.stockCount || 1, qty + 1))}
+                disabled={qty >= (product.stockCount || 1)}
+                aria-label={locale === 'th' ? 'เพิ่มจำนวน' : 'Increase quantity'}
+                style={{ width: 32, height: 32, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: qty >= (product.stockCount || 1) ? 'not-allowed' : 'pointer', opacity: qty >= (product.stockCount || 1) ? 0.4 : 1 }}>
                 <Plus size={14} />
               </button>
               {product.inStock && (
@@ -376,16 +404,20 @@ export default function ProductDetailPage() {
           />
           {images.length > 1 && (
             <>
-              <button onClick={e => { e.stopPropagation(); prevImg() }} style={{ position: 'absolute', left: 20, top: '50%', transform: 'translateY(-50%)', background: 'rgba(255,255,255,.15)', border: 'none', borderRadius: 10, color: '#fff', cursor: 'pointer', display: 'flex', padding: '10px 8px' }}>
+              <button onClick={e => { e.stopPropagation(); prevImg() }}
+                aria-label={locale === 'th' ? 'รูปก่อนหน้า' : 'Previous image'}
+                style={{ position: 'absolute', left: 20, top: '50%', transform: 'translateY(-50%)', background: 'rgba(255,255,255,.15)', border: 'none', borderRadius: 10, color: '#fff', cursor: 'pointer', display: 'flex', padding: '10px 8px' }}>
                 <ChevronLeft size={28} />
               </button>
-              <button onClick={e => { e.stopPropagation(); nextImg() }} style={{ position: 'absolute', right: 20, top: '50%', transform: 'translateY(-50%)', background: 'rgba(255,255,255,.15)', border: 'none', borderRadius: 10, color: '#fff', cursor: 'pointer', display: 'flex', padding: '10px 8px' }}>
+              <button onClick={e => { e.stopPropagation(); nextImg() }}
+                aria-label={locale === 'th' ? 'รูปถัดไป' : 'Next image'}
+                style={{ position: 'absolute', right: 20, top: '50%', transform: 'translateY(-50%)', background: 'rgba(255,255,255,.15)', border: 'none', borderRadius: 10, color: '#fff', cursor: 'pointer', display: 'flex', padding: '10px 8px' }}>
                 <ChevronRight size={28} />
               </button>
             </>
           )}
           <div style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)', color: 'rgba(255,255,255,.6)', fontSize: 14 }}>
-            {activeImg + 1} / {images.length} — คลิกด้านนอกเพื่อปิด
+            {activeImg + 1} / {images.length} — {locale === 'th' ? 'กด Esc หรือคลิกด้านนอกเพื่อปิด' : 'Press Esc or click outside to close'}
           </div>
         </div>
       )}
