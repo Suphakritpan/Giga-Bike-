@@ -1,7 +1,7 @@
 # ThaiGigaBike — แผนที่โปรเจกต์ (Project Map)
 > อัปเดต: 2026-06-11 | Next.js 14 App Router · Supabase (DB+Storage เท่านั้น) · Netlify · Resend
 > Phase 1 ✅ · Phase 2 ✅ · Phase 3 ✅ · **Custom Auth ✅ (แทน Supabase Auth ทั้งหมด)** · Build ✅ 0 error (78 หน้า)
-> 📘 API spec เต็ม: `thaigigabike/docs/API.md` · 🎨 Frontend guide + UI kit: `thaigigabike/docs/FRONTEND.md`
+> 📘 API spec เต็ม: `thaigigabike/docs/API.md` · 🎨 Frontend guide + UI kit: `thaigigabike/docs/FRONTEND.md` · 🏛️ ADR + ความเสี่ยงคงเหลือ: `thaigigabike/docs/DECISIONS.md`
 
 > 🪨 Doc write caveman. Word short. Meaning same. Code block no touch.
 
