@@ -22,7 +22,7 @@ npm run dev                  # http://localhost:3000
 | `npm run build` | production build + typecheck + lint |
 | `npm run test:e2e:api` | security test ฝั่ง API |
 | `npx playwright test tests/cross-user-security.spec.ts` | cross-user isolation test |
-| `npm run build:catalog` | sync แคตตาล็อกสินค้าจาก DB |
+| `npm run build:catalog` | แปลง legacy JSON → `products.generated.ts` + `products-seed.sql` (ใช้เฉพาะตอน import ของเก่า) |
 
 ## เอกสาร (อ่านตามลำดับนี้)
 

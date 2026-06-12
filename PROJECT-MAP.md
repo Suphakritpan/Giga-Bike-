@@ -1,5 +1,5 @@
 # ThaiGigaBike — แผนที่โปรเจกต์ (Project Map)
-> อัปเดต: 2026-06-11 | Next.js 14 App Router · Supabase (DB+Storage เท่านั้น) · Netlify · Resend
+> อัปเดต: 2026-06-12 | Next.js 14 App Router · Supabase (DB+Storage เท่านั้น) · Netlify · Resend
 > Phase 1 ✅ · Phase 2 ✅ · Phase 3 ✅ · **Custom Auth ✅ (แทน Supabase Auth ทั้งหมด)** · Build ✅ 0 error (78 หน้า)
 > 📘 API spec เต็ม: `thaigigabike/docs/API.md` · 🎨 Frontend guide + UI kit: `thaigigabike/docs/FRONTEND.md` · 🏛️ ADR + ความเสี่ยงคงเหลือ: `thaigigabike/docs/DECISIONS.md`
 
@@ -85,26 +85,32 @@ profile (GET/PATCH) · addresses (GET/POST + [id] PATCH/DELETE) · wishlist (GET
 ```
 thaigigabike/
 ├── src/
-│   ├── app/                  ← Next.js App Router (21 page + 25 API route)
-│   │   ├── (storefront)      ← page for customer
+│   ├── middleware.ts         ← กัน /admin/* + /account/* (เช็ค cookie — DB เช็คจริงใน layout)
+│   ├── app/                  ← Next.js App Router (37 page + 57 API route)
+│   │   ├── (storefront)      ← หน้า ลูกค้า + auth (/login /signup ...) + /account/*
 │   │   ├── admin/            ← admin dashboard (auth guard)
-│   │   └── api/              ← REST API (public + admin)
-│   ├── components/           ← UI parts
+│   │   └── api/              ← REST API (public + auth + account + admin)
+│   ├── components/
+│   │   ├── ui/               ← UI kit กลาง (ดูหัวข้อ Components + docs/FRONTEND.md)
 │   │   ├── layout/           ← Navbar, Footer, LineFloatButton, PageLoader
 │   │   ├── product/          ← ProductCard
-│   │   ├── admin/            ← ProductModal
-│   │   └── PromptPayQR.tsx   ← PromptPay QR canvas
-│   ├── data/                 ← static catalog (822 item, legacy import)
-│   └── lib/                  ← cart, i18n, theme, supabase, auth, email, csv, promptpay
-├── public/legacy/            ← รูปจาก legacy site (HTTrack)
+│   │   └── account/ auth/ admin/ ← VerifyEmailBanner · AuthShell · ProductModal
+│   ├── data/                 ← static catalog (818 item, legacy import)
+│   └── lib/                  ← cart, wishlist, i18n, theme, auth, supabase, email ฯลฯ (ดูตาราง Lib)
+├── docs/                     ← API.md · FRONTEND.md · DECISIONS.md
+├── supabase/                 ← setup.sql → custom-auth.sql → products-seed.sql (ดู supabase/README.md)
+├── tests/                    ← Playwright: security + storefront spec
 ├── scripts/                  ← import tool (legacy → JSON → TS)
-├── supabase-setup.sql        ← schema + RLS + storage + Phase 2 table (idempotent)
-└── supabase-products.sql     ← 822 product seed (21K line)
+└── public/legacy/            ← รูปจาก legacy site (HTTrack)
 ```
+
+> `netlify.toml` อยู่ root ของ repo (เหนือ `thaigigabike/`)
 
 ---
 
-## หน้า (Pages / Routes) — 21 หน้า
+## หน้า (Pages / Routes) — 37 หน้า
+
+> ตารางล่าง = storefront + Phase 2 + admin (21 หน้า) · อีก 16 หน้า (auth 4 · `/account/*` 11 · `/wishlist/share`) ดูหัวข้อ Phase 3 ด้านบน
 
 ### Phase 1: Core Commerce
 
@@ -145,7 +151,9 @@ thaigigabike/
 
 ---
 
-## API Routes — 29 endpoint
+## API Routes — 57 route
+
+> ตารางล่างคือกลุ่มหลัก · `/api/account/*` ดูหัวข้อ Phase 3 · สเปกครบทุก endpoint: `docs/API.md`
 
 ### Public (ลูกค้า)
 
@@ -203,16 +211,23 @@ thaigigabike/
 
 ```
 components/
+├── ui/                      ← UI kit กลาง (import '@/components/ui') — สเปก + วิธีใช้: docs/FRONTEND.md
+│   ├── Button / Card / Field / Toggle
+│   ├── PageHeader / EmptyState / Skeleton / Spinner
+│   └── PromptPayQR.tsx      ← PromptPay QR (canvas, dynamic amount)
 ├── layout/
 │   ├── Navbar.tsx           ← nav, search → /search, theme, lang, cart, mobile menu, 🔔 notif bell (red dot)
 │   ├── Footer.tsx           ← 3-column: ยี่ห้อ/รุ่น · ช่วยเหลือ · ติดต่อ/social
 │   ├── LineFloatButton.tsx  ← floating LINE button (bottom-right, ทุกหน้า)
 │   └── PageLoader.tsx       ← loading screen
 ├── product/
-│   └── ProductCard.tsx      ← card: รูป, ชื่อ, ราคา, add to cart
-├── admin/
-│   └── ProductModal.tsx     ← add/edit product (3 section: info / image / spec+stock)
-└── PromptPayQR.tsx          ← PromptPay QR (canvas, dynamic amount)
+│   └── ProductCard.tsx      ← card: รูป, ชื่อ, ราคา, add to cart, heart (wishlist)
+├── account/
+│   └── VerifyEmailBanner.tsx ← banner เตือนยืนยันอีเมล (หน้า /account/*)
+├── auth/
+│   └── AuthShell.tsx        ← layout กลางหน้า auth (login/signup/forgot/reset)
+└── admin/
+    └── ProductModal.tsx     ← add/edit product (3 section: info / image / spec+stock)
 ```
 
 ---
@@ -253,7 +268,10 @@ components/
 
 ---
 
-## Database (Supabase) — 11 ตาราง
+## Database (Supabase) — 23 ตาราง
+
+> ด้านล่าง = ตารางฝั่ง commerce 9 ตาราง · อีก 14 ตาราง auth/account (`users` `user_sessions` `login_attempts` `password_reset_tokens` `email_verification_tokens` `admin_audit_logs` · `profiles` `addresses` `wishlists` `support_tickets` `message_replies` `ticket_replies` `login_events` `tax_invoice_requests`) ดูหัวข้อ Phase 3 + `supabase/` SQL
+> DDL ของ `products` อยู่ใน `supabase/products-seed.sql` — ที่เหลืออยู่ `setup.sql` + `custom-auth.sql`
 
 ### `products`
 | Column | Type | ทำอะไร |
@@ -336,6 +354,7 @@ components/
 | `order-slips` | ❌ Private | slip โอน (admin อ่านผ่าน signed URL) | 5 MB |
 | `product-images` | ✅ Public | รูปสินค้า (admin upload) | 5 MB |
 | `review-images` | ✅ Public | รูปรีวิวลูกค้า | 5 MB |
+| `avatars` | ✅ Public | รูปโปรไฟล์ (upload ผ่าน `/api/account/avatar`) | 2 MB |
 
 ---
 
@@ -343,7 +362,9 @@ components/
 
 | ไฟล์ | ทำอะไร |
 |------|--------|
-| `lib/cart.tsx` | CartContext: add, remove, clear, qty, localStorage |
+| `lib/cart.tsx` | CartContext: add, remove, clear, qty (clamp ตาม stock), localStorage |
+| `lib/wishlist.tsx` | WishlistProvider: DB เมื่อ login, localStorage เมื่อ guest, merge ตอน login |
+| `lib/recentlyViewed.ts` | สินค้า/คำค้นที่ดูล่าสุด — localStorage, record บน product detail |
 | `lib/lang.tsx` | LangContext: TH/EN, wrap i18n.ts |
 | `lib/i18n.ts` | translation ทุกหน้า (Phase 1+2): nav/home/product/cart/checkout/order/contact/categories/gallery/dealer/payment/racing/search/support/notifications/messages/reviews/colors |
 | `lib/theme.tsx` | ThemeContext: light/dark, CSS var |
@@ -351,10 +372,14 @@ components/
 | `lib/supabase/server.ts` | server client |
 | `lib/supabase/service.ts` | service role client — bypass RLS |
 | `lib/auth.ts` | `getCurrentUser()` / `requireUser()` / `requireAdmin()` / `requireOwner()` |
+| `lib/auth/AuthContext.tsx` | AuthProvider ฝั่ง client: user + profile ปัจจุบัน, refresh |
 | `lib/session.ts` | custom session: token → SHA-256 → `user_sessions` + httpOnly cookie |
 | `lib/password.ts` | bcrypt hash/verify (12 rounds) |
 | `lib/auth/require-admin.ts` `require-user.ts` | guard เก่า — delegate ไป `lib/auth.ts` |
-| `lib/api/` | **API toolkit**: `apiOk/apiError+ERR` (error codes) · `apiLog` (JSON log) · `isRateLimited/recordAttempt` (DB-backed) · `readJson` |
+| `lib/api/` | **API toolkit**: `apiOk/apiError+ERR` · `apiLog` (JSON log) · `isRateLimited/recordAttempt` (DB-backed) · `readJson` · `getOwnedRow` (กันอ่านข้าม user) · `sniffFile` (magic-bytes upload) |
+| `lib/verification.ts` | email verification token (SHA-256, TTL 24 ชม.) + ส่งลิงก์ — best-effort ไม่ throw |
+| `lib/safe-next.ts` | `sanitizeNextPath()` — กัน open redirect ของ `?next=` |
+| `lib/site.ts` | `SITE_URL` / `SITE_NAME` — origin กลางสำหรับ metadata/sitemap/OG |
 | `lib/audit.ts` | `writeAuditLog()` → audit_logs (server-only, never throw) |
 | `lib/admin-audit.ts` | `logAdminAction()` → admin_audit_logs |
 | `lib/email.ts` | order confirm + OTP + status update + **password reset** via Resend |
@@ -402,6 +427,8 @@ POST /api/order-lookup/history
 | audit_logs | blocked | blocked | all |
 | admin_login_attempts | blocked | blocked | all |
 
+> ตาราง auth/account ทั้งหมด: RLS เปิด ไม่มี policy → service role เท่านั้น (API filter `user_id` เอง)
+
 ---
 
 ## Data Flow
@@ -411,7 +438,7 @@ Legacy Site (HTTrack)
         ↓
 scripts/import-legacy.mjs   → scripts/out/legacy-products.json
         ↓
-scripts/build-catalog.mjs   → src/data/products.generated.ts (822 items)
+scripts/build-catalog.mjs   → src/data/products.generated.ts (818 item) + supabase/products-seed.sql
         ↓
 src/data/products.ts        → re-exports + types + helpers
         ↓
@@ -530,7 +557,7 @@ Admin ข้อความ tab → ตอบ Email → PATCH mark replied
 
 | Feature | Status | หมายเหตุ |
 |---------|--------|----------|
-| Product catalog (822 item) | ✅ | legacy import ครบ |
+| Product catalog (818 item) | ✅ | legacy import ครบ |
 | Product image | ✅ | legacy + admin upload |
 | Shopping cart | ✅ | localStorage, color variant |
 | Checkout + slip upload | ✅ | Supabase Storage private |
@@ -562,7 +589,7 @@ Admin ข้อความ tab → ตอบ Email → PATCH mark replied
 | Racing gallery | ✅ | gallery + racing product |
 | Bilingual TH/EN | ✅ | i18n.ts ทุกหน้า |
 | Dark/Light theme | ✅ | CSS var |
-| Netlify deploy | ✅ | netlify.toml + build-catalog |
+| Netlify deploy | ✅ | netlify.toml ที่ root repo (`npm ci && npm run build`) |
 | Payment gateway (real) | ❌ | มี PromptPay QR + slip, ยังไม่มี gateway ตัด auto |
 | Push notification | ❌ | email only (เลือก email-on-status แทน) |
 
@@ -594,17 +621,12 @@ EMAIL_FROM=                     # sender เช่น orders@thaigigabike.com
 
 ## Supabase Setup
 
-**รันครั้งเดียว (idempotent — รันซ้ำได้):**
+รัน 3 ไฟล์ตามลำดับ (idempotent — รันซ้ำได้) · รายละเอียด: `thaigigabike/supabase/README.md`
 ```
-supabase-setup.sql    ← table + RLS + policy + storage bucket + Phase 2 table
-supabase-products.sql ← 822 product seed
+supabase/setup.sql         ← ตารางหลัก + RLS + storage bucket + RPC create_order_atomic
+supabase/custom-auth.sql   ← ระบบ auth ทั้งหมด (รวม 4 phase + hardening ไฟล์เดียว)
+supabase/products-seed.sql ← products DDL + seed 818 รายการ
 ```
-
-**Phase 2 table ท้ายไฟล์ supabase-setup.sql:**
-- `messages` — RLS on, service_role only
-- `reviews` — anon read published=true, admin approve
-- `announcements` — anon read published=true, admin สร้างผ่าน dashboard
-- bucket `review-images` — public read
 
 ---
 
@@ -617,24 +639,32 @@ supabase-products.sql ← 822 product seed
 | dev:clean | `npm run dev:clean` | kill port + rimraf `.next` + cache → dev (ปุ่มฉุกเฉิน) |
 | prebuild | (auto) | `kill-port 3000` ก่อน build |
 | build | `npm run build` | rimraf `.next` → production build (✅ 0 error) |
-| import-legacy | `node scripts/import-legacy.mjs` | parse HTTrack → legacy-products.json |
-| build-catalog | `npm run build-catalog` | JSON → products.generated.ts |
+| import:legacy | `npm run import:legacy` | parse HTTrack → legacy-products.json |
+| build:catalog | `npm run build:catalog` | JSON → products.generated.ts + supabase/products-seed.sql |
+| test | `npm test` | Playwright ทุก spec ใน `tests/` |
+| test:e2e:api | `npm run test:e2e:api` | security test ฝั่ง API (api-security.spec.ts) |
+| test:e2e:admin | `npm run test:e2e:admin` | admin auth test (admin-auth.spec.ts) |
 
 > 🪨 dev cache พัง (404 / MIME error) = process เก่าค้าง port 3000. `predev` kill ให้เอง. พังหนัก → `npm run dev:clean`. helper: `kill-port` + `rimraf` (devDep).
 
-### Netlify Build Config
+### Netlify Build Config — `netlify.toml` ที่ root repo
 
 ```toml
 [build]
   base    = "thaigigabike"
-  command = "npm ci && npm run build-catalog && npm run build"
+  command = "npm ci && npm run build"
   publish = ".next"
-  
+
 [build.environment]
   NODE_VERSION = "20"
+  # NEXT_PUBLIC_* เป็น public โดย design — กัน secrets-scan false positive
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY"
+  SECRETS_SCAN_OMIT_PATHS = ".env.example"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 ```
+
+> catalog generate ไว้ใน repo แล้ว (`products.generated.ts`) — build บน Netlify ไม่ต้องรัน `build:catalog`
 
 ตั้ง env var หมดใน Netlify Dashboard → Site Settings → Environment Variables
