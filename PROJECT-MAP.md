@@ -73,7 +73,7 @@ profile (GET/PATCH) · addresses (GET/POST + [id] PATCH/DELETE) · wishlist (GET
 `message_replies` · `ticket_replies` · `login_events` · `tax_invoice_requests` · `wishlists.notify_price_drop/restock` · `support_tickets.rating`
 
 ### Setup ก่อนใช้ (Custom Auth)
-1. รัน SQL ตามลำดับ: `supabase/setup.sql` → `custom-auth.sql` → `custom-auth-phase2.sql` → `custom-auth-phase3.sql`
+1. รัน SQL ตามลำดับ: `supabase/setup.sql` → `supabase/custom-auth.sql` (รวมทุก phase แล้ว — ดู `supabase/README.md`)
 2. ตั้ง env: `ADMIN_SETUP_SECRET` (ค่า random) + `CUSTOM_AUTH_SESSION_COOKIE/DAYS` + production ต้องเปิด `ALLOW_ADMIN_SETUP=true` ชั่วคราว
 3. สมัครที่ `/signup` → `POST /api/admin/setup-owner` `{ secret, email }` → ได้ owner คนแรก → ลบ `ALLOW_ADMIN_SETUP` ทิ้ง (endpoint ตายถาวรเองเมื่อมี owner)
 4. Email verification: guest orders/inbox จะแสดงเมื่อ user กดยืนยันอีเมลแล้วเท่านั้น (`users.email_verified_at`)

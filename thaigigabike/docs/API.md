@@ -272,12 +272,9 @@ reset token ใช้ครั้งเดียว หมดอายุ 30 น
 
 ## 7. Database (ตาราง auth)
 
-migration ตามลำดับ: `supabase/setup.sql` → `supabase/custom-auth.sql` → `supabase/custom-auth-phase2.sql`
+migration ตามลำดับ (ดู `supabase/README.md`): `setup.sql` → `custom-auth.sql` (รวม 4 phase ไว้ไฟล์เดียวแล้ว) → `products-seed.sql`
 
-migration ตามลำดับ: `setup.sql` → `custom-auth.sql` → `custom-auth-phase2.sql` → `custom-auth-phase3.sql` → `custom-auth-phase4-hardening.sql`
-(`schema.sql` เป็นไฟล์ยุคแรก — ถูกแทนด้วย setup.sql แล้ว อย่ารัน · `products-seed.sql` = seed สินค้า 818 รายการ)
-
-> สถานะ DB จริง ตรวจเมื่อ 2026-06-12: phase 1-3 รันครบแล้ว (FK ชี้ public.users, email_verified_at มี) — เหลือรัน phase4
+> สถานะ DB จริง ตรวจเมื่อ 2026-06-12: phase 1-3 รันครบแล้ว (FK ชี้ public.users, email_verified_at มี) — เหลือรันส่วน Phase 4 (hardening) ใน custom-auth.sql ซึ่งรันทั้งไฟล์ซ้ำได้เลย (idempotent)
 
 | ตาราง | เก็บอะไร |
 |---|---|
@@ -291,4 +288,4 @@ migration ตามลำดับ: `setup.sql` → `custom-auth.sql` → `custo
 
 ทุกตาราง auth เปิด RLS โดยไม่มี policy = เข้าถึงได้ผ่าน service role เท่านั้น
 ตารางฝั่ง account (profiles, addresses, …) FK ไป `public.users` และเข้าถึงผ่าน
-API route เท่านั้น (phase2 migration ลบ policy `auth.uid()` ทิ้งแล้ว)
+API route เท่านั้น (policy `auth.uid()` ถูกลบทิ้งหมดแล้วใน custom-auth.sql Phase 2)
