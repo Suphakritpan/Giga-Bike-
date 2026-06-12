@@ -1,10 +1,15 @@
 import { test, expect } from '@playwright/test'
+import { resetLocalRateLimits } from './helpers/reset-rate-limits'
 
 // Primary security assertion: admin endpoints must never return 2xx to unauthenticated callers.
 // We accept 401 (correct) or 5xx (server-side misconfiguration/error) — neither leaks data.
 // Tests run against the dev server configured in playwright.config.ts.
 
 const notExposed = (status: number) => status < 200 || status >= 400
+
+// Repeated local runs share one rate-limit identity (no client IP on
+// localhost) — clear it so validation tests get 400s, not flaky 429s.
+test.beforeAll(async () => { await resetLocalRateLimits() })
 
 test.describe('Health check', () => {
   test('GET /api/health → 200 "ok"', async ({ request }) => {
