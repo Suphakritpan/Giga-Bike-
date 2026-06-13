@@ -1,0 +1,126 @@
+'use client'
+import { ChevronDown, Download } from 'lucide-react'
+import { AdminSearchInput } from './AdminUI'
+import { STATUS_COLORS, STATUS_LABELS } from './types'
+import type { Order, OrderStatus } from './types'
+
+/** Orders tab — search, status change, tracking-number inline edit, slip view,
+ *  CSV export. State + handlers stay in the shell (optimistic update). */
+export function OrdersTab({
+  orders, search, onSearch, onExport, loading,
+  slipLoading, onViewSlip, onUpdateStatus,
+  editingTracking, setEditingTracking, trackingInput, setTrackingInput, savingTracking, onSaveTracking,
+}: {
+  orders: Order[]
+  search: string
+  onSearch: (value: string) => void
+  onExport: () => void
+  loading: boolean
+  slipLoading: string | null
+  onViewSlip: (orderId: string) => void
+  onUpdateStatus: (orderId: string, status: OrderStatus) => void
+  editingTracking: string | null
+  setEditingTracking: (id: string | null) => void
+  trackingInput: string
+  setTrackingInput: (value: string) => void
+  savingTracking: boolean
+  onSaveTracking: (orderId: string) => void
+}) {
+  return (
+    <div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: 14, flexWrap: 'wrap' }}>
+        <AdminSearchInput value={search} onChange={onSearch} placeholder="ค้นหาเลขออเดอร์ / ชื่อ / เบอร์..." />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <span style={{ fontSize: 14, color: 'var(--text2)' }}>{orders.length} ออเดอร์</span>
+          <button className="btn-ghost" onClick={onExport} style={{ fontSize: 14 }}><Download size={13} /> Export CSV</button>
+        </div>
+      </div>
+
+      {loading ? (
+        <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>กำลังโหลด...</div>
+      ) : orders.length === 0 ? (
+        <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
+          {search ? 'ไม่พบออเดอร์ที่ค้นหา' : 'ยังไม่มีออเดอร์'}
+        </div>
+      ) : (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {orders.map(o => (
+            <div key={o.id} style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, padding: 16 }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10, flexWrap: 'wrap', gap: 8 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <span style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 700 }}>{o.id}</span>
+                  <span className={`badge ${STATUS_COLORS[o.status]}`} style={{ fontSize: 12 }}>{STATUS_LABELS[o.status]}</span>
+                </div>
+                <span style={{ fontSize: 13, color: 'var(--text3)' }}>{new Date(o.created_at).toLocaleString('th-TH')}</span>
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))', gap: 10, marginBottom: 12 }}>
+                <div>
+                  <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 2 }}>ลูกค้า</div>
+                  <div style={{ fontSize: 15, fontWeight: 500 }}>{o.recipient_name}</div>
+                  <div style={{ fontSize: 13, color: 'var(--text3)' }}>{o.recipient_phone}</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 2 }}>ที่อยู่</div>
+                  <div style={{ fontSize: 13, color: 'var(--text2)', lineHeight: 1.5 }}>{o.recipient_address}</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 2 }}>การชำระ</div>
+                  <div style={{ fontSize: 14 }}>
+                    {o.payment_method === 'transfer' ? 'โอนเงิน' : 'COD'}
+                    {(o.slip_path || o.slip_url) && (
+                      <button
+                        onClick={() => onViewSlip(o.id)}
+                        disabled={slipLoading === o.id}
+                        style={{ marginLeft: 8, fontSize: 12, color: 'var(--green)', background: 'none', border: 'none', cursor: 'pointer', textDecoration: 'underline', padding: 0 }}
+                      >
+                        {slipLoading === o.id ? 'กำลังเปิด...' : 'ดูสลิป'}
+                      </button>
+                    )}
+                  </div>
+                </div>
+                <div>
+                  <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 2 }}>ยอดรวม</div>
+                  <div style={{ fontSize: 19, fontWeight: 700, color: 'var(--green)', fontFamily: 'var(--font-display)' }}>฿{o.total.toLocaleString()}</div>
+                  <div style={{ fontSize: 12, color: 'var(--text3)' }}>{o.items?.length ?? 0} รายการ · ค่าส่ง ฿{o.shipping_fee}</div>
+                </div>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', borderTop: '0.5px solid var(--border)', paddingTop: 10 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                  <span style={{ fontSize: 13, color: 'var(--text3)' }}>สถานะ:</span>
+                  <div style={{ position: 'relative', display: 'inline-block' }}>
+                    <select value={o.status} onChange={e => onUpdateStatus(o.id, e.target.value as OrderStatus)} className="input" style={{ fontSize: 13, padding: '4px 26px 4px 8px', appearance: 'none', width: 'auto', cursor: 'pointer' }}>
+                      {(['pending', 'paid', 'shipping', 'delivered', 'cancelled'] as OrderStatus[]).map(s => (
+                        <option key={s} value={s}>{STATUS_LABELS[s]}</option>
+                      ))}
+                    </select>
+                    <ChevronDown size={11} style={{ position: 'absolute', right: 7, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: 'var(--text3)' }} />
+                  </div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 6, flex: 1 }}>
+                  <span style={{ fontSize: 13, color: 'var(--text3)', whiteSpace: 'nowrap' }}>เลขพัสดุ:</span>
+                  {editingTracking === o.id ? (
+                    <>
+                      <input autoFocus className="input" style={{ fontSize: 13, padding: '4px 8px', width: 180 }} value={trackingInput}
+                        onChange={e => setTrackingInput(e.target.value)}
+                        onKeyDown={e => { if (e.key === 'Enter') onSaveTracking(o.id); if (e.key === 'Escape') setEditingTracking(null) }}
+                        placeholder="เลขพัสดุ..." />
+                      <button className="btn-primary" style={{ fontSize: 12, padding: '4px 10px' }} disabled={savingTracking} onClick={() => onSaveTracking(o.id)}>
+                        {savingTracking ? '...' : 'บันทึก'}
+                      </button>
+                      <button className="btn-ghost" style={{ fontSize: 12, padding: '4px 8px' }} onClick={() => setEditingTracking(null)}>ยกเลิก</button>
+                    </>
+                  ) : (
+                    <button className="btn-ghost" style={{ fontSize: 13, padding: '4px 10px', color: o.tracking_no ? 'var(--green)' : 'var(--text3)', fontFamily: o.tracking_no ? 'var(--font-display)' : 'inherit' }}
+                      onClick={() => { setEditingTracking(o.id); setTrackingInput(o.tracking_no ?? '') }}>
+                      {o.tracking_no ?? '+ เพิ่มเลขพัสดุ'}
+                    </button>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
