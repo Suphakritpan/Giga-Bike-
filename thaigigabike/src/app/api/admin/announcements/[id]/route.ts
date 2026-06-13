@@ -13,6 +13,11 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
   try { body = await req.json() } catch { /* ignore */ }
 
   const str = (v: unknown) => (typeof v === 'string' && v.trim() ? v.trim() : null)
+  const dt = (v: unknown) => {
+    if (typeof v !== 'string' || !v.trim()) return null
+    const d = new Date(v)
+    return isNaN(d.getTime()) ? null : d.toISOString()
+  }
   const patch: Record<string, unknown> = {}
   if (typeof body.title_th === 'string' && body.title_th.trim()) patch.title_th = body.title_th.trim()
   if ('title_en' in body) patch.title_en = str(body.title_en)
@@ -21,6 +26,11 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
   if (typeof body.type === 'string' && TYPES.includes(body.type)) patch.type = body.type
   if (typeof body.published === 'boolean') patch.published = body.published
   if (typeof body.pinned === 'boolean') patch.pinned = body.pinned
+  if ('starts_at' in body) patch.starts_at = dt(body.starts_at)
+  if ('ends_at' in body) patch.ends_at = dt(body.ends_at)
+  if ('image_url' in body) patch.image_url = str(body.image_url)
+  if ('link_url' in body) patch.link_url = str(body.link_url)
+  if ('link_label' in body) patch.link_label = str(body.link_label)
 
   if (Object.keys(patch).length === 0) {
     return NextResponse.json({ error: 'Nothing to update' }, { status: 400 })

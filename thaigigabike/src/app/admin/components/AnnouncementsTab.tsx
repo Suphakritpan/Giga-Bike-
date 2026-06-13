@@ -8,8 +8,21 @@ import type { Announcement, AnnouncementType } from './types'
 type FormState = {
   title_th: string; title_en: string; body_th: string; body_en: string
   type: AnnouncementType; pinned: boolean; published: boolean
+  starts_at: string; ends_at: string; image_url: string; link_url: string; link_label: string
 }
-const EMPTY: FormState = { title_th: '', title_en: '', body_th: '', body_en: '', type: 'info', pinned: false, published: true }
+const EMPTY: FormState = {
+  title_th: '', title_en: '', body_th: '', body_en: '', type: 'info', pinned: false, published: true,
+  starts_at: '', ends_at: '', image_url: '', link_url: '', link_label: '',
+}
+
+// ISO timestamp → value for <input type="datetime-local"> (local time, minute precision)
+const toLocalInput = (iso?: string | null) => {
+  if (!iso) return ''
+  const d = new Date(iso)
+  if (isNaN(d.getTime())) return ''
+  const pad = (n: number) => String(n).padStart(2, '0')
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`
+}
 
 const inputStyle: React.CSSProperties = {
   width: '100%', padding: '9px 12px', fontSize: 14, border: '1px solid var(--border2)',
@@ -41,7 +54,12 @@ export function AnnouncementsTab() {
   const openCreate = () => { setEditingId(null); setForm(EMPTY); setError(''); setShowForm(true) }
   const openEdit = (a: Announcement) => {
     setEditingId(a.id)
-    setForm({ title_th: a.title_th, title_en: a.title_en ?? '', body_th: a.body_th ?? '', body_en: a.body_en ?? '', type: a.type, pinned: a.pinned, published: a.published })
+    setForm({
+      title_th: a.title_th, title_en: a.title_en ?? '', body_th: a.body_th ?? '', body_en: a.body_en ?? '',
+      type: a.type, pinned: a.pinned, published: a.published,
+      starts_at: toLocalInput(a.starts_at), ends_at: toLocalInput(a.ends_at),
+      image_url: a.image_url ?? '', link_url: a.link_url ?? '', link_label: a.link_label ?? '',
+    })
     setError(''); setShowForm(true)
   }
   const closeForm = () => { setShowForm(false); setEditingId(null); setForm(EMPTY); setError('') }
@@ -130,6 +148,38 @@ export function AnnouncementsTab() {
                 <input type="checkbox" checked={form.published} onChange={e => set({ published: e.target.checked })} /> เผยแพร่ทันที
               </label>
             </div>
+
+            {/* ตั้งเวลาแสดง */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 10 }}>
+              <label style={{ fontSize: 13, color: 'var(--text2)' }}>
+                เริ่มแสดง (เว้นว่าง = ทันที)
+                <input type="datetime-local" style={{ ...inputStyle, marginTop: 4 }} value={form.starts_at} onChange={e => set({ starts_at: e.target.value })} />
+              </label>
+              <label style={{ fontSize: 13, color: 'var(--text2)' }}>
+                หมดอายุ (เว้นว่าง = ไม่หมด)
+                <input type="datetime-local" style={{ ...inputStyle, marginTop: 4 }} value={form.ends_at} onChange={e => set({ ends_at: e.target.value })} />
+              </label>
+            </div>
+
+            {/* รูป + ปุ่มลิงก์ */}
+            <label style={{ fontSize: 13, color: 'var(--text2)' }}>
+              รูปภาพ (URL — ไม่บังคับ)
+              <input style={{ ...inputStyle, marginTop: 4 }} value={form.image_url} onChange={e => set({ image_url: e.target.value })} placeholder="https://.../banner.jpg" />
+            </label>
+            {form.image_url && (
+              <img src={form.image_url} alt="" style={{ maxHeight: 90, alignSelf: 'flex-start', borderRadius: 8, border: '0.5px solid var(--border)', objectFit: 'cover' }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
+            )}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 10 }}>
+              <label style={{ fontSize: 13, color: 'var(--text2)' }}>
+                ลิงก์ปุ่ม (URL — ไม่บังคับ)
+                <input style={{ ...inputStyle, marginTop: 4 }} value={form.link_url} onChange={e => set({ link_url: e.target.value })} placeholder="/products หรือ https://..." />
+              </label>
+              <label style={{ fontSize: 13, color: 'var(--text2)' }}>
+                ข้อความบนปุ่ม
+                <input style={{ ...inputStyle, marginTop: 4 }} value={form.link_label} onChange={e => set({ link_label: e.target.value })} placeholder="เช่น ดูสินค้า, สั่งเลย" />
+              </label>
+            </div>
+
             {error && <span style={{ fontSize: 13, color: 'var(--red)' }}>{error}</span>}
             <div style={{ display: 'flex', gap: 8 }}>
               <button className="btn-primary" style={{ fontSize: 14, padding: '8px 18px' }} disabled={saving} onClick={save}>

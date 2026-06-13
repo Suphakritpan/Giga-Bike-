@@ -33,6 +33,11 @@ export async function POST(req: NextRequest) {
   if (!title_th) return NextResponse.json({ error: 'ต้องมีหัวข้อ (ไทย)' }, { status: 400 })
 
   const str = (v: unknown) => (typeof v === 'string' && v.trim() ? v.trim() : null)
+  const dt = (v: unknown) => {
+    if (typeof v !== 'string' || !v.trim()) return null
+    const d = new Date(v)
+    return isNaN(d.getTime()) ? null : d.toISOString()
+  }
   const row = {
     title_th,
     title_en: str(body.title_en),
@@ -41,6 +46,11 @@ export async function POST(req: NextRequest) {
     type: typeof body.type === 'string' && TYPES.includes(body.type) ? body.type : 'info',
     published: body.published !== false,
     pinned: body.pinned === true,
+    starts_at: dt(body.starts_at),
+    ends_at: dt(body.ends_at),
+    image_url: str(body.image_url),
+    link_url: str(body.link_url),
+    link_label: str(body.link_label),
   }
 
   const db = createServiceClient()

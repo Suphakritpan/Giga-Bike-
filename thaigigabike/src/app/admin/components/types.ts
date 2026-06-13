@@ -32,6 +32,9 @@ export type Announcement = {
   id: string; title_th: string; title_en: string | null
   body_th: string | null; body_en: string | null
   type: AnnouncementType; published: boolean; pinned: boolean; created_at: string
+  // Optional (added via migration — see supabase/announcements-extras.sql):
+  starts_at?: string | null; ends_at?: string | null
+  image_url?: string | null; link_url?: string | null; link_label?: string | null
 }
 export const ANNOUNCEMENT_TYPES: AnnouncementType[] = ['info', 'promo', 'update', 'shipping']
 export const ANNOUNCEMENT_TYPE_LABELS: Record<AnnouncementType, string> = {
