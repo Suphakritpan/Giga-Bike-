@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import {
   Package, ShoppingBag, TrendingUp, Boxes,
-  LogOut, Zap, Bell, Star, Receipt,
+  LogOut, Zap, Bell,
 } from 'lucide-react'
 import { products as initialProducts } from '@/data/products'
 import type { Product } from '@/data/products'
@@ -18,6 +18,8 @@ import { StockTab } from './components/StockTab'
 import { OrdersTab } from './components/OrdersTab'
 import { MessagesTab } from './components/MessagesTab'
 import { TicketsTab } from './components/TicketsTab'
+import { TaxTab } from './components/TaxTab'
+import { ReviewsTab } from './components/ReviewsTab'
 import {
   TICKET_TOPIC_LABELS, LOW_STOCK_THRESHOLD, PAGE_SIZE, STATUS_COLORS, STATUS_LABELS,
 } from './components/types'
@@ -560,155 +562,25 @@ export default function AdminPage() {
 
         {/* ── Tax invoice requests tab ──────────── */}
         {tab === 'tax' && (
-          <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-              <span style={{ fontSize: 14, color: 'var(--text2)' }}>
-                {taxRequests.length} คำขอ · {pendingTaxCount} รอออก
-              </span>
-              <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }} onClick={loadTax}>
-                รีเฟรช
-              </button>
-            </div>
-            {loadingTax ? (
-              <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
-            ) : taxRequests.length === 0 ? (
-              <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
-                <Receipt size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
-                ยังไม่มีคำขอใบกำกับภาษี
-              </div>
-            ) : (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {taxRequests.map(r => {
-                  const issued = r.status === 'issued'
-                  return (
-                    <div key={r.id} style={{
-                      background: 'var(--bg2)', border: `0.5px solid ${issued ? 'var(--border)' : 'rgba(249,115,22,.35)'}`,
-                      borderLeft: `3px solid ${issued ? '#22c55e' : '#f97316'}`, borderRadius: 10, padding: '14px 18px',
-                    }}>
-                      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
-                        <div style={{ minWidth: 0 }}>
-                          <div style={{ fontWeight: 700, fontSize: 15 }}>{r.company}</div>
-                          <div style={{ fontSize: 13, color: 'var(--text3)' }}>
-                            เลขผู้เสียภาษี: <span style={{ fontFamily: 'var(--font-display)', color: 'var(--text2)' }}>{r.tax_id}</span>
-                          </div>
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-                          <span style={{
-                            fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 999,
-                            background: issued ? 'rgba(34,197,94,.15)' : 'rgba(249,115,22,.15)',
-                            color: issued ? '#22c55e' : '#f97316',
-                          }}>
-                            {issued ? 'ออกแล้ว' : 'รอออก'}
-                          </span>
-                          <span style={{ fontSize: 12, color: 'var(--text3)' }}>{new Date(r.created_at).toLocaleDateString('th-TH')}</span>
-                        </div>
-                      </div>
-                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 10, marginTop: 10 }}>
-                        <div>
-                          <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 2 }}>ออเดอร์</div>
-                          <div style={{ fontSize: 14, fontFamily: 'var(--font-display)', color: 'var(--green)' }}>{r.order_id}</div>
-                          {r.order_total != null && <div style={{ fontSize: 13, color: 'var(--text3)' }}>฿{r.order_total.toLocaleString()} · {r.order_email}</div>}
-                        </div>
-                        <div>
-                          <div style={{ fontSize: 12, color: 'var(--text3)', marginBottom: 2 }}>ที่อยู่ออกใบกำกับ</div>
-                          <div style={{ fontSize: 13, color: 'var(--text2)', lineHeight: 1.5, whiteSpace: 'pre-wrap' }}>{r.address}</div>
-                        </div>
-                      </div>
-                      <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
-                        {!issued ? (
-                          <button onClick={() => setTaxStatus(r.id, 'issued')}
-                            style={{ fontSize: 13, padding: '5px 12px', borderRadius: 7, cursor: 'pointer', background: '#22c55e', color: '#fff', border: 'none', fontWeight: 600 }}>
-                            ✓ ออกใบกำกับแล้ว
-                          </button>
-                        ) : (
-                          <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px', color: 'var(--text3)' }}
-                            onClick={() => setTaxStatus(r.id, 'requested')}>
-                            ย้อนเป็นรอออก
-                          </button>
-                        )}
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
-            )}
-          </div>
+          <TaxTab
+            requests={taxRequests}
+            pendingCount={pendingTaxCount}
+            loading={loadingTax}
+            onRefresh={loadTax}
+            onSetStatus={setTaxStatus}
+          />
         )}
 
         {/* ── Reviews tab ───────────────────────── */}
         {tab === 'reviews' && (
-          <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-              <span style={{ fontSize: 14, color: 'var(--text2)' }}>
-                {adminReviews.length} รีวิว · {pendingReviewsCount} รอ approve
-              </span>
-              <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }} onClick={loadReviews}>
-                รีเฟรช
-              </button>
-            </div>
-            {loadingReviews ? (
-              <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
-            ) : adminReviews.length === 0 ? (
-              <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
-                <Star size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
-                ยังไม่มีรีวิว
-              </div>
-            ) : (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {adminReviews.map(rev => (
-                  <div key={rev.id} style={{
-                    background: 'var(--bg2)',
-                    border: `0.5px solid ${!rev.published ? 'rgba(249,115,22,.35)' : 'var(--border)'}`,
-                    borderLeft: `3px solid ${!rev.published ? '#f97316' : '#22c55e'}`,
-                    borderRadius: 10, padding: '14px 18px',
-                  }}>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
-                      <div>
-                        <div style={{ fontWeight: 700, fontSize: 15 }}>{rev.reviewer_name}</div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 3 }}>
-                          {Array.from({ length: 5 }, (_, i) => (
-                            <Star key={i} size={13} fill={rev.rating > i ? '#f59e0b' : 'none'} color={rev.rating > i ? '#f59e0b' : 'var(--border2)'} />
-                          ))}
-                          {rev.product_id && (
-                            <span style={{ fontSize: 12, color: 'var(--green)', marginLeft: 4 }}>{rev.product_id}</span>
-                          )}
-                        </div>
-                      </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-                        <span style={{
-                          fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 999,
-                          background: rev.published ? 'rgba(34,197,94,.15)' : 'rgba(249,115,22,.15)',
-                          color: rev.published ? '#22c55e' : '#f97316',
-                        }}>
-                          {rev.published ? 'เผยแพร่' : 'รอ approve'}
-                        </span>
-                        <span style={{ fontSize: 12, color: 'var(--text3)' }}>
-                          {new Date(rev.created_at).toLocaleDateString('th-TH')}
-                        </span>
-                      </div>
-                    </div>
-                    {rev.comment && <p style={{ fontSize: 14, color: 'var(--text2)', marginTop: 8, lineHeight: 1.65 }}>{rev.comment}</p>}
-                    <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
-                      <button
-                        onClick={() => toggleReviewPublished(rev.id, !rev.published)}
-                        style={{
-                          fontSize: 13, padding: '5px 12px', borderRadius: 7, cursor: 'pointer',
-                          background: rev.published ? 'var(--bg3)' : '#22c55e',
-                          color: rev.published ? 'var(--text2)' : '#fff',
-                          border: '0.5px solid var(--border2)', fontWeight: 600,
-                        }}>
-                        {rev.published ? 'ซ่อน' : '✓ Approve'}
-                      </button>
-                      <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px', color: 'var(--red)' }}
-                        onClick={() => deleteReview(rev.id)}>
-                        ลบ
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          <ReviewsTab
+            reviews={adminReviews}
+            pendingCount={pendingReviewsCount}
+            loading={loadingReviews}
+            onRefresh={loadReviews}
+            onTogglePublished={toggleReviewPublished}
+            onDelete={deleteReview}
+          />
         )}
 
       </div>
