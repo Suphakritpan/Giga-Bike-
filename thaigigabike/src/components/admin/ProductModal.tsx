@@ -50,12 +50,15 @@ function sanitizeText(val: string): string {
   return val.replace(/[<>"'`]/g, '').slice(0, 500)
 }
 
+// Required = the minimum to list + sell an item fast: code, Thai name, price,
+// category, colour, material, stock. English name + both descriptions are
+// optional — English falls back to the Thai value on save (see persist), so the
+// storefront never shows a blank EN name.
 function validate(form: FormData): Errors {
   const e: Errors = {}
   if (!form.code.trim()) e.code = 'กรุณากรอกรหัสสินค้า'
   else if (!/^[A-Za-z0-9.\-\s]+$/.test(form.code)) e.code = 'รหัสสินค้าใช้ได้เฉพาะ A-Z, 0-9, จุด, ขีด'
-  if (!form.name.trim()) e.name = 'กรุณากรอกชื่อภาษาอังกฤษ'
-  if (!form.nameTh.trim()) e.nameTh = 'กรุณากรอกชื่อภาษาไทย'
+  if (!form.nameTh.trim()) e.nameTh = 'กรุณากรอกชื่อสินค้า'
   const price = Number(form.price)
   if (!form.price || isNaN(price) || price <= 0) e.price = 'ราคาต้องมากกว่า 0'
   if (price > 10_000_000) e.price = 'ราคาเกินขีดจำกัด'
@@ -65,8 +68,6 @@ function validate(form: FormData): Errors {
   if (isNaN(stock) || stock < 0) e.stockCount = 'จำนวนต้องไม่ติดลบ'
   if (stock > 99999) e.stockCount = 'จำนวนเกินขีดจำกัด'
   if (!form.material.trim()) e.material = 'กรุณากรอกวัสดุ'
-  if (!form.description.trim()) e.description = 'กรุณากรอกรายละเอียด (EN)'
-  if (!form.descriptionTh.trim()) e.descriptionTh = 'กรุณากรอกรายละเอียด (TH)'
   return e
 }
 
@@ -207,7 +208,7 @@ export function ProductModal({ product, onClose, onSave }: Props) {
     if (Object.keys(errs).length > 0) {
       setErrors(errs)
       // Jump to first section with errors
-      if (errs.code || errs.name || errs.nameTh || errs.price || errs.category || errs.description || errs.descriptionTh) {
+      if (errs.code || errs.nameTh || errs.price || errs.category) {
         setSection('info')
       } else if (errs.material || errs.colors || errs.stockCount) {
         setSection('spec')
@@ -220,7 +221,8 @@ export function ProductModal({ product, onClose, onSave }: Props) {
       await onSave({
         ...(isEdit ? { id: product!.id } : {}),
         code: sanitizeText(form.code.trim()),
-        name: sanitizeText(form.name.trim()),
+        // EN name falls back to the Thai name so the EN storefront never shows blank.
+        name: sanitizeText(form.name.trim() || form.nameTh.trim()),
         nameTh: sanitizeText(form.nameTh.trim()),
         price: Number(form.price),
         category: form.category,
@@ -229,7 +231,8 @@ export function ProductModal({ product, onClose, onSave }: Props) {
         inStock: form.inStock,
         stockCount: Math.max(0, Math.floor(Number(form.stockCount))),
         material: sanitizeText(form.material.trim()),
-        description: sanitizeText(form.description.trim()),
+        // EN description falls back to the Thai one; both may be empty (optional).
+        description: sanitizeText(form.description.trim() || form.descriptionTh.trim()),
         descriptionTh: sanitizeText(form.descriptionTh.trim()),
         images: form.images,
         featured: form.featured,
@@ -282,7 +285,7 @@ export function ProductModal({ product, onClose, onSave }: Props) {
   const SECTIONS: { id: Section; label: string; hasError: boolean }[] = [
     {
       id: 'info', label: 'ข้อมูลสินค้า',
-      hasError: !!(errors.code || errors.name || errors.nameTh || errors.price || errors.category || errors.description || errors.descriptionTh),
+      hasError: !!(errors.code || errors.nameTh || errors.price || errors.category),
     },
     { id: 'images', label: 'รูปภาพ', hasError: false },
     {
@@ -304,7 +307,9 @@ export function ProductModal({ product, onClose, onSave }: Props) {
             <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 2 }}>
               {isEdit ? `แก้ไข: ${product!.code}` : 'เพิ่มสินค้าใหม่'}
             </h2>
-            {isEdit && <p style={{ fontSize: 13, color: 'var(--text3)' }}>{product!.nameTh}</p>}
+            {isEdit
+              ? <p style={{ fontSize: 13, color: 'var(--text3)' }}>{product!.nameTh}</p>
+              : <p style={{ fontSize: 13, color: 'var(--text3)' }}>กรอกช่องที่มี <span style={{ color: 'var(--green)', fontWeight: 700 }}>*</span> ให้ครบ — ที่เหลือไม่บังคับ</p>}
           </div>
           <button onClick={onClose} style={{ background: 'var(--bg3)', border: '0.5px solid var(--border)', borderRadius: 8, cursor: 'pointer', color: 'var(--text2)', display: 'flex', padding: 6 }}>
             <X size={18} />
@@ -329,6 +334,12 @@ export function ProductModal({ product, onClose, onSave }: Props) {
         <form onSubmit={handleSubmit} noValidate>
           <div style={{ padding: 24 }}>
 
+            {savedCount > 0 && !isEdit && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--green)', background: 'rgba(34,197,94,.08)', border: '0.5px solid rgba(34,197,94,.3)', borderRadius: 8, padding: '8px 12px', marginBottom: 16 }}>
+                ⚡ โหมดเพิ่มต่อเนื่อง — หมวด / สี / รุ่นรถ / วัสดุ / สต็อก ถูกคงไว้ให้ · กรอกแค่ รหัส · ชื่อ · ราคา · รูป แล้วกด “บันทึก &amp; เพิ่มต่อ”
+              </div>
+            )}
+
             {/* ══════════ SECTION: ข้อมูลสินค้า ══════════ */}
             {section === 'info' && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -344,15 +355,15 @@ export function ProductModal({ product, onClose, onSave }: Props) {
                   </Field>
                 </div>
 
-                {/* ชื่อ */}
+                {/* ชื่อ — ไทยจำเป็น, EN ออปชัน (เว้นว่าง = ใช้ชื่อไทย) */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-                  <Field label="ชื่อสินค้า (EN) *" error={errors.name}>
-                    <input className="input" style={inputErr('name')} value={form.name} maxLength={200}
-                      onChange={e => set('name', e.target.value)} placeholder="Custom Brake Disc SR 310mm." />
-                  </Field>
-                  <Field label="ชื่อสินค้า (TH) *" error={errors.nameTh}>
+                  <Field label="ชื่อสินค้า (ไทย) *" error={errors.nameTh}>
                     <input className="input" style={inputErr('nameTh')} value={form.nameTh} maxLength={200}
                       onChange={e => set('nameTh', e.target.value)} placeholder="จานเบรคแต่ง SR 310mm." />
+                  </Field>
+                  <Field label="ชื่อสินค้า (EN)" error={errors.name} hint="เว้นว่างได้ — จะใช้ชื่อไทยแทน">
+                    <input className="input" style={inputErr('name')} value={form.name} maxLength={200}
+                      onChange={e => set('name', e.target.value)} placeholder="(ออปชัน) Custom Brake Disc SR 310mm." />
                   </Field>
                 </div>
 
@@ -376,19 +387,19 @@ export function ProductModal({ product, onClose, onSave }: Props) {
                   </div>
                 </Field>
 
-                {/* รายละเอียด */}
+                {/* รายละเอียด — ไม่บังคับทั้งคู่ (EN เว้นว่าง = ใช้ไทย) */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-                  <Field label="รายละเอียด (EN) *" error={errors.description}>
-                    <textarea className="input" style={{ ...inputErr('description'), height: 100, resize: 'vertical' }}
-                      value={form.description} maxLength={500}
-                      onChange={e => set('description', e.target.value)} placeholder="Description in English..." />
-                    <span style={{ fontSize: 12, color: 'var(--text3)', marginTop: 2, display: 'block' }}>{form.description.length}/500</span>
-                  </Field>
-                  <Field label="รายละเอียด (TH) *" error={errors.descriptionTh}>
+                  <Field label="รายละเอียด (ไทย)" error={errors.descriptionTh}>
                     <textarea className="input" style={{ ...inputErr('descriptionTh'), height: 100, resize: 'vertical' }}
                       value={form.descriptionTh} maxLength={500}
-                      onChange={e => set('descriptionTh', e.target.value)} placeholder="รายละเอียดภาษาไทย..." />
+                      onChange={e => set('descriptionTh', e.target.value)} placeholder="รายละเอียดภาษาไทย... (ไม่บังคับ)" />
                     <span style={{ fontSize: 12, color: 'var(--text3)', marginTop: 2, display: 'block' }}>{form.descriptionTh.length}/500</span>
+                  </Field>
+                  <Field label="รายละเอียด (EN)" error={errors.description} hint="เว้นว่างได้ — จะใช้รายละเอียดไทยแทน">
+                    <textarea className="input" style={{ ...inputErr('description'), height: 100, resize: 'vertical' }}
+                      value={form.description} maxLength={500}
+                      onChange={e => set('description', e.target.value)} placeholder="(optional) Description in English..." />
+                    <span style={{ fontSize: 12, color: 'var(--text3)', marginTop: 2, display: 'block' }}>{form.description.length}/500</span>
                   </Field>
                 </div>
 
@@ -715,16 +726,22 @@ export function ProductModal({ product, onClose, onSave }: Props) {
               <button type="button" className="btn-ghost" onClick={onClose} disabled={saving}>
                 {savedCount > 0 ? 'เสร็จสิ้น' : 'ยกเลิก'}
               </button>
-              {!isEdit && (
-                <button type="button" onClick={handleSaveAndAdd} disabled={saving || uploading} className="btn-ghost"
-                  title="บันทึกแล้วล้างเฉพาะ รหัส/ชื่อ/ราคา/รูป — คงหมวด/สี/รุ่นรถ/วัสดุ/สต็อกไว้ให้กรอกตัวถัดไปเร็ว ๆ"
-                  style={{ borderColor: 'var(--green)', color: 'var(--green)', opacity: (saving || uploading) ? 0.7 : 1 }}>
-                  <Save size={15} /> บันทึก & เพิ่มต่อ
+              {isEdit ? (
+                <button type="submit" className="btn-primary" disabled={saving || uploading} style={{ opacity: saving ? 0.7 : 1 }}>
+                  <Save size={15} /> {saving ? 'กำลังบันทึก...' : 'บันทึก'}
                 </button>
+              ) : (
+                <>
+                  <button type="submit" className="btn-ghost" disabled={saving || uploading}>
+                    <Save size={15} /> บันทึก & ปิด
+                  </button>
+                  <button type="button" onClick={handleSaveAndAdd} disabled={saving || uploading} className="btn-primary"
+                    title="บันทึกแล้วเปิดฟอร์มเปล่าต่อ — คงหมวด/สี/รุ่นรถ/วัสดุ/สต็อกไว้ให้กรอกตัวถัดไปเร็ว ๆ"
+                    style={{ opacity: (saving || uploading) ? 0.7 : 1 }}>
+                    <Save size={15} /> {saving ? 'กำลังบันทึก...' : 'บันทึก & เพิ่มต่อ'}
+                  </button>
+                </>
               )}
-              <button type="submit" className="btn-primary" disabled={saving || uploading} style={{ opacity: saving ? 0.7 : 1 }}>
-                <Save size={15} /> {saving ? 'กำลังบันทึก...' : isEdit ? 'บันทึก' : 'บันทึก & ปิด'}
-              </button>
             </div>
           </div>
         </form>
@@ -733,11 +750,12 @@ export function ProductModal({ product, onClose, onSave }: Props) {
   )
 }
 
-function Field({ label, error, children }: { label: string; error?: string; children: React.ReactNode }) {
+function Field({ label, error, hint, children }: { label: string; error?: string; hint?: string; children: React.ReactNode }) {
   return (
     <div style={{ marginBottom: 4 }}>
       <label style={{ fontSize: 14, color: 'var(--text2)', display: 'block', marginBottom: 5 }}>{label}</label>
       {children}
+      {hint && !error && <p style={{ fontSize: 12, color: 'var(--text3)', marginTop: 3 }}>{hint}</p>}
       {error && <p style={{ fontSize: 13, color: 'var(--red)', marginTop: 3 }}>{error}</p>}
     </div>
   )
