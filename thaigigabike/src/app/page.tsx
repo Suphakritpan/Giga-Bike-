@@ -5,6 +5,7 @@ import { ChevronRight, ChevronLeft, Zap, Shield, Truck, Award, Star, PenLine } f
 import { useLang } from '@/lib/lang'
 import { products, bikeModels, categories } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
+import { AnnouncementBanner } from '@/components/announcements/AnnouncementBanner'
 
 type Review = { id: string; reviewer_name: string; rating: number; comment: string | null; product_id: string | null }
 
@@ -276,6 +277,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Featured announcement (admin-managed; hidden when none active) */}
+      <AnnouncementBanner />
 
       {/* Filter bar — bike multi-select */}
       <section style={{ background: 'var(--bg)', borderBottom: '0.5px solid var(--border)', padding: '16px 0' }}>
