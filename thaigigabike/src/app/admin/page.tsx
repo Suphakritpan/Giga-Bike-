@@ -5,7 +5,7 @@ import {
   Package, ShoppingBag, TrendingUp, Plus, Edit, Trash2, Download,
   ChevronDown, ChevronUp, Minus, AlertTriangle, CheckCircle, XCircle, Boxes,
   LogOut, Zap, Bell, MessageCircle, Star,
-  Send, Camera, X, Receipt, Headphones,
+  Receipt, Headphones,
 } from 'lucide-react'
 import { products as initialProducts } from '@/data/products'
 import type { Product } from '@/data/products'
@@ -13,187 +13,15 @@ import { ProductModal } from '@/components/admin/ProductModal'
 import { toCsvRow } from '@/lib/csv'
 import { ConfirmDialog, Spinner } from '@/components/ui'
 import { AdminSearchInput, AdminPagination, AdminTableShell } from './components/AdminUI'
-
-type OrderStatus = 'pending' | 'paid' | 'shipping' | 'delivered' | 'cancelled'
-type Tab = 'products' | 'orders' | 'stock' | 'messages' | 'tickets' | 'tax' | 'reviews'
-
-type AdminMessage = {
-  id: string; sender_name: string; sender_email: string; sender_phone: string | null
-  subject: string | null; body: string; product_code: string | null
-  status: 'new' | 'replied' | 'closed'; created_at: string
-}
-type AdminReview = {
-  id: string; product_id: string | null; reviewer_name: string
-  rating: number; comment: string | null; published: boolean; created_at: string
-}
-type TicketStatus = 'open' | 'answered' | 'closed'
-type AdminTicket = {
-  id: string; user_id: string | null; email: string; topic: string
-  order_id: string | null; subject: string; body: string; images: string[]
-  status: TicketStatus; rating: number | null; created_at: string
-}
-type TaxRequest = {
-  id: string; user_id: string | null; order_id: string; tax_id: string
-  company: string; address: string; status: 'requested' | 'issued'; created_at: string
-  order_total: number | null; order_email: string | null
-}
-type ThreadReply = { id: string; author: 'customer' | 'shop'; body: string; images: string[]; created_at: string }
-
-const TICKET_TOPIC_LABELS: Record<string, string> = {
-  general: 'ทั่วไป', order: 'ออเดอร์', shipping: 'จัดส่ง', product: 'สินค้า',
-  refund: 'คืนเงิน', claim: 'เคลม', payment: 'ชำระเงิน',
-}
-
-const LOW_STOCK_THRESHOLD = 5
-const PAGE_SIZE = 50
-
-type OrderItem = {
-  productId: string; code: string; name: string; nameTh: string
-  price: number; quantity: number; color: string
-}
-type Order = {
-  id: string; status: OrderStatus; created_at: string
-  recipient_name: string; recipient_phone: string; recipient_address: string
-  shipping_method: string; shipping_fee: number; payment_method: string
-  items: OrderItem[]; subtotal: number; cod_fee: number; total: number
-  slip_url: string | null; slip_path: string | null; tracking_no: string | null
-}
-
-const STATUS_COLORS: Record<OrderStatus, string> = {
-  pending: 'badge-gray', paid: 'badge-green', shipping: 'badge-orange',
-  delivered: 'badge-green', cancelled: 'badge-red',
-}
-const STATUS_LABELS: Record<OrderStatus, string> = {
-  pending: 'รอชำระ', paid: 'ชำระแล้ว', shipping: 'กำลังส่ง',
-  delivered: 'สำเร็จ', cancelled: 'ยกเลิก',
-}
-
-/* ── Stat card ─── */
-function StatCard({ icon, value, label, color, sub }: { icon: React.ReactNode; value: number | string; label: string; color: string; sub?: string }) {
-  return (
-    <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, padding: '16px 20px', display: 'flex', gap: 14, alignItems: 'center' }}>
-      <div style={{ width: 42, height: 42, borderRadius: 10, background: `${color}18`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-        {icon}
-      </div>
-      <div style={{ minWidth: 0 }}>
-        <div style={{ fontSize: 28, fontWeight: 800, fontFamily: 'var(--font-display)', color, lineHeight: 1.1 }}>{value}</div>
-        <div style={{ fontSize: 14, color: 'var(--text2)', marginTop: 1 }}>{label}</div>
-        {sub && <div style={{ fontSize: 12, color: 'var(--text3)', marginTop: 1 }}>{sub}</div>}
-      </div>
-    </div>
-  )
-}
-
-/* ── Alert banner ─── */
-function AlertBanner({ type, message }: { type: 'error' | 'warn'; message: string }) {
-  const isErr = type === 'error'
-  return (
-    <div style={{
-      display: 'flex', alignItems: 'center', gap: 10,
-      padding: '10px 16px', borderRadius: 8, fontSize: 14,
-      background: isErr ? 'rgba(239,68,68,.09)' : 'rgba(249,115,22,.09)',
-      border: `0.5px solid ${isErr ? 'rgba(239,68,68,.3)' : 'rgba(249,115,22,.3)'}`,
-      color: isErr ? '#ef4444' : '#f97316',
-    }}>
-      {isErr ? <XCircle size={15} /> : <AlertTriangle size={15} />}
-      {message}
-    </div>
-  )
-}
-
-/* ── Admin reply thread (chat bubbles + reply box with image) ─── */
-function AdminThread({ base, onSent }: { base: string; onSent?: () => void }) {
-  const [replies, setReplies]   = useState<ThreadReply[]>([])
-  const [loading, setLoading]   = useState(true)
-  const [text, setText]         = useState('')
-  const [images, setImages]     = useState<string[]>([])
-  const [uploading, setUploading] = useState(false)
-  const [sending, setSending]   = useState(false)
-
-  const load = useCallback(async () => {
-    const d = await fetch(base).then(r => r.json()).catch(() => ({ replies: [] }))
-    setReplies(d.replies ?? [])
-    setLoading(false)
-  }, [base])
-  useEffect(() => { load() }, [load])
-
-  const upload = async (file: File) => {
-    if (images.length >= 3) return
-    setUploading(true)
-    const fd = new FormData(); fd.append('image', file)
-    const d = await fetch('/api/reviews/upload-image', { method: 'POST', body: fd }).then(r => r.json()).catch(() => ({}))
-    if (d.url) setImages(prev => [...prev, d.url])
-    setUploading(false)
-  }
-
-  const send = async () => {
-    if (!text.trim()) return
-    setSending(true)
-    await fetch(base, {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ body: text, images }),
-    })
-    setText(''); setImages([]); setSending(false)
-    await load()
-    onSent?.()
-  }
-
-  return (
-    <div style={{ marginTop: 12, paddingTop: 12, borderTop: '0.5px solid var(--border)' }}>
-      {loading ? (
-        <div style={{ color: 'var(--text3)', fontSize: 13 }}>กำลังโหลด...</div>
-      ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 12 }}>
-          {replies.length === 0 && <p style={{ fontSize: 13, color: 'var(--text3)' }}>ยังไม่มีการตอบกลับ</p>}
-          {replies.map(r => (
-            <div key={r.id} style={{ alignSelf: r.author === 'shop' ? 'flex-end' : 'flex-start', maxWidth: '80%' }}>
-              <div style={{
-                background: r.author === 'shop' ? 'var(--green)' : 'var(--bg3)',
-                color: r.author === 'shop' ? '#fff' : 'var(--text)',
-                borderRadius: 12, padding: '8px 12px', fontSize: 14, lineHeight: 1.5, whiteSpace: 'pre-wrap',
-              }}>
-                {r.body}
-                {r.images?.length > 0 && (
-                  <div style={{ display: 'flex', gap: 6, marginTop: 6, flexWrap: 'wrap' }}>
-                    {r.images.map((u, i) => <a key={i} href={u} target="_blank" rel="noreferrer"><img src={u} alt="" style={{ width: 60, height: 60, objectFit: 'cover', borderRadius: 6 }} /></a>)}
-                  </div>
-                )}
-              </div>
-              <div style={{ fontSize: 10, color: 'var(--text3)', marginTop: 2, textAlign: r.author === 'shop' ? 'right' : 'left' }}>
-                {r.author === 'shop' ? 'ร้าน' : 'ลูกค้า'} · {new Date(r.created_at).toLocaleString('th-TH')}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {/* reply box */}
-      <div style={{ display: 'flex', gap: 6, alignItems: 'flex-end' }}>
-        <div style={{ flex: 1 }}>
-          {images.length > 0 && (
-            <div style={{ display: 'flex', gap: 6, marginBottom: 6, flexWrap: 'wrap' }}>
-              {images.map((u, i) => (
-                <div key={i} style={{ position: 'relative' }}>
-                  <img src={u} alt="" style={{ width: 44, height: 44, objectFit: 'cover', borderRadius: 6 }} />
-                  <button onClick={() => setImages(p => p.filter((_, j) => j !== i))} style={{ position: 'absolute', top: -5, right: -5, width: 16, height: 16, borderRadius: '50%', background: 'var(--red)', border: 'none', color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><X size={9} /></button>
-                </div>
-              ))}
-            </div>
-          )}
-          <textarea value={text} onChange={e => setText(e.target.value)} placeholder="พิมพ์คำตอบถึงลูกค้า..."
-            style={{ width: '100%', minHeight: 44, padding: '8px 12px', fontSize: 14, border: '1px solid var(--border2)', borderRadius: 9, background: 'var(--bg3)', color: 'var(--text)', outline: 'none', boxSizing: 'border-box', resize: 'vertical' }} />
-        </div>
-        <label style={{ width: 40, height: 40, borderRadius: 9, border: '1px solid var(--border2)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'var(--text3)', flexShrink: 0 }}>
-          <input type="file" accept="image/jpeg,image/png,image/webp" style={{ display: 'none' }} onChange={e => { const f = e.target.files?.[0]; if (f) upload(f) }} disabled={uploading || images.length >= 3} />
-          {uploading ? <Spinner small /> : <Camera size={16} />}
-        </label>
-        <button onClick={send} disabled={sending || !text.trim()} className="btn-primary" style={{ width: 40, height: 40, padding: 0, justifyContent: 'center', flexShrink: 0, opacity: (sending || !text.trim()) ? 0.6 : 1 }}>
-          <Send size={16} />
-        </button>
-      </div>
-    </div>
-  )
-}
+import { StatCard } from './components/StatCard'
+import { AlertBanner } from './components/AlertBanner'
+import { AdminThread } from './components/AdminThread'
+import {
+  TICKET_TOPIC_LABELS, LOW_STOCK_THRESHOLD, PAGE_SIZE, STATUS_COLORS, STATUS_LABELS,
+} from './components/types'
+import type {
+  OrderStatus, Tab, AdminMessage, AdminReview, TicketStatus, AdminTicket, TaxRequest, Order,
+} from './components/types'
 
 export default function AdminPage() {
   const router  = useRouter()
