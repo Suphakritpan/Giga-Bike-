@@ -1,5 +1,7 @@
 'use client'
+import { useState } from 'react'
 import { ChevronDown, Download } from 'lucide-react'
+import { ConfirmDialog } from '@/components/ui'
 import { AdminSearchInput } from './AdminUI'
 import { STATUS_COLORS, STATUS_LABELS } from './types'
 import type { Order, OrderStatus } from './types'
@@ -29,6 +31,7 @@ export function OrdersTab({
   savingTracking: boolean
   onSaveTracking: (orderId: string) => void
 }) {
+  const [cancelId, setCancelId] = useState<string | null>(null)
   const isFiltered = search !== '' || statusFilter !== 'all'
   const STATUS_FILTERS: { value: OrderStatus | 'all'; label: string }[] = [
     { value: 'all', label: 'ทั้งหมด' },
@@ -132,7 +135,11 @@ export function OrdersTab({
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                   <span style={{ fontSize: 13, color: 'var(--text3)' }}>สถานะ:</span>
                   <div style={{ position: 'relative', display: 'inline-block' }}>
-                    <select value={o.status} onChange={e => onUpdateStatus(o.id, e.target.value as OrderStatus)} className="input" style={{ fontSize: 13, padding: '4px 26px 4px 8px', appearance: 'none', width: 'auto', cursor: 'pointer' }}>
+                    <select value={o.status} onChange={e => {
+                      const next = e.target.value as OrderStatus
+                      if (next === 'cancelled') setCancelId(o.id)
+                      else onUpdateStatus(o.id, next)
+                    }} className="input" style={{ fontSize: 13, padding: '4px 26px 4px 8px', appearance: 'none', width: 'auto', cursor: 'pointer' }}>
                       {(['pending', 'paid', 'shipping', 'delivered', 'cancelled'] as OrderStatus[]).map(s => (
                         <option key={s} value={s}>{STATUS_LABELS[s]}</option>
                       ))}
@@ -165,6 +172,17 @@ export function OrdersTab({
           ))}
         </div>
       )}
+
+      <ConfirmDialog
+        open={!!cancelId}
+        danger
+        title="ยกเลิกออเดอร์นี้?"
+        message="ระบบจะส่งอีเมลแจ้งลูกค้าว่าออเดอร์ถูกยกเลิก"
+        confirmLabel="ยกเลิกออเดอร์"
+        cancelLabel="ไม่ใช่ตอนนี้"
+        onConfirm={() => { if (cancelId) onUpdateStatus(cancelId, 'cancelled'); setCancelId(null) }}
+        onCancel={() => setCancelId(null)}
+      />
     </div>
   )
 }

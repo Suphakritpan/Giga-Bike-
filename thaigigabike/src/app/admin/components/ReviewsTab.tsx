@@ -1,5 +1,7 @@
 'use client'
+import { useState } from 'react'
 import { Star } from 'lucide-react'
+import { ConfirmDialog } from '@/components/ui'
 import type { AdminReview } from './types'
 
 /** Reviews tab — moderation list (approve/hide/delete). */
@@ -11,6 +13,7 @@ export function ReviewsTab({ reviews, pendingCount, loading, onRefresh, onToggle
   onTogglePublished: (id: string, published: boolean) => void
   onDelete: (id: string) => void
 }) {
+  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null)
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
@@ -75,7 +78,7 @@ export function ReviewsTab({ reviews, pendingCount, loading, onRefresh, onToggle
                   {rev.published ? 'ซ่อน' : '✓ Approve'}
                 </button>
                 <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px', color: 'var(--red)' }}
-                  onClick={() => onDelete(rev.id)}>
+                  onClick={() => setConfirmDeleteId(rev.id)}>
                   ลบ
                 </button>
               </div>
@@ -83,6 +86,17 @@ export function ReviewsTab({ reviews, pendingCount, loading, onRefresh, onToggle
           ))}
         </div>
       )}
+
+      <ConfirmDialog
+        open={!!confirmDeleteId}
+        danger
+        title="ลบรีวิวนี้?"
+        message="รีวิวจะถูกลบออกจากระบบถาวร ไม่สามารถย้อนกลับได้"
+        confirmLabel="ลบรีวิว"
+        cancelLabel="ยกเลิก"
+        onConfirm={() => { if (confirmDeleteId) onDelete(confirmDeleteId); setConfirmDeleteId(null) }}
+        onCancel={() => setConfirmDeleteId(null)}
+      />
     </div>
   )
 }
