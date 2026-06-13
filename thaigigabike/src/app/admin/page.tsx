@@ -20,6 +20,7 @@ import { MessagesTab } from './components/MessagesTab'
 import { TicketsTab } from './components/TicketsTab'
 import { TaxTab } from './components/TaxTab'
 import { ReviewsTab } from './components/ReviewsTab'
+import { AnnouncementsTab } from './components/AnnouncementsTab'
 import {
   TICKET_TOPIC_LABELS, LOW_STOCK_THRESHOLD, PAGE_SIZE, STATUS_COLORS, STATUS_LABELS,
 } from './components/types'
@@ -390,6 +391,7 @@ export default function AdminPage() {
     { id: 'tickets',  label: 'ซัพพอร์ต',  count: openTicketsCount > 0 ? openTicketsCount : undefined },
     { id: 'tax',      label: 'ใบกำกับภาษี', count: pendingTaxCount > 0 ? pendingTaxCount : undefined },
     { id: 'reviews',  label: 'รีวิว',     count: pendingReviewsCount > 0 ? pendingReviewsCount : undefined },
+    { id: 'announcements', label: 'ประกาศ' },
   ]
 
   // ─── Loading / Auth check ───
@@ -595,6 +597,9 @@ export default function AdminPage() {
             onDelete={deleteReview}
           />
         )}
+
+        {/* ── Announcements tab ─────────────────── */}
+        {tab === 'announcements' && <AnnouncementsTab />}
 
       </div>
 

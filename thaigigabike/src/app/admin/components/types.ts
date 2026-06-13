@@ -2,7 +2,7 @@
 // Extracted verbatim from admin/page.tsx (no value changes).
 
 export type OrderStatus = 'pending' | 'paid' | 'shipping' | 'delivered' | 'cancelled'
-export type Tab = 'products' | 'orders' | 'stock' | 'messages' | 'tickets' | 'tax' | 'reviews'
+export type Tab = 'products' | 'orders' | 'stock' | 'messages' | 'tickets' | 'tax' | 'reviews' | 'announcements'
 
 export type AdminMessage = {
   id: string; sender_name: string; sender_email: string; sender_phone: string | null
@@ -25,6 +25,17 @@ export type TaxRequest = {
   order_total: number | null; order_email: string | null
 }
 export type ThreadReply = { id: string; author: 'customer' | 'shop'; body: string; images: string[]; created_at: string }
+
+export type AnnouncementType = 'info' | 'promo' | 'update' | 'shipping'
+export type Announcement = {
+  id: string; title_th: string; title_en: string | null
+  body_th: string | null; body_en: string | null
+  type: AnnouncementType; published: boolean; pinned: boolean; created_at: string
+}
+export const ANNOUNCEMENT_TYPES: AnnouncementType[] = ['info', 'promo', 'update', 'shipping']
+export const ANNOUNCEMENT_TYPE_LABELS: Record<AnnouncementType, string> = {
+  info: 'ข่าวสาร', promo: 'โปรโมชั่น', update: 'อัปเดต', shipping: 'การจัดส่ง',
+}
 
 export type OrderItem = {
   productId: string; code: string; name: string; nameTh: string
