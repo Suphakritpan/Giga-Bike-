@@ -259,6 +259,10 @@ export default function AdminPage() {
     setLoadingMessages(false)
   }, [])
 
+  // Load messages eagerly (not only on tab open) so the dashboard "new
+  // messages" alert + the tab badge are accurate as soon as admin lands.
+  useEffect(() => { if (authChecked) loadMessages() }, [authChecked, loadMessages])
+
   const markMessage = async (id: string, status: AdminMessage['status']) => {
     setAdminMessages(prev => prev.map(m => m.id === id ? { ...m, status } : m))
     await fetch(`/api/admin/messages/${encodeURIComponent(id)}`, {
@@ -295,6 +299,9 @@ export default function AdminPage() {
     if (res.ok) { const j = await res.json(); setAdminTickets(j.tickets ?? []) }
     setLoadingTickets(false)
   }, [])
+
+  // Eager-load tickets too so the dashboard alert + badge are accurate on landing.
+  useEffect(() => { if (authChecked) loadTickets() }, [authChecked, loadTickets])
 
   const setTicketStatus = async (id: string, status: TicketStatus) => {
     setAdminTickets(prev => prev.map(t => t.id === id ? { ...t, status } : t))
@@ -488,11 +495,13 @@ export default function AdminPage() {
         </div>
 
         {/* ── Alert banners ─────────────────────── */}
-        {(outOfStock > 0 || lowStock > 0 || pendingCount > 0) && (
+        {(outOfStock > 0 || lowStock > 0 || pendingCount > 0 || newMessagesCount > 0 || openTicketsCount > 0) && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 20 }}>
             {outOfStock > 0 && <AlertBanner type="error" message={`สินค้าหมดสต็อก ${outOfStock} รายการ — คลิก "สต็อก" เพื่อจัดการ`} />}
             {lowStock > 0 && <AlertBanner type="warn" message={`สต็อกใกล้หมด ${lowStock} รายการ (≤${LOW_STOCK_THRESHOLD} ชิ้น)`} />}
             {pendingCount > 0 && <AlertBanner type="warn" message={`ออเดอร์รอดำเนินการ ${pendingCount} รายการ — คลิก "ออเดอร์" เพื่อตรวจสอบ`} />}
+            {newMessagesCount > 0 && <AlertBanner type="warn" message={`ข้อความใหม่ ${newMessagesCount} รายการ — คลิก "ข้อความ" เพื่อตอบ`} />}
+            {openTicketsCount > 0 && <AlertBanner type="warn" message={`ตั๋วซัพพอร์ตรอตอบ ${openTicketsCount} รายการ — คลิก "ซัพพอร์ต"`} />}
           </div>
         )}
 
