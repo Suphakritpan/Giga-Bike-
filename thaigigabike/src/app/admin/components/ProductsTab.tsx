@@ -1,21 +1,21 @@
 'use client'
-import { useState, useEffect } from 'react'
-import { Plus, Edit, Trash2, LayoutList, LayoutGrid, Package } from 'lucide-react'
+import { Plus, Edit, Trash2, Package } from 'lucide-react'
 import { Spinner } from '@/components/ui'
-import { AdminSearchInput, AdminPagination, AdminTableShell } from './AdminUI'
+import { AdminSearchInput, AdminPagination, AdminTableShell, AdminViewToggle, AdminSortSelect, useAdminView } from './AdminUI'
 import { LOW_STOCK_THRESHOLD } from './types'
+import type { ProductSort } from './types'
 import type { Product } from '@/data/products'
 
-type View = 'table' | 'grid'
-const VIEW_KEY = 'tgb-admin-products-view'
-
-/** Products tab — table OR card-grid view (toggle, remembered in localStorage),
- *  search, add/edit/delete, pagination. Data + handlers come from the shell. */
-export function ProductsTab({ rows, total, search, onSearch, page, totalPages, onPageChange, loading, onAdd, onEdit, onDelete }: {
+/** Products tab — table OR card-grid view (toggle remembered in localStorage),
+ *  search, price/stock sort, add/edit/delete, pagination. Sort + paging happen
+ *  in the shell (sort applies across all pages, not just the current one). */
+export function ProductsTab({ rows, total, search, onSearch, sort, onSort, page, totalPages, onPageChange, loading, onAdd, onEdit, onDelete }: {
   rows: Product[]
   total: number
   search: string
   onSearch: (value: string) => void
+  sort: ProductSort
+  onSort: (value: ProductSort) => void
   page: number
   totalPages: number
   onPageChange: (page: number) => void
@@ -24,25 +24,7 @@ export function ProductsTab({ rows, total, search, onSearch, page, totalPages, o
   onEdit: (p: Product) => void
   onDelete: (p: Product) => void
 }) {
-  const [view, setView] = useState<View>('table')
-  useEffect(() => {
-    try { const v = localStorage.getItem(VIEW_KEY); if (v === 'grid' || v === 'table') setView(v) } catch { /* ignore */ }
-  }, [])
-  const changeView = (v: View) => {
-    setView(v)
-    try { localStorage.setItem(VIEW_KEY, v) } catch { /* ignore */ }
-  }
-
-  const viewBtn = (v: View, label: string, icon: React.ReactNode) => (
-    <button onClick={() => changeView(v)} aria-pressed={view === v} title={label}
-      style={{
-        padding: '6px 10px', border: 'none', cursor: 'pointer', display: 'flex',
-        background: view === v ? '#22c55e' : 'transparent',
-        color: view === v ? '#000' : 'var(--text3)',
-      }}>
-      {icon}
-    </button>
-  )
+  const [view, setView] = useAdminView('tgb-admin-products-view')
 
   const imgBox = (p: Product, size: number, radius: number) => (
     <div style={{ width: size, height: size, borderRadius: radius, overflow: 'hidden', background: 'var(--bg3)', border: '0.5px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -56,11 +38,9 @@ export function ProductsTab({ rows, total, search, onSearch, page, totalPages, o
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: 14, flexWrap: 'wrap' }}>
         <AdminSearchInput value={search} onChange={onSearch} placeholder="ค้นหารหัส / ชื่อสินค้า..." />
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <div style={{ display: 'flex', border: '1px solid var(--border2)', borderRadius: 8, overflow: 'hidden' }} role="group" aria-label="สลับมุมมอง">
-            {viewBtn('table', 'มุมมองตาราง', <LayoutList size={15} />)}
-            {viewBtn('grid', 'มุมมองการ์ด', <LayoutGrid size={15} />)}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+          <AdminSortSelect value={sort} onChange={onSort} />
+          <AdminViewToggle view={view} onChange={setView} />
           <span style={{ fontSize: 14, color: 'var(--text2)' }}>{total} รายการ</span>
           <button className="btn-primary" style={{ fontSize: 15, padding: '7px 14px' }} onClick={onAdd}>
             <Plus size={14} /> เพิ่มสินค้า

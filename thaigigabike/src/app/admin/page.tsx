@@ -22,10 +22,10 @@ import { TaxTab } from './components/TaxTab'
 import { ReviewsTab } from './components/ReviewsTab'
 import { AnnouncementsTab } from './components/AnnouncementsTab'
 import {
-  TICKET_TOPIC_LABELS, LOW_STOCK_THRESHOLD, PAGE_SIZE, STATUS_COLORS, STATUS_LABELS,
+  TICKET_TOPIC_LABELS, LOW_STOCK_THRESHOLD, PAGE_SIZE, STATUS_COLORS, STATUS_LABELS, sortProducts,
 } from './components/types'
 import type {
-  OrderStatus, Tab, AdminMessage, AdminReview, TicketStatus, AdminTicket, TaxRequest, Order,
+  OrderStatus, Tab, AdminMessage, AdminReview, TicketStatus, AdminTicket, TaxRequest, Order, ProductSort,
 } from './components/types'
 
 export default function AdminPage() {
@@ -40,8 +40,10 @@ export default function AdminPage() {
 
   const [productSearch, setProductSearch] = useState('')
   const [productPage, setProductPage]   = useState(1)
+  const [productSort, setProductSort]   = useState<ProductSort>('latest')
   const [stockSearch, setStockSearch]   = useState('')
   const [stockPage, setStockPage]       = useState(1)
+  const [stockSort, setStockSort]       = useState<ProductSort>('stock-asc')
   const [orderSearch, setOrderSearch]   = useState('')
   const [orderStatusFilter, setOrderStatusFilter] = useState<OrderStatus | 'all'>('all')
 
@@ -347,19 +349,19 @@ export default function AdminPage() {
   const pendingCount = orders.filter(o => o.status === 'pending' || o.status === 'paid').length
   const totalRevenue = orders.filter(o => o.status !== 'cancelled').reduce((s, o) => s + o.total, 0)
 
-  const filteredProducts = products.filter(p => {
+  const filteredProducts = sortProducts(products.filter(p => {
     if (!productSearch) return true
     const q = productSearch.toLowerCase()
     return p.code.toLowerCase().includes(q) || p.nameTh.toLowerCase().includes(q) || p.name.toLowerCase().includes(q)
-  })
+  }), productSort)
   const totalProductPages = Math.max(1, Math.ceil(filteredProducts.length / PAGE_SIZE))
   const pagedProducts = filteredProducts.slice((productPage - 1) * PAGE_SIZE, productPage * PAGE_SIZE)
 
-  const filteredStock = products.filter(p => {
+  const filteredStock = sortProducts(products.filter(p => {
     if (!stockSearch) return true
     const q = stockSearch.toLowerCase()
     return p.code.toLowerCase().includes(q) || p.nameTh.toLowerCase().includes(q)
-  }).sort((a, b) => a.stockCount - b.stockCount)
+  }), stockSort)
   const totalStockPages = Math.max(1, Math.ceil(filteredStock.length / PAGE_SIZE))
   const pagedStock = filteredStock.slice((stockPage - 1) * PAGE_SIZE, stockPage * PAGE_SIZE)
 
@@ -499,6 +501,8 @@ export default function AdminPage() {
             total={filteredProducts.length}
             search={productSearch}
             onSearch={v => { setProductSearch(v); setProductPage(1) }}
+            sort={productSort}
+            onSort={s => { setProductSort(s); setProductPage(1) }}
             page={productPage}
             totalPages={totalProductPages}
             onPageChange={setProductPage}
@@ -519,6 +523,8 @@ export default function AdminPage() {
             outOfStock={outOfStock}
             search={stockSearch}
             onSearch={v => { setStockSearch(v); setStockPage(1) }}
+            sort={stockSort}
+            onSort={s => { setStockSort(s); setStockPage(1) }}
             onExport={exportStock}
             page={stockPage}
             totalPages={totalStockPages}

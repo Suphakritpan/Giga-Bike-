@@ -1,5 +1,8 @@
 'use client'
-import { Search } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Search, LayoutList, LayoutGrid, ChevronDown } from 'lucide-react'
+import { PRODUCT_SORT_OPTIONS } from './types'
+import type { ProductSort } from './types'
 
 /**
  * Small building blocks shared across the admin dashboard tabs. Extracted from
@@ -40,6 +43,55 @@ export function AdminPagination({ page, totalPages, onPageChange }: {
       <button className="btn-ghost" style={{ padding: '4px 10px' }} disabled={page === 1} onClick={() => onPageChange(page - 1)}>‹</button>
       <span style={{ fontSize: 14, color: 'var(--text2)' }}>หน้า {page} / {totalPages}</span>
       <button className="btn-ghost" style={{ padding: '4px 10px' }} disabled={page === totalPages} onClick={() => onPageChange(page + 1)}>›</button>
+    </div>
+  )
+}
+
+export type AdminView = 'table' | 'grid'
+
+/** Table/grid view state persisted in localStorage under `storageKey`. */
+export function useAdminView(storageKey: string): [AdminView, (v: AdminView) => void] {
+  const [view, setView] = useState<AdminView>('table')
+  useEffect(() => {
+    try { const v = localStorage.getItem(storageKey); if (v === 'grid' || v === 'table') setView(v) } catch { /* ignore */ }
+  }, [storageKey])
+  const change = (v: AdminView) => {
+    setView(v)
+    try { localStorage.setItem(storageKey, v) } catch { /* ignore */ }
+  }
+  return [view, change]
+}
+
+/** Segmented table / card-grid view switch. */
+export function AdminViewToggle({ view, onChange }: { view: AdminView; onChange: (v: AdminView) => void }) {
+  const btn = (v: AdminView, label: string, icon: React.ReactNode) => (
+    <button onClick={() => onChange(v)} aria-pressed={view === v} title={label}
+      style={{
+        padding: '6px 10px', border: 'none', cursor: 'pointer', display: 'flex',
+        background: view === v ? '#22c55e' : 'transparent',
+        color: view === v ? '#000' : 'var(--text3)',
+      }}>
+      {icon}
+    </button>
+  )
+  return (
+    <div style={{ display: 'flex', border: '1px solid var(--border2)', borderRadius: 8, overflow: 'hidden' }} role="group" aria-label="สลับมุมมอง">
+      {btn('table', 'มุมมองตาราง', <LayoutList size={15} />)}
+      {btn('grid', 'มุมมองการ์ด', <LayoutGrid size={15} />)}
+    </div>
+  )
+}
+
+/** Sort dropdown (price / stock, asc / desc) for the products + stock tabs. */
+export function AdminSortSelect({ value, onChange }: { value: ProductSort; onChange: (v: ProductSort) => void }) {
+  return (
+    <div style={{ position: 'relative', display: 'inline-flex' }}>
+      <select className="input" value={value} onChange={e => onChange(e.target.value as ProductSort)}
+        aria-label="เรียงลำดับ"
+        style={{ fontSize: 14, padding: '7px 30px 7px 12px', appearance: 'none', cursor: 'pointer', width: 'auto' }}>
+        {PRODUCT_SORT_OPTIONS.map(o => <option key={o.value} value={o.value}>{o.label}</option>)}
+      </select>
+      <ChevronDown size={13} style={{ position: 'absolute', right: 9, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none', color: 'var(--text3)' }} />
     </div>
   )
 }

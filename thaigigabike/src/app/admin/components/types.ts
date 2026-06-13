@@ -1,5 +1,6 @@
 // Shared types + constants for the admin dashboard and its tab components.
 // Extracted verbatim from admin/page.tsx (no value changes).
+import type { Product } from '@/data/products'
 
 export type OrderStatus = 'pending' | 'paid' | 'shipping' | 'delivered' | 'cancelled'
 export type Tab = 'products' | 'orders' | 'stock' | 'messages' | 'tickets' | 'tax' | 'reviews' | 'announcements'
@@ -56,6 +57,28 @@ export const TICKET_TOPIC_LABELS: Record<string, string> = {
 
 export const LOW_STOCK_THRESHOLD = 5
 export const PAGE_SIZE = 50
+
+// Sort for the products + stock tabs (price / stock, ascending or descending).
+export type ProductSort = 'latest' | 'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc'
+export const PRODUCT_SORT_OPTIONS: { value: ProductSort; label: string }[] = [
+  { value: 'latest',     label: 'ล่าสุด' },
+  { value: 'price-asc',  label: 'ราคา: น้อย → มาก' },
+  { value: 'price-desc', label: 'ราคา: มาก → น้อย' },
+  { value: 'stock-asc',  label: 'สต็อก: น้อย → มาก' },
+  { value: 'stock-desc', label: 'สต็อก: มาก → น้อย' },
+]
+/** Returns a new sorted array; 'latest' keeps the incoming order. */
+export function sortProducts(list: Product[], sort: ProductSort): Product[] {
+  if (sort === 'latest') return list
+  const s = [...list]
+  switch (sort) {
+    case 'price-asc':  return s.sort((a, b) => a.price - b.price)
+    case 'price-desc': return s.sort((a, b) => b.price - a.price)
+    case 'stock-asc':  return s.sort((a, b) => a.stockCount - b.stockCount)
+    case 'stock-desc': return s.sort((a, b) => b.stockCount - a.stockCount)
+    default:           return s
+  }
+}
 
 export const STATUS_COLORS: Record<OrderStatus, string> = {
   pending: 'badge-gray', paid: 'badge-green', shipping: 'badge-orange',
