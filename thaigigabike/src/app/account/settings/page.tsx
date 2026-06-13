@@ -5,7 +5,7 @@ import { Sun, Moon, Globe, Bell, Download, Trash2, AlertTriangle, Check, Shield,
 import { useLang } from '@/lib/lang'
 import { useTheme } from '@/lib/theme'
 import { useAuth } from '@/lib/auth/AuthContext'
-import { Card, Toggle, PageHeader } from '@/components/ui'
+import { Card, Toggle, PageHeader, ConfirmDialog } from '@/components/ui'
 import type { Locale } from '@/lib/i18n'
 
 type LoginEvent = { id: string; ip_hash: string | null; user_agent: string | null; created_at: string }
@@ -38,6 +38,8 @@ export default function SettingsPage() {
   const [delPassword, setDelPassword] = useState('')
   const [deleting, setDeleting] = useState(false)
   const [delError, setDelError] = useState('')
+  const [showLogoutAll, setShowLogoutAll] = useState(false)
+  const [loggingOutAll, setLoggingOutAll] = useState(false)
 
   useEffect(() => {
     if (profile) setPrefs({ notify_order: profile.notify_order, notify_promo: profile.notify_promo, notify_reply: profile.notify_reply })
@@ -74,7 +76,7 @@ export default function SettingsPage() {
   }
 
   const logoutAllDevices = async () => {
-    if (!confirm(locale === 'th' ? 'ออกจากระบบทุกอุปกรณ์?' : 'Log out from all devices?')) return
+    setLoggingOutAll(true)
     await fetch('/api/auth/logout-all', { method: 'POST' }).catch(() => {})
     await signOut()
     router.push('/login')
@@ -263,7 +265,7 @@ export default function SettingsPage() {
         )}
 
         {/* Logout all devices */}
-        <button onClick={logoutAllDevices} className="btn-ghost" style={{ fontSize: 14, color: 'var(--orange)', display: 'block' }}>
+        <button onClick={() => setShowLogoutAll(true)} className="btn-ghost" style={{ fontSize: 14, color: 'var(--orange)', display: 'block' }}>
           <LogOut size={15} /> {locale === 'th' ? 'ออกจากระบบทุกอุปกรณ์' : 'Log out all devices'}
         </button>
 
@@ -303,6 +305,20 @@ export default function SettingsPage() {
           </div>
         )}
       </div>
+
+      <ConfirmDialog
+        open={showLogoutAll}
+        danger
+        loading={loggingOutAll}
+        title={locale === 'th' ? 'ออกจากระบบทุกอุปกรณ์?' : 'Log out from all devices?'}
+        message={locale === 'th'
+          ? 'ทุกอุปกรณ์ที่เข้าสู่ระบบอยู่จะถูกออกจากระบบ และคุณต้องเข้าสู่ระบบใหม่'
+          : 'Every signed-in device will be logged out and you will need to sign in again.'}
+        confirmLabel={locale === 'th' ? 'ออกจากระบบทั้งหมด' : 'Log out all'}
+        cancelLabel={t.account.cancel}
+        onConfirm={logoutAllDevices}
+        onCancel={() => setShowLogoutAll(false)}
+      />
     </div>
   )
 }

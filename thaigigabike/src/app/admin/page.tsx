@@ -365,9 +365,11 @@ export default function AdminPage() {
   }
 
   const [slipLoading, setSlipLoading] = useState<string | null>(null)
+  const [slipError, setSlipError] = useState('')
   // Open the order's payment slip via a short-lived signed URL (private bucket).
   const viewSlip = async (orderId: string) => {
     setSlipLoading(orderId)
+    setSlipError('')
     // Open the tab synchronously so the browser doesn't block it after the await.
     const w = window.open('', '_blank')
     try {
@@ -377,15 +379,20 @@ export default function AdminPage() {
         if (w) w.location.href = data.signedUrl
       } else {
         if (w) w.close()
-        alert(data.error === 'No slip on this order' ? 'ออเดอร์นี้ไม่มีสลิป' : 'ไม่สามารถเปิดสลิปได้')
+        setSlipError(data.error === 'No slip on this order' ? 'ออเดอร์นี้ไม่มีสลิป' : 'ไม่สามารถเปิดสลิปได้')
       }
     } catch {
       if (w) w.close()
-      alert('ไม่สามารถเปิดสลิปได้')
+      setSlipError('ไม่สามารถเปิดสลิปได้')
     } finally {
       setSlipLoading(null)
     }
   }
+  useEffect(() => {
+    if (!slipError) return
+    const id = setTimeout(() => setSlipError(''), 3500)
+    return () => clearTimeout(id)
+  }, [slipError])
 
   const saveTracking = async (orderId: string) => {
     const no = trackingInput.trim()
@@ -561,6 +568,13 @@ export default function AdminPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>
+
+      {/* Transient error toast (replaces native alert) */}
+      {slipError && (
+        <div role="alert" className="animate-fade-up" style={{ position: 'fixed', top: 70, left: '50%', transform: 'translateX(-50%)', zIndex: 400, background: 'var(--red)', color: '#fff', padding: '10px 18px', borderRadius: 10, fontSize: 14, fontWeight: 600, boxShadow: '0 6px 24px rgba(0,0,0,.25)' }}>
+          {slipError}
+        </div>
+      )}
 
       {/* ── Top bar ─────────────────────────────── */}
       <div style={{

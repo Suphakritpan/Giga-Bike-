@@ -2,11 +2,11 @@
 import { useEffect, useState, useCallback } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
-import { ChevronLeft, Printer, FileText, XCircle, RotateCcw, Truck } from 'lucide-react'
+import { ChevronLeft, Printer, FileText, XCircle, RotateCcw, Truck, Check } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 import { useCart } from '@/lib/cart'
 import { getProductById } from '@/data/products'
-import { SkeletonList, EmptyState } from '@/components/ui'
+import { SkeletonList, EmptyState, ConfirmDialog } from '@/components/ui'
 
 type OrderItem = { productId: string; code: string; name: string; nameTh: string; price: number; quantity: number; color: string }
 type Order = {
@@ -24,6 +24,9 @@ export default function OrderDetailPage() {
   const [loading, setLoading] = useState(true)
   const [showTax, setShowTax] = useState(false)
   const [cancelling, setCancelling] = useState(false)
+  const [showCancel, setShowCancel] = useState(false)
+  const [cancelError, setCancelError] = useState('')
+  const [reordered, setReordered] = useState(false)
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -34,12 +37,16 @@ export default function OrderDetailPage() {
   useEffect(() => { load() }, [load])
 
   const cancel = async () => {
-    if (!confirm(locale === 'th' ? 'ยืนยันยกเลิกออเดอร์?' : 'Cancel this order?')) return
+    setCancelError('')
     setCancelling(true)
     const res = await fetch(`/api/account/orders/${encodeURIComponent(orderId)}/cancel`, { method: 'POST' })
     setCancelling(false)
+    setShowCancel(false)
     if (res.ok) load()
-    else { const e = await res.json(); alert(e.error) }
+    else {
+      const e = await res.json().catch(() => ({}))
+      setCancelError(e.error || (locale === 'th' ? 'ยกเลิกออเดอร์ไม่สำเร็จ กรุณาลองใหม่' : 'Could not cancel the order. Please try again.'))
+    }
   }
 
   const reorder = () => {
@@ -47,7 +54,8 @@ export default function OrderDetailPage() {
       const p = getProductById(it.productId)
       if (p) for (let i = 0; i < it.quantity; i++) add(p, it.color)
     })
-    alert(locale === 'th' ? 'เพิ่มลงตะกร้าแล้ว' : 'Added to cart')
+    setReordered(true)
+    setTimeout(() => setReordered(false), 2500)
   }
 
   if (loading) return <SkeletonList rows={3} height={120} />
@@ -134,13 +142,37 @@ export default function OrderDetailPage() {
           <Truck size={15} /> {locale === 'th' ? 'ติดตามพัสดุ' : 'Track'}
         </Link>
         {canCancel && (
-          <button onClick={cancel} disabled={cancelling} className="btn-ghost" style={{ fontSize: 14, color: 'var(--red)' }}>
-            <XCircle size={15} /> {cancelling ? '...' : (locale === 'th' ? 'ยกเลิกออเดอร์' : 'Cancel order')}
+          <button onClick={() => { setCancelError(''); setShowCancel(true) }} className="btn-ghost" style={{ fontSize: 14, color: 'var(--red)' }}>
+            <XCircle size={15} /> {locale === 'th' ? 'ยกเลิกออเดอร์' : 'Cancel order'}
           </button>
         )}
       </div>
 
+      {/* Action feedback (replaces native alert popups) */}
+      {reordered && (
+        <p role="status" className="animate-fade-up" style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 14, color: 'var(--green)', marginTop: 12 }}>
+          <Check size={15} /> {locale === 'th' ? 'เพิ่มลงตะกร้าแล้ว' : 'Added to cart'}
+        </p>
+      )}
+      {cancelError && (
+        <p role="alert" style={{ fontSize: 14, color: 'var(--red)', marginTop: 12 }}>{cancelError}</p>
+      )}
+
       {showTax && <TaxForm orderId={order.id} onClose={() => setShowTax(false)} />}
+
+      <ConfirmDialog
+        open={showCancel}
+        danger
+        loading={cancelling}
+        title={locale === 'th' ? 'ยกเลิกออเดอร์นี้?' : 'Cancel this order?'}
+        message={locale === 'th'
+          ? 'เมื่อยกเลิกแล้วไม่สามารถย้อนกลับได้ หากชำระเงินไปแล้ว ทีมงานจะติดต่อเรื่องการคืนเงิน'
+          : 'This cannot be undone. If you have already paid, our team will contact you about a refund.'}
+        confirmLabel={locale === 'th' ? 'ยกเลิกออเดอร์' : 'Cancel order'}
+        cancelLabel={locale === 'th' ? 'ไม่ใช่ตอนนี้' : 'Not now'}
+        onConfirm={cancel}
+        onCancel={() => setShowCancel(false)}
+      />
 
       <style>{`
         @media print {
