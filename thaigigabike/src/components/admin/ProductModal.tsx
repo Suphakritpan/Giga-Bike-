@@ -93,6 +93,8 @@ export function ProductModal({ product, onClose, onSave }: Props) {
   const [uploadError, setUploadError] = useState('')
   const [urlInput, setUrlInput] = useState('')
   const [dragOver, setDragOver] = useState(false)
+  const [customColor, setCustomColor] = useState('')
+  const [customBike, setCustomBike] = useState('')
 
   useEffect(() => {
     if (product) {
@@ -132,6 +134,19 @@ export function ProductModal({ product, onClose, onSave }: Props) {
     set(field, (form[field] as string[]).includes(val)
       ? (form[field] as string[]).filter(v => v !== val)
       : [...(form[field] as string[]), val])
+
+  // Free-text add — custom values are stored straight into the product's
+  // colors / bikeModels JSONB arrays (no preset list / DB table needed).
+  const addCustomColor = () => {
+    const v = customColor.trim()
+    if (v && !form.colors.includes(v)) set('colors', [...form.colors, v])
+    setCustomColor('')
+  }
+  const addCustomBike = () => {
+    const v = customBike.trim()
+    if (v && !form.bikeModels.includes(v)) set('bikeModels', [...form.bikeModels, v])
+    setCustomBike('')
+  }
 
   // ─── Image upload via guarded server API ───
   const uploadFiles = useCallback(async (files: FileList | File[]) => {
@@ -594,11 +609,12 @@ export function ProductModal({ product, onClose, onSave }: Props) {
                   </Field>
                 </div>
 
-                {/* สี */}
-                <Field label="สี * (เลือกได้หลายสี)" error={errors.colors}>
+                {/* สี — preset + ที่พิมพ์เพิ่มเอง */}
+                <Field label="สี * (เลือกได้หลายสี · พิมพ์เพิ่มสีอื่นได้)" error={errors.colors}>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 4 }}>
-                    {ALL_COLORS.map(c => {
+                    {[...ALL_COLORS, ...form.colors.filter(c => !ALL_COLORS.includes(c))].map(c => {
                       const selected = form.colors.includes(c)
+                      const isCustom = !ALL_COLORS.includes(c)
                       return (
                         <label key={c} style={{
                           display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer',
@@ -611,12 +627,19 @@ export function ProductModal({ product, onClose, onSave }: Props) {
                           <input type="checkbox" checked={selected} onChange={() => toggleArray('colors', c)} style={{ display: 'none' }} />
                           <span style={{
                             width: 14, height: 14, borderRadius: '50%', flexShrink: 0,
-                            background: COLOR_DOT[c], border: '0.5px solid rgba(255,255,255,.2)',
+                            background: COLOR_DOT[c] ?? '#9ca3af', border: '0.5px solid rgba(255,255,255,.2)',
                           }} />
-                          {COLOR_LABELS[c]}
+                          {COLOR_LABELS[c] ?? c}
+                          {isCustom && <span style={{ fontSize: 10, opacity: 0.6 }}>(เพิ่มเอง)</span>}
                         </label>
                       )
                     })}
+                  </div>
+                  <div style={{ display: 'flex', gap: 8, marginTop: 8 }}>
+                    <input className="input" style={{ flex: '0 1 240px', fontSize: 14 }} placeholder="เพิ่มสีอื่น เช่น น้ำเงิน, แดง"
+                      value={customColor} onChange={e => setCustomColor(e.target.value)}
+                      onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); addCustomColor() } }} />
+                    <button type="button" className="btn-ghost" style={{ fontSize: 14, whiteSpace: 'nowrap' }} onClick={addCustomColor}>+ เพิ่มสี</button>
                   </div>
                 </Field>
 
@@ -690,6 +713,27 @@ export function ProductModal({ product, onClose, onSave }: Props) {
                         </div>
                       )
                     })}
+                  </div>
+
+                  {/* รุ่นที่พิมพ์เพิ่มเอง (ไม่มีในรายการ) */}
+                  <div style={{ marginTop: 12, paddingTop: 12, borderTop: '0.5px solid var(--border)' }}>
+                    <p style={{ fontSize: 13, color: 'var(--text2)', marginBottom: 8 }}>เพิ่มรุ่นอื่นที่ไม่มีในรายการ</p>
+                    {form.bikeModels.filter(id => !bikeModels.find(b => b.id === id)).length > 0 && (
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 8 }}>
+                        {form.bikeModels.filter(id => !bikeModels.find(b => b.id === id)).map(id => (
+                          <span key={id} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, padding: '4px 10px', borderRadius: 7, border: '0.5px solid var(--green)', background: 'rgba(34,197,94,.08)', color: 'var(--green)' }}>
+                            {id}
+                            <button type="button" aria-label={`ลบ ${id}`} onClick={() => toggleArray('bikeModels', id)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--green)', display: 'flex', padding: 0 }}><X size={12} /></button>
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <div style={{ display: 'flex', gap: 8 }}>
+                      <input className="input" style={{ flex: '0 1 280px', fontSize: 14 }} placeholder="เช่น Yamaha XSR700, Honda CBR650R"
+                        value={customBike} onChange={e => setCustomBike(e.target.value)}
+                        onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); addCustomBike() } }} />
+                      <button type="button" className="btn-ghost" style={{ fontSize: 14, whiteSpace: 'nowrap' }} onClick={addCustomBike}>+ เพิ่มรุ่น</button>
+                    </div>
                   </div>
                 </div>
               </div>
