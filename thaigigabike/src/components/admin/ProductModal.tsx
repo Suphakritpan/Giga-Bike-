@@ -94,7 +94,10 @@ export function ProductModal({ product, onClose, onSave }: Props) {
   const [urlInput, setUrlInput] = useState('')
   const [dragOver, setDragOver] = useState(false)
   const [customColor, setCustomColor] = useState('')
-  const [customBike, setCustomBike] = useState('')
+  const [customBikeBrand, setCustomBikeBrand] = useState('')
+  const [customBikeModel, setCustomBikeModel] = useState('')
+  const [regColors, setRegColors] = useState<{ id: string; label_th: string; hex: string | null }[]>([])
+  const [regBikes, setRegBikes] = useState<{ id: string; brand: string; model: string }[]>([])
 
   useEffect(() => {
     if (product) {
@@ -127,6 +130,17 @@ export function ProductModal({ product, onClose, onSave }: Props) {
     setSavedCount(0)
   }, [product])
 
+  // Load admin-added bike models + colours (registry) once, to offer alongside presets.
+  useEffect(() => {
+    fetch('/api/registry')
+      .then(r => r.json())
+      .then((d: { bikeModels?: typeof regBikes; colors?: typeof regColors }) => {
+        setRegBikes(d.bikeModels ?? [])
+        setRegColors(d.colors ?? [])
+      })
+      .catch(() => {})
+  }, [])
+
   const set = (field: keyof FormData, value: unknown) =>
     setForm(prev => ({ ...prev, [field]: value }))
 
@@ -135,17 +149,36 @@ export function ProductModal({ product, onClose, onSave }: Props) {
       ? (form[field] as string[]).filter(v => v !== val)
       : [...(form[field] as string[]), val])
 
-  // Free-text add — custom values are stored straight into the product's
-  // colors / bikeModels JSONB arrays (no preset list / DB table needed).
-  const addCustomColor = () => {
+  // Add to the shared registry (POST) so the value is canonical + reusable on
+  // the next product (prevents typo-variant duplicates), then select it here.
+  const addCustomColor = async () => {
     const v = customColor.trim()
-    if (v && !form.colors.includes(v)) set('colors', [...form.colors, v])
+    if (!v) return
+    const res = await fetch('/api/admin/registry', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ kind: 'color', label_th: v }),
+    }).catch(() => null)
+    const d = await res?.json().catch(() => ({}))
+    if (res?.ok && d.item) {
+      setRegColors(prev => prev.some(c => c.id === d.item.id) ? prev : [...prev, d.item])
+      if (!form.colors.includes(d.item.id)) set('colors', [...form.colors, d.item.id])
+    }
     setCustomColor('')
   }
-  const addCustomBike = () => {
-    const v = customBike.trim()
-    if (v && !form.bikeModels.includes(v)) set('bikeModels', [...form.bikeModels, v])
-    setCustomBike('')
+  const addCustomBike = async () => {
+    const brand = customBikeBrand.trim()
+    const model = customBikeModel.trim()
+    if (!brand || !model) return
+    const res = await fetch('/api/admin/registry', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ kind: 'bike', brand, model }),
+    }).catch(() => null)
+    const d = await res?.json().catch(() => ({}))
+    if (res?.ok && d.item) {
+      setRegBikes(prev => prev.some(b => b.id === d.item.id) ? prev : [...prev, d.item])
+      if (!form.bikeModels.includes(d.item.id)) set('bikeModels', [...form.bikeModels, d.item.id])
+    }
+    setCustomBikeBrand(''); setCustomBikeModel('')
   }
 
   // ─── Image upload via guarded server API ───
@@ -612,9 +645,12 @@ export function ProductModal({ product, onClose, onSave }: Props) {
                 {/* สี — preset + ที่พิมพ์เพิ่มเอง */}
                 <Field label="สี * (เลือกได้หลายสี · พิมพ์เพิ่มสีอื่นได้)" error={errors.colors}>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 4 }}>
-                    {[...ALL_COLORS, ...form.colors.filter(c => !ALL_COLORS.includes(c))].map(c => {
+                    {Array.from(new Set([...ALL_COLORS, ...regColors.map(rc => rc.id), ...form.colors])).map(c => {
                       const selected = form.colors.includes(c)
-                      const isCustom = !ALL_COLORS.includes(c)
+                      const isPreset = ALL_COLORS.includes(c)
+                      const reg = regColors.find(rc => rc.id === c)
+                      const dot = COLOR_DOT[c] ?? reg?.hex ?? '#9ca3af'
+                      const label = COLOR_LABELS[c] ?? reg?.label_th ?? c
                       return (
                         <label key={c} style={{
                           display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer',
@@ -627,10 +663,10 @@ export function ProductModal({ product, onClose, onSave }: Props) {
                           <input type="checkbox" checked={selected} onChange={() => toggleArray('colors', c)} style={{ display: 'none' }} />
                           <span style={{
                             width: 14, height: 14, borderRadius: '50%', flexShrink: 0,
-                            background: COLOR_DOT[c] ?? '#9ca3af', border: '0.5px solid rgba(255,255,255,.2)',
+                            background: dot, border: '0.5px solid rgba(255,255,255,.2)',
                           }} />
-                          {COLOR_LABELS[c] ?? c}
-                          {isCustom && <span style={{ fontSize: 10, opacity: 0.6 }}>(เพิ่มเอง)</span>}
+                          {label}
+                          {!isPreset && <span style={{ fontSize: 10, opacity: 0.6 }}>(เพิ่มเอง)</span>}
                         </label>
                       )
                     })}
@@ -715,22 +751,43 @@ export function ProductModal({ product, onClose, onSave }: Props) {
                     })}
                   </div>
 
-                  {/* รุ่นที่พิมพ์เพิ่มเอง (ไม่มีในรายการ) */}
+                  {/* รุ่นที่เพิ่มเอง (registry — ใช้ซ้ำได้ทุกสินค้า) */}
                   <div style={{ marginTop: 12, paddingTop: 12, borderTop: '0.5px solid var(--border)' }}>
-                    <p style={{ fontSize: 13, color: 'var(--text2)', marginBottom: 8 }}>เพิ่มรุ่นอื่นที่ไม่มีในรายการ</p>
-                    {form.bikeModels.filter(id => !bikeModels.find(b => b.id === id)).length > 0 && (
+                    <p style={{ fontSize: 13, color: 'var(--text2)', marginBottom: 8 }}>รุ่นที่เพิ่มเอง (ใช้ซ้ำได้ทุกสินค้า)</p>
+                    {regBikes.length > 0 && (
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))', gap: 5, marginBottom: 8 }}>
+                        {regBikes.map(b => {
+                          const sel = form.bikeModels.includes(b.id)
+                          return (
+                            <label key={b.id} style={{
+                              display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer', fontSize: 13, padding: '5px 10px', borderRadius: 7,
+                              border: `0.5px solid ${sel ? 'var(--green)' : 'var(--border)'}`,
+                              background: sel ? 'rgba(34,197,94,.08)' : 'transparent', color: sel ? 'var(--green)' : 'var(--text2)',
+                            }}>
+                              <input type="checkbox" checked={sel} onChange={() => toggleArray('bikeModels', b.id)} style={{ display: 'none' }} />
+                              <div style={{ width: 12, height: 12, borderRadius: 3, flexShrink: 0, border: `1.5px solid ${sel ? 'var(--green)' : 'var(--border2)'}`, background: sel ? 'var(--green)' : 'transparent' }} />
+                              {b.brand} {b.model}
+                            </label>
+                          )
+                        })}
+                      </div>
+                    )}
+                    {/* legacy free-text values (ไม่อยู่ใน preset และ registry) — ลบได้ */}
+                    {form.bikeModels.filter(id => !bikeModels.find(b => b.id === id) && !regBikes.find(b => b.id === id)).length > 0 && (
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 8 }}>
-                        {form.bikeModels.filter(id => !bikeModels.find(b => b.id === id)).map(id => (
-                          <span key={id} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, padding: '4px 10px', borderRadius: 7, border: '0.5px solid var(--green)', background: 'rgba(34,197,94,.08)', color: 'var(--green)' }}>
+                        {form.bikeModels.filter(id => !bikeModels.find(b => b.id === id) && !regBikes.find(b => b.id === id)).map(id => (
+                          <span key={id} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 13, padding: '4px 10px', borderRadius: 7, border: '0.5px solid var(--orange)', background: 'rgba(249,115,22,.08)', color: 'var(--orange)' }}>
                             {id}
-                            <button type="button" aria-label={`ลบ ${id}`} onClick={() => toggleArray('bikeModels', id)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--green)', display: 'flex', padding: 0 }}><X size={12} /></button>
+                            <button type="button" aria-label={`ลบ ${id}`} onClick={() => toggleArray('bikeModels', id)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--orange)', display: 'flex', padding: 0 }}><X size={12} /></button>
                           </span>
                         ))}
                       </div>
                     )}
-                    <div style={{ display: 'flex', gap: 8 }}>
-                      <input className="input" style={{ flex: '0 1 280px', fontSize: 14 }} placeholder="เช่น Yamaha XSR700, Honda CBR650R"
-                        value={customBike} onChange={e => setCustomBike(e.target.value)}
+                    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                      <input className="input" style={{ flex: '0 1 160px', fontSize: 14 }} placeholder="ยี่ห้อ เช่น Yamaha"
+                        value={customBikeBrand} onChange={e => setCustomBikeBrand(e.target.value)} />
+                      <input className="input" style={{ flex: '0 1 200px', fontSize: 14 }} placeholder="รุ่น เช่น XSR700"
+                        value={customBikeModel} onChange={e => setCustomBikeModel(e.target.value)}
                         onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); addCustomBike() } }} />
                       <button type="button" className="btn-ghost" style={{ fontSize: 14, whiteSpace: 'nowrap' }} onClick={addCustomBike}>+ เพิ่มรุ่น</button>
                     </div>
