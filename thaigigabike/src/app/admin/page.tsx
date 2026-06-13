@@ -2,8 +2,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import {
-  Package, ShoppingBag, TrendingUp, Plus, Edit, Trash2, Download,
-  ChevronDown, ChevronUp, Minus, AlertTriangle, CheckCircle, XCircle, Boxes,
+  Package, ShoppingBag, TrendingUp, Download,
+  ChevronDown, ChevronUp, Boxes,
   LogOut, Zap, Bell, MessageCircle, Star,
   Receipt, Headphones,
 } from 'lucide-react'
@@ -12,10 +12,12 @@ import type { Product } from '@/data/products'
 import { ProductModal } from '@/components/admin/ProductModal'
 import { toCsvRow } from '@/lib/csv'
 import { ConfirmDialog, Spinner } from '@/components/ui'
-import { AdminSearchInput, AdminPagination, AdminTableShell } from './components/AdminUI'
+import { AdminSearchInput } from './components/AdminUI'
 import { StatCard } from './components/StatCard'
 import { AlertBanner } from './components/AlertBanner'
 import { AdminThread } from './components/AdminThread'
+import { ProductsTab } from './components/ProductsTab'
+import { StockTab } from './components/StockTab'
 import {
   TICKET_TOPIC_LABELS, LOW_STOCK_THRESHOLD, PAGE_SIZE, STATUS_COLORS, STATUS_LABELS,
 } from './components/types'
@@ -61,8 +63,6 @@ export default function AdminPage() {
   const [deleteConfirm, setDeleteConfirm] = useState<Product | null>(null)
   const [deleting, setDeleting]           = useState(false)
 
-  const [editingStock, setEditingStock] = useState<string | null>(null)
-  const [stockInput, setStockInput]     = useState('')
 
   // ─── Auth ─── (server layout already guards this page; client-side confirm)
   useEffect(() => {
@@ -482,149 +482,39 @@ export default function AdminPage() {
 
         {/* ── Products tab ──────────────────────── */}
         {tab === 'products' && (
-          <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: 14, flexWrap: 'wrap' }}>
-              <AdminSearchInput
-                value={productSearch}
-                onChange={v => { setProductSearch(v); setProductPage(1) }}
-                placeholder="ค้นหารหัส / ชื่อสินค้า..."
-              />
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <span style={{ fontSize: 14, color: 'var(--text2)' }}>{filteredProducts.length} รายการ</span>
-                <button className="btn-primary" style={{ fontSize: 15, padding: '7px 14px' }} onClick={openAdd}>
-                  <Plus size={14} /> เพิ่มสินค้า
-                </button>
-              </div>
-            </div>
-
-            {loadingProducts ? (
-              <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
-                <Spinner />
-                <div style={{ marginTop: 12 }}>กำลังโหลดสินค้า...</div>
-              </div>
-            ) : (
-              <>
-                <AdminTableShell headers={['รูป', 'รหัส', 'ชื่อสินค้า', 'หมวด', 'ราคา', 'สต็อก', 'สถานะ', '']}>
-                      {pagedProducts.map((p, i) => (
-                        <tr key={p.id} style={{ borderTop: '0.5px solid var(--border)' }}>
-                          <td style={{ padding: '7px 8px 7px 12px', width: 48 }}>
-                            <div style={{ width: 40, height: 40, borderRadius: 7, overflow: 'hidden', background: 'var(--bg3)', border: '0.5px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                              {p.images?.[0] ? (
-                                <img src={p.images[0]} alt={p.code} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
-                              ) : <span style={{ fontSize: 16 }}>📦</span>}
-                            </div>
-                          </td>
-                          <td style={{ padding: '9px 12px', fontSize: 13, color: 'var(--text3)', fontFamily: 'var(--font-display)' }}>{p.code}</td>
-                          <td style={{ padding: '9px 12px', fontSize: 14, maxWidth: 200 }}>
-                            <div style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.nameTh}</div>
-                          </td>
-                          <td style={{ padding: '9px 12px' }}>
-                            <span className="badge badge-gray" style={{ fontSize: 12 }}>{p.category}</span>
-                          </td>
-                          <td style={{ padding: '9px 12px', fontSize: 15, fontWeight: 600, color: 'var(--green)', fontFamily: 'var(--font-display)' }}>฿{p.price.toLocaleString()}</td>
-                          <td style={{ padding: '9px 12px', fontSize: 14 }}>
-                            <span style={{ color: p.stockCount === 0 ? 'var(--red)' : p.stockCount <= LOW_STOCK_THRESHOLD ? 'var(--orange)' : 'var(--text)', fontWeight: p.stockCount <= LOW_STOCK_THRESHOLD ? 700 : 400 }}>{p.stockCount}</span>
-                          </td>
-                          <td style={{ padding: '9px 12px' }}>
-                            <span className={`badge ${p.inStock ? 'badge-green' : 'badge-red'}`} style={{ fontSize: 12 }}>{p.inStock ? 'มีสินค้า' : 'หมด'}</span>
-                          </td>
-                          <td style={{ padding: '9px 12px' }}>
-                            <div style={{ display: 'flex', gap: 5 }}>
-                              <button className="btn-ghost" style={{ padding: '4px 8px', fontSize: 13 }} onClick={() => openEdit(p)} title="แก้ไข"><Edit size={13} /></button>
-                              <button className="btn-ghost" style={{ padding: '4px 8px', fontSize: 13, color: 'var(--red)' }} onClick={() => setDeleteConfirm(p)} title="ลบ"><Trash2 size={13} /></button>
-                            </div>
-                          </td>
-                        </tr>
-                      ))}
-                </AdminTableShell>
-                <AdminPagination page={productPage} totalPages={totalProductPages} onPageChange={setProductPage} />
-              </>
-            )}
-          </div>
+          <ProductsTab
+            rows={pagedProducts}
+            total={filteredProducts.length}
+            search={productSearch}
+            onSearch={v => { setProductSearch(v); setProductPage(1) }}
+            page={productPage}
+            totalPages={totalProductPages}
+            onPageChange={setProductPage}
+            loading={loadingProducts}
+            onAdd={openAdd}
+            onEdit={openEdit}
+            onDelete={setDeleteConfirm}
+          />
         )}
 
         {/* ── Stock tab ─────────────────────────── */}
         {tab === 'stock' && (
-          <div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, marginBottom: 16 }}>
-              {[
-                { icon: <CheckCircle size={16} color="var(--green)" />, label: 'มีสินค้า', value: products.filter(p => p.stockCount > LOW_STOCK_THRESHOLD).length, color: 'var(--green)' },
-                { icon: <AlertTriangle size={16} color="var(--orange)" />, label: `สต็อกต่ำ (≤${LOW_STOCK_THRESHOLD})`, value: lowStock, color: 'var(--orange)' },
-                { icon: <XCircle size={16} color="var(--red)" />, label: 'สินค้าหมด', value: outOfStock, color: 'var(--red)' },
-              ].map((s, i) => (
-                <div key={i} style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 10, padding: '12px 16px', display: 'flex', alignItems: 'center', gap: 10 }}>
-                  {s.icon}
-                  <div>
-                    <div style={{ fontSize: 22, fontWeight: 700, fontFamily: 'var(--font-display)', color: s.color }}>{s.value}</div>
-                    <div style={{ fontSize: 13, color: 'var(--text2)' }}>{s.label}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14, gap: 12, flexWrap: 'wrap' }}>
-              <AdminSearchInput
-                value={stockSearch}
-                onChange={v => { setStockSearch(v); setStockPage(1) }}
-                placeholder="ค้นหารหัส / ชื่อสินค้า..."
-              />
-              <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                <span style={{ fontSize: 14, color: 'var(--text2)' }}>{filteredStock.length} รายการ · รวม {products.reduce((s, p) => s + p.stockCount, 0)} ชิ้น</span>
-                <button className="btn-ghost" onClick={exportStock} style={{ fontSize: 14 }}><Download size={13} /> Export CSV</button>
-              </div>
-            </div>
-
-            <AdminTableShell headers={['รูป', 'รหัส', 'ชื่อสินค้า', 'หมวด', 'จำนวนสต็อก', 'สถานะ']}>
-                  {pagedStock.map((p) => {
-                    const isLow = p.stockCount > 0 && p.stockCount <= LOW_STOCK_THRESHOLD
-                    const isEmpty = p.stockCount === 0
-                    return (
-                      <tr key={p.id} style={{ borderTop: '0.5px solid var(--border)', background: isEmpty ? 'rgba(239,68,68,.03)' : isLow ? 'rgba(249,115,22,.03)' : 'transparent' }}>
-                        <td style={{ padding: '7px 8px 7px 12px', width: 48 }}>
-                          <div style={{ width: 40, height: 40, borderRadius: 7, overflow: 'hidden', background: 'var(--bg3)', border: '0.5px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            {p.images?.[0] ? <img src={p.images[0]} alt={p.code} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} /> : <span style={{ fontSize: 16 }}>📦</span>}
-                          </div>
-                        </td>
-                        <td style={{ padding: '10px 12px', fontSize: 13, color: 'var(--text3)', fontFamily: 'var(--font-display)', whiteSpace: 'nowrap' }}>{p.code}</td>
-                        <td style={{ padding: '10px 12px', fontSize: 14, maxWidth: 220 }}>
-                          <div style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.nameTh}</div>
-                        </td>
-                        <td style={{ padding: '10px 12px' }}><span className="badge badge-gray" style={{ fontSize: 12 }}>{p.category}</span></td>
-                        <td style={{ padding: '10px 12px' }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                            <button onClick={() => adjustStock(p.id, -1)} style={{ width: 26, height: 26, borderRadius: 6, background: 'var(--bg3)', border: '0.5px solid var(--border2)', color: 'var(--text)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', flexShrink: 0 }}><Minus size={12} /></button>
-                            {editingStock === p.id ? (
-                              <input autoFocus type="number" min={0} max={99999} value={stockInput}
-                                onChange={e => setStockInput(e.target.value)}
-                                onBlur={() => { setStock(p.id, parseInt(stockInput)); setEditingStock(null) }}
-                                onKeyDown={e => {
-                                  if (e.key === 'Enter') { setStock(p.id, parseInt(stockInput)); setEditingStock(null) }
-                                  if (e.key === 'Escape') setEditingStock(null)
-                                }}
-                                style={{ width: 60, textAlign: 'center', fontSize: 16, fontWeight: 600, background: 'var(--bg3)', border: '1px solid var(--green)', borderRadius: 6, padding: '3px 6px', color: 'var(--text)', outline: 'none' }}
-                              />
-                            ) : (
-                              <button onClick={() => { setEditingStock(p.id); setStockInput(String(p.stockCount)) }} title="คลิกเพื่อแก้ไข"
-                                style={{ width: 60, textAlign: 'center', fontSize: 16, fontWeight: 600, background: 'var(--bg3)', border: '0.5px solid var(--border2)', borderRadius: 6, padding: '3px 6px', cursor: 'text', color: isEmpty ? 'var(--red)' : isLow ? 'var(--orange)' : 'var(--text)', fontFamily: 'var(--font-display)' }}>
-                                {p.stockCount}
-                              </button>
-                            )}
-                            <button onClick={() => adjustStock(p.id, 1)} style={{ width: 26, height: 26, borderRadius: 6, background: 'var(--green)', border: 'none', color: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', flexShrink: 0 }}><Plus size={12} /></button>
-                            {isEmpty && <span style={{ fontSize: 12, color: 'var(--red)', fontWeight: 700 }}>หมด</span>}
-                            {isLow && !isEmpty && <span style={{ fontSize: 12, color: 'var(--orange)', fontWeight: 700 }}>ใกล้หมด</span>}
-                          </div>
-                        </td>
-                        <td style={{ padding: '10px 12px' }}>
-                          <button onClick={() => toggleInStock(p.id)} className={`badge ${p.inStock ? 'badge-green' : 'badge-red'}`} style={{ fontSize: 12, cursor: 'pointer', border: 'none', fontFamily: 'inherit' }}>
-                            {p.inStock ? 'มีสินค้า' : 'หมด'}
-                          </button>
-                        </td>
-                      </tr>
-                    )
-                  })}
-            </AdminTableShell>
-            <AdminPagination page={stockPage} totalPages={totalStockPages} onPageChange={setStockPage} />
-          </div>
+          <StockTab
+            allProducts={products}
+            rows={pagedStock}
+            filteredCount={filteredStock.length}
+            lowStock={lowStock}
+            outOfStock={outOfStock}
+            search={stockSearch}
+            onSearch={v => { setStockSearch(v); setStockPage(1) }}
+            onExport={exportStock}
+            page={stockPage}
+            totalPages={totalStockPages}
+            onPageChange={setStockPage}
+            onAdjust={adjustStock}
+            onSetStock={setStock}
+            onToggleInStock={toggleInStock}
+          />
         )}
 
         {/* ── Orders tab ────────────────────────── */}
