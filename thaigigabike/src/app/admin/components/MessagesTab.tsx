@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { MessageCircle, ChevronUp, ChevronDown } from 'lucide-react'
+import { Spinner } from '@/components/ui'
 import { AdminThread } from './AdminThread'
 import type { AdminMessage } from './types'
 
@@ -27,7 +28,7 @@ export function MessagesTab({ messages, newCount, loading, onRefresh, onMark, on
         </button>
       </div>
       {loading ? (
-        <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
+        <Spinner center />
       ) : messages.length === 0 ? (
         <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
           <MessageCircle size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />

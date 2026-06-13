@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { Headphones, Star, ChevronUp, ChevronDown } from 'lucide-react'
+import { Spinner } from '@/components/ui'
 import { AdminThread } from './AdminThread'
 import { TICKET_TOPIC_LABELS } from './types'
 import type { AdminTicket, TicketStatus } from './types'
@@ -28,7 +29,7 @@ export function TicketsTab({ tickets, openCount, loading, onRefresh, onSetStatus
         </button>
       </div>
       {loading ? (
-        <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
+        <Spinner center />
       ) : tickets.length === 0 ? (
         <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
           <Headphones size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />

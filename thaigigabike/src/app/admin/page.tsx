@@ -431,9 +431,9 @@ export default function AdminPage() {
         </div>
 
         {/* Tab pills */}
-        <div style={{ display: 'flex', gap: 4, marginLeft: 16 }}>
+        <div role="tablist" aria-label="เมนูผู้ดูแล" style={{ display: 'flex', gap: 4, marginLeft: 16 }}>
           {TABS.map(t => (
-            <button key={t.id} onClick={() => setTab(t.id)} style={{
+            <button key={t.id} onClick={() => setTab(t.id)} role="tab" aria-selected={tab === t.id} style={{
               padding: '5px 14px', borderRadius: 999, fontSize: 14, fontWeight: 600, cursor: 'pointer',
               border: 'none', transition: 'all .15s',
               background: tab === t.id ? '#22c55e' : 'transparent',

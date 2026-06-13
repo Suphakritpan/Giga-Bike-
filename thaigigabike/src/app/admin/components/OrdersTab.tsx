@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { ChevronDown, Download } from 'lucide-react'
-import { ConfirmDialog } from '@/components/ui'
+import { ConfirmDialog, Spinner } from '@/components/ui'
 import { AdminSearchInput } from './AdminUI'
 import { STATUS_COLORS, STATUS_LABELS } from './types'
 import type { Order, OrderStatus } from './types'
@@ -70,7 +70,7 @@ export function OrdersTab({
       </div>
 
       {loading ? (
-        <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>กำลังโหลด...</div>
+        <Spinner center />
       ) : orders.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
           {isFiltered ? 'ไม่พบออเดอร์ที่ค้นหา' : 'ยังไม่มีออเดอร์'}

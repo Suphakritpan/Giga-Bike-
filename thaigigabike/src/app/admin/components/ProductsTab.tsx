@@ -33,10 +33,7 @@ export function ProductsTab({ rows, total, search, onSearch, page, totalPages, o
       </div>
 
       {loading ? (
-        <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
-          <Spinner />
-          <div style={{ marginTop: 12 }}>กำลังโหลดสินค้า...</div>
-        </div>
+        <Spinner center />
       ) : (
         <>
           <AdminTableShell headers={['รูป', 'รหัส', 'ชื่อสินค้า', 'หมวด', 'ราคา', 'สต็อก', 'สถานะ', '']}>
@@ -65,8 +62,8 @@ export function ProductsTab({ rows, total, search, onSearch, page, totalPages, o
                 </td>
                 <td style={{ padding: '9px 12px' }}>
                   <div style={{ display: 'flex', gap: 5 }}>
-                    <button className="btn-ghost" style={{ padding: '4px 8px', fontSize: 13 }} onClick={() => onEdit(p)} title="แก้ไข"><Edit size={13} /></button>
-                    <button className="btn-ghost" style={{ padding: '4px 8px', fontSize: 13, color: 'var(--red)' }} onClick={() => onDelete(p)} title="ลบ"><Trash2 size={13} /></button>
+                    <button className="btn-ghost" style={{ padding: '4px 8px', fontSize: 13 }} onClick={() => onEdit(p)} title="แก้ไข" aria-label={`แก้ไข ${p.nameTh}`}><Edit size={13} /></button>
+                    <button className="btn-ghost" style={{ padding: '4px 8px', fontSize: 13, color: 'var(--red)' }} onClick={() => onDelete(p)} title="ลบ" aria-label={`ลบ ${p.nameTh}`}><Trash2 size={13} /></button>
                   </div>
                 </td>
               </tr>

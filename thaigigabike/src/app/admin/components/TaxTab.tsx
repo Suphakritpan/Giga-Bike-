@@ -1,5 +1,6 @@
 'use client'
 import { Receipt } from 'lucide-react'
+import { Spinner } from '@/components/ui'
 import type { TaxRequest } from './types'
 
 /** Tax-invoice requests tab — queue with mark-issued / revert. */
@@ -21,7 +22,7 @@ export function TaxTab({ requests, pendingCount, loading, onRefresh, onSetStatus
         </button>
       </div>
       {loading ? (
-        <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
+        <Spinner center />
       ) : requests.length === 0 ? (
         <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
           <Receipt size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />

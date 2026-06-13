@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { Star } from 'lucide-react'
-import { ConfirmDialog } from '@/components/ui'
+import { ConfirmDialog, Spinner } from '@/components/ui'
 import type { AdminReview } from './types'
 
 /** Reviews tab — moderation list (approve/hide/delete). */
@@ -25,7 +25,7 @@ export function ReviewsTab({ reviews, pendingCount, loading, onRefresh, onToggle
         </button>
       </div>
       {loading ? (
-        <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
+        <Spinner center />
       ) : reviews.length === 0 ? (
         <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
           <Star size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
