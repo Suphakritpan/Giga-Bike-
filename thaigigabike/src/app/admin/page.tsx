@@ -2,10 +2,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import {
-  Package, ShoppingBag, TrendingUp,
-  ChevronDown, ChevronUp, Boxes,
-  LogOut, Zap, Bell, MessageCircle, Star,
-  Receipt, Headphones,
+  Package, ShoppingBag, TrendingUp, Boxes,
+  LogOut, Zap, Bell, Star, Receipt,
 } from 'lucide-react'
 import { products as initialProducts } from '@/data/products'
 import type { Product } from '@/data/products'
@@ -18,6 +16,8 @@ import { AdminThread } from './components/AdminThread'
 import { ProductsTab } from './components/ProductsTab'
 import { StockTab } from './components/StockTab'
 import { OrdersTab } from './components/OrdersTab'
+import { MessagesTab } from './components/MessagesTab'
+import { TicketsTab } from './components/TicketsTab'
 import {
   TICKET_TOPIC_LABELS, LOW_STOCK_THRESHOLD, PAGE_SIZE, STATUS_COLORS, STATUS_LABELS,
 } from './components/types'
@@ -43,13 +43,11 @@ export default function AdminPage() {
 
   const [adminMessages, setAdminMessages]   = useState<AdminMessage[]>([])
   const [loadingMessages, setLoadingMessages] = useState(false)
-  const [openMessageId, setOpenMessageId]   = useState<string | null>(null)
   const [adminReviews, setAdminReviews]     = useState<AdminReview[]>([])
   const [loadingReviews, setLoadingReviews] = useState(false)
 
   const [adminTickets, setAdminTickets]     = useState<AdminTicket[]>([])
   const [loadingTickets, setLoadingTickets] = useState(false)
-  const [openTicketId, setOpenTicketId]     = useState<string | null>(null)
 
   const [taxRequests, setTaxRequests]       = useState<TaxRequest[]>([])
   const [loadingTax, setLoadingTax]         = useState(false)
@@ -538,178 +536,26 @@ export default function AdminPage() {
         )}
         {/* ── Messages tab ──────────────────────── */}
         {tab === 'messages' && (
-          <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-              <span style={{ fontSize: 14, color: 'var(--text2)' }}>
-                {adminMessages.length} ข้อความ · {newMessagesCount} ใหม่
-              </span>
-              <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }} onClick={loadMessages}>
-                รีเฟรช
-              </button>
-            </div>
-            {loadingMessages ? (
-              <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
-            ) : adminMessages.length === 0 ? (
-              <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
-                <MessageCircle size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
-                ยังไม่มีข้อความ
-              </div>
-            ) : (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {adminMessages.map(msg => (
-                  <div key={msg.id} style={{
-                    background: 'var(--bg2)', border: `0.5px solid ${msg.status === 'new' ? 'rgba(34,197,94,.4)' : 'var(--border)'}`,
-                    borderLeft: `3px solid ${msg.status === 'new' ? '#22c55e' : msg.status === 'replied' ? '#3b82f6' : 'var(--border2)'}`,
-                    borderRadius: 10, padding: '14px 18px',
-                  }}>
-                    <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
-                      <div>
-                        <div style={{ fontWeight: 700, fontSize: 15 }}>{msg.sender_name}</div>
-                        <div style={{ fontSize: 13, color: 'var(--text3)' }}>
-                          {msg.sender_email}
-                          {msg.sender_phone && ` · ${msg.sender_phone}`}
-                          {msg.product_code && <span style={{ color: 'var(--green)', marginLeft: 6 }}>รหัส: {msg.product_code}</span>}
-                        </div>
-                      </div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-                        <span style={{
-                          fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 999,
-                          background: msg.status === 'new' ? 'rgba(34,197,94,.15)' : msg.status === 'replied' ? 'rgba(59,130,246,.15)' : 'var(--bg3)',
-                          color: msg.status === 'new' ? '#22c55e' : msg.status === 'replied' ? '#3b82f6' : 'var(--text3)',
-                        }}>
-                          {msg.status === 'new' ? 'ใหม่' : msg.status === 'replied' ? 'ตอบแล้ว' : 'ปิด'}
-                        </span>
-                        <span style={{ fontSize: 12, color: 'var(--text3)' }}>
-                          {new Date(msg.created_at).toLocaleDateString('th-TH')}
-                        </span>
-                      </div>
-                    </div>
-                    {msg.subject && <div style={{ fontSize: 13, color: 'var(--text2)', marginTop: 8, fontWeight: 600 }}>{msg.subject}</div>}
-                    <p style={{ fontSize: 14, color: 'var(--text2)', marginTop: 8, lineHeight: 1.65, whiteSpace: 'pre-wrap' }}>{msg.body}</p>
-                    <div style={{ display: 'flex', gap: 8, marginTop: 12, flexWrap: 'wrap' }}>
-                      <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }}
-                        onClick={() => setOpenMessageId(openMessageId === msg.id ? null : msg.id)}>
-                        {openMessageId === msg.id ? <ChevronUp size={13} /> : <ChevronDown size={13} />} ตอบกลับในแชต
-                      </button>
-                      <a href={`mailto:${msg.sender_email}?subject=Re: ${msg.subject || 'ข้อความจาก GigaBike'}`}
-                        style={{
-                          fontSize: 13, padding: '5px 12px', borderRadius: 7,
-                          background: '#3b82f6', color: '#fff', textDecoration: 'none', fontWeight: 600,
-                        }}>
-                        ตอบกลับ Email
-                      </a>
-                      {msg.status !== 'replied' && (
-                        <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }}
-                          onClick={() => markMessage(msg.id, 'replied')}>
-                          ✓ ทำเครื่องหมายตอบแล้ว
-                        </button>
-                      )}
-                      {msg.status !== 'closed' && (
-                        <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px', color: 'var(--text3)' }}
-                          onClick={() => markMessage(msg.id, 'closed')}>
-                          ปิด
-                        </button>
-                      )}
-                    </div>
-                    {openMessageId === msg.id && (
-                      <AdminThread
-                        base={`/api/admin/messages/${encodeURIComponent(msg.id)}`}
-                        onSent={() => setAdminMessages(prev => prev.map(m => m.id === msg.id ? { ...m, status: 'replied' } : m))}
-                      />
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+          <MessagesTab
+            messages={adminMessages}
+            newCount={newMessagesCount}
+            loading={loadingMessages}
+            onRefresh={loadMessages}
+            onMark={markMessage}
+            onReplied={id => setAdminMessages(prev => prev.map(m => m.id === id ? { ...m, status: 'replied' } : m))}
+          />
         )}
 
         {/* ── Support tickets tab ───────────────── */}
         {tab === 'tickets' && (
-          <div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
-              <span style={{ fontSize: 14, color: 'var(--text2)' }}>
-                {adminTickets.length} ตั๋ว · {openTicketsCount} รอตอบ
-              </span>
-              <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }} onClick={loadTickets}>
-                รีเฟรช
-              </button>
-            </div>
-            {loadingTickets ? (
-              <div style={{ textAlign: 'center', padding: 48, color: 'var(--text3)' }}>กำลังโหลด...</div>
-            ) : adminTickets.length === 0 ? (
-              <div style={{ textAlign: 'center', padding: 56, color: 'var(--text3)', fontSize: 15 }}>
-                <Headphones size={36} style={{ display: 'block', margin: '0 auto 12px', opacity: 0.4 }} />
-                ยังไม่มีตั๋วซัพพอร์ต
-              </div>
-            ) : (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {adminTickets.map(tk => {
-                  const open = openTicketId === tk.id
-                  const sc = tk.status === 'open' ? '#22c55e' : tk.status === 'answered' ? '#3b82f6' : 'var(--text3)'
-                  const sbg = tk.status === 'open' ? 'rgba(34,197,94,.15)' : tk.status === 'answered' ? 'rgba(59,130,246,.15)' : 'var(--bg3)'
-                  const sLabel = tk.status === 'open' ? 'รอตอบ' : tk.status === 'answered' ? 'ตอบแล้ว' : 'ปิด'
-                  return (
-                    <div key={tk.id} style={{
-                      background: 'var(--bg2)', border: `0.5px solid ${tk.status === 'open' ? 'rgba(34,197,94,.4)' : 'var(--border)'}`,
-                      borderLeft: `3px solid ${sc}`, borderRadius: 10, padding: '14px 18px',
-                    }}>
-                      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
-                        <div style={{ minWidth: 0 }}>
-                          <div style={{ fontWeight: 700, fontSize: 15 }}>
-                            {tk.subject}
-                            <span className="badge badge-gray" style={{ fontSize: 11, marginLeft: 8 }}>{TICKET_TOPIC_LABELS[tk.topic] ?? tk.topic}</span>
-                          </div>
-                          <div style={{ fontSize: 13, color: 'var(--text3)' }}>
-                            {tk.email}
-                            {tk.order_id && <span style={{ color: 'var(--green)', marginLeft: 6, fontFamily: 'var(--font-display)' }}>{tk.order_id}</span>}
-                          </div>
-                        </div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 }}>
-                          {tk.rating != null && (
-                            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 2, fontSize: 12, color: '#f59e0b' }}>
-                              <Star size={12} fill="#f59e0b" color="#f59e0b" /> {tk.rating}
-                            </span>
-                          )}
-                          <span style={{ fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 999, background: sbg, color: sc }}>{sLabel}</span>
-                          <span style={{ fontSize: 12, color: 'var(--text3)' }}>{new Date(tk.created_at).toLocaleDateString('th-TH')}</span>
-                        </div>
-                      </div>
-                      <p style={{ fontSize: 14, color: 'var(--text2)', marginTop: 8, lineHeight: 1.65, whiteSpace: 'pre-wrap' }}>{tk.body}</p>
-                      {tk.images?.length > 0 && (
-                        <div style={{ display: 'flex', gap: 6, marginTop: 8, flexWrap: 'wrap' }}>
-                          {tk.images.map((u, i) => <a key={i} href={u} target="_blank" rel="noreferrer"><img src={u} alt="" style={{ width: 64, height: 64, objectFit: 'cover', borderRadius: 6 }} /></a>)}
-                        </div>
-                      )}
-                      <div style={{ display: 'flex', gap: 8, marginTop: 12, flexWrap: 'wrap' }}>
-                        <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }}
-                          onClick={() => setOpenTicketId(open ? null : tk.id)}>
-                          {open ? <ChevronUp size={13} /> : <ChevronDown size={13} />} บทสนทนา
-                        </button>
-                        {tk.status !== 'closed' ? (
-                          <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px', color: 'var(--text3)' }}
-                            onClick={() => setTicketStatus(tk.id, 'closed')}>
-                            ปิดตั๋ว
-                          </button>
-                        ) : (
-                          <button className="btn-ghost" style={{ fontSize: 13, padding: '5px 12px' }}
-                            onClick={() => setTicketStatus(tk.id, 'open')}>
-                            เปิดใหม่
-                          </button>
-                        )}
-                      </div>
-                      {open && (
-                        <AdminThread
-                          base={`/api/admin/tickets/${encodeURIComponent(tk.id)}`}
-                          onSent={() => setAdminTickets(prev => prev.map(t => t.id === tk.id ? { ...t, status: 'answered' } : t))}
-                        />
-                      )}
-                    </div>
-                  )
-                })}
-              </div>
-            )}
-          </div>
+          <TicketsTab
+            tickets={adminTickets}
+            openCount={openTicketsCount}
+            loading={loadingTickets}
+            onRefresh={loadTickets}
+            onSetStatus={setTicketStatus}
+            onAnswered={id => setAdminTickets(prev => prev.map(t => t.id === id ? { ...t, status: 'answered' } : t))}
+          />
         )}
 
         {/* ── Tax invoice requests tab ──────────── */}
