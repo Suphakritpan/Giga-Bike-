@@ -42,6 +42,7 @@ export default function AdminPage() {
   const [stockSearch, setStockSearch]   = useState('')
   const [stockPage, setStockPage]       = useState(1)
   const [orderSearch, setOrderSearch]   = useState('')
+  const [orderStatusFilter, setOrderStatusFilter] = useState<OrderStatus | 'all'>('all')
 
   const [adminMessages, setAdminMessages]   = useState<AdminMessage[]>([])
   const [loadingMessages, setLoadingMessages] = useState(false)
@@ -362,10 +363,19 @@ export default function AdminPage() {
   const pagedStock = filteredStock.slice((stockPage - 1) * PAGE_SIZE, stockPage * PAGE_SIZE)
 
   const filteredOrders = orders.filter(o => {
+    if (orderStatusFilter !== 'all' && o.status !== orderStatusFilter) return false
     if (!orderSearch) return true
     const q = orderSearch.toLowerCase()
     return o.id.toLowerCase().includes(q) || o.recipient_name.toLowerCase().includes(q) || o.recipient_phone.includes(q)
   })
+  const orderStatusCounts: Record<OrderStatus | 'all', number> = {
+    all: orders.length,
+    pending: orders.filter(o => o.status === 'pending').length,
+    paid: orders.filter(o => o.status === 'paid').length,
+    shipping: orders.filter(o => o.status === 'shipping').length,
+    delivered: orders.filter(o => o.status === 'delivered').length,
+    cancelled: orders.filter(o => o.status === 'cancelled').length,
+  }
 
   const newMessagesCount = adminMessages.filter(m => m.status === 'new').length
   const pendingReviewsCount = adminReviews.filter(r => !r.published).length
@@ -523,6 +533,9 @@ export default function AdminPage() {
             orders={filteredOrders}
             search={orderSearch}
             onSearch={setOrderSearch}
+            statusFilter={orderStatusFilter}
+            onStatusFilter={setOrderStatusFilter}
+            statusCounts={orderStatusCounts}
             onExport={exportOrders}
             loading={loadingOrders}
             slipLoading={slipLoading}

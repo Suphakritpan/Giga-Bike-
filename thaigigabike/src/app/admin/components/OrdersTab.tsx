@@ -7,13 +7,16 @@ import type { Order, OrderStatus } from './types'
 /** Orders tab — search, status change, tracking-number inline edit, slip view,
  *  CSV export. State + handlers stay in the shell (optimistic update). */
 export function OrdersTab({
-  orders, search, onSearch, onExport, loading,
+  orders, search, onSearch, statusFilter, onStatusFilter, statusCounts, onExport, loading,
   slipLoading, onViewSlip, onUpdateStatus,
   editingTracking, setEditingTracking, trackingInput, setTrackingInput, savingTracking, onSaveTracking,
 }: {
   orders: Order[]
   search: string
   onSearch: (value: string) => void
+  statusFilter: OrderStatus | 'all'
+  onStatusFilter: (status: OrderStatus | 'all') => void
+  statusCounts: Record<OrderStatus | 'all', number>
   onExport: () => void
   loading: boolean
   slipLoading: string | null
@@ -26,6 +29,15 @@ export function OrdersTab({
   savingTracking: boolean
   onSaveTracking: (orderId: string) => void
 }) {
+  const isFiltered = search !== '' || statusFilter !== 'all'
+  const STATUS_FILTERS: { value: OrderStatus | 'all'; label: string }[] = [
+    { value: 'all', label: 'ทั้งหมด' },
+    { value: 'pending', label: STATUS_LABELS.pending },
+    { value: 'paid', label: STATUS_LABELS.paid },
+    { value: 'shipping', label: STATUS_LABELS.shipping },
+    { value: 'delivered', label: STATUS_LABELS.delivered },
+    { value: 'cancelled', label: STATUS_LABELS.cancelled },
+  ]
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: 14, flexWrap: 'wrap' }}>
@@ -36,11 +48,29 @@ export function OrdersTab({
         </div>
       </div>
 
+      {/* Status filter chips */}
+      <div role="group" aria-label="กรองตามสถานะ" style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 16 }}>
+        {STATUS_FILTERS.map(f => {
+          const active = statusFilter === f.value
+          return (
+            <button key={f.value} onClick={() => onStatusFilter(f.value)} aria-pressed={active}
+              style={{
+                fontSize: 13, padding: '5px 12px', borderRadius: 999, cursor: 'pointer',
+                border: `1px solid ${active ? '#22c55e' : 'var(--border2)'}`,
+                background: active ? '#22c55e' : 'transparent',
+                color: active ? '#000' : 'var(--text2)', fontWeight: active ? 700 : 500,
+              }}>
+              {f.label} <span style={{ opacity: .7 }}>{statusCounts[f.value]}</span>
+            </button>
+          )
+        })}
+      </div>
+
       {loading ? (
         <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>กำลังโหลด...</div>
       ) : orders.length === 0 ? (
         <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
-          {search ? 'ไม่พบออเดอร์ที่ค้นหา' : 'ยังไม่มีออเดอร์'}
+          {isFiltered ? 'ไม่พบออเดอร์ที่ค้นหา' : 'ยังไม่มีออเดอร์'}
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -84,6 +114,20 @@ export function OrdersTab({
                   <div style={{ fontSize: 12, color: 'var(--text3)' }}>{o.items?.length ?? 0} รายการ · ค่าส่ง ฿{o.shipping_fee}</div>
                 </div>
               </div>
+              {o.items?.length > 0 && (
+                <div style={{ marginBottom: 12, padding: '8px 12px', background: 'var(--bg3)', borderRadius: 8, display: 'flex', flexDirection: 'column', gap: 5 }}>
+                  {o.items.map((it, i) => (
+                    <div key={i} style={{ display: 'flex', justifyContent: 'space-between', gap: 8, fontSize: 13 }}>
+                      <span style={{ color: 'var(--text2)' }}>
+                        {it.nameTh || it.name}
+                        {it.color && <span style={{ color: 'var(--text3)' }}> · {it.color}</span>}
+                        <span style={{ color: 'var(--text3)' }}> ×{it.quantity}</span>
+                      </span>
+                      <span style={{ color: 'var(--text2)', whiteSpace: 'nowrap' }}>฿{(it.price * it.quantity).toLocaleString()}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', borderTop: '0.5px solid var(--border)', paddingTop: 10 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                   <span style={{ fontSize: 13, color: 'var(--text3)' }}>สถานะ:</span>
