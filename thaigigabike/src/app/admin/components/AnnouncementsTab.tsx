@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
 import { Plus, Pin, Edit, Trash2, Eye, EyeOff } from 'lucide-react'
-import { ConfirmDialog, Spinner } from '@/components/ui'
+import { ConfirmDialog, Spinner, useToast } from '@/components/ui'
 import { ANNOUNCEMENT_TYPES, ANNOUNCEMENT_TYPE_LABELS } from './types'
 import type { Announcement, AnnouncementType } from './types'
 
@@ -28,6 +28,7 @@ export function AnnouncementsTab() {
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
   const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null)
+  const { toast } = useToast()
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -55,8 +56,10 @@ export function AnnouncementsTab() {
     ).catch(() => null)
     setSaving(false)
     if (!res?.ok) { const e = await res?.json().catch(() => ({})); setError(e?.error || 'บันทึกไม่สำเร็จ'); return }
+    const wasEdit = !!editingId
     closeForm()
     load()
+    toast(wasEdit ? 'บันทึกประกาศแล้ว' : 'เพิ่มประกาศแล้ว')
   }
 
   // Optimistic toggle for publish / pin
@@ -72,6 +75,7 @@ export function AnnouncementsTab() {
   const remove = async (id: string) => {
     setItems(items.filter(a => a.id !== id))
     await fetch(`/api/admin/announcements/${id}`, { method: 'DELETE' }).catch(() => {})
+    toast('ลบประกาศแล้ว')
   }
 
   return (

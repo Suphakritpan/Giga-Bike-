@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Barlow_Condensed, Barlow } from 'next/font/google'
 import '../styles/globals.css'
 import { CartProvider } from '@/lib/cart'
+import { ToastProvider } from '@/components/ui'
 import { SITE_URL, SITE_NAME } from '@/lib/site'
 
 const barlowCondensed = Barlow_Condensed({
@@ -75,14 +76,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <AuthProvider>
               <WishlistProvider>
                 <CartProvider>
-                  <a href="#main-content" className="skip-link">ข้ามไปยังเนื้อหา</a>
-                  <PageLoader />
-                  <Navbar />
-                  <main id="main-content" style={{ minHeight: '100vh' }}>
-                    {children}
-                  </main>
-                  <Footer />
-                  <LineFloatButton />
+                  <ToastProvider>
+                    <a href="#main-content" className="skip-link">ข้ามไปยังเนื้อหา</a>
+                    <PageLoader />
+                    <Navbar />
+                    <main id="main-content" style={{ minHeight: '100vh' }}>
+                      {children}
+                    </main>
+                    <Footer />
+                    <LineFloatButton />
+                  </ToastProvider>
                 </CartProvider>
               </WishlistProvider>
             </AuthProvider>

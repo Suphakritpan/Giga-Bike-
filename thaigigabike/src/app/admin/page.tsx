@@ -9,7 +9,7 @@ import { products as initialProducts } from '@/data/products'
 import type { Product } from '@/data/products'
 import { ProductModal } from '@/components/admin/ProductModal'
 import { toCsvRow } from '@/lib/csv'
-import { ConfirmDialog, Spinner } from '@/components/ui'
+import { ConfirmDialog, Spinner, useToast } from '@/components/ui'
 import { StatCard } from './components/StatCard'
 import { AlertBanner } from './components/AlertBanner'
 import { AdminThread } from './components/AdminThread'
@@ -30,6 +30,7 @@ import type {
 
 export default function AdminPage() {
   const router  = useRouter()
+  const { toast } = useToast()
 
   const [authChecked, setAuthChecked]   = useState(false)
   const [tab, setTab]                   = useState<Tab>('products')
@@ -137,14 +138,20 @@ export default function AdminPage() {
       throw new Error(json.error || 'Failed to save product')
     }
     await loadProducts()
+    toast(data.id ? 'บันทึกการแก้ไขแล้ว' : 'เพิ่มสินค้าแล้ว')
   }
 
   const handleDelete = async (product: Product) => {
     setDeleting(true)
     const res = await fetch(`/api/admin/products/${encodeURIComponent(product.id)}`, {
       method: 'DELETE',
-    })
-    if (res.ok) setProducts(prev => prev.filter(p => p.id !== product.id))
+    }).catch(() => null)
+    if (res?.ok) {
+      setProducts(prev => prev.filter(p => p.id !== product.id))
+      toast('ลบสินค้าแล้ว')
+    } else {
+      toast('ลบสินค้าไม่สำเร็จ', 'error')
+    }
     setDeleteConfirm(null)
     setDeleting(false)
   }
@@ -175,7 +182,7 @@ export default function AdminPage() {
     const next = Math.max(0, p.stockCount + delta)
     setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: next, inStock: next > 0 } : x))
     const ok = await patchStock(id, next, next > 0)
-    if (!ok) setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: p.stockCount, inStock: p.inStock } : x))
+    if (!ok) { setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: p.stockCount, inStock: p.inStock } : x)); toast('บันทึกสต็อกไม่สำเร็จ', 'error') }
   }
 
   const setStock = async (id: string, value: number) => {
@@ -183,7 +190,7 @@ export default function AdminPage() {
     const p = products.find(x => x.id === id)
     setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: count, inStock: count > 0 } : x))
     const ok = await patchStock(id, count, count > 0)
-    if (!ok && p) setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: p.stockCount, inStock: p.inStock } : x))
+    if (!ok && p) { setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: p.stockCount, inStock: p.inStock } : x)); toast('บันทึกสต็อกไม่สำเร็จ', 'error') }
   }
 
   const toggleInStock = async (id: string) => {
@@ -193,7 +200,7 @@ export default function AdminPage() {
     const count = next && p.stockCount === 0 ? 1 : p.stockCount
     setProducts(prev => prev.map(x => x.id === id ? { ...x, inStock: next, stockCount: count } : x))
     const ok = await patchStock(id, count, next)
-    if (!ok) setProducts(prev => prev.map(x => x.id === id ? { ...x, inStock: p.inStock, stockCount: p.stockCount } : x))
+    if (!ok) { setProducts(prev => prev.map(x => x.id === id ? { ...x, inStock: p.inStock, stockCount: p.stockCount } : x)); toast('บันทึกไม่สำเร็จ', 'error') }
   }
 
   // ─── Orders ───
@@ -207,11 +214,9 @@ export default function AdminPage() {
   }
 
   const [slipLoading, setSlipLoading] = useState<string | null>(null)
-  const [slipError, setSlipError] = useState('')
   // Open the order's payment slip via a short-lived signed URL (private bucket).
   const viewSlip = async (orderId: string) => {
     setSlipLoading(orderId)
-    setSlipError('')
     // Open the tab synchronously so the browser doesn't block it after the await.
     const w = window.open('', '_blank')
     try {
@@ -221,20 +226,15 @@ export default function AdminPage() {
         if (w) w.location.href = data.signedUrl
       } else {
         if (w) w.close()
-        setSlipError(data.error === 'No slip on this order' ? 'ออเดอร์นี้ไม่มีสลิป' : 'ไม่สามารถเปิดสลิปได้')
+        toast(data.error === 'No slip on this order' ? 'ออเดอร์นี้ไม่มีสลิป' : 'ไม่สามารถเปิดสลิปได้', 'error')
       }
     } catch {
       if (w) w.close()
-      setSlipError('ไม่สามารถเปิดสลิปได้')
+      toast('ไม่สามารถเปิดสลิปได้', 'error')
     } finally {
       setSlipLoading(null)
     }
   }
-  useEffect(() => {
-    if (!slipError) return
-    const id = setTimeout(() => setSlipError(''), 3500)
-    return () => clearTimeout(id)
-  }, [slipError])
 
   const saveTracking = async (orderId: string) => {
     const no = trackingInput.trim()
@@ -419,13 +419,6 @@ export default function AdminPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--bg)' }}>
-
-      {/* Transient error toast (replaces native alert) */}
-      {slipError && (
-        <div role="alert" className="animate-fade-up" style={{ position: 'fixed', top: 70, left: '50%', transform: 'translateX(-50%)', zIndex: 400, background: 'var(--red)', color: '#fff', padding: '10px 18px', borderRadius: 10, fontSize: 14, fontWeight: 600, boxShadow: '0 6px 24px rgba(0,0,0,.25)' }}>
-          {slipError}
-        </div>
-      )}
 
       {/* ── Top bar ─────────────────────────────── */}
       <div style={{
