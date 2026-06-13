@@ -44,7 +44,9 @@ export function AnnouncementBanner() {
   const body  = locale === 'th' ? ann.body_th : (ann.body_en || ann.body_th)
   const label = ann.link_label || (locale === 'th' ? 'ดูเพิ่มเติม' : 'Learn more')
   const typeLabel = TYPE_LABEL[ann.type]?.[locale === 'th' ? 'th' : 'en']
-  const isExternal = !!ann.link_url && /^https?:\/\//.test(ann.link_url)
+  // Defense in depth: only follow http(s) or same-origin links (blocks javascript: etc.)
+  const safeLink = ann.link_url && (/^https?:\/\//i.test(ann.link_url) || ann.link_url.startsWith('/')) ? ann.link_url : null
+  const isExternal = !!safeLink && /^https?:\/\//i.test(safeLink)
 
   return (
     <section style={{ maxWidth: 1200, margin: '16px auto 0', padding: '0 16px' }}>
@@ -63,10 +65,10 @@ export function AnnouncementBanner() {
           )}
           <h2 style={{ fontSize: 22, fontWeight: 800, fontFamily: 'var(--font-display)', lineHeight: 1.2 }}>{title}</h2>
           {body && <p style={{ fontSize: 14, color: 'var(--text2)', lineHeight: 1.6 }}>{body}</p>}
-          {ann.link_url && (
+          {safeLink && (
             isExternal
-              ? <a href={ann.link_url} target="_blank" rel="noreferrer" className="btn-primary" style={{ alignSelf: 'flex-start', marginTop: 4, fontSize: 14 }}>{label} →</a>
-              : <Link href={ann.link_url} className="btn-primary" style={{ alignSelf: 'flex-start', marginTop: 4, fontSize: 14 }}>{label} →</Link>
+              ? <a href={safeLink} target="_blank" rel="noreferrer" className="btn-primary" style={{ alignSelf: 'flex-start', marginTop: 4, fontSize: 14 }}>{label} →</a>
+              : <Link href={safeLink} className="btn-primary" style={{ alignSelf: 'flex-start', marginTop: 4, fontSize: 14 }}>{label} →</Link>
           )}
         </div>
       </div>

@@ -92,6 +92,34 @@ test.describe('Admin API — unauthenticated access blocked', () => {
     // Must not expose a signed slip URL
     expect(body).not.toHaveProperty('signedUrl')
   })
+
+  test('GET /api/admin/announcements → no 2xx without session', async ({ request }) => {
+    const res = await request.get('/api/admin/announcements')
+    expect(notExposed(res.status())).toBeTruthy()
+    const body = await res.json().catch(() => ({}))
+    expect(body).not.toHaveProperty('announcements')
+  })
+
+  test('POST /api/admin/announcements → no 2xx without session', async ({ request }) => {
+    const res = await request.post('/api/admin/announcements', {
+      data: { title_th: 'แอบสร้าง', type: 'promo' },
+    })
+    expect(notExposed(res.status())).toBeTruthy()
+    const body = await res.json().catch(() => ({}))
+    expect(body).not.toHaveProperty('announcement')
+  })
+
+  test('PATCH /api/admin/announcements/[id] → no 2xx without session', async ({ request }) => {
+    const res = await request.patch('/api/admin/announcements/00000000-0000-0000-0000-000000000000', {
+      data: { published: true },
+    })
+    expect(notExposed(res.status())).toBeTruthy()
+  })
+
+  test('DELETE /api/admin/announcements/[id] → no 2xx without session', async ({ request }) => {
+    const res = await request.delete('/api/admin/announcements/00000000-0000-0000-0000-000000000000')
+    expect(notExposed(res.status())).toBeTruthy()
+  })
 })
 
 test.describe('Login API — input validation (custom auth)', () => {

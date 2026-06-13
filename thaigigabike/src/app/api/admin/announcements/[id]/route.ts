@@ -4,6 +4,14 @@ import { createServiceClient } from '@/lib/supabase/service'
 
 const TYPES = ['info', 'promo', 'update', 'shipping']
 
+// Allow only http(s) or same-origin (leading-slash) URLs — blocks javascript:/data: etc.
+function safeUrl(v: unknown): string | null {
+  if (typeof v !== 'string') return null
+  const s = v.trim()
+  if (!s) return null
+  return /^https?:\/\//i.test(s) || s.startsWith('/') ? s : null
+}
+
 // PATCH /api/admin/announcements/[id] — edit fields / toggle published / pinned
 export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
   const auth = await requireAdmin()
@@ -28,8 +36,8 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
   if (typeof body.pinned === 'boolean') patch.pinned = body.pinned
   if ('starts_at' in body) patch.starts_at = dt(body.starts_at)
   if ('ends_at' in body) patch.ends_at = dt(body.ends_at)
-  if ('image_url' in body) patch.image_url = str(body.image_url)
-  if ('link_url' in body) patch.link_url = str(body.link_url)
+  if ('image_url' in body) patch.image_url = safeUrl(body.image_url)
+  if ('link_url' in body) patch.link_url = safeUrl(body.link_url)
   if ('link_label' in body) patch.link_label = str(body.link_label)
 
   if (Object.keys(patch).length === 0) {

@@ -4,6 +4,14 @@ import { createServiceClient } from '@/lib/supabase/service'
 
 const TYPES = ['info', 'promo', 'update', 'shipping']
 
+// Allow only http(s) or same-origin (leading-slash) URLs — blocks javascript:/data: etc.
+function safeUrl(v: unknown): string | null {
+  if (typeof v !== 'string') return null
+  const s = v.trim()
+  if (!s) return null
+  return /^https?:\/\//i.test(s) || s.startsWith('/') ? s : null
+}
+
 // GET /api/admin/announcements — all entries (incl. unpublished) for the admin tab
 export async function GET() {
   const auth = await requireAdmin()
@@ -48,8 +56,8 @@ export async function POST(req: NextRequest) {
     pinned: body.pinned === true,
     starts_at: dt(body.starts_at),
     ends_at: dt(body.ends_at),
-    image_url: str(body.image_url),
-    link_url: str(body.link_url),
+    image_url: safeUrl(body.image_url),
+    link_url: safeUrl(body.link_url),
     link_label: str(body.link_label),
   }
 
