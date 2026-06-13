@@ -153,28 +153,37 @@ export default function AdminPage() {
   const openEdit = (p: Product) => { setEditingProduct(p); setModalOpen(true) }
 
   // ─── Stock ───
-  const patchStock = (id: string, stockCount: number, inStock: boolean) =>
-    fetch(`/api/admin/products/${encodeURIComponent(id)}/stock`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ stock_count: stockCount, in_stock: inStock }),
-    })
+  // Returns true on success. Catches network failures (e.g. dev server
+  // restarting / offline) so callers can roll back instead of throwing an
+  // unhandled "Failed to fetch" that crashes the page.
+  const patchStock = async (id: string, stockCount: number, inStock: boolean): Promise<boolean> => {
+    try {
+      const res = await fetch(`/api/admin/products/${encodeURIComponent(id)}/stock`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ stock_count: stockCount, in_stock: inStock }),
+      })
+      return res.ok
+    } catch {
+      return false
+    }
+  }
 
   const adjustStock = async (id: string, delta: number) => {
     const p = products.find(x => x.id === id)
     if (!p) return
     const next = Math.max(0, p.stockCount + delta)
     setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: next, inStock: next > 0 } : x))
-    const res = await patchStock(id, next, next > 0)
-    if (!res.ok) setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: p.stockCount, inStock: p.inStock } : x))
+    const ok = await patchStock(id, next, next > 0)
+    if (!ok) setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: p.stockCount, inStock: p.inStock } : x))
   }
 
   const setStock = async (id: string, value: number) => {
     const count = Math.max(0, isNaN(value) ? 0 : Math.floor(value))
     const p = products.find(x => x.id === id)
     setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: count, inStock: count > 0 } : x))
-    const res = await patchStock(id, count, count > 0)
-    if (!res.ok && p) setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: p.stockCount, inStock: p.inStock } : x))
+    const ok = await patchStock(id, count, count > 0)
+    if (!ok && p) setProducts(prev => prev.map(x => x.id === id ? { ...x, stockCount: p.stockCount, inStock: p.inStock } : x))
   }
 
   const toggleInStock = async (id: string) => {
@@ -183,8 +192,8 @@ export default function AdminPage() {
     const next = !p.inStock
     const count = next && p.stockCount === 0 ? 1 : p.stockCount
     setProducts(prev => prev.map(x => x.id === id ? { ...x, inStock: next, stockCount: count } : x))
-    const res = await patchStock(id, count, next)
-    if (!res.ok) setProducts(prev => prev.map(x => x.id === id ? { ...x, inStock: p.inStock, stockCount: p.stockCount } : x))
+    const ok = await patchStock(id, count, next)
+    if (!ok) setProducts(prev => prev.map(x => x.id === id ? { ...x, inStock: p.inStock, stockCount: p.stockCount } : x))
   }
 
   // ─── Orders ───
