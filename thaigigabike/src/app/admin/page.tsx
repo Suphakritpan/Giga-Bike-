@@ -4,13 +4,15 @@ import { useRouter } from 'next/navigation'
 import {
   Package, ShoppingBag, TrendingUp, Plus, Edit, Trash2, Download,
   ChevronDown, ChevronUp, Minus, AlertTriangle, CheckCircle, XCircle, Boxes,
-  LogOut, Search, Zap, Bell, MessageCircle, Star,
-  Send, Camera, Loader, X, Receipt, Headphones,
+  LogOut, Zap, Bell, MessageCircle, Star,
+  Send, Camera, X, Receipt, Headphones,
 } from 'lucide-react'
 import { products as initialProducts } from '@/data/products'
 import type { Product } from '@/data/products'
 import { ProductModal } from '@/components/admin/ProductModal'
 import { toCsvRow } from '@/lib/csv'
+import { ConfirmDialog, Spinner } from '@/components/ui'
+import { AdminSearchInput, AdminPagination, AdminTableShell } from './components/AdminUI'
 
 type OrderStatus = 'pending' | 'paid' | 'shipping' | 'delivered' | 'cancelled'
 type Tab = 'products' | 'orders' | 'stock' | 'messages' | 'tickets' | 'tax' | 'reviews'
@@ -183,13 +185,12 @@ function AdminThread({ base, onSent }: { base: string; onSent?: () => void }) {
         </div>
         <label style={{ width: 40, height: 40, borderRadius: 9, border: '1px solid var(--border2)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'var(--text3)', flexShrink: 0 }}>
           <input type="file" accept="image/jpeg,image/png,image/webp" style={{ display: 'none' }} onChange={e => { const f = e.target.files?.[0]; if (f) upload(f) }} disabled={uploading || images.length >= 3} />
-          {uploading ? <Loader size={16} style={{ animation: 'spin .7s linear infinite' }} /> : <Camera size={16} />}
+          {uploading ? <Spinner small /> : <Camera size={16} />}
         </label>
         <button onClick={send} disabled={sending || !text.trim()} className="btn-primary" style={{ width: 40, height: 40, padding: 0, justifyContent: 'center', flexShrink: 0, opacity: (sending || !text.trim()) ? 0.6 : 1 }}>
           <Send size={16} />
         </button>
       </div>
-      <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
     </div>
   )
 }
@@ -558,9 +559,8 @@ export default function AdminPage() {
     return (
       <div style={{ minHeight: '100vh', background: 'var(--bg)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ textAlign: 'center', color: 'var(--text3)' }}>
-          <div style={{ width: 44, height: 44, border: '3px solid var(--green)', borderTopColor: 'transparent', borderRadius: '50%', margin: '0 auto 16px', animation: 'spin 0.8s linear infinite' }} />
-          <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
-          กำลังตรวจสอบสิทธิ์...
+          <Spinner />
+          <div style={{ marginTop: 16 }}>กำลังตรวจสอบสิทธิ์...</div>
         </div>
       </div>
     )
@@ -656,13 +656,11 @@ export default function AdminPage() {
         {tab === 'products' && (
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: 14, flexWrap: 'wrap' }}>
-              <div style={{ position: 'relative', flex: 1, minWidth: 200, maxWidth: 360 }}>
-                <Search size={13} style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', color: 'var(--text3)', pointerEvents: 'none' }} />
-                <input className="input" style={{ paddingLeft: 30, fontSize: 14 }}
-                  placeholder="ค้นหารหัส / ชื่อสินค้า..."
-                  value={productSearch}
-                  onChange={e => { setProductSearch(e.target.value); setProductPage(1) }} />
-              </div>
+              <AdminSearchInput
+                value={productSearch}
+                onChange={v => { setProductSearch(v); setProductPage(1) }}
+                placeholder="ค้นหารหัส / ชื่อสินค้า..."
+              />
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                 <span style={{ fontSize: 14, color: 'var(--text2)' }}>{filteredProducts.length} รายการ</span>
                 <button className="btn-primary" style={{ fontSize: 15, padding: '7px 14px' }} onClick={openAdd}>
@@ -673,21 +671,12 @@ export default function AdminPage() {
 
             {loadingProducts ? (
               <div style={{ textAlign: 'center', padding: '56px 0', color: 'var(--text3)' }}>
-                <div style={{ width: 36, height: 36, border: '3px solid var(--green)', borderTopColor: 'transparent', borderRadius: '50%', margin: '0 auto 12px', animation: 'spin 0.8s linear infinite' }} />
-                กำลังโหลดสินค้า...
+                <Spinner />
+                <div style={{ marginTop: 12 }}>กำลังโหลดสินค้า...</div>
               </div>
             ) : (
               <>
-                <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, overflow: 'hidden' }}>
-                  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                    <thead style={{ background: 'var(--bg3)' }}>
-                      <tr>
-                        {['รูป', 'รหัส', 'ชื่อสินค้า', 'หมวด', 'ราคา', 'สต็อก', 'สถานะ', ''].map(h => (
-                          <th key={h} style={{ padding: '9px 12px', textAlign: 'left', fontSize: 12, color: 'var(--text3)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.05em', whiteSpace: 'nowrap' }}>{h}</th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
+                <AdminTableShell headers={['รูป', 'รหัส', 'ชื่อสินค้า', 'หมวด', 'ราคา', 'สต็อก', 'สถานะ', '']}>
                       {pagedProducts.map((p, i) => (
                         <tr key={p.id} style={{ borderTop: '0.5px solid var(--border)' }}>
                           <td style={{ padding: '7px 8px 7px 12px', width: 48 }}>
@@ -719,16 +708,8 @@ export default function AdminPage() {
                           </td>
                         </tr>
                       ))}
-                    </tbody>
-                  </table>
-                </div>
-                {totalProductPages > 1 && (
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 14 }}>
-                    <button className="btn-ghost" style={{ padding: '4px 10px' }} disabled={productPage === 1} onClick={() => setProductPage(p => p - 1)}>‹</button>
-                    <span style={{ fontSize: 14, color: 'var(--text2)' }}>หน้า {productPage} / {totalProductPages}</span>
-                    <button className="btn-ghost" style={{ padding: '4px 10px' }} disabled={productPage === totalProductPages} onClick={() => setProductPage(p => p + 1)}>›</button>
-                  </div>
-                )}
+                </AdminTableShell>
+                <AdminPagination page={productPage} totalPages={totalProductPages} onPageChange={setProductPage} />
               </>
             )}
           </div>
@@ -754,29 +735,18 @@ export default function AdminPage() {
             </div>
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14, gap: 12, flexWrap: 'wrap' }}>
-              <div style={{ position: 'relative', flex: 1, maxWidth: 360 }}>
-                <Search size={13} style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', color: 'var(--text3)', pointerEvents: 'none' }} />
-                <input className="input" style={{ paddingLeft: 30, fontSize: 14 }}
-                  placeholder="ค้นหารหัส / ชื่อสินค้า..."
-                  value={stockSearch}
-                  onChange={e => { setStockSearch(e.target.value); setStockPage(1) }} />
-              </div>
+              <AdminSearchInput
+                value={stockSearch}
+                onChange={v => { setStockSearch(v); setStockPage(1) }}
+                placeholder="ค้นหารหัส / ชื่อสินค้า..."
+              />
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                 <span style={{ fontSize: 14, color: 'var(--text2)' }}>{filteredStock.length} รายการ · รวม {products.reduce((s, p) => s + p.stockCount, 0)} ชิ้น</span>
                 <button className="btn-ghost" onClick={exportStock} style={{ fontSize: 14 }}><Download size={13} /> Export CSV</button>
               </div>
             </div>
 
-            <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 12, overflow: 'hidden' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-                <thead style={{ background: 'var(--bg3)' }}>
-                  <tr>
-                    {['รูป', 'รหัส', 'ชื่อสินค้า', 'หมวด', 'จำนวนสต็อก', 'สถานะ'].map(h => (
-                      <th key={h} style={{ padding: '9px 12px', textAlign: 'left', fontSize: 12, color: 'var(--text3)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.05em' }}>{h}</th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
+            <AdminTableShell headers={['รูป', 'รหัส', 'ชื่อสินค้า', 'หมวด', 'จำนวนสต็อก', 'สถานะ']}>
                   {pagedStock.map((p) => {
                     const isLow = p.stockCount > 0 && p.stockCount <= LOW_STOCK_THRESHOLD
                     const isEmpty = p.stockCount === 0
@@ -824,16 +794,8 @@ export default function AdminPage() {
                       </tr>
                     )
                   })}
-                </tbody>
-              </table>
-            </div>
-            {totalStockPages > 1 && (
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, marginTop: 14 }}>
-                <button className="btn-ghost" style={{ padding: '4px 10px' }} disabled={stockPage === 1} onClick={() => setStockPage(p => p - 1)}>‹</button>
-                <span style={{ fontSize: 14, color: 'var(--text2)' }}>หน้า {stockPage} / {totalStockPages}</span>
-                <button className="btn-ghost" style={{ padding: '4px 10px' }} disabled={stockPage === totalStockPages} onClick={() => setStockPage(p => p + 1)}>›</button>
-              </div>
-            )}
+            </AdminTableShell>
+            <AdminPagination page={stockPage} totalPages={totalStockPages} onPageChange={setStockPage} />
           </div>
         )}
 
@@ -841,13 +803,11 @@ export default function AdminPage() {
         {tab === 'orders' && (
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: 14, flexWrap: 'wrap' }}>
-              <div style={{ position: 'relative', flex: 1, minWidth: 200, maxWidth: 360 }}>
-                <Search size={13} style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', color: 'var(--text3)', pointerEvents: 'none' }} />
-                <input className="input" style={{ paddingLeft: 30, fontSize: 14 }}
-                  placeholder="ค้นหาเลขออเดอร์ / ชื่อ / เบอร์..."
-                  value={orderSearch}
-                  onChange={e => setOrderSearch(e.target.value)} />
-              </div>
+              <AdminSearchInput
+                value={orderSearch}
+                onChange={setOrderSearch}
+                placeholder="ค้นหาเลขออเดอร์ / ชื่อ / เบอร์..."
+              />
               <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
                 <span style={{ fontSize: 14, color: 'var(--text2)' }}>{filteredOrders.length} ออเดอร์</span>
                 <button className="btn-ghost" onClick={exportOrders} style={{ fontSize: 14 }}><Download size={13} /> Export CSV</button>
@@ -1280,24 +1240,17 @@ export default function AdminPage() {
       )}
 
       {/* Delete confirm */}
-      {deleteConfirm && (
-        <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,.75)', zIndex: 200, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20 }}>
-          <div style={{ background: 'var(--bg2)', border: '0.5px solid var(--border)', borderRadius: 14, padding: 28, maxWidth: 380, width: '100%' }}>
-            <h3 style={{ fontSize: 20, marginBottom: 10 }}>ยืนยันการลบสินค้า</h3>
-            <p style={{ fontSize: 15, color: 'var(--text2)', marginBottom: 6 }}>
-              ลบ <span style={{ color: 'var(--text)', fontWeight: 600 }}>{deleteConfirm.code} — {deleteConfirm.nameTh}</span> ออกจากระบบ?
-            </p>
-            <p style={{ fontSize: 13, color: 'var(--red)', marginBottom: 22 }}>ไม่สามารถย้อนกลับได้</p>
-            <div style={{ display: 'flex', gap: 10, justifyContent: 'flex-end' }}>
-              <button className="btn-ghost" onClick={() => setDeleteConfirm(null)} disabled={deleting}>ยกเลิก</button>
-              <button onClick={() => handleDelete(deleteConfirm)} disabled={deleting}
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'var(--red)', color: '#fff', border: 'none', borderRadius: 8, padding: '9px 18px', fontSize: 15, fontWeight: 600, cursor: 'pointer', opacity: deleting ? 0.7 : 1 }}>
-                <Trash2 size={14} /> {deleting ? 'กำลังลบ...' : 'ลบสินค้า'}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <ConfirmDialog
+        open={!!deleteConfirm}
+        danger
+        loading={deleting}
+        title="ยืนยันการลบสินค้า"
+        message={deleteConfirm ? `ลบ ${deleteConfirm.code} — ${deleteConfirm.nameTh} ออกจากระบบ? การลบนี้ไม่สามารถย้อนกลับได้` : undefined}
+        confirmLabel="ลบสินค้า"
+        cancelLabel="ยกเลิก"
+        onConfirm={() => { if (deleteConfirm) handleDelete(deleteConfirm) }}
+        onCancel={() => setDeleteConfirm(null)}
+      />
     </div>
   )
 }
