@@ -31,3 +31,6 @@ sitemap-out/
 .DS_Store
 Thumbs.db
 .idea/
+
+# graphify analysis artifacts
+graphify-out/

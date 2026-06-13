@@ -79,7 +79,9 @@ type Props = {
 export function ProductModal({ product, onClose, onSave }: Props) {
   const isEdit = !!product
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const codeRef = useRef<HTMLInputElement>(null)
 
+  const [savedCount, setSavedCount] = useState(0)
   const [section, setSection] = useState<Section>('info')
   const [form, setForm] = useState<FormData>(EMPTY_FORM)
   const [errors, setErrors] = useState<Errors>({})
@@ -119,6 +121,7 @@ export function ProductModal({ product, onClose, onSave }: Props) {
     setPreviewIdx(0)
     setUploadError('')
     setUrlInput('')
+    setSavedCount(0)
   }, [product])
 
   const set = (field: keyof FormData, value: unknown) =>
@@ -198,8 +201,8 @@ export function ProductModal({ product, onClose, onSave }: Props) {
     setPreviewIdx(to)
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  // Validate + save. Returns true on success, false (and shows errors) otherwise.
+  const persist = async (): Promise<boolean> => {
     const errs = validate(form)
     if (Object.keys(errs).length > 0) {
       setErrors(errs)
@@ -209,7 +212,7 @@ export function ProductModal({ product, onClose, onSave }: Props) {
       } else if (errs.material || errs.colors || errs.stockCount) {
         setSection('spec')
       }
-      return
+      return false
     }
     setSaving(true)
     setServerError('')
@@ -233,12 +236,44 @@ export function ProductModal({ product, onClose, onSave }: Props) {
         published: form.published,
         reviewReasons: product?.reviewReasons ?? [],
       })
-      onClose()
+      return true
     } catch (err: unknown) {
       setServerError(err instanceof Error ? err.message : 'เกิดข้อผิดพลาด กรุณาลองใหม่')
+      return false
     } finally {
       setSaving(false)
     }
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (await persist()) onClose()
+  }
+
+  // Save, keep the modal open, and clear only the per-item fields so a batch of
+  // similar parts can be entered fast — category/colours/bike models/material/
+  // stock/flags carry over to the next product.
+  const handleSaveAndAdd = async () => {
+    if (!(await persist())) return
+    setSavedCount(c => c + 1)
+    setForm(prev => ({
+      ...EMPTY_FORM,
+      category: prev.category,
+      colors: prev.colors,
+      bikeModels: prev.bikeModels,
+      material: prev.material,
+      stockCount: prev.stockCount,
+      inStock: prev.inStock,
+      featured: prev.featured,
+      published: prev.published,
+    }))
+    setErrors({})
+    setServerError('')
+    setSection('info')
+    setPreviewIdx(0)
+    setUrlInput('')
+    setUploadError('')
+    setTimeout(() => codeRef.current?.focus(), 0)
   }
 
   const inputErr = (field: keyof FormData) =>
@@ -300,7 +335,7 @@ export function ProductModal({ product, onClose, onSave }: Props) {
                 {/* รหัส + ราคา */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
                   <Field label="รหัสสินค้า *" error={errors.code}>
-                    <input className="input" style={inputErr('code')} value={form.code} maxLength={20}
+                    <input ref={codeRef} className="input" style={inputErr('code')} value={form.code} maxLength={20}
                       onChange={e => set('code', e.target.value)} placeholder="G.232" autoFocus={!isEdit} />
                   </Field>
                   <Field label="ราคา (฿) *" error={errors.price}>
@@ -668,15 +703,27 @@ export function ProductModal({ product, onClose, onSave }: Props) {
               )}
             </div>
 
-            <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+            <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+              {savedCount > 0 && (
+                <span style={{ fontSize: 13, color: 'var(--green)', fontWeight: 600 }}>เพิ่มแล้ว {savedCount} รายการ</span>
+              )}
               {serverError && (
                 <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13, color: 'var(--red)' }}>
                   <AlertCircle size={13} /> {serverError}
                 </div>
               )}
-              <button type="button" className="btn-ghost" onClick={onClose} disabled={saving}>ยกเลิก</button>
+              <button type="button" className="btn-ghost" onClick={onClose} disabled={saving}>
+                {savedCount > 0 ? 'เสร็จสิ้น' : 'ยกเลิก'}
+              </button>
+              {!isEdit && (
+                <button type="button" onClick={handleSaveAndAdd} disabled={saving || uploading} className="btn-ghost"
+                  title="บันทึกแล้วล้างเฉพาะ รหัส/ชื่อ/ราคา/รูป — คงหมวด/สี/รุ่นรถ/วัสดุ/สต็อกไว้ให้กรอกตัวถัดไปเร็ว ๆ"
+                  style={{ borderColor: 'var(--green)', color: 'var(--green)', opacity: (saving || uploading) ? 0.7 : 1 }}>
+                  <Save size={15} /> บันทึก & เพิ่มต่อ
+                </button>
+              )}
               <button type="submit" className="btn-primary" disabled={saving || uploading} style={{ opacity: saving ? 0.7 : 1 }}>
-                <Save size={15} /> {saving ? 'กำลังบันทึก...' : 'บันทึกสินค้า'}
+                <Save size={15} /> {saving ? 'กำลังบันทึก...' : isEdit ? 'บันทึก' : 'บันทึก & ปิด'}
               </button>
             </div>
           </div>
