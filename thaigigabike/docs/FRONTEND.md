@@ -49,7 +49,7 @@ Dark mode สลับด้วย `[data-theme="dark"]` (ThemeProvider + script
 ## 3. UI kit (`components/ui`) — ใช้ก่อนเขียนเอง
 
 ```tsx
-import { Button, Field, Card, Toggle, Spinner, Skeleton, SkeletonList, EmptyState, PageHeader } from '@/components/ui'
+import { Button, Field, Card, Toggle, Spinner, Skeleton, SkeletonList, EmptyState, PageHeader, ConfirmDialog } from '@/components/ui'
 ```
 
 | Component | ใช้เมื่อ | ตัวอย่าง |
@@ -62,8 +62,9 @@ import { Button, Field, Card, Toggle, Spinner, Skeleton, SkeletonList, EmptyStat
 | `Skeleton(List)` | placeholder ระหว่างโหลด list/บล็อก | `<SkeletonList rows={3} height={92} />` |
 | `EmptyState` | หน้าว่าง — มี icon + title + ปุ่มชวนไปต่อเสมอ | ดู account/wishlist |
 | `PageHeader` | h1 มาตรฐานของทุกหน้า account/admin (+`subtitle`, `actions`) | `<PageHeader title={t.account.orders} />` |
+| `ConfirmDialog` | ยืนยัน action อันตราย (แทน `confirm()`) — Esc/คลิกพื้นหลังปิด, `danger`, `loading` | `<ConfirmDialog open={x} danger title="ยกเลิกออเดอร์?" confirmLabel="ยกเลิก" cancelLabel="ไม่ใช่ตอนนี้" onConfirm={...} onCancel={...} />` |
 
-**กติกา:** ห้ามเขียน inline `@keyframes`, กล่องการ์ด, หรือ h1 fontSize เองอีก — ใช้ kit
+**กติกา:** ห้ามเขียน inline `@keyframes`, กล่องการ์ด, h1 fontSize เอง หรือใช้ `alert()`/`confirm()` — ใช้ kit (ConfirmDialog สำหรับยืนยัน, inline `role="status"`/`role="alert"` สำหรับ feedback)
 
 **Migrate แล้วทั้ง account section** (ทุกหน้าใช้ PageHeader + SkeletonList + EmptyState):
 layout, dashboard, orders (+detail), addresses, wishlist, reviews, messages, tickets, history, profile, settings
@@ -107,5 +108,5 @@ Flow: login → `POST /api/auth/login` → `refreshUser()` → `router.push(next
 
 - ฐาน font-size 24px ใน globals.css ใหญ่กว่ามาตรฐาน — หน้าเก่าชดเชยด้วย inline fontSize; ห้ามแก้ฐานโดยไม่ไล่ตรวจทุกหน้า
 - account section migrate เข้า kit ครบแล้ว; หน้า storefront (products, checkout, cart, ฯลฯ) ยังเป็น inline style — เวลาแตะไฟล์ไหน ให้ migrate มาใช้ UI kit ไปด้วย
-- ยังไม่มี Toast system — feedback ใช้ inline message; `window.confirm` ยังใช้ใน 2-3 จุด
+- ไม่มี `alert()`/`confirm()` แล้ว — ยืนยันใช้ `ConfirmDialog`, feedback ใช้ inline `role="status"`/`role="alert"` ต่อหน้า; ยังไม่มี Toast system กลาง (ตั้งใจ — จุด feedback ยังน้อย)
 - รูปใช้ `<img>` ธรรมดา (ไม่ใช่ next/image) — ตั้งใจ เพราะรูป legacy หลากหลายขนาด
