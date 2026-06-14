@@ -3,7 +3,7 @@
 import type { Product } from '@/data/products'
 
 export type OrderStatus = 'pending' | 'paid' | 'shipping' | 'delivered' | 'cancelled'
-export type Tab = 'products' | 'orders' | 'stock' | 'messages' | 'tickets' | 'tax' | 'reviews' | 'announcements'
+export type Tab = 'products' | 'orders' | 'stock' | 'messages' | 'tickets' | 'tax' | 'reviews' | 'announcements' | 'registry'
 
 export type AdminMessage = {
   id: string; sender_name: string; sender_email: string; sender_phone: string | null

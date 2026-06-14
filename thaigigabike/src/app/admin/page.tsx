@@ -21,6 +21,7 @@ import { TicketsTab } from './components/TicketsTab'
 import { TaxTab } from './components/TaxTab'
 import { ReviewsTab } from './components/ReviewsTab'
 import { AnnouncementsTab } from './components/AnnouncementsTab'
+import { RegistryTab } from './components/RegistryTab'
 import {
   TICKET_TOPIC_LABELS, LOW_STOCK_THRESHOLD, PAGE_SIZE, STATUS_COLORS, STATUS_LABELS, sortProducts,
 } from './components/types'
@@ -410,6 +411,7 @@ export default function AdminPage() {
     { id: 'tax',      label: 'ใบกำกับภาษี', count: pendingTaxCount > 0 ? pendingTaxCount : undefined },
     { id: 'reviews',  label: 'รีวิว',     count: pendingReviewsCount > 0 ? pendingReviewsCount : undefined },
     { id: 'announcements', label: 'ประกาศ' },
+    { id: 'registry', label: 'รุ่นรถ/สี' },
   ]
 
   // ─── Loading / Auth check ───
@@ -617,6 +619,9 @@ export default function AdminPage() {
 
         {/* ── Announcements tab ─────────────────── */}
         {tab === 'announcements' && <AnnouncementsTab />}
+
+        {/* ── Registry tab (bike models / colours) ─ */}
+        {tab === 'registry' && <RegistryTab />}
 
       </div>
 
