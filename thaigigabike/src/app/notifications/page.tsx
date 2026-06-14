@@ -15,6 +15,9 @@ type Announcement = {
   type: AnnouncementType
   pinned: boolean
   created_at: string
+  image_url?: string | null
+  link_url?: string | null
+  link_label?: string | null
 }
 
 const TYPE_ICON: Record<AnnouncementType, React.ReactNode> = {
@@ -153,6 +156,9 @@ export default function NotificationsPage() {
               const body  = locale === 'th' ? (item.body_th  ?? item.body_en)  : (item.body_en  ?? item.body_th)
               const color = TYPE_COLOR[item.type] ?? 'var(--green)'
               const typeLabel = (t.notifications.types as Record<string, string>)[item.type] ?? item.type
+              // Only follow http(s)/same-origin links (blocks javascript: etc.)
+              const safeLink = item.link_url && (/^https?:\/\//i.test(item.link_url) || item.link_url.startsWith('/')) ? item.link_url : null
+              const isExternal = !!safeLink && /^https?:\/\//i.test(safeLink)
               return (
                 <div key={item.id} style={{
                   background: 'var(--bg2)',
@@ -182,6 +188,16 @@ export default function NotificationsPage() {
                   </div>
                   {body && (
                     <div style={{ fontSize: 14, color: 'var(--text2)', lineHeight: 1.65 }}>{body}</div>
+                  )}
+                  {item.image_url && (
+                    <img src={item.image_url} alt="" style={{ marginTop: 10, maxHeight: 200, width: '100%', objectFit: 'cover', borderRadius: 8, border: '0.5px solid var(--border)', display: 'block' }}
+                      onError={e => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                  )}
+                  {safeLink && (
+                    <a href={safeLink} {...(isExternal ? { target: '_blank', rel: 'noreferrer' } : {})}
+                      className="btn-ghost" style={{ marginTop: 10, display: 'inline-flex', fontSize: 13 }}>
+                      {item.link_label || (locale === 'th' ? 'ดูเพิ่มเติม' : 'Learn more')} →
+                    </a>
                   )}
                 </div>
               )

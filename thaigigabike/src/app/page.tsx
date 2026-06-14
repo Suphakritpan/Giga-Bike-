@@ -6,6 +6,7 @@ import { useLang } from '@/lib/lang'
 import { products, bikeModels, categories } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
 import { AnnouncementBanner } from '@/components/announcements/AnnouncementBanner'
+import { useRegistry } from '@/lib/useRegistry'
 
 type Review = { id: string; reviewer_name: string; rating: number; comment: string | null; product_id: string | null }
 
@@ -174,6 +175,8 @@ const HOME_PAGE_SIZE = 24
 
 export default function HomePage() {
   const { t, locale } = useLang()
+  const reg = useRegistry()
+  const allBikes = useMemo(() => [...bikeModels, ...reg.bikeModels], [reg.bikeModels])
   const [activeBikes, setActiveBikes] = useState<Set<string>>(new Set())
   const [activeCats,  setActiveCats]  = useState<Set<string>>(new Set())
   const [page, setPage] = useState(1)
@@ -300,7 +303,7 @@ export default function HomePage() {
             >
               {t.home.allModels}
             </button>
-            {bikeModels.map(bm => {
+            {allBikes.map(bm => {
               const active = activeBikes.has(bm.id)
               return (
                 <button key={bm.id} onClick={() => toggleHomeBike(bm.id)} style={{

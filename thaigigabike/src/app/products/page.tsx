@@ -6,6 +6,7 @@ import { useLang } from '@/lib/lang'
 import { products, bikeModels, categories } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
 import { recordBike, recordCat } from '@/lib/recentlyViewed'
+import { useRegistry } from '@/lib/useRegistry'
 
 const PAGE_SIZE = 24
 
@@ -113,6 +114,8 @@ function Pagination({
 function ProductsContent() {
   const searchParams = useSearchParams()
   const { t, locale } = useLang()
+  const reg = useRegistry()
+  const allBikes = useMemo(() => [...bikeModels, ...reg.bikeModels], [reg.bikeModels])
 
   const [query, setQuery]               = useState(searchParams.get('q') || '')
   const [selectedBikes, setSelectedBikes] = useState<Set<string>>(() => {
@@ -317,7 +320,7 @@ function ProductsContent() {
               >
                 {locale === 'th' ? 'ทุกรุ่น' : 'All Models'}
               </button>
-              {bikeModels.map(bm => {
+              {allBikes.map(bm => {
                 const active = selectedBikes.has(bm.id)
                 return (
                   <button key={bm.id} onClick={() => toggleBike(bm.id)} style={{
@@ -389,7 +392,7 @@ function ProductsContent() {
                 return <FilterChip key={id} label={locale === 'th' ? cat.th : cat.en} onRemove={() => toggleCat(id)} />
               })}
               {[...selectedBikes].map(id => {
-                const bm = bikeModels.find(b => b.id === id)
+                const bm = allBikes.find(b => b.id === id)
                 if (!bm) return null
                 return <FilterChip key={id} label={`${bm.brand} ${bm.model}`} onRemove={() => toggleBike(id)} />
               })}

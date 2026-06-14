@@ -5,6 +5,7 @@ import { Search, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useLang } from '@/lib/lang'
 import { products, bikeModels, categories } from '@/data/products'
 import { ProductCard } from '@/components/product/ProductCard'
+import { useRegistry } from '@/lib/useRegistry'
 
 const PAGE_SIZE = 24
 
@@ -66,6 +67,8 @@ const POPULAR_CATS = [
 ]
 
 function SearchContent() {
+  const reg = useRegistry()
+  const allBikes = useMemo(() => [...bikeModels, ...reg.bikeModels], [reg.bikeModels])
   const searchParams = useSearchParams()
   const { t, locale } = useLang()
 
@@ -114,7 +117,7 @@ function SearchContent() {
 
   const bikeOptions = [
     { id: 'all', label: locale === 'th' ? t.search.allModels : t.search.allModels },
-    ...bikeModels.map(b => ({ id: b.id, label: `${b.brand} ${b.model}` })),
+    ...allBikes.map(b => ({ id: b.id, label: `${b.brand} ${b.model}` })),
   ]
 
   const showEmpty = !hasActiveFilters
@@ -229,7 +232,7 @@ function SearchContent() {
               {locale === 'th' ? 'หรือกรองตามรุ่นรถ' : 'Or filter by bike model'}
             </p>
             <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-              {bikeModels.map(b => (
+              {allBikes.map(b => (
                 <button
                   key={b.id}
                   onClick={() => setSelectedBike(b.id)}
